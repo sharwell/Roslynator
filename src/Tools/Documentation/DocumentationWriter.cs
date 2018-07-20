@@ -636,7 +636,7 @@ namespace Roslynator.Documentation
                 && !typeSymbol.IsStatic)
             {
                 using (IEnumerator<INamedTypeSymbol> en = CompilationInfo
-                    .GetDerivedTypes(typeSymbol)
+                    .GetDerivedTypes(typeSymbol, includeInterfaces: true)
                     .OrderBy(f => f.ToDisplayString(FormatProvider.DerivedFormat))
                     .GetEnumerator())
                 {

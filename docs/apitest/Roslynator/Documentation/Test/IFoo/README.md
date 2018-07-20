@@ -8,6 +8,10 @@ Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
 public abstract interface IFoo
 ```
 
+### Derived
+
+* [Roslynator.Documentation.Test.FooEvent](../FooEvent/README.md)
+
 ## Events
 
 | Event | Summary |

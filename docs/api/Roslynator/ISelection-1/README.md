@@ -20,6 +20,14 @@ public abstract interface ISelection<T> : System.Collections.Generic.IReadOnlyLi
 | ---- | ------- |
 | T | |
 
+### Derived
+
+* [Roslynator.CSharp.MemberDeclarationListSelection](../CSharp/MemberDeclarationListSelection/README.md)
+* [Roslynator.CSharp.StatementListSelection](../CSharp/StatementListSelection/README.md)
+* [Roslynator.SeparatedSyntaxListSelection\<TNode>](../SeparatedSyntaxListSelection-1/README.md)
+* [Roslynator.SyntaxListSelection\<TNode>](../SyntaxListSelection-1/README.md)
+* [Roslynator.Text.TextLineCollectionSelection](../Text/TextLineCollectionSelection/README.md)
+
 ### Implements
 
 * [IReadOnlyList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)
