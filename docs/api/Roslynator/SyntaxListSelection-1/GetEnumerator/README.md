@@ -6,7 +6,7 @@ Assembly: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Returns an enumerator that iterates through selected items\.
+Returns an enumerator that iterates through selected nodes\.
 
 ```csharp
 public Enumerator GetEnumerator()

@@ -1,0 +1,42 @@
+# ISelection\<T> Interface
+
+Namespace: [Roslynator](../README.md)
+
+Assembly: Roslynator\.CSharp\.dll
+
+## Summary
+
+Represents consecutive sequence of selected items in a collection\.
+
+```csharp
+public abstract interface ISelection<T> : System.Collections.Generic.IReadOnlyList<T>,
+    System.Collections.Generic.IReadOnlyCollection<T>,
+    System.Collections.Generic.IEnumerable<T>
+```
+
+### Type Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| T | |
+
+### Implements
+
+* [IReadOnlyList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)
+* [IReadOnlyCollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)
+* [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
+
+## Properties
+
+| Property | Summary |
+| -------- | ------- |
+| [FirstIndex](FirstIndex/README.md) | Gets an index of the first selected item\. |
+| [LastIndex](LastIndex/README.md) | Gets an index of the last selected item\. |
+
+## Methods
+
+| Method | Summary |
+| ------ | ------- |
+| [First()](First/README.md) | Gets the first selected item\. |
+| [Last()](Last/README.md) | Gets the last selected item\. |
+

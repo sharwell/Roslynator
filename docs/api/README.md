@@ -8,6 +8,7 @@
 * [Roslynator](Roslynator/README.md)
 * [Roslynator.CSharp](Roslynator/CSharp/README.md)
 * [Roslynator.CSharp.Syntax](Roslynator/CSharp/Syntax/README.md)
+* [Roslynator.CSharp.SyntaxWalkers](Roslynator/CSharp/SyntaxWalkers/README.md)
 * [Roslynator.Text](Roslynator/Text/README.md)
 
 ## [Roslynator](Roslynator/README.md) Namespace
@@ -20,7 +21,6 @@
 | [EnumExtensions](Roslynator/EnumExtensions/README.md) | A set of extension methods for enumerations\. |
 | [FileLinePositionSpanExtensions](Roslynator/FileLinePositionSpanExtensions/README.md) | A set of extension methods for [FileLinePositionSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.filelinepositionspan)\. |
 | [NameGenerator](Roslynator/NameGenerator/README.md) | Provides methods to obtain an unique identifier\. |
-| [Selection\<T>](Roslynator/Selection-1/README.md) | Represents consecutive sequence of selected items in a collection\. |
 | [SemanticModelExtensions](Roslynator/SemanticModelExtensions/README.md) | A set of extension methods for a [SemanticModel](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.semanticmodel)\. |
 | [SeparatedSyntaxListSelection\<TNode>](Roslynator/SeparatedSyntaxListSelection-1/README.md) | Represents selected nodes in a [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)\. |
 | [SymbolExtensions](Roslynator/SymbolExtensions/README.md) | A set of extension methods for [ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol) and its derived types\. |
@@ -36,6 +36,12 @@
 | [ExtensionMethodSymbolInfo](Roslynator/ExtensionMethodSymbolInfo/README.md) | Represents an extension method symbol\. |
 | [SeparatedSyntaxListSelection\<TNode>.Enumerator](Roslynator/SeparatedSyntaxListSelection-1/Enumerator/README.md) | |
 | [SyntaxListSelection\<TNode>.Enumerator](Roslynator/SyntaxListSelection-1/Enumerator/README.md) | |
+
+### Interfaces
+
+| Interface | Summary |
+| --------- | ------- |
+| [ISelection\<T>](Roslynator/ISelection-1/README.md) | Represents consecutive sequence of selected items in a collection\. |
 
 ## [Roslynator.CSharp](Roslynator/CSharp/README.md) Namespace
 
@@ -110,6 +116,14 @@
 | [StringLiteralExpressionInfo](Roslynator/CSharp/Syntax/StringLiteralExpressionInfo/README.md) | Provides information about string literal expression\. |
 | [UsingDirectiveListInfo](Roslynator/CSharp/Syntax/UsingDirectiveListInfo/README.md) | Provides information about a list of using directives\. |
 | [XmlElementInfo](Roslynator/CSharp/Syntax/XmlElementInfo/README.md) | Provides information about a [XmlElementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.xmlelementsyntax) or [XmlEmptyElementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.xmlemptyelementsyntax)\. |
+
+## [Roslynator.CSharp.SyntaxWalkers](Roslynator/CSharp/SyntaxWalkers/README.md) Namespace
+
+### Classes
+
+| Class | Summary |
+| ----- | ------- |
+| [CSharpSyntaxNodeWalker](Roslynator/CSharp/SyntaxWalkers/CSharpSyntaxNodeWalker/README.md) | |
 
 ## [Roslynator.Text](Roslynator/Text/README.md) Namespace
 

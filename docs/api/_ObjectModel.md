@@ -3,14 +3,16 @@
 ## Classes
 
 * [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
+  * [CSharpSyntaxVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxvisitor)
+    * [CSharpSyntaxWalker](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxwalker)
+      * [CSharpSyntaxNodeWalker](Roslynator/CSharp/SyntaxWalkers/CSharpSyntaxNodeWalker/README.md)
   * [ModifierList\<TNode>](Roslynator/CSharp/ModifierList-1/README.md)
   * [NameGenerator](Roslynator/NameGenerator/README.md)
-  * [Selection\<T>](Roslynator/Selection-1/README.md)
-    * [SeparatedSyntaxListSelection\<TNode>](Roslynator/SeparatedSyntaxListSelection-1/README.md)
-    * [SyntaxListSelection\<TNode>](Roslynator/SyntaxListSelection-1/README.md)
-      * [MemberDeclarationListSelection](Roslynator/CSharp/MemberDeclarationListSelection/README.md)
-      * [StatementListSelection](Roslynator/CSharp/StatementListSelection/README.md)
-    * [TextLineCollectionSelection](Roslynator/Text/TextLineCollectionSelection/README.md)
+  * [SeparatedSyntaxListSelection\<TNode>](Roslynator/SeparatedSyntaxListSelection-1/README.md)
+  * [SyntaxListSelection\<TNode>](Roslynator/SyntaxListSelection-1/README.md)
+    * [MemberDeclarationListSelection](Roslynator/CSharp/MemberDeclarationListSelection/README.md)
+    * [StatementListSelection](Roslynator/CSharp/StatementListSelection/README.md)
+  * [TextLineCollectionSelection](Roslynator/Text/TextLineCollectionSelection/README.md)
 
 ## Static Classes
 
@@ -72,6 +74,10 @@
 * [TextLineCollectionSelection.Enumerator](Roslynator/Text/TextLineCollectionSelection/Enumerator/README.md)
 * [UsingDirectiveListInfo](Roslynator/CSharp/Syntax/UsingDirectiveListInfo/README.md)
 * [XmlElementInfo](Roslynator/CSharp/Syntax/XmlElementInfo/README.md)
+
+## Interfaces
+
+* [ISelection\<T>](Roslynator/ISelection-1/README.md)
 
 ## Enums
 

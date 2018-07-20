@@ -8,7 +8,6 @@
 | [EnumExtensions](EnumExtensions/README.md) | A set of extension methods for enumerations\. |
 | [FileLinePositionSpanExtensions](FileLinePositionSpanExtensions/README.md) | A set of extension methods for [FileLinePositionSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.filelinepositionspan)\. |
 | [NameGenerator](NameGenerator/README.md) | Provides methods to obtain an unique identifier\. |
-| [Selection\<T>](Selection-1/README.md) | Represents consecutive sequence of selected items in a collection\. |
 | [SemanticModelExtensions](SemanticModelExtensions/README.md) | A set of extension methods for a [SemanticModel](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.semanticmodel)\. |
 | [SeparatedSyntaxListSelection\<TNode>](SeparatedSyntaxListSelection-1/README.md) | Represents selected nodes in a [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)\. |
 | [SymbolExtensions](SymbolExtensions/README.md) | A set of extension methods for [ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol) and its derived types\. |
@@ -23,4 +22,10 @@
 | [ExtensionMethodSymbolInfo](ExtensionMethodSymbolInfo/README.md) | Represents an extension method symbol\. |
 | [SeparatedSyntaxListSelection\<TNode>.Enumerator](SeparatedSyntaxListSelection-1/Enumerator/README.md) | |
 | [SyntaxListSelection\<TNode>.Enumerator](SyntaxListSelection-1/Enumerator/README.md) | |
+
+## Interfaces
+
+| Interface | Summary |
+| --------- | ------- |
+| [ISelection\<T>](ISelection-1/README.md) | Represents consecutive sequence of selected items in a collection\. |
 

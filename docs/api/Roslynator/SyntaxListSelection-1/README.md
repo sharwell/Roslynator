@@ -9,7 +9,11 @@ Assembly: Roslynator\.CSharp\.dll
 Represents selected nodes in a [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)\.
 
 ```csharp
-public class SyntaxListSelection<TNode> : Selection<TNode> where TNode : Microsoft.CodeAnalysis.SyntaxNode
+public class SyntaxListSelection<TNode> : ISelection<TNode>,
+    System.Collections.Generic.IReadOnlyList<TNode>,
+    System.Collections.Generic.IReadOnlyCollection<TNode>,
+    System.Collections.Generic.IEnumerable<TNode>
+    where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
 ### Type Parameters
@@ -20,7 +24,7 @@ public class SyntaxListSelection<TNode> : Selection<TNode> where TNode : Microso
 
 ### Inheritance
 
-[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [Selection\<T>](../Selection-1/README.md) &#x2192; SyntaxListSelection\<TNode>
+[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; SyntaxListSelection\<TNode>
 
 ### Derived
 
@@ -29,6 +33,7 @@ public class SyntaxListSelection<TNode> : Selection<TNode> where TNode : Microso
 
 ### Implements
 
+* [ISelection\<TNode>](../ISelection-1/README.md)
 * [IReadOnlyList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)
 * [IReadOnlyCollection\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)
 * [IEnumerable\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
@@ -43,12 +48,11 @@ public class SyntaxListSelection<TNode> : Selection<TNode> where TNode : Microso
 
 | Property | Summary |
 | -------- | ------- |
-| [Count](../Selection-1/Count/README.md) | Gets a number of selected items\. \(Inherited from [Selection\<T>](../Selection-1/README.md)\) |
-| [FirstIndex](../Selection-1/FirstIndex/README.md) | Gets an index of the first selected item\. \(Inherited from [Selection\<T>](../Selection-1/README.md)\) |
-| [Item\[Int32\]](../Selection-1/Item/README.md) | Gets the selected item at the specified index\. \(Inherited from [Selection\<T>](../Selection-1/README.md)\) |
-| [Items](Items/README.md) | Gets an underlying list that contains selected nodes\. |
-| [LastIndex](../Selection-1/LastIndex/README.md) | Gets an index of the last selected item\. \(Inherited from [Selection\<T>](../Selection-1/README.md)\) |
-| [OriginalSpan](../Selection-1/OriginalSpan/README.md) | Gets the original span that was used to determine selected items\. \(Inherited from [Selection\<T>](../Selection-1/README.md)\) |
+| [Count](Count/README.md) | Gets a number of selected nodes\. |
+| [FirstIndex](FirstIndex/README.md) | Gets an index of the first selected node\. |
+| [Item\[Int32\]](Item/README.md) | Gets the selected node at the specified index\. |
+| [LastIndex](LastIndex/README.md) | Gets an index of the last selected node\. |
+| [OriginalSpan](OriginalSpan/README.md) | Gets the original span that was used to determine selected nodes\. |
 | [UnderlyingList](UnderlyingList/README.md) | Gets an underlying list that contains selected nodes\. |
 
 ## Methods
@@ -57,13 +61,19 @@ public class SyntaxListSelection<TNode> : Selection<TNode> where TNode : Microso
 | ------ | ------- |
 | [Create(SyntaxList\<TNode>, TextSpan)](Create/README.md) | Creates a new [SyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [First()](../Selection-1/First/README.md) | Gets the first selected item\. \(Inherited from [Selection\<T>](../Selection-1/README.md)\) |
-| [GetEnumerator()](GetEnumerator/README.md) | Returns an enumerator that iterates through selected items\. |
-| [GetEnumeratorCore()](GetEnumeratorCore/README.md) | |
+| [First()](First/README.md) | Gets the first selected node\. |
+| [GetEnumerator()](GetEnumerator/README.md) | Returns an enumerator that iterates through selected nodes\. |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [Last()](../Selection-1/Last/README.md) | Gets the last selected item\. \(Inherited from [Selection\<T>](../Selection-1/README.md)\) |
+| [Last()](Last/README.md) | Gets the last selected node\. |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [TryCreate(SyntaxList\<TNode>, TextSpan, SyntaxListSelection\<TNode>)](TryCreate/README.md) | Creates a new [SyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
+
+## Explicit Interface Implementations
+
+| Member | Summary |
+| ------ | ------- |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) | |
+| [IEnumerable\<TNode>.GetEnumerator()](System-Collections-Generic-IEnumerable-TNode--GetEnumerator/README.md) | |
 
