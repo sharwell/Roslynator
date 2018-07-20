@@ -36,9 +36,6 @@ namespace Roslynator.CodeGeneration
                     fileMustExists: false);
             }
 
-            //TODO: 
-            return;
-
             WriteAllText(
                 @"CSharp\README.md",
                 MarkdownGenerator.GenerateAssemblyReadme("Roslynator.CSharp"));
