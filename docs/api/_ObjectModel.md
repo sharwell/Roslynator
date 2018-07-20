@@ -3,9 +3,6 @@
 ## Classes
 
 * [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
-  * [CSharpSyntaxVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxvisitor)
-    * [CSharpSyntaxWalker](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxwalker)
-      * [CSharpSyntaxNodeWalker](Roslynator/CSharp/SyntaxWalkers/CSharpSyntaxNodeWalker/README.md)
   * [ModifierList\<TNode>](Roslynator/CSharp/ModifierList-1/README.md)
   * [NameGenerator](Roslynator/NameGenerator/README.md)
   * [SeparatedSyntaxListSelection\<TNode>](Roslynator/SeparatedSyntaxListSelection-1/README.md)

@@ -189,7 +189,7 @@ namespace Roslynator.Documentation
                     AddKeyword(SyntaxKind.StaticKeyword);
 
                 if (typeSymbol.IsSealed
-                    && !typeSymbol.TypeKind.Is(TypeKind.Struct, TypeKind.Enum))
+                    && !typeSymbol.TypeKind.Is(TypeKind.Struct, TypeKind.Enum, TypeKind.Delegate))
                 {
                     AddKeyword(SyntaxKind.SealedKeyword);
                 }

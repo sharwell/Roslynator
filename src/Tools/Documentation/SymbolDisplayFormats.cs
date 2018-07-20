@@ -146,6 +146,21 @@ namespace Roslynator.Documentation
                 | SymbolDisplayMiscellaneousOptions.EscapeKeywordIdentifiers
             );
 
+        public static SymbolDisplayFormat NamespaceDefinition { get; } = new SymbolDisplayFormat(
+             globalNamespaceStyle: DefaultGlobalNamespaceStyle,
+             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
+             genericsOptions: DefaultGenericsOptions,
+             memberOptions: DefaultMemberOptions,
+             delegateStyle: DefaultDelegateStyle,
+             extensionMethodStyle: DefaultExtensionMethodStyle,
+             parameterOptions: DefaultParameterOptions,
+             propertyStyle: DefaultPropertyStyle,
+             localOptions: DefaultLocalOptions,
+             kindOptions: DefaultKindOptions
+                | SymbolDisplayKindOptions.IncludeNamespaceKeyword,
+             miscellaneousOptions: DefaultMiscellaneousOptions
+        );
+
         public static SymbolDisplayFormat ExplicitImplementationFullName { get; } = new SymbolDisplayFormat(
              globalNamespaceStyle: DefaultGlobalNamespaceStyle,
              typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,

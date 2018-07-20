@@ -8,6 +8,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: DocumentationModel
     public class CompilationDocumentationInfo
     {
         private ImmutableArray<INamedTypeSymbol> _typeSymbols;

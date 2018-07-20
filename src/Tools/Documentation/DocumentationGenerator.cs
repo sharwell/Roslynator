@@ -7,6 +7,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+
     public abstract class DocumentationGenerator
     {
         private SymbolDocumentationInfo _emptySymbolInfo;
@@ -641,5 +642,6 @@ namespace Roslynator.Documentation
                 writer.WriteEndBulletItem();
             }
         }
+
     }
 }

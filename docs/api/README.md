@@ -8,7 +8,6 @@
 * [Roslynator](Roslynator/README.md)
 * [Roslynator.CSharp](Roslynator/CSharp/README.md)
 * [Roslynator.CSharp.Syntax](Roslynator/CSharp/Syntax/README.md)
-* [Roslynator.CSharp.SyntaxWalkers](Roslynator/CSharp/SyntaxWalkers/README.md)
 * [Roslynator.Text](Roslynator/Text/README.md)
 
 ## [Roslynator](Roslynator/README.md) Namespace
@@ -116,14 +115,6 @@
 | [StringLiteralExpressionInfo](Roslynator/CSharp/Syntax/StringLiteralExpressionInfo/README.md) | Provides information about string literal expression\. |
 | [UsingDirectiveListInfo](Roslynator/CSharp/Syntax/UsingDirectiveListInfo/README.md) | Provides information about a list of using directives\. |
 | [XmlElementInfo](Roslynator/CSharp/Syntax/XmlElementInfo/README.md) | Provides information about a [XmlElementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.xmlelementsyntax) or [XmlEmptyElementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.xmlemptyelementsyntax)\. |
-
-## [Roslynator.CSharp.SyntaxWalkers](Roslynator/CSharp/SyntaxWalkers/README.md) Namespace
-
-### Classes
-
-| Class | Summary |
-| ----- | ------- |
-| [CSharpSyntaxNodeWalker](Roslynator/CSharp/SyntaxWalkers/CSharpSyntaxNodeWalker/README.md) | |
 
 ## [Roslynator.Text](Roslynator/Text/README.md) Namespace
 
