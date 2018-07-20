@@ -1,10 +1,8 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Diagnostics;
 using System.Threading;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Roslynator.CSharp.SyntaxWalkers
@@ -56,27 +54,6 @@ namespace Roslynator.CSharp.SyntaxWalkers
                 walker.Visit(node);
 
                 result = walker.Result;
-
-#if DEBUG
-                //TODO: test
-                bool debugResult = false;
-                foreach (SyntaxNode descendant in node.DescendantNodesAndSelf())
-                {
-                    if (descendant.IsKind(SyntaxKind.IdentifierName))
-                    {
-                        var identifierName = (IdentifierNameSyntax)descendant;
-
-                        if (string.Equals(identifierName.Identifier.ValueText, symbol.Name, StringComparison.Ordinal)
-                            && semanticModel.GetSymbol(identifierName, cancellationToken)?.Equals(symbol) == true)
-                        {
-                            debugResult = true;
-                            break;
-                        }
-                    }
-                }
-
-                Debug.Assert(result == debugResult);
-#endif
             }
             finally
             {

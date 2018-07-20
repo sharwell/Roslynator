@@ -32,10 +32,10 @@ namespace Roslynator
         protected SeparatedSyntaxListSelection(SeparatedSyntaxList<TNode> list, TextSpan span, int firstIndex, int lastIndex)
         {
             if (firstIndex < 0)
-                throw new ArgumentOutOfRangeException(nameof(firstIndex), firstIndex, "Index of the first selected item must be greater than or equal to zero.");
+                throw new ArgumentOutOfRangeException(nameof(firstIndex), firstIndex, "Index of the first selected node must be greater than or equal to zero.");
 
             if (lastIndex < firstIndex)
-                throw new ArgumentOutOfRangeException(nameof(lastIndex), lastIndex, "Index of the last selected item must be greater or equal to index of the first selected item.");
+                throw new ArgumentOutOfRangeException(nameof(lastIndex), lastIndex, "Index of the last selected node must be greater or equal to index of the first selected node.");
 
             UnderlyingList = list;
             OriginalSpan = span;
@@ -49,22 +49,22 @@ namespace Roslynator
         public SeparatedSyntaxList<TNode> UnderlyingList { get; }
 
         /// <summary>
-        /// Gets the original span that was used to determine selected items.
+        /// Gets the original span that was used to determine selected nodes.
         /// </summary>
         public TextSpan OriginalSpan { get; }
 
         /// <summary>
-        /// Gets an index of the first selected item.
+        /// Gets an index of the first selected node.
         /// </summary>
         public int FirstIndex { get; }
 
         /// <summary>
-        /// Gets an index of the last selected item.
+        /// Gets an index of the last selected node.
         /// </summary>
         public int LastIndex { get; }
 
         /// <summary>
-        /// Gets a number of selected items.
+        /// Gets a number of selected nodes.
         /// </summary>
         public int Count
         {
@@ -72,10 +72,10 @@ namespace Roslynator
         }
 
         /// <summary>
-        /// Gets the selected item at the specified index.
+        /// Gets the selected node at the specified index.
         /// </summary>
-        /// <returns>The item at the specified index.</returns>
-        /// <param name="index">The zero-based index of the item to get. </param>
+        /// <returns>The node at the specified index.</returns>
+        /// <param name="index">The zero-based index of the node to get. </param>
         public TNode this[int index]
         {
             get
@@ -96,7 +96,7 @@ namespace Roslynator
         }
 
         /// <summary>
-        /// Gets the first selected item.
+        /// Gets the first selected node.
         /// </summary>
         /// <returns></returns>
         public TNode First()
@@ -105,7 +105,7 @@ namespace Roslynator
         }
 
         /// <summary>
-        /// Gets the last selected item.
+        /// Gets the last selected node.
         /// </summary>
         /// <returns></returns>
         public TNode Last()
@@ -165,7 +165,7 @@ namespace Roslynator
         }
 
         /// <summary>
-        /// Returns an enumerator that iterates through selected items.
+        /// Returns an enumerator that iterates through selected nodes.
         /// </summary>
         /// <returns></returns>
         public Enumerator GetEnumerator()

@@ -60,12 +60,12 @@ namespace Roslynator.CodeGeneration
                 CompilerDiagnosticIdentifiersGenerator.Generate(CompilerDiagnostics, Comparer));
 
             WriteCompilationUnit(
-                @"CSharp\CSharp\SyntaxWalkers\CSharpSyntaxNodeWalker.cs",
-                CSharpSyntaxNodeWalkerGenerator.Generate());
-
-            WriteCompilationUnit(
                 @"Tools\CodeGeneration\CSharp\Symbols.Generated.cs",
                 SymbolsGetKindsGenerator.Generate());
+
+            WriteCompilationUnit(
+                @"CSharp\CSharp\SyntaxWalkers\CSharpSyntaxNodeWalker.cs",
+                CSharpSyntaxNodeWalkerGenerator.Generate());
         }
 
         private void WriteCompilationUnit(

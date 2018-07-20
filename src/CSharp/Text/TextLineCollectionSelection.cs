@@ -23,10 +23,10 @@ namespace Roslynator.Text
         protected TextLineCollectionSelection(TextLineCollection lines, TextSpan span, int firstIndex, int lastIndex)
         {
             if (firstIndex < 0)
-                throw new ArgumentOutOfRangeException(nameof(firstIndex), firstIndex, "Index of the first selected item must be greater than or equal to zero.");
+                throw new ArgumentOutOfRangeException(nameof(firstIndex), firstIndex, "Index of the first selected line must be greater than or equal to zero.");
 
             if (lastIndex < firstIndex)
-                throw new ArgumentOutOfRangeException(nameof(lastIndex), lastIndex, "Index of the last selected item must be greater or equal to index of the first selected item.");
+                throw new ArgumentOutOfRangeException(nameof(lastIndex), lastIndex, "Index of the last selected line must be greater or equal to index of the first selected line.");
 
             UnderlyingLines = lines;
             OriginalSpan = span;
@@ -40,22 +40,22 @@ namespace Roslynator.Text
         public TextLineCollection UnderlyingLines { get; }
 
         /// <summary>
-        /// Gets the original span that was used to determine selected items.
+        /// Gets the original span that was used to determine selected lines.
         /// </summary>
         public TextSpan OriginalSpan { get; }
 
         /// <summary>
-        /// Gets an index of the first selected item.
+        /// Gets an index of the first selected line.
         /// </summary>
         public int FirstIndex { get; }
 
         /// <summary>
-        /// Gets an index of the last selected item.
+        /// Gets an index of the last selected line.
         /// </summary>
         public int LastIndex { get; }
 
         /// <summary>
-        /// Gets a number of selected items.
+        /// Gets a number of selected lines.
         /// </summary>
         public int Count
         {
@@ -63,10 +63,10 @@ namespace Roslynator.Text
         }
 
         /// <summary>
-        /// Gets the selected item at the specified index.
+        /// Gets the selected line at the specified index.
         /// </summary>
-        /// <returns>The item at the specified index.</returns>
-        /// <param name="index">The zero-based index of the item to get. </param>
+        /// <returns>The line at the specified index.</returns>
+        /// <param name="index">The zero-based index of the line to get. </param>
         public TextLine this[int index]
         {
             get
@@ -87,7 +87,7 @@ namespace Roslynator.Text
         }
 
         /// <summary>
-        /// Gets the first selected item.
+        /// Gets the first selected line.
         /// </summary>
         /// <returns></returns>
         public TextLine First()
@@ -96,7 +96,7 @@ namespace Roslynator.Text
         }
 
         /// <summary>
-        /// Gets the last selected item.
+        /// Gets the last selected line.
         /// </summary>
         /// <returns></returns>
         public TextLine Last()
@@ -159,7 +159,7 @@ namespace Roslynator.Text
         }
 
         /// <summary>
-        /// Returns an enumerator that iterates through selected items.
+        /// Returns an enumerator that iterates through selected lines.
         /// </summary>
         /// <returns></returns>
         public Enumerator GetEnumerator()
