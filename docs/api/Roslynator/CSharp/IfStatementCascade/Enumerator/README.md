@@ -5,7 +5,7 @@ Namespace: [Roslynator.CSharp](../../README.md)
 Assembly: Roslynator\.CSharp\.dll
 
 ```csharp
-public struct Enumerator
+public struct IfStatementCascade.Enumerator
 ```
 
 ### Inheritance

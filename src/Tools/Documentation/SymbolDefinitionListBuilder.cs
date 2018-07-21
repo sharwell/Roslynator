@@ -1,22 +1,20 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
-
-#pragma warning disable RCS1085
 
 namespace Roslynator.Documentation
 {
     public class SymbolDefinitionListBuilder
     {
         private bool _pendingIndentation;
-        private readonly StringBuilder _sb;
 
         public SymbolDefinitionListBuilder(StringBuilder stringBuilder = null)
         {
-            _sb = stringBuilder ?? new StringBuilder();
+            StringBuilder = stringBuilder ?? new StringBuilder();
         }
 
         public int IndentationLevel { get; set; }
@@ -27,35 +25,48 @@ namespace Roslynator.Documentation
 
         public HashSet<INamespaceSymbol> Namespaces { get; }
 
-        public StringBuilder StringBuilder
-        {
-            get { return _sb; }
-        }
+        public StringBuilder StringBuilder { get; }
+
+        public int Length => StringBuilder.Length;
 
         public void AppendSymbols(IEnumerable<INamedTypeSymbol> typeSymbols)
         {
             foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> grouping in typeSymbols
+               .Where(f => !f.ContainingNamespace.IsGlobalNamespace)
                .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
                .OrderBy(f => f.Key.ToDisplayString(SymbolDisplayFormats.NamespaceDefinition)))
             {
-                INamespaceSymbol namespaceSymbol = grouping.Key;
-
-                AppendSymbol(namespaceSymbol, SymbolDisplayFormats.NamespaceDefinition);
+                AppendSymbol(grouping.Key, SymbolDisplayFormats.NamespaceDefinition);
                 AppendLine();
                 AppendLine("{");
 
                 IncreaseIndentation();
 
-                foreach (IGrouping<TypeKind, INamedTypeSymbol> grouping2 in grouping
-                    .GroupBy(f => f.TypeKind)
-                    .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), DocumentationOptions.Default.NamespacePartComparer))
-                {
-                    TypeKind typeKind = grouping2.Key;
+                AppendTypes(grouping);
 
-                    foreach (INamedTypeSymbol typeSymbol in grouping2
-                        .OrderBy(f => f.ToDisplayString(SymbolDisplayFormats.FullDefinition)))
+                DecreaseIndentation();
+
+                AppendLine("}");
+                AppendLine();
+            }
+
+            AppendTypes(typeSymbols.Where(f => f.ContainingNamespace.IsGlobalNamespace));
+        }
+
+        private void AppendTypes(IEnumerable<INamedTypeSymbol> typeSymbols, bool insertNewLineBeforeFirstType = false)
+        {
+            using (IEnumerator<INamedTypeSymbol> en = typeSymbols.OrderBy(f => f, TypeDefinitionComparer.Instance).GetEnumerator())
+            {
+                if (en.MoveNext())
+                {
+                    if (insertNewLineBeforeFirstType)
+                        AppendLine();
+
+                    while (true)
                     {
-                        AppendSymbol(typeSymbol, SymbolDisplayFormats.FullDefinition, SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers);
+                        TypeKind typeKind = en.Current.TypeKind;
+
+                        AppendSymbol(en.Current, SymbolDisplayFormats.FullDefinition, SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers);
                         AppendLine();
 
                         switch (typeKind)
@@ -64,6 +75,9 @@ namespace Roslynator.Documentation
                                 {
                                     AppendLine("{");
                                     IncreaseIndentation();
+
+                                    AppendMembers(en.Current);
+
                                     DecreaseIndentation();
                                     AppendLine("}");
                                     break;
@@ -77,7 +91,7 @@ namespace Roslynator.Documentation
                                     AppendLine("{");
                                     IncreaseIndentation();
 
-                                    foreach (ISymbol member in typeSymbol.GetMembers())
+                                    foreach (ISymbol member in en.Current.GetMembers())
                                     {
                                         if (member.Kind == SymbolKind.Field
                                             && member.DeclaredAccessibility == Accessibility.Public)
@@ -96,6 +110,9 @@ namespace Roslynator.Documentation
                                 {
                                     AppendLine("{");
                                     IncreaseIndentation();
+
+                                    AppendMembers(en.Current);
+
                                     DecreaseIndentation();
                                     AppendLine("}");
                                     break;
@@ -104,54 +121,137 @@ namespace Roslynator.Documentation
                                 {
                                     AppendLine("{");
                                     IncreaseIndentation();
+
+                                    AppendMembers(en.Current);
+
                                     DecreaseIndentation();
                                     AppendLine("}");
                                     break;
                                 }
                         }
+
+                        if (en.MoveNext())
+                        {
+                            AppendLine();
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                 }
-
-                DecreaseIndentation();
-
-                AppendLine("}");
-                AppendLine();
             }
+        }
+
+        private void AppendMembers(INamedTypeSymbol typeSymbol)
+        {
+            bool isAny = false;
+
+            foreach (ISymbol member in typeSymbol.GetMembers(f =>
+            {
+                if (!f.IsPubliclyVisible())
+                    return false;
+
+                switch (f.Kind)
+                {
+                    case SymbolKind.Event:
+                    case SymbolKind.Field:
+                    case SymbolKind.Property:
+                        {
+                            return true;
+                        }
+                    case SymbolKind.Method:
+                        {
+                            var methodSymbol = (IMethodSymbol)f;
+
+                            switch (methodSymbol.MethodKind)
+                            {
+                                case MethodKind.Constructor:
+                                    {
+                                        return methodSymbol.ContainingType.TypeKind != TypeKind.Struct
+                                            || methodSymbol.Parameters.Any();
+                                    }
+                                case MethodKind.Conversion:
+                                case MethodKind.ExplicitInterfaceImplementation:
+                                case MethodKind.UserDefinedOperator:
+                                case MethodKind.Ordinary:
+                                case MethodKind.StaticConstructor:
+                                    return true;
+                                case MethodKind.Destructor:
+                                case MethodKind.EventAdd:
+                                case MethodKind.EventRaise:
+                                case MethodKind.EventRemove:
+                                case MethodKind.PropertyGet:
+                                case MethodKind.PropertySet:
+                                    return false;
+                                default:
+                                    {
+                                        Debug.Fail(methodSymbol.MethodKind.ToString());
+                                        break;
+                                    }
+                            }
+
+                            return true;
+                        }
+                    case SymbolKind.NamedType:
+                        {
+                            return false;
+                        }
+                    default:
+                        {
+                            Debug.Fail(f.Kind.ToString());
+                            return false;
+                        }
+                }
+            })
+            .OrderBy(f => f, MemberDefinitionComparer.Instance))
+            {
+                AppendSymbol(member, SymbolDisplayFormats.FullDefinition);
+
+                if (member.Kind != SymbolKind.Property)
+                    Append(";");
+
+                AppendLine();
+
+                isAny = true;
+            }
+
+            AppendTypes(typeSymbol.GetTypeMembers().Where(f => f.IsPubliclyVisible()), insertNewLineBeforeFirstType: isAny);
         }
 
         public void Append(string value)
         {
             CheckPendingIndentation();
-            _sb.Append(value);
+            StringBuilder.Append(value);
         }
 
         public void Append(object value)
         {
             CheckPendingIndentation();
-            _sb.Append(value);
+            StringBuilder.Append(value);
         }
 
         public void Append(char value, int repeatCount)
         {
             CheckPendingIndentation();
-            _sb.Append(value, repeatCount);
+            StringBuilder.Append(value, repeatCount);
         }
 
         public void AppendSymbol(ISymbol symbol, SymbolDisplayFormat format)
         {
             CheckPendingIndentation();
-            _sb.Append(symbol.ToDisplayString(format));
+            StringBuilder.Append(symbol.ToDisplayString(format));
         }
 
         public void AppendSymbol(INamedTypeSymbol symbol, SymbolDisplayFormat format, SymbolDisplayTypeDeclarationOptions typeDeclarationOptions = SymbolDisplayTypeDeclarationOptions.None)
         {
             CheckPendingIndentation();
-            _sb.Append(symbol.ToDisplayString(format, typeDeclarationOptions));
+            StringBuilder.Append(symbol.ToDisplayString(format, typeDeclarationOptions));
         }
 
         public void AppendLine()
         {
-            _sb.AppendLine();
+            StringBuilder.AppendLine();
             _pendingIndentation = true;
         }
 
@@ -190,7 +290,7 @@ namespace Roslynator.Documentation
 
         public override string ToString()
         {
-            return _sb.ToString();
+            return StringBuilder.ToString();
         }
     }
 }

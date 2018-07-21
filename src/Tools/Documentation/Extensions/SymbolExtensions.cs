@@ -98,6 +98,14 @@ namespace Roslynator.Documentation
             return builder.ToImmutableArray();
         }
 
+        public static ImmutableArray<INamedTypeSymbol> GetTypeMembers(this INamespaceOrTypeSymbol namespaceOrTypeSymbol, Func<INamedTypeSymbol, bool> predicate)
+        {
+            return namespaceOrTypeSymbol
+                .GetTypeMembers()
+                .Where(predicate)
+                .ToImmutableArray();
+        }
+
         public static int GetArity(this ISymbol symbol)
         {
             switch (symbol.Kind)

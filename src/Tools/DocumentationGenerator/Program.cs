@@ -36,6 +36,12 @@ namespace Roslynator.Documentation
 
             var generator = new MarkdownDocumentationGenerator(compilationInfo, DocumentationUriProvider.GitHub, options);
 
+            var builder = new SymbolDefinitionListBuilder();
+
+            builder.AppendSymbols(compilationInfo.Types.Where(f => f.ContainingType == null));
+
+            FileHelper.WriteAllText(directoryPath + "_api.cs", builder.ToString(), Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
+
             foreach (DocumentationGeneratorResult result in generator.Generate(
                 heading,
                 objectModelHeading: heading + " Object Model",
@@ -47,12 +53,6 @@ namespace Roslynator.Documentation
 
                 FileHelper.WriteAllText(path, result.Content, _utf8NoBom, onlyIfChanges: true, fileMustExists: false);
             }
-
-            var builder = new SymbolDefinitionListBuilder();
-
-            builder.AppendSymbols(compilationInfo.Types);
-
-            FileHelper.WriteAllText(directoryPath + "_api.cs", builder.ToString(), Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
         }
 
         internal static CompilationDocumentationInfo CreateFromTrustedPlatformAssemblies(string[] assemblyNames)

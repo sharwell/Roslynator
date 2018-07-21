@@ -9,7 +9,7 @@ Assembly: Roslynator\.CSharp\.dll
 Gets the enumerator for the list of members\.
 
 ```csharp
-public Enumerator GetEnumerator()
+public SyntaxList<MemberDeclarationSyntax>.Enumerator GetEnumerator()
 ```
 
 ### Returns

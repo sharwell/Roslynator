@@ -194,8 +194,11 @@ namespace Roslynator.Documentation
                     AddKeyword(SyntaxKind.SealedKeyword);
                 }
 
-                if (typeSymbol.IsAbstract)
+                if (typeSymbol.IsAbstract
+                    && typeSymbol.TypeKind != TypeKind.Interface)
+                {
                     AddKeyword(SyntaxKind.AbstractKeyword);
+                }
             }
 
             builder.AddRange(parts);

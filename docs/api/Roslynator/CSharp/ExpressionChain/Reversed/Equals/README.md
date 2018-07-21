@@ -30,7 +30,7 @@ public override bool Equals(object obj)
 ## Equals\(Reversed\)
 
 ```csharp
-public bool Equals(Reversed other)
+public bool Equals(ExpressionChain.Reversed other)
 ```
 
 #### Parameters

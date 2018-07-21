@@ -5,7 +5,7 @@ Namespace: [Roslynator.CSharp](../../../README.md)
 Assembly: Roslynator\.CSharp\.dll
 
 ```csharp
-public Enumerator GetEnumerator()
+public ExpressionChain.Reversed.Enumerator GetEnumerator()
 ```
 
 ### Returns

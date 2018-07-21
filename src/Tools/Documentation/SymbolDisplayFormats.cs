@@ -114,7 +114,7 @@ namespace Roslynator.Documentation
 
         public static SymbolDisplayFormat FullDefinition { get; } = new SymbolDisplayFormat(
              globalNamespaceStyle: DefaultGlobalNamespaceStyle,
-             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
+             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypes,
              genericsOptions: DefaultGenericsOptions
                 | SymbolDisplayGenericsOptions.IncludeTypeParameters
                 | SymbolDisplayGenericsOptions.IncludeTypeConstraints
@@ -127,7 +127,7 @@ namespace Roslynator.Documentation
                 | SymbolDisplayMemberOptions.IncludeParameters
                 | SymbolDisplayMemberOptions.IncludeConstantValue
                 | SymbolDisplayMemberOptions.IncludeRef,
-             delegateStyle: SymbolDisplayDelegateStyle.NameAndParameters,
+             delegateStyle: SymbolDisplayDelegateStyle.NameAndSignature,
              extensionMethodStyle: DefaultExtensionMethodStyle,
              parameterOptions: DefaultParameterOptions
                 | SymbolDisplayParameterOptions.IncludeExtensionThis

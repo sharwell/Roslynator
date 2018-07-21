@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -59,9 +58,7 @@ namespace Roslynator.Documentation
                     if (!TryGetReference(references, f, out PortableExecutableReference reference))
                         Console.WriteLine($"Assembly '{f}' not found in the list of assembly references.");
 
-                    var assemblySymbol = (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(reference);
-
-                    return new AssemblyDocumentationInfo(assemblySymbol, reference);
+                    return (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(reference);
                 }));
 
             if (!TryGetDocumentationParts(options.DocumentationParts, out DocumentationParts parts))

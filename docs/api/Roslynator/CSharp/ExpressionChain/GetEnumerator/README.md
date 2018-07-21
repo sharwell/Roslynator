@@ -9,7 +9,7 @@ Assembly: Roslynator\.CSharp\.dll
 Gets the enumerator for the expressions\.
 
 ```csharp
-public Enumerator GetEnumerator()
+public ExpressionChain.Enumerator GetEnumerator()
 ```
 
 ### Returns

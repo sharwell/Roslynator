@@ -9,7 +9,7 @@ Assembly: Roslynator\.CSharp\.dll
 Gets the enumerator the list of statements\.
 
 ```csharp
-public Enumerator GetEnumerator()
+public SyntaxList<StatementSyntax>.Enumerator GetEnumerator()
 ```
 
 ### Returns

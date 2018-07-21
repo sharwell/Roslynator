@@ -9,7 +9,7 @@ Assembly: Roslynator\.CSharp\.dll
 Returns an enumerator that iterates through selected lines\.
 
 ```csharp
-public Enumerator GetEnumerator()
+public TextLineCollectionSelection.Enumerator GetEnumerator()
 ```
 
 ### Returns

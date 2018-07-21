@@ -9,7 +9,7 @@ Assembly: Roslynator\.CSharp\.dll
 Gets the enumerator for the list of usings\.
 
 ```csharp
-public Enumerator GetEnumerator()
+public SyntaxList<UsingDirectiveSyntax>.Enumerator GetEnumerator()
 ```
 
 ### Returns

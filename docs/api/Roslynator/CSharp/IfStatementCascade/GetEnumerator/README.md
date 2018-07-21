@@ -9,7 +9,7 @@ Assembly: Roslynator\.CSharp\.dll
 Gets the enumerator for the if\-else cascade\.
 
 ```csharp
-public Enumerator GetEnumerator()
+public IfStatementCascade.Enumerator GetEnumerator()
 ```
 
 ### Returns

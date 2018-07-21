@@ -9,7 +9,7 @@ Assembly: Roslynator\.CSharp\.dll
 Represents consecutive sequence of selected items in a collection\.
 
 ```csharp
-public abstract interface ISelection<T> : System.Collections.Generic.IReadOnlyList<T>,
+public interface ISelection<T> : System.Collections.Generic.IReadOnlyList<T>,
     System.Collections.Generic.IReadOnlyCollection<T>,
     System.Collections.Generic.IEnumerable<T>
 ```

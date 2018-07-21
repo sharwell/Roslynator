@@ -9,7 +9,7 @@ Assembly: Roslynator\.CSharp\.dll
 Returns an enumerator that iterates through selected nodes\.
 
 ```csharp
-public Enumerator GetEnumerator()
+public SeparatedSyntaxListSelection<TNode>.Enumerator GetEnumerator()
 ```
 
 ### Returns
