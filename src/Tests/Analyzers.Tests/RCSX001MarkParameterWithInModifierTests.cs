@@ -11,7 +11,7 @@ using Xunit;
 
 namespace Roslynator.CSharp.Analysis.Tests
 {
-    public class RCSX001Tests : AbstractCSharpCodeFixVerifier
+    public class RCSX001MarkParameterWithInModifierTests : AbstractCSharpCodeFixVerifier
     {
         public override DiagnosticDescriptor Descriptor { get; } = DiagnosticDescriptors.MarkParameterWithInModifier;
 

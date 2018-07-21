@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -16,6 +17,8 @@ namespace Roslynator.CSharp.Analysis
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public class MarkParameterWithInModifierAnalyzer : BaseDiagnosticAnalyzer
     {
+        private static readonly SymbolDisplayFormat _symbolDisplayFormat = new SymbolDisplayFormat(kindOptions: SymbolDisplayKindOptions.IncludeTypeKeyword);
+
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
         {
             get { return ImmutableArray.Create(DiagnosticDescriptors.MarkParameterWithInModifier); }
@@ -98,38 +101,48 @@ namespace Roslynator.CSharp.Analysis
 
             var methodSymbol = (IMethodSymbol)semanticModel.GetDeclaredSymbol(declaration, cancellationToken);
 
-            if (methodSymbol.ImplementsInterfaceMember(allInterfaces: true))
-                return;
-
-            Dictionary<string, IParameterSymbol> parameters = null;
+            SyntaxWalker walker = null;
 
             foreach (IParameterSymbol parameter in methodSymbol.Parameters)
             {
                 cancellationToken.ThrowIfCancellationRequested();
 
-                if (parameter.RefKind != RefKind.None)
-                    continue;
+                if (parameter.RefKind == RefKind.None)
+                {
+                    ITypeSymbol type = parameter.Type;
 
-                ITypeSymbol type = parameter.Type;
+                    if (type.TypeKind == TypeKind.Struct
+                        && type
+                            .ToDisplayParts(_symbolDisplayFormat)
+                            .Any(f => f.Kind == SymbolDisplayPartKind.Keyword && f.ToString() == "readonly"))
+                    {
+                        if (walker == null)
+                        {
+                            if (methodSymbol.ImplementsInterfaceMember(allInterfaces: true))
+                                return;
 
-                if (type.TypeKind != TypeKind.Struct)
-                    continue;
+                            walker = SyntaxWalker.GetInstance();
+                        }
 
-                if (!(type.GetSyntaxOrDefault(cancellationToken) is StructDeclarationSyntax structDeclaration))
-                    continue;
-
-                if (!structDeclaration.Modifiers.Contains(SyntaxKind.ReadOnlyKeyword))
-                    continue;
-
-                (parameters ?? (parameters = new Dictionary<string, IParameterSymbol>())).Add(parameter.Name, parameter);
+                        walker.Parameters.Add(parameter.Name, parameter);
+                    }
+                }
             }
 
-            if (parameters == null)
+            if (walker == null)
                 return;
 
-            var walker = new SyntaxWalker(parameters, semanticModel, cancellationToken);
+            walker.SemanticModel = semanticModel;
+            walker.CancellationToken = cancellationToken;
 
-            walker.Visit(bodyOrExpressionBody);
+            if (bodyOrExpressionBody is BlockSyntax body)
+            {
+                walker.VisitBlock(body);
+            }
+            else
+            {
+                walker.VisitArrowExpressionClause((ArrowExpressionClauseSyntax)bodyOrExpressionBody);
+            }
 
             foreach (KeyValuePair<string, IParameterSymbol> kvp in walker.Parameters)
             {
@@ -137,42 +150,49 @@ namespace Roslynator.CSharp.Analysis
 
                 context.ReportDiagnostic(DiagnosticDescriptors.MarkParameterWithInModifier, parameter.Identifier);
             }
+
+            SyntaxWalker.Free(walker);
         }
 
         private class SyntaxWalker : AssignedExpressionWalker
         {
+            [ThreadStatic]
+            private static SyntaxWalker _cachedInstance;
+
             private bool _isInAssignedExpression;
             private int _localFunctionNesting;
             private int _anonymousFunctionNesting;
-            private readonly SemanticModel _semanticModel;
-            private CancellationToken _cancellationToken;
 
-            public SyntaxWalker(
-                Dictionary<string, IParameterSymbol> parameters,
-                SemanticModel semanticModel,
-                CancellationToken cancellationToken)
+            public Dictionary<string, IParameterSymbol> Parameters { get; } = new Dictionary<string, IParameterSymbol>();
+
+            public SemanticModel SemanticModel { get; set; }
+
+            public CancellationToken CancellationToken { get; set; }
+
+            public void Reset()
             {
-                Parameters = parameters;
-                _semanticModel = semanticModel;
-                _cancellationToken = cancellationToken;
+                _isInAssignedExpression = false;
+                _localFunctionNesting = 0;
+                _anonymousFunctionNesting = 0;
+
+                SemanticModel = null;
+                CancellationToken = default;
+                Parameters.Clear();
             }
 
-            public Dictionary<string, IParameterSymbol> Parameters { get; }
-
-            public override void Visit(SyntaxNode node)
+            protected override bool ShouldVisit
             {
-                if (Parameters.Count > 0)
-                    base.Visit(node);
+                get { return Parameters.Count > 0; }
             }
 
             public override void VisitIdentifierName(IdentifierNameSyntax node)
             {
-                _cancellationToken.ThrowIfCancellationRequested();
+                CancellationToken.ThrowIfCancellationRequested();
 
                 string name = node.Identifier.ValueText;
 
                 if (Parameters.TryGetValue(name, out IParameterSymbol parameterSymbol)
-                    && _semanticModel.GetSymbol(node, _cancellationToken).Equals(parameterSymbol))
+                    && SemanticModel.GetSymbol(node, CancellationToken).Equals(parameterSymbol))
                 {
                     if (_isInAssignedExpression
                         || _localFunctionNesting > 0
@@ -220,6 +240,27 @@ namespace Roslynator.CSharp.Analysis
                 _localFunctionNesting++;
                 base.VisitLocalFunctionStatement(node);
                 _localFunctionNesting--;
+            }
+
+            public static SyntaxWalker GetInstance()
+            {
+                SyntaxWalker walker = _cachedInstance;
+
+                if (walker != null)
+                {
+                    _cachedInstance = null;
+                    return walker;
+                }
+                else
+                {
+                    return new SyntaxWalker();
+                }
+            }
+
+            public static void Free(SyntaxWalker walker)
+            {
+                walker.Reset();
+                _cachedInstance = walker;
             }
         }
     }

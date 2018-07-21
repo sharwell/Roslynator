@@ -2,8 +2,8 @@
 <Analyzers>
   <Analyzer Identifier="MarkParameterWithInModifier">
     <Id>RCSX001</Id>
-    <Title>Mark parameter with in modifier</Title>
-    <MessageFormat>Mark parameter with in modifier</MessageFormat>
+    <Title>Mark parameter with 'in' modifier.</Title>
+    <MessageFormat>Mark parameter with 'in' modifier.</MessageFormat>
     <Category>Performance</Category>
     <DefaultSeverity>Info</DefaultSeverity>
     <IsEnabledByDefault>true</IsEnabledByDefault>

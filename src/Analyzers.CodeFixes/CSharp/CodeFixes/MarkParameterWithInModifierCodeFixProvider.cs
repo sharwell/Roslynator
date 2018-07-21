@@ -4,16 +4,13 @@ using System.Collections.Immutable;
 using System.Composition;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Roslynator.CodeFixes;
-using Roslynator.CSharp.Refactorings;
 
 namespace Roslynator.CSharp.CodeFixes
 {
-
     [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(MarkParameterWithInModifierCodeFixProvider))]
     [Shared]
     public class MarkParameterWithInModifierCodeFixProvider : BaseCodeFixProvider
