@@ -21,7 +21,7 @@ namespace Roslynator.Documentation
 
         public SymbolDisplayFormatProvider FormatProvider => Writer.FormatProvider;
 
-        public CompilationDocumentationInfo CompilationInfo => Writer.CompilationInfo;
+        public DocumentationModel DocumentationModel => Writer.DocumentationModel;
 
         public DocumentationOptions Options => Writer.Options;
 
@@ -315,7 +315,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                CompilationInfo.GetDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
+                DocumentationModel.GetDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
             }
         }
 
@@ -336,7 +336,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                CompilationInfo.GetDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
+                DocumentationModel.GetDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
             }
         }
 
@@ -359,7 +359,7 @@ namespace Roslynator.Documentation
 
                 string elementName = (propertySymbol.IsIndexer) ? "returns" : "value";
 
-                CompilationInfo.GetDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
+                DocumentationModel.GetDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
             }
         }
     }

@@ -11,7 +11,15 @@ namespace Roslynator.Documentation
 {
     public class SymbolDefinitionListBuilder
     {
-        private static readonly SymbolDisplayFormat _typeFormat = SymbolDisplayFormats.FullDefinition.WithTypeQualificationStyle(SymbolDisplayTypeQualificationStyle.NameOnly);
+        private static readonly SymbolDisplayFormat _namespaceFormat = SymbolDisplayFormats.NamespaceDefinition;
+
+        private static readonly SymbolDisplayFormat _typeFormat = SymbolDisplayFormats.FullDefinition
+            .WithTypeQualificationStyle(SymbolDisplayTypeQualificationStyle.NameOnly);
+
+        private static readonly SymbolDisplayFormat _memberFormat = SymbolDisplayFormats.FullDefinition
+            .WithTypeQualificationStyle(SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces);
+
+        private static readonly SymbolDisplayFormat _enumFieldFormat = SymbolDisplayFormats.FullDefinition;
 
         private static readonly SymbolDisplayFormat _nameAndContainingNamesAndNameSpacesFormat = new SymbolDisplayFormat(
             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
@@ -48,19 +56,21 @@ namespace Roslynator.Documentation
 
                 if (namespaceSymbol.IsGlobalNamespace)
                 {
+                    CurrentNamespace = namespaceSymbol;
                     AppendTypes(typeSymbols.Where(f => f.ContainingNamespace.IsGlobalNamespace));
+                    CurrentNamespace = null;
                 }
                 else
                 {
-                    AppendSymbol(namespaceSymbol, SymbolDisplayFormats.NamespaceDefinition);
+                    AppendSymbol(namespaceSymbol, _namespaceFormat);
                     AppendLine();
                     AppendLine("{");
 
-                    CurrentNamespace = namespaceSymbol;
                     IncreaseIndentation();
-                    CurrentNamespace = null;
 
+                    CurrentNamespace = namespaceSymbol;
                     AppendTypes(grouping);
+                    CurrentNamespace = null;
 
                     DecreaseIndentation();
 
@@ -130,7 +140,7 @@ namespace Roslynator.Documentation
                                         if (member.Kind == SymbolKind.Field
                                             && member.DeclaredAccessibility == Accessibility.Public)
                                         {
-                                            AppendSymbol(member, SymbolDisplayFormats.FullDefinition);
+                                            AppendSymbol(member, _enumFieldFormat);
                                             Append(",");
                                             AppendLine();
                                         }
@@ -192,7 +202,7 @@ namespace Roslynator.Documentation
                     while (true)
                     {
                         AppendAttributes(en.Current);
-                        Append(SymbolDefinitionBuilder.GetDisplayParts(en.Current, SymbolDisplayFormats.FullDefinition));
+                        Append(en.Current.ToDisplayParts(_memberFormat));
 
                         if (en.Current.Kind != SymbolKind.Property)
                             Append(";");
@@ -320,15 +330,28 @@ namespace Roslynator.Documentation
                     {
                         INamespaceSymbol containingNamespace = symbol.ContainingNamespace;
 
-                        if (containingNamespace?.IsGlobalNamespace == false
-                            && containingNamespace != CurrentNamespace)
-                        {
+                        if (ShouldAddNamespace(containingNamespace))
                             Namespaces.Add(containingNamespace);
-                        }
                     }
                 }
 
                 StringBuilder.Append(part);
+            }
+
+            bool ShouldAddNamespace(INamespaceSymbol containingNamespace)
+            {
+                INamespaceSymbol n = CurrentNamespace;
+
+                do
+                {
+                    if (MetadataNameEqualityComparer<INamespaceSymbol>.Instance.Equals(containingNamespace, n))
+                        return false;
+
+                    n = n.ContainingNamespace;
+                }
+                while (n?.IsGlobalNamespace == false);
+
+                return true;
             }
         }
 

@@ -2,8 +2,15 @@
 
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.Simplification;
+using Microsoft.CodeAnalysis.Text;
+using Roslynator.CSharp;
 
 namespace Roslynator.Documentation
 {
@@ -13,18 +20,18 @@ namespace Roslynator.Documentation
         private readonly ImmutableArray<TypeKind> _typeKinds = ImmutableArray.CreateRange(new TypeKind[] { TypeKind.Class, TypeKind.Struct, TypeKind.Interface, TypeKind.Enum, TypeKind.Delegate });
 
         protected DocumentationGenerator(
-            CompilationDocumentationInfo compilation,
+            DocumentationModel documentationModel,
             DocumentationUriProvider uriProvider,
             DocumentationOptions options = null,
             DocumentationResources resources = null)
         {
-            CompilationInfo = compilation;
+            DocumentationModel = documentationModel;
             UriProvider = uriProvider;
             Options = options ?? DocumentationOptions.Default;
             Resources = resources ?? DocumentationResources.Default;
         }
 
-        public CompilationDocumentationInfo CompilationInfo { get; }
+        public DocumentationModel DocumentationModel { get; }
 
         public DocumentationOptions Options { get; }
 
@@ -36,7 +43,7 @@ namespace Roslynator.Documentation
 
         private SymbolDocumentationInfo EmptySymbolInfo
         {
-            get { return _emptySymbolInfo ?? (_emptySymbolInfo = SymbolDocumentationInfo.Create(CompilationInfo)); }
+            get { return _emptySymbolInfo ?? (_emptySymbolInfo = SymbolDocumentationInfo.Create(DocumentationModel)); }
         }
 
         private DocumentationWriter CreateWriter(SymbolDocumentationInfo symbolInfo, SymbolDocumentationInfo directoryInfo)
@@ -53,7 +60,7 @@ namespace Roslynator.Documentation
 
         internal SymbolDocumentationInfo GetSymbolInfo(ISymbol symbol)
         {
-            return CompilationInfo.GetSymbolInfo(symbol);
+            return DocumentationModel.GetSymbolInfo(symbol);
         }
 
         public IEnumerable<DocumentationGeneratorResult> Generate(
@@ -91,7 +98,7 @@ namespace Roslynator.Documentation
 
             if ((parts & DocumentationParts.Namespace) != 0)
             {
-                foreach (INamespaceSymbol namespaceSymbol in CompilationInfo.Namespaces)
+                foreach (INamespaceSymbol namespaceSymbol in DocumentationModel.Namespaces)
                     yield return GenerateNamespace(namespaceSymbol);
             }
 
@@ -99,7 +106,7 @@ namespace Roslynator.Documentation
             {
                 bool generateMembers = (parts & DocumentationParts.Member) != 0;
 
-                foreach (INamedTypeSymbol typeSymbol in CompilationInfo.Types)
+                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.Types)
                 {
                     yield return GenerateType(typeSymbol);
 
@@ -118,7 +125,7 @@ namespace Roslynator.Documentation
             {
                 yield return extendedExternalTypes;
 
-                foreach (ITypeSymbol typeSymbol in CompilationInfo.GetExtendedExternalTypes())
+                foreach (ITypeSymbol typeSymbol in DocumentationModel.GetExtendedExternalTypes())
                     yield return GenerateExtendedExternalType(typeSymbol);
             }
         }
@@ -151,12 +158,12 @@ namespace Roslynator.Documentation
 
             if (Options.IsEnabled(RootDocumentationParts.NamespaceList))
             {
-                writer.WriteList(CompilationInfo.Namespaces, Resources.NamespacesTitle, 2, FormatProvider.NamespaceFormat);
+                writer.WriteList(DocumentationModel.Namespaces, Resources.NamespacesTitle, 2, FormatProvider.NamespaceFormat);
             }
 
             if (Options.IsEnabled(RootDocumentationParts.Namespaces))
             {
-                foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> grouping in CompilationInfo.Types
+                foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> grouping in DocumentationModel.Types
                    .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
                    .OrderBy(f => f.Key.ToDisplayString(FormatProvider.NamespaceFormat)))
                 {
@@ -184,7 +191,7 @@ namespace Roslynator.Documentation
                     writer.WriteHeading(1, namespaceSymbol, FormatProvider.NamespaceFormat, addLink: false);
                 }
 
-                GenerateNamespaceContent(writer, CompilationInfo.GetTypes(namespaceSymbol), 2, addLink: Options.IsEnabled(DocumentationParts.Type));
+                GenerateNamespaceContent(writer, DocumentationModel.GetTypes(namespaceSymbol), 2, addLink: Options.IsEnabled(DocumentationParts.Type));
 
                 writer.WriteEndDocument();
 
@@ -224,7 +231,7 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
-                IEnumerable<INamespaceSymbol> namespaces = CompilationInfo.GetExtendedExternalTypes()
+                IEnumerable<INamespaceSymbol> namespaces = DocumentationModel.GetExtendedExternalTypes()
                     .Select(f => f.ContainingNamespace)
                     .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
@@ -235,7 +242,7 @@ namespace Roslynator.Documentation
 
                 if (Options.IsEnabled(RootDocumentationParts.Namespaces))
                 {
-                    foreach (IGrouping<INamespaceSymbol, ITypeSymbol> grouping in CompilationInfo.GetExtendedExternalTypes()
+                    foreach (IGrouping<INamespaceSymbol, ITypeSymbol> grouping in DocumentationModel.GetExtendedExternalTypes()
                        .OrderBy(f => f.ToDisplayString(FormatProvider.TypeFormat))
                        .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
                        .OrderBy(f => f.Key.ToDisplayString(FormatProvider.NamespaceFormat)))
@@ -275,7 +282,7 @@ namespace Roslynator.Documentation
                 writer.WriteString(Resources.ExtensionsTitle);
                 writer.WriteEndHeading();
 
-                IEnumerable<IMethodSymbol> extensionMethods = CompilationInfo.GetExtensionMethods(typeSymbol);
+                IEnumerable<IMethodSymbol> extensionMethods = DocumentationModel.GetExtensionMethods(typeSymbol);
 
                 writer.WriteTable(
                     extensionMethods,
@@ -551,11 +558,11 @@ namespace Roslynator.Documentation
                     {
                         case TypeKind.Class:
                             {
-                                if (CompilationInfo.Types.Any(f => !f.IsStatic && f.TypeKind == TypeKind.Class))
+                                if (DocumentationModel.Types.Any(f => !f.IsStatic && f.TypeKind == TypeKind.Class))
                                 {
-                                    INamedTypeSymbol objectType = CompilationInfo.Compilation.ObjectType;
+                                    INamedTypeSymbol objectType = DocumentationModel.Compilation.ObjectType;
 
-                                    IEnumerable<INamedTypeSymbol> instanceClasses = CompilationInfo.Types.Where(f => !f.IsStatic && f.TypeKind == TypeKind.Class);
+                                    IEnumerable<INamedTypeSymbol> instanceClasses = DocumentationModel.Types.Where(f => !f.IsStatic && f.TypeKind == TypeKind.Class);
 
                                     var nodes = new HashSet<ITypeSymbol>(instanceClasses) { objectType };
 
@@ -574,7 +581,7 @@ namespace Roslynator.Documentation
                                     WriteBulletItem(objectType, nodes, writer);
                                 }
 
-                                using (IEnumerator<INamedTypeSymbol> en = CompilationInfo.Types
+                                using (IEnumerator<INamedTypeSymbol> en = DocumentationModel.Types
                                     .Where(f => f.IsStatic && f.TypeKind == TypeKind.Class)
                                     .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
                                 {
@@ -597,7 +604,7 @@ namespace Roslynator.Documentation
                         case TypeKind.Enum:
                         case TypeKind.Delegate:
                             {
-                                using (IEnumerator<INamedTypeSymbol> en = CompilationInfo.Types
+                                using (IEnumerator<INamedTypeSymbol> en = DocumentationModel.Types
                                     .Where(f => f.TypeKind == typeKind)
                                     .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
                                 {
@@ -639,6 +646,141 @@ namespace Roslynator.Documentation
                 }
 
                 writer.WriteEndBulletItem();
+            }
+        }
+
+        public DocumentationGeneratorResult GenerateDefinitionList()
+        {
+            var builder = new SymbolDefinitionListBuilder();
+
+            builder.AppendSymbols(DocumentationModel.Types.Where(f => f.ContainingType == null));
+
+            string content = builder.ToString();
+
+            content = PostProcess(content).Result;
+
+            return new DocumentationGeneratorResult(content, WellKnownNames.DefinitionListFileName, DocumentationKind.DefinitionList);
+
+            async Task<string> PostProcess(string source)
+            {
+                Project project = new AdhocWorkspace()
+                    .CurrentSolution
+                    .AddProject("AdHocProject", "AdHocProject", LanguageNames.CSharp)
+                    .WithMetadataReferences(DocumentationModel.Compilation.References);
+
+                var parseOptions = (CSharpParseOptions)project.ParseOptions;
+
+                Document document = project
+                    .WithParseOptions(parseOptions.WithLanguageVersion(LanguageVersion.Latest))
+                    .AddDocument("AdHocFile.cs", SourceText.From(source));
+
+                SemanticModel semanticModel = await document.GetSemanticModelAsync().ConfigureAwait(false);
+                SyntaxNode root = await document.GetSyntaxRootAsync().ConfigureAwait(false);
+
+                var rewriter = new DefinitionListRewriter(semanticModel);
+
+                root = rewriter.Visit(root);
+
+                document = document.WithSyntaxRoot(root);
+
+                document = await Simplifier.ReduceAsync(document).ConfigureAwait(false);
+
+                root = await document.GetSyntaxRootAsync().ConfigureAwait(false);
+
+                return root.ToFullString();
+            }
+        }
+
+        private class DefinitionListRewriter : CSharpSyntaxRewriter
+        {
+            private static readonly SymbolDisplayFormat _enumFieldFormat = new SymbolDisplayFormat(
+                typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
+                memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
+
+            private static readonly SyntaxAnnotation[] _simplifierAnnotationAsArray = new SyntaxAnnotation[] { Simplifier.Annotation };
+
+            private ITypeSymbol _enumTypeSymbol;
+
+            public DefinitionListRewriter(SemanticModel semanticModel)
+            {
+                SemanticModel = semanticModel;
+            }
+
+            public SemanticModel SemanticModel { get; }
+
+            public override SyntaxNode VisitQualifiedName(QualifiedNameSyntax node)
+            {
+                if (SemanticModel.GetSymbol(node.Left)?.Kind == SymbolKind.Namespace)
+                {
+                    return node
+                        .WithRight((SimpleNameSyntax)Visit(node.Right))
+                        .WithAdditionalAnnotations(_simplifierAnnotationAsArray);
+                }
+
+                return base.VisitQualifiedName(node);
+            }
+
+            public override SyntaxNode VisitParameter(ParameterSyntax node)
+            {
+                EqualsValueClauseSyntax @default = node.Default;
+
+                if (@default != null)
+                {
+                    ExpressionSyntax value = @default?.Value;
+
+                    if (value != null)
+                    {
+                        ITypeSymbol typeSymbol = SemanticModel.GetTypeSymbol(node.Type);
+
+                        if (typeSymbol?.TypeKind == TypeKind.Enum)
+                        {
+                            node = (ParameterSyntax)base.VisitParameter(node);
+
+                            try
+                            {
+                                _enumTypeSymbol = typeSymbol;
+                                value = (ExpressionSyntax)Visit(value);
+                            }
+                            finally
+                            {
+                                _enumTypeSymbol = null;
+                            }
+
+                            return node.WithDefault(node.Default.WithValue(value));
+                        }
+                    }
+                }
+
+                return base.VisitParameter(node);
+            }
+
+            public override SyntaxNode VisitIdentifierName(IdentifierNameSyntax node)
+            {
+                if (_enumTypeSymbol != null
+                    && !node.IsParentKind(SyntaxKind.SimpleMemberAccessExpression))
+                {
+                    MemberAccessExpressionSyntax newNode = CSharpFactory.SimpleMemberAccessExpression(
+                        SyntaxFactory.ParseExpression(_enumTypeSymbol.ToDisplayString(_enumFieldFormat)),
+                        node);
+
+                    return newNode.WithAdditionalAnnotations(_simplifierAnnotationAsArray);
+                }
+
+                return base.VisitIdentifierName(node);
+            }
+
+            public override SyntaxNode VisitDefaultExpression(DefaultExpressionSyntax node)
+            {
+                Debug.Assert(node.IsParentKind(SyntaxKind.EqualsValueClause)
+                    && node.Parent.IsParentKind(SyntaxKind.Parameter), node.ToString());
+
+                if (node.IsParentKind(SyntaxKind.EqualsValueClause)
+                    && node.Parent.IsParentKind(SyntaxKind.Parameter))
+                {
+                    return CSharpFactory.DefaultLiteralExpression();
+                }
+
+                return base.VisitDefaultExpression(node);
             }
         }
     }

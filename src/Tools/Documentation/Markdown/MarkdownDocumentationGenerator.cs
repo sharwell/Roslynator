@@ -5,10 +5,10 @@ namespace Roslynator.Documentation.Markdown
     public class MarkdownDocumentationGenerator : DocumentationGenerator
     {
         public MarkdownDocumentationGenerator(
-            CompilationDocumentationInfo compilationInfo,
+            DocumentationModel documentationModel,
             DocumentationUriProvider uriProvider,
             DocumentationOptions options = null,
-            DocumentationResources resources = null) : base(compilationInfo, uriProvider: uriProvider, options: options, resources: resources)
+            DocumentationResources resources = null) : base(documentationModel, uriProvider: uriProvider, options: options, resources: resources)
         {
         }
 

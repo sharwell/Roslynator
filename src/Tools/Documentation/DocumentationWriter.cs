@@ -35,7 +35,7 @@ namespace Roslynator.Documentation
 
         public ISymbol Symbol => SymbolInfo.Symbol;
 
-        public CompilationDocumentationInfo CompilationInfo => SymbolInfo.CompilationInfo;
+        public DocumentationModel DocumentationModel => SymbolInfo.DocumentationModel;
 
         internal bool CanCreateTypeLocalUrl { get; set; } = true;
 
@@ -53,7 +53,7 @@ namespace Roslynator.Documentation
 
         internal SymbolDocumentationInfo GetSymbolInfo(ISymbol symbol)
         {
-            return CompilationInfo.GetSymbolInfo(symbol);
+            return DocumentationModel.GetSymbolInfo(symbol);
         }
 
         public abstract void WriteStartDocument();
@@ -447,7 +447,7 @@ namespace Roslynator.Documentation
                 WriteLink(returnType, FormatProvider.ReturnValueFormat);
                 WriteLine();
 
-                CompilationInfo.GetDocumentation(symbol)?.WriteElementContentTo(this, "returns");
+                DocumentationModel.GetDocumentation(symbol)?.WriteElementContentTo(this, "returns");
             }
         }
 
@@ -638,7 +638,7 @@ namespace Roslynator.Documentation
             if (typeKind.Is(TypeKind.Class, TypeKind.Interface)
                 && !typeSymbol.IsStatic)
             {
-                using (IEnumerator<INamedTypeSymbol> en = CompilationInfo
+                using (IEnumerator<INamedTypeSymbol> en = DocumentationModel
                     .GetDerivedTypes(typeSymbol, includeInterfaces: true)
                     .OrderBy(f => f.ToDisplayString(FormatProvider.DerivedFormat))
                     .GetEnumerator())
@@ -737,7 +737,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteExceptions(ISymbol symbol)
         {
-            CompilationInfo.GetDocumentation(symbol)?.WriteExceptionsTo(this);
+            DocumentationModel.GetDocumentation(symbol)?.WriteExceptionsTo(this);
         }
 
         public virtual void WriteExamples(ISymbol symbol)
@@ -835,7 +835,7 @@ namespace Roslynator.Documentation
                             WriteEndTableCell();
                         }
 
-                        SymbolXmlDocumentation xmlDocumentation = CompilationInfo.GetDocumentation(fieldSymbol);
+                        SymbolXmlDocumentation xmlDocumentation = DocumentationModel.GetDocumentation(fieldSymbol);
 
                         if (xmlDocumentation != null)
                         {
@@ -915,7 +915,7 @@ namespace Roslynator.Documentation
         public virtual void WriteExtensionMethods(ITypeSymbol typeSymbol)
         {
             WriteTable(
-                CompilationInfo.GetExtensionMethods(typeSymbol),
+                DocumentationModel.GetExtensionMethods(typeSymbol),
                 Resources.ExtensionMethodsTitle,
                 2,
                 Resources.MethodTitle,
@@ -925,12 +925,12 @@ namespace Roslynator.Documentation
 
         public virtual void WriteSeeAlso(ISymbol symbol)
         {
-            CompilationInfo.GetDocumentation(symbol)?.WriteSeeAlsoTo(this);
+            DocumentationModel.GetDocumentation(symbol)?.WriteSeeAlsoTo(this);
         }
 
         private void WriteSection(ISymbol symbol, string heading, string elementName)
         {
-            CompilationInfo.GetDocumentation(symbol)?.WriteSectionTo(this, heading, elementName);
+            DocumentationModel.GetDocumentation(symbol)?.WriteSectionTo(this, heading, elementName);
         }
 
         internal void WriteTable(
@@ -990,12 +990,12 @@ namespace Roslynator.Documentation
 
                         if (symbol.IsKind(SymbolKind.Parameter, SymbolKind.TypeParameter))
                         {
-                            CompilationInfo.GetDocumentation(symbol.ContainingSymbol)?.WriteParamContentTo(this, symbol.Name);
+                            DocumentationModel.GetDocumentation(symbol.ContainingSymbol)?.WriteParamContentTo(this, symbol.Name);
                         }
                         else
                         {
                             ISymbol symbol2 = (isInherited) ? symbol.OriginalDefinition : symbol;
-                            CompilationInfo.GetDocumentation(symbol2)?.WriteElementContentTo(this, "summary", inlineOnly: true);
+                            DocumentationModel.GetDocumentation(symbol2)?.WriteElementContentTo(this, "summary", inlineOnly: true);
                         }
 
                         if (isInherited)

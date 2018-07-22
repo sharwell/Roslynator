@@ -51,7 +51,7 @@ namespace Roslynator.Documentation
                 references: references,
                 options: default(CSharpCompilationOptions));
 
-            var compilationInfo = new CompilationDocumentationInfo(
+            var documentationModel = new DocumentationModel(
                 compilation,
                 options.Assemblies.Select(f =>
                 {
@@ -82,7 +82,7 @@ namespace Roslynator.Documentation
                 formatConstraints: options.FormatConstraints,
                 maxDerivedItems: (options.MaxDerivedItems == -1) ? DocumentationOptions.Default.MaxDerivedItems : options.MaxDerivedItems);
 
-            var generator = new MarkdownDocumentationGenerator(compilationInfo, DocumentationUriProvider.GitHub, documentationOptions);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUriProvider.GitHub, documentationOptions);
 
             string directoryPath = options.OutputDirectory;
 

@@ -8,15 +8,14 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    //TODO: DocumentationModel
-    public class CompilationDocumentationInfo
+    public class DocumentationModel
     {
         private ImmutableArray<INamedTypeSymbol> _typeSymbols;
 
         private readonly Dictionary<ISymbol, SymbolDocumentationInfo> _symbolDocumentationInfos;
         private Dictionary<IAssemblySymbol, XmlDocumentation> _xmlDocumentations;
 
-        public CompilationDocumentationInfo(Compilation compilation, IEnumerable<IAssemblySymbol> assemblies)
+        public DocumentationModel(Compilation compilation, IEnumerable<IAssemblySymbol> assemblies)
         {
             Compilation = compilation;
             Assemblies = ImmutableArray.CreateRange(assemblies);

@@ -8,10 +8,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Text;
-using Roslynator;
-using Roslynator.CSharp;
 using Roslynator.CSharp.Syntax;
-using Roslynator.Text;
 
 namespace Roslynator
 {
@@ -76,9 +73,9 @@ namespace Roslynator
     public static NameGenerator Default { get; }
 
     public static string CreateName(ITypeSymbol typeSymbol, bool firstCharToLower = false);
-    public string EnsureUniqueLocalName(string baseName, SemanticModel semanticModel, int position, bool isCaseSensitive = true, CancellationToken cancellationToken = default(CancellationToken));
+    public string EnsureUniqueLocalName(string baseName, SemanticModel semanticModel, int position, bool isCaseSensitive = true, CancellationToken cancellationToken = default);
     public string EnsureUniqueMemberName(string baseName, INamedTypeSymbol typeSymbol, bool isCaseSensitive = true);
-    public string EnsureUniqueMemberName(string baseName, SemanticModel semanticModel, int position, bool isCaseSensitive = true, CancellationToken cancellationToken = default(CancellationToken));
+    public string EnsureUniqueMemberName(string baseName, SemanticModel semanticModel, int position, bool isCaseSensitive = true, CancellationToken cancellationToken = default);
     public abstract string EnsureUniqueName(string baseName, IEnumerable<string> reservedNames, bool isCaseSensitive = true);
     public abstract string EnsureUniqueName(string baseName, ImmutableArray<ISymbol> symbols, bool isCaseSensitive = true);
     public static bool IsUniqueName(string name, IEnumerable<string> reservedNames, bool isCaseSensitive = true);
@@ -87,11 +84,11 @@ namespace Roslynator
 
   public static class SemanticModelExtensions
   {
-    public static INamedTypeSymbol GetEnclosingNamedType(this SemanticModel semanticModel, int position, CancellationToken cancellationToken = default(CancellationToken));
-    public static TSymbol GetEnclosingSymbol<TSymbol>(this SemanticModel semanticModel, int position, CancellationToken cancellationToken = default(CancellationToken)) where TSymbol : ISymbol;
-    public static ISymbol GetSymbol(this SemanticModel semanticModel, SyntaxNode node, CancellationToken cancellationToken = default(CancellationToken));
+    public static INamedTypeSymbol GetEnclosingNamedType(this SemanticModel semanticModel, int position, CancellationToken cancellationToken = default);
+    public static TSymbol GetEnclosingSymbol<TSymbol>(this SemanticModel semanticModel, int position, CancellationToken cancellationToken = default) where TSymbol : ISymbol;
+    public static ISymbol GetSymbol(this SemanticModel semanticModel, SyntaxNode node, CancellationToken cancellationToken = default);
     public static INamedTypeSymbol GetTypeByMetadataName(this SemanticModel semanticModel, string fullyQualifiedMetadataName);
-    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, SyntaxNode node, CancellationToken cancellationToken = default(CancellationToken));
+    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, SyntaxNode node, CancellationToken cancellationToken = default);
   }
 
   public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>, IReadOnlyList<TNode>, IReadOnlyCollection<TNode>, IEnumerable<TNode> where TNode : SyntaxNode
@@ -279,32 +276,32 @@ namespace Roslynator
 
   public static class SyntaxTreeExtensions
   {
-    public static int GetEndLine(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default(CancellationToken));
-    public static int GetStartLine(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default(CancellationToken));
-    public static bool IsMultiLineSpan(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default(CancellationToken));
-    public static bool IsSingleLineSpan(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default(CancellationToken));
+    public static int GetEndLine(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default);
+    public static int GetStartLine(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default);
+    public static bool IsMultiLineSpan(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default);
+    public static bool IsSingleLineSpan(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default);
   }
 
   public static class WorkspaceExtensions
   {
-    public static Task<Document> InsertNodeAfterAsync(this Document document, SyntaxNode nodeInList, SyntaxNode newNode, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> InsertNodeBeforeAsync(this Document document, SyntaxNode nodeInList, SyntaxNode newNode, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> InsertNodesAfterAsync(this Document document, SyntaxNode nodeInList, IEnumerable<SyntaxNode> newNodes, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> InsertNodesBeforeAsync(this Document document, SyntaxNode nodeInList, IEnumerable<SyntaxNode> newNodes, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> RemoveNodeAsync(this Document document, SyntaxNode node, SyntaxRemoveOptions options, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> RemoveNodesAsync(this Document document, IEnumerable<SyntaxNode> nodes, SyntaxRemoveOptions options, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode oldNode, IEnumerable<SyntaxNode> newNodes, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode oldNode, SyntaxNode newNode, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Solution> ReplaceNodeAsync<TNode>(this Solution solution, TNode oldNode, TNode newNode, CancellationToken cancellationToken = default(CancellationToken)) where TNode : SyntaxNode;
-    public static Task<Document> ReplaceNodesAsync<TNode>(this Document document, IEnumerable<TNode> nodes, Func<TNode, TNode, SyntaxNode> computeReplacementNode, CancellationToken cancellationToken = default(CancellationToken)) where TNode : SyntaxNode;
-    public static Task<Solution> ReplaceNodesAsync<TNode>(this Solution solution, IEnumerable<TNode> nodes, Func<TNode, TNode, SyntaxNode> computeReplacementNodes, CancellationToken cancellationToken = default(CancellationToken)) where TNode : SyntaxNode;
-    public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxToken oldToken, IEnumerable<SyntaxToken> newTokens, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxToken oldToken, SyntaxToken newToken, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> ReplaceTriviaAsync(this Document document, SyntaxTrivia oldTrivia, IEnumerable<SyntaxTrivia> newTrivia, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> ReplaceTriviaAsync(this Document document, SyntaxTrivia oldTrivia, SyntaxTrivia newTrivia, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> WithTextChangeAsync(this Document document, TextChange textChange, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> WithTextChangesAsync(this Document document, IEnumerable<TextChange> textChanges, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> WithTextChangesAsync(this Document document, TextChange[] textChanges, CancellationToken cancellationToken = default(CancellationToken));
+    public static Task<Document> InsertNodeAfterAsync(this Document document, SyntaxNode nodeInList, SyntaxNode newNode, CancellationToken cancellationToken = default);
+    public static Task<Document> InsertNodeBeforeAsync(this Document document, SyntaxNode nodeInList, SyntaxNode newNode, CancellationToken cancellationToken = default);
+    public static Task<Document> InsertNodesAfterAsync(this Document document, SyntaxNode nodeInList, IEnumerable<SyntaxNode> newNodes, CancellationToken cancellationToken = default);
+    public static Task<Document> InsertNodesBeforeAsync(this Document document, SyntaxNode nodeInList, IEnumerable<SyntaxNode> newNodes, CancellationToken cancellationToken = default);
+    public static Task<Document> RemoveNodeAsync(this Document document, SyntaxNode node, SyntaxRemoveOptions options, CancellationToken cancellationToken = default);
+    public static Task<Document> RemoveNodesAsync(this Document document, IEnumerable<SyntaxNode> nodes, SyntaxRemoveOptions options, CancellationToken cancellationToken = default);
+    public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode oldNode, IEnumerable<SyntaxNode> newNodes, CancellationToken cancellationToken = default);
+    public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode oldNode, SyntaxNode newNode, CancellationToken cancellationToken = default);
+    public static Task<Solution> ReplaceNodeAsync<TNode>(this Solution solution, TNode oldNode, TNode newNode, CancellationToken cancellationToken = default) where TNode : SyntaxNode;
+    public static Task<Document> ReplaceNodesAsync<TNode>(this Document document, IEnumerable<TNode> nodes, Func<TNode, TNode, SyntaxNode> computeReplacementNode, CancellationToken cancellationToken = default) where TNode : SyntaxNode;
+    public static Task<Solution> ReplaceNodesAsync<TNode>(this Solution solution, IEnumerable<TNode> nodes, Func<TNode, TNode, SyntaxNode> computeReplacementNodes, CancellationToken cancellationToken = default) where TNode : SyntaxNode;
+    public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxToken oldToken, IEnumerable<SyntaxToken> newTokens, CancellationToken cancellationToken = default);
+    public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxToken oldToken, SyntaxToken newToken, CancellationToken cancellationToken = default);
+    public static Task<Document> ReplaceTriviaAsync(this Document document, SyntaxTrivia oldTrivia, IEnumerable<SyntaxTrivia> newTrivia, CancellationToken cancellationToken = default);
+    public static Task<Document> ReplaceTriviaAsync(this Document document, SyntaxTrivia oldTrivia, SyntaxTrivia newTrivia, CancellationToken cancellationToken = default);
+    public static Task<Document> WithTextChangeAsync(this Document document, TextChange textChange, CancellationToken cancellationToken = default);
+    public static Task<Document> WithTextChangesAsync(this Document document, IEnumerable<TextChange> textChanges, CancellationToken cancellationToken = default);
+    public static Task<Document> WithTextChangesAsync(this Document document, TextChange[] textChanges, CancellationToken cancellationToken = default);
   }
 
   public readonly struct ExtensionMethodSymbolInfo : IEquatable<ExtensionMethodSymbolInfo>
@@ -336,23 +333,23 @@ namespace Roslynator.CSharp
 {
   public static class CSharpExtensions
   {
-    public static IParameterSymbol DetermineParameter(this SemanticModel semanticModel, ArgumentSyntax argument, bool allowParams = false, bool allowCandidate = false, CancellationToken cancellationToken = default(CancellationToken));
-    public static IParameterSymbol DetermineParameter(this SemanticModel semanticModel, AttributeArgumentSyntax attributeArgument, bool allowParams = false, bool allowCandidate = false, CancellationToken cancellationToken = default(CancellationToken));
-    public static ExtensionMethodSymbolInfo GetExtensionMethodInfo(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken));
-    public static IMethodSymbol GetMethodSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken));
-    public static ExtensionMethodSymbolInfo GetReducedExtensionMethodInfo(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken));
-    public static ISymbol GetSymbol(this SemanticModel semanticModel, AttributeSyntax attribute, CancellationToken cancellationToken = default(CancellationToken));
-    public static ISymbol GetSymbol(this SemanticModel semanticModel, ConstructorInitializerSyntax constructorInitializer, CancellationToken cancellationToken = default(CancellationToken));
-    public static ISymbol GetSymbol(this SemanticModel semanticModel, CrefSyntax cref, CancellationToken cancellationToken = default(CancellationToken));
-    public static ISymbol GetSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken));
-    public static ISymbol GetSymbol(this SemanticModel semanticModel, OrderingSyntax ordering, CancellationToken cancellationToken = default(CancellationToken));
-    public static ISymbol GetSymbol(this SemanticModel semanticModel, SelectOrGroupClauseSyntax selectOrGroupClause, CancellationToken cancellationToken = default(CancellationToken));
-    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, AttributeSyntax attribute, CancellationToken cancellationToken = default(CancellationToken));
-    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, ConstructorInitializerSyntax constructorInitializer, CancellationToken cancellationToken = default(CancellationToken));
-    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken));
-    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, SelectOrGroupClauseSyntax selectOrGroupClause, CancellationToken cancellationToken = default(CancellationToken));
-    public static bool HasConstantValue(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken));
-    public static bool IsDefaultValue(this SemanticModel semanticModel, ITypeSymbol typeSymbol, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken));
+    public static IParameterSymbol DetermineParameter(this SemanticModel semanticModel, ArgumentSyntax argument, bool allowParams = false, bool allowCandidate = false, CancellationToken cancellationToken = default);
+    public static IParameterSymbol DetermineParameter(this SemanticModel semanticModel, AttributeArgumentSyntax attributeArgument, bool allowParams = false, bool allowCandidate = false, CancellationToken cancellationToken = default);
+    public static ExtensionMethodSymbolInfo GetExtensionMethodInfo(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default);
+    public static IMethodSymbol GetMethodSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default);
+    public static ExtensionMethodSymbolInfo GetReducedExtensionMethodInfo(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default);
+    public static ISymbol GetSymbol(this SemanticModel semanticModel, AttributeSyntax attribute, CancellationToken cancellationToken = default);
+    public static ISymbol GetSymbol(this SemanticModel semanticModel, ConstructorInitializerSyntax constructorInitializer, CancellationToken cancellationToken = default);
+    public static ISymbol GetSymbol(this SemanticModel semanticModel, CrefSyntax cref, CancellationToken cancellationToken = default);
+    public static ISymbol GetSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default);
+    public static ISymbol GetSymbol(this SemanticModel semanticModel, OrderingSyntax ordering, CancellationToken cancellationToken = default);
+    public static ISymbol GetSymbol(this SemanticModel semanticModel, SelectOrGroupClauseSyntax selectOrGroupClause, CancellationToken cancellationToken = default);
+    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, AttributeSyntax attribute, CancellationToken cancellationToken = default);
+    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, ConstructorInitializerSyntax constructorInitializer, CancellationToken cancellationToken = default);
+    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default);
+    public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, SelectOrGroupClauseSyntax selectOrGroupClause, CancellationToken cancellationToken = default);
+    public static bool HasConstantValue(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default);
+    public static bool IsDefaultValue(this SemanticModel semanticModel, ITypeSymbol typeSymbol, ExpressionSyntax expression, CancellationToken cancellationToken = default);
   }
 
   public static class CSharpFactory
@@ -381,7 +378,7 @@ namespace Roslynator.CSharp
     public static ArgumentSyntax Argument(NameColonSyntax nameColon, ExpressionSyntax expression);
     public static ArgumentListSyntax ArgumentList(ArgumentSyntax argument);
     public static ArgumentListSyntax ArgumentList(params ArgumentSyntax[] arguments);
-    public static InitializerExpressionSyntax ArrayInitializerExpression(SeparatedSyntaxList<ExpressionSyntax> expressions = default(SeparatedSyntaxList<ExpressionSyntax>));
+    public static InitializerExpressionSyntax ArrayInitializerExpression(SeparatedSyntaxList<ExpressionSyntax> expressions = default);
     public static InitializerExpressionSyntax ArrayInitializerExpression(SyntaxToken openBraceToken, SeparatedSyntaxList<ExpressionSyntax> expressions, SyntaxToken closeBraceToken);
     public static BinaryExpressionSyntax AsExpression(ExpressionSyntax left, ExpressionSyntax right);
     public static BinaryExpressionSyntax AsExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right);
@@ -398,8 +395,8 @@ namespace Roslynator.CSharp
     public static AttributeArgumentListSyntax AttributeArgumentList(params AttributeArgumentSyntax[] attributeArguments);
     public static AttributeListSyntax AttributeList(AttributeSyntax attribute);
     public static AttributeListSyntax AttributeList(params AttributeSyntax[] attributes);
-    public static AccessorDeclarationSyntax AutoGetAccessorDeclaration(SyntaxTokenList modifiers = default(SyntaxTokenList));
-    public static AccessorDeclarationSyntax AutoSetAccessorDeclaration(SyntaxTokenList modifiers = default(SyntaxTokenList));
+    public static AccessorDeclarationSyntax AutoGetAccessorDeclaration(SyntaxTokenList modifiers = default);
+    public static AccessorDeclarationSyntax AutoSetAccessorDeclaration(SyntaxTokenList modifiers = default);
     public static SyntaxToken AwaitKeyword();
     public static SyntaxToken BackslashToken();
     public static SyntaxToken BarBarToken();
@@ -440,15 +437,15 @@ namespace Roslynator.CSharp
     public static SyntaxToken CheckedKeyword();
     public static SyntaxToken ChecksumKeyword();
     public static ClassOrStructConstraintSyntax ClassConstraint();
-    public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>));
-    public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>));
+    public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default);
+    public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default);
     public static SyntaxToken ClassKeyword();
     public static SyntaxToken CloseBraceToken();
     public static SyntaxToken CloseBracketToken();
     public static SyntaxToken CloseParenToken();
     public static BinaryExpressionSyntax CoalesceExpression(ExpressionSyntax left, ExpressionSyntax right);
     public static BinaryExpressionSyntax CoalesceExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right);
-    public static InitializerExpressionSyntax CollectionInitializerExpression(SeparatedSyntaxList<ExpressionSyntax> expressions = default(SeparatedSyntaxList<ExpressionSyntax>));
+    public static InitializerExpressionSyntax CollectionInitializerExpression(SeparatedSyntaxList<ExpressionSyntax> expressions = default);
     public static InitializerExpressionSyntax CollectionInitializerExpression(SyntaxToken openBraceToken, SeparatedSyntaxList<ExpressionSyntax> expressions, SyntaxToken closeBraceToken);
     public static SyntaxToken ColonColonToken();
     public static SyntaxToken ColonToken();
@@ -456,7 +453,7 @@ namespace Roslynator.CSharp
     public static CompilationUnitSyntax CompilationUnit(MemberDeclarationSyntax member);
     public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyntax> usings, MemberDeclarationSyntax member);
     public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyntax> usings, SyntaxList<MemberDeclarationSyntax> members);
-    public static InitializerExpressionSyntax ComplexElementInitializerExpression(SeparatedSyntaxList<ExpressionSyntax> expressions = default(SeparatedSyntaxList<ExpressionSyntax>));
+    public static InitializerExpressionSyntax ComplexElementInitializerExpression(SeparatedSyntaxList<ExpressionSyntax> expressions = default);
     public static InitializerExpressionSyntax ComplexElementInitializerExpression(SyntaxToken openBraceToken, SeparatedSyntaxList<ExpressionSyntax> expressions, SyntaxToken closeBraceToken);
     public static SyntaxToken ConstKeyword();
     public static ConstructorDeclarationSyntax ConstructorDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody);
@@ -559,8 +556,8 @@ namespace Roslynator.CSharp
     public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifiers, TypeSyntax type, BracketedParameterListSyntax parameterList, AccessorListSyntax accessorList);
     public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifiers, TypeSyntax type, BracketedParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody);
     public static SyntaxToken IntKeyword();
-    public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>));
-    public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>));
+    public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default);
+    public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default);
     public static SyntaxToken InterfaceKeyword();
     public static SyntaxToken InternalKeyword();
     public static SyntaxToken InterpolatedStringEndToken();
@@ -640,7 +637,7 @@ namespace Roslynator.CSharp
     public static LiteralExpressionSyntax NumericLiteralExpression(uint value);
     public static LiteralExpressionSyntax NumericLiteralExpression(ulong value);
     public static ObjectCreationExpressionSyntax ObjectCreationExpression(TypeSyntax type, ArgumentListSyntax argumentList);
-    public static InitializerExpressionSyntax ObjectInitializerExpression(SeparatedSyntaxList<ExpressionSyntax> expressions = default(SeparatedSyntaxList<ExpressionSyntax>));
+    public static InitializerExpressionSyntax ObjectInitializerExpression(SeparatedSyntaxList<ExpressionSyntax> expressions = default);
     public static InitializerExpressionSyntax ObjectInitializerExpression(SyntaxToken openBraceToken, SeparatedSyntaxList<ExpressionSyntax> expressions, SyntaxToken closeBraceToken);
     public static SyntaxToken ObjectKeyword();
     public static SyntaxToken OmittedArraySizeExpressionToken();
@@ -750,8 +747,8 @@ namespace Roslynator.CSharp
     public static SyntaxToken StringKeyword();
     public static LiteralExpressionSyntax StringLiteralExpression(string value);
     public static ClassOrStructConstraintSyntax StructConstraint();
-    public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>));
-    public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>));
+    public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default);
+    public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default);
     public static SyntaxToken StructKeyword();
     public static AssignmentExpressionSyntax SubtractAssignmentExpression(ExpressionSyntax left, ExpressionSyntax right);
     public static AssignmentExpressionSyntax SubtractAssignmentExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right);
@@ -1258,8 +1255,8 @@ namespace Roslynator.CSharp
     public static ModifierListInfo ModifierListInfo(PropertyDeclarationSyntax propertyDeclaration);
     public static ModifierListInfo ModifierListInfo(StructDeclarationSyntax structDeclaration);
     public static ModifierListInfo ModifierListInfo(SyntaxNode node);
-    public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, NullCheckStyles allowedStyles = ComparisonToNull | IsPattern, bool walkDownParentheses = true, bool allowMissing = false);
-    public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, SemanticModel semanticModel, NullCheckStyles allowedStyles = All, bool walkDownParentheses = true, bool allowMissing = false, CancellationToken cancellationToken = default(CancellationToken));
+    public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, NullCheckStyles allowedStyles = NullCheckStyles.ComparisonToNull | NullCheckStyles.IsPattern, bool walkDownParentheses = true, bool allowMissing = false);
+    public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, SemanticModel semanticModel, NullCheckStyles allowedStyles = NullCheckStyles.All, bool walkDownParentheses = true, bool allowMissing = false, CancellationToken cancellationToken = default);
     public static RegionInfo RegionInfo(EndRegionDirectiveTriviaSyntax endRegionDirective);
     public static RegionInfo RegionInfo(RegionDirectiveTriviaSyntax regionDirective);
     public static SimpleAssignmentExpressionInfo SimpleAssignmentExpressionInfo(AssignmentExpressionSyntax assignmentExpression, bool walkDownParentheses = true, bool allowMissing = false);
@@ -1281,9 +1278,9 @@ namespace Roslynator.CSharp
     public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressionInfo(LambdaExpressionSyntax lambdaExpression, bool allowMissing = false);
     public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false);
     public static StatementListInfo StatementListInfo(StatementSyntax statement);
-    public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(BinaryExpressionSyntax binaryExpression, SemanticModel semanticModel, CancellationToken cancellationToken = default(CancellationToken));
-    public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(SyntaxNode node, SemanticModel semanticModel, bool walkDownParentheses = true, CancellationToken cancellationToken = default(CancellationToken));
-    public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(in ExpressionChain expressionChain, SemanticModel semanticModel, CancellationToken cancellationToken = default(CancellationToken));
+    public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(BinaryExpressionSyntax binaryExpression, SemanticModel semanticModel, CancellationToken cancellationToken = default);
+    public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(SyntaxNode node, SemanticModel semanticModel, bool walkDownParentheses = true, CancellationToken cancellationToken = default);
+    public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(in ExpressionChain expressionChain, SemanticModel semanticModel, CancellationToken cancellationToken = default);
     public static StringLiteralExpressionInfo StringLiteralExpressionInfo(LiteralExpressionSyntax literalExpression);
     public static StringLiteralExpressionInfo StringLiteralExpressionInfo(SyntaxNode node, bool walkDownParentheses = true);
     public static UsingDirectiveListInfo UsingDirectiveListInfo(CompilationUnitSyntax compilationUnit);
@@ -1294,12 +1291,12 @@ namespace Roslynator.CSharp
 
   public static class WorkspaceExtensions
   {
-    public static Task<Document> RemoveCommentsAsync(this Document document, CommentKinds kinds, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> RemoveCommentsAsync(this Document document, TextSpan span, CommentKinds kinds, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> RemovePreprocessorDirectivesAsync(this Document document, PreprocessorDirectiveKinds directiveKinds, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> RemovePreprocessorDirectivesAsync(this Document document, TextSpan span, PreprocessorDirectiveKinds directiveKinds, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> RemoveRegionAsync(this Document document, RegionInfo region, CancellationToken cancellationToken = default(CancellationToken));
-    public static Task<Document> RemoveTriviaAsync(this Document document, TextSpan span, CancellationToken cancellationToken = default(CancellationToken));
+    public static Task<Document> RemoveCommentsAsync(this Document document, CommentKinds kinds, CancellationToken cancellationToken = default);
+    public static Task<Document> RemoveCommentsAsync(this Document document, TextSpan span, CommentKinds kinds, CancellationToken cancellationToken = default);
+    public static Task<Document> RemovePreprocessorDirectivesAsync(this Document document, PreprocessorDirectiveKinds directiveKinds, CancellationToken cancellationToken = default);
+    public static Task<Document> RemovePreprocessorDirectivesAsync(this Document document, TextSpan span, PreprocessorDirectiveKinds directiveKinds, CancellationToken cancellationToken = default);
+    public static Task<Document> RemoveRegionAsync(this Document document, RegionInfo region, CancellationToken cancellationToken = default);
+    public static Task<Document> RemoveTriviaAsync(this Document document, TextSpan span, CancellationToken cancellationToken = default);
   }
 
   public static class WorkspaceSyntaxExtensions

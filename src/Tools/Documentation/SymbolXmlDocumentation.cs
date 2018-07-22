@@ -138,7 +138,7 @@ namespace Roslynator.Documentation
 
                                         if (commentId != null)
                                         {
-                                            ISymbol symbol = writer.CompilationInfo.GetFirstSymbolForDeclarationId(commentId);
+                                            ISymbol symbol = writer.DocumentationModel.GetFirstSymbolForDeclarationId(commentId);
 
                                             //XTODO: repair roslyn documentation
                                             Debug.Assert(symbol != null
@@ -406,7 +406,7 @@ namespace Roslynator.Documentation
 
                     if (commentId != null)
                     {
-                        ISymbol exceptionSymbol = writer.CompilationInfo.GetFirstSymbolForReferenceId(commentId);
+                        ISymbol exceptionSymbol = writer.DocumentationModel.GetFirstSymbolForReferenceId(commentId);
 
                         if (exceptionSymbol != null)
                             yield return (e, exceptionSymbol);
@@ -443,7 +443,7 @@ namespace Roslynator.Documentation
 
                     if (commentId != null)
                     {
-                        ISymbol symbol2 = writer.CompilationInfo.GetFirstSymbolForReferenceId(commentId);
+                        ISymbol symbol2 = writer.DocumentationModel.GetFirstSymbolForReferenceId(commentId);
 
                         if (symbol2 != null)
                             yield return symbol2;

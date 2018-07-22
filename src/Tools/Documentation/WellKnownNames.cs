@@ -8,5 +8,6 @@ namespace Roslynator.Documentation
         public const string ConstructorName = "-ctor";
         public const string ObjectModelFileName = "_ObjectModel.md";
         public const string ExtendedExternalTypesFileName = "_ExtendedExternalTypes.md";
+        public const string DefinitionListFileName = "_api.cs";
     }
 }

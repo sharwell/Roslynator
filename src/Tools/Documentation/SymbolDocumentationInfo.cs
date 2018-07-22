@@ -21,13 +21,13 @@ namespace Roslynator.Documentation
             string commentId,
             ImmutableArray<ISymbol> symbolAndBaseTypesAndNamespaces,
             ImmutableArray<string> nameAndBaseNamesAndNamespaceNames,
-            CompilationDocumentationInfo compilationInfo)
+            DocumentationModel documentationModel)
         {
             Symbol = symbol;
             CommentId = commentId;
             SymbolAndBaseTypesAndNamespaces = symbolAndBaseTypesAndNamespaces;
             NameAndBaseNamesAndNamespaceNames = nameAndBaseNamesAndNamespaceNames;
-            CompilationInfo = compilationInfo;
+            DocumentationModel = documentationModel;
         }
 
         public ISymbol Symbol { get; }
@@ -38,11 +38,11 @@ namespace Roslynator.Documentation
 
         internal ImmutableArray<string> NameAndBaseNamesAndNamespaceNames { get; }
 
-        internal CompilationDocumentationInfo CompilationInfo { get; }
+        internal DocumentationModel DocumentationModel { get; }
 
         public bool IsExternal
         {
-            get { return CompilationInfo.IsExternal(Symbol); }
+            get { return DocumentationModel.IsExternal(Symbol); }
         }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
@@ -58,7 +58,7 @@ namespace Roslynator.Documentation
                 if (_members.IsDefault)
                 {
                     _members = (Symbol is ITypeSymbol typeSymbol)
-                        ? typeSymbol.GetMembers(f => CompilationInfo.IsVisible(f))
+                        ? typeSymbol.GetMembers(f => DocumentationModel.IsVisible(f))
                         : ImmutableArray<ISymbol>.Empty;
                 }
 
@@ -79,7 +79,7 @@ namespace Roslynator.Documentation
                     else
                     {
                         _membersIncludingInherited = (Symbol is ITypeSymbol typeSymbol)
-                            ? typeSymbol.GetMembers(f => CompilationInfo.IsVisible(f), includeInherited: true)
+                            ? typeSymbol.GetMembers(f => DocumentationModel.IsVisible(f), includeInherited: true)
                             : ImmutableArray<ISymbol>.Empty;
                     }
                 }
@@ -93,17 +93,17 @@ namespace Roslynator.Documentation
             return (includeInherited) ? MembersIncludingInherited : Members;
         }
 
-        internal static SymbolDocumentationInfo Create(CompilationDocumentationInfo compilation)
+        internal static SymbolDocumentationInfo Create(DocumentationModel compilation)
         {
             return new SymbolDocumentationInfo(
                 symbol: null,
                 commentId: null,
                 symbolAndBaseTypesAndNamespaces: ImmutableArray<ISymbol>.Empty,
                 nameAndBaseNamesAndNamespaceNames: ImmutableArray<string>.Empty,
-                compilationInfo: compilation);
+                documentationModel: compilation);
         }
 
-        public static SymbolDocumentationInfo Create(ISymbol symbol, CompilationDocumentationInfo compilation)
+        public static SymbolDocumentationInfo Create(ISymbol symbol, DocumentationModel compilation)
         {
             ImmutableArray<ISymbol>.Builder symbols = ImmutableArray.CreateBuilder<ISymbol>();
             ImmutableArray<string>.Builder names = ImmutableArray.CreateBuilder<string>();
