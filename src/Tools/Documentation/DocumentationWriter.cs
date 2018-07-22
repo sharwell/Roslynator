@@ -335,9 +335,12 @@ namespace Roslynator.Documentation
             ImmutableArray<SymbolDisplayPart> parts = SymbolDefinitionBuilder.GetDisplayParts(
                 symbol,
                 FormatProvider.DefinitionFormat,
-                ShouldBeHidden,
-                Options.FormatBaseList,
-                Options.FormatConstraints);
+                typeDeclarationOptions: SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
+                addAttributes: true,
+                attributePredicate: f => !DocumentationUtility.ShouldBeHidden(f),
+                formatBaseList: Options.FormatBaseList,
+                formatConstraints: Options.FormatConstraints,
+                useNameOnlyIfPossible: true);
 
             WriteCodeBlock(parts.ToDisplayString(), GetLanguageIdentifier(symbol.Language));
         }
@@ -511,7 +514,7 @@ namespace Roslynator.Documentation
                 return;
 
             IEnumerable<(ISymbol symbol, INamedTypeSymbol attributeSymbol)> symbolsAttributes = attributes
-                .Where(f => !ShouldBeHidden(f.AttributeClass))
+                .Where(f => !DocumentationUtility.ShouldBeHidden(f.AttributeClass))
                 .Select(f => ((symbol, attributeClass: f.AttributeClass)));
 
             if (symbol is ITypeSymbol typeSymbol)
@@ -581,7 +584,7 @@ namespace Roslynator.Documentation
                             }
                         }
 
-                        if (ShouldBeHidden(attribute.AttributeClass))
+                        if (DocumentationUtility.ShouldBeHidden(attribute.AttributeClass))
                             continue;
 
                         if (AttributesContains(attribute))
@@ -1175,43 +1178,6 @@ namespace Roslynator.Documentation
             }
 
             return UriProvider.GetLocalUrl(symbolInfo, directoryInfo).Url;
-        }
-
-        public virtual bool ShouldBeHidden(ISymbol symbol)
-        {
-            switch (symbol.MetadataName)
-            {
-                case "ConditionalAttribute":
-                case "DebuggerBrowsableAttribute":
-                case "DebuggerDisplayAttribute":
-                case "DebuggerHiddenAttribute":
-                case "DebuggerNonUserCodeAttribute":
-                case "DebuggerStepperBoundaryAttribute":
-                case "DebuggerStepThroughAttribute":
-                case "DebuggerTypeProxyAttribute":
-                case "DebuggerVisualizerAttribute":
-                    return symbol.ContainingNamespace.HasMetadataName(MetadataNames.System_Diagnostics);
-                case "SuppressMessageAttribute":
-                    return symbol.ContainingNamespace.HasMetadataName(MetadataNames.System_Diagnostics_CodeAnalysis);
-                case "DefaultMemberAttribute":
-                    return symbol.ContainingNamespace.HasMetadataName(MetadataNames.System_Reflection);
-                case "AsyncStateMachineAttribute":
-                case "IteratorStateMachineAttribute":
-                case "MethodImplAttribute":
-                case "TypeForwardedFromAttribute":
-                case "TypeForwardedToAttribute":
-                    return symbol.ContainingNamespace.HasMetadataName(MetadataNames.System_Runtime_CompilerServices);
-#if DEBUG
-                case "CLSCompliantAttribute":
-                case "FlagsAttribute":
-                case "AttributeUsageAttribute":
-                case "ObsoleteAttribute":
-                    return false;
-#endif
-            }
-
-            Debug.Fail(symbol.ToDisplayString());
-            return false;
         }
 
         public void Dispose()

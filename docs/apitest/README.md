@@ -6,6 +6,7 @@
 
 * [\<global namespace>](_Global/README.md)
 * [Roslynator.Documentation.Test](Roslynator/Documentation/Test/README.md)
+* [System](System/README.md)
 
 ## [\<global namespace>](_Global/README.md) Namespace
 
@@ -39,4 +40,12 @@
 | Delegate | Summary |
 | -------- | ------- |
 | [FooDelegate](Roslynator/Documentation/Test/FooDelegate/README.md) | del |
+
+## [System](System/README.md) Namespace
+
+### Classes
+
+| Class | Summary |
+| ----- | ------- |
+| [ClassName](System/ClassName/README.md) | |
 

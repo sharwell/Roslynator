@@ -27,10 +27,18 @@ namespace Roslynator.Documentation
             if (result != 0)
                 return result;
 
-            return string.Compare(x.ToDisplayString(SymbolDisplayFormats.FullDefinition), y.ToDisplayString(SymbolDisplayFormats.FullDefinition), StringComparison.Ordinal);
+            result = string.Compare(x.Name, y.Name, StringComparison.Ordinal);
+
+            if (result != 0)
+                return result;
+
+            return string.Compare(
+                x.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
+                y.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
+                StringComparison.Ordinal);
         }
 
-        private static int GetRank(ISymbol symbol)
+        public static int GetRank(ISymbol symbol)
         {
             switch (symbol.Kind)
             {

@@ -27,9 +27,14 @@ namespace Roslynator.Documentation
             if (result != 0)
                 return result;
 
+            result = string.Compare(x.Name, y.Name);
+
+            if (result != 0)
+                return result;
+
             return string.Compare(
-                x.ToDisplayString(SymbolDisplayFormats.FullDefinition, SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers),
-                y.ToDisplayString(SymbolDisplayFormats.FullDefinition, SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers),
+                x.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
+                y.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
                 StringComparison.Ordinal);
         }
 

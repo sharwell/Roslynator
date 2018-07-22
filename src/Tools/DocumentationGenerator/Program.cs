@@ -7,8 +7,12 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.Simplification;
+using Microsoft.CodeAnalysis.Text;
 using Roslynator.Documentation.Markdown;
 using Roslynator.Utilities;
 
@@ -40,7 +44,11 @@ namespace Roslynator.Documentation
 
             builder.AppendSymbols(compilationInfo.Types.Where(f => f.ContainingType == null));
 
-            FileHelper.WriteAllText(directoryPath + "_api.cs", builder.ToString(), Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
+            string content = builder.ToString();
+
+            string content2 = M(content, compilationInfo.Compilation.ExternalReferences).Result;
+
+            FileHelper.WriteAllText(directoryPath + "_api.cs", content2, Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
 
             foreach (DocumentationGeneratorResult result in generator.Generate(
                 heading,
@@ -82,6 +90,57 @@ namespace Roslynator.Documentation
             return new CompilationDocumentationInfo(
                 compilation,
                 references.Select(f => (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(f)));
+        }
+
+        private static async Task<string> M(string source, IEnumerable<MetadataReference> references)
+        {
+            Project project = new AdhocWorkspace()
+                .CurrentSolution
+                .AddProject("AdHocProject", "AdHocProject", LanguageNames.CSharp)
+                .WithMetadataReferences(references);
+
+            var parseOptions = (CSharpParseOptions)project.ParseOptions;
+
+            Document document = project
+                .WithParseOptions(parseOptions.WithLanguageVersion(LanguageVersion.Latest))
+                .AddDocument("AdHocFile.cs", SourceText.From(source));
+
+            SemanticModel semanticModel = await document.GetSemanticModelAsync().ConfigureAwait(false);
+            SyntaxNode root = await document.GetSyntaxRootAsync().ConfigureAwait(false);
+
+            var rewriter = new Rewriter(semanticModel);
+
+            root = rewriter.Visit(root);
+
+            document = document.WithSyntaxRoot(root);
+
+            document = await Simplifier.ReduceAsync(document).ConfigureAwait(false);
+
+            root = await document.GetSyntaxRootAsync().ConfigureAwait(false);
+
+            return root.ToFullString();
+        }
+
+        private class Rewriter : CSharpSyntaxRewriter
+        {
+            public Rewriter(SemanticModel semanticModel)
+            {
+                SemanticModel = semanticModel;
+            }
+
+            public SemanticModel SemanticModel { get; }
+
+            public override SyntaxNode VisitQualifiedName(QualifiedNameSyntax node)
+            {
+                if (SemanticModel.GetSymbol(node.Left)?.Kind == SymbolKind.Namespace)
+                {
+                    return node
+                        .WithRight((SimpleNameSyntax)Visit(node.Right))
+                        .WithAdditionalAnnotations(Simplifier.Annotation);
+                }
+
+                return base.VisitQualifiedName(node);
+            }
         }
     }
 }

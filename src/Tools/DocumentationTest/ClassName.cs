@@ -3,16 +3,11 @@
 using System;
 using Roslynator.Documentation.Test;
 
-/// <summary>
-/// blac
-/// </summary>
-[CLSCompliant(true)]
-public class Bla
+#pragma warning disable RCS1110
+
+namespace System
 {
-    /// <summary>
-    /// bla m
-    /// </summary>
-    public void M()
+    public class ClassName
     {
     }
 }
