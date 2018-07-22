@@ -677,7 +677,7 @@ namespace Roslynator.Documentation
                 SemanticModel semanticModel = await document.GetSemanticModelAsync().ConfigureAwait(false);
                 SyntaxNode root = await document.GetSyntaxRootAsync().ConfigureAwait(false);
 
-                var rewriter = new DefinitionListRewriter(semanticModel);
+                var rewriter = new SymbolDefinitionListRewriter(semanticModel);
 
                 root = rewriter.Visit(root);
 
@@ -691,7 +691,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        private class DefinitionListRewriter : CSharpSyntaxRewriter
+        private class SymbolDefinitionListRewriter : CSharpSyntaxRewriter
         {
             private static readonly SymbolDisplayFormat _enumFieldFormat = new SymbolDisplayFormat(
                 typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
@@ -701,7 +701,7 @@ namespace Roslynator.Documentation
 
             private ITypeSymbol _enumTypeSymbol;
 
-            public DefinitionListRewriter(SemanticModel semanticModel)
+            public SymbolDefinitionListRewriter(SemanticModel semanticModel)
             {
                 SemanticModel = semanticModel;
             }

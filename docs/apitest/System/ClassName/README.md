@@ -4,13 +4,22 @@ Namespace: [System](../README.md)
 
 Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
 
+**WARNING: This API is now obsolete\.**
+
+
 ```csharp
+[System.CLSCompliantAttribute]
+[System.ObsoleteAttribute]
 public class ClassName
 ```
 
 ### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; ClassName
+
+### Attributes
+
+[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute), [ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
 
 ## Constructors
 

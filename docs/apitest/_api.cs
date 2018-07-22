@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using ;
 
 namespace System
 {
+  [System.CLSCompliantAttribute(True)]
+  [Obsolete]
   public class ClassName
   {
     public ClassName();
@@ -13,7 +14,7 @@ namespace System
 
 namespace Roslynator.Documentation.Test
 {
-  [Obsolete]
+  [Obsolete("Foo is obsolete.")]
   public class Foo : Bla
   {
     public readonly string Field;
@@ -62,7 +63,7 @@ namespace Roslynator.Documentation.Test
   {
   }
 
-  [System.AttributeUsageAttribute]
+  [System.AttributeUsageAttribute(32767, AllowMultiple = False, Inherited = False)]
   public sealed class MyAttribute : Attribute
   {
     public MyAttribute();
@@ -76,7 +77,7 @@ namespace Roslynator.Documentation.Test
   public delegate void FooDelegate(object p)
 }
 
-[System.CLSCompliantAttribute]
+[System.CLSCompliantAttribute(True)]
 public class Bla
 {
   public Bla();

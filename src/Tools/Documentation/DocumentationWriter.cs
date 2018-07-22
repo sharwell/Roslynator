@@ -336,7 +336,6 @@ namespace Roslynator.Documentation
                 symbol,
                 FormatProvider.DefinitionFormat,
                 typeDeclarationOptions: SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
-                addAttributes: true,
                 attributePredicate: f => !DocumentationUtility.ShouldBeHidden(f),
                 formatBaseList: Options.FormatBaseList,
                 formatConstraints: Options.FormatConstraints,

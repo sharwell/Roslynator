@@ -17,7 +17,6 @@ namespace Roslynator.Documentation
             ISymbol symbol,
             SymbolDisplayFormat format,
             SymbolDisplayTypeDeclarationOptions typeDeclarationOptions = SymbolDisplayTypeDeclarationOptions.None,
-            bool addAttributes = false,
             Func<INamedTypeSymbol, bool> attributePredicate = null,
             bool formatBaseList = false,
             bool formatConstraints = false,
@@ -35,16 +34,14 @@ namespace Roslynator.Documentation
                 typeSymbol = null;
             }
 
-            bool hasAttributes = false;
             ImmutableArray<AttributeData> attributes = ImmutableArray<AttributeData>.Empty;
+            bool hasAttributes = false;
 
-            if (addAttributes)
+            if (attributePredicate != null)
             {
                 attributes = symbol.GetAttributes();
 
-                hasAttributes = (addAttributes && attributePredicate != null)
-                    ? attributes.Any(f => attributePredicate(f.AttributeClass))
-                    : attributes.Any();
+                hasAttributes = attributes.Any(f => attributePredicate(f.AttributeClass));
             }
 
             int baseListCount = 0;
@@ -97,13 +94,12 @@ namespace Roslynator.Documentation
 
             ImmutableArray<SymbolDisplayPart>.Builder builder = ImmutableArray.CreateBuilder<SymbolDisplayPart>(parts.Length);
 
-            foreach (AttributeData attribute in attributes)
+            foreach (AttributeData attributeData in attributes
+                .Where(f => attributePredicate(f.AttributeClass))
+                .OrderBy(f => ToDisplayString(f.AttributeClass, containingNamespace, useNameOnlyIfPossible)))
             {
-                if (attributePredicate?.Invoke(attribute.AttributeClass) == false)
-                    continue;
-
                 builder.AddPunctuation("[");
-                builder.AddDisplayParts(attribute.AttributeClass, containingNamespace, useNameOnlyIfPossible);
+                builder.AddDisplayParts(attributeData.AttributeClass, containingNamespace, useNameOnlyIfPossible);
                 builder.AddPunctuation("]");
                 builder.AddLineBreak();
             }
@@ -152,7 +148,7 @@ namespace Roslynator.Documentation
 
                 if (interfaces.Any())
                 {
-                    ImmutableArray<(INamedTypeSymbol symbol, string displayString)> sortedInterfaces = SortInterfaces(interfaces.Select(f => ((f, GetDisplayParts(f, containingNamespace, useNameOnlyIfPossible).ToDisplayString()))).ToImmutableArray());
+                    ImmutableArray<(INamedTypeSymbol symbol, string displayString)> sortedInterfaces = SortInterfaces(interfaces.Select(f => ((f, ToDisplayString(f, containingNamespace, useNameOnlyIfPossible)))).ToImmutableArray());
 
                     builder.AddDisplayParts(sortedInterfaces[0].symbol, containingNamespace, useNameOnlyIfPossible);
 
@@ -222,13 +218,13 @@ namespace Roslynator.Documentation
             return builder.ToImmutableArray();
         }
 
-        private static ImmutableArray<SymbolDisplayPart> GetDisplayParts(INamedTypeSymbol symbol, INamespaceSymbol containingNamespace, bool useNameOnlyIfPossible)
+        private static string ToDisplayString(INamedTypeSymbol symbol, INamespaceSymbol containingNamespace, bool useNameOnlyIfPossible)
         {
             ImmutableArray<SymbolDisplayPart>.Builder builder = ImmutableArray.CreateBuilder<SymbolDisplayPart>();
 
             builder.AddDisplayParts(symbol, containingNamespace, useNameOnlyIfPossible);
 
-            return builder.ToImmutableArray();
+            return builder.ToImmutableArray().ToDisplayString();
         }
 
         private static void AddDisplayParts(this ImmutableArray<SymbolDisplayPart>.Builder builder, INamedTypeSymbol symbol, INamespaceSymbol containingNamespace, bool useNameOnlyIfPossible)

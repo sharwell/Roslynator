@@ -1544,7 +1544,7 @@ namespace Roslynator.CSharp.Syntax
     public ExpressionChain AsChain();
     public bool Equals(BinaryExpressionInfo other);
     public override bool Equals(object obj);
-    [Obsolete]
+    [Obsolete("This method is obsolete. Use method 'AsChain' instead.")]
     public IEnumerable<ExpressionSyntax> Expressions(bool leftToRight = false);
     public override int GetHashCode();
     public override string ToString();
@@ -1954,7 +1954,7 @@ namespace Roslynator.CSharp.Syntax
     public ExpressionChain AsChain();
     public bool Equals(StringConcatenationExpressionInfo other);
     public override bool Equals(object obj);
-    [Obsolete]
+    [Obsolete("This method is obsolete. Use method 'AsChain' instead.")]
     public IEnumerable<ExpressionSyntax> Expressions(bool leftToRight = false);
     public override int GetHashCode();
     public override string ToString();

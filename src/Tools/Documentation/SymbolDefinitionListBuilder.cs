@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
@@ -110,7 +111,12 @@ namespace Roslynator.Documentation
                         AppendAttributes(en.Current);
 
                         //TODO: sort interfaces
-                        Append(SymbolDefinitionBuilder.GetDisplayParts(en.Current, _typeFormat, SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers));
+                        Append(SymbolDefinitionBuilder.GetDisplayParts(
+                            en.Current,
+                            _typeFormat,
+                            SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
+                            attributePredicate: _ => false));
+
                         AppendLine();
 
                         switch (typeKind)
@@ -289,19 +295,194 @@ namespace Roslynator.Documentation
             }
         }
 
-        //TODO: sort attributes
         private void AppendAttributes(ISymbol symbol)
         {
-            foreach (AttributeData attributeData in symbol.GetAttributes())
+            foreach (AttributeData attributeData in GetAttributes()
+                .OrderBy(f => f.AttributeClass, TypeDefinitionComparer.Instance))
             {
-                INamedTypeSymbol attribute = attributeData.AttributeClass;
+                Append("[");
+                AppendSymbol(attributeData.AttributeClass, _nameAndContainingNamesAndNameSpacesFormat);
 
-                if (!DocumentationUtility.ShouldBeHidden(attribute))
+                ImmutableArray<TypedConstant> constructorArguments = attributeData.ConstructorArguments;
+
+                ImmutableArray<KeyValuePair<string, TypedConstant>> namedArguments = attributeData.NamedArguments;
+
+                bool hasConstructorArgument = false;
+                bool hasNamedArgument = false;
+
+                ImmutableArray<TypedConstant>.Enumerator en = constructorArguments.GetEnumerator();
+
+                if (en.MoveNext())
                 {
-                    Append("[");
-                    AppendSymbol(attribute, _nameAndContainingNamesAndNameSpacesFormat);
-                    Append("]");
-                    AppendLine();
+                    hasConstructorArgument = true;
+                    Append("(");
+
+                    while (true)
+                    {
+                        AppendValue(en.Current);
+
+                        if (en.MoveNext())
+                        {
+                            Append(", ");
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                ImmutableArray<KeyValuePair<string, TypedConstant>>.Enumerator en2 = namedArguments.GetEnumerator();
+
+                if (en2.MoveNext())
+                {
+                    hasNamedArgument = true;
+
+                    if (hasConstructorArgument)
+                    {
+                        Append(", ");
+                    }
+                    else
+                    {
+                        Append("(");
+                    }
+
+                    while (true)
+                    {
+                        AppendNamedArgument(en2.Current);
+
+                        if (en2.MoveNext())
+                        {
+                            Append(", ");
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                if (hasConstructorArgument || hasNamedArgument)
+                {
+                    Append(")");
+                }
+
+                Append("]");
+                AppendLine();
+            }
+
+            IEnumerable<AttributeData> GetAttributes()
+            {
+                foreach (AttributeData attributeData in symbol.GetAttributes())
+                {
+                    INamedTypeSymbol attribute = attributeData.AttributeClass;
+
+                    if (!DocumentationUtility.ShouldBeHidden(attribute))
+                        yield return attributeData;
+                }
+            }
+
+            void AppendNamedArgument(KeyValuePair<string, TypedConstant> kvp)
+            {
+                Append(kvp.Key);
+                Append(" = ");
+                AppendValue(kvp.Value);
+            }
+
+            void AppendValue(TypedConstant typedConstant)
+            {
+                switch (typedConstant.Kind)
+                {
+                    case TypedConstantKind.Primitive:
+                        {
+                            switch (typedConstant.Type.SpecialType)
+                            {
+                                case SpecialType.System_Object:
+                                    {
+                                        break;
+                                    }
+                                case SpecialType.System_Boolean:
+                                    {
+                                        Append(((bool)typedConstant.Value) ? "true" : "false");
+                                        break;
+                                    }
+                                case SpecialType.System_Char:
+                                    {
+                                        break;
+                                    }
+                                case SpecialType.System_SByte:
+                                case SpecialType.System_Byte:
+                                case SpecialType.System_Int16:
+                                case SpecialType.System_UInt16:
+                                case SpecialType.System_Int32:
+                                case SpecialType.System_UInt32:
+                                case SpecialType.System_Int64:
+                                case SpecialType.System_UInt64:
+                                case SpecialType.System_Single:
+                                case SpecialType.System_Double:
+                                    {
+                                        Append(typedConstant.Value);
+                                        break;
+                                    }
+                                case SpecialType.System_String:
+                                    {
+                                        string s = typedConstant.Value.ToString();
+
+                                        Append("\"");
+                                        Append(s);
+                                        Append("\"");
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        throw new InvalidOperationException();
+                                    }
+                            }
+
+                            break;
+                        }
+
+                    case TypedConstantKind.Enum:
+                        {
+                            Append(typedConstant.Value);
+                            break;
+                        }
+                    case TypedConstantKind.Type:
+                        {
+                            Append("typeof(");
+                            AppendSymbol(typedConstant.Type, _nameAndContainingNamesAndNameSpacesFormat);
+                            Append(")");
+                            break;
+                        }
+                    case TypedConstantKind.Array:
+                        {
+                            Append("{ ");
+
+                            ImmutableArray<TypedConstant>.Enumerator en = typedConstant.Values.GetEnumerator();
+                            if (en.MoveNext())
+                            {
+                                while (true)
+                                {
+                                    AppendValue(typedConstant);
+
+                                    if (en.MoveNext())
+                                    {
+                                        Append(", ");
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+                                }
+                            }
+
+                            Append(" }");
+                            break;
+                        }
+                    default:
+                        {
+                            throw new InvalidOperationException();
+                        }
                 }
             }
         }
@@ -330,8 +511,11 @@ namespace Roslynator.Documentation
                     {
                         INamespaceSymbol containingNamespace = symbol.ContainingNamespace;
 
-                        if (ShouldAddNamespace(containingNamespace))
+                        if (!containingNamespace.IsGlobalNamespace
+                            && ShouldAddNamespace(containingNamespace))
+                        {
                             Namespaces.Add(containingNamespace);
+                        }
                     }
                 }
 
