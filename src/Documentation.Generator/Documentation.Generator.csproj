@@ -6,12 +6,12 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <AssemblyName>Roslynator.Documentation.DocumentationGenerator</AssemblyName>
+    <AssemblyName>Roslynator.Documentation.Generator</AssemblyName>
     <RootNamespace>Roslynator.Documentation</RootNamespace>
-    <CodeAnalysisRuleSet>..\..\global.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
     <LangVersion>latest</LangVersion>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>DocumentationGenerator.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Documentation.Generator.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,11 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CSharp\CSharp.csproj" />
-    <ProjectReference Include="..\..\CSharp.Workspaces\CSharp.Workspaces.csproj" />
-    <ProjectReference Include="..\DocumentationTest\DocumentationTest.csproj" />
+    <ProjectReference Include="..\CSharp\CSharp.csproj" />
+    <ProjectReference Include="..\CSharp.Workspaces\CSharp.Workspaces.csproj" />
+    <ProjectReference Include="..\Documentation.TestProject\Documentation.TestProject.csproj" />
     <ProjectReference Include="..\Documentation\Documentation.csproj" />
-    <ProjectReference Include="..\Utilities\Utilities.csproj" />
+    <ProjectReference Include="..\Tools\Utilities\Utilities.csproj" />
   </ItemGroup>
 
 </Project>

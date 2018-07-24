@@ -6,12 +6,12 @@
 
   <PropertyGroup>
     <Version>1.0.0.0</Version>
-    <AssemblyName>Roslynator.Documentation.DocumentationTest</AssemblyName>
+    <AssemblyName>Roslynator.Documentation.TestProject</AssemblyName>
     <RootNamespace>Roslynator.Documentation</RootNamespace>
-    <CodeAnalysisRuleSet>..\..\global.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
     <LangVersion>latest</LangVersion>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>DocumentationTest.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Documentation.TestProject.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup>

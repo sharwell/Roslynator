@@ -1,12 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Target Name="GenerateDocumentation" AfterTargets="Build">
-    <WriteLinesToFile
-      File="$(OutDir)$(TargetName).assemblyreferences.txt"  
-      Lines="@(_ResolveAssemblyReferenceResolvedFiles)"  
-      Overwrite="true"  
-      Encoding="Unicode"/>  
-    <Exec Command="dotnet &quot;$(OutDir)Roslynator.Documentation.CommandLine.dll&quot; --assemblyReferences &quot;$(OutDir)$(TargetName).assemblyreferences.txt&quot; --assemblies &quot;Roslynator.Documentation.DocumentationTest&quot; --outputDirectory &quot;$(OutDir)api&quot; --heading &quot;Test API&quot; --environment github --documentationParts namespace type member" LogStandardErrorAsError="true" ConsoleToMSBuild="true">
+    <WriteLinesToFile File="$(OutDir)$(TargetName).assemblyreferences.txt" Lines="@(_ResolveAssemblyReferenceResolvedFiles)" Overwrite="true" Encoding="Unicode" />  
+    <Exec Command="dotnet &quot;$(OutDir)Roslynator.Documentation.CommandLine.dll&quot; --assemblyReferences &quot;$(OutDir)$(TargetName).assemblyreferences.txt&quot; --assemblies &quot;Roslynator.Documentation.TestProject&quot; --outputDirectory &quot;$(OutDir)api&quot; --heading &quot;Test API&quot; --environment github --documentationParts namespace type member" LogStandardErrorAsError="true" ConsoleToMSBuild="true">
       <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
     </Exec>
   </Target>
@@ -19,7 +15,7 @@
   <PropertyGroup>
     <AssemblyName>Roslynator.Documentation.CommandLine</AssemblyName>
     <RootNamespace>Roslynator.Documentation</RootNamespace>
-    <CodeAnalysisRuleSet>..\..\global.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
     <LangVersion>latest</LangVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Documentation.CommandLine.snk</AssemblyOriginatorKeyFile>
@@ -31,9 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CSharp\CSharp.csproj" />
+    <ProjectReference Include="..\CSharp\CSharp.csproj" />
+    <ProjectReference Include="..\Documentation.TestProject\Documentation.TestProject.csproj" />
     <ProjectReference Include="..\Documentation\Documentation.csproj" />
-    <ProjectReference Include="..\DocumentationTest\DocumentationTest.csproj" />
   </ItemGroup>
 
 </Project>
