@@ -755,18 +755,26 @@ namespace Roslynator.Documentation
             {
                 if (en.MoveNext())
                 {
-                    INamedTypeSymbol enumSymbol = en.Current.ContainingType;
+                    INamedTypeSymbol enumType = en.Current.ContainingType;
 
                     bool hasCombinedValue = false;
 
-                    ImmutableArray<EnumFieldSymbolInfo> fieldInfos = default;
+                    ImmutableArray<EnumFieldInfo> fieldInfos = default;
 
-                    if (enumSymbol.HasAttribute(MetadataNames.System_FlagsAttribute))
+                    if (enumType.HasAttribute(MetadataNames.System_FlagsAttribute))
                     {
-                        fieldInfos = EnumFieldSymbolInfo.CreateRange(en.Current.ContainingType);
+                        fieldInfos = EnumUtility.GetFields(enumType);
 
-                        if (HasCombinedValue(fieldInfos))
-                            hasCombinedValue = true;
+                        foreach (IFieldSymbol field in fields)
+                        {
+                            var fieldInfo = new EnumFieldInfo(field);
+
+                            if (!EnumUtility.GetMinimalConstituentFields(fieldInfo.Value, fieldInfos).IsDefault)
+                            {
+                                hasCombinedValue = true;
+                                break;
+                            }
+                        }
                     }
 
                     WriteHeading(2, Resources.FieldsTitle);
@@ -795,39 +803,18 @@ namespace Roslynator.Documentation
                         {
                             WriteStartTableCell();
 
-                            var fieldInfo = new EnumFieldSymbolInfo(en.Current);
+                            var fieldInfo = new EnumFieldInfo(en.Current);
 
-                            List<EnumFieldSymbolInfo> values = fieldInfo.Decompose(fieldInfos);
+                            ImmutableArray<EnumFieldInfo> constitiuentFields = EnumUtility.GetMinimalConstituentFields(fieldInfo.Value, fieldInfos);
 
-                            if (values != null)
+                            if (!constitiuentFields.IsDefault)
                             {
-                                values.Sort((f, g) =>
-                                {
-                                    if (f.IsComposite())
-                                    {
-                                        if (g.IsComposite())
-                                        {
-                                            return ((IComparable)f.Value).CompareTo((IComparable)g.Value);
-                                        }
-                                        else
-                                        {
-                                            return -1;
-                                        }
-                                    }
-                                    else if (g.IsComposite())
-                                    {
-                                        return 1;
-                                    }
+                                WriteString(constitiuentFields[0].Name);
 
-                                    return ((IComparable)f.Value).CompareTo((IComparable)g.Value);
-                                });
-
-                                WriteString(values[0].Name);
-
-                                for (int i = 1; i < values.Count; i++)
+                                for (int i = 1; i < constitiuentFields.Length; i++)
                                 {
                                     WriteString(" | ");
-                                    WriteString(values[i].Name);
+                                    WriteString(constitiuentFields[i].Name);
                                 }
                             }
 
@@ -849,30 +836,6 @@ namespace Roslynator.Documentation
 
                     WriteEndTable();
                 }
-            }
-
-            bool HasCombinedValue(ImmutableArray<EnumFieldSymbolInfo> fieldInfos)
-            {
-                using (IEnumerator<IFieldSymbol> en = fields.GetEnumerator())
-                {
-                    if (en.MoveNext())
-                    {
-                        do
-                        {
-                            var fieldInfo = new EnumFieldSymbolInfo(en.Current);
-
-                            List<EnumFieldSymbolInfo> values = fieldInfo.Decompose(fieldInfos);
-
-                            if (values != null)
-                            {
-                                return true;
-                            }
-                        }
-                        while (en.MoveNext());
-                    }
-                }
-
-                return false;
             }
         }
 

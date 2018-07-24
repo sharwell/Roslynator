@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 
 namespace System
 {
-  [System.CLSCompliantAttribute(True)]
+  [CLSCompliant(true)]
   [Obsolete]
   public class ClassName
   {
@@ -49,7 +50,7 @@ namespace Roslynator.Documentation.Test
   }
 
   [Obsolete]
-  public class FooDic<TKey, TValue> : IReadOnlyList<KeyValuePair<TKey, TValue>>, IReadOnlyCollection<KeyValuePair<TKey, TValue>>, IEnumerable<KeyValuePair<TKey, TValue>>, IEnumerable<TValue> where TKey : Foo where TValue : Foo
+  public class FooDic<TKey, TValue> : IEnumerable<KeyValuePair<TKey, TValue>>, IEnumerable<TValue>, IReadOnlyCollection<KeyValuePair<TKey, TValue>>, IReadOnlyList<KeyValuePair<TKey, TValue>> where TKey : Foo where TValue : Foo
   {
     public FooDic();
   }
@@ -63,10 +64,11 @@ namespace Roslynator.Documentation.Test
   {
   }
 
-  [System.AttributeUsageAttribute(32767, AllowMultiple = False, Inherited = False)]
+  [AttributeUsage(AttributeTargets.All, AllowMultiple = false, Inherited = false)]
   public sealed class MyAttribute : Attribute
   {
-    public MyAttribute();
+    [My(null, "\\n", true, false, 0, '\'', 0, 0, 0, 0, 0, 0, 0, 0, 0, typeof(object), Flags.None, Flags.A, Flags.A, Flags.AB | Flags.C, Flags.AB, (Flags)100)]
+    public MyAttribute(object object1, string s1, bool bool1, bool bool2, byte byte1, char ch1, double double1, float float1, int int1, long long1, sbyte sbyte1, short short1, uint uint1, ulong ulong1, ushort ushort1, Type type, Flags f1, Flags f2, Flags f3, Flags f4, Flags f5, Flags f6);
   }
 
   public interface IFoo
@@ -74,10 +76,25 @@ namespace Roslynator.Documentation.Test
     event EventHandler Changed;
   }
 
-  public delegate void FooDelegate(object p)
+  public interface IImmutableFoo<T> : ICollection<T>, IEnumerable<T>, IList<T>, IReadOnlyCollection<T>, IReadOnlyList<T>, ICollection, IList, IImmutableList<T>, IStructuralComparable, IStructuralEquatable, IEquatable<IImmutableFoo<T>>
+  {
+  }
+
+  [Flags]
+  public enum Flags
+  {
+    None = 0,
+    A = 1,
+    B = 2,
+    AB = A | B,
+    C = 4,
+    D = 8,
+  }
+
+  public delegate void FooDelegate(object p);
 }
 
-[System.CLSCompliantAttribute(True)]
+[CLSCompliant(true)]
 public class Bla
 {
   public Bla();

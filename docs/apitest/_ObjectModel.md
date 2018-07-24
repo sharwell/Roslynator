@@ -19,6 +19,11 @@
 ## Interfaces
 
 * [IFoo](Roslynator/Documentation/Test/IFoo/README.md)
+* [IImmutableFoo\<T>](Roslynator/Documentation/Test/IImmutableFoo-1/README.md)
+
+## Enums
+
+* [Flags](Roslynator/Documentation/Test/Flags/README.md)
 
 ## Delegates
 

@@ -40,7 +40,8 @@ namespace Roslynator.Documentation
 #endif
             }
 
-            Debug.Fail(symbol.ToDisplayString());
+            //TODO: 
+            //Debug.Fail(symbol.ToDisplayString());
             return false;
         }
     }

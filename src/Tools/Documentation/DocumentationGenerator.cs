@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -701,16 +702,19 @@ namespace Roslynator.Documentation
 
             private ITypeSymbol _enumTypeSymbol;
 
-            public SymbolDefinitionListRewriter(SemanticModel semanticModel)
+            public SymbolDefinitionListRewriter(SemanticModel semanticModel, CancellationToken cancellationToken = default)
             {
                 SemanticModel = semanticModel;
+                CancellationToken = cancellationToken;
             }
 
             public SemanticModel SemanticModel { get; }
 
+            public CancellationToken CancellationToken { get; }
+
             public override SyntaxNode VisitQualifiedName(QualifiedNameSyntax node)
             {
-                if (SemanticModel.GetSymbol(node.Left)?.Kind == SymbolKind.Namespace)
+                if (SemanticModel.GetSymbol(node.Left, CancellationToken)?.Kind == SymbolKind.Namespace)
                 {
                     return node
                         .WithRight((SimpleNameSyntax)Visit(node.Right))
@@ -730,7 +734,7 @@ namespace Roslynator.Documentation
 
                     if (value != null)
                     {
-                        ITypeSymbol typeSymbol = SemanticModel.GetTypeSymbol(node.Type);
+                        ITypeSymbol typeSymbol = SemanticModel.GetTypeSymbol(node.Type, CancellationToken);
 
                         if (typeSymbol?.TypeKind == TypeKind.Enum)
                         {
@@ -752,6 +756,22 @@ namespace Roslynator.Documentation
                 }
 
                 return base.VisitParameter(node);
+            }
+
+            public override SyntaxNode VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
+            {
+                if (node.IsKind(SyntaxKind.SimpleMemberAccessExpression))
+                {
+                    ISymbol symbol = SemanticModel.GetSymbol(node, CancellationToken);
+
+                    if (symbol?.Kind == SymbolKind.Field
+                        && symbol.ContainingType?.TypeKind == TypeKind.Enum)
+                    {
+                        return node.WithAdditionalAnnotations(_simplifierAnnotationAsArray);
+                    }
+                }
+
+                return base.VisitMemberAccessExpression(node);
             }
 
             public override SyntaxNode VisitIdentifierName(IdentifierNameSyntax node)

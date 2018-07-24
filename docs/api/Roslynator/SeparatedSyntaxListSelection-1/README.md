@@ -10,9 +10,9 @@ Represents selected nodes in a [SeparatedSyntaxList\<TNode>](https://docs.micros
 
 ```csharp
 public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>,
-    System.Collections.Generic.IReadOnlyList<TNode>,
+    System.Collections.Generic.IEnumerable<TNode>,
     System.Collections.Generic.IReadOnlyCollection<TNode>,
-    System.Collections.Generic.IEnumerable<TNode>
+    System.Collections.Generic.IReadOnlyList<TNode>
     where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 

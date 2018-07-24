@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
@@ -146,29 +147,61 @@ namespace Roslynator.Documentation
                     }
                 }
 
-                if (interfaces.Any())
+                using (IEnumerator<INamedTypeSymbol> en = interfaces
+                    .OrderBy(f => ToDisplayString(f, containingNamespace, useNameOnlyIfPossible)).GetEnumerator())
                 {
-                    ImmutableArray<(INamedTypeSymbol symbol, string displayString)> sortedInterfaces = SortInterfaces(interfaces.Select(f => ((f, ToDisplayString(f, containingNamespace, useNameOnlyIfPossible)))).ToImmutableArray());
-
-                    builder.AddDisplayParts(sortedInterfaces[0].symbol, containingNamespace, useNameOnlyIfPossible);
-
-                    for (int i = 1; i < sortedInterfaces.Length; i++)
+                    if (en.MoveNext())
                     {
-                        builder.AddPunctuation(",");
-
-                        if (formatBaseList)
+                        while (true)
                         {
-                            builder.AddLineBreak();
-                            builder.AddIndentation();
-                        }
-                        else
-                        {
-                            builder.AddSpace();
-                        }
+                            builder.AddDisplayParts(en.Current, containingNamespace, useNameOnlyIfPossible);
 
-                        builder.AddDisplayParts(sortedInterfaces[i].symbol, containingNamespace, useNameOnlyIfPossible);
+                            if (en.MoveNext())
+                            {
+                                builder.AddPunctuation(",");
+
+                                if (formatBaseList)
+                                {
+                                    builder.AddLineBreak();
+                                    builder.AddIndentation();
+                                }
+                                else
+                                {
+                                    builder.AddSpace();
+                                }
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
                     }
                 }
+
+                //TODO: del
+                //if (interfaces.Any())
+                //{
+                //    ImmutableArray<(INamedTypeSymbol symbol, string displayString)> sortedInterfaces = SortInterfaces(interfaces.Select(f => ((f, ToDisplayString(f, containingNamespace, useNameOnlyIfPossible)))).ToImmutableArray());
+
+                //    builder.AddDisplayParts(sortedInterfaces[0].symbol, containingNamespace, useNameOnlyIfPossible);
+
+                //    for (int i = 1; i < sortedInterfaces.Length; i++)
+                //    {
+                //        builder.AddPunctuation(",");
+
+                //        if (formatBaseList)
+                //        {
+                //            builder.AddLineBreak();
+                //            builder.AddIndentation();
+                //        }
+                //        else
+                //        {
+                //            builder.AddSpace();
+                //        }
+
+                //        builder.AddDisplayParts(sortedInterfaces[i].symbol, containingNamespace, useNameOnlyIfPossible);
+                //    }
+                //}
 
                 if (whereIndex != -1)
                 {
@@ -275,30 +308,30 @@ namespace Roslynator.Documentation
             }
         }
 
-        private static ImmutableArray<(INamedTypeSymbol symbol, string displayString)> SortInterfaces(
-            ImmutableArray<(INamedTypeSymbol symbol, string displayString)> interfaces)
-        {
-            return interfaces.Sort((x, y) =>
-            {
-                if (x.symbol.InheritsFrom(y.symbol.OriginalDefinition, includeInterfaces: true))
-                    return -1;
+        //private static ImmutableArray<(INamedTypeSymbol symbol, string displayString)> SortInterfaces(
+        //    ImmutableArray<(INamedTypeSymbol symbol, string displayString)> interfaces)
+        //{
+        //    return interfaces.Sort((x, y) =>
+        //    {
+        //        if (x.symbol.InheritsFrom(y.symbol.OriginalDefinition, includeInterfaces: true))
+        //            return -1;
 
-                if (y.symbol.InheritsFrom(x.symbol.OriginalDefinition, includeInterfaces: true))
-                    return 1;
+        //        if (y.symbol.InheritsFrom(x.symbol.OriginalDefinition, includeInterfaces: true))
+        //            return 1;
 
-                if (interfaces.Any(f => x.symbol.InheritsFrom(f.symbol.OriginalDefinition, includeInterfaces: true)))
-                {
-                    if (!interfaces.Any(f => y.symbol.InheritsFrom(f.symbol.OriginalDefinition, includeInterfaces: true)))
-                        return -1;
-                }
-                else if (interfaces.Any(f => y.symbol.InheritsFrom(f.symbol.OriginalDefinition, includeInterfaces: true)))
-                {
-                    return 1;
-                }
+        //        if (interfaces.Any(f => x.symbol.InheritsFrom(f.symbol.OriginalDefinition, includeInterfaces: true)))
+        //        {
+        //            if (!interfaces.Any(f => y.symbol.InheritsFrom(f.symbol.OriginalDefinition, includeInterfaces: true)))
+        //                return -1;
+        //        }
+        //        else if (interfaces.Any(f => y.symbol.InheritsFrom(f.symbol.OriginalDefinition, includeInterfaces: true)))
+        //        {
+        //            return 1;
+        //        }
 
-                return string.Compare(x.displayString, y.displayString, StringComparison.Ordinal);
-            });
-        }
+        //        return string.Compare(x.displayString, y.displayString, StringComparison.Ordinal);
+        //    });
+        //}
 
         private static void AddSpace(this ImmutableArray<SymbolDisplayPart>.Builder builder)
         {

@@ -16,6 +16,13 @@
 | Interface | Summary |
 | --------- | ------- |
 | [IFoo](IFoo/README.md) | |
+| [IImmutableFoo\<T>](IImmutableFoo-1/README.md) | |
+
+## Enums
+
+| Enum | Summary |
+| ---- | ------- |
+| [Flags](Flags/README.md) | |
 
 ## Delegates
 

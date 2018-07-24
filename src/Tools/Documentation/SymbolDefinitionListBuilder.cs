@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 
 namespace Roslynator.Documentation
 {
@@ -25,6 +26,10 @@ namespace Roslynator.Documentation
         private static readonly SymbolDisplayFormat _nameAndContainingNamesAndNameSpacesFormat = new SymbolDisplayFormat(
             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
             genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters);
+
+        private static readonly SymbolDisplayFormat _enumFieldValueFormat = new SymbolDisplayFormat(
+            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
+            memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
 
         private bool _pendingIndentation;
 
@@ -110,19 +115,17 @@ namespace Roslynator.Documentation
 
                         AppendAttributes(en.Current);
 
-                        //TODO: sort interfaces
                         Append(SymbolDefinitionBuilder.GetDisplayParts(
                             en.Current,
                             _typeFormat,
                             SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
                             attributePredicate: _ => false));
 
-                        AppendLine();
-
                         switch (typeKind)
                         {
                             case TypeKind.Class:
                                 {
+                                    AppendLine();
                                     AppendLine("{");
                                     IncreaseIndentation();
 
@@ -134,10 +137,12 @@ namespace Roslynator.Documentation
                                 }
                             case TypeKind.Delegate:
                                 {
+                                    AppendLine(";");
                                     break;
                                 }
                             case TypeKind.Enum:
                                 {
+                                    AppendLine();
                                     AppendLine("{");
                                     IncreaseIndentation();
 
@@ -158,6 +163,7 @@ namespace Roslynator.Documentation
                                 }
                             case TypeKind.Interface:
                                 {
+                                    AppendLine();
                                     AppendLine("{");
                                     IncreaseIndentation();
 
@@ -169,6 +175,7 @@ namespace Roslynator.Documentation
                                 }
                             case TypeKind.Struct:
                                 {
+                                    AppendLine();
                                     AppendLine("{");
                                     IncreaseIndentation();
 
@@ -193,7 +200,6 @@ namespace Roslynator.Documentation
             }
         }
 
-        //TODO:  explicit implementations ?
         private void AppendMembers(INamedTypeSymbol typeSymbol)
         {
             bool isAny = false;
@@ -319,7 +325,7 @@ namespace Roslynator.Documentation
 
                     while (true)
                     {
-                        AppendValue(en.Current);
+                        AppendConstantValue(en.Current);
 
                         if (en.MoveNext())
                         {
@@ -386,84 +392,80 @@ namespace Roslynator.Documentation
             {
                 Append(kvp.Key);
                 Append(" = ");
-                AppendValue(kvp.Value);
+                AppendConstantValue(kvp.Value);
             }
 
-            void AppendValue(TypedConstant typedConstant)
+            void AppendConstantValue(TypedConstant typedConstant)
             {
                 switch (typedConstant.Kind)
                 {
                     case TypedConstantKind.Primitive:
                         {
-                            switch (typedConstant.Type.SpecialType)
-                            {
-                                case SpecialType.System_Object:
-                                    {
-                                        break;
-                                    }
-                                case SpecialType.System_Boolean:
-                                    {
-                                        Append(((bool)typedConstant.Value) ? "true" : "false");
-                                        break;
-                                    }
-                                case SpecialType.System_Char:
-                                    {
-                                        break;
-                                    }
-                                case SpecialType.System_SByte:
-                                case SpecialType.System_Byte:
-                                case SpecialType.System_Int16:
-                                case SpecialType.System_UInt16:
-                                case SpecialType.System_Int32:
-                                case SpecialType.System_UInt32:
-                                case SpecialType.System_Int64:
-                                case SpecialType.System_UInt64:
-                                case SpecialType.System_Single:
-                                case SpecialType.System_Double:
-                                    {
-                                        Append(typedConstant.Value);
-                                        break;
-                                    }
-                                case SpecialType.System_String:
-                                    {
-                                        string s = typedConstant.Value.ToString();
-
-                                        Append("\"");
-                                        Append(s);
-                                        Append("\"");
-                                        break;
-                                    }
-                                default:
-                                    {
-                                        throw new InvalidOperationException();
-                                    }
-                            }
-
+                            Append(SymbolDisplay.FormatPrimitive(typedConstant.Value, quoteStrings: true, useHexadecimalNumbers: false));
                             break;
                         }
-
                     case TypedConstantKind.Enum:
                         {
-                            Append(typedConstant.Value);
+                            (EnumFieldInfo singleField, ImmutableArray<EnumFieldInfo> multipleFields)
+                                = EnumUtility.GetConstituentFields(typedConstant.Value, (INamedTypeSymbol)typedConstant.Type);
+
+                            if (!singleField.IsDefault)
+                            {
+                                AppendSymbol(singleField.Symbol, _enumFieldValueFormat);
+                            }
+                            else if (!multipleFields.IsDefault)
+                            {
+                                ImmutableArray<EnumFieldInfo>.Enumerator en = multipleFields.GetEnumerator();
+
+                                if (en.MoveNext())
+                                {
+                                    while (true)
+                                    {
+                                        AppendSymbol(en.Current.Symbol, _enumFieldValueFormat);
+
+                                        if (en.MoveNext())
+                                        {
+                                            Append(" | ");
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                Append("(");
+                                AppendSymbol((INamedTypeSymbol)typedConstant.Type, _nameAndContainingNamesAndNameSpacesFormat);
+                                Append(")");
+                                Append(typedConstant.Value);
+                            }
+
                             break;
                         }
                     case TypedConstantKind.Type:
                         {
                             Append("typeof(");
-                            AppendSymbol(typedConstant.Type, _nameAndContainingNamesAndNameSpacesFormat);
+                            AppendSymbol((ISymbol)typedConstant.Value, _nameAndContainingNamesAndNameSpacesFormat);
                             Append(")");
+
                             break;
                         }
                     case TypedConstantKind.Array:
                         {
-                            Append("{ ");
+                            var arrayType = (IArrayTypeSymbol)typedConstant.Type;
+                            Append("new ");
+                            AppendSymbol(arrayType.ElementType, _nameAndContainingNamesAndNameSpacesFormat);
+                            Append("[] { ");
 
                             ImmutableArray<TypedConstant>.Enumerator en = typedConstant.Values.GetEnumerator();
+
                             if (en.MoveNext())
                             {
                                 while (true)
                                 {
-                                    AppendValue(typedConstant);
+                                    AppendConstantValue(en.Current);
 
                                     if (en.MoveNext())
                                     {
@@ -540,6 +542,12 @@ namespace Roslynator.Documentation
         }
 
         public void Append(string value)
+        {
+            CheckPendingIndentation();
+            StringBuilder.Append(value);
+        }
+
+        public void Append(char value)
         {
             CheckPendingIndentation();
             StringBuilder.Append(value);

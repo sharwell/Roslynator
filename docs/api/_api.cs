@@ -91,7 +91,7 @@ namespace Roslynator
     public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, SyntaxNode node, CancellationToken cancellationToken = default);
   }
 
-  public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>, IReadOnlyList<TNode>, IReadOnlyCollection<TNode>, IEnumerable<TNode> where TNode : SyntaxNode
+  public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>, IEnumerable<TNode>, IReadOnlyCollection<TNode>, IReadOnlyList<TNode> where TNode : SyntaxNode
   {
     protected SeparatedSyntaxListSelection(SeparatedSyntaxList<TNode> list, TextSpan span, int firstIndex, int lastIndex);
 
@@ -245,7 +245,7 @@ namespace Roslynator
     public static SyntaxNodeOrToken WithoutTrivia(this SyntaxNodeOrToken nodeOrToken);
   }
 
-  public class SyntaxListSelection<TNode> : ISelection<TNode>, IReadOnlyList<TNode>, IReadOnlyCollection<TNode>, IEnumerable<TNode> where TNode : SyntaxNode
+  public class SyntaxListSelection<TNode> : ISelection<TNode>, IEnumerable<TNode>, IReadOnlyCollection<TNode>, IReadOnlyList<TNode> where TNode : SyntaxNode
   {
     protected SyntaxListSelection(SyntaxList<TNode> list, TextSpan span, int firstIndex, int lastIndex);
 
@@ -319,7 +319,7 @@ namespace Roslynator
     public static bool operator !=(in ExtensionMethodSymbolInfo info1, in ExtensionMethodSymbolInfo info2);
   }
 
-  public interface ISelection<T> : IReadOnlyList<T>, IReadOnlyCollection<T>, IEnumerable<T>
+  public interface ISelection<T> : IEnumerable<T>, IReadOnlyCollection<T>, IReadOnlyList<T>
   {
     int FirstIndex { get; }
     int LastIndex { get; }
@@ -1633,7 +1633,7 @@ namespace Roslynator.CSharp.Syntax
     public static bool operator !=(in LocalDeclarationStatementInfo info1, in LocalDeclarationStatementInfo info2);
   }
 
-  public readonly struct MemberDeclarationListInfo : IReadOnlyList<MemberDeclarationSyntax>, IReadOnlyCollection<MemberDeclarationSyntax>, IEnumerable<MemberDeclarationSyntax>, IEquatable<MemberDeclarationListInfo>
+  public readonly struct MemberDeclarationListInfo : IEnumerable<MemberDeclarationSyntax>, IReadOnlyCollection<MemberDeclarationSyntax>, IReadOnlyList<MemberDeclarationSyntax>, IEquatable<MemberDeclarationListInfo>
   {
     public MemberDeclarationSyntax this[int index] { get; }
 
@@ -1901,7 +1901,7 @@ namespace Roslynator.CSharp.Syntax
     public static bool operator !=(in SingleParameterLambdaExpressionInfo info1, in SingleParameterLambdaExpressionInfo info2);
   }
 
-  public readonly struct StatementListInfo : IReadOnlyList<StatementSyntax>, IReadOnlyCollection<StatementSyntax>, IEnumerable<StatementSyntax>, IEquatable<StatementListInfo>
+  public readonly struct StatementListInfo : IEnumerable<StatementSyntax>, IReadOnlyCollection<StatementSyntax>, IReadOnlyList<StatementSyntax>, IEquatable<StatementListInfo>
   {
     public StatementSyntax this[int index] { get; }
 
@@ -1985,7 +1985,7 @@ namespace Roslynator.CSharp.Syntax
     public static bool operator !=(in StringLiteralExpressionInfo info1, in StringLiteralExpressionInfo info2);
   }
 
-  public readonly struct UsingDirectiveListInfo : IReadOnlyList<UsingDirectiveSyntax>, IReadOnlyCollection<UsingDirectiveSyntax>, IEnumerable<UsingDirectiveSyntax>, IEquatable<UsingDirectiveListInfo>
+  public readonly struct UsingDirectiveListInfo : IEnumerable<UsingDirectiveSyntax>, IReadOnlyCollection<UsingDirectiveSyntax>, IReadOnlyList<UsingDirectiveSyntax>, IEquatable<UsingDirectiveListInfo>
   {
     public UsingDirectiveSyntax this[int index] { get; }
 
@@ -2046,7 +2046,7 @@ namespace Roslynator.CSharp.Syntax
 
 namespace Roslynator.Text
 {
-  public class TextLineCollectionSelection : ISelection<TextLine>, IReadOnlyList<TextLine>, IReadOnlyCollection<TextLine>, IEnumerable<TextLine>
+  public class TextLineCollectionSelection : ISelection<TextLine>, IEnumerable<TextLine>, IReadOnlyCollection<TextLine>, IReadOnlyList<TextLine>
   {
     protected TextLineCollectionSelection(TextLineCollection lines, TextSpan span, int firstIndex, int lastIndex);
 

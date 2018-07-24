@@ -10,9 +10,9 @@ Represents selected lines in a [TextLineCollection](https://docs.microsoft.com/e
 
 ```csharp
 public class TextLineCollectionSelection : Roslynator.ISelection<Microsoft.CodeAnalysis.Text.TextLine>,
-    System.Collections.Generic.IReadOnlyList<Microsoft.CodeAnalysis.Text.TextLine>,
+    System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.Text.TextLine>,
     System.Collections.Generic.IReadOnlyCollection<Microsoft.CodeAnalysis.Text.TextLine>,
-    System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.Text.TextLine>
+    System.Collections.Generic.IReadOnlyList<Microsoft.CodeAnalysis.Text.TextLine>
 ```
 
 ### Inheritance
