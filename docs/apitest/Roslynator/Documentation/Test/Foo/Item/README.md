@@ -2,20 +2,16 @@
 
 Namespace: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ## Overloads
 
 | Property | Summary |
 | -------- | ------- |
-| Item\[Int32, Int32\] | s |
-| Item\[Int32\] | s |
+| Item\[Int32, Int32\] | |
+| Item\[Int32\] | |
 
 ## Item\[Int32\]
-
-### Summary
-
-s
 
 ```csharp
 public Foo this[int index] { get; set; }
@@ -25,19 +21,13 @@ public Foo this[int index] { get; set; }
 
 | Parameter | Summary |
 | --------- | ------- |
-| index | p |
+| index | |
 
 #### Property Value
 
 [Foo](../README.md)
 
-v
-
 ## Item\[Int32, Int32\]
-
-### Summary
-
-s
 
 ```csharp
 public Foo this[int index, int index2] { get; set; }
@@ -47,11 +37,10 @@ public Foo this[int index, int index2] { get; set; }
 
 | Parameter | Summary |
 | --------- | ------- |
-| index | p |
-| index2 | p |
+| index | |
+| index2 | |
 
 #### Property Value
 
 [Foo](../README.md)
 
-v

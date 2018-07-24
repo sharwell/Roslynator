@@ -2,15 +2,11 @@
 
 Namespace: [Roslynator.Documentation.Test](../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 **WARNING: This API is now obsolete\.**
 
 Foo is obsolete\.
-
-## Summary
-
-a → > b [Foo](./README.md)
 
 ```csharp
 [System.ObsoleteAttribute]
@@ -25,69 +21,37 @@ public class Foo : Bla
 
 [CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute) \(Inherited from [Bla](../../../../_Global/Bla/README.md)\), [ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
 
-## Remarks
-
-bla `null`
-
-```csharp
-string s = null;
-```
-
-
-bla2
-
-
-paratext
-
-
-* This is the first bullet
-* This is the second bullet
-
-| h1  | h2  |
-| --- | --- |
-| [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32) | int |
-| [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)2 | int2 |
-
-
-| h1  | h2  | h3  |
-| --- | --- | --- |
-| [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)1 | [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)2 | [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)3 |
-
 ## Constructors
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [Foo(String)](-ctor/README.md) | aaa |
+| [Foo(String)](-ctor/README.md) | |
 | [Foo(String, String)](-ctor/README.md) | |
 
 ## Fields
 
 | Field | Summary |
 | ----- | ------- |
-| [Field](Field/README.md) | f |
+| [Field](Field/README.md) | |
 
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
-| [Item\[Int32, Int32\]](Item/README.md) | s |
-| [Item\[Int32\]](Item/README.md) | s |
+| [Item\[Int32, Int32\]](Item/README.md) | |
+| [Item\[Int32\]](Item/README.md) | |
 
 ## Methods
 
 | Method | Summary |
 | ------ | ------- |
-| [Bar()](Bar/README.md) | abc |
-| [Bar\<T>(String, String)](Bar-1/README.md) | s **value** **T** |
-| [Bar2()](Bar2/README.md) |     1 2 |
+| [Bar()](Bar/README.md) | |
+| [Bar\<T>(String, String)](Bar-1/README.md) | |
+| [Bar2()](Bar2/README.md) | |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [M()](../../../../_Global/Bla/M/README.md) | bla m \(Inherited from [Bla](../../../../_Global/Bla/README.md)\) |
+| [M()](../../../../_Global/Bla/M/README.md) |  \(Inherited from [Bla](../../../../_Global/Bla/README.md)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 
-## See Also
-
-* [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
-* [Foo](./README.md)

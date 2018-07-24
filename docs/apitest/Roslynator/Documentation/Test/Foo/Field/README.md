@@ -2,11 +2,7 @@
 
 Namespace: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
-
-## Summary
-
-f
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 public readonly string Field

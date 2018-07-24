@@ -11,7 +11,7 @@ using Microsoft.CodeAnalysis.CSharp;
 
 namespace Roslynator.Documentation
 {
-    public class SymbolDefinitionListBuilder
+    internal class DefinitionListBuilder
     {
         private static readonly SymbolDisplayFormat _namespaceFormat = SymbolDisplayFormats.NamespaceDefinition;
 
@@ -33,7 +33,7 @@ namespace Roslynator.Documentation
 
         private bool _pendingIndentation;
 
-        public SymbolDefinitionListBuilder(StringBuilder stringBuilder = null)
+        public DefinitionListBuilder(StringBuilder stringBuilder = null)
         {
             StringBuilder = stringBuilder ?? new StringBuilder();
         }

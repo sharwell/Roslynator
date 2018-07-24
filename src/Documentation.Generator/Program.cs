@@ -21,8 +21,8 @@ namespace Roslynator.Documentation
         [SuppressMessage("Redundancy", "RCS1163")]
         private static void Main(string[] args)
         {
-            GenerateDocumentation(@"..\..\..\..\..\..\docs\api\", "Roslynator API", "Roslynator.CSharp.dll", "Roslynator.CSharp.Workspaces.dll");
-            GenerateDocumentation(@"..\..\..\..\..\..\docs\apitest\", "Foo API", "Roslynator.Documentation.DocumentationTest.dll");
+            GenerateDocumentation(@"..\..\..\..\..\docs\api\", "Roslynator API", "Roslynator.CSharp.dll", "Roslynator.CSharp.Workspaces.dll");
+            GenerateDocumentation(@"..\..\..\..\..\docs\apitest\", "Foo API", "Roslynator.Documentation.TestProject.dll");
         }
 
         private static void GenerateDocumentation(string directoryPath, string heading, params string[] assemblyNames)
@@ -36,9 +36,9 @@ namespace Roslynator.Documentation
 
             var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUriProvider.GitHub, options);
 
-            DocumentationGeneratorResult defintionList = generator.GenerateDefinitionList();
+            string defintionList = DefinitionListGenerator.GenerateAsync(documentationModel).Result;
 
-            FileHelper.WriteAllText(directoryPath + defintionList.Path, defintionList.Content, Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
+            FileHelper.WriteAllText(directoryPath + "_api.cs", defintionList, Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
 
             foreach (DocumentationGeneratorResult result in generator.Generate(
                 heading,

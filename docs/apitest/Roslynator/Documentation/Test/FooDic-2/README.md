@@ -2,7 +2,7 @@
 
 Namespace: [Roslynator.Documentation.Test](../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 **WARNING: This API is now obsolete\.**
 

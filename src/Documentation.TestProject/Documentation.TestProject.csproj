@@ -27,6 +27,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Documentation.TestProject.snk" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Collections.Immutable" Version="1.4.0" />
   </ItemGroup>
 

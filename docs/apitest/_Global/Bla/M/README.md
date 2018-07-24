@@ -2,11 +2,7 @@
 
 Namespace: [\<global namespace>](../../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
-
-## Summary
-
-bla m
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 public void M()

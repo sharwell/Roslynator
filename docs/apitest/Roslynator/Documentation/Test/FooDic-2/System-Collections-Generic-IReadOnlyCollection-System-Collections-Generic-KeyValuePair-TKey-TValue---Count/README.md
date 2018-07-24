@@ -2,7 +2,7 @@
 
 Namespace: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 private int IReadOnlyCollection<KeyValuePair<TKey, TValue>>.Count { get; }

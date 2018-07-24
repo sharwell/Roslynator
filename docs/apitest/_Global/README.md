@@ -4,5 +4,5 @@
 
 | Class | Summary |
 | ----- | ------- |
-| [Bla](Bla/README.md) | blac |
+| [Bla](Bla/README.md) | |
 

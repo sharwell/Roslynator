@@ -2,20 +2,16 @@
 
 Namespace: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ## Overloads
 
 | Constructor | Summary |
 | ----------- | ------- |
-| Foo\(String\) | aaa |
+| Foo\(String\) | |
 | Foo\(String, String\) | |
 
 ## Foo\(String\)
-
-### Summary
-
-aaa
 
 ```csharp
 public Foo(string s)
@@ -25,21 +21,7 @@ public Foo(string s)
 
 | Name | Summary |
 | ---- | ------- |
-| s | qqq |
-
-#### Exceptions
-
-[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)
-
-a
-
-[ArgumentNullException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception)
-
-b
-
-### See Also
-
-* [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
+| s | |
 
 ## Foo\(String, String\)
 

@@ -2,11 +2,7 @@
 
 Namespace: [Roslynator.Documentation.Test](../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
-
-## Summary
-
-del
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 public delegate Foo FooDelegate(object p)

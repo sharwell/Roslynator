@@ -2,20 +2,16 @@
 
 Namespace: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ## Overloads
 
 | Method | Summary |
 | ------ | ------- |
-| Bar\(\) | abc |
-| Bar\<T>\(String, String\) | s **value** **T** |
+| Bar\(\) | |
+| Bar\<T>\(String, String\) | |
 
 ## Bar\<T>\(String, String\)
-
-### Summary
-
-s **value** **T**
 
 ```csharp
 public void Bar<T>(string value, string value2)
@@ -31,7 +27,7 @@ public void Bar<T>(string value, string value2)
 
 | Name | Summary |
 | ---- | ------- |
-| value | p |
+| value | |
 | value2 | |
 
 #### Returns
@@ -39,10 +35,6 @@ public void Bar<T>(string value, string value2)
 [Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## Bar\(\)
-
-### Summary
-
-abc
 
 ```csharp
 public void Bar()

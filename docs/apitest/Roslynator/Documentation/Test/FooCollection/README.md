@@ -2,7 +2,7 @@
 
 Namespace: [Roslynator.Documentation.Test](../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 public class FooCollection : System.Collections.ICollection,

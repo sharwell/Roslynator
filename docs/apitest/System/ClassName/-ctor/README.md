@@ -2,7 +2,7 @@
 
 Namespace: [System](../../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 public ClassName()

@@ -2,12 +2,7 @@
 
 Namespace: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
-
-## Summary
-
-    1
-2
+Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 public void Bar2()
