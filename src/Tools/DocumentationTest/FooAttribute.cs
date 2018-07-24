@@ -2,14 +2,14 @@
 
 using System;
 
-#pragma warning disable CS0618, CS1591, RCS1079 
+#pragma warning disable CS0618, CS1591, CA1019, RCS1079 
 
 namespace Roslynator.Documentation.Test
 {
     [AttributeUsage(AttributeTargets.All, AllowMultiple = false, Inherited = false)]
-    public sealed class MyAttribute : Attribute
+    public sealed class FooAttribute : Attribute
     {
-        [My(
+        [Foo(
             default(object),
             @"\n",
             true,
@@ -32,7 +32,7 @@ namespace Roslynator.Documentation.Test
             Flags.B | Flags.C | Flags.A,
             Flags.AB,
             (Flags)100)]
-        public MyAttribute(
+        public FooAttribute(
             object object1,
             string s1,
             bool bool1,

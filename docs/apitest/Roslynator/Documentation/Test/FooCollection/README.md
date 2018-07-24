@@ -5,9 +5,9 @@ Namespace: [Roslynator.Documentation.Test](../README.md)
 Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
 
 ```csharp
-public class FooCollection : System.Collections.Generic.ICollection<Foo>,
-    System.Collections.Generic.IEnumerable<Foo>,
-    System.Collections.ICollection
+public class FooCollection : System.Collections.ICollection,
+    System.Collections.Generic.ICollection<Foo>,
+    System.Collections.Generic.IEnumerable<Foo>
 ```
 
 ### Inheritance
@@ -16,8 +16,8 @@ public class FooCollection : System.Collections.Generic.ICollection<Foo>,
 
 ### Implements
 
-* [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\<[Foo](../Foo/README.md)>
 * [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)
+* [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\<[Foo](../Foo/README.md)>
 * [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\<[Foo](../Foo/README.md)>
 
 ## Constructors

@@ -31,7 +31,14 @@ namespace Roslynator.Documentation.Test
     public void Bar2();
   }
 
-  public class FooCollection : ICollection<Foo>, IEnumerable<Foo>, ICollection
+  [AttributeUsage(AttributeTargets.All, AllowMultiple = false, Inherited = false)]
+  public sealed class FooAttribute : Attribute
+  {
+    [Foo(null, "\\n", true, false, 0, '\'', 0, 0, 0, 0, 0, 0, 0, 0, 0, typeof(object), Flags.None, Flags.A, Flags.A, Flags.AB | Flags.C, Flags.AB, (Flags)100)]
+    public FooAttribute(object object1, string s1, bool bool1, bool bool2, byte byte1, char ch1, double double1, float float1, int int1, long long1, sbyte sbyte1, short short1, uint uint1, ulong ulong1, ushort ushort1, Type type, Flags f1, Flags f2, Flags f3, Flags f4, Flags f5, Flags f6);
+  }
+
+  public class FooCollection : ICollection, ICollection<Foo>, IEnumerable<Foo>
   {
     public FooCollection();
 
@@ -64,19 +71,12 @@ namespace Roslynator.Documentation.Test
   {
   }
 
-  [AttributeUsage(AttributeTargets.All, AllowMultiple = false, Inherited = false)]
-  public sealed class MyAttribute : Attribute
-  {
-    [My(null, "\\n", true, false, 0, '\'', 0, 0, 0, 0, 0, 0, 0, 0, 0, typeof(object), Flags.None, Flags.A, Flags.A, Flags.AB | Flags.C, Flags.AB, (Flags)100)]
-    public MyAttribute(object object1, string s1, bool bool1, bool bool2, byte byte1, char ch1, double double1, float float1, int int1, long long1, sbyte sbyte1, short short1, uint uint1, ulong ulong1, ushort ushort1, Type type, Flags f1, Flags f2, Flags f3, Flags f4, Flags f5, Flags f6);
-  }
-
   public interface IFoo
   {
     event EventHandler Changed;
   }
 
-  public interface IImmutableFoo<T> : ICollection<T>, IEnumerable<T>, IList<T>, IReadOnlyCollection<T>, IReadOnlyList<T>, ICollection, IList, IImmutableList<T>, IStructuralComparable, IStructuralEquatable, IEquatable<IImmutableFoo<T>>
+  public interface IImmutableFoo<T> : IEquatable<IImmutableFoo<T>>, ICollection, IList, IStructuralComparable, IStructuralEquatable, ICollection<T>, IEnumerable<T>, IList<T>, IReadOnlyCollection<T>, IReadOnlyList<T>, IImmutableList<T>
   {
   }
 
@@ -91,7 +91,7 @@ namespace Roslynator.Documentation.Test
     D = 8,
   }
 
-  public delegate void FooDelegate(object p);
+  public delegate Foo FooDelegate(object p);
 }
 
 [CLSCompliant(true)]

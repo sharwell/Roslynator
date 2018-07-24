@@ -9,7 +9,7 @@ Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
 del
 
 ```csharp
-public delegate void FooDelegate(object p)
+public delegate Foo FooDelegate(object p)
 ```
 
 ### Parameters
@@ -17,6 +17,10 @@ public delegate void FooDelegate(object p)
 | Parameter | Summary |
 | --------- | ------- |
 | p | |
+
+### Return Value
+
+[Foo](../Foo/README.md)
 
 ### Inheritance
 

@@ -36,12 +36,12 @@ namespace Roslynator.Documentation
                 case "FlagsAttribute":
                 case "AttributeUsageAttribute":
                 case "ObsoleteAttribute":
+                case "FooAttribute":
                     return false;
 #endif
             }
 
-            //TODO: 
-            //Debug.Fail(symbol.ToDisplayString());
+            Debug.Fail(symbol.ToDisplayString());
             return false;
         }
     }

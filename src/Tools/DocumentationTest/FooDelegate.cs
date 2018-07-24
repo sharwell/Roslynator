@@ -8,5 +8,5 @@ namespace Roslynator.Documentation.Test
     /// del
     /// </summary>
     /// <param name="p"></param>
-    public delegate void FooDelegate(object p);
+    public delegate Foo FooDelegate(object p);
 }

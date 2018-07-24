@@ -4,6 +4,7 @@ using System;
 
 namespace Roslynator.Documentation
 {
+    //TODO: SymbolDisplayAdditionalMemberOptions
     [Flags]
     public enum SymbolDisplayAdditionalOptions
     {

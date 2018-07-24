@@ -1309,7 +1309,7 @@ namespace Roslynator.CSharp
     public static TNode WithSimplifierAnnotation<TNode>(this TNode node) where TNode : SyntaxNode;
   }
 
-  public readonly struct ExpressionChain : IEnumerable<ExpressionSyntax>, IEquatable<ExpressionChain>
+  public readonly struct ExpressionChain : IEquatable<ExpressionChain>, IEnumerable<ExpressionSyntax>
   {
     public BinaryExpressionSyntax BinaryExpression { get; }
     public TextSpan? Span { get; }
@@ -1334,7 +1334,7 @@ namespace Roslynator.CSharp
       public void Reset();
     }
 
-    public readonly struct Reversed : IEnumerable<ExpressionSyntax>, IEquatable<Reversed>
+    public readonly struct Reversed : IEquatable<Reversed>, IEnumerable<ExpressionSyntax>
     {
       public Reversed(in ExpressionChain chain);
 
@@ -1359,7 +1359,7 @@ namespace Roslynator.CSharp
     }
   }
 
-  public readonly struct IfStatementCascade : IEnumerable<IfStatementOrElseClause>, IEquatable<IfStatementCascade>
+  public readonly struct IfStatementCascade : IEquatable<IfStatementCascade>, IEnumerable<IfStatementOrElseClause>
   {
     public IfStatementSyntax IfStatement { get; }
 
@@ -1633,7 +1633,7 @@ namespace Roslynator.CSharp.Syntax
     public static bool operator !=(in LocalDeclarationStatementInfo info1, in LocalDeclarationStatementInfo info2);
   }
 
-  public readonly struct MemberDeclarationListInfo : IEnumerable<MemberDeclarationSyntax>, IReadOnlyCollection<MemberDeclarationSyntax>, IReadOnlyList<MemberDeclarationSyntax>, IEquatable<MemberDeclarationListInfo>
+  public readonly struct MemberDeclarationListInfo : IEquatable<MemberDeclarationListInfo>, IEnumerable<MemberDeclarationSyntax>, IReadOnlyCollection<MemberDeclarationSyntax>, IReadOnlyList<MemberDeclarationSyntax>
   {
     public MemberDeclarationSyntax this[int index] { get; }
 
@@ -1901,7 +1901,7 @@ namespace Roslynator.CSharp.Syntax
     public static bool operator !=(in SingleParameterLambdaExpressionInfo info1, in SingleParameterLambdaExpressionInfo info2);
   }
 
-  public readonly struct StatementListInfo : IEnumerable<StatementSyntax>, IReadOnlyCollection<StatementSyntax>, IReadOnlyList<StatementSyntax>, IEquatable<StatementListInfo>
+  public readonly struct StatementListInfo : IEquatable<StatementListInfo>, IEnumerable<StatementSyntax>, IReadOnlyCollection<StatementSyntax>, IReadOnlyList<StatementSyntax>
   {
     public StatementSyntax this[int index] { get; }
 
@@ -1985,7 +1985,7 @@ namespace Roslynator.CSharp.Syntax
     public static bool operator !=(in StringLiteralExpressionInfo info1, in StringLiteralExpressionInfo info2);
   }
 
-  public readonly struct UsingDirectiveListInfo : IEnumerable<UsingDirectiveSyntax>, IReadOnlyCollection<UsingDirectiveSyntax>, IReadOnlyList<UsingDirectiveSyntax>, IEquatable<UsingDirectiveListInfo>
+  public readonly struct UsingDirectiveListInfo : IEquatable<UsingDirectiveListInfo>, IEnumerable<UsingDirectiveSyntax>, IReadOnlyCollection<UsingDirectiveSyntax>, IReadOnlyList<UsingDirectiveSyntax>
   {
     public UsingDirectiveSyntax this[int index] { get; }
 

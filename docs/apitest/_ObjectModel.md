@@ -4,7 +4,7 @@
 
 * [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
   * [Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute)
-    * [MyAttribute](Roslynator/Documentation/Test/MyAttribute/README.md)
+    * [FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md)
   * [Bla](_Global/Bla/README.md)
     * [Foo](Roslynator/Documentation/Test/Foo/README.md)
   * [ClassName](System/ClassName/README.md)

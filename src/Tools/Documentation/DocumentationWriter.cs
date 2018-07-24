@@ -417,36 +417,21 @@ namespace Roslynator.Documentation
                         IMethodSymbol methodSymbol = namedTypeSymbol.DelegateInvokeMethod;
 
                         if (methodSymbol != null)
-                            WriteReturnValue(Resources.ReturnValueTitle, methodSymbol.ReturnType);
+                        {
+                            ITypeSymbol returnType = methodSymbol.ReturnType;
+
+                            if (returnType.SpecialType == SpecialType.System_Void)
+                                return;
+
+                            WriteHeading(3, Resources.ReturnValueTitle);
+                            WriteLinkOrTypeLink(returnType);
+                            WriteLine();
+
+                            DocumentationModel.GetDocumentation(symbol)?.WriteElementContentTo(this, "returns");
+                        }
 
                         break;
                     }
-                case SymbolKind.Method:
-                    {
-                        var methodSymbol = (IMethodSymbol)symbol;
-
-                        WriteReturnValue(Resources.ReturnsTitle, methodSymbol.ReturnType);
-                        break;
-                    }
-                case SymbolKind.Property:
-                    {
-                        var propertySymbol = (IPropertySymbol)symbol;
-
-                        WriteReturnValue(Resources.PropertyValueTitle, propertySymbol.Type);
-                        break;
-                    }
-            }
-
-            void WriteReturnValue(string heading, ITypeSymbol returnType)
-            {
-                if (returnType.SpecialType == SpecialType.System_Void)
-                    return;
-
-                WriteHeading(3, heading);
-                WriteLink(returnType, FormatProvider.ReturnValueFormat);
-                WriteLine();
-
-                DocumentationModel.GetDocumentation(symbol)?.WriteElementContentTo(this, "returns");
             }
         }
 
@@ -687,50 +672,26 @@ namespace Roslynator.Documentation
                 allInterfaces = allInterfaces.RemoveAll(f => f.SpecialType == SpecialType.System_Collections_IEnumerable);
             }
 
-            const SymbolDisplayAdditionalOptions additionalOptions = SymbolDisplayAdditionalOptions.UseItemProperty;
-            SymbolDisplayFormat format = FormatProvider.ImplementsFormat;
-
-            allInterfaces = SortInterfaces(allInterfaces);
-
-            ImmutableArray<INamedTypeSymbol>.Enumerator en = allInterfaces.GetEnumerator();
-
-            if (en.MoveNext())
+            using (IEnumerator<INamedTypeSymbol> en = allInterfaces
+                .OrderBy(f => f.ToDisplayString(FormatProvider.TypeFormat))
+                .GetEnumerator())
             {
-                WriteHeading(3, Resources.ImplementsTitle);
-
-                WriteStartBulletList();
-
-                do
+                if (en.MoveNext())
                 {
-                    WriteBulletItemLink(en.Current, format, additionalOptions);
+                    WriteHeading(3, Resources.ImplementsTitle);
+
+                    WriteStartBulletList();
+
+                    do
+                    {
+                        WriteStartBulletItem();
+                        WriteTypeLink(en.Current);
+                        WriteEndBulletItem();
+                    }
+                    while (en.MoveNext());
+
+                    WriteEndBulletList();
                 }
-                while (en.MoveNext());
-
-                WriteEndBulletList();
-            }
-
-            ImmutableArray<INamedTypeSymbol> SortInterfaces(ImmutableArray<INamedTypeSymbol> interfaces)
-            {
-                return interfaces.Sort((x, y) =>
-                {
-                    if (x.InheritsFrom(y.OriginalDefinition, includeInterfaces: true))
-                        return -1;
-
-                    if (y.InheritsFrom(x.OriginalDefinition, includeInterfaces: true))
-                        return 1;
-
-                    if (interfaces.Any(f => x.InheritsFrom(f.OriginalDefinition, includeInterfaces: true)))
-                    {
-                        if (!interfaces.Any(f => y.InheritsFrom(f.OriginalDefinition, includeInterfaces: true)))
-                            return -1;
-                    }
-                    else if (interfaces.Any(f => y.InheritsFrom(f.OriginalDefinition, includeInterfaces: true)))
-                    {
-                        return 1;
-                    }
-
-                    return string.Compare(x.ToDisplayString(format, additionalOptions), y.ToDisplayString(format, additionalOptions), StringComparison.Ordinal);
-                });
             }
         }
 
@@ -1031,8 +992,12 @@ namespace Roslynator.Documentation
                 WriteSymbol(symbol, format, additionalOptions);
             }
 
-            WriteSpace();
-            WriteString(Resources.GetName(symbol));
+            if (symbol.Kind != SymbolKind.Namespace
+                || !((INamespaceSymbol)symbol).IsGlobalNamespace)
+            {
+                WriteSpace();
+                WriteString(Resources.GetName(symbol));
+            }
 
             WriteEndHeading();
         }
@@ -1063,31 +1028,97 @@ namespace Roslynator.Documentation
             SymbolDisplayAdditionalOptions additionalOptions = SymbolDisplayAdditionalOptions.None,
             bool canCreateExternalUrl = true)
         {
-            ISymbol symbol = symbolInfo.Symbol;
+            string url = GetUrl(symbolInfo, DirectoryInfo, canCreateExternalUrl);
 
-            if ((symbol as INamedTypeSymbol)?
-                .TypeArguments
-                .Any(f => f.Kind != SymbolKind.TypeParameter) == true)
+            WriteLinkOrText(symbolInfo.Symbol.ToDisplayString(format, additionalOptions), url);
+        }
+
+        internal void WriteLinkOrTypeLink(
+            ITypeSymbol typeSymbol,
+            bool containingTypes = true,
+            bool canCreateExternalUrl = true)
+        {
+            if (typeSymbol is INamedTypeSymbol namedTypeSymbol)
             {
-                foreach (SymbolDisplayPart part in symbol.ToDisplayParts(format, additionalOptions))
-                {
-                    if (part.IsTypeNameOrMemberName())
-                    {
-                        string url = GetUrl(GetSymbolInfo(part.Symbol), DirectoryInfo, canCreateExternalUrl);
+                WriteTypeLink(namedTypeSymbol, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
+            }
+            else
+            {
+                SymbolDisplayFormat format = (containingTypes)
+                    ? SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters
+                    : SymbolDisplayFormats.TypeNameAndTypeParameters;
 
-                        WriteLinkOrText(part.Symbol.Name, url);
-                    }
-                    else
+                WriteLink(typeSymbol, format, canCreateExternalUrl: canCreateExternalUrl);
+            }
+        }
+
+        public void WriteTypeLink(
+            INamedTypeSymbol typeSymbol,
+            bool containingTypes = true,
+            bool canCreateExternalUrl = true)
+        {
+            SymbolDocumentationInfo symbolInfo = GetSymbolInfo(typeSymbol);
+
+            ImmutableArray<ITypeSymbol> typeArguments = typeSymbol.TypeArguments;
+
+            if (typeSymbol.IsNullableType())
+            {
+                ITypeSymbol typeArgument = typeSymbol.TypeArguments[0];
+
+                WriteLinkOrTypeLink(typeArgument, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
+                WriteString("?");
+            }
+            else if (typeArguments.Any(f => f.Kind != SymbolKind.TypeParameter))
+            {
+                SymbolDisplayFormat format = (containingTypes)
+                    ? SymbolDisplayFormats.TypeNameAndContainingTypes
+                    : SymbolDisplayFormats.TypeName;
+
+                string url = GetUrl(GetSymbolInfo(typeSymbol), DirectoryInfo, canCreateExternalUrl);
+
+                WriteLinkOrText(typeSymbol.ToDisplayString(format), url);
+
+                ImmutableArray<ITypeSymbol>.Enumerator en = typeArguments.GetEnumerator();
+
+                if (en.MoveNext())
+                {
+                    WriteString("<");
+
+                    while (true)
                     {
-                        WriteString(part.ToString());
+                        if (en.Current.Kind == SymbolKind.NamedType)
+                        {
+                            WriteTypeLink((INamedTypeSymbol)en.Current, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
+                        }
+                        else
+                        {
+                            Debug.Assert(en.Current.Kind == SymbolKind.TypeParameter, en.Current.Kind.ToString());
+
+                            WriteString(en.Current.Name);
+                        }
+
+                        if (en.MoveNext())
+                        {
+                            WriteString(", ");
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
+
+                    WriteString(">");
                 }
             }
             else
             {
-                string url = GetUrl(symbolInfo, DirectoryInfo, canCreateExternalUrl);
+                SymbolDisplayFormat format = (containingTypes)
+                    ? SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters
+                    : SymbolDisplayFormats.TypeNameAndTypeParameters;
 
-                WriteLinkOrText(symbol.ToDisplayString(format, additionalOptions), url);
+                string url = GetUrl(GetSymbolInfo(typeSymbol), DirectoryInfo, canCreateExternalUrl);
+
+                WriteLinkOrText(typeSymbol.ToDisplayString(format), url);
             }
         }
 

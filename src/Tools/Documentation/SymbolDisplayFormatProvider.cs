@@ -24,13 +24,9 @@ namespace Roslynator.Documentation
 
         public abstract SymbolDisplayFormat ParameterFormat { get; }
 
-        public abstract SymbolDisplayFormat ReturnValueFormat { get; }
-
         public abstract SymbolDisplayFormat InheritanceFormat { get; }
 
         public abstract SymbolDisplayFormat DerivedFormat { get; }
-
-        public abstract SymbolDisplayFormat ImplementsFormat { get; }
 
         public abstract SymbolDisplayFormat MemberImplementsFormat { get; }
 
@@ -52,7 +48,7 @@ namespace Roslynator.Documentation
         {
             public override SymbolDisplayFormat TitleFormat
             {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypes; }
+                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
             }
 
             public override SymbolDisplayFormat MemberTitleFormat
@@ -67,12 +63,12 @@ namespace Roslynator.Documentation
 
             public override SymbolDisplayFormat NamespaceFormat
             {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces; }
+                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters; }
             }
 
             public override SymbolDisplayFormat TypeFormat
             {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypes; }
+                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
             }
 
             public override SymbolDisplayFormat DefinitionFormat
@@ -90,24 +86,14 @@ namespace Roslynator.Documentation
                 get { return SymbolDisplayFormats.Default; }
             }
 
-            public override SymbolDisplayFormat ReturnValueFormat
-            {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypes; }
-            }
-
             public override SymbolDisplayFormat InheritanceFormat
             {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypes; }
+                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
             }
 
             public override SymbolDisplayFormat DerivedFormat
             {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces; }
-            }
-
-            public override SymbolDisplayFormat ImplementsFormat
-            {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypes; }
+                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters; }
             }
 
             public override SymbolDisplayFormat MemberImplementsFormat
@@ -117,7 +103,7 @@ namespace Roslynator.Documentation
 
             public override SymbolDisplayFormat AttributeFormat
             {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypes; }
+                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
             }
 
             public override SymbolDisplayFormat ConstructorFormat
@@ -147,7 +133,7 @@ namespace Roslynator.Documentation
 
             public override SymbolDisplayFormat CrefFormat
             {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypes; }
+                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
             }
         }
     }

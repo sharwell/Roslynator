@@ -19,7 +19,46 @@ namespace Roslynator.Documentation
              kindOptions: DefaultKindOptions,
              miscellaneousOptions: DefaultMiscellaneousOptions);
 
+        public static SymbolDisplayFormat TypeName { get; } = new SymbolDisplayFormat(
+             globalNamespaceStyle: DefaultGlobalNamespaceStyle,
+             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
+             genericsOptions: SymbolDisplayGenericsOptions.None,
+             memberOptions: DefaultMemberOptions,
+             delegateStyle: DefaultDelegateStyle,
+             extensionMethodStyle: DefaultExtensionMethodStyle,
+             parameterOptions: DefaultParameterOptions,
+             propertyStyle: DefaultPropertyStyle,
+             localOptions: DefaultLocalOptions,
+             kindOptions: DefaultKindOptions,
+             miscellaneousOptions: DefaultMiscellaneousOptions);
+
+        public static SymbolDisplayFormat TypeNameAndTypeParameters { get; } = new SymbolDisplayFormat(
+             globalNamespaceStyle: DefaultGlobalNamespaceStyle,
+             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
+             genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
+             memberOptions: DefaultMemberOptions,
+             delegateStyle: DefaultDelegateStyle,
+             extensionMethodStyle: DefaultExtensionMethodStyle,
+             parameterOptions: DefaultParameterOptions,
+             propertyStyle: DefaultPropertyStyle,
+             localOptions: DefaultLocalOptions,
+             kindOptions: DefaultKindOptions,
+             miscellaneousOptions: DefaultMiscellaneousOptions);
+
         public static SymbolDisplayFormat TypeNameAndContainingTypes { get; } = new SymbolDisplayFormat(
+             globalNamespaceStyle: DefaultGlobalNamespaceStyle,
+             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypes,
+             genericsOptions: SymbolDisplayGenericsOptions.None,
+             memberOptions: DefaultMemberOptions,
+             delegateStyle: DefaultDelegateStyle,
+             extensionMethodStyle: DefaultExtensionMethodStyle,
+             parameterOptions: DefaultParameterOptions,
+             propertyStyle: DefaultPropertyStyle,
+             localOptions: DefaultLocalOptions,
+             kindOptions: DefaultKindOptions,
+             miscellaneousOptions: DefaultMiscellaneousOptions);
+
+        public static SymbolDisplayFormat TypeNameAndContainingTypesAndTypeParameters { get; } = new SymbolDisplayFormat(
              globalNamespaceStyle: DefaultGlobalNamespaceStyle,
              typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypes,
              genericsOptions: DefaultGenericsOptions
@@ -34,6 +73,19 @@ namespace Roslynator.Documentation
              miscellaneousOptions: DefaultMiscellaneousOptions);
 
         public static SymbolDisplayFormat TypeNameAndContainingTypesAndNamespaces { get; } = new SymbolDisplayFormat(
+             globalNamespaceStyle: SymbolDisplayGlobalNamespaceStyle.OmittedAsContaining,
+             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
+             genericsOptions: SymbolDisplayGenericsOptions.None,
+             memberOptions: DefaultMemberOptions,
+             delegateStyle: DefaultDelegateStyle,
+             extensionMethodStyle: DefaultExtensionMethodStyle,
+             parameterOptions: DefaultParameterOptions,
+             propertyStyle: DefaultPropertyStyle,
+             localOptions: DefaultLocalOptions,
+             kindOptions: DefaultKindOptions,
+             miscellaneousOptions: DefaultMiscellaneousOptions);
+
+        public static SymbolDisplayFormat TypeNameAndContainingTypesAndNamespacesAndTypeParameters { get; } = new SymbolDisplayFormat(
              globalNamespaceStyle: SymbolDisplayGlobalNamespaceStyle.OmittedAsContaining,
              typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
              genericsOptions: DefaultGenericsOptions

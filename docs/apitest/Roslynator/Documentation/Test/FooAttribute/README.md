@@ -1,4 +1,4 @@
-# MyAttribute Class
+# FooAttribute Class
 
 Namespace: [Roslynator.Documentation.Test](../README.md)
 
@@ -6,12 +6,12 @@ Assembly: Roslynator\.Documentation\.DocumentationTest\.dll
 
 ```csharp
 [System.AttributeUsageAttribute]
-public sealed class MyAttribute : System.Attribute
+public sealed class FooAttribute : System.Attribute
 ```
 
 ### Inheritance
 
-[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute) &#x2192; MyAttribute
+[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute) &#x2192; FooAttribute
 
 ### Attributes
 
@@ -21,7 +21,7 @@ public sealed class MyAttribute : System.Attribute
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [MyAttribute(Object, String, Boolean, Boolean, Byte, Char, Double, Single, Int32, Int64, SByte, Int16, UInt32, UInt64, UInt16, Type, Flags, Flags, Flags, Flags, Flags, Flags)](-ctor/README.md) | |
+| [FooAttribute(Object, String, Boolean, Boolean, Byte, Char, Double, Single, Int32, Int64, SByte, Int16, UInt32, UInt64, UInt16, Type, Flags, Flags, Flags, Flags, Flags, Flags)](-ctor/README.md) | |
 
 ## Properties
 

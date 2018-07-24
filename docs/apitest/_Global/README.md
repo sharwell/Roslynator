@@ -1,4 +1,4 @@
-# \<global namespace> Namespace
+# \<global namespace>
 
 ## Classes
 

@@ -8,7 +8,7 @@
 * [Roslynator.Documentation.Test](Roslynator/Documentation/Test/README.md)
 * [System](System/README.md)
 
-## [\<global namespace>](_Global/README.md) Namespace
+## [\<global namespace>](_Global/README.md)
 
 ### Classes
 
@@ -23,11 +23,11 @@
 | Class | Summary |
 | ----- | ------- |
 | [Foo](Roslynator/Documentation/Test/Foo/README.md) | a → > b [Foo](Roslynator/Documentation/Test/Foo/README.md) |
+| [FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md) | |
 | [FooCollection](Roslynator/Documentation/Test/FooCollection/README.md) | |
 | [FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md) | |
 | [FooEvent](Roslynator/Documentation/Test/FooEvent/README.md) | |
 | [FooExtensions](Roslynator/Documentation/Test/FooExtensions/README.md) | fx |
-| [MyAttribute](Roslynator/Documentation/Test/MyAttribute/README.md) | |
 
 ### Interfaces
 
