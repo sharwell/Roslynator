@@ -13,10 +13,9 @@ namespace Roslynator.Documentation.Markdown
 
         public MarkdownDocumentationWriter(
             SymbolDocumentationModel symbolModel,
-            SymbolDocumentationModel directoryModel,
             DocumentationUriProvider uriProvider,
             DocumentationOptions options = null,
-            DocumentationResources resources = null) : base(symbolModel, directoryModel, uriProvider, options, resources)
+            DocumentationResources resources = null) : base(symbolModel, uriProvider, options, resources)
         {
             _writer = MarkdownWriter.Create(new StringBuilder());
         }
@@ -122,6 +121,7 @@ namespace Roslynator.Documentation.Markdown
                 _writer.Close();
         }
 
+        //TODO: 
         public override string GetLanguageIdentifier(string language)
         {
             switch (language)

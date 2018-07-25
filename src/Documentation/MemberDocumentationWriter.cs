@@ -71,7 +71,7 @@ namespace Roslynator.Documentation
                     header1: Resources.GetName(symbol),
                     header2: Resources.SummaryTitle,
                     format: FormatProvider.ConstructorFormat,
-                    additionalOptions: SymbolDisplayAdditionalOptions.UseItemProperty | SymbolDisplayAdditionalOptions.UseOperatorName,
+                    additionalOptions: SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName,
                     addLink: false);
 
                 foreach (ISymbol symbol2 in symbols)
@@ -79,7 +79,7 @@ namespace Roslynator.Documentation
                     BaseHeadingLevel++;
 
                     Writer.WriteStartHeading(1);
-                    Writer.WriteString(symbol2.ToDisplayString(Format, SymbolDisplayAdditionalOptions.UseItemProperty | SymbolDisplayAdditionalOptions.UseOperatorName));
+                    Writer.WriteString(symbol2.ToDisplayString(Format, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
                     Writer.WriteEndHeading();
                     WriteContent(symbol2);
 
@@ -96,7 +96,7 @@ namespace Roslynator.Documentation
                 ? FormatProvider.OverloadedMemberTitleFormat
                 : FormatProvider.MemberTitleFormat;
 
-            Writer.WriteString(symbol.ToDisplayString(format, SymbolDisplayAdditionalOptions.UseItemProperty | SymbolDisplayAdditionalOptions.UseOperatorName));
+            Writer.WriteString(symbol.ToDisplayString(format, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
             Writer.WriteSpace();
             Writer.WriteString(Resources.GetName(symbol));
             Writer.WriteEndHeading();
@@ -105,7 +105,7 @@ namespace Roslynator.Documentation
         public virtual void WriteImplements(ISymbol symbol)
         {
             using (IEnumerator<ISymbol> en = symbol.FindImplementedInterfaceMembers()
-                .OrderBy(f => f.ToDisplayString(FormatProvider.MemberImplementsFormat, SymbolDisplayAdditionalOptions.UseItemProperty))
+                .OrderBy(f => f.ToDisplayString(FormatProvider.MemberImplementsFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName))
                 .GetEnumerator())
             {
                 if (en.MoveNext())
@@ -117,7 +117,7 @@ namespace Roslynator.Documentation
                     do
                     {
                         Writer.WriteStartBulletItem();
-                        Writer.WriteLink(en.Current, FormatProvider.MemberImplementsFormat, SymbolDisplayAdditionalOptions.UseItemProperty);
+                        Writer.WriteLink(en.Current, FormatProvider.MemberImplementsFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName);
                         Writer.WriteEndBulletItem();
                     }
                     while (en.MoveNext());

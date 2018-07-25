@@ -9,24 +9,28 @@ namespace Roslynator.Documentation
 {
     public abstract class DocumentationUriProvider
     {
-        protected DocumentationUriProvider(IEnumerable<ExternalDocumentationUrlProvider> externalProviders = null)
+        protected DocumentationUriProvider(IEnumerable<ExternalUriProvider> externalProviders = null)
         {
             ExternalProviders = (externalProviders != null)
                 ? ImmutableArray.CreateRange(externalProviders)
-                : ImmutableArray<ExternalDocumentationUrlProvider>.Empty;
+                : ImmutableArray<ExternalUriProvider>.Empty;
         }
 
-        public static DocumentationUriProvider GitHub { get; } = new GitHubDocumentationUriProvider(ImmutableArray.Create(ExternalDocumentationUrlProvider.MicrosoftDocs));
+        public static DocumentationUriProvider GitHubProvider { get; } = new GitHubDocumentationUriProvider(ImmutableArray.Create(ExternalUriProvider.MicrosoftDocs));
 
-        public ImmutableArray<ExternalDocumentationUrlProvider> ExternalProviders { get; }
+        public ImmutableArray<ExternalUriProvider> ExternalProviders { get; }
 
+        //TODO: rename DirectoryModel
+        public SymbolDocumentationModel DirectoryModel { get; set; }
+
+        //TODO: getdocumenturl
         public abstract string GetFilePath(DocumentationKind kind, SymbolDocumentationModel symbolModel);
 
-        public abstract DocumentationUrlInfo GetLocalUrl(SymbolDocumentationModel symbolModel, SymbolDocumentationModel directoryModel);
+        public abstract DocumentationUrlInfo GetLocalUrl(SymbolDocumentationModel symbolModel);
 
         public DocumentationUrlInfo GetExternalUrl(SymbolDocumentationModel symbolModel)
         {
-            foreach (ExternalDocumentationUrlProvider provider in ExternalProviders)
+            foreach (ExternalUriProvider provider in ExternalProviders)
             {
                 DocumentationUrlInfo urlInfo = provider.CreateUrl(symbolModel);
 

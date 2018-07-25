@@ -82,7 +82,7 @@ namespace Roslynator.Documentation
                 formatConstraints: options.FormatConstraints,
                 maxDerivedItems: (options.MaxDerivedItems == -1) ? DocumentationOptions.Default.MaxDerivedItems : options.MaxDerivedItems);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUriProvider.GitHub, documentationOptions);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUriProvider.GitHubProvider, documentationOptions);
 
             string directoryPath = options.OutputDirectory;
 

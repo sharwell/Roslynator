@@ -10,8 +10,7 @@ namespace Roslynator.Documentation
 {
     internal static class EnumUtility
     {
-        public static (EnumFieldInfo singleField, ImmutableArray<EnumFieldInfo> multipleFields)
-            GetConstituentFields(object value, INamedTypeSymbol enumType)
+        public static OneOrMany<EnumFieldInfo> GetConstituentFields(object value, INamedTypeSymbol enumType)
         {
             ImmutableArray<EnumFieldInfo> fields = GetFields(enumType);
 
@@ -20,14 +19,13 @@ namespace Roslynator.Documentation
             if (!enumType.HasAttribute(MetadataNames.System_FlagsAttribute)
                 || valueAsULong == 0)
             {
-                return (FindField(fields, valueAsULong), default);
+                return OneOrMany.Create(FindField(fields, valueAsULong));
             }
 
             return GetConstituentFields(valueAsULong, fields);
         }
 
-        public static (EnumFieldInfo singleField, ImmutableArray<EnumFieldInfo> multipleFields)
-            GetConstituentFields(ulong value, ImmutableArray<EnumFieldInfo> fields)
+        public static OneOrMany<EnumFieldInfo> GetConstituentFields(ulong value, ImmutableArray<EnumFieldInfo> fields)
         {
             ImmutableArray<EnumFieldInfo>.Builder builder = null;
 
@@ -43,7 +41,7 @@ namespace Roslynator.Documentation
                     if (builder == null)
                     {
                         if (result == val)
-                            return (fields[i], default);
+                            return OneOrMany.Create(fields[i]);
 
                         builder = ImmutableArray.CreateBuilder<EnumFieldInfo>();
                     }
@@ -62,10 +60,17 @@ namespace Roslynator.Documentation
             {
                 builder.Reverse();
 
-                return (default, builder.ToImmutableArray());
+                return OneOrMany.Create(builder.ToImmutableArray());
             }
 
-            return (default, default);
+            return default;
+        }
+
+        public static ImmutableArray<EnumFieldInfo> GetMinimalConstituentFields(IFieldSymbol fieldSymbol, ImmutableArray<EnumFieldInfo> fields)
+        {
+            ulong value = GetValueAsUInt64(fieldSymbol.ConstantValue, fieldSymbol.ContainingType);
+
+            return GetMinimalConstituentFields(value, fields);
         }
 
         public static ImmutableArray<EnumFieldInfo> GetMinimalConstituentFields(ulong value, ImmutableArray<EnumFieldInfo> fields)

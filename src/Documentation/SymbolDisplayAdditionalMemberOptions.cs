@@ -4,12 +4,11 @@ using System;
 
 namespace Roslynator.Documentation
 {
-    //TODO: SymbolDisplayAdditionalMemberOptions
     [Flags]
-    public enum SymbolDisplayAdditionalOptions
+    public enum SymbolDisplayAdditionalMemberOptions
     {
         None = 0,
-        UseItemProperty = 1,
+        UseItemPropertyName = 1,
         UseOperatorName = 2,
     }
 }

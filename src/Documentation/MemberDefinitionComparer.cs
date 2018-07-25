@@ -32,6 +32,7 @@ namespace Roslynator.Documentation
             if (result != 0)
                 return result;
 
+            //TODO: SymbolDisplayPartComparer
             return string.Compare(
                 x.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
                 y.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),

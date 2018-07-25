@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
@@ -18,7 +17,7 @@ namespace Roslynator.Documentation
             Func<INamedTypeSymbol, bool> attributePredicate = null,
             bool formatBaseList = false,
             bool formatConstraints = false,
-            bool useNameOnlyIfPossible = false)
+            bool tryUseNameOnly = false)
         {
             ImmutableArray<SymbolDisplayPart> parts;
 
@@ -94,10 +93,10 @@ namespace Roslynator.Documentation
 
             foreach (AttributeData attributeData in attributes
                 .Where(f => attributePredicate(f.AttributeClass))
-                .OrderBy(f => ToDisplayString(f.AttributeClass, containingNamespace, useNameOnlyIfPossible)))
+                .OrderBy(f => ToDisplayString(f.AttributeClass, containingNamespace, tryUseNameOnly)))
             {
                 builder.AddPunctuation("[");
-                builder.AddDisplayParts(attributeData.AttributeClass, containingNamespace, useNameOnlyIfPossible);
+                builder.AddDisplayParts(attributeData.AttributeClass, containingNamespace, tryUseNameOnly);
                 builder.AddPunctuation("]");
                 builder.AddLineBreak();
             }
@@ -126,7 +125,7 @@ namespace Roslynator.Documentation
 
                 if (baseType != null)
                 {
-                    builder.AddDisplayParts(baseType, containingNamespace, useNameOnlyIfPossible);
+                    builder.AddDisplayParts(baseType, containingNamespace, tryUseNameOnly);
 
                     if (interfaces.Any())
                     {
@@ -157,8 +156,8 @@ namespace Roslynator.Documentation
                     }
 
                     return string.CompareOrdinal(
-                        ToDisplayString(x, containingNamespace, useNameOnlyIfPossible),
-                        ToDisplayString(y, containingNamespace, useNameOnlyIfPossible));
+                        ToDisplayString(x, containingNamespace, tryUseNameOnly),
+                        ToDisplayString(y, containingNamespace, tryUseNameOnly));
                 });
 
                 ImmutableArray<INamedTypeSymbol>.Enumerator en = interfaces.GetEnumerator();
@@ -167,7 +166,7 @@ namespace Roslynator.Documentation
                 {
                     while (true)
                     {
-                        builder.AddDisplayParts(en.Current, containingNamespace, useNameOnlyIfPossible);
+                        builder.AddDisplayParts(en.Current, containingNamespace, tryUseNameOnly);
 
                         if (en.MoveNext())
                         {
@@ -226,7 +225,7 @@ namespace Roslynator.Documentation
                     else if (parts[i].IsTypeName()
                         && parts[i].Symbol is INamedTypeSymbol namedTypeSymbol)
                     {
-                        builder.AddDisplayParts(namedTypeSymbol, containingNamespace, useNameOnlyIfPossible);
+                        builder.AddDisplayParts(namedTypeSymbol, containingNamespace, tryUseNameOnly);
                     }
                     else
                     {

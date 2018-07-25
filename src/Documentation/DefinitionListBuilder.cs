@@ -23,15 +23,8 @@ namespace Roslynator.Documentation
 
         private static readonly SymbolDisplayFormat _enumFieldFormat = SymbolDisplayFormats.FullDefinition;
 
-        private static readonly SymbolDisplayFormat _nameAndContainingNamesAndNameSpacesFormat = new SymbolDisplayFormat(
-            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
-            genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters);
-
-        private static readonly SymbolDisplayFormat _enumFieldValueFormat = new SymbolDisplayFormat(
-            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
-            memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
-
         private bool _pendingIndentation;
+        private INamespaceSymbol _currentNamespace;
 
         public DefinitionListBuilder(StringBuilder stringBuilder = null)
         {
@@ -48,8 +41,6 @@ namespace Roslynator.Documentation
 
         public int Length => StringBuilder.Length;
 
-        private INamespaceSymbol CurrentNamespace { get; set; }
-
         private HashSet<INamespaceSymbol> Namespaces { get; } = new HashSet<INamespaceSymbol>(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
         public void AppendSymbols(IEnumerable<INamedTypeSymbol> typeSymbols)
@@ -62,9 +53,9 @@ namespace Roslynator.Documentation
 
                 if (namespaceSymbol.IsGlobalNamespace)
                 {
-                    CurrentNamespace = namespaceSymbol;
+                    _currentNamespace = namespaceSymbol;
                     AppendTypes(typeSymbols.Where(f => f.ContainingNamespace.IsGlobalNamespace));
-                    CurrentNamespace = null;
+                    _currentNamespace = null;
                 }
                 else
                 {
@@ -74,9 +65,9 @@ namespace Roslynator.Documentation
 
                     IncreaseIndentation();
 
-                    CurrentNamespace = namespaceSymbol;
+                    _currentNamespace = namespaceSymbol;
                     AppendTypes(grouping);
-                    CurrentNamespace = null;
+                    _currentNamespace = null;
 
                     DecreaseIndentation();
 
@@ -89,7 +80,7 @@ namespace Roslynator.Documentation
             foreach (INamespaceSymbol namespaceSymbol in Namespaces.OrderBy(f => f, NamespaceDefinitionComparer.Instance))
             {
                 sb.Append("using ");
-                sb.Append(namespaceSymbol.ToDisplayString(_nameAndContainingNamesAndNameSpacesFormat));
+                sb.Append(namespaceSymbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters));
                 sb.AppendLine(";");
             }
 
@@ -307,7 +298,7 @@ namespace Roslynator.Documentation
                 .OrderBy(f => f.AttributeClass, TypeDefinitionComparer.Instance))
             {
                 Append("[");
-                AppendSymbol(attributeData.AttributeClass, _nameAndContainingNamesAndNameSpacesFormat);
+                AppendSymbol(attributeData.AttributeClass, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
 
                 ImmutableArray<TypedConstant> constructorArguments = attributeData.ConstructorArguments;
 
@@ -406,38 +397,30 @@ namespace Roslynator.Documentation
                         }
                     case TypedConstantKind.Enum:
                         {
-                            (EnumFieldInfo singleField, ImmutableArray<EnumFieldInfo> multipleFields)
-                                = EnumUtility.GetConstituentFields(typedConstant.Value, (INamedTypeSymbol)typedConstant.Type);
+                            OneOrMany<EnumFieldInfo> oneOrMany = EnumUtility.GetConstituentFields(typedConstant.Value, (INamedTypeSymbol)typedConstant.Type);
 
-                            if (!singleField.IsDefault)
-                            {
-                                AppendSymbol(singleField.Symbol, _enumFieldValueFormat);
-                            }
-                            else if (!multipleFields.IsDefault)
-                            {
-                                ImmutableArray<EnumFieldInfo>.Enumerator en = multipleFields.GetEnumerator();
+                            OneOrMany<EnumFieldInfo>.Enumerator en = oneOrMany.GetEnumerator();
 
-                                if (en.MoveNext())
+                            if (en.MoveNext())
+                            {
+                                while (true)
                                 {
-                                    while (true)
-                                    {
-                                        AppendSymbol(en.Current.Symbol, _enumFieldValueFormat);
+                                    AppendSymbol(en.Current.Symbol, SymbolDisplayFormats.EnumFieldFullName);
 
-                                        if (en.MoveNext())
-                                        {
-                                            Append(" | ");
-                                        }
-                                        else
-                                        {
-                                            break;
-                                        }
+                                    if (en.MoveNext())
+                                    {
+                                        Append(" | ");
+                                    }
+                                    else
+                                    {
+                                        break;
                                     }
                                 }
                             }
                             else
                             {
                                 Append("(");
-                                AppendSymbol((INamedTypeSymbol)typedConstant.Type, _nameAndContainingNamesAndNameSpacesFormat);
+                                AppendSymbol((INamedTypeSymbol)typedConstant.Type, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
                                 Append(")");
                                 Append(typedConstant.Value);
                             }
@@ -447,7 +430,7 @@ namespace Roslynator.Documentation
                     case TypedConstantKind.Type:
                         {
                             Append("typeof(");
-                            AppendSymbol((ISymbol)typedConstant.Value, _nameAndContainingNamesAndNameSpacesFormat);
+                            AppendSymbol((ISymbol)typedConstant.Value, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
                             Append(")");
 
                             break;
@@ -456,7 +439,7 @@ namespace Roslynator.Documentation
                         {
                             var arrayType = (IArrayTypeSymbol)typedConstant.Type;
                             Append("new ");
-                            AppendSymbol(arrayType.ElementType, _nameAndContainingNamesAndNameSpacesFormat);
+                            AppendSymbol(arrayType.ElementType, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
                             Append("[] { ");
 
                             ImmutableArray<TypedConstant>.Enumerator en = typedConstant.Values.GetEnumerator();
@@ -526,7 +509,7 @@ namespace Roslynator.Documentation
 
             bool ShouldAddNamespace(INamespaceSymbol containingNamespace)
             {
-                INamespaceSymbol n = CurrentNamespace;
+                INamespaceSymbol n = _currentNamespace;
 
                 do
                 {

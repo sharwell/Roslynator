@@ -10,6 +10,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: add TypeSymbolDocumentationModel
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public sealed class SymbolDocumentationModel
     {
@@ -39,11 +40,6 @@ namespace Roslynator.Documentation
         internal ImmutableArray<string> NameAndBaseNamesAndNamespaceNames { get; }
 
         internal DocumentationModel DocumentationModel { get; }
-
-        public bool IsExternal
-        {
-            get { return DocumentationModel.IsExternal(Symbol); }
-        }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private string DebuggerDisplay
@@ -125,7 +121,7 @@ namespace Roslynator.Documentation
                 if (explicitImplementation != null)
                 {
                     string name = explicitImplementation
-                        .ToDisplayParts(SymbolDisplayFormats.ExplicitImplementationFullName, SymbolDisplayAdditionalOptions.UseItemProperty)
+                        .ToDisplayParts(SymbolDisplayFormats.ExplicitImplementationFullName, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName)
                         .Where(part => part.Kind != SymbolDisplayPartKind.Space)
                         .Select(part => (part.IsPunctuation()) ? part.WithText("-") : part)
                         .ToImmutableArray()

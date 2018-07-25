@@ -9,9 +9,9 @@ using Microsoft.CodeAnalysis;
 namespace Roslynator.Documentation
 {
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
-    public abstract class ExternalDocumentationUrlProvider
+    public abstract class ExternalUriProvider
     {
-        public static ExternalDocumentationUrlProvider MicrosoftDocs { get; } = new MicrosoftDocsUrlProvider();
+        public static ExternalUriProvider MicrosoftDocs { get; } = new MicrosoftDocsUriProvider();
 
         public abstract string Name { get; }
 
@@ -20,7 +20,7 @@ namespace Roslynator.Documentation
 
         public abstract DocumentationUrlInfo CreateUrl(SymbolDocumentationModel symbolModel);
 
-        private class MicrosoftDocsUrlProvider : ExternalDocumentationUrlProvider
+        private class MicrosoftDocsUriProvider : ExternalUriProvider
         {
             public override string Name => "Microsoft Docs";
 

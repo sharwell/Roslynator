@@ -2,8 +2,8 @@
 
 using System;
 using System.Collections.Generic;
-using Microsoft.CodeAnalysis;
 using System.Collections.Immutable;
+using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
@@ -40,7 +40,6 @@ namespace Roslynator.Documentation
                         var a = (IMethodSymbol)x;
                         var b = (IMethodSymbol)y;
 
-                        //TODO: constraints?
                         return a.MethodKind == MethodKind.Ordinary
                             && b.MethodKind == MethodKind.Ordinary
                             && a.TypeParameters.Length == b.TypeParameters.Length
@@ -61,7 +60,6 @@ namespace Roslynator.Documentation
             }
         }
 
-        //TODO: custom modifiers
         private static bool ParametersEqual(ImmutableArray<IParameterSymbol> parameters1, ImmutableArray<IParameterSymbol> parameters2)
         {
             int length = parameters1.Length;
@@ -71,13 +69,7 @@ namespace Roslynator.Documentation
 
             for (int i = 0; i < length; i++)
             {
-                IParameterSymbol parameter1 = parameters1[i];
-                IParameterSymbol parameter2 = parameters2[i];
-
-                if (parameter1.RefKind != parameter2.RefKind)
-                    return false;
-
-                if (parameter1.Type != parameter2.Type)
+                if (!ParameterEqualityComparer.Instance.Equals(parameters1[i], parameters2[i]))
                     return false;
             }
 
@@ -86,8 +78,55 @@ namespace Roslynator.Documentation
 
         public override int GetHashCode(ISymbol obj)
         {
-            //TODO: gethashcode
-            return 0;
+            SymbolKind kind = obj.Kind;
+
+            int hashCode = Hash.Combine(StringComparer.Ordinal.GetHashCode(obj.Name), (int)kind);
+
+            if (kind == SymbolKind.Method)
+            {
+                var methodSymbol = (IMethodSymbol)obj;
+
+                return Hash.Combine((int)methodSymbol.MethodKind,
+                    Hash.Combine(methodSymbol.TypeParameters.Length,
+                    Hash.Combine(Hash.CombineValues(methodSymbol.Parameters, ParameterEqualityComparer.Instance), hashCode)));
+            }
+            else if (kind == SymbolKind.Property)
+            {
+                var propertySymbol = (IPropertySymbol)obj;
+
+                return Hash.Combine(propertySymbol.IsIndexer,
+                    Hash.Combine(Hash.CombineValues(propertySymbol.Parameters, ParameterEqualityComparer.Instance), hashCode));
+            }
+
+            return hashCode;
+        }
+
+        private class ParameterEqualityComparer : EqualityComparer<IParameterSymbol>
+        {
+            public static ParameterEqualityComparer Instance { get; } = new ParameterEqualityComparer();
+
+            public override bool Equals(IParameterSymbol x, IParameterSymbol y)
+            {
+                if (object.ReferenceEquals(x, y))
+                    return true;
+
+                if (x == null)
+                    return false;
+
+                if (y == null)
+                    return false;
+
+                return x.RefKind == y.RefKind
+                    && x.Type == y.Type;
+            }
+
+            public override int GetHashCode(IParameterSymbol obj)
+            {
+                if (obj == null)
+                    return 0;
+
+                return Hash.Combine(obj.Type, (int)obj.RefKind);
+            }
         }
     }
 }

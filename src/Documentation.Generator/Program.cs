@@ -34,7 +34,7 @@ namespace Roslynator.Documentation
                 formatBaseList: true,
                 formatConstraints: true);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUriProvider.GitHub, options);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUriProvider.GitHubProvider, options);
 
             string defintionList = DefinitionListGenerator.GenerateAsync(documentationModel).Result;
 

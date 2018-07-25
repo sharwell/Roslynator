@@ -33,6 +33,7 @@ namespace Roslynator.Documentation
             return new XmlDocumentation(document);
         }
 
+        //TODO: TryGet
         public SymbolXmlDocumentation GetDocumentation(string commentId)
         {
             if (!_symbolXmlDocumentations.TryGetValue(commentId, out SymbolXmlDocumentation documentation))

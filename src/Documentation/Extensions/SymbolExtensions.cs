@@ -41,7 +41,7 @@ namespace Roslynator.Documentation
         {
             if (includeInherited)
             {
-                return GetMembersIncludingInherited(typeSymbol, predicate);
+                return GetMembersIncludingInherited();
             }
             else if (predicate != null)
             {
@@ -52,56 +52,56 @@ namespace Roslynator.Documentation
             }
 
             return typeSymbol.GetMembers();
-        }
 
-        private static ImmutableArray<ISymbol> GetMembersIncludingInherited(ITypeSymbol typeSymbol, Func<ISymbol, bool> predicate = null)
-        {
-            var symbols = new HashSet<ISymbol>(MemberDefinitionEqualityComparer.Instance);
-
-            HashSet<ISymbol> overriddenSymbols = null;
-
-            foreach (ISymbol symbol in GetMembers(typeSymbol, predicate: predicate))
+            ImmutableArray<ISymbol> GetMembersIncludingInherited()
             {
-                ISymbol overriddenSymbol = symbol.OverriddenSymbol();
+                var symbols = new HashSet<ISymbol>(MemberDefinitionEqualityComparer.Instance);
 
-                if (overriddenSymbol != null)
+                HashSet<ISymbol> overriddenSymbols = null;
+
+                foreach (ISymbol symbol in GetMembers(typeSymbol, predicate: predicate))
                 {
-                    (overriddenSymbols ?? (overriddenSymbols = new HashSet<ISymbol>())).Add(overriddenSymbol);
+                    ISymbol overriddenSymbol = symbol.OverriddenSymbol();
+
+                    if (overriddenSymbol != null)
+                    {
+                        (overriddenSymbols ?? (overriddenSymbols = new HashSet<ISymbol>())).Add(overriddenSymbol);
+                    }
+
+                    symbols.Add(symbol);
                 }
 
-                symbols.Add(symbol);
-            }
+                INamedTypeSymbol baseType = typeSymbol.BaseType;
 
-            INamedTypeSymbol baseType = typeSymbol.BaseType;
-
-            while (baseType != null)
-            {
-                bool areInternalsVisible = typeSymbol.ContainingAssembly == baseType.ContainingAssembly
-                    || baseType.ContainingAssembly.GivesAccessTo(typeSymbol.ContainingAssembly);
-
-                foreach (ISymbol symbol in baseType.GetMembers())
+                while (baseType != null)
                 {
-                    if (!symbol.IsStatic
-                        && symbol.DeclaredAccessibility != Accessibility.Private
-                        && (predicate == null || predicate(symbol))
-                        && (symbol.DeclaredAccessibility != Accessibility.Internal || areInternalsVisible))
+                    bool areInternalsVisible = typeSymbol.ContainingAssembly == baseType.ContainingAssembly
+                        || baseType.ContainingAssembly.GivesAccessTo(typeSymbol.ContainingAssembly);
+
+                    foreach (ISymbol symbol in baseType.GetMembers())
                     {
-                        if (overriddenSymbols?.Remove(symbol) != true)
-                            symbols.Add(symbol);
-
-                        ISymbol overriddenSymbol = symbol.OverriddenSymbol();
-
-                        if (overriddenSymbol != null)
+                        if (!symbol.IsStatic
+                            && symbol.DeclaredAccessibility != Accessibility.Private
+                            && (predicate == null || predicate(symbol))
+                            && (symbol.DeclaredAccessibility != Accessibility.Internal || areInternalsVisible))
                         {
-                            (overriddenSymbols ?? (overriddenSymbols = new HashSet<ISymbol>())).Add(overriddenSymbol);
+                            if (overriddenSymbols?.Remove(symbol) != true)
+                                symbols.Add(symbol);
+
+                            ISymbol overriddenSymbol = symbol.OverriddenSymbol();
+
+                            if (overriddenSymbol != null)
+                            {
+                                (overriddenSymbols ?? (overriddenSymbols = new HashSet<ISymbol>())).Add(overriddenSymbol);
+                            }
                         }
                     }
+
+                    baseType = baseType.BaseType;
                 }
 
-                baseType = baseType.BaseType;
+                return symbols.ToImmutableArray();
             }
-
-            return symbols.ToImmutableArray();
         }
 
         public static int GetArity(this ISymbol symbol)

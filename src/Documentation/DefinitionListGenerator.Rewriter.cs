@@ -14,10 +14,6 @@ namespace Roslynator.Documentation
     {
         private class Rewriter : CSharpSyntaxRewriter
         {
-            private static readonly SymbolDisplayFormat _enumFieldValueFormat = new SymbolDisplayFormat(
-                typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
-                memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
-
             private static readonly SyntaxAnnotation[] _simplifierAnnotationAsArray = new SyntaxAnnotation[] { Simplifier.Annotation };
 
             private ITypeSymbol _enumTypeSymbol;
@@ -100,7 +96,7 @@ namespace Roslynator.Documentation
                     && !node.IsParentKind(SyntaxKind.SimpleMemberAccessExpression))
                 {
                     MemberAccessExpressionSyntax newNode = CSharpFactory.SimpleMemberAccessExpression(
-                        SyntaxFactory.ParseExpression(_enumTypeSymbol.ToDisplayString(_enumFieldValueFormat)),
+                        SyntaxFactory.ParseExpression(_enumTypeSymbol.ToDisplayString(SymbolDisplayFormats.EnumFieldFullName)),
                         node);
 
                     return newNode.WithAdditionalAnnotations(_simplifierAnnotationAsArray);

@@ -9,6 +9,7 @@ using Roslynator.CSharp;
 
 namespace Roslynator.Documentation
 {
+    //TODO: 
     public class SymbolXmlDocumentation
     {
         private readonly XElement _element;
@@ -151,7 +152,7 @@ namespace Roslynator.Documentation
 
                                             if (symbol != null)
                                             {
-                                                writer.WriteLink(symbol, writer.FormatProvider.CrefFormat, SymbolDisplayAdditionalOptions.UseItemProperty | SymbolDisplayAdditionalOptions.UseOperatorName);
+                                                writer.WriteLink(symbol, writer.FormatProvider.CrefFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
                                             }
                                             else
                                             {
@@ -427,7 +428,7 @@ namespace Roslynator.Documentation
 
                     do
                     {
-                        writer.WriteBulletItemLink(en.Current, writer.FormatProvider.CrefFormat, SymbolDisplayAdditionalOptions.UseItemProperty | SymbolDisplayAdditionalOptions.UseOperatorName);
+                        writer.WriteBulletItemLink(en.Current, writer.FormatProvider.CrefFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
                     }
                     while (en.MoveNext());
 

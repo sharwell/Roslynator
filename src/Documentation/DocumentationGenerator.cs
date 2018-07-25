@@ -42,7 +42,9 @@ namespace Roslynator.Documentation
 
         private DocumentationWriter CreateWriter(SymbolDocumentationModel symbolModel, SymbolDocumentationModel directoryModel)
         {
-            DocumentationWriter writer = CreateWriterCore(symbolModel, directoryModel);
+            UriProvider.DirectoryModel = directoryModel;
+
+            DocumentationWriter writer = CreateWriterCore(symbolModel);
 
             writer.CanCreateMemberLocalUrl = Options.IsEnabled(DocumentationParts.Member);
             writer.CanCreateTypeLocalUrl = Options.IsEnabled(DocumentationParts.Type);
@@ -50,7 +52,7 @@ namespace Roslynator.Documentation
             return writer;
         }
 
-        protected abstract DocumentationWriter CreateWriterCore(SymbolDocumentationModel symbolModel, SymbolDocumentationModel directoryModel);
+        protected abstract DocumentationWriter CreateWriterCore(SymbolDocumentationModel symbolModel);
 
         internal SymbolDocumentationModel GetSymbolModel(ISymbol symbol)
         {
@@ -143,7 +145,7 @@ namespace Roslynator.Documentation
             }
 
             if ((documentationParts & DocumentationParts.ExtendedExternalTypes) != 0
-                && Options.IsEnabled(RootDocumentationParts.ExtendedTypesLink))
+                && Options.IsEnabled(RootDocumentationParts.ExtendedExternalTypesLink))
             {
                 writer.WriteStartBulletItem();
                 writer.WriteLink(Resources.ExtendedExternalTypesTitle, WellKnownNames.ExtendedExternalTypesFileName);

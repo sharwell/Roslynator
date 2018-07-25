@@ -8,6 +8,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: comparery přesunout
     public class DocumentationOptions
     {
         private ImmutableArray<NamespaceDocumentationParts> _enabledAndSortedNamespaceParts;

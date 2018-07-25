@@ -4,6 +4,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: promazat
     public abstract class SymbolDisplayFormatProvider
     {
         public static SymbolDisplayFormatProvider Default { get; } = new DefaultSymbolDisplayFormatProvider();
@@ -19,10 +20,6 @@ namespace Roslynator.Documentation
         public abstract SymbolDisplayFormat TypeFormat { get; }
 
         public abstract SymbolDisplayFormat DefinitionFormat { get; }
-
-        public abstract SymbolDisplayFormat TypeParameterFormat { get; }
-
-        public abstract SymbolDisplayFormat ParameterFormat { get; }
 
         public abstract SymbolDisplayFormat InheritanceFormat { get; }
 
@@ -74,16 +71,6 @@ namespace Roslynator.Documentation
             public override SymbolDisplayFormat DefinitionFormat
             {
                 get { return SymbolDisplayFormats.FullDefinition; }
-            }
-
-            public override SymbolDisplayFormat TypeParameterFormat
-            {
-                get { return SymbolDisplayFormats.Default; }
-            }
-
-            public override SymbolDisplayFormat ParameterFormat
-            {
-                get { return SymbolDisplayFormats.Default; }
             }
 
             public override SymbolDisplayFormat InheritanceFormat

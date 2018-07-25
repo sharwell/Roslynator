@@ -6,12 +6,6 @@ namespace Roslynator.Documentation
 {
     internal readonly struct EnumFieldInfo
     {
-        public EnumFieldInfo(IFieldSymbol symbol)
-        {
-            Symbol = symbol;
-            Value = EnumUtility.GetValueAsUInt64(symbol.ConstantValue, symbol.ContainingType);
-        }
-
         public EnumFieldInfo(IFieldSymbol symbol, ulong value)
         {
             Symbol = symbol;

@@ -12,14 +12,14 @@ namespace Roslynator.Documentation
 {
     internal static class SymbolDisplayFormatExtensions
     {
-        public static string ToDisplayString(this ISymbol symbol, SymbolDisplayFormat format, SymbolDisplayAdditionalOptions additionalOptions)
+        public static string ToDisplayString(this ISymbol symbol, SymbolDisplayFormat format, SymbolDisplayAdditionalMemberOptions additionalOptions)
         {
             return symbol.ToDisplayParts(format, additionalOptions).ToDisplayString();
         }
 
-        public static ImmutableArray<SymbolDisplayPart> ToDisplayParts(this ISymbol symbol, SymbolDisplayFormat format, SymbolDisplayAdditionalOptions additionalOptions)
+        public static ImmutableArray<SymbolDisplayPart> ToDisplayParts(this ISymbol symbol, SymbolDisplayFormat format, SymbolDisplayAdditionalMemberOptions additionalOptions)
         {
-            if (additionalOptions == SymbolDisplayAdditionalOptions.None)
+            if (additionalOptions == SymbolDisplayAdditionalMemberOptions.None)
                 return symbol.ToDisplayParts(format);
 
             ImmutableArray<SymbolDisplayPart> parts = symbol.ToDisplayParts(format);
@@ -37,7 +37,7 @@ namespace Roslynator.Documentation
                             {
                                 case "this":
                                     {
-                                        if ((additionalOptions & SymbolDisplayAdditionalOptions.UseItemProperty) != 0
+                                        if ((additionalOptions & SymbolDisplayAdditionalMemberOptions.UseItemPropertyName) != 0
                                             && (symbol as IPropertySymbol)?.IsIndexer == true)
                                         {
                                             parts = parts.Replace(part, SymbolDisplayPartFactory.PropertyName("Item", part.Symbol));
@@ -47,7 +47,7 @@ namespace Roslynator.Documentation
                                     }
                                 case "operator":
                                     {
-                                        if ((additionalOptions & SymbolDisplayAdditionalOptions.UseOperatorName) != 0
+                                        if ((additionalOptions & SymbolDisplayAdditionalMemberOptions.UseOperatorName) != 0
                                             && symbol is IMethodSymbol methodSymbol
                                             && methodSymbol.MethodKind == MethodKind.UserDefinedOperator)
                                         {
@@ -71,7 +71,7 @@ namespace Roslynator.Documentation
                                 case "implicit":
                                 case "explicit":
                                     {
-                                        if ((additionalOptions & SymbolDisplayAdditionalOptions.UseOperatorName) != 0
+                                        if ((additionalOptions & SymbolDisplayAdditionalMemberOptions.UseOperatorName) != 0
                                             && symbol is IMethodSymbol methodSymbol
                                             && methodSymbol.MethodKind == MethodKind.Conversion)
                                         {

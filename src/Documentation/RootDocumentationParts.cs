@@ -9,9 +9,9 @@ namespace Roslynator.Documentation
     {
         None = 0,
         ObjectModelLink = 1,
-        ExtendedTypesLink = 2,
+        ExtendedExternalTypesLink = 2,
         NamespaceList = 4,
         Namespaces = 8,
-        All = ObjectModelLink | ExtendedTypesLink | NamespaceList | Namespaces,
+        All = ObjectModelLink | ExtendedExternalTypesLink | NamespaceList | Namespaces,
     }
 }

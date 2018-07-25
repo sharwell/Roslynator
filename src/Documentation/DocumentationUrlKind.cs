@@ -6,6 +6,6 @@ namespace Roslynator.Documentation
     {
         None = 0,
         Local = 1,
-        External = 2
+        External = 2,
     }
 }
