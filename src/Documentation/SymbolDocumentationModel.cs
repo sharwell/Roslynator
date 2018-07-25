@@ -11,12 +11,12 @@ using Microsoft.CodeAnalysis;
 namespace Roslynator.Documentation
 {
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
-    public sealed class SymbolDocumentationInfo
+    public sealed class SymbolDocumentationModel
     {
         private ImmutableArray<ISymbol> _members;
         private ImmutableArray<ISymbol> _membersIncludingInherited;
 
-        private SymbolDocumentationInfo(
+        private SymbolDocumentationModel(
             ISymbol symbol,
             string commentId,
             ImmutableArray<ISymbol> symbolAndBaseTypesAndNamespaces,
@@ -88,14 +88,9 @@ namespace Roslynator.Documentation
             }
         }
 
-        public ImmutableArray<ISymbol> GetMembers(bool includeInherited = false)
+        internal static SymbolDocumentationModel Create(DocumentationModel compilation)
         {
-            return (includeInherited) ? MembersIncludingInherited : Members;
-        }
-
-        internal static SymbolDocumentationInfo Create(DocumentationModel compilation)
-        {
-            return new SymbolDocumentationInfo(
+            return new SymbolDocumentationModel(
                 symbol: null,
                 commentId: null,
                 symbolAndBaseTypesAndNamespaces: ImmutableArray<ISymbol>.Empty,
@@ -103,7 +98,7 @@ namespace Roslynator.Documentation
                 documentationModel: compilation);
         }
 
-        public static SymbolDocumentationInfo Create(ISymbol symbol, DocumentationModel compilation)
+        public static SymbolDocumentationModel Create(ISymbol symbol, DocumentationModel compilation)
         {
             ImmutableArray<ISymbol>.Builder symbols = ImmutableArray.CreateBuilder<ISymbol>();
             ImmutableArray<string>.Builder names = ImmutableArray.CreateBuilder<string>();
@@ -194,12 +189,17 @@ namespace Roslynator.Documentation
                 }
             }
 
-            return new SymbolDocumentationInfo(
+            return new SymbolDocumentationModel(
                 symbol,
                 symbol.GetDocumentationCommentId(),
                 symbols.ToImmutableArray(),
                 names.ToImmutableArray(),
                 compilation);
+        }
+
+        public ImmutableArray<ISymbol> GetMembers(bool includeInherited = false)
+        {
+            return (includeInherited) ? MembersIncludingInherited : Members;
         }
 
         public IEnumerable<IFieldSymbol> GetFields(bool includeInherited = false)

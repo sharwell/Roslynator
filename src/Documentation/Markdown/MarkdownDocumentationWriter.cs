@@ -12,11 +12,11 @@ namespace Roslynator.Documentation.Markdown
         private readonly MarkdownWriter _writer;
 
         public MarkdownDocumentationWriter(
-            SymbolDocumentationInfo symbolInfo,
-            SymbolDocumentationInfo directoryInfo,
+            SymbolDocumentationModel symbolModel,
+            SymbolDocumentationModel directoryModel,
             DocumentationUriProvider uriProvider,
             DocumentationOptions options = null,
-            DocumentationResources resources = null) : base(symbolInfo, directoryInfo, uriProvider, options, resources)
+            DocumentationResources resources = null) : base(symbolModel, directoryModel, uriProvider, options, resources)
         {
             _writer = MarkdownWriter.Create(new StringBuilder());
         }

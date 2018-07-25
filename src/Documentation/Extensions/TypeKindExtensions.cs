@@ -23,7 +23,7 @@ namespace Roslynator.Documentation
                     return NamespaceDocumentationParts.Structs;
             }
 
-            throw new InvalidOperationException();
+            throw new InvalidOperationException($"Unknown enum value '{typeKind.ToString()}'.");
         }
     }
 }

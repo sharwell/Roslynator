@@ -12,7 +12,7 @@ namespace Roslynator.Documentation
     {
         private ImmutableArray<INamedTypeSymbol> _typeSymbols;
 
-        private readonly Dictionary<ISymbol, SymbolDocumentationInfo> _symbolDocumentationInfos;
+        private readonly Dictionary<ISymbol, SymbolDocumentationModel> _symbolDocumentationModels;
         private Dictionary<IAssemblySymbol, XmlDocumentation> _xmlDocumentations;
 
         public DocumentationModel(Compilation compilation, IEnumerable<IAssemblySymbol> assemblies)
@@ -20,7 +20,7 @@ namespace Roslynator.Documentation
             Compilation = compilation;
             Assemblies = ImmutableArray.CreateRange(assemblies);
 
-            _symbolDocumentationInfos = new Dictionary<ISymbol, SymbolDocumentationInfo>();
+            _symbolDocumentationModels = new Dictionary<ISymbol, SymbolDocumentationModel>();
         }
 
         public Compilation Compilation { get; }
@@ -184,16 +184,16 @@ namespace Roslynator.Documentation
             return true;
         }
 
-        internal SymbolDocumentationInfo GetSymbolInfo(ISymbol symbol)
+        internal SymbolDocumentationModel GetSymbolModel(ISymbol symbol)
         {
-            if (_symbolDocumentationInfos.TryGetValue(symbol, out SymbolDocumentationInfo info))
-                return info;
+            if (_symbolDocumentationModels.TryGetValue(symbol, out SymbolDocumentationModel model))
+                return model;
 
-            info = SymbolDocumentationInfo.Create(symbol, this);
+            model = SymbolDocumentationModel.Create(symbol, this);
 
-            _symbolDocumentationInfos[symbol] = info;
+            _symbolDocumentationModels[symbol] = model;
 
-            return info;
+            return model;
         }
 
         internal ISymbol GetFirstSymbolForDeclarationId(string id)
@@ -231,7 +231,7 @@ namespace Roslynator.Documentation
 
         internal SymbolXmlDocumentation GetDocumentation(ISymbol symbol)
         {
-            return GetXmlDocumentation(symbol.ContainingAssembly)?.GetDocumentation(GetSymbolInfo(symbol).CommentId);
+            return GetXmlDocumentation(symbol.ContainingAssembly)?.GetDocumentation(GetSymbolModel(symbol).CommentId);
         }
     }
 }

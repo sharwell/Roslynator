@@ -4,6 +4,8 @@
 
 | Class | Summary |
 | ----- | ------- |
+| [B](B/README.md) | |
+| [C](C/README.md) | |
 | [Foo](Foo/README.md) | |
 | [FooAttribute](FooAttribute/README.md) | |
 | [FooCollection](FooCollection/README.md) | |

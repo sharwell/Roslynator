@@ -22,6 +22,8 @@
 
 | Class | Summary |
 | ----- | ------- |
+| [B](Roslynator/Documentation/Test/B/README.md) | |
+| [C](Roslynator/Documentation/Test/C/README.md) | |
 | [Foo](Roslynator/Documentation/Test/Foo/README.md) | |
 | [FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md) | |
 | [FooCollection](Roslynator/Documentation/Test/FooCollection/README.md) | |

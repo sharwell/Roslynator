@@ -15,6 +15,37 @@ namespace System
 
 namespace Roslynator.Documentation.Test
 {
+  public class B
+  {
+    public string Field;
+
+    public B();
+
+    public event EventHandler Event;
+
+    public int this[int index] { get; }
+
+    public string Property { get; }
+
+    public string Method();
+  }
+
+  public class C : B
+  {
+    public string Field;
+
+    public C();
+
+    public event EventHandler Event;
+
+    public int this[int index] { get; }
+
+    public string Property { get; }
+
+    public string Method();
+    public string ToString();
+  }
+
   [Obsolete("Foo is obsolete.")]
   public class Foo : Bla
   {

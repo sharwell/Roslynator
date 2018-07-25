@@ -18,17 +18,17 @@ namespace Roslynator.Documentation
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private string DebuggerDisplay => Name;
 
-        public abstract DocumentationUrlInfo CreateUrl(SymbolDocumentationInfo symbolInfo);
+        public abstract DocumentationUrlInfo CreateUrl(SymbolDocumentationModel symbolModel);
 
         private class MicrosoftDocsUrlProvider : ExternalDocumentationUrlProvider
         {
             public override string Name => "Microsoft Docs";
 
-            public override DocumentationUrlInfo CreateUrl(SymbolDocumentationInfo symbolInfo)
+            public override DocumentationUrlInfo CreateUrl(SymbolDocumentationModel symbolModel)
             {
-                if (symbolInfo.SymbolAndBaseTypesAndNamespaces.LastOrDefault()?.Kind == SymbolKind.Namespace)
+                if (symbolModel.SymbolAndBaseTypesAndNamespaces.LastOrDefault()?.Kind == SymbolKind.Namespace)
                 {
-                    ImmutableArray<string> names = symbolInfo.NameAndBaseNamesAndNamespaceNames;
+                    ImmutableArray<string> names = symbolModel.NameAndBaseNamesAndNamespaceNames;
 
                     switch (names.Last())
                     {

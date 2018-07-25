@@ -10,6 +10,7 @@ namespace Roslynator.Documentation
 {
     internal static class SymbolExtensions
     {
+        //TODO: move to core
         public static ImmutableArray<INamedTypeSymbol> GetTypes(this IAssemblySymbol assemblySymbol, Func<INamedTypeSymbol, bool> predicate = null)
         {
             ImmutableArray<INamedTypeSymbol>.Builder builder = ImmutableArray.CreateBuilder<INamedTypeSymbol>();
@@ -55,7 +56,7 @@ namespace Roslynator.Documentation
 
         private static ImmutableArray<ISymbol> GetMembersIncludingInherited(ITypeSymbol typeSymbol, Func<ISymbol, bool> predicate = null)
         {
-            ImmutableArray<ISymbol>.Builder builder = ImmutableArray.CreateBuilder<ISymbol>();
+            var symbols = new HashSet<ISymbol>(MemberDefinitionEqualityComparer.Instance);
 
             HashSet<ISymbol> overriddenSymbols = null;
 
@@ -68,20 +69,25 @@ namespace Roslynator.Documentation
                     (overriddenSymbols ?? (overriddenSymbols = new HashSet<ISymbol>())).Add(overriddenSymbol);
                 }
 
-                builder.Add(symbol);
+                symbols.Add(symbol);
             }
 
             INamedTypeSymbol baseType = typeSymbol.BaseType;
 
             while (baseType != null)
             {
+                bool areInternalsVisible = typeSymbol.ContainingAssembly == baseType.ContainingAssembly
+                    || baseType.ContainingAssembly.GivesAccessTo(typeSymbol.ContainingAssembly);
+
                 foreach (ISymbol symbol in baseType.GetMembers())
                 {
                     if (!symbol.IsStatic
-                        && (predicate == null || predicate(symbol)))
+                        && symbol.DeclaredAccessibility != Accessibility.Private
+                        && (predicate == null || predicate(symbol))
+                        && (symbol.DeclaredAccessibility != Accessibility.Internal || areInternalsVisible))
                     {
                         if (overriddenSymbols?.Remove(symbol) != true)
-                            builder.Add(symbol);
+                            symbols.Add(symbol);
 
                         ISymbol overriddenSymbol = symbol.OverriddenSymbol();
 
@@ -95,15 +101,7 @@ namespace Roslynator.Documentation
                 baseType = baseType.BaseType;
             }
 
-            return builder.ToImmutableArray();
-        }
-
-        public static ImmutableArray<INamedTypeSymbol> GetTypeMembers(this INamespaceOrTypeSymbol namespaceOrTypeSymbol, Func<INamedTypeSymbol, bool> predicate)
-        {
-            return namespaceOrTypeSymbol
-                .GetTypeMembers()
-                .Where(predicate)
-                .ToImmutableArray();
+            return symbols.ToImmutableArray();
         }
 
         public static int GetArity(this ISymbol symbol)

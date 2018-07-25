@@ -5,6 +5,8 @@
 * [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
   * [Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute)
     * [FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md)
+  * [B](Roslynator/Documentation/Test/B/README.md)
+    * [C](Roslynator/Documentation/Test/C/README.md)
   * [Bla](_Global/Bla/README.md)
     * [Foo](Roslynator/Documentation/Test/Foo/README.md)
   * [ClassName](System/ClassName/README.md)

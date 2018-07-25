@@ -17,7 +17,7 @@ namespace Roslynator.Documentation
         {
         }
 
-        public override string GetFilePath(DocumentationKind kind, SymbolDocumentationInfo symbolInfo)
+        public override string GetFilePath(DocumentationKind kind, SymbolDocumentationModel symbolModel)
         {
             switch (kind)
             {
@@ -26,7 +26,7 @@ namespace Roslynator.Documentation
                 case DocumentationKind.Namespace:
                 case DocumentationKind.Type:
                 case DocumentationKind.Member:
-                    return GetFullUri(ReadMeFileName, symbolInfo.NameAndBaseNamesAndNamespaceNames, '\\');
+                    return GetFullUri(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, '\\');
                 case DocumentationKind.ObjectModel:
                     return WellKnownNames.ObjectModelFileName;
                 case DocumentationKind.ExtendedExternalTypes:
@@ -36,7 +36,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public override DocumentationUrlInfo GetLocalUrl(SymbolDocumentationInfo symbolInfo, SymbolDocumentationInfo directoryInfo)
+        public override DocumentationUrlInfo GetLocalUrl(SymbolDocumentationModel symbolModel, SymbolDocumentationModel directoryModel)
         {
             string url = CreateLocalUrl();
 
@@ -44,29 +44,29 @@ namespace Roslynator.Documentation
 
             string CreateLocalUrl()
             {
-                if (directoryInfo == null)
-                    return GetFullUri(ReadMeFileName, symbolInfo.NameAndBaseNamesAndNamespaceNames, '/');
+                if (directoryModel == null)
+                    return GetFullUri(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, '/');
 
-                if (symbolInfo == directoryInfo)
+                if (symbolModel == directoryModel)
                     return "./" + ReadMeFileName;
 
                 int count = 0;
 
-                ImmutableArray<ISymbol> symbols = symbolInfo.SymbolAndBaseTypesAndNamespaces;
+                ImmutableArray<ISymbol> symbols = symbolModel.SymbolAndBaseTypesAndNamespaces;
 
                 int i = symbols.Length - 1;
-                int j = directoryInfo.SymbolAndBaseTypesAndNamespaces.Length - 1;
+                int j = directoryModel.SymbolAndBaseTypesAndNamespaces.Length - 1;
 
                 while (i >= 0
                     && j >= 0
-                    && symbols[i] == directoryInfo.SymbolAndBaseTypesAndNamespaces[j])
+                    && symbols[i] == directoryModel.SymbolAndBaseTypesAndNamespaces[j])
                 {
                     count++;
                     i--;
                     j--;
                 }
 
-                int diff = directoryInfo.SymbolAndBaseTypesAndNamespaces.Length - count;
+                int diff = directoryModel.SymbolAndBaseTypesAndNamespaces.Length - count;
 
                 StringBuilder sb = StringBuilderCache.GetInstance();
 
@@ -82,7 +82,7 @@ namespace Roslynator.Documentation
                     }
                 }
 
-                ImmutableArray<string> names = symbolInfo.NameAndBaseNamesAndNamespaceNames;
+                ImmutableArray<string> names = symbolModel.NameAndBaseNamesAndNamespaceNames;
 
                 i = names.Length - 1 - count;
 

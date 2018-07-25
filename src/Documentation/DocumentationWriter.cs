@@ -16,26 +16,26 @@ namespace Roslynator.Documentation
         private bool _disposed;
 
         protected DocumentationWriter(
-            SymbolDocumentationInfo symbolInfo,
-            SymbolDocumentationInfo directoryInfo,
+            SymbolDocumentationModel symbolModel,
+            SymbolDocumentationModel directoryModel,
             DocumentationUriProvider uriProvider,
             DocumentationOptions options = null,
             DocumentationResources resources = null)
         {
-            SymbolInfo = symbolInfo;
-            DirectoryInfo = directoryInfo;
+            SymbolModel = symbolModel;
+            DirectoryModel = directoryModel;
             UriProvider = uriProvider;
             Options = options ?? DocumentationOptions.Default;
             Resources = resources ?? DocumentationResources.Default;
         }
 
-        public SymbolDocumentationInfo DirectoryInfo { get; }
+        public SymbolDocumentationModel DirectoryModel { get; }
 
-        public SymbolDocumentationInfo SymbolInfo { get; }
+        public SymbolDocumentationModel SymbolModel { get; }
 
-        public ISymbol Symbol => SymbolInfo.Symbol;
+        public ISymbol Symbol => SymbolModel.Symbol;
 
-        public DocumentationModel DocumentationModel => SymbolInfo.DocumentationModel;
+        public DocumentationModel DocumentationModel => SymbolModel.DocumentationModel;
 
         internal bool CanCreateTypeLocalUrl { get; set; } = true;
 
@@ -51,9 +51,9 @@ namespace Roslynator.Documentation
 
         public DocumentationUriProvider UriProvider { get; }
 
-        internal SymbolDocumentationInfo GetSymbolInfo(ISymbol symbol)
+        internal SymbolDocumentationModel GetSymbolModel(ISymbol symbol)
         {
-            return DocumentationModel.GetSymbolInfo(symbol);
+            return DocumentationModel.GetSymbolModel(symbol);
         }
 
         public abstract void WriteStartDocument();
@@ -1019,18 +1019,18 @@ namespace Roslynator.Documentation
             SymbolDisplayAdditionalOptions additionalOptions = SymbolDisplayAdditionalOptions.None,
             bool canCreateExternalUrl = true)
         {
-            WriteLink(GetSymbolInfo(symbol), format, additionalOptions, canCreateExternalUrl: canCreateExternalUrl);
+            WriteLink(GetSymbolModel(symbol), format, additionalOptions, canCreateExternalUrl: canCreateExternalUrl);
         }
 
         public void WriteLink(
-            SymbolDocumentationInfo symbolInfo,
+            SymbolDocumentationModel symbolModel,
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalOptions additionalOptions = SymbolDisplayAdditionalOptions.None,
             bool canCreateExternalUrl = true)
         {
-            string url = GetUrl(symbolInfo, DirectoryInfo, canCreateExternalUrl);
+            string url = GetUrl(symbolModel, DirectoryModel, canCreateExternalUrl);
 
-            WriteLinkOrText(symbolInfo.Symbol.ToDisplayString(format, additionalOptions), url);
+            WriteLinkOrText(symbolModel.Symbol.ToDisplayString(format, additionalOptions), url);
         }
 
         internal void WriteLinkOrTypeLink(
@@ -1057,7 +1057,7 @@ namespace Roslynator.Documentation
             bool containingTypes = true,
             bool canCreateExternalUrl = true)
         {
-            SymbolDocumentationInfo symbolInfo = GetSymbolInfo(typeSymbol);
+            SymbolDocumentationModel symbolModel = GetSymbolModel(typeSymbol);
 
             ImmutableArray<ITypeSymbol> typeArguments = typeSymbol.TypeArguments;
 
@@ -1074,7 +1074,7 @@ namespace Roslynator.Documentation
                     ? SymbolDisplayFormats.TypeNameAndContainingTypes
                     : SymbolDisplayFormats.TypeName;
 
-                string url = GetUrl(GetSymbolInfo(typeSymbol), DirectoryInfo, canCreateExternalUrl);
+                string url = GetUrl(GetSymbolModel(typeSymbol), DirectoryModel, canCreateExternalUrl);
 
                 WriteLinkOrText(typeSymbol.ToDisplayString(format), url);
 
@@ -1116,18 +1116,18 @@ namespace Roslynator.Documentation
                     ? SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters
                     : SymbolDisplayFormats.TypeNameAndTypeParameters;
 
-                string url = GetUrl(GetSymbolInfo(typeSymbol), DirectoryInfo, canCreateExternalUrl);
+                string url = GetUrl(GetSymbolModel(typeSymbol), DirectoryModel, canCreateExternalUrl);
 
                 WriteLinkOrText(typeSymbol.ToDisplayString(format), url);
             }
         }
 
         private string GetUrl(
-            SymbolDocumentationInfo symbolInfo,
-            SymbolDocumentationInfo directoryInfo = null,
+            SymbolDocumentationModel symbolModel,
+            SymbolDocumentationModel directoryModel = null,
             bool canCreateExternalUrl = true)
         {
-            SymbolKind kind = symbolInfo.Symbol.Kind;
+            SymbolKind kind = symbolModel.Symbol.Kind;
 
             switch (kind)
             {
@@ -1164,13 +1164,13 @@ namespace Roslynator.Documentation
                     }
             }
 
-            if (symbolInfo.IsExternal
+            if (symbolModel.IsExternal
                 && canCreateExternalUrl)
             {
-                return UriProvider.GetExternalUrl(symbolInfo).Url;
+                return UriProvider.GetExternalUrl(symbolModel).Url;
             }
 
-            return UriProvider.GetLocalUrl(symbolInfo, directoryInfo).Url;
+            return UriProvider.GetLocalUrl(symbolModel, directoryModel).Url;
         }
 
         public void Dispose()
