@@ -333,7 +333,7 @@ namespace Roslynator.Documentation
                 symbol,
                 FormatProvider.DefinitionFormat,
                 typeDeclarationOptions: SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
-                attributePredicate: f => !DocumentationUtility.ShouldBeHidden(f),
+                attributePredicate: f => DocumentationUtility.IsVisibleAttribute(f),
                 formatBaseList: Options.FormatBaseList,
                 formatConstraints: Options.FormatConstraints,
                 tryUseNameOnly: true);
@@ -495,7 +495,7 @@ namespace Roslynator.Documentation
                 return;
 
             IEnumerable<(ISymbol symbol, INamedTypeSymbol attributeSymbol)> symbolsAttributes = attributes
-                .Where(f => !DocumentationUtility.ShouldBeHidden(f.AttributeClass))
+                .Where(f => DocumentationUtility.IsVisibleAttribute(f.AttributeClass))
                 .Select(f => ((symbol, attributeClass: f.AttributeClass)));
 
             if (symbol is ITypeSymbol typeSymbol)
@@ -565,7 +565,7 @@ namespace Roslynator.Documentation
                             }
                         }
 
-                        if (DocumentationUtility.ShouldBeHidden(attribute.AttributeClass))
+                        if (!DocumentationUtility.IsVisibleAttribute(attribute.AttributeClass))
                             continue;
 
                         if (AttributesContains(attribute))

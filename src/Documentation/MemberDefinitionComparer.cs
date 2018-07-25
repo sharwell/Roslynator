@@ -22,7 +22,7 @@ namespace Roslynator.Documentation
             if (y == null)
                 return 1;
 
-            int result = GetRank(x).CompareTo(GetRank(y));
+            int result = ((int)GetKind(x)).CompareTo((int)GetKind(y));
 
             if (result != 0)
                 return result;
@@ -37,22 +37,22 @@ namespace Roslynator.Documentation
                 y.ToDisplayString(SymbolDisplayFormats.SortDefinitionList));
         }
 
-        public static int GetRank(ISymbol symbol)
+        public static MemberDefinitionKind GetKind(ISymbol symbol)
         {
             switch (symbol.Kind)
             {
                 case SymbolKind.Event:
                     {
-                        return 5;
+                        return MemberDefinitionKind.Event;
                     }
                 case SymbolKind.Field:
                     {
                         var fieldSymbol = (IFieldSymbol)symbol;
 
                         if (fieldSymbol.IsConst)
-                            return 1;
+                            return MemberDefinitionKind.Const;
 
-                        return 2;
+                        return MemberDefinitionKind.Field;
                     }
                 case SymbolKind.Method:
                     {
@@ -61,15 +61,15 @@ namespace Roslynator.Documentation
                         switch (methodSymbol.MethodKind)
                         {
                             case MethodKind.StaticConstructor:
-                                return 3;
+                                return MemberDefinitionKind.StaticConstructor;
                             case MethodKind.Constructor:
-                                return 4;
+                                return MemberDefinitionKind.Constructor;
                             case MethodKind.Conversion:
-                                return 9;
+                                return MemberDefinitionKind.ConversionOperator;
                             case MethodKind.UserDefinedOperator:
-                                return 10;
+                                return MemberDefinitionKind.Operator;
                             case MethodKind.Ordinary:
-                                return 8;
+                                return MemberDefinitionKind.Method;
                         }
 
                         break;
@@ -79,15 +79,15 @@ namespace Roslynator.Documentation
                         var propertySymbol = (IPropertySymbol)symbol;
 
                         if (propertySymbol.IsIndexer)
-                            return 6;
+                            return MemberDefinitionKind.Indexer;
 
-                        return 7;
+                        return MemberDefinitionKind.Property;
                     }
             }
 
             Debug.Fail(symbol.ToDisplayString(Roslynator.SymbolDisplayFormats.Test));
 
-            return 0;
+            return MemberDefinitionKind.None;
         }
     }
 }

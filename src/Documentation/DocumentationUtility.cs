@@ -7,9 +7,14 @@ namespace Roslynator.Documentation
 {
     internal static class DocumentationUtility
     {
-        public static bool ShouldBeHidden(ISymbol symbol)
+        public static bool IsVisibleAttribute(INamedTypeSymbol attributeType)
         {
-            switch (symbol.MetadataName)
+            return !IsNotVisibleAttribute(attributeType);
+        }
+
+        private static bool IsNotVisibleAttribute(INamedTypeSymbol attributeType)
+        {
+            switch (attributeType.MetadataName)
             {
                 case "ConditionalAttribute":
                 case "DebuggerBrowsableAttribute":
@@ -20,17 +25,17 @@ namespace Roslynator.Documentation
                 case "DebuggerStepThroughAttribute":
                 case "DebuggerTypeProxyAttribute":
                 case "DebuggerVisualizerAttribute":
-                    return symbol.ContainingNamespace.HasMetadataName(MetadataNames.System_Diagnostics);
+                    return attributeType.ContainingNamespace.HasMetadataName(MetadataNames.System_Diagnostics);
                 case "SuppressMessageAttribute":
-                    return symbol.ContainingNamespace.HasMetadataName(MetadataNames.System_Diagnostics_CodeAnalysis);
+                    return attributeType.ContainingNamespace.HasMetadataName(MetadataNames.System_Diagnostics_CodeAnalysis);
                 case "DefaultMemberAttribute":
-                    return symbol.ContainingNamespace.HasMetadataName(MetadataNames.System_Reflection);
+                    return attributeType.ContainingNamespace.HasMetadataName(MetadataNames.System_Reflection);
                 case "AsyncStateMachineAttribute":
                 case "IteratorStateMachineAttribute":
                 case "MethodImplAttribute":
                 case "TypeForwardedFromAttribute":
                 case "TypeForwardedToAttribute":
-                    return symbol.ContainingNamespace.HasMetadataName(MetadataNames.System_Runtime_CompilerServices);
+                    return attributeType.ContainingNamespace.HasMetadataName(MetadataNames.System_Runtime_CompilerServices);
 #if DEBUG
                 case "CLSCompliantAttribute":
                 case "FlagsAttribute":
@@ -41,7 +46,7 @@ namespace Roslynator.Documentation
 #endif
             }
 
-            Debug.Fail(symbol.ToDisplayString());
+            Debug.Fail(attributeType.ToDisplayString());
             return false;
         }
     }

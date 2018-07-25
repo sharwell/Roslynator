@@ -4,11 +4,18 @@ namespace Roslynator.Documentation
 {
     public class DefinitionListOptions
     {
-        public DefinitionListOptions(bool useDefaultLiteral = true, bool indent = true, string indentChars = "  ")
+        public DefinitionListOptions(
+            bool useDefaultLiteral = true,
+            bool indent = true,
+            string indentChars = "  ",
+            bool openBraceOnNewLine = true,
+            bool emptyLineBetweenMembers = false)
         {
             UseDefaultLiteral = useDefaultLiteral;
             Indent = indent;
             IndentChars = indentChars;
+            OpenBraceOnNewLine = openBraceOnNewLine;
+            EmptyLineBetweenMembers = emptyLineBetweenMembers;
         }
 
         public static DefinitionListOptions Default { get; } = new DefinitionListOptions();
@@ -18,5 +25,9 @@ namespace Roslynator.Documentation
         public bool Indent { get; }
 
         public string IndentChars { get; }
+
+        public bool OpenBraceOnNewLine { get; }
+
+        public bool EmptyLineBetweenMembers { get; }
     }
 }

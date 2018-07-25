@@ -23,61 +23,119 @@ namespace Roslynator.Documentation
 
         private static readonly SymbolDisplayFormat _enumFieldFormat = SymbolDisplayFormats.FullDefinition;
 
-        private bool _pendingIndent;
+        private bool _pendingIndentation;
         private int _indentationLevel;
         private INamespaceSymbol _currentNamespace;
 
-        public DefinitionListBuilder(DefinitionListOptions options = null, StringBuilder stringBuilder = null)
+        public DefinitionListBuilder(StringBuilder stringBuilder = null, DefinitionListOptions options = null)
         {
-            Options = options ?? DefinitionListOptions.Default;
             StringBuilder = stringBuilder ?? new StringBuilder();
+            Options = options ?? DefinitionListOptions.Default;
         }
-
-        public DefinitionListOptions Options { get; }
 
         public StringBuilder StringBuilder { get; }
 
+        public DefinitionListOptions Options { get; }
+
         public int Length => StringBuilder.Length;
 
-        public virtual IComparer<INamespaceSymbol> NamespaceComparer { get; }
-
         private HashSet<INamespaceSymbol> Namespaces { get; } = new HashSet<INamespaceSymbol>(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
+
+        public virtual IComparer<INamespaceSymbol> NamespaceComparer
+        {
+            get { return NamespaceDefinitionComparer.Instance; }
+        }
+
+        public virtual IComparer<INamedTypeSymbol> TypeComparer
+        {
+            get { return TypeDefinitionComparer.Instance; }
+        }
+
+        public virtual IComparer<ISymbol> MemberComparer
+        {
+            get { return MemberDefinitionComparer.Instance; }
+        }
+
+        public virtual bool IsVisibleType(ISymbol symbol)
+        {
+            return symbol.IsPubliclyVisible();
+        }
+
+        public virtual bool IsVisibleMember(ISymbol symbol)
+        {
+            if (!symbol.IsPubliclyVisible())
+                return false;
+
+            switch (symbol.Kind)
+            {
+                case SymbolKind.Event:
+                case SymbolKind.Field:
+                case SymbolKind.Property:
+                    {
+                        return true;
+                    }
+                case SymbolKind.Method:
+                    {
+                        var methodSymbol = (IMethodSymbol)symbol;
+
+                        switch (methodSymbol.MethodKind)
+                        {
+                            case MethodKind.Constructor:
+                                {
+                                    return methodSymbol.ContainingType.TypeKind != TypeKind.Struct
+                                        || methodSymbol.Parameters.Any();
+                                }
+                            case MethodKind.Conversion:
+                            case MethodKind.ExplicitInterfaceImplementation:
+                            case MethodKind.UserDefinedOperator:
+                            case MethodKind.Ordinary:
+                            case MethodKind.StaticConstructor:
+                                return true;
+                            case MethodKind.Destructor:
+                            case MethodKind.EventAdd:
+                            case MethodKind.EventRaise:
+                            case MethodKind.EventRemove:
+                            case MethodKind.PropertyGet:
+                            case MethodKind.PropertySet:
+                                return false;
+                            default:
+                                {
+                                    Debug.Fail(methodSymbol.MethodKind.ToString());
+                                    break;
+                                }
+                        }
+
+                        return true;
+                    }
+                case SymbolKind.NamedType:
+                    {
+                        return false;
+                    }
+                default:
+                    {
+                        Debug.Fail(symbol.Kind.ToString());
+                        return false;
+                    }
+            }
+        }
+
+        public virtual bool IsVisibleAttribute(INamedTypeSymbol attributeType)
+        {
+            return DocumentationUtility.IsVisibleAttribute(attributeType);
+        }
 
         public void AppendSymbols(IEnumerable<INamedTypeSymbol> typeSymbols)
         {
             foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> grouping in typeSymbols
                .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
-               .OrderBy(f => f.Key, NamespaceDefinitionComparer.Instance))
+               .OrderBy(f => f.Key, NamespaceComparer))
             {
-                INamespaceSymbol namespaceSymbol = grouping.Key;
-
-                if (namespaceSymbol.IsGlobalNamespace)
-                {
-                    _currentNamespace = namespaceSymbol;
-                    AppendTypes(typeSymbols.Where(f => f.ContainingNamespace.IsGlobalNamespace));
-                    _currentNamespace = null;
-                }
-                else
-                {
-                    AppendSymbol(namespaceSymbol, _namespaceFormat);
-                    AppendLine();
-                    AppendLine("{");
-
-                    IncreaseIndentation();
-
-                    _currentNamespace = namespaceSymbol;
-                    AppendTypes(grouping);
-                    _currentNamespace = null;
-
-                    DecreaseIndentation();
-
-                    AppendLine("}");
-                    AppendLine();
-                }
+                AppendNamespace(grouping.Key, grouping);
             }
 
             StringBuilder sb = StringBuilderCache.GetInstance();
-            foreach (INamespaceSymbol namespaceSymbol in Namespaces.OrderBy(f => f, NamespaceDefinitionComparer.Instance))
+
+            foreach (INamespaceSymbol namespaceSymbol in Namespaces.OrderBy(f => f, NamespaceComparer))
             {
                 sb.Append("using ");
                 sb.Append(namespaceSymbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters));
@@ -91,9 +149,30 @@ namespace Roslynator.Documentation
             Namespaces.Clear();
         }
 
+        private void AppendNamespace(
+            INamespaceSymbol namespaceSymbol,
+            IEnumerable<INamedTypeSymbol> types)
+        {
+            if (!namespaceSymbol.IsGlobalNamespace)
+            {
+                Append(namespaceSymbol, _namespaceFormat);
+                BeginTypeContent();
+            }
+
+            _currentNamespace = namespaceSymbol;
+            AppendTypes(types);
+            _currentNamespace = null;
+
+            if (!namespaceSymbol.IsGlobalNamespace)
+            {
+                EndTypeContent();
+                AppendLine();
+            }
+        }
+
         private void AppendTypes(IEnumerable<INamedTypeSymbol> typeSymbols, bool insertNewLineBeforeFirstType = false)
         {
-            using (IEnumerator<INamedTypeSymbol> en = typeSymbols.OrderBy(f => f, TypeDefinitionComparer.Instance).GetEnumerator())
+            using (IEnumerator<INamedTypeSymbol> en = typeSymbols.OrderBy(f => f, TypeComparer).GetEnumerator())
             {
                 if (en.MoveNext())
                 {
@@ -116,14 +195,9 @@ namespace Roslynator.Documentation
                         {
                             case TypeKind.Class:
                                 {
-                                    AppendLine();
-                                    AppendLine("{");
-                                    IncreaseIndentation();
-
+                                    BeginTypeContent();
                                     AppendMembers(en.Current);
-
-                                    DecreaseIndentation();
-                                    AppendLine("}");
+                                    EndTypeContent();
                                     break;
                                 }
                             case TypeKind.Delegate:
@@ -133,47 +207,34 @@ namespace Roslynator.Documentation
                                 }
                             case TypeKind.Enum:
                                 {
-                                    AppendLine();
-                                    AppendLine("{");
-                                    IncreaseIndentation();
+                                    BeginTypeContent();
 
                                     foreach (ISymbol member in en.Current.GetMembers())
                                     {
                                         if (member.Kind == SymbolKind.Field
                                             && member.DeclaredAccessibility == Accessibility.Public)
                                         {
-                                            AppendSymbol(member, _enumFieldFormat);
+                                            Append(member, _enumFieldFormat);
                                             Append(",");
                                             AppendLine();
                                         }
                                     }
 
-                                    DecreaseIndentation();
-                                    AppendLine("}");
+                                    EndTypeContent();
                                     break;
                                 }
                             case TypeKind.Interface:
                                 {
-                                    AppendLine();
-                                    AppendLine("{");
-                                    IncreaseIndentation();
-
+                                    BeginTypeContent();
                                     AppendMembers(en.Current);
-
-                                    DecreaseIndentation();
-                                    AppendLine("}");
+                                    EndTypeContent();
                                     break;
                                 }
                             case TypeKind.Struct:
                                 {
-                                    AppendLine();
-                                    AppendLine("{");
-                                    IncreaseIndentation();
-
+                                    BeginTypeContent();
                                     AppendMembers(en.Current);
-
-                                    DecreaseIndentation();
-                                    AppendLine("}");
+                                    EndTypeContent();
                                     break;
                                 }
                         }
@@ -191,16 +252,40 @@ namespace Roslynator.Documentation
             }
         }
 
+        private void BeginTypeContent()
+        {
+            if (Options.OpenBraceOnNewLine)
+            {
+                AppendLine();
+                AppendLine("{");
+            }
+            else
+            {
+                AppendLine(" {");
+            }
+
+            _indentationLevel++;
+        }
+
+        private void EndTypeContent()
+        {
+            Debug.Assert(_indentationLevel > 0, "Cannot decrease indentation.");
+
+            _indentationLevel--;
+
+            AppendLine("}");
+        }
+
         private void AppendMembers(INamedTypeSymbol typeSymbol)
         {
             bool isAny = false;
 
-            using (IEnumerator<ISymbol> en = typeSymbol.GetMembers(Predicate)
-                .OrderBy(f => f, MemberDefinitionComparer.Instance).GetEnumerator())
+            using (IEnumerator<ISymbol> en = typeSymbol.GetMembers(IsVisibleMember)
+                .OrderBy(f => f, MemberComparer).GetEnumerator())
             {
                 if (en.MoveNext())
                 {
-                    int rank = MemberDefinitionComparer.GetRank(en.Current);
+                    MemberDefinitionKind kind = MemberDefinitionComparer.GetKind(en.Current);
 
                     while (true)
                     {
@@ -216,12 +301,18 @@ namespace Roslynator.Documentation
 
                         if (en.MoveNext())
                         {
-                            int rank2 = MemberDefinitionComparer.GetRank(en.Current);
+                            MemberDefinitionKind kind2 = MemberDefinitionComparer.GetKind(en.Current);
 
-                            if (rank != rank2)
+                            if (kind != kind2)
+                            {
                                 AppendLine();
+                            }
+                            else if (Options.EmptyLineBetweenMembers)
+                            {
+                                AppendLine();
+                            }
 
-                            rank = rank2;
+                            kind = kind2;
                         }
                         else
                         {
@@ -231,83 +322,42 @@ namespace Roslynator.Documentation
                 }
             }
 
-            AppendTypes(typeSymbol.GetTypeMembers().Where(f => f.IsPubliclyVisible()), insertNewLineBeforeFirstType: isAny);
+            AppendTypes(typeSymbol.GetTypeMembers().Where(f => IsVisibleType(f)), insertNewLineBeforeFirstType: isAny);
+        }
 
-            bool Predicate(ISymbol symbol)
+        //TODO: NewLineOnAttributes
+        private void AppendAttributes(ISymbol symbol)
+        {
+            foreach (AttributeData attributeData in symbol.GetAttributes()
+                .Where(f => IsVisibleAttribute(f.AttributeClass))
+                .OrderBy(f => f.AttributeClass, TypeComparer))
             {
-                if (!symbol.IsPubliclyVisible())
-                    return false;
-
-                switch (symbol.Kind)
-                {
-                    case SymbolKind.Event:
-                    case SymbolKind.Field:
-                    case SymbolKind.Property:
-                        {
-                            return true;
-                        }
-                    case SymbolKind.Method:
-                        {
-                            var methodSymbol = (IMethodSymbol)symbol;
-
-                            switch (methodSymbol.MethodKind)
-                            {
-                                case MethodKind.Constructor:
-                                    {
-                                        return methodSymbol.ContainingType.TypeKind != TypeKind.Struct
-                                            || methodSymbol.Parameters.Any();
-                                    }
-                                case MethodKind.Conversion:
-                                case MethodKind.ExplicitInterfaceImplementation:
-                                case MethodKind.UserDefinedOperator:
-                                case MethodKind.Ordinary:
-                                case MethodKind.StaticConstructor:
-                                    return true;
-                                case MethodKind.Destructor:
-                                case MethodKind.EventAdd:
-                                case MethodKind.EventRaise:
-                                case MethodKind.EventRemove:
-                                case MethodKind.PropertyGet:
-                                case MethodKind.PropertySet:
-                                    return false;
-                                default:
-                                    {
-                                        Debug.Fail(methodSymbol.MethodKind.ToString());
-                                        break;
-                                    }
-                            }
-
-                            return true;
-                        }
-                    case SymbolKind.NamedType:
-                        {
-                            return false;
-                        }
-                    default:
-                        {
-                            Debug.Fail(symbol.Kind.ToString());
-                            return false;
-                        }
-                }
+                AppendAttribute(attributeData);
             }
         }
 
-        private void AppendAttributes(ISymbol symbol)
+        private void AppendAttribute(AttributeData attributeData)
         {
-            foreach (AttributeData attributeData in GetAttributes()
-                .OrderBy(f => f.AttributeClass, TypeDefinitionComparer.Instance))
+            Append("[");
+            Append(attributeData.AttributeClass, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
+
+            bool hasConstructorArgument = false;
+            bool hasNamedArgument = false;
+
+            AppendConstructorArguments();
+            AppendNamedArguments();
+
+            if (hasConstructorArgument || hasNamedArgument)
             {
-                Append("[");
-                AppendSymbol(attributeData.AttributeClass, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
+                Append(")");
+            }
 
-                ImmutableArray<TypedConstant> constructorArguments = attributeData.ConstructorArguments;
+            Append("]");
+            AppendLine();
 
-                ImmutableArray<KeyValuePair<string, TypedConstant>> namedArguments = attributeData.NamedArguments;
-
-                bool hasConstructorArgument = false;
-                bool hasNamedArgument = false;
-
-                ImmutableArray<TypedConstant>.Enumerator en = constructorArguments.GetEnumerator();
+            void AppendConstructorArguments()
+            {
+                ImmutableArray<TypedConstant>.Enumerator en = attributeData.ConstructorArguments.GetEnumerator();
 
                 if (en.MoveNext())
                 {
@@ -328,10 +378,13 @@ namespace Roslynator.Documentation
                         }
                     }
                 }
+            }
 
-                ImmutableArray<KeyValuePair<string, TypedConstant>>.Enumerator en2 = namedArguments.GetEnumerator();
+            void AppendNamedArguments()
+            {
+                ImmutableArray<KeyValuePair<string, TypedConstant>>.Enumerator en = attributeData.NamedArguments.GetEnumerator();
 
-                if (en2.MoveNext())
+                if (en.MoveNext())
                 {
                     hasNamedArgument = true;
 
@@ -346,9 +399,9 @@ namespace Roslynator.Documentation
 
                     while (true)
                     {
-                        AppendNamedArgument(en2.Current);
+                        AppendNamedArgument(en.Current);
 
-                        if (en2.MoveNext())
+                        if (en.MoveNext())
                         {
                             Append(", ");
                         }
@@ -358,25 +411,6 @@ namespace Roslynator.Documentation
                         }
                     }
                 }
-
-                if (hasConstructorArgument || hasNamedArgument)
-                {
-                    Append(")");
-                }
-
-                Append("]");
-                AppendLine();
-            }
-
-            IEnumerable<AttributeData> GetAttributes()
-            {
-                foreach (AttributeData attributeData in symbol.GetAttributes())
-                {
-                    INamedTypeSymbol attribute = attributeData.AttributeClass;
-
-                    if (!DocumentationUtility.ShouldBeHidden(attribute))
-                        yield return attributeData;
-                }
             }
 
             void AppendNamedArgument(KeyValuePair<string, TypedConstant> kvp)
@@ -385,99 +419,99 @@ namespace Roslynator.Documentation
                 Append(" = ");
                 AppendConstantValue(kvp.Value);
             }
+        }
 
-            void AppendConstantValue(TypedConstant typedConstant)
+        private void AppendConstantValue(TypedConstant typedConstant)
+        {
+            switch (typedConstant.Kind)
             {
-                switch (typedConstant.Kind)
-                {
-                    case TypedConstantKind.Primitive:
-                        {
-                            Append(SymbolDisplay.FormatPrimitive(typedConstant.Value, quoteStrings: true, useHexadecimalNumbers: false));
-                            break;
-                        }
-                    case TypedConstantKind.Enum:
-                        {
-                            OneOrMany<EnumFieldInfo> oneOrMany = EnumUtility.GetConstituentFields(typedConstant.Value, (INamedTypeSymbol)typedConstant.Type);
+                case TypedConstantKind.Primitive:
+                    {
+                        Append(SymbolDisplay.FormatPrimitive(typedConstant.Value, quoteStrings: true, useHexadecimalNumbers: false));
+                        break;
+                    }
+                case TypedConstantKind.Enum:
+                    {
+                        OneOrMany<EnumFieldInfo> oneOrMany = EnumUtility.GetConstituentFields(typedConstant.Value, (INamedTypeSymbol)typedConstant.Type);
 
-                            OneOrMany<EnumFieldInfo>.Enumerator en = oneOrMany.GetEnumerator();
+                        OneOrMany<EnumFieldInfo>.Enumerator en = oneOrMany.GetEnumerator();
 
-                            if (en.MoveNext())
+                        if (en.MoveNext())
+                        {
+                            while (true)
                             {
-                                while (true)
-                                {
-                                    AppendSymbol(en.Current.Symbol, SymbolDisplayFormats.EnumFieldFullName);
+                                Append(en.Current.Symbol, SymbolDisplayFormats.EnumFieldFullName);
 
-                                    if (en.MoveNext())
-                                    {
-                                        Append(" | ");
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
+                                if (en.MoveNext())
+                                {
+                                    Append(" | ");
+                                }
+                                else
+                                {
+                                    break;
                                 }
                             }
-                            else
-                            {
-                                Append("(");
-                                AppendSymbol((INamedTypeSymbol)typedConstant.Type, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
-                                Append(")");
-                                Append(typedConstant.Value);
-                            }
-
-                            break;
                         }
-                    case TypedConstantKind.Type:
+                        else
                         {
-                            Append("typeof(");
-                            AppendSymbol((ISymbol)typedConstant.Value, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
+                            Append("(");
+                            Append((INamedTypeSymbol)typedConstant.Type, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
                             Append(")");
-
-                            break;
+                            Append(typedConstant.Value);
                         }
-                    case TypedConstantKind.Array:
+
+                        break;
+                    }
+                case TypedConstantKind.Type:
+                    {
+                        Append("typeof(");
+                        Append((ISymbol)typedConstant.Value, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
+                        Append(")");
+
+                        break;
+                    }
+                case TypedConstantKind.Array:
+                    {
+                        var arrayType = (IArrayTypeSymbol)typedConstant.Type;
+                        Append("new ");
+                        Append(arrayType.ElementType, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
+                        Append("[] { ");
+
+                        ImmutableArray<TypedConstant>.Enumerator en = typedConstant.Values.GetEnumerator();
+
+                        if (en.MoveNext())
                         {
-                            var arrayType = (IArrayTypeSymbol)typedConstant.Type;
-                            Append("new ");
-                            AppendSymbol(arrayType.ElementType, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
-                            Append("[] { ");
-
-                            ImmutableArray<TypedConstant>.Enumerator en = typedConstant.Values.GetEnumerator();
-
-                            if (en.MoveNext())
+                            while (true)
                             {
-                                while (true)
-                                {
-                                    AppendConstantValue(en.Current);
+                                AppendConstantValue(en.Current);
 
-                                    if (en.MoveNext())
-                                    {
-                                        Append(", ");
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
+                                if (en.MoveNext())
+                                {
+                                    Append(", ");
+                                }
+                                else
+                                {
+                                    break;
                                 }
                             }
+                        }
 
-                            Append(" }");
-                            break;
-                        }
-                    default:
-                        {
-                            throw new InvalidOperationException();
-                        }
-                }
+                        Append(" }");
+                        break;
+                    }
+                default:
+                    {
+                        throw new InvalidOperationException();
+                    }
             }
         }
 
-        public void AppendSymbol(ISymbol symbol, SymbolDisplayFormat format)
+        public void Append(ISymbol symbol, SymbolDisplayFormat format)
         {
             Append(symbol.ToDisplayParts(format));
         }
 
-        public void AppendSymbol(INamedTypeSymbol symbol, SymbolDisplayFormat format, SymbolDisplayTypeDeclarationOptions typeDeclarationOptions = SymbolDisplayTypeDeclarationOptions.None)
+        public void Append(INamedTypeSymbol symbol, SymbolDisplayFormat format, SymbolDisplayTypeDeclarationOptions typeDeclarationOptions = SymbolDisplayTypeDeclarationOptions.None)
         {
             Append(symbol.ToDisplayParts(format, typeDeclarationOptions));
         }
@@ -553,7 +587,7 @@ namespace Roslynator.Documentation
             StringBuilder.AppendLine();
 
             if (Options.Indent)
-                _pendingIndent = true;
+                _pendingIndentation = true;
         }
 
         public void AppendLine(string value)
@@ -570,22 +604,11 @@ namespace Roslynator.Documentation
             }
         }
 
-        public void IncreaseIndentation()
-        {
-            _indentationLevel++;
-        }
-
-        public void DecreaseIndentation()
-        {
-            Debug.Assert(_indentationLevel  > 0, "Cannot decrease indentation.");
-            _indentationLevel--;
-        }
-
         private void CheckPendingIndentation()
         {
-            if (_pendingIndent)
+            if (_pendingIndentation)
             {
-                _pendingIndent = false;
+                _pendingIndentation = false;
                 AppendIndentation();
             }
         }
