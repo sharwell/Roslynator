@@ -23,23 +23,23 @@ namespace Roslynator.Documentation
 
         private static readonly SymbolDisplayFormat _enumFieldFormat = SymbolDisplayFormats.FullDefinition;
 
-        private bool _pendingIndentation;
+        private bool _pendingIndent;
+        private int _indentationLevel;
         private INamespaceSymbol _currentNamespace;
 
-        public DefinitionListBuilder(StringBuilder stringBuilder = null)
+        public DefinitionListBuilder(DefinitionListOptions options = null, StringBuilder stringBuilder = null)
         {
+            Options = options ?? DefinitionListOptions.Default;
             StringBuilder = stringBuilder ?? new StringBuilder();
         }
 
-        public int IndentationLevel { get; set; }
-
-        public int IndentationSize { get; set; } = 2;
-
-        public char IndentationChar { get; set; } = ' ';
+        public DefinitionListOptions Options { get; }
 
         public StringBuilder StringBuilder { get; }
 
         public int Length => StringBuilder.Length;
+
+        public virtual IComparer<INamespaceSymbol> NamespaceComparer { get; }
 
         private HashSet<INamespaceSymbol> Namespaces { get; } = new HashSet<INamespaceSymbol>(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
@@ -551,7 +551,9 @@ namespace Roslynator.Documentation
         public void AppendLine()
         {
             StringBuilder.AppendLine();
-            _pendingIndentation = true;
+
+            if (Options.Indent)
+                _pendingIndent = true;
         }
 
         public void AppendLine(string value)
@@ -562,27 +564,28 @@ namespace Roslynator.Documentation
 
         public void AppendIndentation()
         {
-            for (int i = 0; i < IndentationLevel; i++)
+            for (int i = 0; i < _indentationLevel; i++)
             {
-                Append(IndentationChar, IndentationSize);
+                Append(Options.IndentChars);
             }
         }
 
         public void IncreaseIndentation()
         {
-            IndentationLevel++;
+            _indentationLevel++;
         }
 
         public void DecreaseIndentation()
         {
-            IndentationLevel--;
+            Debug.Assert(_indentationLevel  > 0, "Cannot decrease indentation.");
+            _indentationLevel--;
         }
 
         private void CheckPendingIndentation()
         {
-            if (_pendingIndentation)
+            if (_pendingIndent)
             {
-                _pendingIndentation = false;
+                _pendingIndent = false;
                 AppendIndentation();
             }
         }

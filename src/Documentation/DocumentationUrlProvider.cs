@@ -7,18 +7,18 @@ using System.Text;
 
 namespace Roslynator.Documentation
 {
-    public abstract class DocumentationUriProvider
+    public abstract class DocumentationUrlProvider
     {
-        protected DocumentationUriProvider(IEnumerable<ExternalUriProvider> externalProviders = null)
+        protected DocumentationUrlProvider(IEnumerable<ExternalUrlProvider> externalProviders = null)
         {
             ExternalProviders = (externalProviders != null)
                 ? ImmutableArray.CreateRange(externalProviders)
-                : ImmutableArray<ExternalUriProvider>.Empty;
+                : ImmutableArray<ExternalUrlProvider>.Empty;
         }
 
-        public static DocumentationUriProvider GitHubProvider { get; } = new GitHubDocumentationUriProvider(ImmutableArray.Create(ExternalUriProvider.MicrosoftDocs));
+        public static DocumentationUrlProvider GitHubProvider { get; } = new GitHubDocumentationUrlProvider(ImmutableArray.Create(ExternalUrlProvider.MicrosoftDocs));
 
-        public ImmutableArray<ExternalUriProvider> ExternalProviders { get; }
+        public ImmutableArray<ExternalUrlProvider> ExternalProviders { get; }
 
         //TODO: rename DirectoryModel
         public SymbolDocumentationModel DirectoryModel { get; set; }
@@ -30,7 +30,7 @@ namespace Roslynator.Documentation
 
         public DocumentationUrlInfo GetExternalUrl(SymbolDocumentationModel symbolModel)
         {
-            foreach (ExternalUriProvider provider in ExternalProviders)
+            foreach (ExternalUrlProvider provider in ExternalProviders)
             {
                 DocumentationUrlInfo urlInfo = provider.CreateUrl(symbolModel);
 
@@ -41,7 +41,7 @@ namespace Roslynator.Documentation
             return default;
         }
 
-        internal static string GetFullUri(string fileName, ImmutableArray<string> names, char separator)
+        internal static string GetFullUrl(string fileName, ImmutableArray<string> names, char separator)
         {
             int capacity = fileName.Length + 1;
 

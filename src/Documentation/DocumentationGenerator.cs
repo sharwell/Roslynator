@@ -15,12 +15,12 @@ namespace Roslynator.Documentation
 
         protected DocumentationGenerator(
             DocumentationModel documentationModel,
-            DocumentationUriProvider uriProvider,
+            DocumentationUrlProvider urlProvider,
             DocumentationOptions options = null,
             DocumentationResources resources = null)
         {
             DocumentationModel = documentationModel;
-            UriProvider = uriProvider;
+            UrlProvider = urlProvider;
             Options = options ?? DocumentationOptions.Default;
             Resources = resources ?? DocumentationResources.Default;
         }
@@ -33,7 +33,7 @@ namespace Roslynator.Documentation
 
         public DocumentationResources Resources { get; }
 
-        public DocumentationUriProvider UriProvider { get; }
+        public DocumentationUrlProvider UrlProvider { get; }
 
         private SymbolDocumentationModel EmptySymbolModel
         {
@@ -42,7 +42,7 @@ namespace Roslynator.Documentation
 
         private DocumentationWriter CreateWriter(SymbolDocumentationModel symbolModel, SymbolDocumentationModel directoryModel)
         {
-            UriProvider.DirectoryModel = directoryModel;
+            UrlProvider.DirectoryModel = directoryModel;
 
             DocumentationWriter writer = CreateWriterCore(symbolModel);
 
@@ -171,7 +171,7 @@ namespace Roslynator.Documentation
 
             writer.WriteEndDocument();
 
-            return DocumentationGeneratorResult.Create(writer, UriProvider, DocumentationKind.Root);
+            return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Root);
         }
 
         private DocumentationGeneratorResult GenerateNamespace(INamespaceSymbol namespaceSymbol)
@@ -191,7 +191,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UriProvider, DocumentationKind.Namespace, symbolModel);
+                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Namespace, symbolModel);
             }
         }
 
@@ -259,7 +259,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UriProvider, DocumentationKind.ExtendedExternalTypes);
+                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.ExtendedExternalTypes);
             }
         }
 
@@ -290,7 +290,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UriProvider, DocumentationKind.Type, symbolModel);
+                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Type, symbolModel);
             }
         }
 
@@ -461,7 +461,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UriProvider, DocumentationKind.Type, symbolModel);
+                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Type, symbolModel);
             }
         }
 
@@ -534,7 +534,7 @@ namespace Roslynator.Documentation
 
                     writer.WriteEndDocument();
 
-                    yield return DocumentationGeneratorResult.Create(writer, UriProvider, DocumentationKind.Member, symbolModel);
+                    yield return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Member, symbolModel);
                 }
             }
         }
@@ -623,7 +623,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UriProvider, DocumentationKind.ObjectModel);
+                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.ObjectModel);
             }
 
             void WriteBulletItem(ITypeSymbol baseType, HashSet<ITypeSymbol> nodes, DocumentationWriter writer)

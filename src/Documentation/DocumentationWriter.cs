@@ -17,12 +17,12 @@ namespace Roslynator.Documentation
 
         protected DocumentationWriter(
             SymbolDocumentationModel symbolModel,
-            DocumentationUriProvider uriProvider,
+            DocumentationUrlProvider urlProvider,
             DocumentationOptions options = null,
             DocumentationResources resources = null)
         {
             SymbolModel = symbolModel;
-            UriProvider = uriProvider;
+            UrlProvider = urlProvider;
             Options = options ?? DocumentationOptions.Default;
             Resources = resources ?? DocumentationResources.Default;
         }
@@ -46,7 +46,7 @@ namespace Roslynator.Documentation
 
         public DocumentationResources Resources { get; }
 
-        public DocumentationUriProvider UriProvider { get; }
+        public DocumentationUrlProvider UrlProvider { get; }
 
         internal SymbolDocumentationModel GetSymbolModel(ISymbol symbol)
         {
@@ -1159,10 +1159,10 @@ namespace Roslynator.Documentation
             if (DocumentationModel.IsExternal(symbolModel.Symbol)
                 && canCreateExternalUrl)
             {
-                return UriProvider.GetExternalUrl(symbolModel).Url;
+                return UrlProvider.GetExternalUrl(symbolModel).Url;
             }
 
-            return UriProvider.GetLocalUrl(symbolModel).Url;
+            return UrlProvider.GetLocalUrl(symbolModel).Url;
         }
 
         public void Dispose()

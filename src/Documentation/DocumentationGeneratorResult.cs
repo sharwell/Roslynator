@@ -32,9 +32,9 @@ namespace Roslynator.Documentation
             get { return $"{Kind} {Path} {Content}"; }
         }
 
-        internal static DocumentationGeneratorResult Create(DocumentationWriter writer, DocumentationUriProvider uriProvider, DocumentationKind kind, SymbolDocumentationModel symbolModel = null)
+        internal static DocumentationGeneratorResult Create(DocumentationWriter writer, DocumentationUrlProvider urlProvider, DocumentationKind kind, SymbolDocumentationModel symbolModel = null)
         {
-            return new DocumentationGeneratorResult(writer.ToString(), uriProvider.GetFilePath(kind, symbolModel), kind);
+            return new DocumentationGeneratorResult(writer.ToString(), urlProvider.GetFilePath(kind, symbolModel), kind);
         }
 
         public override bool Equals(object obj)

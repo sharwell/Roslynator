@@ -9,11 +9,11 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    public class GitHubDocumentationUriProvider : DocumentationUriProvider
+    internal class GitHubDocumentationUrlProvider : DocumentationUrlProvider
     {
         public const string ReadMeFileName = "README.md";
 
-        public GitHubDocumentationUriProvider(IEnumerable<ExternalUriProvider> externalProviders = null)
+        public GitHubDocumentationUrlProvider(IEnumerable<ExternalUrlProvider> externalProviders = null)
             : base(externalProviders)
         {
         }
@@ -27,7 +27,7 @@ namespace Roslynator.Documentation
                 case DocumentationKind.Namespace:
                 case DocumentationKind.Type:
                 case DocumentationKind.Member:
-                    return GetFullUri(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, Path.DirectorySeparatorChar);
+                    return GetFullUrl(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, Path.DirectorySeparatorChar);
                 case DocumentationKind.ObjectModel:
                     return WellKnownNames.ObjectModelFileName;
                 case DocumentationKind.ExtendedExternalTypes:
@@ -46,7 +46,7 @@ namespace Roslynator.Documentation
             string CreateLocalUrl()
             {
                 if (DirectoryModel == null)
-                    return GetFullUri(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, '/');
+                    return GetFullUrl(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, '/');
 
                 if (symbolModel == DirectoryModel)
                     return "./" + ReadMeFileName;

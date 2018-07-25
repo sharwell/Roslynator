@@ -6,9 +6,9 @@ namespace Roslynator.Documentation.Markdown
     {
         public MarkdownDocumentationGenerator(
             DocumentationModel documentationModel,
-            DocumentationUriProvider uriProvider,
+            DocumentationUrlProvider urlProvider,
             DocumentationOptions options = null,
-            DocumentationResources resources = null) : base(documentationModel, uriProvider: uriProvider, options: options, resources: resources)
+            DocumentationResources resources = null) : base(documentationModel, urlProvider: urlProvider, options: options, resources: resources)
         {
         }
 
@@ -16,7 +16,7 @@ namespace Roslynator.Documentation.Markdown
         {
             return new MarkdownDocumentationWriter(
                 symbolModel,
-                uriProvider: UriProvider,
+                urlProvider: UrlProvider,
                 options: Options,
                 resources: Resources);
         }

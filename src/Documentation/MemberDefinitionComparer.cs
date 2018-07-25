@@ -32,11 +32,9 @@ namespace Roslynator.Documentation
             if (result != 0)
                 return result;
 
-            //TODO: SymbolDisplayPartComparer
-            return string.Compare(
+            return string.CompareOrdinal(
                 x.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
-                y.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
-                StringComparison.Ordinal);
+                y.ToDisplayString(SymbolDisplayFormats.SortDefinitionList));
         }
 
         public static int GetRank(ISymbol symbol)

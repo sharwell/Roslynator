@@ -8,7 +8,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    public abstract class MemberDocumentationWriter
+    internal abstract class MemberDocumentationWriter
     {
         protected MemberDocumentationWriter(DocumentationWriter writer)
         {

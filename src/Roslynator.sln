@@ -98,6 +98,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation.TestProject",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation.CommandLine", "Documentation.CommandLine\Documentation.CommandLine.csproj", "{A865E4D9-30C3-4CC8-A1AB-A897A7A1DA0C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation.TestApi", "Documentation.TestApi\Documentation.TestApi.csproj", "{D63248A9-450B-4503-80EF-06FB481CCF82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -392,6 +394,12 @@ Global
 		{A865E4D9-30C3-4CC8-A1AB-A897A7A1DA0C}.DebugVS|Any CPU.ActiveCfg = Debug|Any CPU
 		{A865E4D9-30C3-4CC8-A1AB-A897A7A1DA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A865E4D9-30C3-4CC8-A1AB-A897A7A1DA0C}.ReleaseTools|Any CPU.ActiveCfg = Release|Any CPU
+		{D63248A9-450B-4503-80EF-06FB481CCF82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63248A9-450B-4503-80EF-06FB481CCF82}.DebugDoc|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63248A9-450B-4503-80EF-06FB481CCF82}.DebugTests|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63248A9-450B-4503-80EF-06FB481CCF82}.DebugVS|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63248A9-450B-4503-80EF-06FB481CCF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D63248A9-450B-4503-80EF-06FB481CCF82}.ReleaseTools|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

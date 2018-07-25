@@ -1,54 +1,168 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Simplification;
 using Microsoft.CodeAnalysis.Text;
+using Roslynator.CSharp;
 
 namespace Roslynator.Documentation
 {
-    public static partial class DefinitionListGenerator
+    public static class DefinitionListGenerator
     {
-        public static Task<string> GenerateAsync(DocumentationModel documentationModel)
+        public static async Task<string> GenerateAsync(DocumentationModel documentationModel, DefinitionListOptions options = null)
         {
-            var builder = new DefinitionListBuilder();
+            options = options ?? DefinitionListOptions.Default;
+
+            var builder = new DefinitionListBuilder(options);
 
             builder.AppendSymbols(documentationModel.Types.Where(f => f.ContainingType == null));
 
             string content = builder.ToString();
 
-            return PostProcess(content);
+            Project project = new AdhocWorkspace()
+                .CurrentSolution
+                .AddProject("AdHocProject", "AdHocProject", LanguageNames.CSharp)
+                .WithMetadataReferences(documentationModel.Compilation.References);
 
-            async Task<string> PostProcess(string source)
+            var parseOptions = (CSharpParseOptions)project.ParseOptions;
+
+            Document document = project
+                .WithParseOptions(parseOptions.WithLanguageVersion(LanguageVersion.Latest))
+                .AddDocument("AdHocFile.cs", SourceText.From(content));
+
+            SemanticModel semanticModel = await document.GetSemanticModelAsync().ConfigureAwait(false);
+
+            SyntaxNode root = await document.GetSyntaxRootAsync().ConfigureAwait(false);
+
+            var rewriter = new Rewriter(options, semanticModel);
+
+            root = rewriter.Visit(root);
+
+            document = document.WithSyntaxRoot(root);
+
+            document = await Simplifier.ReduceAsync(document).ConfigureAwait(false);
+
+            root = await document.GetSyntaxRootAsync().ConfigureAwait(false);
+
+            return root.ToFullString();
+        }
+
+        private class Rewriter : CSharpSyntaxRewriter
+        {
+            private static readonly SyntaxAnnotation[] _simplifierAnnotationAsArray = new SyntaxAnnotation[] { Simplifier.Annotation };
+
+            private ITypeSymbol _enumTypeSymbol;
+
+            public Rewriter(DefinitionListOptions options, SemanticModel semanticModel, CancellationToken cancellationToken = default)
             {
-                Project project = new AdhocWorkspace()
-                    .CurrentSolution
-                    .AddProject("AdHocProject", "AdHocProject", LanguageNames.CSharp)
-                    .WithMetadataReferences(documentationModel.Compilation.References);
+                Options = options;
+                SemanticModel = semanticModel;
+                CancellationToken = cancellationToken;
+            }
 
-                var parseOptions = (CSharpParseOptions)project.ParseOptions;
+            public SemanticModel SemanticModel { get; }
 
-                Document document = project
-                    .WithParseOptions(parseOptions.WithLanguageVersion(LanguageVersion.Latest))
-                    .AddDocument("AdHocFile.cs", SourceText.From(source));
+            public CancellationToken CancellationToken { get; }
+            public DefinitionListOptions Options { get; }
 
-                SemanticModel semanticModel = await document.GetSemanticModelAsync().ConfigureAwait(false);
+            public override SyntaxNode VisitQualifiedName(QualifiedNameSyntax node)
+            {
+                if (SemanticModel.GetSymbol(node.Left, CancellationToken)?.Kind == SymbolKind.Namespace)
+                {
+                    return node
+                        .WithRight((SimpleNameSyntax)Visit(node.Right))
+                        .WithAdditionalAnnotations(_simplifierAnnotationAsArray);
+                }
 
-                SyntaxNode root = await document.GetSyntaxRootAsync().ConfigureAwait(false);
+                return base.VisitQualifiedName(node);
+            }
 
-                var rewriter = new Rewriter(semanticModel);
+            public override SyntaxNode VisitParameter(ParameterSyntax node)
+            {
+                EqualsValueClauseSyntax @default = node.Default;
 
-                root = rewriter.Visit(root);
+                if (@default != null)
+                {
+                    ExpressionSyntax value = @default?.Value;
 
-                document = document.WithSyntaxRoot(root);
+                    if (value != null)
+                    {
+                        ITypeSymbol typeSymbol = SemanticModel.GetTypeSymbol(node.Type, CancellationToken);
 
-                document = await Simplifier.ReduceAsync(document).ConfigureAwait(false);
+                        if (typeSymbol?.TypeKind == TypeKind.Enum)
+                        {
+                            node = (ParameterSyntax)base.VisitParameter(node);
 
-                root = await document.GetSyntaxRootAsync().ConfigureAwait(false);
+                            try
+                            {
+                                _enumTypeSymbol = typeSymbol;
+                                value = (ExpressionSyntax)Visit(value);
+                            }
+                            finally
+                            {
+                                _enumTypeSymbol = null;
+                            }
 
-                return root.ToFullString();
+                            return node.WithDefault(node.Default.WithValue(value));
+                        }
+                    }
+                }
+
+                return base.VisitParameter(node);
+            }
+
+            public override SyntaxNode VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
+            {
+                if (node.IsKind(SyntaxKind.SimpleMemberAccessExpression))
+                {
+                    ISymbol symbol = SemanticModel.GetSymbol(node, CancellationToken);
+
+                    if (symbol?.Kind == SymbolKind.Field
+                        && symbol.ContainingType?.TypeKind == TypeKind.Enum)
+                    {
+                        return node.WithAdditionalAnnotations(_simplifierAnnotationAsArray);
+                    }
+                }
+
+                return base.VisitMemberAccessExpression(node);
+            }
+
+            public override SyntaxNode VisitIdentifierName(IdentifierNameSyntax node)
+            {
+                if (_enumTypeSymbol != null
+                    && !node.IsParentKind(SyntaxKind.SimpleMemberAccessExpression))
+                {
+                    MemberAccessExpressionSyntax newNode = CSharpFactory.SimpleMemberAccessExpression(
+                        SyntaxFactory.ParseExpression(_enumTypeSymbol.ToDisplayString(SymbolDisplayFormats.EnumFieldFullName)),
+                        node);
+
+                    return newNode.WithAdditionalAnnotations(_simplifierAnnotationAsArray);
+                }
+
+                return base.VisitIdentifierName(node);
+            }
+
+            public override SyntaxNode VisitDefaultExpression(DefaultExpressionSyntax node)
+            {
+                if (Options.UseDefaultLiteral)
+                {
+                    Debug.Assert(node.IsParentKind(SyntaxKind.EqualsValueClause)
+                        && node.Parent.IsParentKind(SyntaxKind.Parameter), node.ToString());
+
+                    if (node.IsParentKind(SyntaxKind.EqualsValueClause)
+                        && node.Parent.IsParentKind(SyntaxKind.Parameter))
+                    {
+                        return CSharpFactory.DefaultLiteralExpression();
+                    }
+                }
+
+                return base.VisitDefaultExpression(node);
             }
         }
     }
