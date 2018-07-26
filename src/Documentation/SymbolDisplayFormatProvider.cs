@@ -4,7 +4,6 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    //TODO: promazat
     public abstract class SymbolDisplayFormatProvider
     {
         public static SymbolDisplayFormatProvider Default { get; } = new DefaultSymbolDisplayFormatProvider();
@@ -15,11 +14,11 @@ namespace Roslynator.Documentation
 
         public abstract SymbolDisplayFormat OverloadedMemberTitleFormat { get; }
 
-        public abstract SymbolDisplayFormat NamespaceFormat { get; }
-
         public abstract SymbolDisplayFormat TypeFormat { get; }
 
-        public abstract SymbolDisplayFormat DefinitionFormat { get; }
+        public abstract SymbolDisplayFormat FullDefinitionFormat { get; }
+
+        public abstract SymbolDisplayFormat SimpleDefinitionFormat { get; }
 
         public abstract SymbolDisplayFormat InheritanceFormat { get; }
 
@@ -28,16 +27,6 @@ namespace Roslynator.Documentation
         public abstract SymbolDisplayFormat MemberImplementsFormat { get; }
 
         public abstract SymbolDisplayFormat AttributeFormat { get; }
-
-        public abstract SymbolDisplayFormat ConstructorFormat { get; }
-
-        public abstract SymbolDisplayFormat FieldFormat { get; }
-
-        public abstract SymbolDisplayFormat PropertyFormat { get; }
-
-        public abstract SymbolDisplayFormat MethodFormat { get; }
-
-        public abstract SymbolDisplayFormat EventFormat { get; }
 
         public abstract SymbolDisplayFormat CrefFormat { get; }
 
@@ -50,17 +39,27 @@ namespace Roslynator.Documentation
 
             public override SymbolDisplayFormat MemberTitleFormat
             {
-                get { return SymbolDisplayFormats.MemberTitle; }
+                get
+                {
+                    return SymbolDisplayFormats.Default.Update(
+                        genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
+                        memberOptions: SymbolDisplayMemberOptions.IncludeExplicitInterface
+                            | SymbolDisplayMemberOptions.IncludeParameters
+                            | SymbolDisplayMemberOptions.IncludeContainingType,
+                        delegateStyle: SymbolDisplayDelegateStyle.NameAndParameters,
+                        parameterOptions: SymbolDisplayParameterOptions.IncludeType);
+                }
             }
 
             public override SymbolDisplayFormat OverloadedMemberTitleFormat
             {
-                get { return SymbolDisplayFormats.OverloadedMemberTitle; }
-            }
-
-            public override SymbolDisplayFormat NamespaceFormat
-            {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters; }
+                get
+                {
+                    return SymbolDisplayFormats.Default.Update(
+                        genericsOptions: SymbolDisplayGenericsOptions.None,
+                        memberOptions: SymbolDisplayMemberOptions.IncludeExplicitInterface
+                            | SymbolDisplayMemberOptions.IncludeContainingType);
+                }
             }
 
             public override SymbolDisplayFormat TypeFormat
@@ -68,9 +67,23 @@ namespace Roslynator.Documentation
                 get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
             }
 
-            public override SymbolDisplayFormat DefinitionFormat
+            public override SymbolDisplayFormat FullDefinitionFormat
             {
                 get { return SymbolDisplayFormats.FullDefinition; }
+            }
+
+            public override SymbolDisplayFormat SimpleDefinitionFormat
+            {
+                get
+                {
+                    return SymbolDisplayFormats.Default.Update(
+                        typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
+                        genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
+                        memberOptions: SymbolDisplayMemberOptions.IncludeExplicitInterface
+                            | SymbolDisplayMemberOptions.IncludeParameters,
+                        delegateStyle: SymbolDisplayDelegateStyle.NameAndParameters,
+                        parameterOptions: SymbolDisplayParameterOptions.IncludeType);
+                }
             }
 
             public override SymbolDisplayFormat InheritanceFormat
@@ -85,37 +98,18 @@ namespace Roslynator.Documentation
 
             public override SymbolDisplayFormat MemberImplementsFormat
             {
-                get { return SymbolDisplayFormats.MemberImplements; }
+                get
+                {
+                    return SymbolDisplayFormats.Default.Update(
+                        genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
+                        memberOptions: SymbolDisplayMemberOptions.IncludeExplicitInterface
+                            | SymbolDisplayMemberOptions.IncludeContainingType);
+                }
             }
 
             public override SymbolDisplayFormat AttributeFormat
             {
                 get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
-            }
-
-            public override SymbolDisplayFormat ConstructorFormat
-            {
-                get { return SymbolDisplayFormats.SimpleDefinition; }
-            }
-
-            public override SymbolDisplayFormat FieldFormat
-            {
-                get { return SymbolDisplayFormats.SimpleDefinition; }
-            }
-
-            public override SymbolDisplayFormat PropertyFormat
-            {
-                get { return SymbolDisplayFormats.SimpleDefinition; }
-            }
-
-            public override SymbolDisplayFormat MethodFormat
-            {
-                get { return SymbolDisplayFormats.SimpleDefinition; }
-            }
-
-            public override SymbolDisplayFormat EventFormat
-            {
-                get { return SymbolDisplayFormats.SimpleDefinition; }
             }
 
             public override SymbolDisplayFormat CrefFormat

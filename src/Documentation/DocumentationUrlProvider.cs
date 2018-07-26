@@ -20,11 +20,9 @@ namespace Roslynator.Documentation
 
         public ImmutableArray<ExternalUrlProvider> ExternalProviders { get; }
 
-        //TODO: rename DirectoryModel
-        public SymbolDocumentationModel DirectoryModel { get; set; }
+        public SymbolDocumentationModel ContainingModel { get; set; }
 
-        //TODO: getdocumenturl
-        public abstract string GetFilePath(DocumentationKind kind, SymbolDocumentationModel symbolModel);
+        public abstract string GetDocumentPath(DocumentationKind kind, SymbolDocumentationModel symbolModel);
 
         public abstract DocumentationUrlInfo GetLocalUrl(SymbolDocumentationModel symbolModel);
 
@@ -41,7 +39,7 @@ namespace Roslynator.Documentation
             return default;
         }
 
-        internal static string GetFullUrl(string fileName, ImmutableArray<string> names, char separator)
+        internal static string GetUrl(string fileName, ImmutableArray<string> names, char separator)
         {
             int capacity = fileName.Length + 1;
 

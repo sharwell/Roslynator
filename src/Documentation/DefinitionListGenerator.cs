@@ -27,14 +27,19 @@ namespace Roslynator.Documentation
 
             Project project = new AdhocWorkspace()
                 .CurrentSolution
-                .AddProject("AdHocProject", "AdHocProject", LanguageNames.CSharp)
+                .AddProject("AdHocProject", "AdHocProject", documentationModel.Language)
                 .WithMetadataReferences(documentationModel.Compilation.References);
 
-            var parseOptions = (CSharpParseOptions)project.ParseOptions;
+            if (project.ParseOptions is CSharpParseOptions csharpParseOptions)
+            {
+                project = project.WithParseOptions(csharpParseOptions.WithLanguageVersion(LanguageVersion.Latest));
+            }
+            else
+            {
+                Debug.Fail(project.ParseOptions.GetType().FullName);
+            }
 
-            Document document = project
-                .WithParseOptions(parseOptions.WithLanguageVersion(LanguageVersion.Latest))
-                .AddDocument("AdHocFile.cs", SourceText.From(content));
+            Document document = project.AddDocument("AdHocFile.cs", SourceText.From(content));
 
             SemanticModel semanticModel = await document.GetSemanticModelAsync().ConfigureAwait(false);
 
@@ -69,6 +74,7 @@ namespace Roslynator.Documentation
             public SemanticModel SemanticModel { get; }
 
             public CancellationToken CancellationToken { get; }
+
             public DefinitionListOptions Options { get; }
 
             public override SyntaxNode VisitQualifiedName(QualifiedNameSyntax node)

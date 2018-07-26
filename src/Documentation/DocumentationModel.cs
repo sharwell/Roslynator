@@ -27,6 +27,10 @@ namespace Roslynator.Documentation
 
         public ImmutableArray<IAssemblySymbol> Assemblies { get; }
 
+        public string Language => Compilation.Language;
+
+        public IEnumerable<MetadataReference> References => Compilation.References;
+
         public IEnumerable<INamespaceSymbol> Namespaces
         {
             get
@@ -229,7 +233,7 @@ namespace Roslynator.Documentation
             return xmlDocumentation;
         }
 
-        internal SymbolXmlDocumentation GetDocumentation(ISymbol symbol)
+        internal SymbolXmlDocumentation GetSymbolDocumentation(ISymbol symbol)
         {
             return GetXmlDocumentation(symbol.ContainingAssembly)?.GetDocumentation(GetSymbolModel(symbol).CommentId);
         }

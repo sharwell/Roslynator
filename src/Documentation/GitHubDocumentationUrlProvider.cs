@@ -18,7 +18,7 @@ namespace Roslynator.Documentation
         {
         }
 
-        public override string GetFilePath(DocumentationKind kind, SymbolDocumentationModel symbolModel)
+        public override string GetDocumentPath(DocumentationKind kind, SymbolDocumentationModel symbolModel)
         {
             switch (kind)
             {
@@ -27,7 +27,7 @@ namespace Roslynator.Documentation
                 case DocumentationKind.Namespace:
                 case DocumentationKind.Type:
                 case DocumentationKind.Member:
-                    return GetFullUrl(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, Path.DirectorySeparatorChar);
+                    return GetUrl(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, Path.DirectorySeparatorChar);
                 case DocumentationKind.ObjectModel:
                     return WellKnownNames.ObjectModelFileName;
                 case DocumentationKind.ExtendedExternalTypes:
@@ -45,10 +45,10 @@ namespace Roslynator.Documentation
 
             string CreateLocalUrl()
             {
-                if (DirectoryModel == null)
-                    return GetFullUrl(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, '/');
+                if (ContainingModel == null)
+                    return GetUrl(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, '/');
 
-                if (symbolModel == DirectoryModel)
+                if (ContainingModel == symbolModel)
                     return "./" + ReadMeFileName;
 
                 int count = 0;
@@ -56,18 +56,18 @@ namespace Roslynator.Documentation
                 ImmutableArray<ISymbol> symbols = symbolModel.SymbolAndBaseTypesAndNamespaces;
 
                 int i = symbols.Length - 1;
-                int j = DirectoryModel.SymbolAndBaseTypesAndNamespaces.Length - 1;
+                int j = ContainingModel.SymbolAndBaseTypesAndNamespaces.Length - 1;
 
                 while (i >= 0
                     && j >= 0
-                    && symbols[i] == DirectoryModel.SymbolAndBaseTypesAndNamespaces[j])
+                    && symbols[i] == ContainingModel.SymbolAndBaseTypesAndNamespaces[j])
                 {
                     count++;
                     i--;
                     j--;
                 }
 
-                int diff = DirectoryModel.SymbolAndBaseTypesAndNamespaces.Length - count;
+                int diff = ContainingModel.SymbolAndBaseTypesAndNamespaces.Length - count;
 
                 StringBuilder sb = StringBuilderCache.GetInstance();
 

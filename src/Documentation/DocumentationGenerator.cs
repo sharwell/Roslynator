@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -10,6 +11,9 @@ namespace Roslynator.Documentation
 {
     public abstract class DocumentationGenerator
     {
+        private ImmutableArray<TypeDocumentationParts> _enabledAndSortedTypeParts;
+        private ImmutableArray<MemberDocumentationParts> _enabledAndSortedMemberParts;
+
         private SymbolDocumentationModel _emptySymbolDocumentationModel;
         private readonly ImmutableArray<TypeKind> _typeKinds = ImmutableArray.CreateRange(new TypeKind[] { TypeKind.Class, TypeKind.Struct, TypeKind.Interface, TypeKind.Enum, TypeKind.Delegate });
 
@@ -40,14 +44,58 @@ namespace Roslynator.Documentation
             get { return _emptySymbolDocumentationModel ?? (_emptySymbolDocumentationModel = SymbolDocumentationModel.Create(DocumentationModel)); }
         }
 
-        private DocumentationWriter CreateWriter(SymbolDocumentationModel symbolModel, SymbolDocumentationModel directoryModel)
+        public IComparer<NamespaceDocumentationParts> NamespacePartComparer { get; }
+
+        public IComparer<TypeDocumentationParts> TypePartComparer { get; }
+
+        public IComparer<MemberDocumentationParts> MemberPartComparer { get; }
+
+        internal ImmutableArray<TypeDocumentationParts> EnabledAndSortedTypeParts
         {
-            UrlProvider.DirectoryModel = directoryModel;
+            get
+            {
+                if (_enabledAndSortedTypeParts.IsDefault)
+                {
+                    _enabledAndSortedTypeParts = Enum.GetValues(typeof(TypeDocumentationParts))
+                        .Cast<TypeDocumentationParts>()
+                        .Where(f => f != TypeDocumentationParts.None
+                            && f != TypeDocumentationParts.All
+                            && Options.IsPartEnabled(f))
+                        .OrderBy(f => f, TypePartComparer)
+                        .ToImmutableArray();
+                }
+
+                return _enabledAndSortedTypeParts;
+            }
+        }
+
+        internal ImmutableArray<MemberDocumentationParts> EnabledAndSortedMemberParts
+        {
+            get
+            {
+                if (_enabledAndSortedMemberParts.IsDefault)
+                {
+                    _enabledAndSortedMemberParts = Enum.GetValues(typeof(MemberDocumentationParts))
+                        .Cast<MemberDocumentationParts>()
+                        .Where(f => f != MemberDocumentationParts.None
+                            && f != MemberDocumentationParts.All
+                            && Options.IsPartEnabled(f))
+                        .OrderBy(f => f, MemberPartComparer)
+                        .ToImmutableArray();
+                }
+
+                return _enabledAndSortedMemberParts;
+            }
+        }
+
+        private DocumentationWriter CreateWriter(SymbolDocumentationModel symbolModel, SymbolDocumentationModel containingModel)
+        {
+            UrlProvider.ContainingModel = containingModel;
 
             DocumentationWriter writer = CreateWriterCore(symbolModel);
 
-            writer.CanCreateMemberLocalUrl = Options.IsEnabled(DocumentationParts.Member);
-            writer.CanCreateTypeLocalUrl = Options.IsEnabled(DocumentationParts.Type);
+            writer.CanCreateMemberLocalUrl = Options.IsPartEnabled(DocumentationParts.Member);
+            writer.CanCreateTypeLocalUrl = Options.IsPartEnabled(DocumentationParts.Type);
 
             return writer;
         }
@@ -85,7 +133,7 @@ namespace Roslynator.Documentation
                     parts &= ~DocumentationParts.ExtendedExternalTypes;
             }
 
-            using (DocumentationWriter writer = CreateWriter(symbolModel: EmptySymbolModel, directoryModel: null))
+            using (DocumentationWriter writer = CreateWriter(symbolModel: EmptySymbolModel, containingModel: null))
             {
                 yield return GenerateRoot(writer, heading, parts);
             }
@@ -137,7 +185,7 @@ namespace Roslynator.Documentation
                 writer.WriteHeading1(heading);
 
             if ((documentationParts & DocumentationParts.ObjectModel) != 0
-                && Options.IsEnabled(RootDocumentationParts.ObjectModelLink))
+                && Options.IsPartEnabled(RootDocumentationParts.ObjectModelLink))
             {
                 writer.WriteStartBulletItem();
                 writer.WriteLink(Resources.ObjectModelTitle, WellKnownNames.ObjectModelFileName);
@@ -145,27 +193,27 @@ namespace Roslynator.Documentation
             }
 
             if ((documentationParts & DocumentationParts.ExtendedExternalTypes) != 0
-                && Options.IsEnabled(RootDocumentationParts.ExtendedExternalTypesLink))
+                && Options.IsPartEnabled(RootDocumentationParts.ExtendedExternalTypesLink))
             {
                 writer.WriteStartBulletItem();
                 writer.WriteLink(Resources.ExtendedExternalTypesTitle, WellKnownNames.ExtendedExternalTypesFileName);
                 writer.WriteEndBulletItem();
             }
 
-            if (Options.IsEnabled(RootDocumentationParts.NamespaceList))
+            if (Options.IsPartEnabled(RootDocumentationParts.NamespaceList))
             {
-                writer.WriteList(DocumentationModel.Namespaces, Resources.NamespacesTitle, 2, FormatProvider.NamespaceFormat);
+                writer.WriteList(DocumentationModel.Namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
             }
 
-            if (Options.IsEnabled(RootDocumentationParts.Namespaces))
+            if (Options.IsPartEnabled(RootDocumentationParts.Namespaces))
             {
                 foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> grouping in DocumentationModel.Types
                    .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
-                   .OrderBy(f => f.Key.ToDisplayString(FormatProvider.NamespaceFormat)))
+                   .OrderBy(f => f.Key.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
                 {
-                    writer.WriteHeading(2, grouping.Key, FormatProvider.NamespaceFormat);
+                    writer.WriteHeading(2, grouping.Key, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
-                    GenerateNamespaceContent(writer, grouping, 3, addLink: Options.IsEnabled(DocumentationParts.Type));
+                    GenerateNamespaceContent(writer, grouping, 3, addLink: Options.IsPartEnabled(DocumentationParts.Type));
                 }
             }
 
@@ -182,12 +230,12 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
-                if (Options.IsEnabled(NamespaceDocumentationParts.Heading))
+                if (Options.IsPartEnabled(NamespaceDocumentationParts.Heading))
                 {
-                    writer.WriteHeading(1, namespaceSymbol, FormatProvider.NamespaceFormat, addLink: false);
+                    writer.WriteHeading(1, namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: false);
                 }
 
-                GenerateNamespaceContent(writer, DocumentationModel.GetTypes(namespaceSymbol), 2, addLink: Options.IsEnabled(DocumentationParts.Type));
+                GenerateNamespaceContent(writer, DocumentationModel.GetTypes(namespaceSymbol), 2, addLink: Options.IsPartEnabled(DocumentationParts.Type));
 
                 writer.WriteEndDocument();
 
@@ -203,10 +251,7 @@ namespace Roslynator.Documentation
         {
             SymbolDisplayFormat format = FormatProvider.TypeFormat;
 
-            foreach (IGrouping<TypeKind, ITypeSymbol> grouping in typeSymbols
-                .Where(f => Options.IsNamespacePartEnabled(f.TypeKind))
-                .GroupBy(f => f.TypeKind)
-                .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), Options.NamespacePartComparer))
+            foreach (IGrouping<TypeKind, ITypeSymbol> grouping in GetTypesByTypeKind(typeSymbols))
             {
                 TypeKind typeKind = grouping.Key;
 
@@ -223,7 +268,7 @@ namespace Roslynator.Documentation
 
         private DocumentationGeneratorResult GenerateExtendedExternalTypes(string heading = null)
         {
-            using (DocumentationWriter writer = CreateWriter(symbolModel: EmptySymbolModel, directoryModel: null))
+            using (DocumentationWriter writer = CreateWriter(symbolModel: EmptySymbolModel, containingModel: null))
             {
                 writer.WriteStartDocument();
 
@@ -234,23 +279,20 @@ namespace Roslynator.Documentation
                 if (namespaces.Any())
                     writer.WriteHeading1(heading);
 
-                writer.WriteList(namespaces, Resources.NamespacesTitle, 2, FormatProvider.NamespaceFormat);
+                writer.WriteList(namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
-                if (Options.IsEnabled(RootDocumentationParts.Namespaces))
+                if (Options.IsPartEnabled(RootDocumentationParts.Namespaces))
                 {
                     foreach (IGrouping<INamespaceSymbol, ITypeSymbol> grouping in DocumentationModel.GetExtendedExternalTypes()
                        .OrderBy(f => f.ToDisplayString(FormatProvider.TypeFormat))
                        .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
-                       .OrderBy(f => f.Key.ToDisplayString(FormatProvider.NamespaceFormat)))
+                       .OrderBy(f => f.Key.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
                     {
                         INamespaceSymbol namespaceSymbol = grouping.Key;
 
-                        writer.WriteHeading(2, namespaceSymbol, FormatProvider.NamespaceFormat);
+                        writer.WriteHeading(2, namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
-                        foreach (IGrouping<TypeKind, ITypeSymbol> grouping2 in grouping
-                            .Where(f => Options.IsNamespacePartEnabled(f.TypeKind))
-                            .GroupBy(f => f.TypeKind)
-                            .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), Options.NamespacePartComparer))
+                        foreach (IGrouping<TypeKind, ITypeSymbol> grouping2 in GetTypesByTypeKind(grouping))
                         {
                             writer.WriteList(grouping2, Resources.GetPluralName(grouping2.Key), 3, FormatProvider.TypeFormat, canCreateExternalUrl: false);
                         }
@@ -261,6 +303,14 @@ namespace Roslynator.Documentation
 
                 return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.ExtendedExternalTypes);
             }
+        }
+
+        private IEnumerable<IGrouping<TypeKind, ITypeSymbol>> GetTypesByTypeKind(IEnumerable<ITypeSymbol> typeSymbols)
+        {
+            return typeSymbols
+                .Where(f => Options.IsNamespacePartEnabled(f.TypeKind))
+                .GroupBy(f => f.TypeKind)
+                .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer);
         }
 
         private DocumentationGeneratorResult GenerateExtendedExternalType(ITypeSymbol typeSymbol)
@@ -286,7 +336,7 @@ namespace Roslynator.Documentation
                     headingLevel: -1,
                     Resources.ExtensionMethodTitle,
                     Resources.SummaryTitle,
-                    FormatProvider.MethodFormat);
+                    FormatProvider.SimpleDefinitionFormat);
 
                 writer.WriteEndDocument();
 
@@ -305,7 +355,7 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
-                foreach (TypeDocumentationParts part in Options.EnabledAndSortedTypeParts)
+                foreach (TypeDocumentationParts part in EnabledAndSortedTypeParts)
                 {
                     switch (part)
                     {
@@ -472,43 +522,43 @@ namespace Roslynator.Documentation
 
             SymbolDocumentationModel symbolModel = GetSymbolModel(typeSymbol);
 
-            if (Options.IsEnabled(TypeDocumentationParts.Constructors))
+            if (Options.IsPartEnabled(TypeDocumentationParts.Constructors))
             {
                 foreach (DocumentationGeneratorResult result in GenerateMember(symbolModel.GetConstructors()))
                     yield return result;
             }
 
-            if (Options.IsEnabled(TypeDocumentationParts.Fields))
+            if (Options.IsPartEnabled(TypeDocumentationParts.Fields))
             {
                 foreach (DocumentationGeneratorResult result in GenerateMember(symbolModel.GetFields()))
                     yield return result;
             }
 
-            if (Options.IsEnabled(TypeDocumentationParts.Properties))
+            if (Options.IsPartEnabled(TypeDocumentationParts.Properties))
             {
                 foreach (DocumentationGeneratorResult result in GenerateMember(symbolModel.GetProperties()))
                     yield return result;
             }
 
-            if (Options.IsEnabled(TypeDocumentationParts.Methods))
+            if (Options.IsPartEnabled(TypeDocumentationParts.Methods))
             {
                 foreach (DocumentationGeneratorResult result in GenerateMember(symbolModel.GetMethods()))
                     yield return result;
             }
 
-            if (Options.IsEnabled(TypeDocumentationParts.Operators))
+            if (Options.IsPartEnabled(TypeDocumentationParts.Operators))
             {
                 foreach (DocumentationGeneratorResult result in GenerateMember(symbolModel.GetOperators()))
                     yield return result;
             }
 
-            if (Options.IsEnabled(TypeDocumentationParts.Events))
+            if (Options.IsPartEnabled(TypeDocumentationParts.Events))
             {
                 foreach (DocumentationGeneratorResult result in GenerateMember(symbolModel.GetEvents()))
                     yield return result;
             }
 
-            if (Options.IsEnabled(TypeDocumentationParts.ExplicitInterfaceImplementations))
+            if (Options.IsPartEnabled(TypeDocumentationParts.ExplicitInterfaceImplementations))
             {
                 foreach (DocumentationGeneratorResult result in GenerateMember(symbolModel.GetExplicitInterfaceImplementations()))
                     yield return result;
@@ -548,7 +598,7 @@ namespace Roslynator.Documentation
                 writer.WriteStartDocument();
                 writer.WriteHeading1(heading);
 
-                foreach (TypeKind typeKind in _typeKinds.OrderBy(f => f.ToNamespaceDocumentationPart(), Options.NamespacePartComparer))
+                foreach (TypeKind typeKind in _typeKinds.OrderBy(f => f.ToNamespaceDocumentationPart(), NamespacePartComparer))
                 {
                     switch (typeKind)
                     {

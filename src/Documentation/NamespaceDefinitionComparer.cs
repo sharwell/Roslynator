@@ -43,10 +43,9 @@ namespace Roslynator.Documentation
                 return 1;
             }
 
-            //TODO: optimize
             return string.Compare(
-                x.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters),
-                y.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters),
+                x.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces),
+                y.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces),
                 StringComparison.Ordinal);
         }
 

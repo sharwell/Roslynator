@@ -10,6 +10,8 @@ namespace Roslynator.Documentation
 {
     internal abstract class MemberDocumentationWriter
     {
+        private ImmutableArray<MemberDocumentationParts> _enabledAndSortedMemberParts;
+
         protected MemberDocumentationWriter(DocumentationWriter writer)
         {
             Writer = writer;
@@ -17,7 +19,7 @@ namespace Roslynator.Documentation
 
         public DocumentationWriter Writer { get; }
 
-        public abstract SymbolDisplayFormat Format { get; }
+        public SymbolDisplayFormat Format => FormatProvider.SimpleDefinitionFormat;
 
         public SymbolDisplayFormatProvider FormatProvider => Writer.FormatProvider;
 
@@ -27,15 +29,36 @@ namespace Roslynator.Documentation
 
         public DocumentationResources Resources => Writer.Resources;
 
-        protected internal int BaseHeadingLevel
+        internal int BaseHeadingLevel
         {
             get { return Writer.BaseHeadingLevel; }
             set { Writer.BaseHeadingLevel = value; }
         }
 
+        public virtual IComparer<MemberDocumentationParts> Comparer { get; }
+
+        internal ImmutableArray<MemberDocumentationParts> EnabledAndSortedMemberParts
+        {
+            get
+            {
+                if (_enabledAndSortedMemberParts.IsDefault)
+                {
+                    _enabledAndSortedMemberParts = Enum.GetValues(typeof(MemberDocumentationParts))
+                        .Cast<MemberDocumentationParts>()
+                        .Where(f => f != MemberDocumentationParts.None
+                            && f != MemberDocumentationParts.All
+                            && Options.IsPartEnabled(f))
+                        .OrderBy(f => f, Comparer)
+                        .ToImmutableArray();
+                }
+
+                return _enabledAndSortedMemberParts;
+            }
+        }
+
         public virtual void WriteMember(ISymbol symbol, ImmutableArray<ISymbol> symbols)
         {
-            foreach (MemberDocumentationParts part in Options.EnabledAndSortedMemberParts)
+            foreach (MemberDocumentationParts part in EnabledAndSortedMemberParts)
             {
                 switch (part)
                 {
@@ -70,7 +93,7 @@ namespace Roslynator.Documentation
                     headingLevel: 2,
                     header1: Resources.GetName(symbol),
                     header2: Resources.SummaryTitle,
-                    format: FormatProvider.ConstructorFormat,
+                    format: FormatProvider.SimpleDefinitionFormat,
                     additionalOptions: SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName,
                     addLink: false);
 
@@ -133,7 +156,7 @@ namespace Roslynator.Documentation
 
         public void WriteContent(ISymbol symbol)
         {
-            foreach (MemberDocumentationParts part in Options.EnabledAndSortedMemberParts)
+            foreach (MemberDocumentationParts part in EnabledAndSortedMemberParts)
             {
                 switch (part)
                 {
@@ -249,15 +272,13 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override SymbolDisplayFormat Format => FormatProvider.ConstructorFormat;
-
             public override void WriteTitle(ISymbol symbol, bool hasOverloads)
             {
                 Writer.WriteStartHeading(1);
 
                 if (!hasOverloads)
                 {
-                    Writer.WriteString(symbol.ToDisplayString(FormatProvider.ConstructorFormat));
+                    Writer.WriteString(symbol.ToDisplayString(FormatProvider.SimpleDefinitionFormat));
                     Writer.WriteSpace();
                     Writer.WriteString(Resources.ConstructorTitle);
                 }
@@ -277,8 +298,6 @@ namespace Roslynator.Documentation
             public EventDocumentationWriter(DocumentationWriter writer) : base(writer)
             {
             }
-
-            public override SymbolDisplayFormat Format => FormatProvider.EventFormat;
         }
 
         private class FieldDocumentationWriter : MemberDocumentationWriter
@@ -286,8 +305,6 @@ namespace Roslynator.Documentation
             public FieldDocumentationWriter(DocumentationWriter writer) : base(writer)
             {
             }
-
-            public override SymbolDisplayFormat Format => FormatProvider.FieldFormat;
 
             public override void WriteReturnValue(ISymbol symbol)
             {
@@ -304,8 +321,6 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override SymbolDisplayFormat Format => FormatProvider.MethodFormat;
-
             public override void WriteReturnValue(ISymbol symbol)
             {
                 var methodSymbol = (IMethodSymbol)symbol;
@@ -315,7 +330,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                DocumentationModel.GetDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
+                DocumentationModel.GetSymbolDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
             }
         }
 
@@ -325,8 +340,6 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override SymbolDisplayFormat Format => FormatProvider.MethodFormat;
-
             public override void WriteReturnValue(ISymbol symbol)
             {
                 var methodSymbol = (IMethodSymbol)symbol;
@@ -336,7 +349,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                DocumentationModel.GetDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
+                DocumentationModel.GetSymbolDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
             }
         }
 
@@ -345,8 +358,6 @@ namespace Roslynator.Documentation
             public PropertyDocumentationWriter(DocumentationWriter writer) : base(writer)
             {
             }
-
-            public override SymbolDisplayFormat Format => FormatProvider.PropertyFormat;
 
             public override void WriteReturnValue(ISymbol symbol)
             {
@@ -359,7 +370,7 @@ namespace Roslynator.Documentation
 
                 string elementName = (propertySymbol.IsIndexer) ? "returns" : "value";
 
-                DocumentationModel.GetDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
+                DocumentationModel.GetSymbolDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
             }
         }
     }

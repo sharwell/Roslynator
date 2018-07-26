@@ -33,25 +33,34 @@ namespace Roslynator.Documentation
             return new XmlDocumentation(document);
         }
 
-        //TODO: TryGet
         public SymbolXmlDocumentation GetDocumentation(string commentId)
         {
             if (!_symbolXmlDocumentations.TryGetValue(commentId, out SymbolXmlDocumentation documentation))
             {
-                XElement element = _membersElement
-                    .Elements()
-                    .FirstOrDefault(f => f.Attribute("name")?.Value == commentId);
+                XElement element = FindElement();
 
                 if (element != null)
                 {
                     element = Unindent(element);
 
                     documentation = new SymbolXmlDocumentation(commentId, element);
-                    _symbolXmlDocumentations[commentId] = documentation;
                 }
+
+                _symbolXmlDocumentations[commentId] = documentation;
             }
 
             return documentation;
+
+            XElement FindElement()
+            {
+                foreach (XElement element in _membersElement.Elements())
+                {
+                    if (element.Attribute("name")?.Value == commentId)
+                        return element;
+                }
+
+                return null;
+            }
         }
 
         private static XElement Unindent(XElement element)

@@ -5,22 +5,24 @@ namespace Roslynator.Documentation
     public class DefinitionListOptions
     {
         public DefinitionListOptions(
-            bool useDefaultLiteral = true,
             bool indent = true,
-            string indentChars = "  ",
+            string indentChars = "    ",
             bool openBraceOnNewLine = true,
-            bool emptyLineBetweenMembers = false)
+            bool emptyLineBetweenMembers = false,
+            bool newLineOnAttributes = true,
+            bool attributeArguments = true,
+            bool useDefaultLiteral = true)
         {
-            UseDefaultLiteral = useDefaultLiteral;
             Indent = indent;
             IndentChars = indentChars;
             OpenBraceOnNewLine = openBraceOnNewLine;
             EmptyLineBetweenMembers = emptyLineBetweenMembers;
+            NewLineOnAttributes = newLineOnAttributes;
+            AttributeArguments = attributeArguments;
+            UseDefaultLiteral = useDefaultLiteral;
         }
 
         public static DefinitionListOptions Default { get; } = new DefinitionListOptions();
-
-        public bool UseDefaultLiteral { get; }
 
         public bool Indent { get; }
 
@@ -29,5 +31,11 @@ namespace Roslynator.Documentation
         public bool OpenBraceOnNewLine { get; }
 
         public bool EmptyLineBetweenMembers { get; }
+
+        public bool NewLineOnAttributes { get; }
+
+        public bool AttributeArguments { get; }
+
+        public bool UseDefaultLiteral { get; }
     }
 }

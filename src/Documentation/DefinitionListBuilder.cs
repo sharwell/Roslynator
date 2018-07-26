@@ -41,20 +41,11 @@ namespace Roslynator.Documentation
 
         private HashSet<INamespaceSymbol> Namespaces { get; } = new HashSet<INamespaceSymbol>(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
-        public virtual IComparer<INamespaceSymbol> NamespaceComparer
-        {
-            get { return NamespaceDefinitionComparer.Instance; }
-        }
+        public virtual IComparer<INamespaceSymbol> NamespaceComparer => NamespaceDefinitionComparer.Instance;
 
-        public virtual IComparer<INamedTypeSymbol> TypeComparer
-        {
-            get { return TypeDefinitionComparer.Instance; }
-        }
+        public virtual IComparer<INamedTypeSymbol> TypeComparer => TypeDefinitionComparer.Instance;
 
-        public virtual IComparer<ISymbol> MemberComparer
-        {
-            get { return MemberDefinitionComparer.Instance; }
-        }
+        public virtual IComparer<ISymbol> MemberComparer => MemberDefinitionComparer.Instance;
 
         public virtual bool IsVisibleType(ISymbol symbol)
         {
@@ -138,7 +129,7 @@ namespace Roslynator.Documentation
             foreach (INamespaceSymbol namespaceSymbol in Namespaces.OrderBy(f => f, NamespaceComparer))
             {
                 sb.Append("using ");
-                sb.Append(namespaceSymbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters));
+                sb.Append(namespaceSymbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces));
                 sb.AppendLine(";");
             }
 
@@ -281,7 +272,8 @@ namespace Roslynator.Documentation
             bool isAny = false;
 
             using (IEnumerator<ISymbol> en = typeSymbol.GetMembers(IsVisibleMember)
-                .OrderBy(f => f, MemberComparer).GetEnumerator())
+                .OrderBy(f => f, MemberComparer)
+                .GetEnumerator())
             {
                 if (en.MoveNext())
                 {
@@ -325,22 +317,48 @@ namespace Roslynator.Documentation
             AppendTypes(typeSymbol.GetTypeMembers().Where(f => IsVisibleType(f)), insertNewLineBeforeFirstType: isAny);
         }
 
-        //TODO: NewLineOnAttributes
         private void AppendAttributes(ISymbol symbol)
         {
-            foreach (AttributeData attributeData in symbol.GetAttributes()
+            using (IEnumerator<AttributeData> en = symbol.GetAttributes()
                 .Where(f => IsVisibleAttribute(f.AttributeClass))
-                .OrderBy(f => f.AttributeClass, TypeComparer))
+                .OrderBy(f => f.AttributeClass, TypeComparer).GetEnumerator())
             {
-                AppendAttribute(attributeData);
+                if (en.MoveNext())
+                {
+                    Append("[");
+
+                    while (true)
+                    {
+                        Append(en.Current.AttributeClass, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
+
+                        if (Options.AttributeArguments)
+                            AppendAttributeArguments(en.Current);
+
+                        if (en.MoveNext())
+                        {
+                            if (Options.NewLineOnAttributes)
+                            {
+                                AppendLine("]");
+                                Append("[");
+                            }
+                            else
+                            {
+                                Append(", ");
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+
+                    AppendLine("]");
+                }
             }
         }
 
-        private void AppendAttribute(AttributeData attributeData)
+        private void AppendAttributeArguments(AttributeData attributeData)
         {
-            Append("[");
-            Append(attributeData.AttributeClass, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
-
             bool hasConstructorArgument = false;
             bool hasNamedArgument = false;
 
@@ -351,9 +369,6 @@ namespace Roslynator.Documentation
             {
                 Append(")");
             }
-
-            Append("]");
-            AppendLine();
 
             void AppendConstructorArguments()
             {
@@ -399,7 +414,9 @@ namespace Roslynator.Documentation
 
                     while (true)
                     {
-                        AppendNamedArgument(en.Current);
+                        Append(en.Current.Key);
+                        Append(" = ");
+                        AppendConstantValue(en.Current.Value);
 
                         if (en.MoveNext())
                         {
@@ -411,13 +428,6 @@ namespace Roslynator.Documentation
                         }
                     }
                 }
-            }
-
-            void AppendNamedArgument(KeyValuePair<string, TypedConstant> kvp)
-            {
-                Append(kvp.Key);
-                Append(" = ");
-                AppendConstantValue(kvp.Value);
             }
         }
 
