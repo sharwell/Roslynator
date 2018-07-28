@@ -27,11 +27,14 @@ namespace Roslynator.Documentation
         private int _indentationLevel;
         private INamespaceSymbol _currentNamespace;
 
-        public DefinitionListBuilder(StringBuilder stringBuilder = null, DefinitionListOptions options = null)
+        public DefinitionListBuilder(DocumentationModel documentationModel, StringBuilder stringBuilder = null, DefinitionListOptions options = null)
         {
+            DocumentationModel = documentationModel;
             StringBuilder = stringBuilder ?? new StringBuilder();
             Options = options ?? DefinitionListOptions.Default;
         }
+
+        public DocumentationModel DocumentationModel { get; }
 
         public StringBuilder StringBuilder { get; }
 
@@ -77,11 +80,11 @@ namespace Roslynator.Documentation
                                         || methodSymbol.Parameters.Any();
                                 }
                             case MethodKind.Conversion:
-                            case MethodKind.ExplicitInterfaceImplementation:
                             case MethodKind.UserDefinedOperator:
                             case MethodKind.Ordinary:
-                            case MethodKind.StaticConstructor:
                                 return true;
+                            case MethodKind.ExplicitInterfaceImplementation:
+                            case MethodKind.StaticConstructor:
                             case MethodKind.Destructor:
                             case MethodKind.EventAdd:
                             case MethodKind.EventRaise:
@@ -115,13 +118,11 @@ namespace Roslynator.Documentation
             return DocumentationUtility.IsVisibleAttribute(attributeType);
         }
 
-        public void AppendSymbols(IEnumerable<INamedTypeSymbol> typeSymbols)
+        public void AppendSymbols()
         {
-            foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> grouping in typeSymbols
-               .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
-               .OrderBy(f => f.Key, NamespaceComparer))
+            foreach (NamespaceDocumentationModel namespaceModel in DocumentationModel.Namespaces.OrderBy(f => f.NamespaceSymbol, NamespaceComparer))
             {
-                AppendNamespace(grouping.Key, grouping);
+                AppendNamespace(namespaceModel);
             }
 
             StringBuilder sb = StringBuilderCache.GetInstance();
@@ -140,10 +141,10 @@ namespace Roslynator.Documentation
             Namespaces.Clear();
         }
 
-        private void AppendNamespace(
-            INamespaceSymbol namespaceSymbol,
-            IEnumerable<INamedTypeSymbol> types)
+        private void AppendNamespace(NamespaceDocumentationModel namespaceModel)
         {
+            INamespaceSymbol namespaceSymbol = namespaceModel.NamespaceSymbol;
+
             if (!namespaceSymbol.IsGlobalNamespace)
             {
                 Append(namespaceSymbol, _namespaceFormat);
@@ -151,7 +152,7 @@ namespace Roslynator.Documentation
             }
 
             _currentNamespace = namespaceSymbol;
-            AppendTypes(types);
+            AppendTypes(namespaceModel.Types.Where(f => f.Symbol.ContainingType == null));
             _currentNamespace = null;
 
             if (!namespaceSymbol.IsGlobalNamespace)
@@ -161,9 +162,9 @@ namespace Roslynator.Documentation
             }
         }
 
-        private void AppendTypes(IEnumerable<INamedTypeSymbol> typeSymbols, bool insertNewLineBeforeFirstType = false)
+        private void AppendTypes(IEnumerable<TypeDocumentationModel> types, bool insertNewLineBeforeFirstType = false)
         {
-            using (IEnumerator<INamedTypeSymbol> en = typeSymbols.OrderBy(f => f, TypeComparer).GetEnumerator())
+            using (IEnumerator<TypeDocumentationModel> en = types.OrderBy(f => f.TypeSymbol, TypeComparer).GetEnumerator())
             {
                 if (en.MoveNext())
                 {
@@ -177,7 +178,7 @@ namespace Roslynator.Documentation
                         AppendAttributes(en.Current);
 
                         Append(SymbolDefinitionBuilder.GetDisplayParts(
-                            en.Current,
+                            en.Current.TypeSymbol,
                             _typeFormat,
                             SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
                             attributePredicate: _ => false));
@@ -200,12 +201,11 @@ namespace Roslynator.Documentation
                                 {
                                     BeginTypeContent();
 
-                                    foreach (ISymbol member in en.Current.GetMembers())
+                                    foreach (IFieldSymbol field in en.Current.GetFields())
                                     {
-                                        if (member.Kind == SymbolKind.Field
-                                            && member.DeclaredAccessibility == Accessibility.Public)
+                                        if (field.DeclaredAccessibility == Accessibility.Public)
                                         {
-                                            Append(member, _enumFieldFormat);
+                                            Append(field, _enumFieldFormat);
                                             Append(",");
                                             AppendLine();
                                         }
@@ -267,11 +267,11 @@ namespace Roslynator.Documentation
             AppendLine("}");
         }
 
-        private void AppendMembers(INamedTypeSymbol typeSymbol)
+        private void AppendMembers(TypeDocumentationModel typeModel)
         {
             bool isAny = false;
 
-            using (IEnumerator<ISymbol> en = typeSymbol.GetMembers(IsVisibleMember)
+            using (IEnumerator<ISymbol> en = typeModel.Members.Where(f => IsVisibleMember(f))
                 .OrderBy(f => f, MemberComparer)
                 .GetEnumerator())
             {
@@ -281,7 +281,8 @@ namespace Roslynator.Documentation
 
                     while (true)
                     {
-                        AppendAttributes(en.Current);
+                        //TODO: 
+                        AppendAttributes(DocumentationModel.GetMemberModel(en.Current));
                         Append(en.Current.ToDisplayParts(_memberFormat));
 
                         if (en.Current.Kind != SymbolKind.Property)
@@ -314,12 +315,12 @@ namespace Roslynator.Documentation
                 }
             }
 
-            AppendTypes(typeSymbol.GetTypeMembers().Where(f => IsVisibleType(f)), insertNewLineBeforeFirstType: isAny);
+            AppendTypes(typeModel.Types.Where(f => IsVisibleType(f.TypeSymbol)), insertNewLineBeforeFirstType: isAny);
         }
 
-        private void AppendAttributes(ISymbol symbol)
+        private void AppendAttributes(SymbolDocumentationModel model)
         {
-            using (IEnumerator<AttributeData> en = symbol.GetAttributes()
+            using (IEnumerator<AttributeData> en = model.Attributes
                 .Where(f => IsVisibleAttribute(f.AttributeClass))
                 .OrderBy(f => f.AttributeClass, TypeComparer).GetEnumerator())
             {

@@ -6,12 +6,12 @@
 | ----- | ------- |
 | [B](B/README.md) | |
 | [C](C/README.md) | |
-| [Foo](Foo/README.md) | |
+| [Foo](Foo/README.md) | a → > b [Foo](Foo/README.md) |
 | [FooAttribute](FooAttribute/README.md) | |
 | [FooCollection](FooCollection/README.md) | |
 | [FooDic\<TKey, TValue>](FooDic-2/README.md) | |
 | [FooEvent](FooEvent/README.md) | |
-| [FooExtensions](FooExtensions/README.md) | |
+| [FooExtensions](FooExtensions/README.md) | fx |
 
 ## Interfaces
 
@@ -30,5 +30,5 @@
 
 | Delegate | Summary |
 | -------- | ------- |
-| [FooDelegate](FooDelegate/README.md) | |
+| [FooDelegate](FooDelegate/README.md) | del |
 

@@ -60,7 +60,7 @@ namespace Roslynator.Documentation
 
                 while (i >= 0
                     && j >= 0
-                    && symbols[i] == ContainingModel.SymbolAndBaseTypesAndNamespaces[j])
+                    && SymbolsEqual(symbols[i], ContainingModel.SymbolAndBaseTypesAndNamespaces[j]))
                 {
                     count++;
                     i--;
@@ -108,6 +108,17 @@ namespace Roslynator.Documentation
 
                 return StringBuilderCache.GetStringAndFree(sb);
             }
+        }
+
+        private static bool SymbolsEqual(ISymbol symbol1, ISymbol symbol2)
+        {
+            if (symbol1.Kind == SymbolKind.Namespace)
+            {
+                return symbol2.Kind == SymbolKind.Namespace
+                    && MetadataNameEqualityComparer<INamespaceSymbol>.Instance.Equals((INamespaceSymbol)symbol1, (INamespaceSymbol)symbol2);
+            }
+
+            return symbol1 == symbol2;
         }
     }
 }

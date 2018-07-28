@@ -23,7 +23,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.0\Roslynator.Documentation.DocumentationTest.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\Roslynator.Documentation.TestProject.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,6 +32,10 @@
 
   <ItemGroup>
     <PackageReference Include="System.Collections.Immutable" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSharp\CSharp.csproj" />
   </ItemGroup>
 
 </Project>

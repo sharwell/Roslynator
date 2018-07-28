@@ -14,6 +14,7 @@
 | [SyntaxExtensions](SyntaxExtensions/README.md) | A set of extension method for a syntax\. |
 | [SyntaxListSelection\<TNode>](SyntaxListSelection-1/README.md) | Represents selected nodes in a [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)\. |
 | [SyntaxTreeExtensions](SyntaxTreeExtensions/README.md) | A set of extension methods for [SyntaxTree](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtree)\. |
+| [WorkspaceExtensions](WorkspaceExtensions/README.md) | A set of extension methods for the workspace layer\. |
 
 ## Structs
 

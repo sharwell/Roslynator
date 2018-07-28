@@ -361,7 +361,7 @@ namespace Roslynator.Documentation
                             methodSymbol.Parameters,
                             Resources.ParametersTitle,
                             3,
-                            Resources.NameTitle,
+                            Resources.NameTitle, //TODO: ParameterTitle
                             Resources.SummaryTitle,
                             SymbolDisplayFormats.TypeName);
 
@@ -612,64 +612,44 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteDerived(ITypeSymbol typeSymbol)
+        public virtual void WriteDerived(IEnumerable<INamedTypeSymbol> derivedTypes)
         {
-            TypeKind typeKind = typeSymbol.TypeKind;
-
-            if (typeKind.Is(TypeKind.Class, TypeKind.Interface)
-                && !typeSymbol.IsStatic)
+            using (IEnumerator<INamedTypeSymbol> en = derivedTypes
+                .OrderBy(f => f.ToDisplayString(FormatProvider.DerivedFormat))
+                .GetEnumerator())
             {
-                using (IEnumerator<INamedTypeSymbol> en = DocumentationModel
-                    .GetDerivedTypes(typeSymbol, includeInterfaces: true)
-                    .OrderBy(f => f.ToDisplayString(FormatProvider.DerivedFormat))
-                    .GetEnumerator())
+                if (en.MoveNext())
                 {
-                    if (en.MoveNext())
+                    WriteHeading(3, Resources.DerivedTitle);
+
+                    int count = 0;
+
+                    WriteStartBulletList();
+
+                    do
                     {
-                        WriteHeading(3, Resources.DerivedTitle);
+                        WriteBulletItemLink(en.Current, FormatProvider.DerivedFormat);
 
-                        int count = 0;
+                        count++;
 
-                        WriteStartBulletList();
-
-                        do
+                        if (count == Options.MaxDerivedItems)
                         {
-                            WriteBulletItemLink(en.Current, FormatProvider.DerivedFormat);
+                            if (en.MoveNext())
+                                WriteBulletItem(Resources.Ellipsis);
 
-                            count++;
-
-                            if (count == Options.MaxDerivedItems)
-                            {
-                                if (en.MoveNext())
-                                    WriteBulletItem(Resources.Ellipsis);
-
-                                break;
-                            }
+                            break;
                         }
-                        while (en.MoveNext());
-
-                        WriteEndBulletList();
                     }
+                    while (en.MoveNext());
+
+                    WriteEndBulletList();
                 }
             }
         }
 
-        public virtual void WriteImplements(ITypeSymbol typeSymbol)
+        public virtual void WriteImplements(IEnumerable<INamedTypeSymbol> implementedTypes)
         {
-            if (typeSymbol.IsStatic)
-                return;
-
-            if (typeSymbol.TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
-                return;
-
-            ImmutableArray<INamedTypeSymbol> allInterfaces = typeSymbol.AllInterfaces;
-
-            if (allInterfaces.Any(f => f.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IEnumerable_T))
-            {
-                allInterfaces = allInterfaces.RemoveAll(f => f.SpecialType == SpecialType.System_Collections_IEnumerable);
-            }
-
-            using (IEnumerator<INamedTypeSymbol> en = allInterfaces
+            using (IEnumerator<INamedTypeSymbol> en = implementedTypes
                 .OrderBy(f => f.ToDisplayString(FormatProvider.TypeFormat))
                 .GetEnumerator())
             {
@@ -828,10 +808,10 @@ namespace Roslynator.Documentation
             WriteTable(explicitInterfaceImplementations, Resources.ExplicitInterfaceImplementationsTitle, 2, Resources.MemberTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName);
         }
 
-        public virtual void WriteExtensionMethods(ITypeSymbol typeSymbol)
+        public virtual void WriteExtensionMethods(IEnumerable<IMethodSymbol> methods)
         {
             WriteTable(
-                DocumentationModel.GetExtensionMethods(typeSymbol),
+                methods,
                 Resources.ExtensionMethodsTitle,
                 2,
                 Resources.MethodTitle,
@@ -1023,6 +1003,7 @@ namespace Roslynator.Documentation
         {
             string url = GetUrl(symbolModel, canCreateExternalUrl);
 
+            //TODO: link or bold
             WriteLinkOrText(symbolModel.Symbol.ToDisplayString(format, additionalOptions), url);
         }
 
@@ -1050,8 +1031,6 @@ namespace Roslynator.Documentation
             bool containingTypes = true,
             bool canCreateExternalUrl = true)
         {
-            SymbolDocumentationModel symbolModel = GetSymbolModel(typeSymbol);
-
             ImmutableArray<ITypeSymbol> typeArguments = typeSymbol.TypeArguments;
 
             if (typeSymbol.IsNullableType())

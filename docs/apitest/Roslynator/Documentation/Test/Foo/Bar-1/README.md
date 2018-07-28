@@ -8,10 +8,14 @@ Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 | Method | Summary |
 | ------ | ------- |
-| Bar\(\) | |
-| Bar\<T>\(String, String\) | |
+| Bar\(\) | abc |
+| Bar\<T>\(String, String\) | s **value** **T** |
 
 ## Bar\<T>\(String, String\)
+
+### Summary
+
+s **value** **T**
 
 ```csharp
 public void Bar<T>(string value, string value2)
@@ -27,7 +31,7 @@ public void Bar<T>(string value, string value2)
 
 | Name | Summary |
 | ---- | ------- |
-| value | |
+| value | p |
 | value2 | |
 
 #### Returns
@@ -35,6 +39,10 @@ public void Bar<T>(string value, string value2)
 [Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## Bar\(\)
+
+### Summary
+
+abc
 
 ```csharp
 public void Bar()

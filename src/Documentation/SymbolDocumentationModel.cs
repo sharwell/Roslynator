@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Globalization;
@@ -10,22 +9,19 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    //TODO: add TypeSymbolDocumentationModel
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
-    public sealed class SymbolDocumentationModel
+    public class SymbolDocumentationModel : IEquatable<SymbolDocumentationModel>
     {
-        private ImmutableArray<ISymbol> _members;
-        private ImmutableArray<ISymbol> _membersIncludingInherited;
+        private ImmutableArray<AttributeData> _attributes;
+        private string _commentId;
 
-        private SymbolDocumentationModel(
+        protected SymbolDocumentationModel(
             ISymbol symbol,
-            string commentId,
             ImmutableArray<ISymbol> symbolAndBaseTypesAndNamespaces,
             ImmutableArray<string> nameAndBaseNamesAndNamespaceNames,
             DocumentationModel documentationModel)
         {
             Symbol = symbol;
-            CommentId = commentId;
             SymbolAndBaseTypesAndNamespaces = symbolAndBaseTypesAndNamespaces;
             NameAndBaseNamesAndNamespaceNames = nameAndBaseNamesAndNamespaceNames;
             DocumentationModel = documentationModel;
@@ -33,7 +29,10 @@ namespace Roslynator.Documentation
 
         public ISymbol Symbol { get; }
 
-        public string CommentId { get; }
+        public string CommentId
+        {
+            get { return _commentId ?? (_commentId = Symbol.GetDocumentationCommentId()); }
+        }
 
         internal ImmutableArray<ISymbol> SymbolAndBaseTypesAndNamespaces { get; }
 
@@ -41,108 +40,45 @@ namespace Roslynator.Documentation
 
         internal DocumentationModel DocumentationModel { get; }
 
+        public ImmutableArray<AttributeData> Attributes
+        {
+            get
+            {
+                if (_attributes.IsDefault)
+                    _attributes = Symbol.GetAttributes();
+
+                return _attributes;
+            }
+        }
+
+        public bool IsObsolete
+        {
+            get { return Attributes.Any(f => f.AttributeClass.HasMetadataName(MetadataNames.System_ObsoleteAttribute)); }
+        }
+
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private string DebuggerDisplay
         {
             get { return $"{Symbol.Kind} {Symbol.ToDisplayString(Roslynator.SymbolDisplayFormats.Test)}"; }
         }
 
-        public ImmutableArray<ISymbol> Members
-        {
-            get
-            {
-                if (_members.IsDefault)
-                {
-                    _members = (Symbol is ITypeSymbol typeSymbol)
-                        ? typeSymbol.GetMembers(f => DocumentationModel.IsVisible(f))
-                        : ImmutableArray<ISymbol>.Empty;
-                }
-
-                return _members;
-            }
-        }
-
-        public ImmutableArray<ISymbol> MembersIncludingInherited
-        {
-            get
-            {
-                if (_membersIncludingInherited.IsDefault)
-                {
-                    if (Symbol.IsStatic)
-                    {
-                        _membersIncludingInherited = Members;
-                    }
-                    else
-                    {
-                        _membersIncludingInherited = (Symbol is ITypeSymbol typeSymbol)
-                            ? typeSymbol.GetMembers(f => DocumentationModel.IsVisible(f), includeInherited: true)
-                            : ImmutableArray<ISymbol>.Empty;
-                    }
-                }
-
-                return _membersIncludingInherited;
-            }
-        }
-
-        internal static SymbolDocumentationModel Create(DocumentationModel compilation)
+        internal static SymbolDocumentationModel Create(DocumentationModel documentationModel)
         {
             return new SymbolDocumentationModel(
                 symbol: null,
-                commentId: null,
                 symbolAndBaseTypesAndNamespaces: ImmutableArray<ISymbol>.Empty,
                 nameAndBaseNamesAndNamespaceNames: ImmutableArray<string>.Empty,
-                documentationModel: compilation);
+                documentationModel: documentationModel);
         }
 
-        public static SymbolDocumentationModel Create(ISymbol symbol, DocumentationModel compilation)
+        public static SymbolDocumentationModel Create(ISymbol symbol, DocumentationModel documentationModel)
         {
             ImmutableArray<ISymbol>.Builder symbols = ImmutableArray.CreateBuilder<ISymbol>();
             ImmutableArray<string>.Builder names = ImmutableArray.CreateBuilder<string>();
 
-            if (symbol.Kind == SymbolKind.Namespace
-                && ((INamespaceSymbol)symbol).IsGlobalNamespace)
-            {
-                names.Add(WellKnownNames.GlobalNamespaceName);
-            }
-            else if (symbol.Kind == SymbolKind.Method
-                && ((IMethodSymbol)symbol).MethodKind == MethodKind.Constructor)
-            {
-                names.Add(WellKnownNames.ConstructorName);
-            }
-            else if (symbol.Kind == SymbolKind.Property
-                && ((IPropertySymbol)symbol).IsIndexer)
-            {
-                names.Add("Item");
-            }
-            else
-            {
-                ISymbol explicitImplementation = symbol.GetFirstExplicitInterfaceImplementation();
+            ISymbol explicitImplementation = symbol.GetFirstExplicitInterfaceImplementation();
 
-                if (explicitImplementation != null)
-                {
-                    string name = explicitImplementation
-                        .ToDisplayParts(SymbolDisplayFormats.ExplicitImplementationFullName, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName)
-                        .Where(part => part.Kind != SymbolDisplayPartKind.Space)
-                        .Select(part => (part.IsPunctuation()) ? part.WithText("-") : part)
-                        .ToImmutableArray()
-                        .ToDisplayString();
-
-                    names.Add(name);
-                }
-                else
-                {
-                    int arity = symbol.GetArity();
-
-                    if (arity > 0)
-                    {
-                        names.Add(symbol.Name + "-" + arity.ToString(CultureInfo.InvariantCulture));
-                    }
-                    else
-                    {
-                        names.Add(symbol.Name);
-                    }
-                }
-            }
+            names.Add(symbol.Name);
 
             symbols.Add(symbol);
 
@@ -165,11 +101,8 @@ namespace Roslynator.Documentation
             {
                 if (containingNamespace.IsGlobalNamespace)
                 {
-                    if (symbol.Kind != SymbolKind.Namespace)
-                    {
-                        names.Add(WellKnownNames.GlobalNamespaceName);
-                        symbols.Add(containingNamespace);
-                    }
+                    names.Add(WellKnownNames.GlobalNamespaceName);
+                    symbols.Add(containingNamespace);
                 }
                 else
                 {
@@ -187,151 +120,24 @@ namespace Roslynator.Documentation
 
             return new SymbolDocumentationModel(
                 symbol,
-                symbol.GetDocumentationCommentId(),
                 symbols.ToImmutableArray(),
                 names.ToImmutableArray(),
-                compilation);
+                documentationModel);
         }
 
-        public ImmutableArray<ISymbol> GetMembers(bool includeInherited = false)
+        public override bool Equals(object obj)
         {
-            return (includeInherited) ? MembersIncludingInherited : Members;
+            return (object)this == obj;
         }
 
-        public IEnumerable<IFieldSymbol> GetFields(bool includeInherited = false)
+        public bool Equals(SymbolDocumentationModel other)
         {
-            foreach (ISymbol member in (GetMembers(includeInherited)))
-            {
-                if (member.Kind == SymbolKind.Field)
-                    yield return (IFieldSymbol)member;
-            }
+            return Equals((object)other);
         }
 
-        public IEnumerable<IMethodSymbol> GetConstructors()
+        public override int GetHashCode()
         {
-            foreach (ISymbol member in Members)
-            {
-                if (member.Kind == SymbolKind.Method)
-                {
-                    var methodSymbol = (IMethodSymbol)member;
-
-                    if (methodSymbol.MethodKind == MethodKind.Constructor)
-                    {
-                        if (methodSymbol.ContainingType.TypeKind != TypeKind.Struct
-                            || methodSymbol.Parameters.Any())
-                        {
-                            yield return methodSymbol;
-                        }
-                    }
-                }
-            }
-        }
-
-        public IEnumerable<IPropertySymbol> GetProperties(bool includeInherited = false)
-        {
-            foreach (ISymbol member in (GetMembers(includeInherited)))
-            {
-                if (member.Kind == SymbolKind.Property)
-                    yield return (IPropertySymbol)member;
-            }
-        }
-
-        public IEnumerable<IMethodSymbol> GetMethods(bool includeInherited = false)
-        {
-            foreach (ISymbol member in (GetMembers(includeInherited)))
-            {
-                if (member.Kind == SymbolKind.Method)
-                {
-                    var methodSymbol = (IMethodSymbol)member;
-
-                    if (methodSymbol.MethodKind == MethodKind.Ordinary)
-                        yield return methodSymbol;
-                }
-            }
-        }
-
-        public IEnumerable<IMethodSymbol> GetOperators(bool includeInherited = false)
-        {
-            foreach (ISymbol member in (GetMembers(includeInherited)))
-            {
-                if (member.Kind == SymbolKind.Method)
-                {
-                    var methodSymbol = (IMethodSymbol)member;
-
-                    if (methodSymbol.MethodKind.Is(
-                        MethodKind.UserDefinedOperator,
-                        MethodKind.Conversion))
-                    {
-                        yield return methodSymbol;
-                    }
-                }
-            }
-        }
-
-        public IEnumerable<IEventSymbol> GetEvents(bool includeInherited = false)
-        {
-            foreach (ISymbol member in (GetMembers(includeInherited)))
-            {
-                if (member.Kind == SymbolKind.Event)
-                    yield return (IEventSymbol)member;
-            }
-        }
-
-        public IEnumerable<ISymbol> GetExplicitInterfaceImplementations()
-        {
-            if (!(Symbol is ITypeSymbol typeSymbol))
-                yield break;
-
-            foreach (ISymbol member in typeSymbol.GetMembers())
-            {
-                switch (member.Kind)
-                {
-                    case SymbolKind.Event:
-                        {
-                            var eventSymbol = (IEventSymbol)member;
-
-                            if (!eventSymbol.ExplicitInterfaceImplementations.IsDefaultOrEmpty)
-                                yield return eventSymbol;
-
-                            break;
-                        }
-                    case SymbolKind.Method:
-                        {
-                            var methodSymbol = (IMethodSymbol)member;
-
-                            if (methodSymbol.MethodKind != MethodKind.ExplicitInterfaceImplementation)
-                                break;
-
-                            ImmutableArray<IMethodSymbol> explicitInterfaceImplementations = methodSymbol.ExplicitInterfaceImplementations;
-
-                            if (explicitInterfaceImplementations.IsDefaultOrEmpty)
-                                break;
-
-                            if (methodSymbol.MetadataName.EndsWith(".get_Item", StringComparison.Ordinal))
-                            {
-                                if (explicitInterfaceImplementations[0].MethodKind == MethodKind.PropertyGet)
-                                    break;
-                            }
-                            else if (methodSymbol.MetadataName.EndsWith(".set_Item", StringComparison.Ordinal))
-                            {
-                                if (explicitInterfaceImplementations[0].MethodKind == MethodKind.PropertySet)
-                                    break;
-                            }
-
-                            yield return methodSymbol;
-                            break;
-                        }
-                    case SymbolKind.Property:
-                        {
-                            var propertySymbol = (IPropertySymbol)member;
-
-                            if (!propertySymbol.ExplicitInterfaceImplementations.IsDefaultOrEmpty)
-                                yield return propertySymbol;
-
-                            break;
-                        }
-                }
-            }
+            return Symbol.GetHashCode();
         }
     }
 }

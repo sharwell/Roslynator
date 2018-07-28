@@ -8,10 +8,14 @@ Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 | Property | Summary |
 | -------- | ------- |
-| Item\[Int32, Int32\] | |
-| Item\[Int32\] | |
+| Item\[Int32, Int32\] | s |
+| Item\[Int32\] | s |
 
 ## Item\[Int32\]
+
+### Summary
+
+s
 
 ```csharp
 public Foo this[int index] { get; set; }
@@ -21,13 +25,19 @@ public Foo this[int index] { get; set; }
 
 | Parameter | Summary |
 | --------- | ------- |
-| index | |
+| index | p |
 
 #### Property Value
 
 [Foo](../README.md)
 
+v
+
 ## Item\[Int32, Int32\]
+
+### Summary
+
+s
 
 ```csharp
 public Foo this[int index, int index2] { get; set; }
@@ -37,10 +47,11 @@ public Foo this[int index, int index2] { get; set; }
 
 | Parameter | Summary |
 | --------- | ------- |
-| index | |
-| index2 | |
+| index | p |
+| index2 | p |
 
 #### Property Value
 
 [Foo](../README.md)
 
+v

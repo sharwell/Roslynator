@@ -17,6 +17,8 @@
 | [SyntaxAccessibility](SyntaxAccessibility/README.md) | A set of static methods that are related to C\# accessibility\. |
 | [SyntaxExtensions](SyntaxExtensions/README.md) | A set of extension methods for syntax \(types derived from [CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)\)\. |
 | [SyntaxInfo](SyntaxInfo/README.md) | Serves as a factory for types in Roslynator\.CSharp\.Syntax namespace\. |
+| [WorkspaceExtensions](WorkspaceExtensions/README.md) | A set of extension methods for the workspace layer\. |
+| [WorkspaceSyntaxExtensions](WorkspaceSyntaxExtensions/README.md) | A set of extension methods for syntax\. These methods are dependent on the workspace layer\. |
 
 ## Structs
 
