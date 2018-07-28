@@ -4,7 +4,6 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
@@ -18,47 +17,44 @@ namespace Roslynator.Documentation
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private string DebuggerDisplay => Name;
 
-        public abstract DocumentationUrlInfo CreateUrl(SymbolDocumentationModel symbolModel);
+        public abstract DocumentationUrlInfo CreateUrl(IDocumentationFile documentationFile);
 
         private class MicrosoftDocsUrlProvider : ExternalUrlProvider
         {
             public override string Name => "Microsoft Docs";
 
-            public override DocumentationUrlInfo CreateUrl(SymbolDocumentationModel symbolModel)
+            public override DocumentationUrlInfo CreateUrl(IDocumentationFile documentationFile)
             {
-                if (symbolModel.SymbolAndBaseTypesAndNamespaces.LastOrDefault()?.Kind == SymbolKind.Namespace)
+                ImmutableArray<string> names = documentationFile.Names;
+
+                switch (names.Last())
                 {
-                    ImmutableArray<string> names = symbolModel.NameAndBaseNamesAndNamespaceNames;
+                    case "System":
+                    case "Microsoft":
+                        {
+                            const string baseUrl = "https://docs.microsoft.com/en-us/dotnet/api/";
 
-                    switch (names.Last())
-                    {
-                        case "System":
-                        case "Microsoft":
+                            int capacity = baseUrl.Length;
+
+                            foreach (string name in names)
+                                capacity += name.Length;
+
+                            capacity += names.Length - 1;
+
+                            StringBuilder sb = StringBuilderCache.GetInstance(capacity);
+
+                            sb.Append(baseUrl);
+
+                            sb.Append(names.Last().ToLowerInvariant());
+
+                            for (int i = names.Length - 2; i >= 0; i--)
                             {
-                                const string baseUrl = "https://docs.microsoft.com/en-us/dotnet/api/";
-
-                                int capacity = baseUrl.Length;
-
-                                foreach (string name in names)
-                                    capacity += name.Length;
-
-                                capacity += names.Length - 1;
-
-                                StringBuilder sb = StringBuilderCache.GetInstance(capacity);
-
-                                sb.Append(baseUrl);
-
-                                sb.Append(names.Last().ToLowerInvariant());
-
-                                for (int i = names.Length - 2; i >= 0; i--)
-                                {
-                                    sb.Append(".");
-                                    sb.Append(names[i].ToLowerInvariant());
-                                }
-
-                                return new DocumentationUrlInfo(StringBuilderCache.GetStringAndFree(sb), DocumentationUrlKind.External);
+                                sb.Append(".");
+                                sb.Append(names[i].ToLowerInvariant());
                             }
-                    }
+
+                            return new DocumentationUrlInfo(StringBuilderCache.GetStringAndFree(sb), DocumentationUrlKind.External);
+                        }
                 }
 
                 return default;

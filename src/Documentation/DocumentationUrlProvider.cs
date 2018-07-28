@@ -20,17 +20,17 @@ namespace Roslynator.Documentation
 
         public ImmutableArray<ExternalUrlProvider> ExternalProviders { get; }
 
-        public SymbolDocumentationModel ContainingModel { get; set; }
+        public IDocumentationFile ContainingFile { get; set; }
 
-        public abstract string GetDocumentPath(DocumentationKind kind, SymbolDocumentationModel symbolModel);
+        public abstract string GetDocumentPath(DocumentationKind kind, IDocumentationFile documentationFile);
 
-        public abstract DocumentationUrlInfo GetLocalUrl(SymbolDocumentationModel symbolModel);
+        public abstract DocumentationUrlInfo GetLocalUrl(IDocumentationFile documentationFile);
 
-        public DocumentationUrlInfo GetExternalUrl(SymbolDocumentationModel symbolModel)
+        public DocumentationUrlInfo GetExternalUrl(IDocumentationFile documentationFile)
         {
             foreach (ExternalUrlProvider provider in ExternalProviders)
             {
-                DocumentationUrlInfo urlInfo = provider.CreateUrl(symbolModel);
+                DocumentationUrlInfo urlInfo = provider.CreateUrl(documentationFile);
 
                 if (urlInfo.Url != null)
                     return urlInfo;

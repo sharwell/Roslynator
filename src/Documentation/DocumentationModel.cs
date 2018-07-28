@@ -11,11 +11,9 @@ namespace Roslynator.Documentation
 {
     public class DocumentationModel
     {
-        private ImmutableArray<INamedTypeSymbol> _typeSymbols;
+        private ImmutableArray<NamespaceDocumentationModel> _namespaceModels;
 
         private ImmutableArray<TypeDocumentationModel> _typeModels;
-
-        private ImmutableArray<NamespaceDocumentationModel> _namespaceModels;
 
         private readonly Dictionary<ISymbol, SymbolDocumentationModel> _symbolDocumentationModels;
 
@@ -51,21 +49,6 @@ namespace Roslynator.Documentation
                 }
 
                 return _namespaceModels;
-            }
-        }
-
-        public ImmutableArray<INamedTypeSymbol> TypeSymbols
-        {
-            get
-            {
-                if (_typeSymbols.IsDefault)
-                {
-                    _typeSymbols = Assemblies
-                        .SelectMany(f => f.GetTypes(typeSymbol => IsVisible(typeSymbol)))
-                        .ToImmutableArray();
-                }
-
-                return _typeSymbols;
             }
         }
 
@@ -111,16 +94,42 @@ namespace Roslynator.Documentation
             }
         }
 
-        public ExtendedExternalTypesDocumentationModel ExtendedExternalTypes
+        public IEnumerable<TypeDocumentationModel> ExtendedExternalTypes()
         {
-            get { return new ExtendedExternalTypesDocumentationModel(this); }
+            return Iterator().Distinct().Select(f => GetTypeModel(f));
+
+            IEnumerable<INamedTypeSymbol> Iterator()
+            {
+                foreach (IMethodSymbol methodSymbol in GetExtensionMethods())
+                {
+                    INamedTypeSymbol typeSymbol = GetExternalSymbol(methodSymbol);
+
+                    if (typeSymbol != null)
+                        yield return typeSymbol;
+                }
+            }
+
+            INamedTypeSymbol GetExternalSymbol(IMethodSymbol methodSymbol)
+            {
+                INamedTypeSymbol type = GetExtendedTypeSymbol(methodSymbol);
+
+                if (type == null)
+                    return null;
+
+                foreach (IAssemblySymbol assembly in Assemblies)
+                {
+                    if (type.ContainingAssembly == assembly)
+                        return null;
+                }
+
+                return type;
+            }
         }
 
         public static INamedTypeSymbol GetExtendedTypeSymbol(IMethodSymbol methodSymbol)
         {
             ITypeSymbol type = methodSymbol.Parameters[0].Type.OriginalDefinition;
 
-            //TODO: array type
             switch (type.Kind)
             {
                 case SymbolKind.NamedType:
@@ -165,7 +174,7 @@ namespace Roslynator.Documentation
             if (_symbolDocumentationModels.TryGetValue(namespaceSymbol, out SymbolDocumentationModel model))
                 return (NamespaceDocumentationModel)model;
 
-            NamespaceDocumentationModel namespaceModel = NamespaceDocumentationModel.Create2(namespaceSymbol, this);
+            NamespaceDocumentationModel namespaceModel = NamespaceDocumentationModel.Create(namespaceSymbol, this);
 
             _symbolDocumentationModels[namespaceSymbol] = namespaceModel;
 
@@ -177,23 +186,11 @@ namespace Roslynator.Documentation
             if (_symbolDocumentationModels.TryGetValue(typeSymbol, out SymbolDocumentationModel model))
                 return (TypeDocumentationModel)model;
 
-            TypeDocumentationModel typeModel = TypeDocumentationModel.Create2(typeSymbol, this);
+            TypeDocumentationModel typeModel = TypeDocumentationModel.Create(typeSymbol, this);
 
             _symbolDocumentationModels[typeSymbol] = typeModel;
 
             return typeModel;
-        }
-
-        public MemberDocumentationModel GetMemberModel(ISymbol symbol)
-        {
-            if (_symbolDocumentationModels.TryGetValue(symbol, out SymbolDocumentationModel model))
-                return (MemberDocumentationModel)model;
-
-            MemberDocumentationModel memberModel = MemberDocumentationModel.Create2(symbol, this);
-
-            _symbolDocumentationModels[symbol] = memberModel;
-
-            return memberModel;
         }
 
         internal SymbolDocumentationModel GetSymbolModel(ISymbol symbol)
@@ -205,12 +202,12 @@ namespace Roslynator.Documentation
             {
                 case SymbolKind.Namespace:
                     {
-                        model = NamespaceDocumentationModel.Create2((INamespaceSymbol)symbol, this);
+                        model = NamespaceDocumentationModel.Create((INamespaceSymbol)symbol, this);
                         break;
                     }
                 case SymbolKind.NamedType:
                     {
-                        model = TypeDocumentationModel.Create2((INamedTypeSymbol)symbol, this);
+                        model = TypeDocumentationModel.Create((INamedTypeSymbol)symbol, this);
                         break;
                     }
                 case SymbolKind.Event:
@@ -218,13 +215,14 @@ namespace Roslynator.Documentation
                 case SymbolKind.Method:
                 case SymbolKind.Property:
                     {
-                        model = MemberDocumentationModel.Create2(symbol, this);
+                        //TODO: 
+                        model = MemberDocumentationModel.Create(symbol, default, this);
                         break;
                     }
                 case SymbolKind.Parameter:
                 case SymbolKind.TypeParameter:
                     {
-                        model = SymbolDocumentationModel.Create(symbol, this);
+                        model = new SymbolDocumentationModel(symbol, this);
                         break;
                     }
                 default:

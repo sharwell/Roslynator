@@ -56,8 +56,10 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteMember(ISymbol symbol, ImmutableArray<ISymbol> symbols)
+        public virtual void WriteMember(MemberDocumentationModel model)
         {
+            ISymbol symbol = model.Symbol;
+
             foreach (MemberDocumentationParts part in EnabledAndSortedMemberParts)
             {
                 switch (part)
@@ -74,13 +76,13 @@ namespace Roslynator.Documentation
                         }
                     case MemberDocumentationParts.Title:
                         {
-                            WriteTitle(symbol, hasOverloads: symbols.Length > 1);
+                            WriteTitle(symbol, isOverloaded: model.IsOverloaded);
                             break;
                         }
                 }
             }
 
-            if (symbols.Length == 1)
+            if (!model.IsOverloaded)
             {
                 WriteContent(symbol);
             }
@@ -88,7 +90,7 @@ namespace Roslynator.Documentation
             {
                 //TODO: create link for overloads
                 Writer.WriteTable(
-                    symbols,
+                    model.Overloads,
                     heading: Resources.OverloadsTitle,
                     headingLevel: 2,
                     header1: Resources.GetName(symbol),
@@ -97,7 +99,7 @@ namespace Roslynator.Documentation
                     additionalOptions: SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName,
                     addLink: false);
 
-                foreach (ISymbol symbol2 in symbols)
+                foreach (ISymbol symbol2 in model.Overloads)
                 {
                     BaseHeadingLevel++;
 
@@ -111,11 +113,11 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteTitle(ISymbol symbol, bool hasOverloads)
+        public virtual void WriteTitle(ISymbol symbol, bool isOverloaded)
         {
             Writer.WriteStartHeading(1);
 
-            SymbolDisplayFormat format = (hasOverloads)
+            SymbolDisplayFormat format = (isOverloaded)
                 ? FormatProvider.OverloadedMemberTitleFormat
                 : FormatProvider.MemberTitleFormat;
 
@@ -272,11 +274,11 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override void WriteTitle(ISymbol symbol, bool hasOverloads)
+            public override void WriteTitle(ISymbol symbol, bool isOverloaded)
             {
                 Writer.WriteStartHeading(1);
 
-                if (!hasOverloads)
+                if (!isOverloaded)
                 {
                     Writer.WriteString(symbol.ToDisplayString(FormatProvider.SimpleDefinitionFormat));
                     Writer.WriteSpace();

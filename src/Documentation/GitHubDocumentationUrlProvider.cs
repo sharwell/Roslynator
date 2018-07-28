@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
 using System.Text;
-using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
@@ -18,7 +17,7 @@ namespace Roslynator.Documentation
         {
         }
 
-        public override string GetDocumentPath(DocumentationKind kind, SymbolDocumentationModel symbolModel)
+        public override string GetDocumentPath(DocumentationKind kind, IDocumentationFile documentationFile)
         {
             switch (kind)
             {
@@ -27,7 +26,7 @@ namespace Roslynator.Documentation
                 case DocumentationKind.Namespace:
                 case DocumentationKind.Type:
                 case DocumentationKind.Member:
-                    return GetUrl(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, Path.DirectorySeparatorChar);
+                    return GetUrl(ReadMeFileName, documentationFile.Names, Path.DirectorySeparatorChar);
                 case DocumentationKind.ObjectModel:
                     return WellKnownNames.ObjectModelFileName;
                 case DocumentationKind.ExtendedExternalTypes:
@@ -37,7 +36,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public override DocumentationUrlInfo GetLocalUrl(SymbolDocumentationModel symbolModel)
+        public override DocumentationUrlInfo GetLocalUrl(IDocumentationFile documentationFile)
         {
             string url = CreateLocalUrl();
 
@@ -45,29 +44,29 @@ namespace Roslynator.Documentation
 
             string CreateLocalUrl()
             {
-                if (ContainingModel == null)
-                    return GetUrl(ReadMeFileName, symbolModel.NameAndBaseNamesAndNamespaceNames, '/');
+                if (ContainingFile == null)
+                    return GetUrl(ReadMeFileName, documentationFile.Names, '/');
 
-                if (ContainingModel == symbolModel)
+                if (ContainingFile == documentationFile)
                     return "./" + ReadMeFileName;
 
                 int count = 0;
 
-                ImmutableArray<ISymbol> symbols = symbolModel.SymbolAndBaseTypesAndNamespaces;
+                ImmutableArray<string> names = documentationFile.Names;
 
-                int i = symbols.Length - 1;
-                int j = ContainingModel.SymbolAndBaseTypesAndNamespaces.Length - 1;
+                int i = names.Length - 1;
+                int j = ContainingFile.Names.Length - 1;
 
                 while (i >= 0
                     && j >= 0
-                    && SymbolsEqual(symbols[i], ContainingModel.SymbolAndBaseTypesAndNamespaces[j]))
+                    && string.Equals(names[i], ContainingFile.Names[j], StringComparison.Ordinal))
                 {
                     count++;
                     i--;
                     j--;
                 }
 
-                int diff = ContainingModel.SymbolAndBaseTypesAndNamespaces.Length - count;
+                int diff = ContainingFile.Names.Length - count;
 
                 StringBuilder sb = StringBuilderCache.GetInstance();
 
@@ -82,8 +81,6 @@ namespace Roslynator.Documentation
                         diff--;
                     }
                 }
-
-                ImmutableArray<string> names = symbolModel.NameAndBaseNamesAndNamespaceNames;
 
                 i = names.Length - 1 - count;
 
@@ -108,17 +105,6 @@ namespace Roslynator.Documentation
 
                 return StringBuilderCache.GetStringAndFree(sb);
             }
-        }
-
-        private static bool SymbolsEqual(ISymbol symbol1, ISymbol symbol2)
-        {
-            if (symbol1.Kind == SymbolKind.Namespace)
-            {
-                return symbol2.Kind == SymbolKind.Namespace
-                    && MetadataNameEqualityComparer<INamespaceSymbol>.Instance.Equals((INamespaceSymbol)symbol1, (INamespaceSymbol)symbol2);
-            }
-
-            return symbol1 == symbol2;
         }
     }
 }

@@ -19,9 +19,9 @@ namespace Roslynator.Documentation
         {
             options = options ?? DefinitionListOptions.Default;
 
-            var builder = new DefinitionListBuilder(documentationModel, options: options);
+            var builder = new DefinitionListBuilder(options: options);
 
-            builder.AppendSymbols();
+            builder.Append(documentationModel);
 
             string content = builder.ToString();
 

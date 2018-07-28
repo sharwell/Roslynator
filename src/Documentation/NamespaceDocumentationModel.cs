@@ -7,17 +7,17 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    public sealed class NamespaceDocumentationModel : SymbolDocumentationModel
+    public sealed class NamespaceDocumentationModel : SymbolDocumentationModel, IDocumentationFile
     {
         private ImmutableArray<TypeDocumentationModel> _types;
 
         private NamespaceDocumentationModel(
             INamespaceSymbol namespaceSymbol,
-            ImmutableArray<ISymbol> symbolAndBaseTypesAndNamespaces,
             ImmutableArray<string> nameAndBaseNamesAndNamespaceNames,
-            DocumentationModel documentationModel) : base(namespaceSymbol, symbolAndBaseTypesAndNamespaces, nameAndBaseNamesAndNamespaceNames, documentationModel)
+            DocumentationModel documentationModel) : base(namespaceSymbol, documentationModel)
         {
             NamespaceSymbol = namespaceSymbol;
+            Names = nameAndBaseNamesAndNamespaceNames;
         }
 
         public INamespaceSymbol NamespaceSymbol { get; }
@@ -29,13 +29,17 @@ namespace Roslynator.Documentation
                 if (_types.IsDefault)
                 {
                     _types = DocumentationModel.Types
-                        .Where(f => f.NamespaceModel.Equals(this))
+                        .Where(f => MetadataNameEqualityComparer<INamespaceSymbol>.Instance.Equals(f.Symbol.ContainingNamespace, NamespaceSymbol))
                         .ToImmutableArray();
                 }
 
                 return _types;
             }
         }
+
+        public ImmutableArray<string> Names { get; }
+
+        public DocumentationKind Kind => DocumentationKind.Namespace;
 
         internal IEnumerable<IGrouping<TypeKind, TypeDocumentationModel>> GetTypesByKind(NamespaceDocumentationParts parts, IComparer<NamespaceDocumentationParts> comparer)
         {
@@ -69,12 +73,9 @@ namespace Roslynator.Documentation
             }
         }
 
-        internal static NamespaceDocumentationModel Create2(INamespaceSymbol namespaceSymbol, DocumentationModel documentationModel)
+        internal static NamespaceDocumentationModel Create(INamespaceSymbol namespaceSymbol, DocumentationModel documentationModel)
         {
-            ImmutableArray<ISymbol>.Builder symbols = ImmutableArray.CreateBuilder<ISymbol>();
             ImmutableArray<string>.Builder names = ImmutableArray.CreateBuilder<string>();
-
-            symbols.Add(namespaceSymbol);
 
             if (namespaceSymbol.IsGlobalNamespace)
             {
@@ -89,8 +90,6 @@ namespace Roslynator.Documentation
 
             while (containingNamespace?.IsGlobalNamespace == false)
             {
-                symbols.Add(containingNamespace);
-
                 names.Add(containingNamespace.Name);
 
                 containingNamespace = containingNamespace.ContainingNamespace;
@@ -98,7 +97,6 @@ namespace Roslynator.Documentation
 
             return new NamespaceDocumentationModel(
                 namespaceSymbol,
-                symbols.ToImmutableArray(),
                 names.ToImmutableArray(),
                 documentationModel);
         }
@@ -112,6 +110,11 @@ namespace Roslynator.Documentation
         public override int GetHashCode()
         {
             return MetadataNameEqualityComparer<INamespaceSymbol>.Instance.GetHashCode(NamespaceSymbol);
+        }
+
+        public bool Equals(IDocumentationFile other)
+        {
+            return DocumentationFileEqualityComparer.Instance.Equals(this, other);
         }
     }
 }

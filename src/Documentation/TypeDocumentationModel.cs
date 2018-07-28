@@ -9,28 +9,23 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    public sealed class TypeDocumentationModel : SymbolDocumentationModel
+    public sealed class TypeDocumentationModel : SymbolDocumentationModel, IDocumentationFile
     {
         private ImmutableArray<ISymbol> _members;
         private ImmutableArray<ISymbol> _membersIncludingInherited;
 
         private TypeDocumentationModel(
             INamedTypeSymbol typeSymbol,
-            ImmutableArray<ISymbol> symbolAndBaseTypesAndNamespaces,
             ImmutableArray<string> nameAndBaseNamesAndNamespaceNames,
-            DocumentationModel documentationModel) : base(typeSymbol, symbolAndBaseTypesAndNamespaces, nameAndBaseNamesAndNamespaceNames, documentationModel)
+            DocumentationModel documentationModel) : base(typeSymbol, documentationModel)
         {
             TypeSymbol = typeSymbol;
+            Names = nameAndBaseNamesAndNamespaceNames;
         }
 
         public INamedTypeSymbol TypeSymbol { get; }
 
         public TypeKind TypeKind => TypeSymbol.TypeKind;
-
-        public NamespaceDocumentationModel NamespaceModel
-        {
-            get { return DocumentationModel.GetNamespaceModel(TypeSymbol.ContainingNamespace); }
-        }
 
         public IEnumerable<TypeDocumentationModel> Types
         {
@@ -76,9 +71,12 @@ namespace Roslynator.Documentation
             }
         }
 
-        public static TypeDocumentationModel Create2(INamedTypeSymbol typeSymbol, DocumentationModel documentationModel)
+        public ImmutableArray<string> Names { get; }
+
+        public DocumentationKind Kind => DocumentationKind.Type;
+
+        public static TypeDocumentationModel Create(INamedTypeSymbol typeSymbol, DocumentationModel documentationModel)
         {
-            ImmutableArray<ISymbol>.Builder symbols = ImmutableArray.CreateBuilder<ISymbol>();
             ImmutableArray<string>.Builder names = ImmutableArray.CreateBuilder<string>();
 
             int arity = typeSymbol.GetArity();
@@ -92,8 +90,6 @@ namespace Roslynator.Documentation
                 names.Add(typeSymbol.Name);
             }
 
-            symbols.Add(typeSymbol);
-
             INamedTypeSymbol containingType = typeSymbol.ContainingType;
 
             while (containingType != null)
@@ -101,8 +97,6 @@ namespace Roslynator.Documentation
                 arity = containingType.Arity;
 
                 names.Add((arity > 0) ? containingType.Name + "-" + arity.ToString(CultureInfo.InvariantCulture) : containingType.Name);
-
-                symbols.Add(containingType);
 
                 containingType = containingType.ContainingType;
             }
@@ -114,15 +108,12 @@ namespace Roslynator.Documentation
                 if (containingNamespace.IsGlobalNamespace)
                 {
                     names.Add(WellKnownNames.GlobalNamespaceName);
-                    symbols.Add(containingNamespace);
                 }
                 else
                 {
                     do
                     {
                         names.Add(containingNamespace.Name);
-
-                        symbols.Add(containingNamespace);
 
                         containingNamespace = containingNamespace.ContainingNamespace;
                     }
@@ -132,7 +123,6 @@ namespace Roslynator.Documentation
 
             return new TypeDocumentationModel(
                 typeSymbol,
-                symbols.ToImmutableArray(),
                 names.ToImmutableArray(),
                 documentationModel);
         }
@@ -344,57 +334,74 @@ namespace Roslynator.Documentation
             }
         }
 
-        public IEnumerable<ISymbol> GetMembers(TypeDocumentationParts parts = TypeDocumentationParts.All)
+        public IEnumerable<MemberDocumentationModel> GetMembers(TypeDocumentationParts parts = TypeDocumentationParts.All)
         {
             if (TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
                 yield break;
 
             if (IsEnabled(TypeDocumentationParts.Constructors))
             {
-                foreach (IMethodSymbol symbol in GetConstructors())
-                    yield return symbol;
+                foreach (MemberDocumentationModel model in GetMembers(GetConstructors()))
+                    yield return model;
             }
 
             if (IsEnabled(TypeDocumentationParts.Fields))
             {
-                foreach (IFieldSymbol symbol in GetFields())
-                    yield return symbol;
+                foreach (MemberDocumentationModel model in GetMembers(GetFields()))
+                    yield return model;
             }
 
             if (IsEnabled(TypeDocumentationParts.Properties))
             {
-                foreach (IPropertySymbol symbol in GetProperties())
-                    yield return symbol;
+                foreach (MemberDocumentationModel model in GetMembers(GetProperties()))
+                    yield return model;
             }
 
             if (IsEnabled(TypeDocumentationParts.Methods))
             {
-                foreach (IMethodSymbol symbol in GetMethods())
-                    yield return symbol;
+                foreach (MemberDocumentationModel model in GetMembers(GetMethods()))
+                    yield return model;
             }
 
             if (IsEnabled(TypeDocumentationParts.Operators))
             {
-                foreach (IMethodSymbol symbol in GetOperators())
-                    yield return symbol;
+                foreach (MemberDocumentationModel model in GetMembers(GetOperators()))
+                    yield return model;
             }
 
             if (IsEnabled(TypeDocumentationParts.Events))
             {
-                foreach (IEventSymbol symbol in GetEvents())
-                    yield return symbol;
+                foreach (MemberDocumentationModel model in GetMembers(GetEvents()))
+                    yield return model;
             }
 
             if (IsEnabled(TypeDocumentationParts.ExplicitInterfaceImplementations))
             {
-                foreach (ISymbol symbol in GetExplicitInterfaceImplementations())
-                    yield return symbol;
+                foreach (MemberDocumentationModel model in GetMembers(GetExplicitInterfaceImplementations()))
+                    yield return model;
             }
 
             bool IsEnabled(TypeDocumentationParts part)
             {
                 return (parts & part) != 0;
             }
+
+            IEnumerable<MemberDocumentationModel> GetMembers(IEnumerable<ISymbol> symbols)
+            {
+                foreach (IGrouping<string, ISymbol> grouping in symbols.GroupBy(f => f.Name))
+                {
+                    ImmutableArray<ISymbol> symbolsWithName = grouping.ToImmutableArray();
+
+                    ISymbol symbol = symbolsWithName[0];
+
+                    yield return MemberDocumentationModel.Create(symbol, symbolsWithName, DocumentationModel);
+                }
+            }
+        }
+
+        public bool Equals(IDocumentationFile other)
+        {
+            return DocumentationFileEqualityComparer.Instance.Equals(this, other);
         }
     }
 }

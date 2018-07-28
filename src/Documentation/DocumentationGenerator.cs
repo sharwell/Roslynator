@@ -41,7 +41,7 @@ namespace Roslynator.Documentation
 
         private SymbolDocumentationModel EmptySymbolModel
         {
-            get { return _emptySymbolDocumentationModel ?? (_emptySymbolDocumentationModel = SymbolDocumentationModel.Create(DocumentationModel)); }
+            get { return _emptySymbolDocumentationModel ?? (_emptySymbolDocumentationModel = new SymbolDocumentationModel(null, DocumentationModel)); }
         }
 
         public IComparer<NamespaceDocumentationParts> NamespacePartComparer { get; }
@@ -90,7 +90,7 @@ namespace Roslynator.Documentation
 
         private DocumentationWriter CreateWriter(SymbolDocumentationModel symbolModel, SymbolDocumentationModel containingModel)
         {
-            UrlProvider.ContainingModel = containingModel;
+            UrlProvider.ContainingFile = containingModel as IDocumentationFile;
 
             DocumentationWriter writer = CreateWriterCore(symbolModel);
 
@@ -164,7 +164,7 @@ namespace Roslynator.Documentation
             {
                 yield return extendedExternalTypes;
 
-                foreach (TypeDocumentationModel typeModel in DocumentationModel.ExtendedExternalTypes.Types())
+                foreach (TypeDocumentationModel typeModel in DocumentationModel.ExtendedExternalTypes())
                     yield return GenerateExtendedExternalType(typeModel);
             }
         }
@@ -264,18 +264,20 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
-                ExtendedExternalTypesDocumentationModel externalTypesModel = DocumentationModel.ExtendedExternalTypes;
+                IEnumerable<TypeDocumentationModel> extendedExternalTypes = DocumentationModel.ExtendedExternalTypes();
 
-                IEnumerable<NamespaceDocumentationModel> namespaces = externalTypesModel.Namespaces();
+                IEnumerable<INamespaceSymbol> namespaces = extendedExternalTypes
+                    .Select(f => f.Symbol.ContainingNamespace)
+                    .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
                 if (namespaces.Any())
                     writer.WriteHeading1(heading);
 
-                writer.WriteList(namespaces.Select(f => f.NamespaceSymbol), Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                writer.WriteList(namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
                 if (Options.IsPartEnabled(RootDocumentationParts.Namespaces))
                 {
-                    foreach (IGrouping<INamespaceSymbol, TypeDocumentationModel> grouping in externalTypesModel.Types()
+                    foreach (IGrouping<INamespaceSymbol, TypeDocumentationModel> grouping in extendedExternalTypes
                         .OrderBy(f => f.Symbol.ToDisplayString(FormatProvider.TypeFormat))
                         .GroupBy(f => f.Symbol.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
                         .OrderBy(f => f.Key.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
@@ -489,24 +491,19 @@ namespace Roslynator.Documentation
         {
             if (!typeModel.TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
             {
-                foreach (IGrouping<string, ISymbol> grouping in typeModel.GetMembers(Options.TypeParts).GroupBy(f => f.Name))
+                foreach (MemberDocumentationModel model in typeModel.GetMembers(Options.TypeParts))
                 {
-                    ImmutableArray<ISymbol> symbols = grouping.ToImmutableArray();
-
-                    ISymbol symbol = symbols[0];
-                    MemberDocumentationModel symbolModel = DocumentationModel.GetMemberModel(symbol);
-
-                    using (DocumentationWriter writer = CreateWriter(symbolModel, symbolModel))
+                    using (DocumentationWriter writer = CreateWriter(model, model))
                     {
                         writer.WriteStartDocument();
 
-                        MemberDocumentationWriter memberWriter = MemberDocumentationWriter.Create(symbol, writer);
+                        MemberDocumentationWriter memberWriter = MemberDocumentationWriter.Create(model.Symbol, writer);
 
-                        memberWriter.WriteMember(symbol, symbols);
+                        memberWriter.WriteMember(model);
 
                         writer.WriteEndDocument();
 
-                        yield return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Member, symbolModel);
+                        yield return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Member, model);
                     }
                 }
             }
@@ -521,17 +518,19 @@ namespace Roslynator.Documentation
                 writer.WriteStartDocument();
                 writer.WriteHeading1(heading);
 
+                IEnumerable<INamedTypeSymbol> typeSymbols = DocumentationModel.Types.Select(f => f.TypeSymbol);
+
                 foreach (TypeKind typeKind in _typeKinds.OrderBy(f => f.ToNamespaceDocumentationPart(), NamespacePartComparer))
                 {
                     switch (typeKind)
                     {
                         case TypeKind.Class:
                             {
-                                if (DocumentationModel.TypeSymbols.Any(f => !f.IsStatic && f.TypeKind == TypeKind.Class))
+                                if (typeSymbols.Any(f => !f.IsStatic && f.TypeKind == TypeKind.Class))
                                 {
                                     INamedTypeSymbol objectType = DocumentationModel.Compilation.ObjectType;
 
-                                    IEnumerable<INamedTypeSymbol> instanceClasses = DocumentationModel.TypeSymbols.Where(f => !f.IsStatic && f.TypeKind == TypeKind.Class);
+                                    IEnumerable<INamedTypeSymbol> instanceClasses = typeSymbols.Where(f => !f.IsStatic && f.TypeKind == TypeKind.Class);
 
                                     var nodes = new HashSet<ITypeSymbol>(instanceClasses) { objectType };
 
@@ -550,7 +549,7 @@ namespace Roslynator.Documentation
                                     WriteBulletItem(objectType, nodes, writer);
                                 }
 
-                                using (IEnumerator<INamedTypeSymbol> en = DocumentationModel.TypeSymbols
+                                using (IEnumerator<INamedTypeSymbol> en = typeSymbols
                                     .Where(f => f.IsStatic && f.TypeKind == TypeKind.Class)
                                     .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
                                 {
@@ -573,7 +572,7 @@ namespace Roslynator.Documentation
                         case TypeKind.Enum:
                         case TypeKind.Delegate:
                             {
-                                using (IEnumerator<INamedTypeSymbol> en = DocumentationModel.TypeSymbols
+                                using (IEnumerator<INamedTypeSymbol> en = typeSymbols
                                     .Where(f => f.TypeKind == typeKind)
                                     .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
                                 {

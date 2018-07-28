@@ -7,7 +7,7 @@ using System.Collections.Immutable;
 
 namespace Roslynator.Documentation
 {
-    //TODO: move to core
+    //XTODO: move to core
     internal readonly struct OneOrMany<T> : IReadOnlyList<T>
     {
         private readonly State _state;

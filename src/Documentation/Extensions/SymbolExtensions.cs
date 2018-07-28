@@ -10,7 +10,7 @@ namespace Roslynator.Documentation
 {
     internal static class SymbolExtensions
     {
-        //TODO: move to core
+        //XTODO: move to core
         public static ImmutableArray<INamedTypeSymbol> GetTypes(this IAssemblySymbol assemblySymbol, Func<INamedTypeSymbol, bool> predicate = null)
         {
             ImmutableArray<INamedTypeSymbol>.Builder builder = ImmutableArray.CreateBuilder<INamedTypeSymbol>();

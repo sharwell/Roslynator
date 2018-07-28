@@ -3,7 +3,6 @@
 using System;
 using System.Collections.Immutable;
 using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 
@@ -15,15 +14,11 @@ namespace Roslynator.Documentation
         private ImmutableArray<AttributeData> _attributes;
         private string _commentId;
 
-        protected SymbolDocumentationModel(
+        public SymbolDocumentationModel(
             ISymbol symbol,
-            ImmutableArray<ISymbol> symbolAndBaseTypesAndNamespaces,
-            ImmutableArray<string> nameAndBaseNamesAndNamespaceNames,
             DocumentationModel documentationModel)
         {
             Symbol = symbol;
-            SymbolAndBaseTypesAndNamespaces = symbolAndBaseTypesAndNamespaces;
-            NameAndBaseNamesAndNamespaceNames = nameAndBaseNamesAndNamespaceNames;
             DocumentationModel = documentationModel;
         }
 
@@ -33,10 +28,6 @@ namespace Roslynator.Documentation
         {
             get { return _commentId ?? (_commentId = Symbol.GetDocumentationCommentId()); }
         }
-
-        internal ImmutableArray<ISymbol> SymbolAndBaseTypesAndNamespaces { get; }
-
-        internal ImmutableArray<string> NameAndBaseNamesAndNamespaceNames { get; }
 
         internal DocumentationModel DocumentationModel { get; }
 
@@ -60,69 +51,6 @@ namespace Roslynator.Documentation
         private string DebuggerDisplay
         {
             get { return $"{Symbol.Kind} {Symbol.ToDisplayString(Roslynator.SymbolDisplayFormats.Test)}"; }
-        }
-
-        internal static SymbolDocumentationModel Create(DocumentationModel documentationModel)
-        {
-            return new SymbolDocumentationModel(
-                symbol: null,
-                symbolAndBaseTypesAndNamespaces: ImmutableArray<ISymbol>.Empty,
-                nameAndBaseNamesAndNamespaceNames: ImmutableArray<string>.Empty,
-                documentationModel: documentationModel);
-        }
-
-        public static SymbolDocumentationModel Create(ISymbol symbol, DocumentationModel documentationModel)
-        {
-            ImmutableArray<ISymbol>.Builder symbols = ImmutableArray.CreateBuilder<ISymbol>();
-            ImmutableArray<string>.Builder names = ImmutableArray.CreateBuilder<string>();
-
-            ISymbol explicitImplementation = symbol.GetFirstExplicitInterfaceImplementation();
-
-            names.Add(symbol.Name);
-
-            symbols.Add(symbol);
-
-            INamedTypeSymbol containingType = symbol.ContainingType;
-
-            while (containingType != null)
-            {
-                int arity = containingType.Arity;
-
-                names.Add((arity > 0) ? containingType.Name + "-" + arity.ToString(CultureInfo.InvariantCulture) : containingType.Name);
-
-                symbols.Add(containingType);
-
-                containingType = containingType.ContainingType;
-            }
-
-            INamespaceSymbol containingNamespace = symbol.ContainingNamespace;
-
-            if (containingNamespace != null)
-            {
-                if (containingNamespace.IsGlobalNamespace)
-                {
-                    names.Add(WellKnownNames.GlobalNamespaceName);
-                    symbols.Add(containingNamespace);
-                }
-                else
-                {
-                    do
-                    {
-                        names.Add(containingNamespace.Name);
-
-                        symbols.Add(containingNamespace);
-
-                        containingNamespace = containingNamespace.ContainingNamespace;
-                    }
-                    while (containingNamespace?.IsGlobalNamespace == false);
-                }
-            }
-
-            return new SymbolDocumentationModel(
-                symbol,
-                symbols.ToImmutableArray(),
-                names.ToImmutableArray(),
-                documentationModel);
         }
 
         public override bool Equals(object obj)

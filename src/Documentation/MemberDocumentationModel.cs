@@ -9,17 +9,30 @@ using Microsoft.CodeAnalysis;
 namespace Roslynator.Documentation
 {
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
-    public sealed class MemberDocumentationModel : SymbolDocumentationModel
+    public sealed class MemberDocumentationModel : SymbolDocumentationModel, IDocumentationFile
     {
         private MemberDocumentationModel(
             ISymbol symbol,
-            ImmutableArray<ISymbol> symbolAndBaseTypesAndNamespaces,
+            ImmutableArray<ISymbol> overloads,
             ImmutableArray<string> nameAndBaseNamesAndNamespaceNames,
-            DocumentationModel documentationModel) : base(symbol, symbolAndBaseTypesAndNamespaces, nameAndBaseNamesAndNamespaceNames, documentationModel)
+            DocumentationModel documentationModel) : base(symbol, documentationModel)
         {
+            Overloads = overloads;
+            Names = nameAndBaseNamesAndNamespaceNames;
         }
 
-        public static MemberDocumentationModel Create2(ISymbol symbol, DocumentationModel documentationModel)
+        public ImmutableArray<ISymbol> Overloads { get; }
+
+        public bool IsOverloaded
+        {
+            get { return Overloads.Length > 1; }
+        }
+
+        public ImmutableArray<string> Names { get; }
+
+        public DocumentationKind Kind => DocumentationKind.Member;
+
+        public static MemberDocumentationModel Create(ISymbol symbol, ImmutableArray<ISymbol> overloads, DocumentationModel documentationModel)
         {
             ImmutableArray<ISymbol>.Builder symbols = ImmutableArray.CreateBuilder<ISymbol>();
             ImmutableArray<string>.Builder names = ImmutableArray.CreateBuilder<string>();
@@ -32,7 +45,6 @@ namespace Roslynator.Documentation
             else if (symbol.Kind == SymbolKind.Property
                 && ((IPropertySymbol)symbol).IsIndexer)
             {
-                //TODO: explicitly implemented indexer
                 names.Add("Item");
             }
             else
@@ -105,9 +117,14 @@ namespace Roslynator.Documentation
 
             return new MemberDocumentationModel(
                 symbol,
-                symbols.ToImmutableArray(),
+                overloads,
                 names.ToImmutableArray(),
                 documentationModel);
+        }
+
+        public bool Equals(IDocumentationFile other)
+        {
+            return DocumentationFileEqualityComparer.Instance.Equals(this, other);
         }
     }
 }

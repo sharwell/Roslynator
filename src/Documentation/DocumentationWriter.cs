@@ -1098,50 +1098,29 @@ namespace Roslynator.Documentation
             SymbolDocumentationModel symbolModel,
             bool canCreateExternalUrl = true)
         {
-            SymbolKind kind = symbolModel.Symbol.Kind;
+            if (!(symbolModel is IDocumentationFile documentationFile))
+                return null;
 
-            switch (kind)
+            DocumentationKind kind = documentationFile.Kind;
+
+            if (kind == DocumentationKind.Type)
             {
-                case SymbolKind.NamedType:
-                    {
-                        if (!CanCreateTypeLocalUrl)
-                            return null;
-
-                        break;
-                    }
-                case SymbolKind.Namespace:
-                    {
-                        break;
-                    }
-                case SymbolKind.Event:
-                case SymbolKind.Field:
-                case SymbolKind.Method:
-                case SymbolKind.Property:
-                    {
-                        if (!CanCreateMemberLocalUrl)
-                            return null;
-
-                        break;
-                    }
-                case SymbolKind.Parameter:
-                case SymbolKind.TypeParameter:
-                    {
-                        return null;
-                    }
-                default:
-                    {
-                        Debug.Fail(kind.ToString());
-                        return null;
-                    }
+                if (!CanCreateTypeLocalUrl)
+                    return null;
+            }
+            else if (kind == DocumentationKind.Member)
+            {
+                if (!CanCreateMemberLocalUrl)
+                    return null;
             }
 
             if (DocumentationModel.IsExternal(symbolModel.Symbol)
                 && canCreateExternalUrl)
             {
-                return UrlProvider.GetExternalUrl(symbolModel).Url;
+                return UrlProvider.GetExternalUrl(documentationFile).Url;
             }
 
-            return UrlProvider.GetLocalUrl(symbolModel).Url;
+            return UrlProvider.GetLocalUrl(documentationFile).Url;
         }
 
         public void Dispose()
