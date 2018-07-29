@@ -453,36 +453,35 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Fields:
                             {
-                                //TODO: WriteFields vs. WriteEnumFields
                                 if (typeKind == TypeKind.Enum)
                                 {
                                     writer.WriteEnumFields(typeModel.GetFields());
                                 }
                                 else
                                 {
-                                    writer.WriteFields(typeModel.GetFields(includeInherited: true), isInherited: IsInherited);
+                                    writer.WriteFields(typeModel.GetFields(includeInherited: true), containingType: typeSymbol);
                                 }
 
                                 break;
                             }
                         case TypeDocumentationParts.Properties:
                             {
-                                writer.WriteProperties(typeModel.GetProperties(includeInherited: true), isInherited: IsInherited);
+                                writer.WriteProperties(typeModel.GetProperties(includeInherited: true), containingType: typeSymbol);
                                 break;
                             }
                         case TypeDocumentationParts.Methods:
                             {
-                                writer.WriteMethods(typeModel.GetMethods(includeInherited: true), isInherited: IsInherited);
+                                writer.WriteMethods(typeModel.GetMethods(includeInherited: true), containingType: typeSymbol);
                                 break;
                             }
                         case TypeDocumentationParts.Operators:
                             {
-                                writer.WriteOperators(typeModel.GetOperators(includeInherited: true), isInherited: IsInherited);
+                                writer.WriteOperators(typeModel.GetOperators(includeInherited: true), containingType: typeSymbol);
                                 break;
                             }
                         case TypeDocumentationParts.Events:
                             {
-                                writer.WriteEvents(typeModel.GetEvents(includeInherited: true), isInherited: IsInherited);
+                                writer.WriteEvents(typeModel.GetEvents(includeInherited: true), containingType: typeSymbol);
                                 break;
                             }
                         case TypeDocumentationParts.ExplicitInterfaceImplementations:
@@ -506,11 +505,6 @@ namespace Roslynator.Documentation
                 writer.WriteEndDocument();
 
                 return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Type, typeModel);
-            }
-
-            bool IsInherited(ISymbol symbol)
-            {
-                return symbol.ContainingType != typeSymbol;
             }
         }
 

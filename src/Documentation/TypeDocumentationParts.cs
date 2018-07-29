@@ -4,6 +4,7 @@ using System;
 
 namespace Roslynator.Documentation
 {
+    //XTODO: Classes, Structs, Interfaces, Enums, Delegates
     [Flags]
     public enum TypeDocumentationParts
     {

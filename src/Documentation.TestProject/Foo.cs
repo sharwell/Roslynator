@@ -128,5 +128,9 @@ namespace Roslynator.Documentation.Test
             get { return null; }
             set { }
         }
+
+        public unsafe void WriteString(char* pSrcStart, char* pSrcEnd)
+        {
+        }
     }
 }

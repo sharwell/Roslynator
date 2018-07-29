@@ -59,16 +59,16 @@ public class SyntaxListSelection<TNode> : ISelection<TNode>,
 
 | Method | Summary |
 | ------ | ------- |
-| [Create(SyntaxList\<TNode>, TextSpan)](Create/README.md) | Creates a new [SyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
+| **[Create(SyntaxList\<TNode>, TextSpan)](Create/README.md)** | Creates a new [SyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [First()](First/README.md) | Gets the first selected node\. |
-| [GetEnumerator()](GetEnumerator/README.md) | Returns an enumerator that iterates through selected nodes\. |
+| **[First()](First/README.md)** | Gets the first selected node\. |
+| **[GetEnumerator()](GetEnumerator/README.md)** | Returns an enumerator that iterates through selected nodes\. |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [Last()](Last/README.md) | Gets the last selected node\. |
+| **[Last()](Last/README.md)** | Gets the last selected node\. |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [TryCreate(SyntaxList\<TNode>, TextSpan, SyntaxListSelection\<TNode>)](TryCreate/README.md) | Creates a new [SyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
+| **[TryCreate(SyntaxList\<TNode>, TextSpan, SyntaxListSelection\<TNode>)](TryCreate/README.md)** | Creates a new [SyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
 
 ## Explicit Interface Implementations
 

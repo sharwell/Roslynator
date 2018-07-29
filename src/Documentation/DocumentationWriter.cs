@@ -776,29 +776,29 @@ namespace Roslynator.Documentation
             WriteTable(constructors, Resources.ConstructorsTitle, 2, Resources.ConstructorTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat);
         }
 
-        public virtual void WriteFields(IEnumerable<IFieldSymbol> fields, Func<ISymbol, bool> isInherited)
+        public virtual void WriteFields(IEnumerable<IFieldSymbol> fields, INamedTypeSymbol containingType)
         {
-            WriteTable(fields, Resources.FieldsTitle, 2, Resources.FieldTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, isInherited: isInherited);
+            WriteTable(fields, Resources.FieldsTitle, 2, Resources.FieldTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, containingType: containingType);
         }
 
-        public virtual void WriteProperties(IEnumerable<IPropertySymbol> properties, Func<ISymbol, bool> isInherited)
+        public virtual void WriteProperties(IEnumerable<IPropertySymbol> properties, INamedTypeSymbol containingType)
         {
-            WriteTable(properties, Resources.PropertiesTitle, 2, Resources.PropertyTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, isInherited: isInherited);
+            WriteTable(properties, Resources.PropertiesTitle, 2, Resources.PropertyTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, containingType: containingType);
         }
 
-        public virtual void WriteMethods(IEnumerable<IMethodSymbol> methods, Func<ISymbol, bool> isInherited)
+        public virtual void WriteMethods(IEnumerable<IMethodSymbol> methods, INamedTypeSymbol containingType)
         {
-            WriteTable(methods, Resources.MethodsTitle, 2, Resources.MethodTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, isInherited: isInherited);
+            WriteTable(methods, Resources.MethodsTitle, 2, Resources.MethodTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, containingType: containingType);
         }
 
-        public virtual void WriteOperators(IEnumerable<IMethodSymbol> operators, Func<ISymbol, bool> isInherited)
+        public virtual void WriteOperators(IEnumerable<IMethodSymbol> operators, INamedTypeSymbol containingType)
         {
-            WriteTable(operators, Resources.OperatorsTitle, 2, Resources.OperatorTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseOperatorName, isInherited: isInherited);
+            WriteTable(operators, Resources.OperatorsTitle, 2, Resources.OperatorTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseOperatorName, containingType: containingType);
         }
 
-        public virtual void WriteEvents(IEnumerable<IEventSymbol> events, Func<ISymbol, bool> isInherited)
+        public virtual void WriteEvents(IEnumerable<IEventSymbol> events, INamedTypeSymbol containingType)
         {
-            WriteTable(events, Resources.EventsTitle, 2, Resources.EventTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, isInherited: isInherited);
+            WriteTable(events, Resources.EventsTitle, 2, Resources.EventTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, containingType: containingType);
         }
 
         public virtual void WriteExplicitInterfaceImplementations(IEnumerable<ISymbol> explicitInterfaceImplementations)
@@ -836,8 +836,22 @@ namespace Roslynator.Documentation
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             bool addLink = true,
-            Func<ISymbol, bool> isInherited = null)
+            INamedTypeSymbol containingType = null)
         {
+            bool emphasizeNonInherited = false;
+
+            if (containingType != null)
+            {
+                foreach (ISymbol symbol in symbols)
+                {
+                    if (symbol.ContainingType != containingType)
+                    {
+                        emphasizeNonInherited = true;
+                        break;
+                    }
+                }
+            }
+
             using (IEnumerator<ISymbol> en = symbols
                 .OrderBy(f => f.ToDisplayString(format, additionalOptions))
                 .GetEnumerator())
@@ -861,6 +875,12 @@ namespace Roslynator.Documentation
                         WriteStartTableRow();
                         WriteStartTableCell();
 
+                        bool isInherited = containingType != null
+                            && symbol.ContainingType != containingType;
+
+                        if (emphasizeNonInherited && !isInherited)
+                            WriteStartBold();
+
                         if (symbol.IsKind(SymbolKind.Parameter, SymbolKind.TypeParameter))
                         {
                             WriteString(symbol.Name);
@@ -874,6 +894,9 @@ namespace Roslynator.Documentation
                             WriteString(symbol.ToDisplayString(format, additionalOptions));
                         }
 
+                        if (emphasizeNonInherited && !isInherited)
+                            WriteEndBold();
+
                         WriteEndTableCell();
                         WriteStartTableCell();
 
@@ -883,11 +906,11 @@ namespace Roslynator.Documentation
                         }
                         else
                         {
-                            ISymbol symbol2 = (isInherited?.Invoke(symbol) == true) ? symbol.OriginalDefinition : symbol;
+                            ISymbol symbol2 = (isInherited) ? symbol.OriginalDefinition : symbol;
                             GetSymbolDocumentation(symbol2)?.WriteElementContentTo(this, "summary", inlineOnly: true);
                         }
 
-                        if (isInherited?.Invoke(symbol) == true)
+                        if (isInherited)
                             WriteInheritedFrom(symbol.ContainingType.OriginalDefinition, FormatProvider.TypeFormat, additionalOptions);
 
                         WriteEndTableCell();

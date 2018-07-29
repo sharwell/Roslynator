@@ -9,7 +9,6 @@ using Roslynator.CSharp;
 
 namespace Roslynator.Documentation
 {
-    //TODO: SymbolXmlDocumentation
     public class SymbolXmlDocumentation
     {
         private readonly XElement _element;

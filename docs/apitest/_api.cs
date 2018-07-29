@@ -60,6 +60,7 @@ namespace Roslynator.Documentation.Test
         public void Bar();
         public void Bar<T>(string value, string value2);
         public void Bar2();
+        public void WriteString(char* pSrcStart, char* pSrcEnd);
     }
 
     [AttributeUsage(AttributeTargets.All, AllowMultiple = false, Inherited = false)]
