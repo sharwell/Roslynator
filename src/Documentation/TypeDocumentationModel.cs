@@ -310,7 +310,6 @@ namespace Roslynator.Documentation
             }
         }
 
-        //TODO: OmitIEnumerable
         public IEnumerable<INamedTypeSymbol> GetImplementedTypes()
         {
             if (!TypeSymbol.IsStatic

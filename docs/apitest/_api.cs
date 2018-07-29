@@ -102,6 +102,11 @@ namespace Roslynator.Documentation.Test
     {
     }
 
+    public struct FooStruct
+    {
+        public void Bar();
+    }
+
     public interface IFoo
     {
         event EventHandler Changed;
@@ -109,6 +114,7 @@ namespace Roslynator.Documentation.Test
 
     public interface IImmutableFoo<T> : IEquatable<IImmutableFoo<T>>, ICollection, IList, IStructuralComparable, IStructuralEquatable, ICollection<T>, IEnumerable<T>, IList<T>, IReadOnlyCollection<T>, IReadOnlyList<T>, IImmutableList<T>
     {
+        T this[int index] { get; set; }
     }
 
     [Flags]

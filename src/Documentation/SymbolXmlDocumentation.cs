@@ -9,7 +9,7 @@ using Roslynator.CSharp;
 
 namespace Roslynator.Documentation
 {
-    //TODO: 
+    //TODO: SymbolXmlDocumentation
     public class SymbolXmlDocumentation
     {
         private readonly XElement _element;
@@ -75,7 +75,14 @@ namespace Roslynator.Documentation
 
                                         string value = e.Value;
                                         value = TextUtility.RemoveLeadingTrailingNewLine(value);
-                                        writer.WriteCodeBlock(value, writer.GetLanguageIdentifier(writer.Symbol.Language));
+
+                                        DocumentationModel documentationModel = writer.DocumentationModel;
+
+                                        string language = documentationModel.GetFirstSymbolForDeclarationId(CommentId)?.Language;
+
+                                        Debug.Assert(language != null, CommentId);
+
+                                        writer.WriteCodeBlock(value, language ?? documentationModel.Language);
 
                                         break;
                                     }

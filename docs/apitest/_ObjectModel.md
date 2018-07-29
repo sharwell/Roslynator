@@ -18,6 +18,10 @@
 
 * [FooExtensions](Roslynator/Documentation/Test/FooExtensions/README.md)
 
+## Structs
+
+* [FooStruct](Roslynator/Documentation/Test/FooStruct/README.md)
+
 ## Interfaces
 
 * [IFoo](Roslynator/Documentation/Test/IFoo/README.md)

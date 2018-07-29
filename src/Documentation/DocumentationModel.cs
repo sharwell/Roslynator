@@ -193,6 +193,7 @@ namespace Roslynator.Documentation
             return typeModel;
         }
 
+        //TODO: GetSymbolModel
         internal SymbolDocumentationModel GetSymbolModel(ISymbol symbol)
         {
             if (_symbolDocumentationModels.TryGetValue(symbol, out SymbolDocumentationModel model))
@@ -215,7 +216,6 @@ namespace Roslynator.Documentation
                 case SymbolKind.Method:
                 case SymbolKind.Property:
                     {
-                        //TODO: 
                         model = MemberDocumentationModel.Create(symbol, default, this);
                         break;
                     }

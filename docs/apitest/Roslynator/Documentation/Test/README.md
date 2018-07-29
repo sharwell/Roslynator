@@ -13,6 +13,12 @@
 | [FooEvent](FooEvent/README.md) | |
 | [FooExtensions](FooExtensions/README.md) | fx |
 
+## Structs
+
+| Struct | Summary |
+| ------ | ------- |
+| [FooStruct](FooStruct/README.md) | |
+
 ## Interfaces
 
 | Interface | Summary |

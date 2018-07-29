@@ -17,5 +17,6 @@ namespace Roslynator.Documentation.Test
         IStructuralEquatable,
         IImmutableList<T>
     {
+        new T this[int index] { get; set; }
     }
 }

@@ -327,8 +327,13 @@ namespace Roslynator.Documentation
             {
                 var methodSymbol = (IMethodSymbol)symbol;
 
+                ITypeSymbol returnType = methodSymbol.ReturnType;
+
+                if (returnType.SpecialType == SpecialType.System_Void)
+                    return;
+
                 Writer.WriteHeading(3, Resources.ReturnsTitle);
-                Writer.WriteLinkOrTypeLink(methodSymbol.ReturnType);
+                Writer.WriteLinkOrTypeLink(returnType);
                 Writer.WriteLine();
                 Writer.WriteLine();
 

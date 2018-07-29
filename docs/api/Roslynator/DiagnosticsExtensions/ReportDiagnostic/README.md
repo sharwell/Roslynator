@@ -49,10 +49,6 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 | node | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, SyntaxToken, Object\[\]\)
 
 ### Summary
@@ -71,10 +67,6 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 | descriptor | |
 | token | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, SyntaxTrivia, Object\[\]\)
 
@@ -95,10 +87,6 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 | trivia | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, Location, Object\[\]\)
 
 ### Summary
@@ -117,10 +105,6 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 | descriptor | A [DiagnosticDescriptor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor) describing the diagnostic\. |
 | location | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, Object\[\]\)
 
@@ -142,10 +126,6 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 | additionalLocations | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, Location, ImmutableDictionary\<String, String>, Object\[\]\)
 
 ### Summary
@@ -165,10 +145,6 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 | location | |
 | properties | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, ImmutableDictionary\<String, String>, Object\[\]\)
 
@@ -191,10 +167,6 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 | properties | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, SyntaxNode, Object\[\]\)
 
 ### Summary
@@ -213,10 +185,6 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 | descriptor | |
 | node | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, SyntaxToken, Object\[\]\)
 
@@ -237,10 +205,6 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 | token | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, SyntaxTrivia, Object\[\]\)
 
 ### Summary
@@ -260,10 +224,6 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 | trivia | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, Location, Object\[\]\)
 
 ### Summary
@@ -282,10 +242,6 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 | descriptor | |
 | location | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, Object\[\]\)
 
@@ -307,10 +263,6 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 | additionalLocations | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, Location, ImmutableDictionary\<String, String>, Object\[\]\)
 
 ### Summary
@@ -330,10 +282,6 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 | location | |
 | properties | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, ImmutableDictionary\<String, String>, Object\[\]\)
 
@@ -356,10 +304,6 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 | properties | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, SyntaxNode, Object\[\]\)
 
 ### Summary
@@ -378,10 +322,6 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 | descriptor | |
 | node | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, SyntaxToken, Object\[\]\)
 
@@ -402,10 +342,6 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 | token | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, SyntaxTrivia, Object\[\]\)
 
 ### Summary
@@ -425,10 +361,6 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 | trivia | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, Location, Object\[\]\)
 
 ### Summary
@@ -447,10 +379,6 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 | descriptor | |
 | location | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, Object\[\]\)
 
@@ -472,10 +400,6 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 | additionalLocations | |
 | messageArgs | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, Location, ImmutableDictionary\<String, String>, Object\[\]\)
 
 ### Summary
@@ -495,10 +419,6 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 | location | |
 | properties | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, ImmutableDictionary\<String, String>, Object\[\]\)
 
@@ -520,8 +440,4 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 | additionalLocations | |
 | properties | |
 | messageArgs | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 

@@ -1,11 +1,11 @@
-# C\.Item\[Int32\] Property
+# IImmutableFoo\<T>\.Item\[Int32\] Property
 
 Namespace: [Roslynator.Documentation.Test](../../README.md)
 
 Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
-public int this[int index] { get; }
+T this[int index] { get; set; }
 ```
 
 ### Parameters
@@ -16,5 +16,5 @@ public int this[int index] { get; }
 
 ### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
+T
 

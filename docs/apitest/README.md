@@ -31,6 +31,12 @@
 | [FooEvent](Roslynator/Documentation/Test/FooEvent/README.md) | |
 | [FooExtensions](Roslynator/Documentation/Test/FooExtensions/README.md) | fx |
 
+### Structs
+
+| Struct | Summary |
+| ------ | ------- |
+| [FooStruct](Roslynator/Documentation/Test/FooStruct/README.md) | |
+
 ### Interfaces
 
 | Interface | Summary |

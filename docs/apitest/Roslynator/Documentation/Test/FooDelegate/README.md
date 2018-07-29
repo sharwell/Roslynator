@@ -14,8 +14,8 @@ public delegate Foo FooDelegate(object p)
 
 ### Parameters
 
-| Parameter | Summary |
-| --------- | ------- |
+| Name | Summary |
+| ---- | ------- |
 | p | |
 
 ### Return Value

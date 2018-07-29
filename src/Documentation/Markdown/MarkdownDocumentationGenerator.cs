@@ -12,10 +12,10 @@ namespace Roslynator.Documentation.Markdown
         {
         }
 
-        protected override DocumentationWriter CreateWriterCore(SymbolDocumentationModel symbolModel)
+        protected override DocumentationWriter CreateWriterCore()
         {
             return new MarkdownDocumentationWriter(
-                symbolModel,
+                DocumentationModel,
                 urlProvider: UrlProvider,
                 options: Options,
                 resources: Resources);

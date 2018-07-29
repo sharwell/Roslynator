@@ -14,10 +14,6 @@ public void Add(Foo item)
 | ---- | ------- |
 | item | |
 
-### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ### Implements
 
 * [ICollection\<Foo>.Add](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.add)

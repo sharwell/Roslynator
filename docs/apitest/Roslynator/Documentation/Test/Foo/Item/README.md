@@ -23,8 +23,8 @@ public Foo this[int index] { get; set; }
 
 #### Parameters
 
-| Parameter | Summary |
-| --------- | ------- |
+| Name | Summary |
+| ---- | ------- |
 | index | p |
 
 #### Property Value
@@ -45,8 +45,8 @@ public Foo this[int index, int index2] { get; set; }
 
 #### Parameters
 
-| Parameter | Summary |
-| --------- | ------- |
+| Name | Summary |
+| ---- | ------- |
 | index | p |
 | index2 | p |
 

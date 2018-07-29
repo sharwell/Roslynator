@@ -37,11 +37,18 @@ namespace Roslynator.Documentation
             }
         }
 
-        public static ImmutableArray<ISymbol> GetMembers(this ITypeSymbol typeSymbol, Func<ISymbol, bool> predicate, bool includeInherited = false)
+        public static ImmutableArray<ISymbol> GetMembers(this INamedTypeSymbol typeSymbol, Func<ISymbol, bool> predicate, bool includeInherited = false)
         {
             if (includeInherited)
             {
-                return GetMembersIncludingInherited();
+                if (typeSymbol.TypeKind == TypeKind.Interface)
+                {
+                    return GetInterfaceMembersIncludingInherited();
+                }
+                else
+                {
+                    return GetMembersIncludingInherited();
+                }
             }
             else if (predicate != null)
             {
@@ -98,6 +105,22 @@ namespace Roslynator.Documentation
                     }
 
                     baseType = baseType.BaseType;
+                }
+
+                return symbols.ToImmutableArray();
+            }
+
+            ImmutableArray<ISymbol> GetInterfaceMembersIncludingInherited()
+            {
+                var symbols = new HashSet<ISymbol>(MemberDefinitionEqualityComparer.Instance);
+
+                foreach (ISymbol symbol in GetMembers(typeSymbol, predicate: predicate))
+                    symbols.Add(symbol);
+
+                foreach (INamedTypeSymbol interfaceSymbol in typeSymbol.AllInterfaces)
+                {
+                    foreach (ISymbol symbol in GetMembers(interfaceSymbol, predicate: predicate))
+                        symbols.Add(symbol);
                 }
 
                 return symbols.ToImmutableArray();

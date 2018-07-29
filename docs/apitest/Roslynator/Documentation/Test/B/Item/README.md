@@ -10,8 +10,8 @@ public int this[int index] { get; }
 
 ### Parameters
 
-| Parameter | Summary |
-| --------- | ------- |
+| Name | Summary |
+| ---- | ------- |
 | index | |
 
 ### Property Value

@@ -24,10 +24,6 @@ public void CopyTo(Array array, int index)
 | array | |
 | index | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 #### Implements
 
 * [ICollection.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.copyto)
@@ -44,10 +40,6 @@ public void CopyTo(Foo[] array, int arrayIndex)
 | ---- | ------- |
 | array | |
 | arrayIndex | |
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 
 #### Implements
 

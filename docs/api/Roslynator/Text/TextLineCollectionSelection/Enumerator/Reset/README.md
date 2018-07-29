@@ -8,7 +8,3 @@ Assembly: Roslynator\.CSharp\.dll
 public void Reset()
 ```
 
-### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-

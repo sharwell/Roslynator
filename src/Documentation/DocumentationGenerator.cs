@@ -14,7 +14,6 @@ namespace Roslynator.Documentation
         private ImmutableArray<TypeDocumentationParts> _enabledAndSortedTypeParts;
         private ImmutableArray<MemberDocumentationParts> _enabledAndSortedMemberParts;
 
-        private SymbolDocumentationModel _emptySymbolDocumentationModel;
         private readonly ImmutableArray<TypeKind> _typeKinds = ImmutableArray.CreateRange(new TypeKind[] { TypeKind.Class, TypeKind.Struct, TypeKind.Interface, TypeKind.Enum, TypeKind.Delegate });
 
         protected DocumentationGenerator(
@@ -38,11 +37,6 @@ namespace Roslynator.Documentation
         public DocumentationResources Resources { get; }
 
         public DocumentationUrlProvider UrlProvider { get; }
-
-        private SymbolDocumentationModel EmptySymbolModel
-        {
-            get { return _emptySymbolDocumentationModel ?? (_emptySymbolDocumentationModel = new SymbolDocumentationModel(null, DocumentationModel)); }
-        }
 
         public IComparer<NamespaceDocumentationParts> NamespacePartComparer { get; }
 
@@ -88,11 +82,11 @@ namespace Roslynator.Documentation
             }
         }
 
-        private DocumentationWriter CreateWriter(SymbolDocumentationModel symbolModel, SymbolDocumentationModel containingModel)
+        private DocumentationWriter CreateWriter(SymbolDocumentationModel containingModel)
         {
             UrlProvider.ContainingFile = containingModel as IDocumentationFile;
 
-            DocumentationWriter writer = CreateWriterCore(symbolModel);
+            DocumentationWriter writer = CreateWriterCore();
 
             writer.CanCreateMemberLocalUrl = Options.IsPartEnabled(DocumentationParts.Member);
             writer.CanCreateTypeLocalUrl = Options.IsPartEnabled(DocumentationParts.Type);
@@ -100,7 +94,7 @@ namespace Roslynator.Documentation
             return writer;
         }
 
-        protected abstract DocumentationWriter CreateWriterCore(SymbolDocumentationModel symbolModel);
+        protected abstract DocumentationWriter CreateWriterCore();
 
         public IEnumerable<DocumentationGeneratorResult> Generate(
             string heading = null,
@@ -128,7 +122,7 @@ namespace Roslynator.Documentation
                     parts &= ~DocumentationParts.ExtendedExternalTypes;
             }
 
-            using (DocumentationWriter writer = CreateWriter(symbolModel: EmptySymbolModel, containingModel: null))
+            using (DocumentationWriter writer = CreateWriter(containingModel: null))
             {
                 yield return GenerateRoot(writer, heading, parts);
             }
@@ -218,7 +212,7 @@ namespace Roslynator.Documentation
 
         private DocumentationGeneratorResult GenerateNamespace(NamespaceDocumentationModel namespaceModel)
         {
-            using (DocumentationWriter writer = CreateWriter(symbolModel: EmptySymbolModel, namespaceModel))
+            using (DocumentationWriter writer = CreateWriter(namespaceModel))
             {
                 writer.WriteStartDocument();
 
@@ -243,12 +237,16 @@ namespace Roslynator.Documentation
         {
             SymbolDisplayFormat format = FormatProvider.TypeFormat;
 
-            foreach (IGrouping<TypeKind, TypeDocumentationModel> grouping in namespaceModel.GetTypesByKind(Options.NamespaceParts, NamespacePartComparer))
+            foreach (IGrouping<TypeKind, INamedTypeSymbol> grouping in namespaceModel.Types
+                .Select(f => f.TypeSymbol)
+                .Where(f => IsNamespacePartEnabled(f.TypeKind))
+                .GroupBy(f => f.TypeKind)
+                .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer ?? NamespaceDocumentationPartComparer.Instance))
             {
                 TypeKind typeKind = grouping.Key;
 
                 writer.WriteTable(
-                    grouping.Select(f => f.Symbol), //TODO: 
+                    grouping,
                     Resources.GetPluralName(typeKind),
                     headingLevel,
                     Resources.GetName(typeKind),
@@ -256,11 +254,35 @@ namespace Roslynator.Documentation
                     format,
                     addLink: addLink);
             }
+
+            bool IsNamespacePartEnabled(TypeKind typeKind)
+            {
+                switch (typeKind)
+                {
+                    case TypeKind.Class:
+                        return IsPartEnabled(NamespaceDocumentationParts.Classes);
+                    case TypeKind.Delegate:
+                        return IsPartEnabled(NamespaceDocumentationParts.Delegates);
+                    case TypeKind.Enum:
+                        return IsPartEnabled(NamespaceDocumentationParts.Enums);
+                    case TypeKind.Interface:
+                        return IsPartEnabled(NamespaceDocumentationParts.Interfaces);
+                    case TypeKind.Struct:
+                        return IsPartEnabled(NamespaceDocumentationParts.Structs);
+                    default:
+                        return false;
+                }
+            }
+
+            bool IsPartEnabled(NamespaceDocumentationParts part)
+            {
+                return Options.IsPartEnabled(part);
+            }
         }
 
         private DocumentationGeneratorResult GenerateExtendedExternalTypes(string heading = null)
         {
-            using (DocumentationWriter writer = CreateWriter(symbolModel: EmptySymbolModel, containingModel: null))
+            using (DocumentationWriter writer = CreateWriter(containingModel: null))
             {
                 writer.WriteStartDocument();
 
@@ -304,7 +326,7 @@ namespace Roslynator.Documentation
 
         private DocumentationGeneratorResult GenerateExtendedExternalType(TypeDocumentationModel typeModel)
         {
-            using (DocumentationWriter writer = CreateWriter(typeModel, typeModel))
+            using (DocumentationWriter writer = CreateWriter(typeModel))
             {
                 writer.WriteStartDocument();
                 writer.WriteStartHeading(1);
@@ -339,7 +361,7 @@ namespace Roslynator.Documentation
 
             INamedTypeSymbol typeSymbol = typeModel.TypeSymbol;
 
-            using (DocumentationWriter writer = CreateWriter(typeModel, typeModel))
+            using (DocumentationWriter writer = CreateWriter(typeModel))
             {
                 writer.WriteStartDocument();
 
@@ -431,36 +453,36 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Fields:
                             {
-                                //TODO: 
+                                //TODO: WriteFields vs. WriteEnumFields
                                 if (typeKind == TypeKind.Enum)
                                 {
                                     writer.WriteEnumFields(typeModel.GetFields());
                                 }
                                 else
                                 {
-                                    writer.WriteFields(typeModel.GetFields(includeInherited: true));
+                                    writer.WriteFields(typeModel.GetFields(includeInherited: true), isInherited: IsInherited);
                                 }
 
                                 break;
                             }
                         case TypeDocumentationParts.Properties:
                             {
-                                writer.WriteProperties(typeModel.GetProperties(includeInherited: true));
+                                writer.WriteProperties(typeModel.GetProperties(includeInherited: true), isInherited: IsInherited);
                                 break;
                             }
                         case TypeDocumentationParts.Methods:
                             {
-                                writer.WriteMethods(typeModel.GetMethods(includeInherited: true));
+                                writer.WriteMethods(typeModel.GetMethods(includeInherited: true), isInherited: IsInherited);
                                 break;
                             }
                         case TypeDocumentationParts.Operators:
                             {
-                                writer.WriteOperators(typeModel.GetOperators(includeInherited: true));
+                                writer.WriteOperators(typeModel.GetOperators(includeInherited: true), isInherited: IsInherited);
                                 break;
                             }
                         case TypeDocumentationParts.Events:
                             {
-                                writer.WriteEvents(typeModel.GetEvents(includeInherited: true));
+                                writer.WriteEvents(typeModel.GetEvents(includeInherited: true), isInherited: IsInherited);
                                 break;
                             }
                         case TypeDocumentationParts.ExplicitInterfaceImplementations:
@@ -485,6 +507,11 @@ namespace Roslynator.Documentation
 
                 return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Type, typeModel);
             }
+
+            bool IsInherited(ISymbol symbol)
+            {
+                return symbol.ContainingType != typeSymbol;
+            }
         }
 
         private IEnumerable<DocumentationGeneratorResult> GenerateMembers(TypeDocumentationModel typeModel)
@@ -493,7 +520,7 @@ namespace Roslynator.Documentation
             {
                 foreach (MemberDocumentationModel model in typeModel.GetMembers(Options.TypeParts))
                 {
-                    using (DocumentationWriter writer = CreateWriter(model, model))
+                    using (DocumentationWriter writer = CreateWriter(model))
                     {
                         writer.WriteStartDocument();
 
@@ -513,7 +540,7 @@ namespace Roslynator.Documentation
         {
             SymbolDisplayFormat format = FormatProvider.TypeFormat;
 
-            using (DocumentationWriter writer = CreateWriter(EmptySymbolModel, null))
+            using (DocumentationWriter writer = CreateWriter(null))
             {
                 writer.WriteStartDocument();
                 writer.WriteHeading1(heading);

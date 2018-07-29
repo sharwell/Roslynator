@@ -8,10 +8,6 @@ Assembly: Roslynator\.Documentation\.TestProject\.dll
 public void Clear()
 ```
 
-### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ### Implements
 
 * [ICollection\<Foo>.Clear](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear)

@@ -47,6 +47,11 @@ namespace Roslynator.Documentation
             get { return Attributes.Any(f => f.AttributeClass.HasMetadataName(MetadataNames.System_ObsoleteAttribute)); }
         }
 
+        public bool IsExternal
+        {
+            get { return DocumentationModel.IsExternal(Symbol); }
+        }
+
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private string DebuggerDisplay
         {

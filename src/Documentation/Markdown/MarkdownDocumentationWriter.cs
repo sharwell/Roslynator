@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System.Diagnostics;
 using System.Text;
 using DotMarkdown;
 using Microsoft.CodeAnalysis;
@@ -12,10 +11,10 @@ namespace Roslynator.Documentation.Markdown
         private readonly MarkdownWriter _writer;
 
         public MarkdownDocumentationWriter(
-            SymbolDocumentationModel symbolModel,
+            DocumentationModel documentationModel,
             DocumentationUrlProvider urlProvider,
             DocumentationOptions options = null,
-            DocumentationResources resources = null) : base(symbolModel, urlProvider, options, resources)
+            DocumentationResources resources = null) : base(documentationModel, urlProvider, options, resources)
         {
             _writer = MarkdownWriter.Create(new StringBuilder());
         }
@@ -74,7 +73,25 @@ namespace Roslynator.Documentation.Markdown
 
         public override void WriteLink(string text, string url, string title = null) => _writer.WriteLink(text, url, title);
 
-        public override void WriteCodeBlock(string text, string language = null) => _writer.WriteFencedCodeBlock(text, language);
+        public override void WriteCodeBlock(string text, string language = null)
+        {
+            _writer.WriteFencedCodeBlock(text, GetLanguageIdentifier());
+
+            string GetLanguageIdentifier()
+            {
+                switch (language)
+                {
+                    case LanguageNames.CSharp:
+                        return LanguageIdentifiers.CSharp;
+                    case LanguageNames.VisualBasic:
+                        return LanguageIdentifiers.VisualBasic;
+                    case LanguageNames.FSharp:
+                        return LanguageIdentifiers.FSharp;
+                }
+
+                return null;
+            }
+        }
 
         public override void WriteStartBlockQuote() => _writer.WriteStartBlockQuote();
 
@@ -119,24 +136,6 @@ namespace Roslynator.Documentation.Markdown
         {
             if (_writer.WriteState != WriteState.Closed)
                 _writer.Close();
-        }
-
-        //TODO: 
-        public override string GetLanguageIdentifier(string language)
-        {
-            switch (language)
-            {
-                case LanguageNames.CSharp:
-                    return LanguageIdentifiers.CSharp;
-                case LanguageNames.VisualBasic:
-                    return LanguageIdentifiers.VisualBasic;
-                case LanguageNames.FSharp:
-                    return LanguageIdentifiers.FSharp;
-            }
-
-            Debug.Assert(Symbol == null, Symbol.Language);
-
-            return null;
         }
     }
 }

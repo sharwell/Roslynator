@@ -34,10 +34,6 @@ public void Bar<T>(string value, string value2)
 | value | p |
 | value2 | |
 
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
-
 ## Bar\(\)
 
 ### Summary
@@ -47,8 +43,4 @@ abc
 ```csharp
 public void Bar()
 ```
-
-#### Returns
-
-[Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)
 

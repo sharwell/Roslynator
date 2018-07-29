@@ -63,7 +63,6 @@ namespace Roslynator.Documentation
         public abstract string OperatorTitle { get; }
         public abstract string OperatorsTitle { get; }
         public abstract string OverloadsTitle { get; }
-        public abstract string ParameterTitle { get; }
         public abstract string ParametersTitle { get; }
         public abstract string PropertiesTitle { get; }
         public abstract string PropertyTitle { get; }
@@ -76,7 +75,6 @@ namespace Roslynator.Documentation
         public abstract string StructTitle { get; }
         public abstract string StructsTitle { get; }
         public abstract string SummaryTitle { get; }
-        public abstract string TypeParameterTitle { get; }
         public abstract string TypeParametersTitle { get; }
         public abstract string ValueTitle { get; }
         public abstract string ValuesTitle { get; }
@@ -236,7 +234,6 @@ namespace Roslynator.Documentation
             public override string OperatorTitle { get; } = "Operator";
             public override string OperatorsTitle { get; } = "Operators";
             public override string OverloadsTitle { get; } = "Overloads";
-            public override string ParameterTitle { get; } = "Parameter";
             public override string ParametersTitle { get; } = "Parameters";
             public override string PropertiesTitle { get; } = "Properties";
             public override string PropertyTitle { get; } = "Property";
@@ -249,7 +246,6 @@ namespace Roslynator.Documentation
             public override string StructTitle { get; } = "Struct";
             public override string StructsTitle { get; } = "Structs";
             public override string SummaryTitle { get; } = "Summary";
-            public override string TypeParameterTitle { get; } = "Type Parameter";
             public override string TypeParametersTitle { get; } = "Type Parameters";
             public override string ValueTitle { get; } = "Value";
             public override string ValuesTitle { get; } = "Values";
