@@ -30,7 +30,7 @@ namespace Roslynator.Documentation
 
         public ImmutableArray<string> Names { get; }
 
-        public DocumentationKind Kind => DocumentationKind.Member;
+        public DocumentationKind DocumentationKind => DocumentationKind.Member;
 
         public static MemberDocumentationModel Create(ISymbol symbol, ImmutableArray<ISymbol> overloads, DocumentationModel documentationModel)
         {

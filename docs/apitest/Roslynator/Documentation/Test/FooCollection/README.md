@@ -39,17 +39,17 @@ public class FooCollection : System.Collections.ICollection,
 
 | Method | Summary |
 | ------ | ------- |
-| **[Add(Foo)](Add/README.md)** | |
-| **[Clear()](Clear/README.md)** | |
-| **[Contains(Foo)](Contains/README.md)** | |
-| **[CopyTo(Array, Int32)](CopyTo/README.md)** | |
-| **[CopyTo(Foo\[\], Int32)](CopyTo/README.md)** | |
+| [Add(Foo)](Add/README.md) | |
+| [Clear()](Clear/README.md) | |
+| [Contains(Foo)](Contains/README.md) | |
+| [CopyTo(Array, Int32)](CopyTo/README.md) | |
+| [CopyTo(Foo\[\], Int32)](CopyTo/README.md) | |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| **[GetEnumerator()](GetEnumerator/README.md)** | |
+| [GetEnumerator()](GetEnumerator/README.md) | |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| **[Remove(Foo)](Remove/README.md)** | |
+| [Remove(Foo)](Remove/README.md) | |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 
 ## Explicit Interface Implementations

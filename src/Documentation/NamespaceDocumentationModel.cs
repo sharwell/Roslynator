@@ -38,7 +38,7 @@ namespace Roslynator.Documentation
 
         public ImmutableArray<string> Names { get; }
 
-        public DocumentationKind Kind => DocumentationKind.Namespace;
+        public DocumentationKind DocumentationKind => DocumentationKind.Namespace;
 
         internal static NamespaceDocumentationModel Create(INamespaceSymbol namespaceSymbol, DocumentationModel documentationModel)
         {

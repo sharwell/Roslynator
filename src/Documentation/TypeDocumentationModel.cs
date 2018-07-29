@@ -73,7 +73,7 @@ namespace Roslynator.Documentation
 
         public ImmutableArray<string> Names { get; }
 
-        public DocumentationKind Kind => DocumentationKind.Type;
+        public DocumentationKind DocumentationKind => DocumentationKind.Type;
 
         public static TypeDocumentationModel Create(INamedTypeSymbol typeSymbol, DocumentationModel documentationModel)
         {
@@ -288,13 +288,7 @@ namespace Roslynator.Documentation
 
         public IEnumerable<IMethodSymbol> GetExtensionMethods()
         {
-            foreach (IMethodSymbol methodSymbol in DocumentationModel.GetExtensionMethods())
-            {
-                ITypeSymbol typeSymbol2 = DocumentationModel.GetExtendedTypeSymbol(methodSymbol);
-
-                if (TypeSymbol == typeSymbol2)
-                    yield return methodSymbol;
-            }
+            return DocumentationModel.GetExtensionMethods(TypeSymbol);
         }
 
         public IEnumerable<INamedTypeSymbol> GetDerivedTypes()

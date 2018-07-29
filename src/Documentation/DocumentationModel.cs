@@ -9,6 +9,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: ExternalNamespaces, ExternalTypes
     public class DocumentationModel
     {
         private ImmutableArray<NamespaceDocumentationModel> _namespaceModels;
@@ -16,6 +17,8 @@ namespace Roslynator.Documentation
         private ImmutableArray<TypeDocumentationModel> _typeModels;
 
         private readonly Dictionary<ISymbol, SymbolDocumentationModel> _symbolDocumentationModels;
+
+        private readonly Dictionary<ISymbol, string> _commentIds;
 
         private Dictionary<IAssemblySymbol, XmlDocumentation> _xmlDocumentations;
 
@@ -25,6 +28,7 @@ namespace Roslynator.Documentation
             Assemblies = ImmutableArray.CreateRange(assemblies);
 
             _symbolDocumentationModels = new Dictionary<ISymbol, SymbolDocumentationModel>();
+            _commentIds = new Dictionary<ISymbol, string>();
         }
 
         public Compilation Compilation { get; }
@@ -94,7 +98,33 @@ namespace Roslynator.Documentation
             }
         }
 
-        public IEnumerable<TypeDocumentationModel> ExtendedExternalTypes()
+        public IEnumerable<IMethodSymbol> GetExtensionMethods(INamedTypeSymbol typeSymbol)
+        {
+            foreach (TypeDocumentationModel typeModel in Types)
+            {
+                if (typeModel.TypeSymbol.MightContainExtensionMethods)
+                {
+                    foreach (ISymbol member in typeModel.Members)
+                    {
+                        if (member.Kind == SymbolKind.Method
+                            && member.IsStatic)
+                        {
+                            var methodSymbol = (IMethodSymbol)member;
+
+                            if (methodSymbol.IsExtensionMethod)
+                            {
+                                ITypeSymbol typeSymbol2 = GetExtendedType(methodSymbol);
+
+                                if (typeSymbol == typeSymbol2)
+                                    yield return methodSymbol;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public IEnumerable<TypeDocumentationModel> GetExtendedExternalTypes()
         {
             return Iterator().Distinct().Select(f => GetTypeModel(f));
 
@@ -111,7 +141,7 @@ namespace Roslynator.Documentation
 
             INamedTypeSymbol GetExternalSymbol(IMethodSymbol methodSymbol)
             {
-                INamedTypeSymbol type = GetExtendedTypeSymbol(methodSymbol);
+                INamedTypeSymbol type = GetExtendedType(methodSymbol);
 
                 if (type == null)
                     return null;
@@ -126,7 +156,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public static INamedTypeSymbol GetExtendedTypeSymbol(IMethodSymbol methodSymbol)
+        private static INamedTypeSymbol GetExtendedType(IMethodSymbol methodSymbol)
         {
             ITypeSymbol type = methodSymbol.Parameters[0].Type.OriginalDefinition;
 
@@ -246,7 +276,7 @@ namespace Roslynator.Documentation
             return DocumentationCommentId.GetFirstSymbolForReferenceId(id, Compilation);
         }
 
-        internal XmlDocumentation GetXmlDocumentation(IAssemblySymbol assemblySymbol)
+        private XmlDocumentation GetXmlDocumentation(IAssemblySymbol assemblySymbol)
         {
             if (_xmlDocumentations == null)
                 _xmlDocumentations = new Dictionary<IAssemblySymbol, XmlDocumentation>();
@@ -269,9 +299,19 @@ namespace Roslynator.Documentation
             return xmlDocumentation;
         }
 
-        internal SymbolXmlDocumentation GetSymbolDocumentation(ISymbol symbol)
+        internal SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol)
         {
-            return GetXmlDocumentation(symbol.ContainingAssembly)?.GetDocumentation(GetSymbolModel(symbol).CommentId);
+            if (!_commentIds.TryGetValue(symbol, out string commentId))
+            {
+                commentId = symbol.GetDocumentationCommentId();
+
+                _commentIds[symbol] = commentId;
+            }
+
+            if (commentId == null)
+                return null;
+
+            return GetXmlDocumentation(symbol.ContainingAssembly)?.GetDocumentation(commentId);
         }
     }
 }

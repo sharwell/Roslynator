@@ -337,7 +337,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                DocumentationModel.GetSymbolDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
+                DocumentationModel.GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
             }
         }
 
@@ -356,7 +356,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                DocumentationModel.GetSymbolDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
+                DocumentationModel.GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
             }
         }
 
@@ -377,7 +377,7 @@ namespace Roslynator.Documentation
 
                 string elementName = (propertySymbol.IsIndexer) ? "returns" : "value";
 
-                DocumentationModel.GetSymbolDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
+                DocumentationModel.GetXmlDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
             }
         }
     }

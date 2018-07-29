@@ -32,13 +32,13 @@ public readonly struct ExpressionChain.Reversed : System.IEquatable<ExpressionCh
 
 | Method | Summary |
 | ------ | ------- |
-| **[Equals(Object)](Equals/README.md)** | |
-| **[Equals(Reversed)](Equals/README.md)** | |
-| **[GetEnumerator()](GetEnumerator/README.md)** | |
-| **[GetHashCode()](GetHashCode/README.md)** | |
+| [Equals(Object)](Equals/README.md) | |
+| [Equals(Reversed)](Equals/README.md) | |
+| [GetEnumerator()](GetEnumerator/README.md) | |
+| [GetHashCode()](GetHashCode/README.md) | |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| **[ToString()](ToString/README.md)** | |
+| [ToString()](ToString/README.md) | |
 
 ## Operators
 

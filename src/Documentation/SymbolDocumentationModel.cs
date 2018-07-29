@@ -12,7 +12,6 @@ namespace Roslynator.Documentation
     public class SymbolDocumentationModel : IEquatable<SymbolDocumentationModel>
     {
         private ImmutableArray<AttributeData> _attributes;
-        private string _commentId;
 
         public SymbolDocumentationModel(
             ISymbol symbol,
@@ -23,11 +22,6 @@ namespace Roslynator.Documentation
         }
 
         public ISymbol Symbol { get; }
-
-        public string CommentId
-        {
-            get { return _commentId ?? (_commentId = Symbol.GetDocumentationCommentId()); }
-        }
 
         internal DocumentationModel DocumentationModel { get; }
 

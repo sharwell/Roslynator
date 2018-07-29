@@ -31,14 +31,14 @@ public readonly struct StringConcatenationExpressionInfo : System.IEquatable<Str
 
 | Method | Summary |
 | ------ | ------- |
-| **[AsChain()](AsChain/README.md)** | |
-| **[Equals(Object)](Equals/README.md)** | Determines whether this instance and a specified object are equal\. |
-| **[Equals(StringConcatenationExpressionInfo)](Equals/README.md)** | Determines whether this instance is equal to another object of the same type\. |
-| **[Expressions(Boolean)](Expressions/README.md)** | Returns expressions of this binary expression, including expressions of nested binary expressions of the same kind as parent binary expression\. |
-| **[GetHashCode()](GetHashCode/README.md)** | Returns the hash code for this instance\. |
+| [AsChain()](AsChain/README.md) | |
+| [Equals(Object)](Equals/README.md) | Determines whether this instance and a specified object are equal\. |
+| [Equals(StringConcatenationExpressionInfo)](Equals/README.md) | Determines whether this instance is equal to another object of the same type\. |
+| [Expressions(Boolean)](Expressions/README.md) | Returns expressions of this binary expression, including expressions of nested binary expressions of the same kind as parent binary expression\. |
+| [GetHashCode()](GetHashCode/README.md) | Returns the hash code for this instance\. |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| **[ToString()](ToString/README.md)** | Returns the string representation of the underlying syntax, not including its leading and trailing trivia\. |
+| [ToString()](ToString/README.md) | Returns the string representation of the underlying syntax, not including its leading and trailing trivia\. |
 
 ## Operators
 

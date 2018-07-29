@@ -50,7 +50,7 @@ namespace Roslynator.Documentation
 
         private SymbolXmlDocumentation GetSymbolDocumentation(ISymbol symbol)
         {
-            return DocumentationModel.GetXmlDocumentation(symbol.ContainingAssembly)?.GetDocumentation(GetSymbolModel(symbol).CommentId);
+            return DocumentationModel.GetXmlDocumentation(symbol);
         }
 
         public abstract void WriteStartDocument();
@@ -838,20 +838,6 @@ namespace Roslynator.Documentation
             bool addLink = true,
             INamedTypeSymbol containingType = null)
         {
-            bool emphasizeNonInherited = false;
-
-            if (containingType != null)
-            {
-                foreach (ISymbol symbol in symbols)
-                {
-                    if (symbol.ContainingType != containingType)
-                    {
-                        emphasizeNonInherited = true;
-                        break;
-                    }
-                }
-            }
-
             using (IEnumerator<ISymbol> en = symbols
                 .OrderBy(f => f.ToDisplayString(format, additionalOptions))
                 .GetEnumerator())
@@ -875,12 +861,6 @@ namespace Roslynator.Documentation
                         WriteStartTableRow();
                         WriteStartTableCell();
 
-                        bool isInherited = containingType != null
-                            && symbol.ContainingType != containingType;
-
-                        if (emphasizeNonInherited && !isInherited)
-                            WriteStartBold();
-
                         if (symbol.IsKind(SymbolKind.Parameter, SymbolKind.TypeParameter))
                         {
                             WriteString(symbol.Name);
@@ -894,11 +874,11 @@ namespace Roslynator.Documentation
                             WriteString(symbol.ToDisplayString(format, additionalOptions));
                         }
 
-                        if (emphasizeNonInherited && !isInherited)
-                            WriteEndBold();
-
                         WriteEndTableCell();
                         WriteStartTableCell();
+
+                        bool isInherited = containingType != null
+                            && symbol.ContainingType != containingType;
 
                         if (symbol.IsKind(SymbolKind.Parameter, SymbolKind.TypeParameter))
                         {
@@ -1019,7 +999,6 @@ namespace Roslynator.Documentation
         {
             string url = GetUrl(symbolModel, canCreateExternalUrl);
 
-            //TODO: link or bold
             WriteLinkOrText(symbolModel.Symbol.ToDisplayString(format, additionalOptions), url);
         }
 
@@ -1117,7 +1096,7 @@ namespace Roslynator.Documentation
             if (!(symbolModel is IDocumentationFile documentationFile))
                 return null;
 
-            DocumentationKind kind = documentationFile.Kind;
+            DocumentationKind kind = documentationFile.DocumentationKind;
 
             if (kind == DocumentationKind.Type)
             {

@@ -9,6 +9,6 @@ namespace Roslynator.Documentation
     {
         ImmutableArray<string> Names { get; }
 
-        DocumentationKind Kind { get; }
+        DocumentationKind DocumentationKind { get; }
     }
 }

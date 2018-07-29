@@ -38,9 +38,9 @@ public sealed class StatementListSelection : Roslynator.SyntaxListSelection<Micr
 
 | Method | Summary |
 | ------ | ------- |
-| **[Create(BlockSyntax, TextSpan)](Create/README.md)** | Creates a new [StatementListSelection](./README.md) based on the specified block and span\. |
-| **[Create(StatementListInfo, TextSpan)](Create/README.md)** | Creates a new [StatementListSelection](./README.md) based on the specified [StatementListInfo](../Syntax/StatementListInfo/README.md) and span\. |
-| **[Create(SwitchSectionSyntax, TextSpan)](Create/README.md)** | Creates a new [StatementListSelection](./README.md) based on the specified switch section and span\. |
+| [Create(BlockSyntax, TextSpan)](Create/README.md) | Creates a new [StatementListSelection](./README.md) based on the specified block and span\. |
+| [Create(StatementListInfo, TextSpan)](Create/README.md) | Creates a new [StatementListSelection](./README.md) based on the specified [StatementListInfo](../Syntax/StatementListInfo/README.md) and span\. |
+| [Create(SwitchSectionSyntax, TextSpan)](Create/README.md) | Creates a new [StatementListSelection](./README.md) based on the specified switch section and span\. |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [First()](../../SyntaxListSelection-1/First/README.md) | Gets the first selected node\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
 | [GetEnumerator()](../../SyntaxListSelection-1/GetEnumerator/README.md) | Returns an enumerator that iterates through selected nodes\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
@@ -49,6 +49,6 @@ public sealed class StatementListSelection : Roslynator.SyntaxListSelection<Micr
 | [Last()](../../SyntaxListSelection-1/Last/README.md) | Gets the last selected node\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| **[TryCreate(BlockSyntax, TextSpan, StatementListSelection)](TryCreate/README.md)** | Creates a new [StatementListSelection](./README.md) based on the specified block and span\. |
-| **[TryCreate(SwitchSectionSyntax, TextSpan, StatementListSelection)](TryCreate/README.md)** | Creates a new [StatementListSelection](./README.md) based on the specified switch section and span\. |
+| [TryCreate(BlockSyntax, TextSpan, StatementListSelection)](TryCreate/README.md) | Creates a new [StatementListSelection](./README.md) based on the specified block and span\. |
+| [TryCreate(SwitchSectionSyntax, TextSpan, StatementListSelection)](TryCreate/README.md) | Creates a new [StatementListSelection](./README.md) based on the specified switch section and span\. |
 

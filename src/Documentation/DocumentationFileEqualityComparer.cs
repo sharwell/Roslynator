@@ -25,7 +25,7 @@ namespace Roslynator.Documentation
             if (y == null)
                 return false;
 
-            if (x.Kind != y.Kind)
+            if (x.DocumentationKind != y.DocumentationKind)
                 return false;
 
             ImmutableArray<string> n1 = x.Names;

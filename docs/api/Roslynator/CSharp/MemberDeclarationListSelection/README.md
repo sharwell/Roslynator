@@ -32,16 +32,16 @@ public sealed class MemberDeclarationListSelection : Roslynator.SyntaxListSelect
 | [Item\[Int32\]](../../SyntaxListSelection-1/Item/README.md) | Gets the selected node at the specified index\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
 | [LastIndex](../../SyntaxListSelection-1/LastIndex/README.md) | Gets an index of the last selected node\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
 | [OriginalSpan](../../SyntaxListSelection-1/OriginalSpan/README.md) | Gets the original span that was used to determine selected nodes\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
-| **[Parent](Parent/README.md)** | Gets a node that contains selected members\. |
+| [Parent](Parent/README.md) | Gets a node that contains selected members\. |
 | [UnderlyingList](../../SyntaxListSelection-1/UnderlyingList/README.md) | Gets an underlying list that contains selected nodes\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
 
 ## Methods
 
 | Method | Summary |
 | ------ | ------- |
-| **[Create(CompilationUnitSyntax, TextSpan)](Create/README.md)** | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified compilation unit and span\. |
-| **[Create(NamespaceDeclarationSyntax, TextSpan)](Create/README.md)** | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified namespace declaration and span\. |
-| **[Create(TypeDeclarationSyntax, TextSpan)](Create/README.md)** | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified type declaration and span\. |
+| [Create(CompilationUnitSyntax, TextSpan)](Create/README.md) | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified compilation unit and span\. |
+| [Create(NamespaceDeclarationSyntax, TextSpan)](Create/README.md) | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified namespace declaration and span\. |
+| [Create(TypeDeclarationSyntax, TextSpan)](Create/README.md) | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified type declaration and span\. |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [First()](../../SyntaxListSelection-1/First/README.md) | Gets the first selected node\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
 | [GetEnumerator()](../../SyntaxListSelection-1/GetEnumerator/README.md) | Returns an enumerator that iterates through selected nodes\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
@@ -50,6 +50,6 @@ public sealed class MemberDeclarationListSelection : Roslynator.SyntaxListSelect
 | [Last()](../../SyntaxListSelection-1/Last/README.md) | Gets the last selected node\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| **[TryCreate(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](TryCreate/README.md)** | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified namespace declaration and span\. |
-| **[TryCreate(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](TryCreate/README.md)** | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified type declaration and span\. |
+| [TryCreate(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](TryCreate/README.md) | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified namespace declaration and span\. |
+| [TryCreate(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](TryCreate/README.md) | Creates a new [MemberDeclarationListSelection](./README.md) based on the specified type declaration and span\. |
 

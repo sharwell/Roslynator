@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    //TODO: OmitIEnumerable, InheritedInterfaceMembers
+    //TODO: OmitIEnumerable, InheritedInterfaceMembers, EmphasizeNonInheritedMember
     public class DocumentationOptions
     {
         public DocumentationOptions(

@@ -47,7 +47,7 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 | [IsFixedSize](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.isfixedsize) |  \(Inherited from [IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)\) |
 | [IsReadOnly](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.isreadonly) |  \(Inherited from [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\) |
 | [IsSynchronized](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.issynchronized) |  \(Inherited from [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)\) |
-| **[Item\[Int32\]](Item/README.md)** | |
+| [Item\[Int32\]](Item/README.md) | |
 | [SyncRoot](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.syncroot) |  \(Inherited from [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)\) |
 
 ## Methods
