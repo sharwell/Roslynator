@@ -64,7 +64,9 @@ namespace Roslynator.Documentation
 
         private DocumentationWriter CreateWriter(SymbolDocumentationModel containingModel = null)
         {
-            UrlProvider.ContainingFile = containingModel as IDocumentationFile;
+            UrlProvider.CurrentFolders = (containingModel != null)
+                ? DocumentationModel.GetFolders(containingModel.Symbol)
+                : default;
 
             DocumentationWriter writer = CreateWriterCore();
 
@@ -187,7 +189,7 @@ namespace Roslynator.Documentation
 
             writer.WriteEndDocument();
 
-            return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Root);
+            return CreateResult(writer, UrlProvider, DocumentationKind.Root);
         }
 
         private DocumentationGeneratorResult GenerateNamespace(NamespaceDocumentationModel namespaceModel)
@@ -203,7 +205,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Namespace, namespaceModel);
+                return CreateResult(writer, UrlProvider, DocumentationKind.Namespace, namespaceModel.Symbol);
             }
         }
 
@@ -243,7 +245,7 @@ namespace Roslynator.Documentation
                 .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
             if (!namespaces.Any())
-                return DocumentationGeneratorResult.Create(null, UrlProvider, DocumentationKind.ExtendedExternalTypes);
+                return CreateResult(null, UrlProvider, DocumentationKind.ExtendedExternalTypes);
 
             using (DocumentationWriter writer = CreateWriter())
             {
@@ -274,7 +276,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.ExtendedExternalTypes);
+                return CreateResult(writer, UrlProvider, DocumentationKind.ExtendedExternalTypes);
             }
         }
 
@@ -284,7 +286,7 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
                 writer.WriteStartHeading(1);
-                writer.WriteLink(typeModel, FormatProvider.TitleFormat);
+                writer.WriteLink(typeModel.Symbol, FormatProvider.TitleFormat);
                 writer.WriteSpace();
                 writer.WriteString(Resources.GetName(typeModel.TypeKind));
                 writer.WriteSpace();
@@ -301,7 +303,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Type, typeModel);
+                return CreateResult(writer, UrlProvider, DocumentationKind.Type, typeModel.Symbol);
             }
         }
 
@@ -452,7 +454,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Type, typeModel);
+                return CreateResult(writer, UrlProvider, DocumentationKind.Type, typeSymbol);
             }
         }
 
@@ -472,7 +474,7 @@ namespace Roslynator.Documentation
 
                         writer.WriteEndDocument();
 
-                        yield return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.Member, model);
+                        yield return CreateResult(writer, UrlProvider, DocumentationKind.Member, model.Symbol);
                     }
                 }
             }
@@ -566,7 +568,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return DocumentationGeneratorResult.Create(writer, UrlProvider, DocumentationKind.ObjectModel);
+                return CreateResult(writer, UrlProvider, DocumentationKind.ObjectModel);
             }
 
             void WriteBulletItem(ITypeSymbol baseType, HashSet<ITypeSymbol> nodes, DocumentationWriter writer)
@@ -586,6 +588,15 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndBulletItem();
             }
+        }
+
+        private DocumentationGeneratorResult CreateResult(DocumentationWriter writer, DocumentationUrlProvider urlProvider, DocumentationKind kind, ISymbol symbol = null)
+        {
+            ImmutableArray<string> folders = (symbol != null) ? DocumentationModel.GetFolders(symbol) : default;
+
+            return new DocumentationGeneratorResult(
+                writer?.ToString(),
+                urlProvider.GetDocumentPath(kind, folders), kind);
         }
     }
 }

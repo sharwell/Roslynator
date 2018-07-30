@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -20,6 +20,8 @@ namespace Roslynator.Documentation
 
         private readonly Dictionary<ISymbol, string> _commentIds;
 
+        private readonly Dictionary<ISymbol, ImmutableArray<string>> _symbolFolders;
+
         private Dictionary<IAssemblySymbol, XmlDocumentation> _xmlDocumentations;
 
         public DocumentationModel(Compilation compilation, IEnumerable<IAssemblySymbol> assemblies)
@@ -29,6 +31,7 @@ namespace Roslynator.Documentation
 
             _symbolDocumentationModels = new Dictionary<ISymbol, SymbolDocumentationModel>();
             _commentIds = new Dictionary<ISymbol, string>();
+            _symbolFolders = new Dictionary<ISymbol, ImmutableArray<string>>();
         }
 
         public Compilation Compilation { get; }
@@ -223,47 +226,99 @@ namespace Roslynator.Documentation
             return typeModel;
         }
 
-        //TODO: GetSymbolModel
-        internal SymbolDocumentationModel GetSymbolModel(ISymbol symbol)
+        public ImmutableArray<string> GetFolders(ISymbol symbol)
         {
-            if (_symbolDocumentationModels.TryGetValue(symbol, out SymbolDocumentationModel model))
-                return model;
+            if (_symbolFolders.TryGetValue(symbol, out ImmutableArray<string> folders))
+                return folders;
 
-            switch (symbol.Kind)
+            ImmutableArray<string>.Builder builder = ImmutableArray.CreateBuilder<string>();
+
+            if (symbol.Kind == SymbolKind.Namespace
+                && ((INamespaceSymbol)symbol).IsGlobalNamespace)
             {
-                case SymbolKind.Namespace:
+                builder.Add(WellKnownNames.GlobalNamespaceName);
+            }
+            else if (symbol.Kind == SymbolKind.Method
+                && ((IMethodSymbol)symbol).MethodKind == MethodKind.Constructor)
+            {
+                builder.Add(WellKnownNames.ConstructorName);
+            }
+            else if (symbol.Kind == SymbolKind.Property
+                && ((IPropertySymbol)symbol).IsIndexer)
+            {
+                builder.Add("Item");
+            }
+            else
+            {
+                ISymbol explicitImplementation = symbol.GetFirstExplicitInterfaceImplementation();
+
+                if (explicitImplementation != null)
+                {
+                    string name = explicitImplementation
+                        .ToDisplayParts(SymbolDisplayFormats.ExplicitImplementationFullName, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName)
+                        .Where(part => part.Kind != SymbolDisplayPartKind.Space)
+                        .Select(part => (part.IsPunctuation()) ? part.WithText("-") : part)
+                        .ToImmutableArray()
+                        .ToDisplayString();
+
+                    builder.Add(name);
+                }
+                else
+                {
+                    int arity = symbol.GetArity();
+
+                    if (arity > 0)
                     {
-                        model = NamespaceDocumentationModel.Create((INamespaceSymbol)symbol, this);
-                        break;
+                        builder.Add(symbol.Name + "-" + arity.ToString(CultureInfo.InvariantCulture));
                     }
-                case SymbolKind.NamedType:
+                    else
                     {
-                        model = TypeDocumentationModel.Create((INamedTypeSymbol)symbol, this);
-                        break;
+                        builder.Add(symbol.Name);
                     }
-                case SymbolKind.Event:
-                case SymbolKind.Field:
-                case SymbolKind.Method:
-                case SymbolKind.Property:
-                    {
-                        model = MemberDocumentationModel.Create(symbol, default, this);
-                        break;
-                    }
-                case SymbolKind.Parameter:
-                case SymbolKind.TypeParameter:
-                    {
-                        model = new SymbolDocumentationModel(symbol, this);
-                        break;
-                    }
-                default:
-                    {
-                        throw new InvalidOperationException();
-                    }
+                }
             }
 
-            _symbolDocumentationModels[symbol] = model;
+            INamedTypeSymbol containingType = symbol.ContainingType;
 
-            return model;
+            while (containingType != null)
+            {
+                int arity = containingType.Arity;
+
+                builder.Add((arity > 0) ? containingType.Name + "-" + arity.ToString(CultureInfo.InvariantCulture) : containingType.Name);
+
+                containingType = containingType.ContainingType;
+            }
+
+            INamespaceSymbol containingNamespace = symbol.ContainingNamespace;
+
+            if (containingNamespace != null)
+            {
+                if (containingNamespace.IsGlobalNamespace)
+                {
+                    if (symbol.Kind != SymbolKind.Namespace)
+                    {
+                        builder.Add(WellKnownNames.GlobalNamespaceName);
+                    }
+                }
+                else
+                {
+                    do
+                    {
+                        builder.Add(containingNamespace.Name);
+
+                        containingNamespace = containingNamespace.ContainingNamespace;
+                    }
+                    while (containingNamespace?.IsGlobalNamespace == false);
+                }
+            }
+
+            builder.Reverse();
+
+            ImmutableArray<string> names = builder.ToImmutableArray();
+
+            _symbolFolders[symbol] = names;
+
+            return names;
         }
 
         internal ISymbol GetFirstSymbolForDeclarationId(string id)

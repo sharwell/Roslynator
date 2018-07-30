@@ -3,24 +3,21 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Globalization;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    public sealed class TypeDocumentationModel : SymbolDocumentationModel, IDocumentationFile
+    public sealed class TypeDocumentationModel : SymbolDocumentationModel
     {
         private ImmutableArray<ISymbol> _members;
         private ImmutableArray<ISymbol> _membersIncludingInherited;
 
         private TypeDocumentationModel(
             INamedTypeSymbol typeSymbol,
-            ImmutableArray<string> nameAndBaseNamesAndNamespaceNames,
             DocumentationModel documentationModel) : base(typeSymbol, documentationModel)
         {
             TypeSymbol = typeSymbol;
-            Names = nameAndBaseNamesAndNamespaceNames;
         }
 
         public INamedTypeSymbol TypeSymbol { get; }
@@ -71,59 +68,12 @@ namespace Roslynator.Documentation
             }
         }
 
-        public ImmutableArray<string> Names { get; }
-
         public DocumentationKind DocumentationKind => DocumentationKind.Type;
 
         public static TypeDocumentationModel Create(INamedTypeSymbol typeSymbol, DocumentationModel documentationModel)
         {
-            ImmutableArray<string>.Builder names = ImmutableArray.CreateBuilder<string>();
-
-            int arity = typeSymbol.GetArity();
-
-            if (arity > 0)
-            {
-                names.Add(typeSymbol.Name + "-" + arity.ToString(CultureInfo.InvariantCulture));
-            }
-            else
-            {
-                names.Add(typeSymbol.Name);
-            }
-
-            INamedTypeSymbol containingType = typeSymbol.ContainingType;
-
-            while (containingType != null)
-            {
-                arity = containingType.Arity;
-
-                names.Add((arity > 0) ? containingType.Name + "-" + arity.ToString(CultureInfo.InvariantCulture) : containingType.Name);
-
-                containingType = containingType.ContainingType;
-            }
-
-            INamespaceSymbol containingNamespace = typeSymbol.ContainingNamespace;
-
-            if (containingNamespace != null)
-            {
-                if (containingNamespace.IsGlobalNamespace)
-                {
-                    names.Add(WellKnownNames.GlobalNamespaceName);
-                }
-                else
-                {
-                    do
-                    {
-                        names.Add(containingNamespace.Name);
-
-                        containingNamespace = containingNamespace.ContainingNamespace;
-                    }
-                    while (containingNamespace?.IsGlobalNamespace == false);
-                }
-            }
-
             return new TypeDocumentationModel(
                 typeSymbol,
-                names.ToImmutableArray(),
                 documentationModel);
         }
 
@@ -390,11 +340,6 @@ namespace Roslynator.Documentation
                     yield return MemberDocumentationModel.Create(symbol, symbolsWithName, DocumentationModel);
                 }
             }
-        }
-
-        public bool Equals(IDocumentationFile other)
-        {
-            return DocumentationFileEqualityComparer.Instance.Equals(this, other);
         }
     }
 }

@@ -43,11 +43,6 @@ namespace Roslynator.Documentation
 
         public DocumentationUrlProvider UrlProvider { get; }
 
-        internal SymbolDocumentationModel GetSymbolModel(ISymbol symbol)
-        {
-            return DocumentationModel.GetSymbolModel(symbol);
-        }
-
         private SymbolXmlDocumentation GetSymbolDocumentation(ISymbol symbol)
         {
             return DocumentationModel.GetXmlDocumentation(symbol);
@@ -988,18 +983,9 @@ namespace Roslynator.Documentation
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             bool canCreateExternalUrl = true)
         {
-            WriteLink(GetSymbolModel(symbol), format, additionalOptions, canCreateExternalUrl: canCreateExternalUrl);
-        }
+            string url = GetUrl(symbol, canCreateExternalUrl);
 
-        public void WriteLink(
-            SymbolDocumentationModel symbolModel,
-            SymbolDisplayFormat format,
-            SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
-            bool canCreateExternalUrl = true)
-        {
-            string url = GetUrl(symbolModel, canCreateExternalUrl);
-
-            WriteLinkOrText(symbolModel.Symbol.ToDisplayString(format, additionalOptions), url);
+            WriteLinkOrText(symbol.ToDisplayString(format, additionalOptions), url);
         }
 
         internal void WriteLinkOrTypeLink(
@@ -1041,7 +1027,7 @@ namespace Roslynator.Documentation
                     ? SymbolDisplayFormats.TypeNameAndContainingTypes
                     : SymbolDisplayFormats.TypeName;
 
-                string url = GetUrl(GetSymbolModel(typeSymbol), canCreateExternalUrl);
+                string url = GetUrl(typeSymbol, canCreateExternalUrl);
 
                 WriteLinkOrText(typeSymbol.ToDisplayString(format), url);
 
@@ -1083,39 +1069,54 @@ namespace Roslynator.Documentation
                     ? SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters
                     : SymbolDisplayFormats.TypeNameAndTypeParameters;
 
-                string url = GetUrl(GetSymbolModel(typeSymbol), canCreateExternalUrl);
+                string url = GetUrl(typeSymbol, canCreateExternalUrl);
 
                 WriteLinkOrText(typeSymbol.ToDisplayString(format), url);
             }
         }
 
         private string GetUrl(
-            SymbolDocumentationModel symbolModel,
+            ISymbol symbol,
             bool canCreateExternalUrl = true)
         {
-            if (!(symbolModel is IDocumentationFile documentationFile))
+            ImmutableArray<string> folders = DocumentationModel.GetFolders(symbol);
+
+            if (folders.IsDefault)
                 return null;
 
-            DocumentationKind kind = documentationFile.DocumentationKind;
-
-            if (kind == DocumentationKind.Type)
+            switch (symbol.Kind)
             {
-                if (!CanCreateTypeLocalUrl)
-                    return null;
-            }
-            else if (kind == DocumentationKind.Member)
-            {
-                if (!CanCreateMemberLocalUrl)
-                    return null;
+                case SymbolKind.NamedType:
+                    {
+                        if (!CanCreateTypeLocalUrl)
+                            return null;
+
+                        break;
+                    }
+                case SymbolKind.Event:
+                case SymbolKind.Field:
+                case SymbolKind.Method:
+                case SymbolKind.Property:
+                    {
+                        if (!CanCreateMemberLocalUrl)
+                            return null;
+
+                        break;
+                    }
+                case SymbolKind.Parameter:
+                case SymbolKind.TypeParameter:
+                    {
+                        return null;
+                    }
             }
 
-            if (symbolModel.IsExternal
+            if (DocumentationModel.IsExternal(symbol)
                 && canCreateExternalUrl)
             {
-                return UrlProvider.GetExternalUrl(documentationFile).Url;
+                return UrlProvider.GetExternalUrl(folders).Url;
             }
 
-            return UrlProvider.GetLocalUrl(documentationFile).Url;
+            return UrlProvider.GetLocalUrl(folders).Url;
         }
 
         public void Dispose()

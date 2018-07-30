@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 
@@ -17,7 +18,7 @@ namespace Roslynator.Documentation
         {
         }
 
-        public override string GetDocumentPath(DocumentationKind kind, IDocumentationFile documentationFile)
+        public override string GetDocumentPath(DocumentationKind kind, ImmutableArray<string> folders)
         {
             switch (kind)
             {
@@ -26,7 +27,7 @@ namespace Roslynator.Documentation
                 case DocumentationKind.Namespace:
                 case DocumentationKind.Type:
                 case DocumentationKind.Member:
-                    return GetUrl(ReadMeFileName, documentationFile.Names, Path.DirectorySeparatorChar);
+                    return GetUrl(ReadMeFileName, folders, Path.DirectorySeparatorChar);
                 case DocumentationKind.ObjectModel:
                     return WellKnownNames.ObjectModelFileName;
                 case DocumentationKind.ExtendedExternalTypes:
@@ -36,7 +37,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public override DocumentationUrlInfo GetLocalUrl(IDocumentationFile documentationFile)
+        public override DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders)
         {
             string url = CreateLocalUrl();
 
@@ -44,29 +45,27 @@ namespace Roslynator.Documentation
 
             string CreateLocalUrl()
             {
-                if (ContainingFile == null)
-                    return GetUrl(ReadMeFileName, documentationFile.Names, '/');
+                if (CurrentFolders.IsDefault)
+                    return GetUrl(ReadMeFileName, folders, '/');
 
-                if (ContainingFile == documentationFile)
+                if (FoldersEqual(CurrentFolders, folders))
                     return "./" + ReadMeFileName;
 
                 int count = 0;
 
-                ImmutableArray<string> names = documentationFile.Names;
+                int i = 0;
+                int j = 0;
 
-                int i = names.Length - 1;
-                int j = ContainingFile.Names.Length - 1;
-
-                while (i >= 0
-                    && j >= 0
-                    && string.Equals(names[i], ContainingFile.Names[j], StringComparison.Ordinal))
+                while (i < folders.Length
+                    && j < CurrentFolders.Length
+                    && string.Equals(folders[i], CurrentFolders[j], StringComparison.Ordinal))
                 {
                     count++;
-                    i--;
-                    j--;
+                    i++;
+                    j++;
                 }
 
-                int diff = ContainingFile.Names.Length - count;
+                int diff = CurrentFolders.Length - count;
 
                 StringBuilder sb = StringBuilderCache.GetInstance();
 
@@ -82,28 +81,48 @@ namespace Roslynator.Documentation
                     }
                 }
 
-                i = names.Length - 1 - count;
+                i = count;
 
-                if (i >= 0)
+                //i = folders.Length - 1 - count;
+
+                if (i < folders.Length)
                 {
                     if (sb.Length > 0)
                         sb.Append("/");
 
-                    sb.Append(names[i]);
-                    i--;
+                    sb.Append(folders[i]);
+                    i++;
 
-                    while (i >= 0)
+                    while (i < folders.Length)
                     {
                         sb.Append("/");
-                        sb.Append(names[i]);
-                        i--;
+                        sb.Append(folders[i]);
+                        i++;
                     }
                 }
 
                 sb.Append("/");
                 sb.Append(ReadMeFileName);
 
+                Debug.WriteLine(sb.ToString());
+
                 return StringBuilderCache.GetStringAndFree(sb);
+            }
+
+            bool FoldersEqual(ImmutableArray<string> folders1, ImmutableArray<string> folders2)
+            {
+                int length = folders1.Length;
+
+                if (length != folders2.Length)
+                    return false;
+
+                for (int i = 0; i < length; i++)
+                {
+                    if (folders1[i] != folders2[i])
+                        return false;
+                }
+
+                return true;
             }
         }
     }
