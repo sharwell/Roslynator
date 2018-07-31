@@ -245,7 +245,7 @@ namespace Roslynator.Documentation
                         }
                     case NamespaceDocumentationParts.Summary:
                         {
-                            DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol)?.WriteElementContentTo(writer, WellKnownTags.Summary);
+                            DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?.WriteElementContentTo(writer, WellKnownTags.Summary);
                             break;
                         }
                     case NamespaceDocumentationParts.Examples:

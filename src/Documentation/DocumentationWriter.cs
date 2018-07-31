@@ -43,9 +43,9 @@ namespace Roslynator.Documentation
 
         public DocumentationUrlProvider UrlProvider { get; }
 
-        private SymbolXmlDocumentation GetSymbolDocumentation(ISymbol symbol)
+        private SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol)
         {
-            return DocumentationModel.GetXmlDocumentation(symbol);
+            return DocumentationModel.GetXmlDocumentation(symbol, Options.PreferredCultureName);
         }
 
         public abstract void WriteStartDocument();
@@ -417,7 +417,7 @@ namespace Roslynator.Documentation
                             WriteLinkOrTypeLink(returnType);
                             WriteLine();
 
-                            GetSymbolDocumentation(symbol)?.WriteElementContentTo(this, WellKnownTags.Returns);
+                            GetXmlDocumentation(symbol)?.WriteElementContentTo(this, WellKnownTags.Returns);
                         }
 
                         break;
@@ -667,7 +667,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteExceptions(ISymbol symbol)
         {
-            GetSymbolDocumentation(symbol)?.WriteExceptionsTo(this);
+            GetXmlDocumentation(symbol)?.WriteExceptionsTo(this);
         }
 
         public virtual void WriteExamples(ISymbol symbol)
@@ -748,7 +748,7 @@ namespace Roslynator.Documentation
                             WriteEndTableCell();
                         }
 
-                        SymbolXmlDocumentation xmlDocumentation = GetSymbolDocumentation(fieldSymbol);
+                        SymbolXmlDocumentation xmlDocumentation = GetXmlDocumentation(fieldSymbol);
 
                         if (xmlDocumentation != null)
                         {
@@ -814,12 +814,12 @@ namespace Roslynator.Documentation
 
         public virtual void WriteSeeAlso(ISymbol symbol)
         {
-            GetSymbolDocumentation(symbol)?.WriteSeeAlsoTo(this);
+            GetXmlDocumentation(symbol)?.WriteSeeAlsoTo(this);
         }
 
         private void WriteSection(ISymbol symbol, string heading, string elementName)
         {
-            GetSymbolDocumentation(symbol)?.WriteSectionTo(this, heading, elementName);
+            GetXmlDocumentation(symbol)?.WriteSectionTo(this, heading, elementName);
         }
 
         internal void WriteTable(
@@ -878,12 +878,12 @@ namespace Roslynator.Documentation
 
                         if (symbol.IsKind(SymbolKind.Parameter, SymbolKind.TypeParameter))
                         {
-                            GetSymbolDocumentation(symbol.ContainingSymbol)?.WriteParamContentTo(this, symbol.Name);
+                            GetXmlDocumentation(symbol.ContainingSymbol)?.WriteParamContentTo(this, symbol.Name);
                         }
                         else
                         {
                             ISymbol symbol2 = (isInherited) ? symbol.OriginalDefinition : symbol;
-                            GetSymbolDocumentation(symbol2)?.WriteElementContentTo(this, WellKnownTags.Summary, inlineOnly: true);
+                            GetXmlDocumentation(symbol2)?.WriteElementContentTo(this, WellKnownTags.Summary, inlineOnly: true);
                         }
 
                         if (isInherited)

@@ -56,6 +56,11 @@ namespace Roslynator.Documentation
             }
         }
 
+        private SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol)
+        {
+            return DocumentationModel.GetXmlDocumentation(symbol, Options.PreferredCultureName);
+        }
+
         public virtual void WriteMember(MemberDocumentationModel model)
         {
             ISymbol symbol = model.Symbol;
@@ -337,7 +342,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                DocumentationModel.GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, WellKnownTags.Returns);
+                GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, WellKnownTags.Returns);
             }
         }
 
@@ -356,7 +361,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                DocumentationModel.GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, WellKnownTags.Returns);
+                GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, WellKnownTags.Returns);
             }
         }
 
@@ -377,7 +382,7 @@ namespace Roslynator.Documentation
 
                 string elementName = (propertySymbol.IsIndexer) ? WellKnownTags.Returns : WellKnownTags.Value;
 
-                DocumentationModel.GetXmlDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
+                GetXmlDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
             }
         }
     }

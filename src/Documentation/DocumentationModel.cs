@@ -344,7 +344,7 @@ namespace Roslynator.Documentation
             return DocumentationCommentId.GetFirstSymbolForReferenceId(id, Compilation);
         }
 
-        public SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol)
+        public SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol, string preferredCultureName = null)
         {
             if (_symbolData.TryGetValue(symbol, out SymbolDocumentationData data)
                 && data.XmlDocumentation != null)
@@ -359,7 +359,7 @@ namespace Roslynator.Documentation
 
             if (assembly != null)
             {
-                SymbolXmlDocumentation xmlDocumentation = GetXmlDocumentation(assembly)?.GetDocumentation(symbol);
+                SymbolXmlDocumentation xmlDocumentation = GetXmlDocumentation(assembly, preferredCultureName)?.GetDocumentation(symbol);
 
                 if (xmlDocumentation != null)
                 {
@@ -406,7 +406,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        private XmlDocumentation GetXmlDocumentation(IAssemblySymbol assembly)
+        private XmlDocumentation GetXmlDocumentation(IAssemblySymbol assembly, string preferredCultureName = null)
         {
             if (!_xmlDocumentations.TryGetValue(assembly, out XmlDocumentation xmlDocumentation))
             {
@@ -414,10 +414,32 @@ namespace Roslynator.Documentation
                 {
                     var reference = Compilation.GetMetadataReference(assembly) as PortableExecutableReference;
 
-                    string xmlDocPath = Path.ChangeExtension(reference.FilePath, "xml");
+                    string path = reference.FilePath;
 
-                    if (File.Exists(xmlDocPath))
-                        xmlDocumentation = XmlDocumentation.Load(xmlDocPath);
+                    if (preferredCultureName != null)
+                    {
+                        path = Path.GetDirectoryName(path);
+
+                        path = Path.Combine(path, preferredCultureName);
+
+                        if (Directory.Exists(path))
+                        {
+                            string fileName = Path.ChangeExtension(Path.GetFileNameWithoutExtension(reference.FilePath), "xml");
+
+                            path = Path.Combine(path, fileName);
+
+                            if (File.Exists(path))
+                                xmlDocumentation = XmlDocumentation.Load(path);
+                        }
+                    }
+
+                    if (xmlDocumentation == null)
+                    {
+                        path = Path.ChangeExtension(reference.FilePath, "xml");
+
+                        if (File.Exists(path))
+                            xmlDocumentation = XmlDocumentation.Load(path);
+                    }
                 }
 
                 _xmlDocumentations[assembly] = xmlDocumentation;

@@ -6,6 +6,7 @@ namespace Roslynator.Documentation
     public class DocumentationOptions
     {
         public DocumentationOptions(
+            string preferredCultureName = null,
             int maxDerivedItems = 10,
             bool formatBaseList = false,
             bool formatConstraints = false,
@@ -19,6 +20,7 @@ namespace Roslynator.Documentation
             TypeDocumentationParts typeParts = TypeDocumentationParts.AllExceptNestedTypes,
             MemberDocumentationParts memberParts = MemberDocumentationParts.All)
         {
+            PreferredCultureName = preferredCultureName;
             MaxDerivedItems = maxDerivedItems;
             FormatBaseList = formatBaseList;
             FormatConstraints = formatConstraints;
@@ -34,6 +36,8 @@ namespace Roslynator.Documentation
         }
 
         public static DocumentationOptions Default { get; } = new DocumentationOptions();
+
+        public string PreferredCultureName { get; }
 
         public int MaxDerivedItems { get; }
 
