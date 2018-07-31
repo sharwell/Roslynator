@@ -51,8 +51,8 @@ public readonly struct IfStatementCascade : System.IEquatable<IfStatementCascade
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
-| [IEnumerable\<IfStatementOrElseClause>.GetEnumerator()](System-Collections-Generic-IEnumerable-Roslynator-CSharp-IfStatementOrElseClause--GetEnumerator/README.md) |  \(Implements [IEnumerable\<IfStatementOrElseClause>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) | |
+| [IEnumerable\<IfStatementOrElseClause>.GetEnumerator()](System-Collections-Generic-IEnumerable-Roslynator-CSharp-IfStatementOrElseClause--GetEnumerator/README.md) | |
 
 ## Structs
 

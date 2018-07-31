@@ -51,8 +51,8 @@ public readonly struct ExpressionChain.Reversed : System.IEquatable<ExpressionCh
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
-| [IEnumerable\<ExpressionSyntax>.GetEnumerator()](System-Collections-Generic-IEnumerable-Microsoft-CodeAnalysis-CSharp-Syntax-ExpressionSyntax--GetEnumerator/README.md) |  \(Implements [IEnumerable\<ExpressionSyntax>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) | |
+| [IEnumerable\<ExpressionSyntax>.GetEnumerator()](System-Collections-Generic-IEnumerable-Microsoft-CodeAnalysis-CSharp-Syntax-ExpressionSyntax--GetEnumerator/README.md) | |
 
 ## Structs
 

@@ -74,8 +74,8 @@ public class SyntaxListSelection<TNode> : ISelection<TNode>,
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
-| [IEnumerable\<TNode>.GetEnumerator()](System-Collections-Generic-IEnumerable-TNode--GetEnumerator/README.md) |  \(Implements [IEnumerable\<TNode>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) | |
+| [IEnumerable\<TNode>.GetEnumerator()](System-Collections-Generic-IEnumerable-TNode--GetEnumerator/README.md) | |
 
 ## Structs
 

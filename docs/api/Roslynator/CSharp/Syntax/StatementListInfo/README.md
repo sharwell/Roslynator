@@ -85,6 +85,6 @@ public readonly struct StatementListInfo : System.IEquatable<StatementListInfo>,
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
-| [IEnumerable\<StatementSyntax>.GetEnumerator()](System-Collections-Generic-IEnumerable-Microsoft-CodeAnalysis-CSharp-Syntax-StatementSyntax--GetEnumerator/README.md) |  \(Implements [IEnumerable\<StatementSyntax>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) | |
+| [IEnumerable\<StatementSyntax>.GetEnumerator()](System-Collections-Generic-IEnumerable-Microsoft-CodeAnalysis-CSharp-Syntax-StatementSyntax--GetEnumerator/README.md) | |
 

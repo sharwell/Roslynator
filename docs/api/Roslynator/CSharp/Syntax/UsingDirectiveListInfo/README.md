@@ -81,6 +81,6 @@ public readonly struct UsingDirectiveListInfo : System.IEquatable<UsingDirective
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
-| [IEnumerable\<UsingDirectiveSyntax>.GetEnumerator()](System-Collections-Generic-IEnumerable-Microsoft-CodeAnalysis-CSharp-Syntax-UsingDirectiveSyntax--GetEnumerator/README.md) |  \(Implements [IEnumerable\<UsingDirectiveSyntax>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) | |
+| [IEnumerable\<UsingDirectiveSyntax>.GetEnumerator()](System-Collections-Generic-IEnumerable-Microsoft-CodeAnalysis-CSharp-Syntax-UsingDirectiveSyntax--GetEnumerator/README.md) | |
 

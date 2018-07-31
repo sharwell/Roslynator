@@ -798,7 +798,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteExplicitInterfaceImplementations(IEnumerable<ISymbol> explicitInterfaceImplementations)
         {
-            WriteTable(explicitInterfaceImplementations, Resources.ExplicitInterfaceImplementationsTitle, 2, Resources.MemberTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName);
+            WriteTable(explicitInterfaceImplementations, Resources.ExplicitInterfaceImplementationsTitle, 2, Resources.MemberTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, canIndicateInterfaceImplementation: false);
         }
 
         public virtual void WriteExtensionMethods(IEnumerable<IMethodSymbol> methods)
@@ -831,6 +831,7 @@ namespace Roslynator.Documentation
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             bool addLink = true,
+            bool canIndicateInterfaceImplementation = true,
             INamedTypeSymbol containingType = null)
         {
             using (IEnumerator<ISymbol> en = symbols
@@ -907,7 +908,8 @@ namespace Roslynator.Documentation
                                 }
                             }
 
-                            if (Options.IndicateInterfaceImplementation)
+                            if (canIndicateInterfaceImplementation
+                                && Options.IndicateInterfaceImplementation)
                             {
                                 using (IEnumerator<ISymbol> en2 = symbol.FindImplementedInterfaceMembers().GetEnumerator())
                                 {

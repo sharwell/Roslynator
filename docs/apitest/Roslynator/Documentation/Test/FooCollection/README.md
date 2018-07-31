@@ -56,5 +56,5 @@ public class FooCollection : System.Collections.ICollection,
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable\<Foo>.GetEnumerator()](System-Collections-Generic-IEnumerable-Roslynator-Documentation-Test-Foo--GetEnumerator/README.md) |  \(Implements [IEnumerable\<Foo>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
+| [IEnumerable\<Foo>.GetEnumerator()](System-Collections-Generic-IEnumerable-Roslynator-Documentation-Test-Foo--GetEnumerator/README.md) | |
 
