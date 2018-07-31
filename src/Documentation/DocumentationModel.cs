@@ -359,14 +359,12 @@ namespace Roslynator.Documentation
 
             if (assembly != null)
             {
-                XmlDocumentation xmlDocumentation = GetXmlDocumentation(assembly);
+                SymbolXmlDocumentation xmlDocumentation = GetXmlDocumentation(assembly)?.GetDocumentation(symbol);
 
                 if (xmlDocumentation != null)
                 {
-                    SymbolXmlDocumentation documentation = xmlDocumentation.GetDocumentation(symbol);
-
-                    _symbolData[symbol] = data.WithXmlDocumentation(documentation);
-                    return documentation;
+                    _symbolData[symbol] = data.WithXmlDocumentation(xmlDocumentation);
+                    return xmlDocumentation;
                 }
             }
 

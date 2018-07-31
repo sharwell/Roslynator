@@ -9,11 +9,14 @@ namespace Roslynator.Documentation
     {
         None = 0,
         Heading = 1,
-        Classes = 2,
-        Structs = 4,
-        Interfaces = 8,
-        Enums = 16,
-        Delegates = 32,
-        All = Heading | Classes | Structs | Interfaces | Enums | Delegates,
+        Examples = 2,
+        Remarks = 4,
+        Classes = 8,
+        Structs = 16,
+        Interfaces = 32,
+        Enums = 64,
+        Delegates = 128,
+        SeeAlso = 256,
+        All = None | Heading | Examples | Remarks | Classes | Structs | Interfaces | Enums | Delegates | SeeAlso
     }
 }

@@ -317,7 +317,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteSummary(ISymbol symbol)
         {
-            WriteSection(symbol, heading: Resources.SummaryTitle, "summary");
+            WriteSection(symbol, heading: Resources.SummaryTitle, WellKnownTags.Summary);
         }
 
         public virtual void WriteDefinition(ISymbol symbol)
@@ -417,7 +417,7 @@ namespace Roslynator.Documentation
                             WriteLinkOrTypeLink(returnType);
                             WriteLine();
 
-                            GetSymbolDocumentation(symbol)?.WriteElementContentTo(this, "returns");
+                            GetSymbolDocumentation(symbol)?.WriteElementContentTo(this, WellKnownTags.Returns);
                         }
 
                         break;
@@ -672,12 +672,12 @@ namespace Roslynator.Documentation
 
         public virtual void WriteExamples(ISymbol symbol)
         {
-            WriteSection(symbol, heading: Resources.ExamplesTitle, "examples");
+            WriteSection(symbol, heading: Resources.ExamplesTitle, WellKnownTags.Example);
         }
 
         public virtual void WriteRemarks(ISymbol symbol)
         {
-            WriteSection(symbol, heading: Resources.RemarksTitle, "remarks");
+            WriteSection(symbol, heading: Resources.RemarksTitle, WellKnownTags.Remarks);
         }
 
         public virtual void WriteEnumFields(IEnumerable<IFieldSymbol> fields)
@@ -753,7 +753,7 @@ namespace Roslynator.Documentation
                         if (xmlDocumentation != null)
                         {
                             WriteStartTableCell();
-                            xmlDocumentation.WriteElementContentTo(this, "summary", inlineOnly: true);
+                            xmlDocumentation.WriteElementContentTo(this, WellKnownTags.Summary, inlineOnly: true);
                             WriteEndTableCell();
                         }
 
@@ -883,7 +883,7 @@ namespace Roslynator.Documentation
                         else
                         {
                             ISymbol symbol2 = (isInherited) ? symbol.OriginalDefinition : symbol;
-                            GetSymbolDocumentation(symbol2)?.WriteElementContentTo(this, "summary", inlineOnly: true);
+                            GetSymbolDocumentation(symbol2)?.WriteElementContentTo(this, WellKnownTags.Summary, inlineOnly: true);
                         }
 
                         if (isInherited)
@@ -892,51 +892,13 @@ namespace Roslynator.Documentation
                         }
                         else
                         {
-                            if (Options.IndicateOverride
-                                && symbol.IsOverride)
-                            {
-                                ISymbol overriddenSymbol = symbol.OverriddenSymbol();
-
-                                if (overriddenSymbol != null)
-                                {
-                                    WriteSpace();
-                                    WriteString(Resources.OpenParenthesis);
-                                    WriteString(Resources.OverridesTitle);
-                                    WriteSpace();
-                                    WriteLink(overriddenSymbol, SymbolDisplayFormats.MemberNameAndContainingTypeName, additionalOptions);
-                                    WriteString(Resources.CloseParenthesis);
-                                }
-                            }
+                            if (Options.IndicateOverride)
+                                WriteOverrides(symbol);
 
                             if (canIndicateInterfaceImplementation
                                 && Options.IndicateInterfaceImplementation)
                             {
-                                using (IEnumerator<ISymbol> en2 = symbol.FindImplementedInterfaceMembers().GetEnumerator())
-                                {
-                                    if (en2.MoveNext())
-                                    {
-                                        WriteSpace();
-                                        WriteString(Resources.OpenParenthesis);
-                                        WriteString(Resources.ImplementsTitle);
-
-                                        while (true)
-                                        {
-                                            WriteSpace();
-                                            WriteLink(en2.Current, SymbolDisplayFormats.MemberNameAndContainingTypeName, additionalOptions);
-
-                                            if (en2.MoveNext())
-                                            {
-                                                WriteString(Resources.Comma);
-                                            }
-                                            else
-                                            {
-                                                break;
-                                            }
-                                        }
-
-                                        WriteString(Resources.CloseParenthesis);
-                                    }
-                                }
+                                WriteImplements(symbol);
                             }
                         }
 
@@ -946,6 +908,54 @@ namespace Roslynator.Documentation
                     while (en.MoveNext());
 
                     WriteEndTable();
+                }
+            }
+
+            void WriteOverrides(ISymbol symbol)
+            {
+                if (symbol.IsOverride)
+                {
+                    ISymbol overriddenSymbol = symbol.OverriddenSymbol();
+
+                    if (overriddenSymbol != null)
+                    {
+                        WriteSpace();
+                        WriteString(Resources.OpenParenthesis);
+                        WriteString(Resources.OverridesTitle);
+                        WriteSpace();
+                        WriteLink(overriddenSymbol, SymbolDisplayFormats.MemberNameAndContainingTypeName, additionalOptions);
+                        WriteString(Resources.CloseParenthesis);
+                    }
+                }
+            }
+
+            void WriteImplements(ISymbol symbol)
+            {
+                using (IEnumerator<ISymbol> en = symbol.FindImplementedInterfaceMembers().GetEnumerator())
+                {
+                    if (en.MoveNext())
+                    {
+                        WriteSpace();
+                        WriteString(Resources.OpenParenthesis);
+                        WriteString(Resources.ImplementsTitle);
+
+                        while (true)
+                        {
+                            WriteSpace();
+                            WriteLink(en.Current, SymbolDisplayFormats.MemberNameAndContainingTypeName, additionalOptions);
+
+                            if (en.MoveNext())
+                            {
+                                WriteString(Resources.Comma);
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        WriteString(Resources.CloseParenthesis);
+                    }
                 }
             }
         }

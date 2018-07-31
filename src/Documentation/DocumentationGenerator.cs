@@ -184,6 +184,8 @@ namespace Roslynator.Documentation
                 {
                     writer.WriteHeading(2, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
+                    DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol)?.WriteElementContentTo(writer, WellKnownTags.Summary);
+
                     GenerateNamespaceContent(writer, namespaceModel, 3, addLink: Options.IsPartEnabled(DocumentationParts.Type));
                 }
             }
@@ -202,7 +204,14 @@ namespace Roslynator.Documentation
                 if (Options.IsPartEnabled(NamespaceDocumentationParts.Heading))
                     writer.WriteHeading(1, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: false);
 
+                DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol)?.WriteElementContentTo(writer, WellKnownTags.Summary);
+
+                writer.WriteExamples(namespaceModel.Symbol);
+                writer.WriteRemarks(namespaceModel.Symbol);
+
                 GenerateNamespaceContent(writer, namespaceModel, 2, addLink: Options.IsPartEnabled(DocumentationParts.Type));
+
+                writer.WriteSeeAlso(namespaceModel.Symbol);
 
                 writer.WriteEndDocument();
 

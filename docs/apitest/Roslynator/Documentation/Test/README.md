@@ -1,5 +1,15 @@
 # Roslynator\.Documentation\.Test Namespace
 
+test summary
+
+## Examples
+
+test example
+
+## Remarks
+
+test remarks
+
 ## Classes
 
 | Class | Summary |
@@ -38,3 +48,6 @@
 | -------- | ------- |
 | [FooDelegate](FooDelegate/README.md) | del |
 
+## See Also
+
+* [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)

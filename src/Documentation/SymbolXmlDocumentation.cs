@@ -410,7 +410,7 @@ namespace Roslynator.Documentation
 
             IEnumerable<(XElement element, ISymbol exceptionSymbol)> GetExceptions()
             {
-                foreach (XElement e in _element.Elements("exception"))
+                foreach (XElement e in _element.Elements(WellKnownTags.Exception))
                 {
                     string commentId = e.Attribute("cref")?.Value;
 
@@ -447,7 +447,7 @@ namespace Roslynator.Documentation
 
             IEnumerable<ISymbol> GetSymbols()
             {
-                foreach (XElement e in _element.Elements("seealso"))
+                foreach (XElement e in _element.Elements(WellKnownTags.SeeAlso))
                 {
                     string commentId = e.Attribute("cref")?.Value;
 
@@ -464,7 +464,7 @@ namespace Roslynator.Documentation
 
         public void WriteParamContentTo(DocumentationWriter writer, string name)
         {
-            foreach (XElement e in _element.Elements("param"))
+            foreach (XElement e in _element.Elements(WellKnownTags.Param))
             {
                 if (e.Attribute("name")?.Value == name)
                 {

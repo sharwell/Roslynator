@@ -337,7 +337,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                DocumentationModel.GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
+                DocumentationModel.GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, WellKnownTags.Returns);
             }
         }
 
@@ -356,7 +356,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                DocumentationModel.GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, "returns");
+                DocumentationModel.GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, WellKnownTags.Returns);
             }
         }
 
@@ -375,7 +375,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                string elementName = (propertySymbol.IsIndexer) ? "returns" : "value";
+                string elementName = (propertySymbol.IsIndexer) ? WellKnownTags.Returns : WellKnownTags.Value;
 
                 DocumentationModel.GetXmlDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
             }

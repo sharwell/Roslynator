@@ -82,7 +82,8 @@ namespace Roslynator.Documentation
 
             return new DocumentationModel(
                 compilation,
-                references.Select(f => (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(f)));
+                references.Select(f => (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(f)),
+                additionalXmlDocumentationPaths: new string[] { @"..\..\..\..\Roslynator.xml" });
         }
     }
 }
