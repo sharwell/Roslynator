@@ -15,11 +15,11 @@ namespace Roslynator.Documentation
     {
         private static readonly SymbolDisplayFormat _namespaceFormat = SymbolDisplayFormats.NamespaceDefinition;
 
-        private static readonly SymbolDisplayFormat _typeFormat = SymbolDisplayFormats.FullDefinition
-            .WithTypeQualificationStyle(SymbolDisplayTypeQualificationStyle.NameOnly);
+        private static readonly SymbolDisplayFormat _typeFormat = SymbolDisplayFormats.FullDefinition.Update(
+            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly);
 
-        private static readonly SymbolDisplayFormat _memberFormat = SymbolDisplayFormats.FullDefinition
-            .WithTypeQualificationStyle(SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces);
+        private static readonly SymbolDisplayFormat _memberFormat = SymbolDisplayFormats.FullDefinition.Update(
+            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces);
 
         private static readonly SymbolDisplayFormat _enumFieldFormat = SymbolDisplayFormats.FullDefinition;
 
@@ -39,7 +39,7 @@ namespace Roslynator.Documentation
 
         public int Length => StringBuilder.Length;
 
-        private HashSet<INamespaceSymbol> Namespaces { get; } = new HashSet<INamespaceSymbol>(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
+        internal HashSet<INamespaceSymbol> Namespaces { get; } = new HashSet<INamespaceSymbol>(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
         public virtual IComparer<INamespaceSymbol> NamespaceComparer => NamespaceDefinitionComparer.Instance;
 
@@ -117,7 +117,7 @@ namespace Roslynator.Documentation
 
         public void Append(DocumentationModel documentationModel)
         {
-            foreach (NamespaceDocumentationModel namespaceModel in documentationModel.Namespaces.OrderBy(f => f.NamespaceSymbol, NamespaceComparer))
+            foreach (NamespaceDocumentationModel namespaceModel in documentationModel.NamespaceModels.OrderBy(f => f.NamespaceSymbol, NamespaceComparer))
             {
                 INamespaceSymbol namespaceSymbol = namespaceModel.NamespaceSymbol;
 
@@ -137,21 +137,6 @@ namespace Roslynator.Documentation
                     AppendLine();
                 }
             }
-
-            StringBuilder sb = StringBuilderCache.GetInstance();
-
-            foreach (INamespaceSymbol namespaceSymbol in Namespaces.OrderBy(f => f, NamespaceComparer))
-            {
-                sb.Append("using ");
-                sb.Append(namespaceSymbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces));
-                sb.AppendLine(";");
-            }
-
-            sb.AppendLine();
-
-            StringBuilder.Insert(0, StringBuilderCache.GetStringAndFree(sb));
-
-            Namespaces.Clear();
         }
 
         private void AppendTypes(IEnumerable<INamedTypeSymbol> types, bool insertNewLineBeforeFirstType = false)

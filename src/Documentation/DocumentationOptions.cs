@@ -11,7 +11,7 @@ namespace Roslynator.Documentation
             bool formatBaseList = false,
             bool formatConstraints = false,
             bool indicateInheritedMember = true,
-            bool indicateOverridenMember = false,
+            bool indicateOverriddenMember = false,
             bool indicateInterfaceImplementation = false,
             SymbolDisplayFormatProvider formatProvider = null,
             DocumentationParts parts = DocumentationParts.Namespace | DocumentationParts.Type | DocumentationParts.Member,
@@ -25,7 +25,7 @@ namespace Roslynator.Documentation
             FormatBaseList = formatBaseList;
             FormatConstraints = formatConstraints;
             IndicateInheritedMember = indicateInheritedMember;
-            IndicateOverriddenMember = indicateOverridenMember;
+            IndicateOverriddenMember = indicateOverriddenMember;
             IndicateInterfaceImplementation = indicateInterfaceImplementation;
             FormatProvider = formatProvider ?? SymbolDisplayFormatProvider.Default;
             Parts = parts;

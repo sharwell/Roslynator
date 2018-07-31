@@ -46,13 +46,13 @@ namespace Roslynator.Documentation
 
         public IEnumerable<MetadataReference> References => Compilation.References;
 
-        public ImmutableArray<NamespaceDocumentationModel> Namespaces
+        public ImmutableArray<NamespaceDocumentationModel> NamespaceModels
         {
             get
             {
                 if (_namespaceModels.IsDefault)
                 {
-                    _namespaceModels = Types
+                    _namespaceModels = TypeModels
                         .Select(f => f.Symbol.ContainingNamespace)
                         .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
                         .Select(f => GetNamespaceModel(f))
@@ -63,7 +63,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public ImmutableArray<TypeDocumentationModel> Types
+        public ImmutableArray<TypeDocumentationModel> TypeModels
         {
             get
             {
@@ -86,7 +86,7 @@ namespace Roslynator.Documentation
 
         public IEnumerable<IMethodSymbol> GetExtensionMethods()
         {
-            foreach (TypeDocumentationModel typeModel in Types)
+            foreach (TypeDocumentationModel typeModel in TypeModels)
             {
                 if (typeModel.TypeSymbol.MightContainExtensionMethods)
                 {
@@ -107,7 +107,7 @@ namespace Roslynator.Documentation
 
         public IEnumerable<IMethodSymbol> GetExtensionMethods(INamedTypeSymbol typeSymbol)
         {
-            foreach (TypeDocumentationModel typeModel in Types)
+            foreach (TypeDocumentationModel typeModel in TypeModels)
             {
                 if (typeModel.TypeSymbol.MightContainExtensionMethods)
                 {
@@ -131,9 +131,9 @@ namespace Roslynator.Documentation
             }
         }
 
-        public IEnumerable<TypeDocumentationModel> GetExtendedExternalTypes()
+        public IEnumerable<INamedTypeSymbol> GetExtendedExternalTypes()
         {
-            return Iterator().Distinct().Select(f => GetTypeModel(f));
+            return Iterator().Distinct();
 
             IEnumerable<INamedTypeSymbol> Iterator()
             {
@@ -236,6 +236,7 @@ namespace Roslynator.Documentation
             return typeModel;
         }
 
+        //TODO: move to DocumentationUrlProvider
         public ImmutableArray<string> GetFolders(ISymbol symbol)
         {
             if (_symbolData.TryGetValue(symbol, out SymbolDocumentationData data)

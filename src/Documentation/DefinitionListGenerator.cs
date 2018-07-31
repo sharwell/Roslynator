@@ -2,6 +2,7 @@
 
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
@@ -23,7 +24,19 @@ namespace Roslynator.Documentation
 
             builder.Append(documentationModel);
 
-            string content = builder.ToString();
+            StringBuilder sb = StringBuilderCache.GetInstance();
+
+            foreach (INamespaceSymbol namespaceSymbol in builder.Namespaces.OrderBy(f => f, builder.NamespaceComparer))
+            {
+                sb.Append("using ");
+                sb.Append(namespaceSymbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces));
+                sb.AppendLine(";");
+            }
+
+            sb.AppendLine();
+            sb.Append(builder);
+
+            string content = sb.ToString();
 
             Project project = new AdhocWorkspace()
                 .CurrentSolution

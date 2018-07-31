@@ -25,7 +25,7 @@ namespace Roslynator.Documentation
             {
                 if (_types.IsDefault)
                 {
-                    _types = DocumentationModel.Types
+                    _types = DocumentationModel.TypeModels
                         .Where(f => MetadataNameEqualityComparer<INamespaceSymbol>.Instance.Equals(f.Symbol.ContainingNamespace, NamespaceSymbol))
                         .ToImmutableArray();
                 }

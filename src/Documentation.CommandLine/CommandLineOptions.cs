@@ -38,7 +38,10 @@ namespace Roslynator.Documentation
         public string ObjectModelHeading { get; set; }
 
         [Option(longName: "extendedExternalTypesHeading")]
-        public string ExtendedExternalTypeHeading { get; set; }
+        public string ExtendedExternalTypesHeading { get; set; }
+
+        [Option(longName: "preferredCultureName")]
+        public string PreferredCultureName { get; set; }
 
         [Option(longName: "formatBaseList")]
         public bool FormatBaseList { get; set; }
@@ -48,5 +51,14 @@ namespace Roslynator.Documentation
 
         [Option(longName: "maxDerivedItems", Default = -1)]
         public int MaxDerivedItems { get; set; }
+
+        [Option(longName: "indicateInheritedMember")]
+        public bool IndicateInheritedMember { get; set; }
+
+        [Option(longName: "indicateOverriddenMember")]
+        public bool IndicateOverriddenMember { get; set; }
+
+        [Option(longName: "indicateInterfaceImplementation")]
+        public bool IndicateInterfaceImplementation { get; set; }
     }
 }

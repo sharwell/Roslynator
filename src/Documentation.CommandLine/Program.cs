@@ -78,9 +78,13 @@ namespace Roslynator.Documentation
                 namespaceParts: namespaceParts,
                 typeParts: typeParts,
                 memberParts: memberParts,
+                preferredCultureName: options.PreferredCultureName,
+                maxDerivedItems: (options.MaxDerivedItems == -1) ? DocumentationOptions.Default.MaxDerivedItems : options.MaxDerivedItems,
                 formatBaseList: options.FormatBaseList,
                 formatConstraints: options.FormatConstraints,
-                maxDerivedItems: (options.MaxDerivedItems == -1) ? DocumentationOptions.Default.MaxDerivedItems : options.MaxDerivedItems);
+                indicateInheritedMember: options.IndicateInheritedMember,
+                indicateOverriddenMember: options.IndicateOverriddenMember,
+                indicateInterfaceImplementation: options.IndicateInterfaceImplementation);
 
             var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHubProvider, documentationOptions);
 
@@ -91,7 +95,7 @@ namespace Roslynator.Documentation
             foreach (DocumentationGeneratorResult documentationFile in generator.Generate(
                 heading: options.Heading,
                 objectModelHeading: options.ObjectModelHeading,
-                extendedExternalTypesHeading: options.ExtendedExternalTypeHeading))
+                extendedExternalTypesHeading: options.ExtendedExternalTypesHeading))
             {
                 string path = Path.Combine(directoryPath, documentationFile.Path);
 
