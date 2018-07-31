@@ -104,6 +104,12 @@ namespace Roslynator.Documentation
              memberOptions: SymbolDisplayMemberOptions.IncludeExplicitInterface
                 | SymbolDisplayMemberOptions.IncludeContainingType);
 
+        public static SymbolDisplayFormat MemberNameAndContainingTypeName { get; } = Default.Update(
+             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
+             genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
+             memberOptions: SymbolDisplayMemberOptions.IncludeContainingType
+            );
+
         internal const SymbolDisplayGlobalNamespaceStyle DefaultGlobalNamespaceStyle
             = SymbolDisplayGlobalNamespaceStyle.Omitted;
             //= SymbolDisplayGlobalNamespaceStyle.OmittedAsContaining;

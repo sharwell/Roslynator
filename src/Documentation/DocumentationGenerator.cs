@@ -53,6 +53,7 @@ namespace Roslynator.Documentation
                         .Cast<TypeDocumentationParts>()
                         .Where(f => f != TypeDocumentationParts.None
                             && f != TypeDocumentationParts.All
+                            && f != TypeDocumentationParts.AllExceptNestedTypes
                             && Options.IsPartEnabled(f))
                         .OrderBy(f => f, TypePartComparer)
                         .ToImmutableArray();
@@ -311,6 +312,8 @@ namespace Roslynator.Documentation
         {
             INamedTypeSymbol typeSymbol = typeModel.TypeSymbol;
 
+            ImmutableArray<INamedTypeSymbol> nestedTypes = default;
+
             using (DocumentationWriter writer = CreateWriter(typeModel))
             {
                 writer.WriteStartDocument();
@@ -444,6 +447,46 @@ namespace Roslynator.Documentation
                                 writer.WriteExtensionMethods(typeModel.GetExtensionMethods());
                                 break;
                             }
+                        case TypeDocumentationParts.Classes:
+                            {
+                                if (nestedTypes.IsDefault)
+                                    nestedTypes = typeSymbol.GetTypeMembers();
+
+                                WriteTypes(writer, nestedTypes, TypeKind.Class);
+                                break;
+                            }
+                        case TypeDocumentationParts.Structs:
+                            {
+                                if (nestedTypes.IsDefault)
+                                    nestedTypes = typeSymbol.GetTypeMembers();
+
+                                WriteTypes(writer, nestedTypes, TypeKind.Struct);
+                                break;
+                            }
+                        case TypeDocumentationParts.Interfaces:
+                            {
+                                if (nestedTypes.IsDefault)
+                                    nestedTypes = typeSymbol.GetTypeMembers();
+
+                                WriteTypes(writer, nestedTypes, TypeKind.Interface);
+                                break;
+                            }
+                        case TypeDocumentationParts.Enums:
+                            {
+                                if (nestedTypes.IsDefault)
+                                    nestedTypes = typeSymbol.GetTypeMembers();
+
+                                WriteTypes(writer, nestedTypes, TypeKind.Enum);
+                                break;
+                            }
+                        case TypeDocumentationParts.Delegates:
+                            {
+                                if (nestedTypes.IsDefault)
+                                    nestedTypes = typeSymbol.GetTypeMembers();
+
+                                WriteTypes(writer, nestedTypes, TypeKind.Delegate);
+                                break;
+                            }
                         case TypeDocumentationParts.SeeAlso:
                             {
                                 writer.WriteSeeAlso(typeSymbol);
@@ -455,6 +498,20 @@ namespace Roslynator.Documentation
                 writer.WriteEndDocument();
 
                 return CreateResult(writer, UrlProvider, DocumentationKind.Type, typeSymbol);
+            }
+
+            void WriteTypes(
+                DocumentationWriter writer,
+                IEnumerable<INamedTypeSymbol> types,
+                TypeKind typeKind)
+            {
+                writer.WriteTable(
+                    types.Where(f => f.TypeKind == typeKind && DocumentationModel.IsVisible(f)),
+                    Resources.GetPluralName(typeKind),
+                    headingLevel: 2,
+                    Resources.GetName(typeKind),
+                    Resources.SummaryTitle,
+                    FormatProvider.TypeFormat);
             }
         }
 

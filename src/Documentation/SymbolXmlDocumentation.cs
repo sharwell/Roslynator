@@ -11,13 +11,18 @@ namespace Roslynator.Documentation
 {
     public class SymbolXmlDocumentation
     {
+        internal static SymbolXmlDocumentation Default { get; } = new SymbolXmlDocumentation(null, null, null);
+
         private readonly XElement _element;
 
-        internal SymbolXmlDocumentation(string commentId, XElement element)
+        internal SymbolXmlDocumentation(ISymbol symbol, string commentId, XElement element)
         {
+            Symbol = symbol;
             CommentId = commentId;
             _element = element;
         }
+
+        public ISymbol Symbol { get; }
 
         public string CommentId { get; }
 
@@ -77,9 +82,7 @@ namespace Roslynator.Documentation
 
                                         DocumentationModel documentationModel = writer.DocumentationModel;
 
-                                        string language = documentationModel.GetFirstSymbolForDeclarationId(CommentId)?.Language;
-
-                                        Debug.Assert(language != null, CommentId);
+                                        string language = Symbol.Language;
 
                                         writer.WriteCodeBlock(value, language ?? documentationModel.Language);
 

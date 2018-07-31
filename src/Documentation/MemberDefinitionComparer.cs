@@ -60,8 +60,6 @@ namespace Roslynator.Documentation
 
                         switch (methodSymbol.MethodKind)
                         {
-                            case MethodKind.StaticConstructor:
-                                return MemberDefinitionKind.StaticConstructor;
                             case MethodKind.Constructor:
                                 return MemberDefinitionKind.Constructor;
                             case MethodKind.Conversion:

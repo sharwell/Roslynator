@@ -886,7 +886,57 @@ namespace Roslynator.Documentation
                         }
 
                         if (isInherited)
+                        {
                             WriteInheritedFrom(symbol.ContainingType.OriginalDefinition, FormatProvider.TypeFormat, additionalOptions);
+                        }
+                        else
+                        {
+                            if (Options.IndicateOverride
+                                && symbol.IsOverride)
+                            {
+                                ISymbol overriddenSymbol = symbol.OverriddenSymbol();
+
+                                if (overriddenSymbol != null)
+                                {
+                                    WriteSpace();
+                                    WriteString(Resources.OpenParenthesis);
+                                    WriteString(Resources.OverridesTitle);
+                                    WriteSpace();
+                                    WriteLink(overriddenSymbol, SymbolDisplayFormats.MemberNameAndContainingTypeName, additionalOptions);
+                                    WriteString(Resources.CloseParenthesis);
+                                }
+                            }
+
+                            if (Options.IndicateInterfaceImplementation)
+                            {
+                                using (IEnumerator<ISymbol> en2 = symbol.FindImplementedInterfaceMembers().GetEnumerator())
+                                {
+                                    if (en2.MoveNext())
+                                    {
+                                        WriteSpace();
+                                        WriteString(Resources.OpenParenthesis);
+                                        WriteString(Resources.ImplementsTitle);
+
+                                        while (true)
+                                        {
+                                            WriteSpace();
+                                            WriteLink(en2.Current, SymbolDisplayFormats.MemberNameAndContainingTypeName, additionalOptions);
+
+                                            if (en2.MoveNext())
+                                            {
+                                                WriteString(Resources.Comma);
+                                            }
+                                            else
+                                            {
+                                                break;
+                                            }
+                                        }
+
+                                        WriteString(Resources.CloseParenthesis);
+                                    }
+                                }
+                            }
+                        }
 
                         WriteEndTableCell();
                         WriteEndTableRow();

@@ -9,29 +9,33 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    //TODO: ExternalNamespaces, ExternalTypes
     public class DocumentationModel
     {
         private ImmutableArray<NamespaceDocumentationModel> _namespaceModels;
 
         private ImmutableArray<TypeDocumentationModel> _typeModels;
 
-        private readonly Dictionary<ISymbol, SymbolDocumentationModel> _symbolDocumentationModels;
+        private readonly Dictionary<ISymbol, SymbolDocumentationData> _symbolData;
 
-        private readonly Dictionary<ISymbol, string> _commentIds;
+        private readonly Dictionary<IAssemblySymbol, XmlDocumentation> _xmlDocumentations;
 
-        private readonly Dictionary<ISymbol, ImmutableArray<string>> _symbolFolders;
+        private ImmutableArray<string> _additionalXmlDocumentationPaths;
 
-        private Dictionary<IAssemblySymbol, XmlDocumentation> _xmlDocumentations;
+        private ImmutableArray<XmlDocumentation> _additionalXmlDocumentations;
 
-        public DocumentationModel(Compilation compilation, IEnumerable<IAssemblySymbol> assemblies)
+        public DocumentationModel(
+            Compilation compilation,
+            IEnumerable<IAssemblySymbol> assemblies,
+            IEnumerable<string> additionalXmlDocumentationPaths = null)
         {
             Compilation = compilation;
             Assemblies = ImmutableArray.CreateRange(assemblies);
 
-            _symbolDocumentationModels = new Dictionary<ISymbol, SymbolDocumentationModel>();
-            _commentIds = new Dictionary<ISymbol, string>();
-            _symbolFolders = new Dictionary<ISymbol, ImmutableArray<string>>();
+            _symbolData = new Dictionary<ISymbol, SymbolDocumentationData>();
+            _xmlDocumentations = new Dictionary<IAssemblySymbol, XmlDocumentation>();
+
+            if (additionalXmlDocumentationPaths != null)
+                _additionalXmlDocumentationPaths = additionalXmlDocumentationPaths.ToImmutableArray();
         }
 
         public Compilation Compilation { get; }
@@ -42,7 +46,7 @@ namespace Roslynator.Documentation
 
         public IEnumerable<MetadataReference> References => Compilation.References;
 
-        public IEnumerable<NamespaceDocumentationModel> Namespaces
+        public ImmutableArray<NamespaceDocumentationModel> Namespaces
         {
             get
             {
@@ -204,32 +208,41 @@ namespace Roslynator.Documentation
 
         public NamespaceDocumentationModel GetNamespaceModel(INamespaceSymbol namespaceSymbol)
         {
-            if (_symbolDocumentationModels.TryGetValue(namespaceSymbol, out SymbolDocumentationModel model))
-                return (NamespaceDocumentationModel)model;
+            if (_symbolData.TryGetValue(namespaceSymbol, out SymbolDocumentationData data)
+                && data.Model != null)
+            {
+                return (NamespaceDocumentationModel)data.Model;
+            }
 
             NamespaceDocumentationModel namespaceModel = NamespaceDocumentationModel.Create(namespaceSymbol, this);
 
-            _symbolDocumentationModels[namespaceSymbol] = namespaceModel;
+            _symbolData[namespaceSymbol] = data.WithModel(namespaceModel);
 
             return namespaceModel;
         }
 
         public TypeDocumentationModel GetTypeModel(INamedTypeSymbol typeSymbol)
         {
-            if (_symbolDocumentationModels.TryGetValue(typeSymbol, out SymbolDocumentationModel model))
-                return (TypeDocumentationModel)model;
+            if (_symbolData.TryGetValue(typeSymbol, out SymbolDocumentationData data)
+                && data.Model != null)
+            {
+                return (TypeDocumentationModel)data.Model;
+            }
 
             TypeDocumentationModel typeModel = TypeDocumentationModel.Create(typeSymbol, this);
 
-            _symbolDocumentationModels[typeSymbol] = typeModel;
+            _symbolData[typeSymbol] = data.WithModel(typeModel);
 
             return typeModel;
         }
 
         public ImmutableArray<string> GetFolders(ISymbol symbol)
         {
-            if (_symbolFolders.TryGetValue(symbol, out ImmutableArray<string> folders))
-                return folders;
+            if (_symbolData.TryGetValue(symbol, out SymbolDocumentationData data)
+                && !data.Folders.IsDefault)
+            {
+                return data.Folders;
+            }
 
             ImmutableArray<string>.Builder builder = ImmutableArray.CreateBuilder<string>();
 
@@ -314,11 +327,11 @@ namespace Roslynator.Documentation
 
             builder.Reverse();
 
-            ImmutableArray<string> names = builder.ToImmutableArray();
+            ImmutableArray<string> folders = builder.ToImmutableArray();
 
-            _symbolFolders[symbol] = names;
+            _symbolData[symbol] = data.WithFolders(folders);
 
-            return names;
+            return folders;
         }
 
         internal ISymbol GetFirstSymbolForDeclarationId(string id)
@@ -331,16 +344,77 @@ namespace Roslynator.Documentation
             return DocumentationCommentId.GetFirstSymbolForReferenceId(id, Compilation);
         }
 
-        private XmlDocumentation GetXmlDocumentation(IAssemblySymbol assemblySymbol)
+        public SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol)
         {
-            if (_xmlDocumentations == null)
-                _xmlDocumentations = new Dictionary<IAssemblySymbol, XmlDocumentation>();
-
-            if (!_xmlDocumentations.TryGetValue(assemblySymbol, out XmlDocumentation xmlDocumentation))
+            if (_symbolData.TryGetValue(symbol, out SymbolDocumentationData data)
+                && data.XmlDocumentation != null)
             {
-                if (Assemblies.Contains(assemblySymbol))
+                if (object.ReferenceEquals(data.XmlDocumentation, SymbolXmlDocumentation.Default))
+                    return null;
+
+                return data.XmlDocumentation;
+            }
+
+            IAssemblySymbol assembly = FindAssembly();
+
+            if (assembly != null)
+            {
+                XmlDocumentation xmlDocumentation = GetXmlDocumentation(assembly);
+
+                if (xmlDocumentation != null)
                 {
-                    var reference = Compilation.GetMetadataReference(assemblySymbol) as PortableExecutableReference;
+                    SymbolXmlDocumentation documentation = xmlDocumentation.GetDocumentation(symbol);
+
+                    _symbolData[symbol] = data.WithXmlDocumentation(documentation);
+                    return documentation;
+                }
+            }
+
+            if (!_additionalXmlDocumentationPaths.IsDefault)
+            {
+                if (_additionalXmlDocumentations.IsDefault)
+                {
+                    _additionalXmlDocumentations = _additionalXmlDocumentationPaths
+                        .Select(f => XmlDocumentation.Load(f))
+                        .ToImmutableArray();
+                }
+
+                string commentId = symbol.GetDocumentationCommentId();
+
+                foreach (XmlDocumentation xmlDocumentation in _additionalXmlDocumentations)
+                {
+                    SymbolXmlDocumentation documentation = xmlDocumentation.GetDocumentation(symbol, commentId);
+
+                    if (documentation != null)
+                    {
+                        _symbolData[symbol] = data.WithXmlDocumentation(documentation);
+                        return documentation;
+                    }
+                }
+            }
+
+            _symbolData[symbol] = data.WithXmlDocumentation(SymbolXmlDocumentation.Default);
+            return null;
+
+            IAssemblySymbol FindAssembly()
+            {
+                foreach (IAssemblySymbol a in Assemblies)
+                {
+                    if (symbol.ContainingAssembly == a)
+                        return a;
+                }
+
+                return null;
+            }
+        }
+
+        private XmlDocumentation GetXmlDocumentation(IAssemblySymbol assembly)
+        {
+            if (!_xmlDocumentations.TryGetValue(assembly, out XmlDocumentation xmlDocumentation))
+            {
+                if (Assemblies.Contains(assembly))
+                {
+                    var reference = Compilation.GetMetadataReference(assembly) as PortableExecutableReference;
 
                     string xmlDocPath = Path.ChangeExtension(reference.FilePath, "xml");
 
@@ -348,25 +422,44 @@ namespace Roslynator.Documentation
                         xmlDocumentation = XmlDocumentation.Load(xmlDocPath);
                 }
 
-                _xmlDocumentations[assemblySymbol] = xmlDocumentation;
+                _xmlDocumentations[assembly] = xmlDocumentation;
             }
 
             return xmlDocumentation;
         }
 
-        internal SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol)
+        private readonly struct SymbolDocumentationData
         {
-            if (!_commentIds.TryGetValue(symbol, out string commentId))
+            public SymbolDocumentationData(
+                SymbolDocumentationModel model,
+                ImmutableArray<string> folders,
+                SymbolXmlDocumentation xmlDocumentation)
             {
-                commentId = symbol.GetDocumentationCommentId();
-
-                _commentIds[symbol] = commentId;
+                Model = model;
+                Folders = folders;
+                XmlDocumentation = xmlDocumentation;
             }
 
-            if (commentId == null)
-                return null;
+            public SymbolDocumentationModel Model { get; }
 
-            return GetXmlDocumentation(symbol.ContainingAssembly)?.GetDocumentation(commentId);
+            public ImmutableArray<string> Folders { get; }
+
+            public SymbolXmlDocumentation XmlDocumentation { get; }
+
+            public SymbolDocumentationData WithModel(SymbolDocumentationModel model)
+            {
+                return new SymbolDocumentationData(model, Folders, XmlDocumentation);
+            }
+
+            public SymbolDocumentationData WithFolders(ImmutableArray<string> folders)
+            {
+                return new SymbolDocumentationData(Model, folders, XmlDocumentation);
+            }
+
+            public SymbolDocumentationData WithXmlDocumentation(SymbolXmlDocumentation xmlDocumentation)
+            {
+                return new SymbolDocumentationData(Model, Folders, xmlDocumentation);
+            }
         }
     }
 }

@@ -32,13 +32,13 @@ public readonly struct ExpressionChain.Reversed : System.IEquatable<ExpressionCh
 
 | Method | Summary |
 | ------ | ------- |
-| [Equals(Object)](Equals/README.md) | |
-| [Equals(Reversed)](Equals/README.md) | |
+| [Equals(Object)](Equals/README.md) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| [Equals(Reversed)](Equals/README.md) |  \(Implements [IEquatable\<Reversed>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | [GetEnumerator()](GetEnumerator/README.md) | |
-| [GetHashCode()](GetHashCode/README.md) | |
+| [GetHashCode()](GetHashCode/README.md) |  \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [ToString()](ToString/README.md) | |
+| [ToString()](ToString/README.md) |  \(Overrides [ValueType.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring)\) |
 
 ## Operators
 
@@ -51,6 +51,12 @@ public readonly struct ExpressionChain.Reversed : System.IEquatable<ExpressionCh
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) | |
-| [IEnumerable\<ExpressionSyntax>.GetEnumerator()](System-Collections-Generic-IEnumerable-Microsoft-CodeAnalysis-CSharp-Syntax-ExpressionSyntax--GetEnumerator/README.md) | |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
+| [IEnumerable\<ExpressionSyntax>.GetEnumerator()](System-Collections-Generic-IEnumerable-Microsoft-CodeAnalysis-CSharp-Syntax-ExpressionSyntax--GetEnumerator/README.md) |  \(Implements [IEnumerable\<ExpressionSyntax>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
+
+## Structs
+
+| Struct | Summary |
+| ------ | ------- |
+| [ExpressionChain.Reversed.Enumerator](Enumerator/README.md) | |
 

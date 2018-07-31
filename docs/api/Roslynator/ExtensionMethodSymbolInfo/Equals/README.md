@@ -8,8 +8,8 @@ Assembly: Roslynator\.CSharp\.dll
 
 | Method | Summary |
 | ------ | ------- |
-| Equals\(ExtensionMethodSymbolInfo\) | |
-| Equals\(Object\) | |
+| Equals\(ExtensionMethodSymbolInfo\) |  \(Implements [IEquatable\<ExtensionMethodSymbolInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
+| Equals\(Object\) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
 ## Equals\(Object\)
 

@@ -7,13 +7,12 @@ namespace Roslynator.Documentation
         None = 0,
         Const = 1,
         Field = 2,
-        StaticConstructor = 3,
-        Constructor = 4,
-        Event = 5,
-        Indexer = 6,
-        Property = 7,
-        Method = 8,
-        ConversionOperator = 9,
-        Operator = 10,
+        Constructor = 3,
+        Event = 4,
+        Indexer = 5,
+        Property = 6,
+        Method = 7,
+        ConversionOperator = 8,
+        Operator = 9
     }
 }

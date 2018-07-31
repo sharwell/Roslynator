@@ -8,8 +8,8 @@ Assembly: Roslynator\.CSharp\.dll
 
 | Method | Summary |
 | ------ | ------- |
-| Equals\(Object\) | |
-| Equals\(Reversed\) | |
+| Equals\(Object\) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| Equals\(Reversed\) |  \(Implements [IEquatable\<Reversed>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 
 ## Equals\(Object\)
 

@@ -22,8 +22,8 @@ public struct SeparatedSyntaxListSelection<TNode>.Enumerator
 
 | Method | Summary |
 | ------ | ------- |
-| [Equals(Object)](Equals/README.md) | |
-| [GetHashCode()](GetHashCode/README.md) | |
+| [Equals(Object)](Equals/README.md) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| [GetHashCode()](GetHashCode/README.md) |  \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MoveNext()](MoveNext/README.md) | |

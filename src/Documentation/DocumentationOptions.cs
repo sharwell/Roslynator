@@ -11,16 +11,20 @@ namespace Roslynator.Documentation
             int maxDerivedItems = 10,
             bool formatBaseList = false,
             bool formatConstraints = false,
+            bool indicateOverride = false,
+            bool indicateInterfaceImplementation = false,
             SymbolDisplayFormatProvider formatProvider = null,
             DocumentationParts parts = DocumentationParts.Namespace | DocumentationParts.Type | DocumentationParts.Member,
             RootDocumentationParts rootParts = RootDocumentationParts.All,
             NamespaceDocumentationParts namespaceParts = NamespaceDocumentationParts.All,
-            TypeDocumentationParts typeParts = TypeDocumentationParts.All,
+            TypeDocumentationParts typeParts = TypeDocumentationParts.AllExceptNestedTypes,
             MemberDocumentationParts memberParts = MemberDocumentationParts.All)
         {
             MaxDerivedItems = maxDerivedItems;
             FormatBaseList = formatBaseList;
             FormatConstraints = formatConstraints;
+            IndicateOverride = indicateOverride;
+            IndicateInterfaceImplementation = indicateInterfaceImplementation;
             FormatProvider = formatProvider ?? SymbolDisplayFormatProvider.Default;
             Parts = parts;
             RootParts = rootParts;
@@ -38,6 +42,10 @@ namespace Roslynator.Documentation
         public bool FormatBaseList { get; }
 
         public bool FormatConstraints { get; }
+
+        public bool IndicateOverride { get; }
+
+        public bool IndicateInterfaceImplementation { get; }
 
         public DocumentationParts Parts { get; }
 

@@ -1,12 +1,12 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
+using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
@@ -15,7 +15,6 @@ namespace Roslynator.Documentation
         private static readonly XmlReaderSettings _xmlReaderSettings = new XmlReaderSettings() { ConformanceLevel = ConformanceLevel.Fragment };
         private static readonly Regex _indentationRegex = new Regex("(?<=\n)            ");
 
-        private readonly Dictionary<string, SymbolXmlDocumentation> _symbolXmlDocumentations;
         private readonly XDocument _document;
         private readonly XElement _membersElement;
 
@@ -23,7 +22,6 @@ namespace Roslynator.Documentation
         {
             _document = document;
             _membersElement = document.Root.Element("members");
-            _symbolXmlDocumentations = new Dictionary<string, SymbolXmlDocumentation>();
         }
 
         public static XmlDocumentation Load(string filePath)
@@ -33,34 +31,26 @@ namespace Roslynator.Documentation
             return new XmlDocumentation(document);
         }
 
-        public SymbolXmlDocumentation GetDocumentation(string commentId)
+        public SymbolXmlDocumentation GetDocumentation(ISymbol symbol)
         {
-            if (!_symbolXmlDocumentations.TryGetValue(commentId, out SymbolXmlDocumentation documentation))
+            string commentId = symbol.GetDocumentationCommentId();
+
+            return GetDocumentation(symbol, commentId);
+        }
+
+        public SymbolXmlDocumentation GetDocumentation(ISymbol symbol, string commentId)
+        {
+            foreach (XElement element in _membersElement.Elements())
             {
-                XElement element = FindElement();
-
-                if (element != null)
+                if (element.Attribute("name")?.Value == commentId)
                 {
-                    element = Unindent(element);
+                    XElement e = Unindent(element);
 
-                    documentation = new SymbolXmlDocumentation(commentId, element);
+                    return new SymbolXmlDocumentation(symbol, commentId, e);
                 }
-
-                _symbolXmlDocumentations[commentId] = documentation;
             }
 
-            return documentation;
-
-            XElement FindElement()
-            {
-                foreach (XElement element in _membersElement.Elements())
-                {
-                    if (element.Attribute("name")?.Value == commentId)
-                        return element;
-                }
-
-                return null;
-            }
+            return null;
         }
 
         private static XElement Unindent(XElement element)

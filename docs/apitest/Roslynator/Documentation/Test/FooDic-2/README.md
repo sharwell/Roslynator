@@ -59,9 +59,9 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) | |
-| [IEnumerable\<KeyValuePair\<TKey, TValue>>.GetEnumerator()](System-Collections-Generic-IEnumerable-System-Collections-Generic-KeyValuePair-TKey-TValue---GetEnumerator/README.md) | |
-| [IEnumerable\<TValue>.GetEnumerator()](System-Collections-Generic-IEnumerable-TValue--GetEnumerator/README.md) | |
-| [IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>.Count](System-Collections-Generic-IReadOnlyCollection-System-Collections-Generic-KeyValuePair-TKey-TValue---Count/README.md) | |
-| [IReadOnlyList\<KeyValuePair\<TKey, TValue>>.Item\[Int32\]](System-Collections-Generic-IReadOnlyList-System-Collections-Generic-KeyValuePair-TKey-TValue---Item/README.md) | |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
+| [IEnumerable\<KeyValuePair\<TKey, TValue>>.GetEnumerator()](System-Collections-Generic-IEnumerable-System-Collections-Generic-KeyValuePair-TKey-TValue---GetEnumerator/README.md) |  \(Implements [IEnumerable\<KeyValuePair\<TKey, TValue>>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
+| [IEnumerable\<TValue>.GetEnumerator()](System-Collections-Generic-IEnumerable-TValue--GetEnumerator/README.md) |  \(Implements [IEnumerable\<TValue>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
+| [IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>.Count](System-Collections-Generic-IReadOnlyCollection-System-Collections-Generic-KeyValuePair-TKey-TValue---Count/README.md) |  \(Implements [IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>.Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1.count)\) |
+| [IReadOnlyList\<KeyValuePair\<TKey, TValue>>.Item\[Int32\]](System-Collections-Generic-IReadOnlyList-System-Collections-Generic-KeyValuePair-TKey-TValue---Item/README.md) |  \(Implements [IReadOnlyList\<KeyValuePair\<TKey, TValue>>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
 

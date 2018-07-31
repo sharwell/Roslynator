@@ -30,31 +30,31 @@ public class FooCollection : System.Collections.ICollection,
 
 | Property | Summary |
 | -------- | ------- |
-| [Count](Count/README.md) | |
-| [IsReadOnly](IsReadOnly/README.md) | |
-| [IsSynchronized](IsSynchronized/README.md) | |
-| [SyncRoot](SyncRoot/README.md) | |
+| [Count](Count/README.md) |  \(Implements [ICollection.Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.count), [ICollection\<Foo>.Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.count)\) |
+| [IsReadOnly](IsReadOnly/README.md) |  \(Implements [ICollection\<Foo>.IsReadOnly](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.isreadonly)\) |
+| [IsSynchronized](IsSynchronized/README.md) |  \(Implements [ICollection.IsSynchronized](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.issynchronized)\) |
+| [SyncRoot](SyncRoot/README.md) |  \(Implements [ICollection.SyncRoot](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.syncroot)\) |
 
 ## Methods
 
 | Method | Summary |
 | ------ | ------- |
-| [Add(Foo)](Add/README.md) | |
-| [Clear()](Clear/README.md) | |
-| [Contains(Foo)](Contains/README.md) | |
-| [CopyTo(Array, Int32)](CopyTo/README.md) | |
-| [CopyTo(Foo\[\], Int32)](CopyTo/README.md) | |
+| [Add(Foo)](Add/README.md) |  \(Implements [ICollection\<Foo>.Add](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.add)\) |
+| [Clear()](Clear/README.md) |  \(Implements [ICollection\<Foo>.Clear](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear)\) |
+| [Contains(Foo)](Contains/README.md) |  \(Implements [ICollection\<Foo>.Contains](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.contains)\) |
+| [CopyTo(Array, Int32)](CopyTo/README.md) |  \(Implements [ICollection.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.copyto)\) |
+| [CopyTo(Foo\[\], Int32)](CopyTo/README.md) |  \(Implements [ICollection\<Foo>.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.copyto)\) |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [GetEnumerator()](GetEnumerator/README.md) | |
+| [GetEnumerator()](GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [Remove(Foo)](Remove/README.md) | |
+| [Remove(Foo)](Remove/README.md) |  \(Implements [ICollection\<Foo>.Remove](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.remove)\) |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 
 ## Explicit Interface Implementations
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable\<Foo>.GetEnumerator()](System-Collections-Generic-IEnumerable-Roslynator-Documentation-Test-Foo--GetEnumerator/README.md) | |
+| [IEnumerable\<Foo>.GetEnumerator()](System-Collections-Generic-IEnumerable-Roslynator-Documentation-Test-Foo--GetEnumerator/README.md) |  \(Implements [IEnumerable\<Foo>.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator)\) |
 

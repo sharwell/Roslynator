@@ -32,7 +32,14 @@ namespace Roslynator.Documentation
         Events = 1048576,
         ExplicitInterfaceImplementations = 2097152,
         ExtensionMethods = 4194304,
-        SeeAlso = 8388608,
-        All = Title | Namespace | Assembly | Obsolete | Summary | Definition | TypeParameters | Parameters | ReturnValue | Inheritance | Attributes | Derived | Implements | Examples | Remarks | Constructors | Fields | Properties | Methods | Operators | Events | ExplicitInterfaceImplementations | ExtensionMethods | SeeAlso,
+        Classes = 8388608,
+        Structs = 16777216,
+        Interfaces = 33554432,
+        Enums = 67108864,
+        Delegates = 134217728,
+        NestedTypes = Classes | Structs | Interfaces | Enums | Delegates,
+        SeeAlso = 268435456,
+        AllExceptNestedTypes = All & ~NestedTypes,
+        All = Title | Namespace | Assembly | Obsolete | Summary | Definition | TypeParameters | Parameters | ReturnValue | Inheritance | Attributes | Derived | Implements | Examples | Remarks | Constructors | Fields | Properties | Methods | Operators | Events | ExplicitInterfaceImplementations | ExtensionMethods | Classes | Structs | Interfaces | Enums | Delegates | SeeAlso,
     }
 }

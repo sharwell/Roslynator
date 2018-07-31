@@ -8,8 +8,8 @@ Assembly: Roslynator\.CSharp\.dll
 
 | Method | Summary |
 | ------ | ------- |
-| Equals\(Object\) | Determines whether this instance and a specified object are equal\. |
-| Equals\(SingleParameterLambdaExpressionInfo\) | Determines whether this instance is equal to another object of the same type\. |
+| Equals\(Object\) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| Equals\(SingleParameterLambdaExpressionInfo\) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<SingleParameterLambdaExpressionInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 
 ## Equals\(Object\)
 

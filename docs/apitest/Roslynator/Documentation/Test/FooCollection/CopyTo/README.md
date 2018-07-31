@@ -8,8 +8,8 @@ Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 | Method | Summary |
 | ------ | ------- |
-| CopyTo\(Array, Int32\) | |
-| CopyTo\(Foo\[\], Int32\) | |
+| CopyTo\(Array, Int32\) |  \(Implements [ICollection.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.copyto)\) |
+| CopyTo\(Foo\[\], Int32\) |  \(Implements [ICollection\<Foo>.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.copyto)\) |
 
 ## CopyTo\(Array, Int32\)
 

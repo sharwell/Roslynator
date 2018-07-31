@@ -36,5 +36,5 @@ public class FooEvent : IFoo
 
 | Member | Summary |
 | ------ | ------- |
-| [IFoo.Changed](Roslynator-Documentation-Test-IFoo-Changed/README.md) | |
+| [IFoo.Changed](Roslynator-Documentation-Test-IFoo-Changed/README.md) |  \(Implements [IFoo.Changed](../IFoo/Changed/README.md)\) |
 
