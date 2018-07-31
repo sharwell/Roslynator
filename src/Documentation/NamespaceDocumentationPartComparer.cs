@@ -24,16 +24,24 @@ namespace Roslynator.Documentation
             {
                 case NamespaceDocumentationParts.Heading:
                     return 1;
-                case NamespaceDocumentationParts.Classes:
+                case NamespaceDocumentationParts.Summary:
                     return 2;
-                case NamespaceDocumentationParts.Structs:
+                case NamespaceDocumentationParts.Examples:
                     return 3;
-                case NamespaceDocumentationParts.Interfaces:
+                case NamespaceDocumentationParts.Remarks:
                     return 4;
-                case NamespaceDocumentationParts.Enums:
+                case NamespaceDocumentationParts.Classes:
                     return 5;
-                case NamespaceDocumentationParts.Delegates:
+                case NamespaceDocumentationParts.Structs:
                     return 6;
+                case NamespaceDocumentationParts.Interfaces:
+                    return 7;
+                case NamespaceDocumentationParts.Enums:
+                    return 8;
+                case NamespaceDocumentationParts.Delegates:
+                    return 9;
+                case NamespaceDocumentationParts.SeeAlso:
+                    return 10;
             }
 
             Debug.Fail(part.ToString());

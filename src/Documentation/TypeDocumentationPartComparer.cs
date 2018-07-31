@@ -68,8 +68,18 @@ namespace Roslynator.Documentation
                     return 22;
                 case TypeDocumentationParts.ExtensionMethods:
                     return 23;
-                case TypeDocumentationParts.SeeAlso:
+                case TypeDocumentationParts.Classes:
                     return 24;
+                case TypeDocumentationParts.Structs:
+                    return 25;
+                case TypeDocumentationParts.Interfaces:
+                    return 26;
+                case TypeDocumentationParts.Enums:
+                    return 27;
+                case TypeDocumentationParts.Delegates:
+                    return 28;
+                case TypeDocumentationParts.SeeAlso:
+                    return 29;
             }
 
             Debug.Fail(part.ToString());

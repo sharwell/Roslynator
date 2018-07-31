@@ -1,7 +1,5 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using Microsoft.CodeAnalysis;
-
 namespace Roslynator.Documentation
 {
     //TODO: OmitIEnumerable, InheritedInterfaceMembers, EmphasizeNonInheritedMember
@@ -11,7 +9,8 @@ namespace Roslynator.Documentation
             int maxDerivedItems = 10,
             bool formatBaseList = false,
             bool formatConstraints = false,
-            bool indicateOverride = false,
+            bool indicateInheritedMember = true,
+            bool indicateOverridenMember = false,
             bool indicateInterfaceImplementation = false,
             SymbolDisplayFormatProvider formatProvider = null,
             DocumentationParts parts = DocumentationParts.Namespace | DocumentationParts.Type | DocumentationParts.Member,
@@ -23,7 +22,8 @@ namespace Roslynator.Documentation
             MaxDerivedItems = maxDerivedItems;
             FormatBaseList = formatBaseList;
             FormatConstraints = formatConstraints;
-            IndicateOverride = indicateOverride;
+            IndicateInheritedMember = indicateInheritedMember;
+            IndicateOverriddenMember = indicateOverridenMember;
             IndicateInterfaceImplementation = indicateInterfaceImplementation;
             FormatProvider = formatProvider ?? SymbolDisplayFormatProvider.Default;
             Parts = parts;
@@ -43,7 +43,9 @@ namespace Roslynator.Documentation
 
         public bool FormatConstraints { get; }
 
-        public bool IndicateOverride { get; }
+        public bool IndicateInheritedMember { get; }
+
+        public bool IndicateOverriddenMember { get; }
 
         public bool IndicateInterfaceImplementation { get; }
 
@@ -80,25 +82,6 @@ namespace Roslynator.Documentation
         public bool IsPartEnabled(MemberDocumentationParts parts)
         {
             return (MemberParts & parts) != 0;
-        }
-
-        internal bool IsNamespacePartEnabled(TypeKind typeKind)
-        {
-            switch (typeKind)
-            {
-                case TypeKind.Class:
-                    return IsPartEnabled(NamespaceDocumentationParts.Classes);
-                case TypeKind.Delegate:
-                    return IsPartEnabled(NamespaceDocumentationParts.Delegates);
-                case TypeKind.Enum:
-                    return IsPartEnabled(NamespaceDocumentationParts.Enums);
-                case TypeKind.Interface:
-                    return IsPartEnabled(NamespaceDocumentationParts.Interfaces);
-                case TypeKind.Struct:
-                    return IsPartEnabled(NamespaceDocumentationParts.Structs);
-                default:
-                    return false;
-            }
         }
     }
 }

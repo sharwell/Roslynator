@@ -888,11 +888,12 @@ namespace Roslynator.Documentation
 
                         if (isInherited)
                         {
-                            WriteInheritedFrom(symbol.ContainingType.OriginalDefinition, FormatProvider.TypeFormat, additionalOptions);
+                            if (Options.IndicateInheritedMember)
+                                WriteInheritedFrom(symbol.ContainingType.OriginalDefinition, FormatProvider.TypeFormat, additionalOptions);
                         }
                         else
                         {
-                            if (Options.IndicateOverride)
+                            if (Options.IndicateOverriddenMember)
                                 WriteOverrides(symbol);
 
                             if (canIndicateInterfaceImplementation

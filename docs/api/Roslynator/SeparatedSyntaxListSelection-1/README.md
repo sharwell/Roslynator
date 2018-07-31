@@ -76,5 +76,5 @@ public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>,
 
 | Struct | Summary |
 | ------ | ------- |
-| [SeparatedSyntaxListSelection\<TNode>.Enumerator](Enumerator/README.md) | |
+| [Enumerator](Enumerator/README.md) | |
 

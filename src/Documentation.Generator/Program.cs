@@ -34,7 +34,7 @@ namespace Roslynator.Documentation
                 typeParts: TypeDocumentationParts.All,
                 formatBaseList: true,
                 formatConstraints: true,
-                indicateOverride: true,
+                indicateOverridenMember: true,
                 indicateInterfaceImplementation: true);
 
             var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHubProvider, options);

@@ -81,5 +81,5 @@ public class SyntaxListSelection<TNode> : ISelection<TNode>,
 
 | Struct | Summary |
 | ------ | ------- |
-| [SyntaxListSelection\<TNode>.Enumerator](Enumerator/README.md) | |
+| [Enumerator](Enumerator/README.md) | |
 

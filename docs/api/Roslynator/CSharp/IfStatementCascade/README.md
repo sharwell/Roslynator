@@ -58,5 +58,5 @@ public readonly struct IfStatementCascade : System.IEquatable<IfStatementCascade
 
 | Struct | Summary |
 | ------ | ------- |
-| [IfStatementCascade.Enumerator](Enumerator/README.md) | |
+| [Enumerator](Enumerator/README.md) | |
 

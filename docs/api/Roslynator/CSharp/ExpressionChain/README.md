@@ -60,6 +60,6 @@ public readonly struct ExpressionChain : System.IEquatable<ExpressionChain>,
 
 | Struct | Summary |
 | ------ | ------- |
-| [ExpressionChain.Enumerator](Enumerator/README.md) | |
-| [ExpressionChain.Reversed](Reversed/README.md) | Enables to enumerate expressions of [ExpressionChain](./README.md) in a reversed order\. |
+| [Enumerator](Enumerator/README.md) | |
+| [Reversed](Reversed/README.md) | Enables to enumerate expressions of [ExpressionChain](./README.md) in a reversed order\. |
 

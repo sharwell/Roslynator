@@ -58,5 +58,5 @@ public readonly struct ExpressionChain.Reversed : System.IEquatable<ExpressionCh
 
 | Struct | Summary |
 | ------ | ------- |
-| [ExpressionChain.Reversed.Enumerator](Enumerator/README.md) | |
+| [Enumerator](Enumerator/README.md) | |
 

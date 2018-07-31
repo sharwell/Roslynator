@@ -12,6 +12,7 @@ namespace Roslynator.Documentation
     public abstract class DocumentationGenerator
     {
         private ImmutableArray<TypeDocumentationParts> _enabledAndSortedTypeParts;
+        private ImmutableArray<NamespaceDocumentationParts> _enabledAndSortedNamespaceParts;
 
         private readonly ImmutableArray<TypeKind> _typeKinds = ImmutableArray.CreateRange(new TypeKind[] { TypeKind.Class, TypeKind.Struct, TypeKind.Interface, TypeKind.Enum, TypeKind.Delegate });
 
@@ -42,6 +43,25 @@ namespace Roslynator.Documentation
         public IComparer<TypeDocumentationParts> TypePartComparer { get; }
 
         public IComparer<MemberDocumentationParts> MemberPartComparer { get; }
+
+        internal ImmutableArray<NamespaceDocumentationParts> EnabledAndSortedNamespaceParts
+        {
+            get
+            {
+                if (_enabledAndSortedNamespaceParts.IsDefault)
+                {
+                    _enabledAndSortedNamespaceParts = Enum.GetValues(typeof(NamespaceDocumentationParts))
+                        .Cast<NamespaceDocumentationParts>()
+                        .Where(f => f != NamespaceDocumentationParts.None
+                            && f != NamespaceDocumentationParts.All
+                            && Options.IsPartEnabled(f))
+                        .OrderBy(f => f, NamespacePartComparer)
+                        .ToImmutableArray();
+                }
+
+                return _enabledAndSortedNamespaceParts;
+            }
+        }
 
         internal ImmutableArray<TypeDocumentationParts> EnabledAndSortedTypeParts
         {
@@ -182,11 +202,7 @@ namespace Roslynator.Documentation
                 foreach (NamespaceDocumentationModel namespaceModel in DocumentationModel.Namespaces
                    .OrderBy(f => f.Symbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
                 {
-                    writer.WriteHeading(2, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
-
-                    DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol)?.WriteElementContentTo(writer, WellKnownTags.Summary);
-
-                    GenerateNamespaceContent(writer, namespaceModel, 3, addLink: Options.IsPartEnabled(DocumentationParts.Type));
+                    GenerateNamespaceContent(writer, namespaceModel, headingLevelOffset: 1, disabledParts: NamespaceDocumentationParts.Examples | NamespaceDocumentationParts.Remarks | NamespaceDocumentationParts.SeeAlso);
                 }
             }
 
@@ -201,17 +217,7 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
-                if (Options.IsPartEnabled(NamespaceDocumentationParts.Heading))
-                    writer.WriteHeading(1, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: false);
-
-                DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol)?.WriteElementContentTo(writer, WellKnownTags.Summary);
-
-                writer.WriteExamples(namespaceModel.Symbol);
-                writer.WriteRemarks(namespaceModel.Symbol);
-
-                GenerateNamespaceContent(writer, namespaceModel, 2, addLink: Options.IsPartEnabled(DocumentationParts.Type));
-
-                writer.WriteSeeAlso(namespaceModel.Symbol);
+                GenerateNamespaceContent(writer, namespaceModel, addLink: false);
 
                 writer.WriteEndDocument();
 
@@ -219,30 +225,88 @@ namespace Roslynator.Documentation
             }
         }
 
-        private void GenerateNamespaceContent(
-            DocumentationWriter writer,
+        private void GenerateNamespaceContent(DocumentationWriter writer,
             NamespaceDocumentationModel namespaceModel,
-            int headingLevel,
-            bool addLink)
+            int headingLevelOffset = 0,
+            bool addLink = true,
+            NamespaceDocumentationParts disabledParts = NamespaceDocumentationParts.None)
         {
-            SymbolDisplayFormat format = FormatProvider.TypeFormat;
-
-            foreach (IGrouping<TypeKind, INamedTypeSymbol> grouping in namespaceModel.Types
-                .Select(f => f.TypeSymbol)
-                .Where(f => Options.IsNamespacePartEnabled(f.TypeKind))
-                .GroupBy(f => f.TypeKind)
-                .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer ?? NamespaceDocumentationPartComparer.Instance))
+            foreach (NamespaceDocumentationParts part in EnabledAndSortedNamespaceParts)
             {
-                TypeKind typeKind = grouping.Key;
+                if ((disabledParts & part) != 0)
+                    continue;
 
+                switch (part)
+                {
+                    case NamespaceDocumentationParts.Heading:
+                        {
+                            writer.WriteHeading(1 + headingLevelOffset, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: addLink);
+                            break;
+                        }
+                    case NamespaceDocumentationParts.Summary:
+                        {
+                            DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol)?.WriteElementContentTo(writer, WellKnownTags.Summary);
+                            break;
+                        }
+                    case NamespaceDocumentationParts.Examples:
+                        {
+                            writer.WriteExamples(namespaceModel.Symbol);
+                            break;
+                        }
+                    case NamespaceDocumentationParts.Remarks:
+                        {
+                            writer.WriteRemarks(namespaceModel.Symbol);
+                            break;
+                        }
+                    case NamespaceDocumentationParts.Classes:
+                        {
+                            WriteTypes(namespaceModel.Types, TypeKind.Class);
+                            break;
+                        }
+                    case NamespaceDocumentationParts.Structs:
+                        {
+                            WriteTypes(namespaceModel.Types, TypeKind.Struct);
+                            break;
+                        }
+                    case NamespaceDocumentationParts.Interfaces:
+                        {
+                            WriteTypes(namespaceModel.Types, TypeKind.Interface);
+                            break;
+                        }
+                    case NamespaceDocumentationParts.Enums:
+                        {
+                            WriteTypes(namespaceModel.Types, TypeKind.Enum);
+                            break;
+                        }
+                    case NamespaceDocumentationParts.Delegates:
+                        {
+                            WriteTypes(namespaceModel.Types, TypeKind.Delegate);
+                            break;
+                        }
+                    case NamespaceDocumentationParts.SeeAlso:
+                        {
+                            writer.WriteSeeAlso(namespaceModel.Symbol);
+                            break;
+                        }
+                    default:
+                        {
+                            throw new InvalidOperationException();
+                        }
+                }
+            }
+
+            void WriteTypes(
+                IEnumerable<TypeDocumentationModel> types,
+                TypeKind typeKind)
+            {
                 writer.WriteTable(
-                    grouping,
+                    types.Where(f => f.TypeKind == typeKind).Select(f => f.TypeSymbol),
                     Resources.GetPluralName(typeKind),
-                    headingLevel,
+                    headingLevel: 2 + headingLevelOffset,
                     Resources.GetName(typeKind),
                     Resources.SummaryTitle,
-                    format,
-                    addLink: addLink);
+                    FormatProvider.TypeFormat,
+                    addLink: Options.IsPartEnabled(DocumentationParts.Type));
             }
         }
 
@@ -275,7 +339,7 @@ namespace Roslynator.Documentation
                         writer.WriteHeading(2, namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
                         foreach (IGrouping<TypeKind, TypeDocumentationModel> typesByKind in typesByNamespaces
-                            .Where(f => Options.IsNamespacePartEnabled(f.TypeKind))
+                            .Where(f => IsNamespacePartEnabled(f.TypeKind))
                             .GroupBy(f => f.TypeKind)
                             .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer))
                         {
@@ -287,6 +351,25 @@ namespace Roslynator.Documentation
                 writer.WriteEndDocument();
 
                 return CreateResult(writer, UrlProvider, DocumentationKind.ExtendedExternalTypes);
+            }
+
+            bool IsNamespacePartEnabled(TypeKind typeKind)
+            {
+                switch (typeKind)
+                {
+                    case TypeKind.Class:
+                        return Options.IsPartEnabled(NamespaceDocumentationParts.Classes);
+                    case TypeKind.Delegate:
+                        return Options.IsPartEnabled(NamespaceDocumentationParts.Delegates);
+                    case TypeKind.Enum:
+                        return Options.IsPartEnabled(NamespaceDocumentationParts.Enums);
+                    case TypeKind.Interface:
+                        return Options.IsPartEnabled(NamespaceDocumentationParts.Interfaces);
+                    case TypeKind.Struct:
+                        return Options.IsPartEnabled(NamespaceDocumentationParts.Structs);
+                    default:
+                        return false;
+                }
             }
         }
 
@@ -520,7 +603,7 @@ namespace Roslynator.Documentation
                     headingLevel: 2,
                     Resources.GetName(typeKind),
                     Resources.SummaryTitle,
-                    FormatProvider.TypeFormat);
+                    SymbolDisplayFormats.TypeNameAndTypeParameters);
             }
         }
 

@@ -69,5 +69,5 @@ public class TextLineCollectionSelection : Roslynator.ISelection<Microsoft.CodeA
 
 | Struct | Summary |
 | ------ | ------- |
-| [TextLineCollectionSelection.Enumerator](Enumerator/README.md) | |
+| [Enumerator](Enumerator/README.md) | |
 

@@ -8,20 +8,20 @@ using System.Collections.Immutable;
 namespace Roslynator.Documentation
 {
     //XTODO: move to core
-    internal readonly struct OneOrMany<T> : IReadOnlyList<T>
+    internal readonly struct OneOrMany<T> : IReadOnlyList<T>, IEquatable<OneOrMany<T>>
     {
         private readonly State _state;
         private readonly T _value;
         private readonly ImmutableArray<T> _values;
 
-        public OneOrMany(T value)
+        internal OneOrMany(T value)
         {
             _value = value;
             _values = default;
             _state = State.One;
         }
 
-        public OneOrMany(ImmutableArray<T> values)
+        internal OneOrMany(ImmutableArray<T> values)
         {
             if (values.IsDefault)
                 throw new ArgumentException("Immutable array is not initialized.", nameof(values));
@@ -70,7 +70,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public bool IsDefault => _state == State.None;
+        public bool IsDefault => _state == State.Default;
 
         public Enumerator GetEnumerator()
         {
@@ -79,7 +79,7 @@ namespace Roslynator.Documentation
 
         IEnumerator<T> IEnumerable<T>.GetEnumerator()
         {
-            if (_state != State.None)
+            if (_state != State.Default)
                 return new EnumeratorImpl(this);
 
             return Empty.Enumerator<T>();
@@ -87,10 +87,71 @@ namespace Roslynator.Documentation
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            if (_state != State.None)
+            if (_state != State.Default)
                 return new EnumeratorImpl(this);
 
             return Empty.Enumerator<T>();
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is OneOrMany<T> other && Equals(other);
+        }
+
+        public bool Equals(OneOrMany<T> other)
+        {
+            if (_state == State.Default)
+            {
+                return other._state == State.Default;
+            }
+            else if (_state == State.One)
+            {
+                return other._state == State.One
+                    && EqualityComparer<T>.Default.Equals(_value, other._value);
+            }
+            else if (_state == State.Many)
+            {
+                if (other._state != State.Many)
+                    return false;
+
+                int length = _values.Length;
+
+                if (length != other._values.Length)
+                    return false;
+
+                for (int i = 0; i < length; i++)
+                {
+                    if (!EqualityComparer<T>.Default.Equals(_values[i], other._values[i]))
+                        return false;
+                }
+
+                return true;
+            }
+
+            throw new InvalidOperationException();
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = Hash.Create((int)_state);
+
+            if (_state == State.One)
+                return Hash.Combine(EqualityComparer<T>.Default.GetHashCode(_value), hashCode);
+
+            if (_state == State.Many)
+                return Hash.Combine(Hash.CombineValues(_values), hashCode);
+
+            return hashCode;
+        }
+
+        public static bool operator ==(in OneOrMany<T> oneOrMany1, in OneOrMany<T> oneOrMany2)
+        {
+            return oneOrMany1.Equals(oneOrMany2);
+        }
+
+        public static bool operator !=(in OneOrMany<T> oneOrMany1, in OneOrMany<T> oneOrMany2)
+        {
+            return !(oneOrMany1 == oneOrMany2);
         }
 
         public struct Enumerator
@@ -149,7 +210,7 @@ namespace Roslynator.Documentation
 
         private enum State
         {
-            None,
+            Default,
             One,
             Many,
         }
