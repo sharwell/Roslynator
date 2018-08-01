@@ -10,7 +10,7 @@ namespace Roslynator.Documentation
     {
         private ImmutableArray<TypeDocumentationModel> _types;
 
-        private NamespaceDocumentationModel(
+        internal NamespaceDocumentationModel(
             INamespaceSymbol namespaceSymbol,
             DocumentationModel documentationModel) : base(namespaceSymbol, documentationModel)
         {
@@ -19,7 +19,7 @@ namespace Roslynator.Documentation
 
         public INamespaceSymbol NamespaceSymbol { get; }
 
-        public ImmutableArray<TypeDocumentationModel> Types
+        public ImmutableArray<TypeDocumentationModel> TypeModels
         {
             get
             {
@@ -32,15 +32,6 @@ namespace Roslynator.Documentation
 
                 return _types;
             }
-        }
-
-        public DocumentationKind DocumentationKind => DocumentationKind.Namespace;
-
-        internal static NamespaceDocumentationModel Create(INamespaceSymbol namespaceSymbol, DocumentationModel documentationModel)
-        {
-            return new NamespaceDocumentationModel(
-                namespaceSymbol,
-                documentationModel);
         }
 
         public override bool Equals(object obj)

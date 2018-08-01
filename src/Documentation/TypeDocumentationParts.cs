@@ -4,7 +4,7 @@ using System;
 
 namespace Roslynator.Documentation
 {
-    //XTODO: Classes, Structs, Interfaces, Enums, Delegates
+    //TODO: Classes, Structs, Interfaces, Enums, Delegates sloučit do NestedTypes
     [Flags]
     public enum TypeDocumentationParts
     {

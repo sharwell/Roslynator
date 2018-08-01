@@ -8,8 +8,8 @@ namespace Roslynator.Documentation
         public DocumentationOptions(
             string preferredCultureName = null,
             int maxDerivedItems = 10,
-            bool formatBaseList = false,
-            bool formatConstraints = false,
+            bool formatDefinitionBaseList = false,
+            bool formatDefinitionConstraints = false,
             bool indicateInheritedMember = true,
             bool indicateOverriddenMember = false,
             bool indicateInterfaceImplementation = false,
@@ -22,13 +22,13 @@ namespace Roslynator.Documentation
         {
             PreferredCultureName = preferredCultureName;
             MaxDerivedItems = maxDerivedItems;
-            FormatBaseList = formatBaseList;
-            FormatConstraints = formatConstraints;
+            FormatDefinitionBaseList = formatDefinitionBaseList;
+            FormatDefinitionConstraints = formatDefinitionConstraints;
             IndicateInheritedMember = indicateInheritedMember;
             IndicateOverriddenMember = indicateOverriddenMember;
             IndicateInterfaceImplementation = indicateInterfaceImplementation;
             FormatProvider = formatProvider ?? SymbolDisplayFormatProvider.Default;
-            Parts = parts;
+            DocumentationParts = parts;
             RootParts = rootParts;
             NamespaceParts = namespaceParts;
             TypeParts = typeParts;
@@ -43,9 +43,9 @@ namespace Roslynator.Documentation
 
         public SymbolDisplayFormatProvider FormatProvider { get; }
 
-        public bool FormatBaseList { get; }
+        public bool FormatDefinitionBaseList { get; }
 
-        public bool FormatConstraints { get; }
+        public bool FormatDefinitionConstraints { get; }
 
         public bool IndicateInheritedMember { get; }
 
@@ -53,7 +53,7 @@ namespace Roslynator.Documentation
 
         public bool IndicateInterfaceImplementation { get; }
 
-        public DocumentationParts Parts { get; }
+        public DocumentationParts DocumentationParts { get; }
 
         public RootDocumentationParts RootParts { get; }
 
@@ -63,27 +63,27 @@ namespace Roslynator.Documentation
 
         public MemberDocumentationParts MemberParts { get; }
 
-        public bool IsPartEnabled(DocumentationParts parts)
+        internal bool IsPartEnabled(DocumentationParts parts)
         {
-            return (Parts & parts) != 0;
+            return (DocumentationParts & parts) != 0;
         }
 
-        public bool IsPartEnabled(RootDocumentationParts parts)
+        internal bool IsPartEnabled(RootDocumentationParts parts)
         {
             return (RootParts & parts) != 0;
         }
 
-        public bool IsPartEnabled(NamespaceDocumentationParts parts)
+        internal bool IsPartEnabled(NamespaceDocumentationParts parts)
         {
             return (NamespaceParts & parts) != 0;
         }
 
-        public bool IsPartEnabled(TypeDocumentationParts parts)
+        internal bool IsPartEnabled(TypeDocumentationParts parts)
         {
             return (TypeParts & parts) != 0;
         }
 
-        public bool IsPartEnabled(MemberDocumentationParts parts)
+        internal bool IsPartEnabled(MemberDocumentationParts parts)
         {
             return (MemberParts & parts) != 0;
         }

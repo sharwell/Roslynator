@@ -80,8 +80,8 @@ namespace Roslynator.Documentation
                 memberParts: memberParts,
                 preferredCultureName: options.PreferredCultureName,
                 maxDerivedItems: (options.MaxDerivedItems == -1) ? DocumentationOptions.Default.MaxDerivedItems : options.MaxDerivedItems,
-                formatBaseList: options.FormatBaseList,
-                formatConstraints: options.FormatConstraints,
+                formatDefinitionBaseList: options.FormatDefinitionBaseList,
+                formatDefinitionConstraints: options.FormatDefinitionConstraints,
                 indicateInheritedMember: options.IndicateInheritedMember,
                 indicateOverriddenMember: options.IndicateOverriddenMember,
                 indicateInterfaceImplementation: options.IndicateInterfaceImplementation);
@@ -139,7 +139,7 @@ namespace Roslynator.Documentation
         {
             if (!values.Any())
             {
-                parts = DocumentationOptions.Default.Parts;
+                parts = DocumentationOptions.Default.DocumentationParts;
                 return true;
             }
 

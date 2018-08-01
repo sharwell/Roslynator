@@ -213,7 +213,7 @@ namespace Roslynator.Documentation
                 return (NamespaceDocumentationModel)data.Model;
             }
 
-            NamespaceDocumentationModel namespaceModel = NamespaceDocumentationModel.Create(namespaceSymbol, this);
+            var namespaceModel = new NamespaceDocumentationModel(namespaceSymbol, this);
 
             _symbolData[namespaceSymbol] = data.WithModel(namespaceModel);
 
@@ -228,7 +228,7 @@ namespace Roslynator.Documentation
                 return (TypeDocumentationModel)data.Model;
             }
 
-            TypeDocumentationModel typeModel = TypeDocumentationModel.Create(typeSymbol, this);
+            var typeModel = new TypeDocumentationModel(typeSymbol, this);
 
             _symbolData[typeSymbol] = data.WithModel(typeModel);
 
@@ -260,7 +260,7 @@ namespace Roslynator.Documentation
 
             if (assembly != null)
             {
-                SymbolXmlDocumentation xmlDocumentation = GetXmlDocumentation(assembly, preferredCultureName)?.GetDocumentation(symbol);
+                SymbolXmlDocumentation xmlDocumentation = GetXmlDocumentation(assembly, preferredCultureName)?.GetXmlDocumentation(symbol);
 
                 if (xmlDocumentation != null)
                 {
@@ -282,7 +282,7 @@ namespace Roslynator.Documentation
 
                 foreach (XmlDocumentation xmlDocumentation in _additionalXmlDocumentations)
                 {
-                    SymbolXmlDocumentation documentation = xmlDocumentation.GetDocumentation(symbol, commentId);
+                    SymbolXmlDocumentation documentation = xmlDocumentation.GetXmlDocumentation(symbol, commentId);
 
                     if (documentation != null)
                     {

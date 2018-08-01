@@ -31,14 +31,14 @@ namespace Roslynator.Documentation
             return new XmlDocumentation(document);
         }
 
-        public SymbolXmlDocumentation GetDocumentation(ISymbol symbol)
+        public SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol)
         {
             string commentId = symbol.GetDocumentationCommentId();
 
-            return GetDocumentation(symbol, commentId);
+            return GetXmlDocumentation(symbol, commentId);
         }
 
-        public SymbolXmlDocumentation GetDocumentation(ISymbol symbol, string commentId)
+        public SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol, string commentId)
         {
             foreach (XElement element in _membersElement.Elements())
             {

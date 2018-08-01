@@ -102,7 +102,7 @@ namespace Roslynator.Documentation
             string objectModelHeading = null,
             string extendedExternalTypesHeading = null)
         {
-            DocumentationParts parts = Options.Parts;
+            DocumentationParts parts = Options.DocumentationParts;
 
             DocumentationGeneratorResult objectModel = default;
             DocumentationGeneratorResult extendedExternalTypes = default;
@@ -258,27 +258,27 @@ namespace Roslynator.Documentation
                         }
                     case NamespaceDocumentationParts.Classes:
                         {
-                            WriteTypes(namespaceModel.Types, TypeKind.Class);
+                            WriteTypes(namespaceModel.TypeModels, TypeKind.Class);
                             break;
                         }
                     case NamespaceDocumentationParts.Structs:
                         {
-                            WriteTypes(namespaceModel.Types, TypeKind.Struct);
+                            WriteTypes(namespaceModel.TypeModels, TypeKind.Struct);
                             break;
                         }
                     case NamespaceDocumentationParts.Interfaces:
                         {
-                            WriteTypes(namespaceModel.Types, TypeKind.Interface);
+                            WriteTypes(namespaceModel.TypeModels, TypeKind.Interface);
                             break;
                         }
                     case NamespaceDocumentationParts.Enums:
                         {
-                            WriteTypes(namespaceModel.Types, TypeKind.Enum);
+                            WriteTypes(namespaceModel.TypeModels, TypeKind.Enum);
                             break;
                         }
                     case NamespaceDocumentationParts.Delegates:
                         {
-                            WriteTypes(namespaceModel.Types, TypeKind.Delegate);
+                            WriteTypes(namespaceModel.TypeModels, TypeKind.Delegate);
                             break;
                         }
                     case NamespaceDocumentationParts.SeeAlso:
@@ -430,7 +430,7 @@ namespace Roslynator.Documentation
                         case TypeDocumentationParts.Obsolete:
                             {
                                 if (typeModel.IsObsolete)
-                                    writer.WriteObsolete(typeSymbol);
+                                    writer.WriteObsoleteMessage(typeSymbol);
 
                                 break;
                             }
@@ -471,12 +471,12 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Derived:
                             {
-                                writer.WriteDerived(typeModel.GetDerivedTypes());
+                                writer.WriteDerivedTypes(typeModel.GetDerivedTypes());
                                 break;
                             }
                         case TypeDocumentationParts.Implements:
                             {
-                                writer.WriteImplements(typeModel.GetImplementedTypes());
+                                writer.WriteImplementedInterfaces(typeModel.GetImplementedInterfaces());
                                 break;
                             }
                         case TypeDocumentationParts.Examples:
@@ -498,7 +498,7 @@ namespace Roslynator.Documentation
                             {
                                 if (typeModel.TypeKind == TypeKind.Enum)
                                 {
-                                    writer.WriteEnumFields(typeModel.GetFields());
+                                    writer.WriteEnumFields(typeModel.GetFields(), typeSymbol);
                                 }
                                 else
                                 {
@@ -609,7 +609,7 @@ namespace Roslynator.Documentation
         {
             if (!typeModel.TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
             {
-                foreach (MemberDocumentationModel model in typeModel.GetMembers(Options.TypeParts))
+                foreach (MemberDocumentationModel model in typeModel.GetMemberModels(Options.TypeParts))
                 {
                     using (DocumentationWriter writer = CreateWriter(model.Symbol))
                     {

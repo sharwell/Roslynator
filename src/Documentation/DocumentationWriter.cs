@@ -35,7 +35,7 @@ namespace Roslynator.Documentation
 
         protected internal int BaseHeadingLevel { get; set; }
 
-        public SymbolDisplayFormatProvider FormatProvider => Options.FormatProvider;
+        internal SymbolDisplayFormatProvider FormatProvider => Options.FormatProvider;
 
         public DocumentationOptions Options { get; }
 
@@ -250,12 +250,12 @@ namespace Roslynator.Documentation
             WriteString(value.ToString(null, CultureInfo.InvariantCulture));
         }
 
-        public void WriteSpace()
+        internal void WriteSpace()
         {
             WriteString(" ");
         }
 
-        public void WriteSymbol(ISymbol symbol, SymbolDisplayFormat format = null, SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None)
+        internal void WriteSymbol(ISymbol symbol, SymbolDisplayFormat format = null, SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None)
         {
             WriteString(symbol.ToDisplayString(format, additionalOptions));
         }
@@ -294,9 +294,9 @@ namespace Roslynator.Documentation
             WriteLine();
         }
 
-        public virtual void WriteObsolete(ISymbol symbol)
+        public virtual void WriteObsoleteMessage(ISymbol symbol)
         {
-            WriteBold(Resources.ObsoleteWarning);
+            WriteBold(Resources.ObsoleteMessage);
             WriteLine();
             WriteLine();
 
@@ -327,8 +327,8 @@ namespace Roslynator.Documentation
                 FormatProvider.FullDefinitionFormat,
                 typeDeclarationOptions: SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
                 attributePredicate: f => DocumentationUtility.IsVisibleAttribute(f),
-                formatBaseList: Options.FormatBaseList,
-                formatConstraints: Options.FormatConstraints,
+                formatBaseList: Options.FormatDefinitionBaseList,
+                formatConstraints: Options.FormatDefinitionConstraints,
                 tryUseNameOnly: true);
 
             WriteCodeBlock(parts.ToDisplayString(), symbol.Language);
@@ -605,7 +605,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteDerived(IEnumerable<INamedTypeSymbol> derivedTypes)
+        public virtual void WriteDerivedTypes(IEnumerable<INamedTypeSymbol> derivedTypes)
         {
             using (IEnumerator<INamedTypeSymbol> en = derivedTypes
                 .OrderBy(f => f.ToDisplayString(FormatProvider.DerivedFormat))
@@ -640,9 +640,9 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteImplements(IEnumerable<INamedTypeSymbol> implementedTypes)
+        public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
         {
-            using (IEnumerator<INamedTypeSymbol> en = implementedTypes
+            using (IEnumerator<INamedTypeSymbol> en = implementedInterfaces
                 .OrderBy(f => f.ToDisplayString(FormatProvider.TypeFormat))
                 .GetEnumerator())
             {
@@ -680,14 +680,12 @@ namespace Roslynator.Documentation
             WriteSection(symbol, heading: Resources.RemarksTitle, WellKnownTags.Remarks);
         }
 
-        public virtual void WriteEnumFields(IEnumerable<IFieldSymbol> fields)
+        public virtual void WriteEnumFields(IEnumerable<IFieldSymbol> fields, INamedTypeSymbol enumType)
         {
             using (IEnumerator<IFieldSymbol> en = fields.GetEnumerator())
             {
                 if (en.MoveNext())
                 {
-                    INamedTypeSymbol enumType = en.Current.ContainingType;
-
                     bool hasCombinedValue = false;
 
                     ImmutableArray<EnumFieldInfo> fieldInfos = default;
@@ -1040,7 +1038,7 @@ namespace Roslynator.Documentation
             WriteEndBulletItem();
         }
 
-        public void WriteLink(
+        protected internal void WriteLink(
             ISymbol symbol,
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
@@ -1070,7 +1068,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public void WriteTypeLink(
+        protected void WriteTypeLink(
             INamedTypeSymbol typeSymbol,
             bool containingTypes = true,
             bool canCreateExternalUrl = true)

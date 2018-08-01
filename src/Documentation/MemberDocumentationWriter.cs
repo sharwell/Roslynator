@@ -170,7 +170,7 @@ namespace Roslynator.Documentation
                     case MemberDocumentationParts.Obsolete:
                         {
                             if (symbol.HasAttribute(MetadataNames.System_ObsoleteAttribute))
-                                Writer.WriteObsolete(symbol);
+                                Writer.WriteObsoleteMessage(symbol);
 
                             break;
                         }

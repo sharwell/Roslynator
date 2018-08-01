@@ -4,6 +4,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: SymbolDisplayFormatProvider ?
     public abstract class SymbolDisplayFormatProvider
     {
         public static SymbolDisplayFormatProvider Default { get; } = new DefaultSymbolDisplayFormatProvider();

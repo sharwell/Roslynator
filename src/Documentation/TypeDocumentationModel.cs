@@ -13,7 +13,7 @@ namespace Roslynator.Documentation
         private ImmutableArray<ISymbol> _members;
         private ImmutableArray<ISymbol> _membersIncludingInherited;
 
-        private TypeDocumentationModel(
+        internal TypeDocumentationModel(
             INamedTypeSymbol typeSymbol,
             DocumentationModel documentationModel) : base(typeSymbol, documentationModel)
         {
@@ -24,7 +24,7 @@ namespace Roslynator.Documentation
 
         public TypeKind TypeKind => TypeSymbol.TypeKind;
 
-        public IEnumerable<TypeDocumentationModel> Types
+        public IEnumerable<TypeDocumentationModel> TypeModels
         {
             get
             {
@@ -66,15 +66,6 @@ namespace Roslynator.Documentation
 
                 return _membersIncludingInherited;
             }
-        }
-
-        public DocumentationKind DocumentationKind => DocumentationKind.Type;
-
-        public static TypeDocumentationModel Create(INamedTypeSymbol typeSymbol, DocumentationModel documentationModel)
-        {
-            return new TypeDocumentationModel(
-                typeSymbol,
-                documentationModel);
         }
 
         private ImmutableArray<ISymbol> GetMembers(bool includeInherited)
@@ -254,7 +245,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public IEnumerable<INamedTypeSymbol> GetImplementedTypes()
+        public IEnumerable<INamedTypeSymbol> GetImplementedInterfaces()
         {
             if (!TypeSymbol.IsStatic
                 && !TypeSymbol.TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
@@ -277,7 +268,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public IEnumerable<MemberDocumentationModel> GetMembers(TypeDocumentationParts parts = TypeDocumentationParts.All)
+        public IEnumerable<MemberDocumentationModel> GetMemberModels(TypeDocumentationParts parts = TypeDocumentationParts.All)
         {
             if (TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
                 yield break;
@@ -337,7 +328,7 @@ namespace Roslynator.Documentation
 
                     ISymbol symbol = symbolsWithName[0];
 
-                    yield return MemberDocumentationModel.Create(symbol, symbolsWithName, DocumentationModel);
+                    yield return new MemberDocumentationModel(symbol, symbolsWithName, DocumentationModel);
                 }
             }
         }

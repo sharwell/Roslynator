@@ -32,8 +32,8 @@ namespace Roslynator.Documentation
             var options = new DocumentationOptions(
                 parts: DocumentationParts.All,
                 typeParts: TypeDocumentationParts.All,
-                formatBaseList: true,
-                formatConstraints: true,
+                formatDefinitionBaseList: true,
+                formatDefinitionConstraints: true,
                 indicateOverriddenMember: true,
                 indicateInterfaceImplementation: true);
 

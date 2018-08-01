@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using Microsoft.CodeAnalysis;
@@ -9,7 +10,7 @@ namespace Roslynator.Documentation
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public sealed class MemberDocumentationModel : SymbolDocumentationModel
     {
-        private MemberDocumentationModel(
+        internal MemberDocumentationModel(
             ISymbol symbol,
             ImmutableArray<ISymbol> overloads,
             DocumentationModel documentationModel) : base(symbol, documentationModel)
@@ -22,16 +23,6 @@ namespace Roslynator.Documentation
         public bool IsOverloaded
         {
             get { return Overloads.Length > 1; }
-        }
-
-        public DocumentationKind DocumentationKind => DocumentationKind.Member;
-
-        public static MemberDocumentationModel Create(ISymbol symbol, ImmutableArray<ISymbol> overloads, DocumentationModel documentationModel)
-        {
-            return new MemberDocumentationModel(
-                symbol,
-                overloads,
-                documentationModel);
         }
     }
 }

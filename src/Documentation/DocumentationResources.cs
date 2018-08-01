@@ -59,7 +59,7 @@ namespace Roslynator.Documentation
         public abstract string NamespaceTitle { get; }
         public abstract string NamespacesTitle { get; }
         public abstract string ObjectModelTitle { get; }
-        public abstract string ObsoleteWarning { get; }
+        public abstract string ObsoleteMessage { get; }
         public abstract string OperatorTitle { get; }
         public abstract string OperatorsTitle { get; }
         public abstract string OverridesTitle { get; }
@@ -231,7 +231,7 @@ namespace Roslynator.Documentation
             public override string NamespaceTitle { get; } = "Namespace";
             public override string NamespacesTitle { get; } = "Namespaces";
             public override string ObjectModelTitle { get; } = "Object Model";
-            public override string ObsoleteWarning { get; } = "WARNING: This API is now obsolete.";
+            public override string ObsoleteMessage { get; } = "WARNING: This API is now obsolete.";
             public override string OperatorTitle { get; } = "Operator";
             public override string OperatorsTitle { get; } = "Operators";
             public override string OverridesTitle { get; } = "Overrides";

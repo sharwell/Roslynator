@@ -128,7 +128,7 @@ namespace Roslynator.Documentation
                 }
 
                 _currentNamespace = namespaceSymbol;
-                AppendTypes(namespaceModel.Types.Select(f => f.TypeSymbol).Where(f => f.ContainingType == null));
+                AppendTypes(namespaceModel.TypeModels.Select(f => f.TypeSymbol).Where(f => f.ContainingType == null));
                 _currentNamespace = null;
 
                 if (!namespaceSymbol.IsGlobalNamespace)

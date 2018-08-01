@@ -43,11 +43,11 @@ namespace Roslynator.Documentation
         [Option(longName: "preferredCultureName")]
         public string PreferredCultureName { get; set; }
 
-        [Option(longName: "formatBaseList")]
-        public bool FormatBaseList { get; set; }
+        [Option(longName: "formatDefinitionBaseList")]
+        public bool FormatDefinitionBaseList { get; set; }
 
-        [Option(longName: "formatConstraints")]
-        public bool FormatConstraints { get; set; }
+        [Option(longName: "formatDefinitionConstraints")]
+        public bool FormatDefinitionConstraints { get; set; }
 
         [Option(longName: "maxDerivedItems", Default = -1)]
         public int MaxDerivedItems { get; set; }
