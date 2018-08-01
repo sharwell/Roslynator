@@ -3,6 +3,7 @@
 namespace Roslynator.Documentation
 {
     //TODO: OmitIEnumerable, InheritedInterfaceMembers, EmphasizeNonInheritedMember
+    //TODO: IndicateInheritedMember
     public class DocumentationOptions
     {
         public DocumentationOptions(
