@@ -2483,5 +2483,17 @@ namespace Roslynator.CSharp
             helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.ValidateArgumentsCorrectly}", 
             customTags:         Array.Empty<string>());
 
+        /// <summary>RCSX006</summary>
+        public static readonly DiagnosticDescriptor UseAsyncAwait = new DiagnosticDescriptor(
+            id:                 DiagnosticIdentifiers.UseAsyncAwait, 
+            title:              "Use async/await when necessary.", 
+            messageFormat:      "Use async/await when necessary.", 
+            category:           DiagnosticCategories.Reliability, 
+            defaultSeverity:    DiagnosticSeverity.Info, 
+            isEnabledByDefault: true, 
+            description:        null, 
+            helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.UseAsyncAwait}", 
+            customTags:         Array.Empty<string>());
+
     }
 }
