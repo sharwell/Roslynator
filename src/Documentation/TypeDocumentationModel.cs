@@ -245,14 +245,15 @@ namespace Roslynator.Documentation
             }
         }
 
-        public IEnumerable<INamedTypeSymbol> GetImplementedInterfaces()
+        public IEnumerable<INamedTypeSymbol> GetImplementedInterfaces(bool omitIEnumerable = false)
         {
             if (!TypeSymbol.IsStatic
                 && !TypeSymbol.TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
             {
                 ImmutableArray<INamedTypeSymbol> allInterfaces = TypeSymbol.AllInterfaces;
 
-                if (allInterfaces.Any(f => f.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IEnumerable_T))
+                if (omitIEnumerable
+                    && allInterfaces.Any(f => f.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IEnumerable_T))
                 {
                     foreach (INamedTypeSymbol interfaceType in allInterfaces)
                     {

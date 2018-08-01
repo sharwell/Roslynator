@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.IO;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Roslynator.CSharp;
@@ -206,7 +207,7 @@ namespace Roslynator.Documentation
 
             writer.WriteEndDocument();
 
-            return CreateResult(writer, UrlProvider, DocumentationKind.Root);
+            return CreateResult(writer, DocumentationKind.Root);
         }
 
         private DocumentationGeneratorResult GenerateNamespace(NamespaceDocumentationModel namespaceModel)
@@ -219,7 +220,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return CreateResult(writer, UrlProvider, DocumentationKind.Namespace, namespaceModel.Symbol);
+                return CreateResult(writer, DocumentationKind.Namespace, namespaceModel.Symbol);
             }
         }
 
@@ -317,7 +318,7 @@ namespace Roslynator.Documentation
                 .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
             if (!namespaces.Any())
-                return CreateResult(null, UrlProvider, DocumentationKind.ExtendedExternalTypes);
+                return CreateResult(null, DocumentationKind.ExtendedExternalTypes);
 
             using (DocumentationWriter writer = CreateWriter())
             {
@@ -348,7 +349,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return CreateResult(writer, UrlProvider, DocumentationKind.ExtendedExternalTypes);
+                return CreateResult(writer, DocumentationKind.ExtendedExternalTypes);
             }
 
             bool IsNamespacePartEnabled(TypeKind typeKind)
@@ -394,7 +395,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return CreateResult(writer, UrlProvider, DocumentationKind.Type, typeSymbol);
+                return CreateResult(writer, DocumentationKind.Type, typeSymbol);
             }
         }
 
@@ -476,7 +477,7 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Implements:
                             {
-                                writer.WriteImplementedInterfaces(typeModel.GetImplementedInterfaces());
+                                writer.WriteImplementedInterfaces(typeModel.GetImplementedInterfaces(Options.OmitIEnumerable));
                                 break;
                             }
                         case TypeDocumentationParts.Examples:
@@ -587,7 +588,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return CreateResult(writer, UrlProvider, DocumentationKind.Type, typeSymbol);
+                return CreateResult(writer, DocumentationKind.Type, typeSymbol);
             }
 
             void WriteTypes(
@@ -621,7 +622,7 @@ namespace Roslynator.Documentation
 
                         writer.WriteEndDocument();
 
-                        yield return CreateResult(writer, UrlProvider, DocumentationKind.Member, model.Symbol);
+                        yield return CreateResult(writer, DocumentationKind.Member, model.Symbol);
                     }
                 }
             }
@@ -715,7 +716,7 @@ namespace Roslynator.Documentation
 
                 writer.WriteEndDocument();
 
-                return CreateResult(writer, UrlProvider, DocumentationKind.ObjectModel);
+                return CreateResult(writer, DocumentationKind.ObjectModel);
             }
 
             void WriteBulletItem(ITypeSymbol baseType, HashSet<ITypeSymbol> nodes, DocumentationWriter writer)
@@ -737,13 +738,28 @@ namespace Roslynator.Documentation
             }
         }
 
-        private DocumentationGeneratorResult CreateResult(DocumentationWriter writer, DocumentationUrlProvider urlProvider, DocumentationKind kind, ISymbol symbol = null)
+        private DocumentationGeneratorResult CreateResult(DocumentationWriter writer, DocumentationKind kind, ISymbol symbol = null)
         {
-            ImmutableArray<string> folders = (symbol != null) ? UrlProvider.GetFolders(symbol) : default;
+            string fileName = UrlProvider.GetFileName(kind);
 
-            return new DocumentationGeneratorResult(
-                writer?.ToString(),
-                urlProvider.GetDocumentPath(kind, folders), kind);
+            return new DocumentationGeneratorResult(writer?.ToString(), GetPath(), kind);
+
+            string GetPath()
+            {
+                switch (kind)
+                {
+                    case DocumentationKind.Root:
+                    case DocumentationKind.ObjectModel:
+                    case DocumentationKind.ExtendedExternalTypes:
+                        return fileName;
+                    case DocumentationKind.Namespace:
+                    case DocumentationKind.Type:
+                    case DocumentationKind.Member:
+                        return DocumentationUrlProvider.GetUrl(fileName, UrlProvider.GetFolders(symbol), Path.DirectorySeparatorChar);
+                    default:
+                        throw new ArgumentException("", nameof(kind));
+                }
+            }
         }
     }
 }

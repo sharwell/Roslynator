@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
-using System.IO;
 using System.Text;
 using Microsoft.CodeAnalysis;
 
@@ -36,16 +35,15 @@ namespace Roslynator.Documentation
             return folders;
         }
 
-        public override string GetDocumentPath(DocumentationKind kind, ImmutableArray<string> folders)
+        public override string GetFileName(DocumentationKind kind)
         {
             switch (kind)
             {
                 case DocumentationKind.Root:
-                    return ReadMeFileName;
                 case DocumentationKind.Namespace:
                 case DocumentationKind.Type:
                 case DocumentationKind.Member:
-                    return GetUrl(ReadMeFileName, folders, Path.DirectorySeparatorChar);
+                    return ReadMeFileName;
                 case DocumentationKind.ObjectModel:
                     return WellKnownNames.ObjectModelFileName;
                 case DocumentationKind.ExtendedExternalTypes:

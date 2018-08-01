@@ -17,6 +17,7 @@ namespace Roslynator.Documentation
             Func<INamedTypeSymbol, bool> attributePredicate = null,
             bool formatBaseList = false,
             bool formatConstraints = false,
+            bool omitIEnumerable = false,
             bool tryUseNameOnly = false)
         {
             ImmutableArray<SymbolDisplayPart> parts;
@@ -57,8 +58,11 @@ namespace Roslynator.Documentation
 
                 interfaces = typeSymbol.Interfaces;
 
-                if (interfaces.Any(f => f.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IEnumerable_T))
+                if (omitIEnumerable
+                    && interfaces.Any(f => f.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IEnumerable_T))
+                {
                     interfaces = interfaces.RemoveAll(f => f.SpecialType == SpecialType.System_Collections_IEnumerable);
+                }
 
                 baseListCount = interfaces.Length;
 

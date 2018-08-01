@@ -11,6 +11,7 @@ namespace Roslynator.Documentation
             bool emptyLineBetweenMembers = false,
             bool newLineOnAttributes = true,
             bool attributeArguments = true,
+            bool omitIEnumerable = true,
             bool useDefaultLiteral = true)
         {
             Indent = indent;
@@ -19,6 +20,7 @@ namespace Roslynator.Documentation
             EmptyLineBetweenMembers = emptyLineBetweenMembers;
             NewLineOnAttributes = newLineOnAttributes;
             AttributeArguments = attributeArguments;
+            OmitIEnumerable = omitIEnumerable;
             UseDefaultLiteral = useDefaultLiteral;
         }
 
@@ -35,6 +37,8 @@ namespace Roslynator.Documentation
         public bool NewLineOnAttributes { get; }
 
         public bool AttributeArguments { get; }
+
+        public bool OmitIEnumerable { get; }
 
         public bool UseDefaultLiteral { get; }
     }

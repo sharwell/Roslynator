@@ -24,8 +24,7 @@ namespace Roslynator.Documentation
 
         public ISymbol CurrentSymbol { get; set; }
 
-        //TODO: GetDocumentPath ?
-        public abstract string GetDocumentPath(DocumentationKind kind, ImmutableArray<string> folders);
+        public abstract string GetFileName(DocumentationKind kind);
 
         public abstract DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders);
 

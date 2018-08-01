@@ -329,6 +329,7 @@ namespace Roslynator.Documentation
                 attributePredicate: f => DocumentationUtility.IsVisibleAttribute(f),
                 formatBaseList: Options.FormatDefinitionBaseList,
                 formatConstraints: Options.FormatDefinitionConstraints,
+                omitIEnumerable: Options.OmitIEnumerable,
                 tryUseNameOnly: true);
 
             WriteCodeBlock(parts.ToDisplayString(), symbol.Language);

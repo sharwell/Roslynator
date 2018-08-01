@@ -158,7 +158,8 @@ namespace Roslynator.Documentation
                             en.Current,
                             _typeFormat,
                             SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
-                            attributePredicate: _ => false));
+                            attributePredicate: _ => false,
+                            omitIEnumerable: Options.OmitIEnumerable));
 
                         switch (typeKind)
                         {
