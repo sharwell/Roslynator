@@ -83,11 +83,9 @@ namespace Roslynator.Documentation
             }
         }
 
-        private DocumentationWriter CreateWriter(ISymbol containingSymbol = null)
+        private DocumentationWriter CreateWriter(ISymbol currentSymbol = null)
         {
-            UrlProvider.CurrentFolders = (containingSymbol != null)
-                ? DocumentationModel.GetFolders(containingSymbol)
-                : default;
+            UrlProvider.CurrentSymbol = currentSymbol;
 
             DocumentationWriter writer = CreateWriterCore();
 
@@ -741,7 +739,7 @@ namespace Roslynator.Documentation
 
         private DocumentationGeneratorResult CreateResult(DocumentationWriter writer, DocumentationUrlProvider urlProvider, DocumentationKind kind, ISymbol symbol = null)
         {
-            ImmutableArray<string> folders = (symbol != null) ? DocumentationModel.GetFolders(symbol) : default;
+            ImmutableArray<string> folders = (symbol != null) ? UrlProvider.GetFolders(symbol) : default;
 
             return new DocumentationGeneratorResult(
                 writer?.ToString(),

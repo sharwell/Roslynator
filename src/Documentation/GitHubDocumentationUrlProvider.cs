@@ -6,6 +6,7 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
@@ -13,9 +14,26 @@ namespace Roslynator.Documentation
     {
         public const string ReadMeFileName = "README.md";
 
+        private Dictionary<ISymbol, ImmutableArray<string>> _symbolToFoldersMap;
+
         public GitHubDocumentationUrlProvider(IEnumerable<ExternalUrlProvider> externalProviders = null)
             : base(externalProviders)
         {
+        }
+
+        public override ImmutableArray<string> GetFolders(ISymbol symbol)
+        {
+            if (_symbolToFoldersMap == null)
+                _symbolToFoldersMap = new Dictionary<ISymbol, ImmutableArray<string>>();
+
+            if (_symbolToFoldersMap.TryGetValue(symbol, out ImmutableArray<string> folders))
+                return folders;
+
+            folders = base.GetFolders(symbol);
+
+            _symbolToFoldersMap[symbol] = folders;
+
+            return folders;
         }
 
         public override string GetDocumentPath(DocumentationKind kind, ImmutableArray<string> folders)
@@ -45,10 +63,14 @@ namespace Roslynator.Documentation
 
             string CreateLocalUrl()
             {
-                if (CurrentFolders.IsDefault)
+                ImmutableArray<string> currentFolders = (CurrentSymbol != null)
+                    ? GetFolders(CurrentSymbol)
+                    : default;
+
+                if (currentFolders.IsDefault)
                     return GetUrl(ReadMeFileName, folders, '/');
 
-                if (FoldersEqual(CurrentFolders, folders))
+                if (FoldersEqual(currentFolders, folders))
                     return "./" + ReadMeFileName;
 
                 int count = 0;
@@ -57,15 +79,15 @@ namespace Roslynator.Documentation
                 int j = 0;
 
                 while (i < folders.Length
-                    && j < CurrentFolders.Length
-                    && string.Equals(folders[i], CurrentFolders[j], StringComparison.Ordinal))
+                    && j < currentFolders.Length
+                    && string.Equals(folders[i], currentFolders[j], StringComparison.Ordinal))
                 {
                     count++;
                     i++;
                     j++;
                 }
 
-                int diff = CurrentFolders.Length - count;
+                int diff = currentFolders.Length - count;
 
                 StringBuilder sb = StringBuilderCache.GetInstance();
 

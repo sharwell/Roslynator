@@ -1142,7 +1142,7 @@ namespace Roslynator.Documentation
             ISymbol symbol,
             bool canCreateExternalUrl = true)
         {
-            ImmutableArray<string> folders = DocumentationModel.GetFolders(symbol);
+            ImmutableArray<string> folders = UrlProvider.GetFolders(symbol);
 
             if (folders.IsDefault)
                 return null;

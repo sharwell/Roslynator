@@ -2,7 +2,6 @@
 
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -236,105 +235,6 @@ namespace Roslynator.Documentation
             return typeModel;
         }
 
-        //TODO: move to DocumentationUrlProvider
-        public ImmutableArray<string> GetFolders(ISymbol symbol)
-        {
-            if (_symbolData.TryGetValue(symbol, out SymbolDocumentationData data)
-                && !data.Folders.IsDefault)
-            {
-                return data.Folders;
-            }
-
-            ImmutableArray<string>.Builder builder = ImmutableArray.CreateBuilder<string>();
-
-            if (symbol.Kind == SymbolKind.Namespace
-                && ((INamespaceSymbol)symbol).IsGlobalNamespace)
-            {
-                builder.Add(WellKnownNames.GlobalNamespaceName);
-            }
-            else if (symbol.Kind == SymbolKind.Method
-                && ((IMethodSymbol)symbol).MethodKind == MethodKind.Constructor)
-            {
-                builder.Add(WellKnownNames.ConstructorName);
-            }
-            else if (symbol.Kind == SymbolKind.Property
-                && ((IPropertySymbol)symbol).IsIndexer)
-            {
-                builder.Add("Item");
-            }
-            else
-            {
-                ISymbol explicitImplementation = symbol.GetFirstExplicitInterfaceImplementation();
-
-                if (explicitImplementation != null)
-                {
-                    string name = explicitImplementation
-                        .ToDisplayParts(SymbolDisplayFormats.ExplicitImplementationFullName, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName)
-                        .Where(part => part.Kind != SymbolDisplayPartKind.Space)
-                        .Select(part => (part.IsPunctuation()) ? part.WithText("-") : part)
-                        .ToImmutableArray()
-                        .ToDisplayString();
-
-                    builder.Add(name);
-                }
-                else
-                {
-                    int arity = symbol.GetArity();
-
-                    if (arity > 0)
-                    {
-                        builder.Add(symbol.Name + "-" + arity.ToString(CultureInfo.InvariantCulture));
-                    }
-                    else
-                    {
-                        builder.Add(symbol.Name);
-                    }
-                }
-            }
-
-            INamedTypeSymbol containingType = symbol.ContainingType;
-
-            while (containingType != null)
-            {
-                int arity = containingType.Arity;
-
-                builder.Add((arity > 0) ? containingType.Name + "-" + arity.ToString(CultureInfo.InvariantCulture) : containingType.Name);
-
-                containingType = containingType.ContainingType;
-            }
-
-            INamespaceSymbol containingNamespace = symbol.ContainingNamespace;
-
-            if (containingNamespace != null)
-            {
-                if (containingNamespace.IsGlobalNamespace)
-                {
-                    if (symbol.Kind != SymbolKind.Namespace)
-                    {
-                        builder.Add(WellKnownNames.GlobalNamespaceName);
-                    }
-                }
-                else
-                {
-                    do
-                    {
-                        builder.Add(containingNamespace.Name);
-
-                        containingNamespace = containingNamespace.ContainingNamespace;
-                    }
-                    while (containingNamespace?.IsGlobalNamespace == false);
-                }
-            }
-
-            builder.Reverse();
-
-            ImmutableArray<string> folders = builder.ToImmutableArray();
-
-            _symbolData[symbol] = data.WithFolders(folders);
-
-            return folders;
-        }
-
         internal ISymbol GetFirstSymbolForDeclarationId(string id)
         {
             return DocumentationCommentId.GetFirstSymbolForDeclarationId(id, Compilation);
@@ -453,33 +353,24 @@ namespace Roslynator.Documentation
         {
             public SymbolDocumentationData(
                 SymbolDocumentationModel model,
-                ImmutableArray<string> folders,
                 SymbolXmlDocumentation xmlDocumentation)
             {
                 Model = model;
-                Folders = folders;
                 XmlDocumentation = xmlDocumentation;
             }
 
             public SymbolDocumentationModel Model { get; }
 
-            public ImmutableArray<string> Folders { get; }
-
             public SymbolXmlDocumentation XmlDocumentation { get; }
 
             public SymbolDocumentationData WithModel(SymbolDocumentationModel model)
             {
-                return new SymbolDocumentationData(model, Folders, XmlDocumentation);
-            }
-
-            public SymbolDocumentationData WithFolders(ImmutableArray<string> folders)
-            {
-                return new SymbolDocumentationData(Model, folders, XmlDocumentation);
+                return new SymbolDocumentationData(model, XmlDocumentation);
             }
 
             public SymbolDocumentationData WithXmlDocumentation(SymbolXmlDocumentation xmlDocumentation)
             {
-                return new SymbolDocumentationData(Model, Folders, xmlDocumentation);
+                return new SymbolDocumentationData(Model, xmlDocumentation);
             }
         }
     }
