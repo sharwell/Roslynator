@@ -214,5 +214,6 @@ namespace Roslynator.CSharp
         public const string ReplaceEnumeratorWithForEach = "RCS1231";
         public const string MarkParameterWithInModifier = "RCSX001";
         public const string UnusedElementInDocumentationComment = "RCSX003";
+        public const string UseAsyncAwait = "RCSX006";
     }
 }

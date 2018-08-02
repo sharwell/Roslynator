@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Analyzers>
+  <Analyzer Identifier="UseAsyncAwait">
+    <Id>RCSX006</Id>
+    <Title>Use async/await when necessary.</Title>
+    <MessageFormat>Use async/await when necessary.</MessageFormat>
+    <Category>Reliability</Category>
+    <DefaultSeverity>Info</DefaultSeverity>
+    <IsEnabledByDefault>true</IsEnabledByDefault>
+    <SupportsFadeOut>false</SupportsFadeOut>
+    <SupportsFadeOutAnalyzer>false</SupportsFadeOutAnalyzer>
+    <Summary></Summary>
+    <Samples>
+      <Sample>
+        <Before><![CDATA[]]></Before>
+        <After><![CDATA[]]></After>
+      </Sample>
+    </Samples>
+    <Remarks></Remarks>
+  </Analyzer>
+</Analyzers>
