@@ -326,11 +326,12 @@ namespace Roslynator.Documentation
                 symbol,
                 FormatProvider.FullDefinitionFormat,
                 typeDeclarationOptions: SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
-                attributePredicate: f => DocumentationUtility.IsVisibleAttribute(f),
+                isVisibleAttribute: f => DocumentationUtility.IsVisibleAttribute(f),
                 formatBaseList: Options.FormatDefinitionBaseList,
                 formatConstraints: Options.FormatDefinitionConstraints,
+                attributeArguments: Options.AttributeArguments,
                 omitIEnumerable: Options.OmitIEnumerable,
-                tryUseNameOnly: true);
+                useNameOnlyIfPossible: true);
 
             WriteCodeBlock(parts.ToDisplayString(), symbol.Language);
         }
@@ -472,36 +473,37 @@ namespace Roslynator.Documentation
             {
                 if (isLast)
                 {
-                    WriteSymbol(symbol, FormatProvider.InheritanceFormat);
+                    WriteSymbol(symbol, FormatProvider.TypeFormat);
                 }
                 else
                 {
-                    WriteLink(symbol, FormatProvider.InheritanceFormat);
+                    WriteLink(symbol, FormatProvider.TypeFormat);
                 }
             }
         }
 
         public virtual void WriteAttributes(ISymbol symbol)
         {
-            ImmutableArray<AttributeData> attributes = symbol.GetAttributes();
+            ImmutableArray<AttributeInfo> attributes;
+
+            if (symbol is INamedTypeSymbol typeSymbol)
+            {
+                attributes = typeSymbol.GetAttributesIncludingInherited(f => DocumentationUtility.IsVisibleAttribute(f));
+            }
+            else
+            {
+                attributes = symbol
+                    .GetAttributes()
+                    .Where(f => DocumentationUtility.IsVisibleAttribute(f.AttributeClass))
+                    .Select(f => new AttributeInfo(symbol, f))
+                    .ToImmutableArray();
+            }
 
             if (!attributes.Any())
                 return;
 
-            IEnumerable<(ISymbol symbol, INamedTypeSymbol attributeSymbol)> symbolsAttributes = attributes
-                .Where(f => DocumentationUtility.IsVisibleAttribute(f.AttributeClass))
-                .Select(f => ((symbol, attributeClass: f.AttributeClass)));
-
-            if (symbol is ITypeSymbol typeSymbol)
-            {
-                List<(ISymbol symbol, INamedTypeSymbol attributeSymbol)> inheritedAttributes = GetInheritedAttributes();
-
-                if (inheritedAttributes != null)
-                    symbolsAttributes = symbolsAttributes.Concat(inheritedAttributes);
-            }
-
-            using (IEnumerator<(ISymbol symbol, INamedTypeSymbol attributeSymbol)> en = symbolsAttributes
-                .OrderBy(f => f.attributeSymbol.ToDisplayString(FormatProvider.TypeFormat))
+            using (IEnumerator<AttributeInfo> en = attributes
+                .OrderBy(f => f.AttributeClass.ToDisplayString(FormatProvider.TypeFormat))
                 .GetEnumerator())
             {
                 if (en.MoveNext())
@@ -510,11 +512,11 @@ namespace Roslynator.Documentation
 
                     while (true)
                     {
-                        WriteLink(en.Current.attributeSymbol, FormatProvider.TypeFormat);
+                        WriteLink(en.Current.AttributeClass, FormatProvider.TypeFormat);
 
-                        if (symbol != en.Current.symbol)
+                        if (symbol != en.Current.Target)
                         {
-                            WriteInheritedFrom(en.Current.symbol.OriginalDefinition, FormatProvider.TypeFormat);
+                            WriteInheritedFrom(en.Current.Target.OriginalDefinition, FormatProvider.TypeFormat);
                         }
 
                         if (en.MoveNext())
@@ -531,85 +533,12 @@ namespace Roslynator.Documentation
             }
 
             WriteLine();
-
-            List<(ISymbol symbol, INamedTypeSymbol attributeSymbol)> GetInheritedAttributes()
-            {
-                if (typeSymbol == null)
-                    return null;
-
-                List<(ISymbol typeSymbol, INamedTypeSymbol attributeSymbol)> inheritedAttributes = null;
-
-                INamedTypeSymbol baseType = typeSymbol.BaseType;
-
-                while (baseType != null
-                    && baseType.SpecialType != SpecialType.System_Object)
-                {
-                    foreach (AttributeData attribute in baseType.GetAttributes())
-                    {
-                        AttributeData attributeUsage = attribute.AttributeClass.GetAttribute(MetadataNames.System_AttributeUsageAttribute);
-
-                        if (attributeUsage != null)
-                        {
-                            TypedConstant typedConstant = attributeUsage.NamedArguments.FirstOrDefault(f => f.Key == "Inherited").Value;
-
-                            if (typedConstant.Type?.SpecialType == SpecialType.System_Boolean
-                                && (!(bool)typedConstant.Value))
-                            {
-                                continue;
-                            }
-                        }
-
-                        if (!DocumentationUtility.IsVisibleAttribute(attribute.AttributeClass))
-                            continue;
-
-                        if (AttributesContains(attribute))
-                            continue;
-
-                        if (inheritedAttributes == null)
-                        {
-                            inheritedAttributes = new List<(ISymbol typeSymbol, INamedTypeSymbol attributeSymbol)>();
-                        }
-                        else if (InheritedAttributesContains(attribute))
-                        {
-                            continue;
-                        }
-
-                        inheritedAttributes.Add((baseType, attribute.AttributeClass));
-                    }
-
-                    baseType = baseType.BaseType;
-                }
-
-                return inheritedAttributes;
-
-                bool AttributesContains(AttributeData attribute)
-                {
-                    foreach (AttributeData f in attributes)
-                    {
-                        if (f.AttributeClass == attribute.AttributeClass)
-                            return true;
-                    }
-
-                    return false;
-                }
-
-                bool InheritedAttributesContains(AttributeData attribute)
-                {
-                    foreach ((ISymbol typeSymbol, INamedTypeSymbol attributeSymbol) f in inheritedAttributes)
-                    {
-                        if (f.attributeSymbol == attribute.AttributeClass)
-                            return true;
-                    }
-
-                    return false;
-                }
-            }
         }
 
         public virtual void WriteDerivedTypes(IEnumerable<INamedTypeSymbol> derivedTypes)
         {
             using (IEnumerator<INamedTypeSymbol> en = derivedTypes
-                .OrderBy(f => f.ToDisplayString(FormatProvider.DerivedFormat))
+                .OrderBy(f => f.ToDisplayString(FormatProvider.DerivedTypeFormat))
                 .GetEnumerator())
             {
                 if (en.MoveNext())
@@ -622,7 +551,7 @@ namespace Roslynator.Documentation
 
                     do
                     {
-                        WriteBulletItemLink(en.Current, FormatProvider.DerivedFormat);
+                        WriteBulletItemLink(en.Current, FormatProvider.DerivedTypeFormat);
 
                         count++;
 

@@ -23,6 +23,9 @@ namespace Roslynator.Documentation
 
         public static OneOrMany<T> Create<T>(ImmutableArray<T> values)
         {
+            if (values.IsDefault)
+                throw new ArgumentException("Immutable array is not initialized.", nameof(values));
+
             return new OneOrMany<T>(values);
         }
     }

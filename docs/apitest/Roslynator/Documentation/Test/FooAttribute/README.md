@@ -5,7 +5,7 @@ Namespace: [Roslynator.Documentation.Test](../README.md)
 Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
-[System.AttributeUsageAttribute]
+[System.AttributeUsageAttribute(System.AttributeTargets.All, AllowMultiple = false, Inherited = false)]
 public sealed class FooAttribute : System.Attribute
 ```
 

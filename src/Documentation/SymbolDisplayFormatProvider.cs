@@ -21,15 +21,9 @@ namespace Roslynator.Documentation
 
         public abstract SymbolDisplayFormat SimpleDefinitionFormat { get; }
 
-        public abstract SymbolDisplayFormat InheritanceFormat { get; }
-
-        public abstract SymbolDisplayFormat DerivedFormat { get; }
+        public abstract SymbolDisplayFormat DerivedTypeFormat { get; }
 
         public abstract SymbolDisplayFormat MemberImplementsFormat { get; }
-
-        public abstract SymbolDisplayFormat AttributeFormat { get; }
-
-        public abstract SymbolDisplayFormat CrefFormat { get; }
 
         private class DefaultSymbolDisplayFormatProvider : SymbolDisplayFormatProvider
         {
@@ -87,12 +81,7 @@ namespace Roslynator.Documentation
                 }
             }
 
-            public override SymbolDisplayFormat InheritanceFormat
-            {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
-            }
-
-            public override SymbolDisplayFormat DerivedFormat
+            public override SymbolDisplayFormat DerivedTypeFormat
             {
                 get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters; }
             }
@@ -106,16 +95,6 @@ namespace Roslynator.Documentation
                         memberOptions: SymbolDisplayMemberOptions.IncludeExplicitInterface
                             | SymbolDisplayMemberOptions.IncludeContainingType);
                 }
-            }
-
-            public override SymbolDisplayFormat AttributeFormat
-            {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
-            }
-
-            public override SymbolDisplayFormat CrefFormat
-            {
-                get { return SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters; }
             }
         }
     }

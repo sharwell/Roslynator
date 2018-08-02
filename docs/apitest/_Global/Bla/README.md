@@ -9,7 +9,7 @@ Assembly: Roslynator\.Documentation\.TestProject\.dll
 blac
 
 ```csharp
-[System.CLSCompliantAttribute]
+[System.CLSCompliantAttribute(true)]
 public class Bla
 ```
 

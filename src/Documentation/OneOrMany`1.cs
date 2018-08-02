@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Diagnostics;
 
 namespace Roslynator.Documentation
 {
@@ -23,8 +24,7 @@ namespace Roslynator.Documentation
 
         internal OneOrMany(ImmutableArray<T> values)
         {
-            if (values.IsDefault)
-                throw new ArgumentException("Immutable array is not initialized.", nameof(values));
+            Debug.Assert(!values.IsDefault, "Immutable array is not initialized.");
 
             _value = default;
             _values = values;

@@ -158,7 +158,7 @@ namespace Roslynator.Documentation
                     && !node.IsParentKind(SyntaxKind.SimpleMemberAccessExpression))
                 {
                     MemberAccessExpressionSyntax newNode = CSharpFactory.SimpleMemberAccessExpression(
-                        SyntaxFactory.ParseExpression(_enumTypeSymbol.ToDisplayString(SymbolDisplayFormats.EnumFieldFullName)),
+                        SyntaxFactory.ParseExpression(_enumTypeSymbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)),
                         node);
 
                     return newNode.WithAdditionalAnnotations(_simplifierAnnotationAsArray);

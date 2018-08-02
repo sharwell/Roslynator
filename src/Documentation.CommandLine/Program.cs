@@ -84,7 +84,9 @@ namespace Roslynator.Documentation
                 formatDefinitionConstraints: options.FormatDefinitionConstraints,
                 indicateInheritedMember: options.IndicateInheritedMember,
                 indicateOverriddenMember: options.IndicateOverriddenMember,
-                indicateInterfaceImplementation: options.IndicateInterfaceImplementation);
+                indicateInterfaceImplementation: options.IndicateInterfaceImplementation,
+                attributeArguments: options.AttributeArguments,
+                omitIEnumerable: options.OmitIEnumerable);
 
             var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHubProvider, documentationOptions);
 

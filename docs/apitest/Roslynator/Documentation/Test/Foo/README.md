@@ -13,7 +13,7 @@ Foo is obsolete\.
 a → > b [Foo](./README.md)
 
 ```csharp
-[System.ObsoleteAttribute]
+[System.ObsoleteAttribute("Foo is obsolete.")]
 public class Foo : Bla
 ```
 

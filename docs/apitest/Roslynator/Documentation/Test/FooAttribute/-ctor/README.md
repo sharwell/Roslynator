@@ -5,7 +5,7 @@ Namespace: [Roslynator.Documentation.Test](../../README.md)
 Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
-[FooAttribute]
+[FooAttribute(null, "\\n", true, false, 0, '\'', 0, 0, 0, 0, 0, 0, 0, 0, 0, typeof(System.Object), Flags.None, Flags.A, Flags.A, Flags.AB | Flags.C, Flags.AB, (Flags)100)]
 public FooAttribute(object object1, string s1, bool bool1, bool bool2, byte byte1, char ch1, double double1, float float1, int int1, long long1, sbyte sbyte1, short short1, uint uint1, ulong ulong1, ushort ushort1, Type type, Flags f1, Flags f2, Flags f3, Flags f4, Flags f5, Flags f6)
 ```
 

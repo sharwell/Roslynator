@@ -28,9 +28,9 @@ public readonly struct IfStatementOrElseClause : System.IEquatable<IfStatementOr
 | [IsElse](IsElse/README.md) | Determines whether this [IfStatementOrElseClause](./README.md) is wrapping an else clause\. |
 | [IsIf](IsIf/README.md) | Determines whether this [IfStatementOrElseClause](./README.md) is wrapping an if statement\. |
 | [Kind](Kind/README.md) | Gets an underlying node kind\. |
-| [Parent](Parent/README.md) | The node that contains the underlying node in its [ChildNodes](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode.childnodes) collection\. |
+| [Parent](Parent/README.md) | The node that contains the underlying node in its [SyntaxNode.ChildNodes](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode.childnodes) collection\. |
 | [Span](Span/README.md) | The absolute span of this node in characters, not including its leading and trailing trivia\. |
-| [Statement](Statement/README.md) | Gets [Statement](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.ifstatementsyntax.statement) or [Statement](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.elseclausesyntax.statement)\. |
+| [Statement](Statement/README.md) | Gets [IfStatementSyntax.Statement](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.ifstatementsyntax.statement) or [ElseClauseSyntax.Statement](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.elseclausesyntax.statement)\. |
 
 ## Methods
 

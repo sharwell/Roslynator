@@ -36,6 +36,6 @@ public enum NullCheckStyles
 | CheckingNull | 21 | EqualsToNull \| IsNull \| NotHasValue | Expression that checks whether an expression is null\. |
 | HasValue | 32 | | `x.HasValue` |
 | CheckingNotNull | 42 | NotEqualsToNull \| NotIsNull \| HasValue | Expression that checks whether an expression is not null\. |
-| HasValueProperty | 48 | NotHasValue \| HasValue | Expression that uses [HasValue](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1.hasvalue) property\. |
+| HasValueProperty | 48 | NotHasValue \| HasValue | Expression that uses [Nullable\<T>.HasValue](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1.hasvalue) property\. |
 | All | 63 | ComparisonToNull \| IsPattern \| HasValueProperty | All null check styles\. |
 

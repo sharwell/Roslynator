@@ -33,7 +33,6 @@ public static Task<Document> RemoveCommentsAsync(this Document document, Comment
 
 [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
-
 ## RemoveCommentsAsync\(Document, TextSpan, CommentKinds, CancellationToken\)
 
 ### Summary
@@ -56,5 +55,4 @@ public static Task<Document> RemoveCommentsAsync(this Document document, TextSpa
 #### Returns
 
 [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
-
 

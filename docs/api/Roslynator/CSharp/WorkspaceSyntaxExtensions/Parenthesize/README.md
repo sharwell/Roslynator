@@ -18,7 +18,7 @@ public static ParenthesizedExpressionSyntax Parenthesize(this ExpressionSyntax e
 | ---- | ------- |
 | expression | |
 | includeElasticTrivia | If true, add elastic trivia\. |
-| simplifiable | If true, attach [Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.simplification.simplifier.annotation) to the parenthesized expression\. |
+| simplifiable | If true, attach [Simplifier.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.simplification.simplifier.annotation) to the parenthesized expression\. |
 
 ### Returns
 

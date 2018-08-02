@@ -1,13 +1,11 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
 
 namespace Roslynator.Documentation
 {
@@ -152,13 +150,13 @@ namespace Roslynator.Documentation
                     {
                         TypeKind typeKind = en.Current.TypeKind;
 
-                        AppendAttributes(en.Current);
-
                         Append(SymbolDefinitionBuilder.GetDisplayParts(
                             en.Current,
                             _typeFormat,
                             SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
-                            attributePredicate: _ => false,
+                            isVisibleAttribute: IsVisibleAttribute,
+                            newLineOnAttributes: Options.NewLineOnAttributes,
+                            attributeArguments: Options.AttributeArguments,
                             omitIEnumerable: Options.OmitIEnumerable));
 
                         switch (typeKind)
@@ -260,7 +258,12 @@ namespace Roslynator.Documentation
 
                     while (true)
                     {
-                        AppendAttributes(en.Current);
+                        Append(SymbolDefinitionBuilder.GetAttributesParts(
+                            en.Current.GetAttributes(),
+                            predicate: IsVisibleAttribute,
+                            newLineOnAttributes: Options.NewLineOnAttributes,
+                            attributeArguments: Options.AttributeArguments));
+
                         Append(en.Current.ToDisplayParts(_memberFormat));
 
                         if (en.Current.Kind != SymbolKind.Property)
@@ -296,205 +299,6 @@ namespace Roslynator.Documentation
             AppendTypes(typeModel.GetTypeMembers().Where(f => IsVisibleType(f)), insertNewLineBeforeFirstType: isAny);
         }
 
-        private void AppendAttributes(ISymbol symbol)
-        {
-            using (IEnumerator<AttributeData> en = symbol.GetAttributes()
-                .Where(f => IsVisibleAttribute(f.AttributeClass))
-                .OrderBy(f => f.AttributeClass, TypeComparer).GetEnumerator())
-            {
-                if (en.MoveNext())
-                {
-                    Append("[");
-
-                    while (true)
-                    {
-                        Append(en.Current.AttributeClass, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
-
-                        if (Options.AttributeArguments)
-                            AppendAttributeArguments(en.Current);
-
-                        if (en.MoveNext())
-                        {
-                            if (Options.NewLineOnAttributes)
-                            {
-                                AppendLine("]");
-                                Append("[");
-                            }
-                            else
-                            {
-                                Append(", ");
-                            }
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-
-                    AppendLine("]");
-                }
-            }
-        }
-
-        private void AppendAttributeArguments(AttributeData attributeData)
-        {
-            bool hasConstructorArgument = false;
-            bool hasNamedArgument = false;
-
-            AppendConstructorArguments();
-            AppendNamedArguments();
-
-            if (hasConstructorArgument || hasNamedArgument)
-            {
-                Append(")");
-            }
-
-            void AppendConstructorArguments()
-            {
-                ImmutableArray<TypedConstant>.Enumerator en = attributeData.ConstructorArguments.GetEnumerator();
-
-                if (en.MoveNext())
-                {
-                    hasConstructorArgument = true;
-                    Append("(");
-
-                    while (true)
-                    {
-                        AppendConstantValue(en.Current);
-
-                        if (en.MoveNext())
-                        {
-                            Append(", ");
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-                }
-            }
-
-            void AppendNamedArguments()
-            {
-                ImmutableArray<KeyValuePair<string, TypedConstant>>.Enumerator en = attributeData.NamedArguments.GetEnumerator();
-
-                if (en.MoveNext())
-                {
-                    hasNamedArgument = true;
-
-                    if (hasConstructorArgument)
-                    {
-                        Append(", ");
-                    }
-                    else
-                    {
-                        Append("(");
-                    }
-
-                    while (true)
-                    {
-                        Append(en.Current.Key);
-                        Append(" = ");
-                        AppendConstantValue(en.Current.Value);
-
-                        if (en.MoveNext())
-                        {
-                            Append(", ");
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void AppendConstantValue(TypedConstant typedConstant)
-        {
-            switch (typedConstant.Kind)
-            {
-                case TypedConstantKind.Primitive:
-                    {
-                        Append(SymbolDisplay.FormatPrimitive(typedConstant.Value, quoteStrings: true, useHexadecimalNumbers: false));
-                        break;
-                    }
-                case TypedConstantKind.Enum:
-                    {
-                        OneOrMany<EnumFieldInfo> oneOrMany = EnumUtility.GetConstituentFields(typedConstant.Value, (INamedTypeSymbol)typedConstant.Type);
-
-                        OneOrMany<EnumFieldInfo>.Enumerator en = oneOrMany.GetEnumerator();
-
-                        if (en.MoveNext())
-                        {
-                            while (true)
-                            {
-                                Append(en.Current.Symbol, SymbolDisplayFormats.EnumFieldFullName);
-
-                                if (en.MoveNext())
-                                {
-                                    Append(" | ");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            Append("(");
-                            Append((INamedTypeSymbol)typedConstant.Type, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
-                            Append(")");
-                            Append(typedConstant.Value);
-                        }
-
-                        break;
-                    }
-                case TypedConstantKind.Type:
-                    {
-                        Append("typeof(");
-                        Append((ISymbol)typedConstant.Value, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
-                        Append(")");
-
-                        break;
-                    }
-                case TypedConstantKind.Array:
-                    {
-                        var arrayType = (IArrayTypeSymbol)typedConstant.Type;
-                        Append("new ");
-                        Append(arrayType.ElementType, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
-                        Append("[] { ");
-
-                        ImmutableArray<TypedConstant>.Enumerator en = typedConstant.Values.GetEnumerator();
-
-                        if (en.MoveNext())
-                        {
-                            while (true)
-                            {
-                                AppendConstantValue(en.Current);
-
-                                if (en.MoveNext())
-                                {
-                                    Append(", ");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                        }
-
-                        Append(" }");
-                        break;
-                    }
-                default:
-                    {
-                        throw new InvalidOperationException();
-                    }
-            }
-        }
-
         public void Append(ISymbol symbol, SymbolDisplayFormat format)
         {
             Append(symbol.ToDisplayParts(format));
@@ -507,10 +311,10 @@ namespace Roslynator.Documentation
 
         private void Append(ImmutableArray<SymbolDisplayPart> parts)
         {
-            CheckPendingIndentation();
-
             foreach (SymbolDisplayPart part in parts)
             {
+                CheckPendingIndentation();
+
                 if (part.IsTypeName())
                 {
                     ISymbol symbol = part.Symbol;
@@ -528,6 +332,12 @@ namespace Roslynator.Documentation
                 }
 
                 StringBuilder.Append(part);
+
+                if (part.Kind == SymbolDisplayPartKind.LineBreak
+                    && Options.Indent)
+                {
+                    _pendingIndentation = true;
+                }
             }
 
             bool ShouldAddNamespace(INamespaceSymbol containingNamespace)

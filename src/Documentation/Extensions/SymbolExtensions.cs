@@ -389,5 +389,53 @@ namespace Roslynator.Documentation
                 builder.Add(SymbolDisplayPartFactory.Space());
             }
         }
+
+        internal static ImmutableArray<AttributeInfo> GetAttributesIncludingInherited(this INamedTypeSymbol namedType, Func<INamedTypeSymbol, bool> predicate = null)
+        {
+            HashSet<AttributeInfo> attributes = null;
+
+            foreach (AttributeData attributeData in namedType.GetAttributes())
+            {
+                if (predicate == null
+                    || predicate(attributeData.AttributeClass))
+                {
+                    (attributes ?? (attributes = new HashSet<AttributeInfo>(AttributeInfo.AttributeClassComparer))).Add(new AttributeInfo(namedType, attributeData));
+                }
+            }
+
+            INamedTypeSymbol baseType = namedType.BaseType;
+
+            while (baseType != null
+                && baseType.SpecialType != SpecialType.System_Object)
+            {
+                foreach (AttributeData attributeData in baseType.GetAttributes())
+                {
+                    AttributeData attributeUsage = attributeData.AttributeClass.GetAttribute(MetadataNames.System_AttributeUsageAttribute);
+
+                    if (attributeUsage != null)
+                    {
+                        TypedConstant typedConstant = attributeUsage.NamedArguments.FirstOrDefault(f => f.Key == "Inherited").Value;
+
+                        if (typedConstant.Type?.SpecialType == SpecialType.System_Boolean
+                            && (!(bool)typedConstant.Value))
+                        {
+                            continue;
+                        }
+                    }
+
+                    if (predicate == null
+                        || predicate(attributeData.AttributeClass))
+                    {
+                        (attributes ?? (attributes = new HashSet<AttributeInfo>(AttributeInfo.AttributeClassComparer))).Add(new AttributeInfo(baseType, attributeData));
+                    }
+                }
+
+                baseType = baseType.BaseType;
+            }
+
+            return (attributes != null)
+                ? attributes.ToImmutableArray()
+                : ImmutableArray<AttributeInfo>.Empty;
+        }
     }
 }

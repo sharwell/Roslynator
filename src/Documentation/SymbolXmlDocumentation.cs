@@ -161,7 +161,7 @@ namespace Roslynator.Documentation
 
                                             if (symbol != null)
                                             {
-                                                writer.WriteLink(symbol, writer.FormatProvider.CrefFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
+                                                writer.WriteLink(symbol, writer.FormatProvider.TypeFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
                                             }
                                             else
                                             {
@@ -437,7 +437,7 @@ namespace Roslynator.Documentation
 
                     do
                     {
-                        writer.WriteBulletItemLink(en.Current, writer.FormatProvider.CrefFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
+                        writer.WriteBulletItemLink(en.Current, writer.FormatProvider.TypeFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
                     }
                     while (en.MoveNext());
 

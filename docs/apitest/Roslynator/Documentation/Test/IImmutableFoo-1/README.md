@@ -24,7 +24,6 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 | ---- | ------- |
 | T | |
 
-
 ### Implements
 
 * [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)

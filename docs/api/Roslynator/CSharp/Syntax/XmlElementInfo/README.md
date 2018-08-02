@@ -25,7 +25,7 @@ public readonly struct XmlElementInfo : System.IEquatable<XmlElementInfo>
 | Property | Summary |
 | -------- | ------- |
 | [Element](Element/README.md) | The xml element\. |
-| [IsEmptyElement](IsEmptyElement/README.md) | Determines whether the element is [XmlEmptyElement](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind.xmlemptyelement)\. |
+| [IsEmptyElement](IsEmptyElement/README.md) | Determines whether the element is [SyntaxKind.XmlEmptyElement](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind.xmlemptyelement)\. |
 | [Kind](Kind/README.md) | Element kind\. |
 | [LocalName](LocalName/README.md) | Local name of the element\. |
 | [Success](Success/README.md) | Determines whether this struct was initialized with an actual syntax\. |

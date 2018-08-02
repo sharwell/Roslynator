@@ -291,7 +291,7 @@ namespace Roslynator.Documentation
                 }
                 else
                 {
-                    Writer.WriteString(symbol.ToDisplayString(FormatProvider.TitleFormat));
+                    Writer.WriteString(symbol.ContainingType.ToDisplayString(FormatProvider.TitleFormat));
                     Writer.WriteSpace();
                     Writer.WriteString(Resources.ConstructorsTitle);
                 }

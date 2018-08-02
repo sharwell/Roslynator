@@ -20,34 +20,36 @@ namespace Roslynator.Documentation
              miscellaneousOptions: DefaultMiscellaneousOptions);
 
         public static SymbolDisplayFormat TypeName { get; } = Default.Update(
-             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
-             genericsOptions: SymbolDisplayGenericsOptions.None);
+            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
+            genericsOptions: SymbolDisplayGenericsOptions.None,
+            memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
 
         public static SymbolDisplayFormat TypeNameAndTypeParameters { get; } = Default.Update(
-             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
-             genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters);
+            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
+            genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
+            memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
 
         public static SymbolDisplayFormat TypeNameAndContainingTypes { get; } = Default.Update(
-             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypes,
-             genericsOptions: SymbolDisplayGenericsOptions.None);
+            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypes,
+            genericsOptions: SymbolDisplayGenericsOptions.None,
+            memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
 
         public static SymbolDisplayFormat TypeNameAndContainingTypesAndTypeParameters { get; } = Default.Update(
-             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypes,
-             genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters);
+            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypes,
+            genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
+            memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
 
         public static SymbolDisplayFormat TypeNameAndContainingTypesAndNamespaces { get; } = Default.Update(
-             globalNamespaceStyle: SymbolDisplayGlobalNamespaceStyle.OmittedAsContaining,
-             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
-             genericsOptions: SymbolDisplayGenericsOptions.None);
+            globalNamespaceStyle: SymbolDisplayGlobalNamespaceStyle.OmittedAsContaining,
+            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
+            genericsOptions: SymbolDisplayGenericsOptions.None,
+            memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
 
         public static SymbolDisplayFormat TypeNameAndContainingTypesAndNamespacesAndTypeParameters { get; } = Default.Update(
-             globalNamespaceStyle: SymbolDisplayGlobalNamespaceStyle.OmittedAsContaining,
-             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
-             genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters);
-
-        public static SymbolDisplayFormat EnumFieldFullName { get; } = Default.Update(
-             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
-             memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
+            globalNamespaceStyle: SymbolDisplayGlobalNamespaceStyle.OmittedAsContaining,
+            typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
+            genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
+            memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
 
         public static SymbolDisplayFormat NamespaceDefinition { get; } = Default.Update(
              typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,

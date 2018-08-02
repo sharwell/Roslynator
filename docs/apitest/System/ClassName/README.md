@@ -8,7 +8,7 @@ Assembly: Roslynator\.Documentation\.TestProject\.dll
 
 
 ```csharp
-[System.CLSCompliantAttribute]
+[System.CLSCompliantAttribute(true)]
 [System.ObsoleteAttribute]
 public class ClassName
 ```
