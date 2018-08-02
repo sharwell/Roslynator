@@ -17,5 +17,11 @@
       </Sample>
     </Samples>
     <Remarks></Remarks>
+    <Links>
+      <Link>
+        <Url>http://thebillwagner.com/Blog/Item/2017-05-03-ThecuriouscaseofasyncawaitandIDisposable</Url>
+        <Text>The curious case of async, await, and IDisposable</Text>
+      </Link>
+    </Links>
   </Analyzer>
 </Analyzers>
