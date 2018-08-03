@@ -409,6 +409,8 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
+                bool includeInherited = typeSymbol.TypeKind != TypeKind.Interface || Options.InheritedInterfaceMembers;
+
                 foreach (TypeDocumentationParts part in EnabledAndSortedTypeParts)
                 {
                     switch (part)
@@ -510,12 +512,12 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Properties:
                             {
-                                writer.WriteProperties(typeModel.GetProperties(includeInherited: true), containingType: typeSymbol);
+                                writer.WriteProperties(typeModel.GetProperties(includeInherited: includeInherited), containingType: typeSymbol);
                                 break;
                             }
                         case TypeDocumentationParts.Methods:
                             {
-                                writer.WriteMethods(typeModel.GetMethods(includeInherited: true), containingType: typeSymbol);
+                                writer.WriteMethods(typeModel.GetMethods(includeInherited: includeInherited), containingType: typeSymbol);
                                 break;
                             }
                         case TypeDocumentationParts.Operators:
@@ -525,7 +527,7 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Events:
                             {
-                                writer.WriteEvents(typeModel.GetEvents(includeInherited: true), containingType: typeSymbol);
+                                writer.WriteEvents(typeModel.GetEvents(includeInherited: includeInherited), containingType: typeSymbol);
                                 break;
                             }
                         case TypeDocumentationParts.ExplicitInterfaceImplementations:

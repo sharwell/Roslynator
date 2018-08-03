@@ -2,7 +2,6 @@
 
 namespace Roslynator.Documentation
 {
-    //TODO: NewLineOnAttributeArguments
     public class DefinitionListOptions
     {
         public DefinitionListOptions(

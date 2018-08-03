@@ -61,10 +61,14 @@ namespace Roslynator.Documentation
         [Option(longName: "indicateInterfaceImplementation")]
         public bool IndicateInterfaceImplementation { get; set; }
 
+        [Option(longName: "attributeArguments")]
+        public bool AttributeArguments { get; set; }
+
+        [Option(longName: "inheritedInterfaceMembers")]
+        public bool InheritedInterfaceMembers { get; set; }
+
         [Option(longName: "omitIEnumerable")]
         public bool OmitIEnumerable { get; set; }
 
-        [Option(longName: "attributeArguments")]
-        public bool AttributeArguments { get; set; }
     }
 }

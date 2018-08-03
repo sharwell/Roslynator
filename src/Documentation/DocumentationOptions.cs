@@ -2,7 +2,6 @@
 
 namespace Roslynator.Documentation
 {
-    //TODO: InheritedInterfaceMembers, EmphasizeNonInheritedMember
     public class DocumentationOptions
     {
         public DocumentationOptions(
@@ -14,6 +13,7 @@ namespace Roslynator.Documentation
             bool indicateOverriddenMember = false,
             bool indicateInterfaceImplementation = false,
             bool attributeArguments = true,
+            bool inheritedInterfaceMembers = true,
             bool omitIEnumerable = true,
             SymbolDisplayFormatProvider formatProvider = null,
             DocumentationParts parts = DocumentationParts.Namespace | DocumentationParts.Type | DocumentationParts.Member,
@@ -30,6 +30,7 @@ namespace Roslynator.Documentation
             IndicateOverriddenMember = indicateOverriddenMember;
             IndicateInterfaceImplementation = indicateInterfaceImplementation;
             AttributeArguments = attributeArguments;
+            InheritedInterfaceMembers = inheritedInterfaceMembers;
             OmitIEnumerable = omitIEnumerable;
             FormatProvider = formatProvider ?? SymbolDisplayFormatProvider.Default;
             DocumentationParts = parts;
@@ -58,6 +59,8 @@ namespace Roslynator.Documentation
         public bool IndicateInterfaceImplementation { get; }
 
         public bool AttributeArguments { get; }
+
+        public bool InheritedInterfaceMembers { get; }
 
         public bool OmitIEnumerable { get; }
 
