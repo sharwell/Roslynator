@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Refactorings>
+  <Refactoring Id="RRX004" Identifier="ReplaceWhileWithIfAndDo" Title="Replace while statement with if statement and do statement">
+    <Syntaxes>
+      <Syntax>while statement</Syntax>
+    </Syntaxes>
+    <Span>while keyword</Span>
+    <Samples>
+      <Sample>
+        <Before><![CDATA[while (condition)
+{
+}]]></Before>
+        <After><![CDATA[if (condition)
+{
+  do
+  {
+  }
+  while (condition);
+}]]></After>
+      </Sample>
+    </Samples>
+  </Refactoring>
+</Refactorings>
