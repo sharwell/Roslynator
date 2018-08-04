@@ -12,8 +12,21 @@
     <Summary></Summary>
     <Samples>
       <Sample>
-        <Before><![CDATA[]]></Before>
-        <After><![CDATA[]]></After>
+        <Before><![CDATA[Task<object> FooAsync()
+{
+    using (var service = CreateService())
+    {
+        return service.GetAsync();
+    }
+}
+]]></Before>
+        <After><![CDATA[async Task<object> FooAsync()
+{
+    using (var service = CreateService())
+    {
+        return await service.GetAsync();
+    }
+}]]></After>
       </Sample>
     </Samples>
     <Remarks></Remarks>
@@ -21,6 +34,9 @@
       <Link>
         <Url>http://thebillwagner.com/Blog/Item/2017-05-03-ThecuriouscaseofasyncawaitandIDisposable</Url>
         <Text>The curious case of async, await, and IDisposable</Text>
+      </Link>
+      <Link>
+        <Url>https://github.com/JosefPihrt/Roslynator/issues/419</Url>
       </Link>
     </Links>
   </Analyzer>
