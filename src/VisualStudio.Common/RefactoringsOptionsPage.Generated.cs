@@ -22,7 +22,7 @@ namespace Roslynator.VisualStudio
             get;
         }
 
-        = RefactoringIdentifiers.ReplaceWhileWithIfAndDo;
+        = RefactoringIdentifiers.MoveLocalFunction;
         internal static void SetRefactoringsDisabledByDefault(RefactoringSettings settings)
         {
             settings.DisableRefactoring(RefactoringIdentifiers.AddIdentifierToParameter);
@@ -236,6 +236,7 @@ namespace Roslynator.VisualStudio
             refactorings.Add(new BaseModel(RefactoringIdentifiers.WrapInElement, "Wrap in element", IsEnabled(RefactoringIdentifiers.WrapInElement)));
             refactorings.Add(new BaseModel(RefactoringIdentifiers.ExpandLinqMethodOperation, "Expand LINQ method operation", IsEnabled(RefactoringIdentifiers.ExpandLinqMethodOperation)));
             refactorings.Add(new BaseModel(RefactoringIdentifiers.ReplaceWhileWithIfAndDo, "Replace while statement with if statement and do statement", IsEnabled(RefactoringIdentifiers.ReplaceWhileWithIfAndDo)));
+            refactorings.Add(new BaseModel(RefactoringIdentifiers.MoveLocalFunction, "Move local function after other statements", IsEnabled(RefactoringIdentifiers.MoveLocalFunction)));
         }
     }
 }
