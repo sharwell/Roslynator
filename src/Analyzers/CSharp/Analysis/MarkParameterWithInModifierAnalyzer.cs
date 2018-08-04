@@ -44,7 +44,7 @@ namespace Roslynator.CSharp.Analysis
         {
             var methodDeclaration = (MethodDeclarationSyntax)context.Node;
 
-            if (methodDeclaration.Modifiers.Contains(SyntaxKind.AsyncKeyword))
+            if (methodDeclaration.Modifiers.ContainsAny(SyntaxKind.AsyncKeyword, SyntaxKind.OverrideKeyword))
                 return;
 
             Analyze(context, methodDeclaration, methodDeclaration.ParameterList, methodDeclaration.BodyOrExpressionBody());
