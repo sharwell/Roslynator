@@ -2,11 +2,12 @@
 
 using System;
 using System.Collections.Immutable;
-using System.Diagnostics;
+using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
+using Roslynator.CSharp.SyntaxWalkers;
 
 namespace Roslynator.CSharp.Analysis
 {
@@ -24,180 +25,248 @@ namespace Roslynator.CSharp.Analysis
                 throw new ArgumentNullException(nameof(context));
 
             base.Initialize(context);
+            context.EnableConcurrentExecution();
 
-            context.RegisterSyntaxNodeAction(AnalyzeReturnStatement, SyntaxKind.ReturnStatement);
+            context.RegisterSyntaxNodeAction(AnalyzeMethodDeclaration, SyntaxKind.MethodDeclaration);
+            context.RegisterSyntaxNodeAction(AnalyzeLocalFunctionStatement, SyntaxKind.LocalFunctionStatement);
+            context.RegisterSyntaxNodeAction(AnalyzeSimpleLambdaExpression, SyntaxKind.SimpleLambdaExpression);
+            context.RegisterSyntaxNodeAction(AnalyzeParenthesizedLambdaExpression, SyntaxKind.ParenthesizedLambdaExpression);
+            context.RegisterSyntaxNodeAction(AnalyzeAnonymousMethodExpression, SyntaxKind.AnonymousMethodExpression);
         }
 
-        public static void AnalyzeReturnStatement(SyntaxNodeAnalysisContext context)
+        private static void AnalyzeMethodDeclaration(SyntaxNodeAnalysisContext context)
         {
-            var returnStatement = (ReturnStatementSyntax)context.Node;
+            var methodDeclaration = (MethodDeclarationSyntax)context.Node;
 
-            ExpressionSyntax returnExpression = returnStatement.Expression;
-
-            if (!returnExpression.IsKind(SyntaxKind.InvocationExpression))
+            if (methodDeclaration.Modifiers.Contains(SyntaxKind.AsyncKeyword))
                 return;
 
-            var invocationExpression = (InvocationExpressionSyntax)returnExpression;
+            BlockSyntax body = methodDeclaration.Body;
 
-            if (GetSimpleName()?.Identifier.ValueText.EndsWith("Async", StringComparison.Ordinal) != true)
+            if (body == null)
                 return;
 
-            SyntaxNode usingStatement = FindContainingUsingStatement(returnStatement);
-
-            if (usingStatement == null)
+            if (!body.Statements.Any())
                 return;
 
-            if (!AnalyzeContainingMethod(usingStatement))
-                return;
-
-            context.ReportDiagnostic(DiagnosticDescriptors.UseAsyncAwait, returnExpression);
-
-            SimpleNameSyntax GetSimpleName()
+            if (!methodDeclaration.Identifier.ValueText.EndsWith("Async", StringComparison.Ordinal))
             {
-                ExpressionSyntax expression = invocationExpression.Expression;
+                IMethodSymbol methodSymbol = context.SemanticModel.GetDeclaredSymbol(methodDeclaration, context.CancellationToken);
 
-                switch (expression.Kind())
-                {
-                    case SyntaxKind.SimpleMemberAccessExpression:
-                        return ((MemberAccessExpressionSyntax)expression).Name;
-                    case SyntaxKind.IdentifierName:
-                    case SyntaxKind.GenericName:
-                        return (SimpleNameSyntax)expression;
-                    default:
-                        return null;
-                }
+                if (!IsTaskLike(methodSymbol.ReturnType))
+                    return;
             }
 
-            SyntaxNode FindContainingUsingStatement(SyntaxNode node)
+            if (IsFixable(body))
+                context.ReportDiagnostic(DiagnosticDescriptors.UseAsyncAwait, methodDeclaration.Identifier);
+        }
+
+        private static void AnalyzeLocalFunctionStatement(SyntaxNodeAnalysisContext context)
+        {
+            var localFunction = (LocalFunctionStatementSyntax)context.Node;
+
+            if (localFunction.Modifiers.Contains(SyntaxKind.AsyncKeyword))
+                return;
+
+            BlockSyntax body = localFunction.Body;
+
+            if (body == null)
+                return;
+
+            if (!body.Statements.Any())
+                return;
+
+            if (!localFunction.Identifier.ValueText.EndsWith("Async", StringComparison.Ordinal))
             {
-                for (node = node.Parent; node != null; node = node.Parent)
-                {
-                    switch (node.Kind())
-                    {
-                        case SyntaxKind.UsingStatement:
-                            {
-                                return node;
-                            }
-                        case SyntaxKind.FieldDeclaration:
-                        case SyntaxKind.EventFieldDeclaration:
-                        case SyntaxKind.MethodDeclaration:
-                        case SyntaxKind.OperatorDeclaration:
-                        case SyntaxKind.ConversionOperatorDeclaration:
-                        case SyntaxKind.ConstructorDeclaration:
-                        case SyntaxKind.DestructorDeclaration:
-                        case SyntaxKind.PropertyDeclaration:
-                        case SyntaxKind.EventDeclaration:
-                        case SyntaxKind.IndexerDeclaration:
-                        case SyntaxKind.LocalFunctionStatement:
-                        case SyntaxKind.SimpleLambdaExpression:
-                        case SyntaxKind.ParenthesizedLambdaExpression:
-                        case SyntaxKind.AnonymousMethodExpression:
-                            {
-                                return null;
-                            }
-                        default:
-                            {
-                                Debug.Assert(!(node is MemberDeclarationSyntax), node.Kind().ToString());
-                                break;
-                            }
-                    }
-                }
+                IMethodSymbol methodSymbol = context.SemanticModel.GetDeclaredSymbol(localFunction, context.CancellationToken);
 
-                Debug.Fail("");
-
-                return null;
+                if (!IsTaskLike(methodSymbol.ReturnType))
+                    return;
             }
 
-            bool AnalyzeContainingMethod(SyntaxNode node)
+            if (IsFixable(body))
+                context.ReportDiagnostic(DiagnosticDescriptors.UseAsyncAwait, localFunction.Identifier);
+        }
+
+        private static void AnalyzeSimpleLambdaExpression(SyntaxNodeAnalysisContext context)
+        {
+            var simpleLambda = (SimpleLambdaExpressionSyntax)context.Node;
+
+            if (simpleLambda.AsyncKeyword.IsKind(SyntaxKind.AsyncKeyword))
+                return;
+
+            if (!(simpleLambda.Body is BlockSyntax body))
+                return;
+
+            if (!(context.SemanticModel.GetSymbol(simpleLambda, context.CancellationToken) is IMethodSymbol methodSymbol))
+                return;
+
+            if (!IsTaskLike(methodSymbol.ReturnType))
+                return;
+
+            if (IsFixable(body))
+                context.ReportDiagnostic(DiagnosticDescriptors.UseAsyncAwait, simpleLambda);
+        }
+
+        private static void AnalyzeParenthesizedLambdaExpression(SyntaxNodeAnalysisContext context)
+        {
+            var parenthesizedLambda = (ParenthesizedLambdaExpressionSyntax)context.Node;
+
+            if (parenthesizedLambda.AsyncKeyword.IsKind(SyntaxKind.AsyncKeyword))
+                return;
+
+            if (!(parenthesizedLambda.Body is BlockSyntax body))
+                return;
+
+            if (!(context.SemanticModel.GetSymbol(parenthesizedLambda, context.CancellationToken) is IMethodSymbol methodSymbol))
+                return;
+
+            if (!IsTaskLike(methodSymbol.ReturnType))
+                return;
+
+            if (IsFixable(body))
+                context.ReportDiagnostic(DiagnosticDescriptors.UseAsyncAwait, parenthesizedLambda);
+        }
+
+        private static void AnalyzeAnonymousMethodExpression(SyntaxNodeAnalysisContext context)
+        {
+            var anonymousMethod = (AnonymousMethodExpressionSyntax)context.Node;
+
+            if (anonymousMethod.AsyncKeyword.IsKind(SyntaxKind.AsyncKeyword))
+                return;
+
+            BlockSyntax body = anonymousMethod.Block;
+
+            if (body == null)
+                return;
+
+            if (!(context.SemanticModel.GetSymbol(anonymousMethod, context.CancellationToken) is IMethodSymbol methodSymbol))
+                return;
+
+            if (!IsTaskLike(methodSymbol.ReturnType))
+                return;
+
+            if (IsFixable(body))
+                context.ReportDiagnostic(DiagnosticDescriptors.UseAsyncAwait, anonymousMethod);
+        }
+
+        private static bool IsFixable(BlockSyntax body)
+        {
+            UseAsyncAwaitWalker walker = UseAsyncAwaitWalker.GetInstance();
+
+            walker.VisitBlock(body);
+
+            ReturnStatementSyntax returnStatement = walker.ReturnStatement;
+
+            UseAsyncAwaitWalker.Free(walker);
+
+            return returnStatement != null;
+        }
+
+        private static bool IsTaskLike(ITypeSymbol typeSymbol)
+        {
+            if (typeSymbol?.IsErrorType() == false
+                && typeSymbol.SpecialType == SpecialType.None)
             {
-                for (node = node.Parent; node != null; node = node.Parent)
+                ITypeSymbol t = typeSymbol.OriginalDefinition;
+
+                if (t.Name == "ValueTask`1"
+                    && t.ContainingNamespace.HasMetadataName(MetadataNames.System_Threading_Tasks))
                 {
-                    switch (node.Kind())
-                    {
-                        case SyntaxKind.MethodDeclaration:
-                            {
-                                var methodDeclaration = (MethodDeclarationSyntax)node;
-
-                                if (methodDeclaration.Modifiers.Contains(SyntaxKind.AsyncKeyword))
-                                    return false;
-
-                                ITypeSymbol typeSymbol = context.SemanticModel.GetTypeSymbol(methodDeclaration.ReturnType, context.CancellationToken);
-
-                                return IsTaskLike(typeSymbol);
-                            }
-                        case SyntaxKind.LocalFunctionStatement:
-                            {
-                                var localFunction = (LocalFunctionStatementSyntax)node;
-
-                                if (localFunction.Modifiers.Contains(SyntaxKind.AsyncKeyword))
-                                    return false;
-
-                                ITypeSymbol typeSymbol = context.SemanticModel.GetTypeSymbol(localFunction.ReturnType, context.CancellationToken);
-
-                                return IsTaskLike(typeSymbol);
-                            }
-                        case SyntaxKind.SimpleLambdaExpression:
-                        case SyntaxKind.ParenthesizedLambdaExpression:
-                            {
-                                var lambda = (LambdaExpressionSyntax)node;
-
-                                if (lambda.AsyncKeyword.IsKind(SyntaxKind.AsyncKeyword))
-                                    return false;
-
-                                if (!(context.SemanticModel.GetSymbol(lambda, context.CancellationToken) is IMethodSymbol methodSymbol))
-                                    return false;
-
-                                return IsTaskLike(methodSymbol.ReturnType);
-                            }
-                        case SyntaxKind.AnonymousMethodExpression:
-                            {
-                                var anonymousMethod = (AnonymousMethodExpressionSyntax)node;
-
-                                if (anonymousMethod.AsyncKeyword.IsKind(SyntaxKind.AsyncKeyword))
-                                    return false;
-
-                                if (!(context.SemanticModel.GetSymbol(anonymousMethod, context.CancellationToken) is IMethodSymbol methodSymbol))
-                                    return false;
-
-                                return IsTaskLike(methodSymbol.ReturnType);
-                            }
-                        case SyntaxKind.OperatorDeclaration:
-                        case SyntaxKind.ConversionOperatorDeclaration:
-                        case SyntaxKind.FieldDeclaration:
-                        case SyntaxKind.EventFieldDeclaration:
-                        case SyntaxKind.ConstructorDeclaration:
-                        case SyntaxKind.DestructorDeclaration:
-                        case SyntaxKind.PropertyDeclaration:
-                        case SyntaxKind.EventDeclaration:
-                        case SyntaxKind.IndexerDeclaration:
-                            {
-                                return false;
-                            }
-                    }
+                    return true;
                 }
 
-                Debug.Fail("");
-
-                return false;
-            }
-
-            bool IsTaskLike(ITypeSymbol typeSymbol)
-            {
-                if (typeSymbol?.IsErrorType() == false)
+                do
                 {
-                    ITypeSymbol originalDefinition = typeSymbol.OriginalDefinition;
-
-                    if (originalDefinition.Name == "ValueTask`1"
-                        && originalDefinition.ContainingNamespace.HasMetadataName(MetadataNames.System_Threading_Tasks))
+                    if ((t.Name == "Task" || t.Name == "Task`1")
+                        && t.ContainingNamespace.HasMetadataName(MetadataNames.System_Threading_Tasks))
                     {
                         return true;
                     }
 
-                    if (originalDefinition.EqualsOrInheritsFrom(MetadataNames.System_Threading_Tasks_Task_T))
-                        return true;
+                    t = t.BaseType;
+                }
+                while (t?.SpecialType == SpecialType.None);
+            }
+
+            return false;
+        }
+
+        private class UseAsyncAwaitWalker : StatementWalker
+        {
+            [ThreadStatic]
+            private static UseAsyncAwaitWalker _cachedInstance;
+
+            private int _usingStatementDepth;
+            private bool _shouldVisit = true;
+
+            public override bool ShouldVisit => _shouldVisit;
+
+            public ReturnStatementSyntax ReturnStatement { get; private set; }
+
+            public void Reset()
+            {
+                _shouldVisit = true;
+                ReturnStatement = null;
+            }
+
+            public override void VisitUsingStatement(UsingStatementSyntax node)
+            {
+                _usingStatementDepth++;
+                base.VisitUsingStatement(node);
+                _usingStatementDepth--;
+            }
+
+            public override void VisitReturnStatement(ReturnStatementSyntax node)
+            {
+                if (_usingStatementDepth > 0)
+                {
+                    ExpressionSyntax expression = node.Expression;
+
+                    if (expression?.IsKind(SyntaxKind.AwaitExpression) == false)
+                    {
+                        ReturnStatement = node;
+                    }
+
+                    _shouldVisit = false;
                 }
 
-                return false;
+                base.VisitReturnStatement(node);
+            }
+
+            public override void VisitLocalFunctionStatement(LocalFunctionStatementSyntax node)
+            {
+            }
+
+            public override void VisitAnonymousMethodExpression(AnonymousMethodExpressionSyntax node)
+            {
+            }
+
+            public override void VisitSimpleLambdaExpression(SimpleLambdaExpressionSyntax node)
+            {
+            }
+
+            public override void VisitParenthesizedLambdaExpression(ParenthesizedLambdaExpressionSyntax node)
+            {
+            }
+
+            public static UseAsyncAwaitWalker GetInstance()
+            {
+                UseAsyncAwaitWalker walker = _cachedInstance;
+
+                if (walker != null)
+                {
+                    _cachedInstance = null;
+                    return walker;
+                }
+
+                return new UseAsyncAwaitWalker();
+            }
+
+            public static void Free(UseAsyncAwaitWalker walker)
+            {
+                walker.Reset();
+                _cachedInstance = walker;
             }
         }
     }

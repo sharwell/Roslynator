@@ -12,6 +12,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Roslynator.CodeFixes;
 using Roslynator.CSharp.SyntaxRewriters;
+using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 using static Roslynator.CSharp.CSharpFactory;
 
 namespace Roslynator.CSharp.CodeFixes
@@ -29,107 +30,113 @@ namespace Roslynator.CSharp.CodeFixes
         {
             SyntaxNode root = await context.GetSyntaxRootAsync().ConfigureAwait(false);
 
-            if (!TryFindFirstAncestorOrSelf(root, context.Span, out ReturnStatementSyntax returnStatement))
+            if (!TryFindFirstAncestorOrSelf(root, context.Span, out SyntaxNode node, predicate: f => f.IsKind(
+                SyntaxKind.MethodDeclaration,
+                SyntaxKind.LocalFunctionStatement,
+                SyntaxKind.SimpleLambdaExpression,
+                SyntaxKind.ParenthesizedLambdaExpression,
+                SyntaxKind.AnonymousMethodExpression)))
+            {
                 return;
+            }
 
             Diagnostic diagnostic = context.Diagnostics[0];
 
             CodeAction codeAction = CodeAction.Create(
                 "Use async/await",
-                ct => RefactorAsync(context.Document, returnStatement, ct),
+                ct => RefactorAsync(context.Document, node, ct),
                 GetEquivalenceKey(diagnostic.Id));
 
             context.RegisterCodeFix(codeAction, diagnostic);
         }
 
-        private static Task<Document> RefactorAsync(
+        private static async Task<Document> RefactorAsync(
             Document document,
-            ReturnStatementSyntax returnStatement,
+            SyntaxNode node,
             CancellationToken cancellationToken)
         {
-            for (SyntaxNode node = returnStatement.Parent; node != null; node = node.Parent)
+            SemanticModel semanticModel = await document.GetSemanticModelAsync(cancellationToken).ConfigureAwait(false);
+
+            switch (node.Kind())
             {
-                switch (node.Kind())
-                {
-                    case SyntaxKind.MethodDeclaration:
-                        {
-                            var methodDeclaration = (MethodDeclarationSyntax)node;
+                case SyntaxKind.MethodDeclaration:
+                    {
+                        var methodDeclaration = (MethodDeclarationSyntax)node;
 
-                            var newNode = (MethodDeclarationSyntax)UseAsyncAwaitRewriter.Instance.VisitMethodDeclaration(methodDeclaration);
+                        IMethodSymbol methodSymbol = semanticModel.GetDeclaredSymbol(methodDeclaration, cancellationToken);
 
-                            newNode = ModifierList<MethodDeclarationSyntax>.Instance.Insert(newNode, SyntaxKind.AsyncKeyword);
+                        UseAsyncAwaitRewriter rewriter = UseAsyncAwaitRewriter.Create(methodSymbol);
 
-                            return document.ReplaceNodeAsync(methodDeclaration, newNode, cancellationToken);
-                        }
-                    case SyntaxKind.OperatorDeclaration:
-                        {
-                            var operatorDeclaration = (OperatorDeclarationSyntax)node;
+                        var newNode = (MethodDeclarationSyntax)rewriter.VisitMethodDeclaration(methodDeclaration);
 
-                            var newNode = (OperatorDeclarationSyntax)UseAsyncAwaitRewriter.Instance.VisitOperatorDeclaration(operatorDeclaration);
+                        newNode = ModifierList<MethodDeclarationSyntax>.Instance.Insert(newNode, SyntaxKind.AsyncKeyword);
 
-                            newNode = ModifierList<OperatorDeclarationSyntax>.Instance.Insert(newNode, SyntaxKind.AsyncKeyword);
+                        return await document.ReplaceNodeAsync(methodDeclaration, newNode, cancellationToken).ConfigureAwait(false);
+                    }
+                case SyntaxKind.LocalFunctionStatement:
+                    {
+                        var localFunction = (LocalFunctionStatementSyntax)node;
 
-                            return document.ReplaceNodeAsync(operatorDeclaration, newNode, cancellationToken);
-                        }
-                    case SyntaxKind.ConversionOperatorDeclaration:
-                        {
-                            var operatorDeclaration = (ConversionOperatorDeclarationSyntax)node;
+                        IMethodSymbol methodSymbol = semanticModel.GetDeclaredSymbol(localFunction, cancellationToken);
 
-                            var newNode = (ConversionOperatorDeclarationSyntax)UseAsyncAwaitRewriter.Instance.VisitConversionOperatorDeclaration(operatorDeclaration);
+                        UseAsyncAwaitRewriter rewriter = UseAsyncAwaitRewriter.Create(methodSymbol);
 
-                            newNode = ModifierList<ConversionOperatorDeclarationSyntax>.Instance.Insert(newNode, SyntaxKind.AsyncKeyword);
+                        var newBody = (BlockSyntax)rewriter.VisitBlock(localFunction.Body);
 
-                            return document.ReplaceNodeAsync(operatorDeclaration, newNode, cancellationToken);
-                        }
-                    case SyntaxKind.LocalFunctionStatement:
-                        {
-                            var localFunction = (LocalFunctionStatementSyntax)node;
+                        LocalFunctionStatementSyntax newNode = localFunction.WithBody(newBody);
 
-                            var newBody = (BlockSyntax)UseAsyncAwaitRewriter.Instance.VisitBlock(localFunction.Body);
+                        newNode = ModifierList<LocalFunctionStatementSyntax>.Instance.Insert(newNode, SyntaxKind.AsyncKeyword);
 
-                            LocalFunctionStatementSyntax newNode = localFunction.WithBody(newBody);
+                        return await document.ReplaceNodeAsync(localFunction, newNode, cancellationToken).ConfigureAwait(false);
+                    }
+                case SyntaxKind.SimpleLambdaExpression:
+                    {
+                        var lambda = (SimpleLambdaExpressionSyntax)node;
 
-                            newNode = ModifierList<LocalFunctionStatementSyntax>.Instance.Insert(newNode, SyntaxKind.AsyncKeyword);
+                        var methodSymbol = (IMethodSymbol)semanticModel.GetSymbol(lambda, cancellationToken);
 
-                            return document.ReplaceNodeAsync(localFunction, newNode, cancellationToken);
-                        }
-                    case SyntaxKind.SimpleLambdaExpression:
-                        {
-                            var lambda = (SimpleLambdaExpressionSyntax)node;
+                        UseAsyncAwaitRewriter rewriter = UseAsyncAwaitRewriter.Create(methodSymbol);
 
-                            var newBody = (BlockSyntax)UseAsyncAwaitRewriter.Instance.VisitBlock((BlockSyntax)lambda.Body);
+                        var newBody = (BlockSyntax)rewriter.VisitBlock((BlockSyntax)lambda.Body);
 
-                            SimpleLambdaExpressionSyntax newNode = lambda
-                                .WithBody(newBody)
-                                .WithAsyncKeyword(AsyncKeyword());
+                        SimpleLambdaExpressionSyntax newNode = lambda
+                            .WithBody(newBody)
+                            .WithAsyncKeyword(AsyncKeyword());
 
-                            return document.ReplaceNodeAsync(lambda, newNode, cancellationToken);
-                        }
-                    case SyntaxKind.ParenthesizedLambdaExpression:
-                        {
-                            var lambda = (ParenthesizedLambdaExpressionSyntax)node;
+                        return await document.ReplaceNodeAsync(lambda, newNode, cancellationToken).ConfigureAwait(false);
+                    }
+                case SyntaxKind.ParenthesizedLambdaExpression:
+                    {
+                        var lambda = (ParenthesizedLambdaExpressionSyntax)node;
 
-                            var newBody = (BlockSyntax)UseAsyncAwaitRewriter.Instance.VisitBlock((BlockSyntax)lambda.Body);
+                        var methodSymbol = (IMethodSymbol)semanticModel.GetSymbol(lambda, cancellationToken);
 
-                            ParenthesizedLambdaExpressionSyntax newNode = lambda
-                                .WithBody(newBody)
-                                .WithAsyncKeyword(AsyncKeyword());
+                        UseAsyncAwaitRewriter rewriter = UseAsyncAwaitRewriter.Create(methodSymbol);
 
-                            return document.ReplaceNodeAsync(lambda, newNode, cancellationToken);
-                        }
-                    case SyntaxKind.AnonymousMethodExpression:
-                        {
-                            var anonymousMethod = (AnonymousMethodExpressionSyntax)node;
+                        var newBody = (BlockSyntax)rewriter.VisitBlock((BlockSyntax)lambda.Body);
 
-                            var newBody = (BlockSyntax)UseAsyncAwaitRewriter.Instance.VisitBlock((BlockSyntax)anonymousMethod.Body);
+                        ParenthesizedLambdaExpressionSyntax newNode = lambda
+                            .WithBody(newBody)
+                            .WithAsyncKeyword(AsyncKeyword());
 
-                            AnonymousMethodExpressionSyntax newNode = anonymousMethod
-                                .WithBody(newBody)
-                                .WithAsyncKeyword(AsyncKeyword());
+                        return await document.ReplaceNodeAsync(lambda, newNode, cancellationToken).ConfigureAwait(false);
+                    }
+                case SyntaxKind.AnonymousMethodExpression:
+                    {
+                        var anonymousMethod = (AnonymousMethodExpressionSyntax)node;
 
-                            return document.ReplaceNodeAsync(anonymousMethod, newNode, cancellationToken);
-                        }
-                }
+                        var methodSymbol = (IMethodSymbol)semanticModel.GetSymbol(anonymousMethod, cancellationToken);
+
+                        UseAsyncAwaitRewriter rewriter = UseAsyncAwaitRewriter.Create(methodSymbol);
+
+                        var newBody = (BlockSyntax)rewriter.VisitBlock((BlockSyntax)anonymousMethod.Body);
+
+                        AnonymousMethodExpressionSyntax newNode = anonymousMethod
+                            .WithBody(newBody)
+                            .WithAsyncKeyword(AsyncKeyword());
+
+                        return await document.ReplaceNodeAsync(anonymousMethod, newNode, cancellationToken).ConfigureAwait(false);
+                    }
             }
 
             throw new InvalidOperationException();
@@ -137,7 +144,27 @@ namespace Roslynator.CSharp.CodeFixes
 
         private class UseAsyncAwaitRewriter : SkipFunctionRewriter
         {
-            public static UseAsyncAwaitRewriter Instance { get; } = new UseAsyncAwaitRewriter();
+            public UseAsyncAwaitRewriter(bool keepReturnStatement)
+            {
+                KeepReturnStatement = keepReturnStatement;
+            }
+
+            public bool KeepReturnStatement { get; }
+
+            public static UseAsyncAwaitRewriter Create(IMethodSymbol methodSymbol)
+            {
+                ITypeSymbol returnType = methodSymbol.ReturnType.OriginalDefinition;
+
+                bool keepReturnStatement = false;
+
+                if (returnType.EqualsOrInheritsFrom(MetadataNames.System_Threading_Tasks_ValueTask_T)
+                    || returnType.EqualsOrInheritsFrom(MetadataNames.System_Threading_Tasks_Task_T))
+                {
+                    keepReturnStatement = true;
+                }
+
+                return new UseAsyncAwaitRewriter(keepReturnStatement: keepReturnStatement);
+            }
 
             public override SyntaxNode VisitReturnStatement(ReturnStatementSyntax node)
             {
@@ -145,7 +172,14 @@ namespace Roslynator.CSharp.CodeFixes
 
                 if (expression?.IsKind(SyntaxKind.AwaitExpression) == false)
                 {
-                    return node.WithExpression(SyntaxFactory.AwaitExpression(expression.WithoutTrivia()).WithTriviaFrom(expression));
+                    if (KeepReturnStatement)
+                    {
+                        return node.WithExpression(AwaitExpression(expression.WithoutTrivia()).WithTriviaFrom(expression));
+                    }
+                    else
+                    {
+                        return ExpressionStatement(AwaitExpression(expression.WithoutTrivia()).WithTriviaFrom(expression)).WithTriviaFrom(node);
+                    }
                 }
 
                 return base.VisitReturnStatement(node);

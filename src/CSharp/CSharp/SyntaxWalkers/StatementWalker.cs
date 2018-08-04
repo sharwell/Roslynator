@@ -14,15 +14,6 @@ namespace Roslynator.CSharp.SyntaxWalkers
             get { return true; }
         }
 
-        public override void Visit(SyntaxNode node)
-        {
-            if (ShouldVisit
-                && node is StatementSyntax)
-            {
-                base.Visit(node);
-            }
-        }
-
         public override void VisitBlock(BlockSyntax node)
         {
             foreach (StatementSyntax statement in node.Statements)

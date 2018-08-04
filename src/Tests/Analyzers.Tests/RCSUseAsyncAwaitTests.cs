@@ -18,7 +18,7 @@ namespace Roslynator.CSharp.Analysis.Tests
         public override CodeFixProvider FixProvider { get; } = new UseAsyncAwaitCodeFixProvider();
 
         [Fact, Trait(Traits.Analyzer, DiagnosticIdentifiers.UseAsyncAwait)]
-        public async Task Test_Method()
+        public async Task Test_Method_TaskOfT()
         {
             await VerifyDiagnosticAndFixAsync(@"
 using System;
@@ -26,11 +26,11 @@ using System.Threading.Tasks;
 
 class C
 {
-    Task<string> M()
+    Task<string> [|M|]()
     {
         using (default(IDisposable))
         {
-            return [|GetAsync()|];
+            return GetAsync();
         }
     }
 
@@ -56,6 +56,44 @@ class C
         }
 
         [Fact, Trait(Traits.Analyzer, DiagnosticIdentifiers.UseAsyncAwait)]
+        public async Task Test_Method_Task()
+        {
+            await VerifyDiagnosticAndFixAsync(@"
+using System;
+using System.Threading.Tasks;
+
+class C
+{
+    Task [|M|]()
+    {
+        using (default(IDisposable))
+        {
+            return DoAsync();
+        }
+    }
+
+    Task DoAsync() => Task.CompletedTask;
+}
+", @"
+using System;
+using System.Threading.Tasks;
+
+class C
+{
+    async Task M()
+    {
+        using (default(IDisposable))
+        {
+            await DoAsync();
+        }
+    }
+
+    Task DoAsync() => Task.CompletedTask;
+}
+");
+        }
+
+        [Fact, Trait(Traits.Analyzer, DiagnosticIdentifiers.UseAsyncAwait)]
         public async Task Test_Method_MultipleReturnStatements()
         {
             await VerifyDiagnosticAndFixAsync(@"
@@ -64,21 +102,21 @@ using System.Threading.Tasks;
 
 class C
 {
-    Task<string> M()
+    Task<string> [|M|]()
     {
         bool f = false;
         if (f)
         {
             using (default(IDisposable))
             {
-                return [|GetAsync()|];
+                return GetAsync();
             }
         }
         else
         {
             using (default(IDisposable))
             {
-                return [|GetAsync()|];
+                return GetAsync();
             }
         }
     }
@@ -126,11 +164,11 @@ class C
 {
     void M()
     {
-        Task<string> LF()
+        Task<string> [|LF|]()
         {
             using (default(IDisposable))
             {
-                return [|GetAsync()|];
+                return GetAsync();
             }
         }
     }
@@ -170,13 +208,13 @@ class C
 {
     void M()
     {
-        Func<object, Task<string>> func = _ =>
+        Func<object, Task<string>> func = [|_ =>
         {
             using (default(IDisposable))
             {
-                return [|GetAsync()|];
+                return GetAsync();
             }
-        };
+        }|];
     }
 
     Task<string> GetAsync() => Task.FromResult(default(string));
@@ -214,13 +252,13 @@ class C
 {
     void M()
     {
-        Func<object, Task<string>> func = (_) =>
+        Func<object, Task<string>> func = [|(_) =>
         {
             using (default(IDisposable))
             {
-                return [|GetAsync()|];
+                return GetAsync();
             }
-        };
+        }|];
     }
 
     Task<string> GetAsync() => Task.FromResult(default(string));
@@ -258,13 +296,13 @@ class C
 {
     void M()
     {
-        Func<object, Task<string>> func = delegate (object o)
+        Func<object, Task<string>> func = [|delegate (object o)
         {
             using (default(IDisposable))
             {
-                return [|GetAsync()|];
+                return GetAsync();
             }
-        };
+        }|];
     }
 
     Task<string> GetAsync() => Task.FromResult(default(string));
