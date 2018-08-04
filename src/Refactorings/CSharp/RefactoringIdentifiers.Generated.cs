@@ -172,6 +172,7 @@ namespace Roslynator.CSharp.Refactorings
         public const string ReplaceVerbatimStringLiteralWithRegularStringLiterals = Prefix + "0149";
         public const string ReplaceWhileWithDo = Prefix + "0150";
         public const string ReplaceWhileWithFor = Prefix + "0151";
+        public const string ReplaceWhileWithIfAndDo = Prefix + "X004";
         public const string ReverseForLoop = Prefix + "0152";
         public const string SimplifyIf = Prefix + "0153";
         public const string SimplifyLambdaExpression = Prefix + "0154";
