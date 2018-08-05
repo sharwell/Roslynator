@@ -629,7 +629,6 @@ namespace Roslynator.Documentation
             }
         }
 
-        //TODO: static?
         public DocumentationGeneratorResult GenerateObjectModel(string heading = null)
         {
             SymbolDisplayFormat format = FormatProvider.TypeFormat;
@@ -637,9 +636,7 @@ namespace Roslynator.Documentation
             using (DocumentationWriter writer = CreateWriter())
             {
                 writer.WriteStartDocument();
-
-                if (!string.IsNullOrEmpty(heading))
-                    writer.WriteHeading1(heading);
+                writer.WriteHeading1(heading);
 
                 IEnumerable<INamedTypeSymbol> typeSymbols = DocumentationModel.TypeModels.Select(f => f.TypeSymbol);
 
