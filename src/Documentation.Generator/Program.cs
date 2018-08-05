@@ -21,8 +21,11 @@ namespace Roslynator.Documentation
         [SuppressMessage("Redundancy", "RCS1163")]
         private static void Main(string[] args)
         {
-            GenerateDocumentation(@"..\..\..\..\..\docs\api\", "Roslynator API", "Roslynator.CSharp.dll", "Roslynator.CSharp.Workspaces.dll");
-            GenerateDocumentation(@"..\..\..\..\..\docs\apitest\", "Foo API", "Roslynator.Documentation.TestProject.dll");
+            //GenerateDocumentation(@"..\..\..\..\..\docs\api\", "Roslynator API", "Roslynator.CSharp.dll", "Roslynator.CSharp.Workspaces.dll");
+            //GenerateDocumentation(@"..\..\..\..\..\docs\apitest\", "Foo API", "Roslynator.Documentation.TestProject.dll");
+
+            GenerateAssemblyObjectModel(@"..\..\..\..\CSharp\", "../../docs/api/", "Roslynator.CSharp", "Roslynator.CSharp.dll");
+            GenerateAssemblyObjectModel(@"..\..\..\..\CSharp.Workspaces\", "../../docs/api/", "Roslynator.CSharp.Workspaces", "Roslynator.CSharp.Workspaces.dll");
         }
 
         private static void GenerateDocumentation(string directoryPath, string heading, params string[] assemblyNames)
@@ -37,7 +40,7 @@ namespace Roslynator.Documentation
                 indicateOverriddenMember: true,
                 indicateInterfaceImplementation: true);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHubProvider, options);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHub, options);
 
             string defintionList = DefinitionListGenerator.GenerateAsync(documentationModel).Result;
 
@@ -54,6 +57,27 @@ namespace Roslynator.Documentation
 
                 FileHelper.WriteAllText(path, result.Content, _utf8NoBom, onlyIfChanges: true, fileMustExists: false);
             }
+        }
+
+        private static void GenerateAssemblyObjectModel(string directoryPath, string baseLocalUrl, string heading, string assemblyName)
+        {
+            DocumentationModel documentationModel = CreateFromTrustedPlatformAssemblies(new string[] { assemblyName });
+
+            var options = new DocumentationOptions(baseLocalUrl: baseLocalUrl);
+
+            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHub, options);
+
+            DocumentationGeneratorResult result = generator.GenerateObjectModel(heading);
+
+            string path = directoryPath + result.Path;
+
+            directoryPath = Path.GetDirectoryName(path);
+
+            Directory.CreateDirectory(directoryPath);
+
+            path = Path.Combine(directoryPath, GitHubDocumentationUrlProvider.ReadMeFileName);
+
+            FileHelper.WriteAllText(path, result.Content, _utf8NoBom, onlyIfChanges: true, fileMustExists: false);
         }
 
         internal static DocumentationModel CreateFromTrustedPlatformAssemblies(string[] assemblyNames)

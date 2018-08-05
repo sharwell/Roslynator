@@ -2,10 +2,12 @@
 
 namespace Roslynator.Documentation
 {
+    //TODO: BaseHeadingLevel
     public class DocumentationOptions
     {
         public DocumentationOptions(
             string preferredCultureName = null,
+            string baseLocalUrl = null,
             int maxDerivedItems = 10,
             bool formatDefinitionBaseList = false,
             bool formatDefinitionConstraints = false,
@@ -23,6 +25,7 @@ namespace Roslynator.Documentation
             MemberDocumentationParts memberParts = MemberDocumentationParts.All)
         {
             PreferredCultureName = preferredCultureName;
+            BaseLocalUrl = baseLocalUrl;
             MaxDerivedItems = maxDerivedItems;
             FormatDefinitionBaseList = formatDefinitionBaseList;
             FormatDefinitionConstraints = formatDefinitionConstraints;
@@ -43,6 +46,8 @@ namespace Roslynator.Documentation
         public static DocumentationOptions Default { get; } = new DocumentationOptions();
 
         public string PreferredCultureName { get; }
+
+        public string BaseLocalUrl { get; }
 
         public int MaxDerivedItems { get; }
 

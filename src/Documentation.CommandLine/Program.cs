@@ -89,7 +89,7 @@ namespace Roslynator.Documentation
                 inheritedInterfaceMembers: options.InheritedInterfaceMembers,
                 omitIEnumerable: options.OmitIEnumerable);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHubProvider, documentationOptions);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHub, documentationOptions);
 
             string directoryPath = options.OutputDirectory;
 

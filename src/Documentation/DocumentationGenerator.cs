@@ -86,10 +86,9 @@ namespace Roslynator.Documentation
 
         private DocumentationWriter CreateWriter(ISymbol currentSymbol = null)
         {
-            UrlProvider.CurrentSymbol = currentSymbol;
-
             DocumentationWriter writer = CreateWriterCore();
 
+            writer.CurrentSymbol = currentSymbol;
             writer.CanCreateMemberLocalUrl = Options.IsPartEnabled(DocumentationParts.Member);
             writer.CanCreateTypeLocalUrl = Options.IsPartEnabled(DocumentationParts.Type);
 
@@ -630,6 +629,7 @@ namespace Roslynator.Documentation
             }
         }
 
+        //TODO: static?
         public DocumentationGeneratorResult GenerateObjectModel(string heading = null)
         {
             SymbolDisplayFormat format = FormatProvider.TypeFormat;

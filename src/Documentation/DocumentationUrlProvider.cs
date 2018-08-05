@@ -18,15 +18,13 @@ namespace Roslynator.Documentation
                 : ImmutableArray<ExternalUrlProvider>.Empty;
         }
 
-        public static DocumentationUrlProvider GitHubProvider { get; } = new GitHubDocumentationUrlProvider(ImmutableArray.Create(ExternalUrlProvider.MicrosoftDocs));
+        public static DocumentationUrlProvider GitHub { get; } = new GitHubDocumentationUrlProvider(ImmutableArray.Create(ExternalUrlProvider.MicrosoftDocs));
 
         public ImmutableArray<ExternalUrlProvider> ExternalProviders { get; }
 
-        public ISymbol CurrentSymbol { get; set; }
-
         public abstract string GetFileName(DocumentationKind kind);
 
-        public abstract DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders);
+        public abstract DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders, ImmutableArray<string> containingFolders = default);
 
         public virtual ImmutableArray<string> GetFolders(ISymbol symbol)
         {

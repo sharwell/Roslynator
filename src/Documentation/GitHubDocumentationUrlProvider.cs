@@ -53,7 +53,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public override DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders)
+        public override DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders, ImmutableArray<string> containingFolders = default)
         {
             string url = CreateLocalUrl();
 
@@ -61,14 +61,10 @@ namespace Roslynator.Documentation
 
             string CreateLocalUrl()
             {
-                ImmutableArray<string> currentFolders = (CurrentSymbol != null)
-                    ? GetFolders(CurrentSymbol)
-                    : default;
-
-                if (currentFolders.IsDefault)
+                if (containingFolders.IsDefault)
                     return GetUrl(ReadMeFileName, folders, '/');
 
-                if (FoldersEqual(currentFolders, folders))
+                if (FoldersEqual(containingFolders, folders))
                     return "./" + ReadMeFileName;
 
                 int count = 0;
@@ -77,15 +73,15 @@ namespace Roslynator.Documentation
                 int j = 0;
 
                 while (i < folders.Length
-                    && j < currentFolders.Length
-                    && string.Equals(folders[i], currentFolders[j], StringComparison.Ordinal))
+                    && j < containingFolders.Length
+                    && string.Equals(folders[i], containingFolders[j], StringComparison.Ordinal))
                 {
                     count++;
                     i++;
                     j++;
                 }
 
-                int diff = currentFolders.Length - count;
+                int diff = containingFolders.Length - count;
 
                 StringBuilder sb = StringBuilderCache.GetInstance();
 

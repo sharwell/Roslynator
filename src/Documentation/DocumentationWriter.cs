@@ -33,6 +33,8 @@ namespace Roslynator.Documentation
 
         internal bool CanCreateMemberLocalUrl { get; set; } = true;
 
+        internal ISymbol CurrentSymbol { get; set; }
+
         protected internal int BaseHeadingLevel { get; set; }
 
         internal SymbolDisplayFormatProvider FormatProvider => Options.FormatProvider;
@@ -1107,7 +1109,13 @@ namespace Roslynator.Documentation
                 return UrlProvider.GetExternalUrl(folders).Url;
             }
 
-            return UrlProvider.GetLocalUrl(folders).Url;
+            ImmutableArray<string> containingFolders = (CurrentSymbol != null)
+                ? UrlProvider.GetFolders(CurrentSymbol)
+                : default;
+
+            string url = UrlProvider.GetLocalUrl(folders, containingFolders).Url;
+
+            return Options.BaseLocalUrl + url;
         }
 
         public void Dispose()
