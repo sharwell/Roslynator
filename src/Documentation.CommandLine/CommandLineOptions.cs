@@ -52,6 +52,9 @@ namespace Roslynator.Documentation
         [Option(longName: "maxDerivedItems", Default = -1)]
         public int MaxDerivedItems { get; set; }
 
+        [Option(longName: "indicateObsolete")]
+        public bool IndicateObsolete { get; set; }
+
         [Option(longName: "indicateInheritedMember")]
         public bool IndicateInheritedMember { get; set; }
 
@@ -69,6 +72,5 @@ namespace Roslynator.Documentation
 
         [Option(longName: "omitIEnumerable")]
         public bool OmitIEnumerable { get; set; }
-
     }
 }

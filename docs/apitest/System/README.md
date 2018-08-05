@@ -4,5 +4,5 @@
 
 | Class | Summary |
 | ----- | ------- |
-| [ClassName](ClassName/README.md) | |
+| [ClassName](ClassName/README.md) | \[deprecated\]  |
 

@@ -31,6 +31,7 @@ namespace Roslynator.Documentation
         public abstract string ConstructorsTitle { get; }
         public abstract string DelegateTitle { get; }
         public abstract string DelegatesTitle { get; }
+        public abstract string DeprecatedTitle { get; }
         public abstract string DerivedTitle { get; }
         public abstract string EnumTitle { get; }
         public abstract string EnumsTitle { get; }
@@ -203,6 +204,7 @@ namespace Roslynator.Documentation
             public override string ConstructorsTitle { get; } = "Constructors";
             public override string DelegateTitle { get; } = "Delegate";
             public override string DelegatesTitle { get; } = "Delegates";
+            public override string DeprecatedTitle { get; } = "deprecated";
             public override string DerivedTitle { get; } = "Derived";
             public override string EnumTitle { get; } = "Enum";
             public override string EnumsTitle { get; } = "Enums";

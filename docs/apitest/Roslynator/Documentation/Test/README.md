@@ -16,10 +16,10 @@ test remarks
 | ----- | ------- |
 | [B](B/README.md) | |
 | [C](C/README.md) | |
-| [Foo](Foo/README.md) | a → > b [Foo](Foo/README.md) |
+| [Foo](Foo/README.md) | \[deprecated\] a → > b [Foo](Foo/README.md) |
 | [FooAttribute](FooAttribute/README.md) | |
 | [FooCollection](FooCollection/README.md) | |
-| [FooDic\<TKey, TValue>](FooDic-2/README.md) | |
+| [FooDic\<TKey, TValue>](FooDic-2/README.md) | \[deprecated\]  |
 | [FooEvent](FooEvent/README.md) | |
 | [FooExtensions](FooExtensions/README.md) | fx |
 

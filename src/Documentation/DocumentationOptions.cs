@@ -2,7 +2,6 @@
 
 namespace Roslynator.Documentation
 {
-    //TODO: BaseHeadingLevel
     public class DocumentationOptions
     {
         public DocumentationOptions(
@@ -11,6 +10,7 @@ namespace Roslynator.Documentation
             int maxDerivedItems = 10,
             bool formatDefinitionBaseList = false,
             bool formatDefinitionConstraints = false,
+            bool indicateObsolete = true,
             bool indicateInheritedMember = true,
             bool indicateOverriddenMember = false,
             bool indicateInterfaceImplementation = false,
@@ -29,6 +29,7 @@ namespace Roslynator.Documentation
             MaxDerivedItems = maxDerivedItems;
             FormatDefinitionBaseList = formatDefinitionBaseList;
             FormatDefinitionConstraints = formatDefinitionConstraints;
+            IndicateObsolete = indicateObsolete;
             IndicateInheritedMember = indicateInheritedMember;
             IndicateOverriddenMember = indicateOverriddenMember;
             IndicateInterfaceImplementation = indicateInterfaceImplementation;
@@ -56,6 +57,8 @@ namespace Roslynator.Documentation
         public bool FormatDefinitionBaseList { get; }
 
         public bool FormatDefinitionConstraints { get; }
+
+        public bool IndicateObsolete { get; }
 
         public bool IndicateInheritedMember { get; }
 

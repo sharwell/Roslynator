@@ -26,10 +26,10 @@ test summary
 | ----- | ------- |
 | [B](Roslynator/Documentation/Test/B/README.md) | |
 | [C](Roslynator/Documentation/Test/C/README.md) | |
-| [Foo](Roslynator/Documentation/Test/Foo/README.md) | a → > b [Foo](Roslynator/Documentation/Test/Foo/README.md) |
+| [Foo](Roslynator/Documentation/Test/Foo/README.md) | \[deprecated\] a → > b [Foo](Roslynator/Documentation/Test/Foo/README.md) |
 | [FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md) | |
 | [FooCollection](Roslynator/Documentation/Test/FooCollection/README.md) | |
-| [FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md) | |
+| [FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md) | \[deprecated\]  |
 | [FooEvent](Roslynator/Documentation/Test/FooEvent/README.md) | |
 | [FooExtensions](Roslynator/Documentation/Test/FooExtensions/README.md) | fx |
 
@@ -64,5 +64,5 @@ test summary
 
 | Class | Summary |
 | ----- | ------- |
-| [ClassName](System/ClassName/README.md) | |
+| [ClassName](System/ClassName/README.md) | \[deprecated\]  |
 

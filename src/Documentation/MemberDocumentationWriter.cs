@@ -29,10 +29,10 @@ namespace Roslynator.Documentation
 
         public DocumentationResources Resources => Writer.Resources;
 
-        internal int BaseHeadingLevel
+        public int HeadingLevelBase
         {
-            get { return Writer.BaseHeadingLevel; }
-            set { Writer.BaseHeadingLevel = value; }
+            get { return Writer.HeadingLevelBase; }
+            set { Writer.HeadingLevelBase = value; }
         }
 
         public virtual IComparer<MemberDocumentationParts> Comparer { get; }
@@ -106,14 +106,14 @@ namespace Roslynator.Documentation
 
                 foreach (ISymbol symbol2 in model.Overloads)
                 {
-                    BaseHeadingLevel++;
+                    HeadingLevelBase++;
 
                     Writer.WriteStartHeading(1);
                     Writer.WriteString(symbol2.ToDisplayString(Format, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
                     Writer.WriteEndHeading();
                     WriteContent(symbol2);
 
-                    BaseHeadingLevel--;
+                    HeadingLevelBase--;
                 }
             }
         }

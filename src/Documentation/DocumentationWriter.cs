@@ -35,7 +35,7 @@ namespace Roslynator.Documentation
 
         internal ISymbol CurrentSymbol { get; set; }
 
-        protected internal int BaseHeadingLevel { get; set; }
+        protected internal int HeadingLevelBase { get; set; }
 
         internal SymbolDisplayFormatProvider FormatProvider => Options.FormatProvider;
 
@@ -802,6 +802,14 @@ namespace Roslynator.Documentation
 
                         WriteEndTableCell();
                         WriteStartTableCell();
+
+                        if (Options.IndicateObsolete
+                            && symbol.HasAttribute(MetadataNames.System_ObsoleteAttribute))
+                        {
+                            WriteString("[");
+                            WriteString(Resources.DeprecatedTitle);
+                            WriteString("] ");
+                        }
 
                         bool isInherited = containingType != null
                             && symbol.ContainingType != containingType;

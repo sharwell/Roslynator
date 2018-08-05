@@ -82,6 +82,7 @@ namespace Roslynator.Documentation
                 maxDerivedItems: (options.MaxDerivedItems == -1) ? DocumentationOptions.Default.MaxDerivedItems : options.MaxDerivedItems,
                 formatDefinitionBaseList: options.FormatDefinitionBaseList,
                 formatDefinitionConstraints: options.FormatDefinitionConstraints,
+                indicateObsolete: options.IndicateObsolete,
                 indicateInheritedMember: options.IndicateInheritedMember,
                 indicateOverriddenMember: options.IndicateOverriddenMember,
                 indicateInterfaceImplementation: options.IndicateInterfaceImplementation,
