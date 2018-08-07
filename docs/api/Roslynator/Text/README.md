@@ -1,5 +1,7 @@
 # Roslynator\.Text Namespace
 
+[Classes](#classes) \- [Structs](#structs)
+
 ## Classes
 
 | Class | Summary |

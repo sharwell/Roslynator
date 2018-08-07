@@ -421,7 +421,7 @@ namespace Roslynator.Documentation
                             WriteLinkOrTypeLink(returnType);
                             WriteLine();
 
-                            GetXmlDocumentation(symbol)?.WriteElementContentTo(this, WellKnownTags.Returns);
+                            GetXmlDocumentation(symbol)?.WriteContentTo(this, WellKnownTags.Returns);
                         }
 
                         break;
@@ -683,7 +683,7 @@ namespace Roslynator.Documentation
                         if (xmlDocumentation != null)
                         {
                             WriteStartTableCell();
-                            xmlDocumentation.WriteElementContentTo(this, WellKnownTags.Summary, inlineOnly: true);
+                            xmlDocumentation.WriteContentTo(this, WellKnownTags.Summary, inlineOnly: true);
                             WriteEndTableCell();
                         }
 
@@ -744,7 +744,39 @@ namespace Roslynator.Documentation
 
         public virtual void WriteSeeAlso(ISymbol symbol)
         {
-            GetXmlDocumentation(symbol)?.WriteSeeAlsoTo(this);
+            using (IEnumerator<ISymbol> en = GetSymbols().GetEnumerator())
+            {
+                if (en.MoveNext())
+                {
+                    WriteHeading(2, Resources.SeeAlsoTitle);
+
+                    WriteStartBulletList();
+
+                    do
+                    {
+                        WriteBulletItemLink(en.Current, FormatProvider.TypeFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
+                    }
+                    while (en.MoveNext());
+
+                    WriteEndBulletList();
+                }
+            }
+
+            IEnumerable<ISymbol> GetSymbols()
+            {
+                SymbolXmlDocumentation xmlDocumentation = GetXmlDocumentation(symbol);
+
+                if (xmlDocumentation != null)
+                {
+                    foreach (string commentId in xmlDocumentation.SeeAlsoCommentIds())
+                    {
+                        ISymbol s = DocumentationModel.GetFirstSymbolForReferenceId(commentId);
+
+                        if (s != null)
+                            yield return s;
+                    }
+                }
+            }
         }
 
         private void WriteSection(ISymbol symbol, string heading, string elementName)
@@ -821,7 +853,7 @@ namespace Roslynator.Documentation
                         else
                         {
                             ISymbol symbol2 = (isInherited) ? symbol.OriginalDefinition : symbol;
-                            GetXmlDocumentation(symbol2)?.WriteElementContentTo(this, WellKnownTags.Summary, inlineOnly: true);
+                            GetXmlDocumentation(symbol2)?.WriteContentTo(this, WellKnownTags.Summary, inlineOnly: true);
                         }
 
                         if (isInherited)

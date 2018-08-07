@@ -111,21 +111,8 @@ namespace Roslynator.Documentation
             }
             else if (_state == State.Many)
             {
-                if (other._state != State.Many)
-                    return false;
-
-                int length = _values.Length;
-
-                if (length != other._values.Length)
-                    return false;
-
-                for (int i = 0; i < length; i++)
-                {
-                    if (!EqualityComparer<T>.Default.Equals(_values[i], other._values[i]))
-                        return false;
-                }
-
-                return true;
+                return other._state == State.Many
+                    && _values.Equals(other._values);
             }
 
             throw new InvalidOperationException();

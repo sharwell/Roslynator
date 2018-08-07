@@ -1,5 +1,7 @@
 # Roslynator\.CSharp Namespace
 
+[Classes](#classes) \- [Structs](#structs) \- [Enums](#enums)
+
 ## Classes
 
 | Class | Summary |

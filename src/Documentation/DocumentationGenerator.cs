@@ -200,7 +200,13 @@ namespace Roslynator.Documentation
                 foreach (NamespaceDocumentationModel namespaceModel in DocumentationModel.NamespaceModels
                    .OrderBy(f => f.Symbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
                 {
-                    GenerateNamespaceContent(writer, namespaceModel, headingLevelOffset: 1, disabledParts: NamespaceDocumentationParts.Examples | NamespaceDocumentationParts.Remarks | NamespaceDocumentationParts.SeeAlso);
+                    const NamespaceDocumentationParts disabledParts = NamespaceDocumentationParts.Content
+                        | NamespaceDocumentationParts.Summary
+                        | NamespaceDocumentationParts.Examples
+                        | NamespaceDocumentationParts.Remarks
+                        | NamespaceDocumentationParts.SeeAlso;
+
+                    GenerateNamespaceContent(writer, namespaceModel, headingLevelBase: 1, disabledParts: disabledParts);
                 }
             }
 
@@ -223,12 +229,15 @@ namespace Roslynator.Documentation
             }
         }
 
-        private void GenerateNamespaceContent(DocumentationWriter writer,
+        private void GenerateNamespaceContent(
+            DocumentationWriter writer,
             NamespaceDocumentationModel namespaceModel,
-            int headingLevelOffset = 0,
+            int headingLevelBase = 0,
             bool addLink = true,
             NamespaceDocumentationParts disabledParts = NamespaceDocumentationParts.None)
         {
+            writer.WriteHeading(1 + headingLevelBase, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: addLink);
+
             foreach (NamespaceDocumentationParts part in EnabledAndSortedNamespaceParts)
             {
                 if ((disabledParts & part) != 0)
@@ -236,14 +245,47 @@ namespace Roslynator.Documentation
 
                 switch (part)
                 {
-                    case NamespaceDocumentationParts.Heading:
+                    case NamespaceDocumentationParts.Content:
                         {
-                            writer.WriteHeading(1 + headingLevelOffset, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: addLink);
+                            IEnumerator<NamespaceDocumentationParts> en = GetAvailableParts().GetEnumerator();
+
+                            if (en.MoveNext())
+                            {
+                                NamespaceDocumentationParts first = en.Current;
+
+                                if (en.MoveNext())
+                                {
+                                    string heading = GetHeading(first);
+
+                                    writer.WriteLink(heading, $"#{UrlProvider.GetFragment(heading)}");
+                                    writer.WriteString(" - ");
+
+                                    while (true)
+                                    {
+                                        heading = GetHeading(en.Current);
+
+                                        writer.WriteLink(heading, $"#{UrlProvider.GetFragment(heading)}");
+
+                                        if (en.MoveNext())
+                                        {
+                                            writer.WriteString(" - ");
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+                                    }
+
+                                    writer.WriteLine();
+                                    writer.WriteLine();
+                                }
+                            }
+
                             break;
                         }
                     case NamespaceDocumentationParts.Summary:
                         {
-                            DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?.WriteElementContentTo(writer, WellKnownTags.Summary);
+                            DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?.WriteContentTo(writer, WellKnownTags.Summary);
                             break;
                         }
                     case NamespaceDocumentationParts.Examples:
@@ -300,11 +342,105 @@ namespace Roslynator.Documentation
                 writer.WriteTable(
                     types.Where(f => f.TypeKind == typeKind).Select(f => f.TypeSymbol),
                     Resources.GetPluralName(typeKind),
-                    headingLevel: 2 + headingLevelOffset,
+                    headingLevel: 2 + headingLevelBase,
                     Resources.GetName(typeKind),
                     Resources.SummaryTitle,
                     FormatProvider.TypeFormat,
                     addLink: Options.IsPartEnabled(DocumentationParts.Type));
+            }
+
+            string GetHeading(NamespaceDocumentationParts part)
+            {
+                switch (part)
+                {
+                    case NamespaceDocumentationParts.Examples:
+                        return Resources.ExamplesTitle;
+                    case NamespaceDocumentationParts.Remarks:
+                        return Resources.RemarksTitle;
+                    case NamespaceDocumentationParts.Classes:
+                        return Resources.ClassesTitle;
+                    case NamespaceDocumentationParts.Structs:
+                        return Resources.StructsTitle;
+                    case NamespaceDocumentationParts.Interfaces:
+                        return Resources.InterfacesTitle;
+                    case NamespaceDocumentationParts.Enums:
+                        return Resources.EnumsTitle;
+                    case NamespaceDocumentationParts.Delegates:
+                        return Resources.DelegatesTitle;
+                    case NamespaceDocumentationParts.SeeAlso:
+                        return Resources.SeeAlsoTitle;
+                    default:
+                        throw new InvalidOperationException();
+                }
+            }
+
+            IEnumerable<NamespaceDocumentationParts> GetAvailableParts()
+            {
+                foreach (NamespaceDocumentationParts part in EnabledAndSortedNamespaceParts)
+                {
+                    if ((disabledParts & part) == 0
+                        && IsAvailable(part))
+                    {
+                        yield return part;
+                    }
+                }
+            }
+
+            bool IsAvailable(NamespaceDocumentationParts part)
+            {
+                switch (part)
+                {
+                    case NamespaceDocumentationParts.Content:
+                    case NamespaceDocumentationParts.Summary:
+                        {
+                            break;
+                        }
+                    case NamespaceDocumentationParts.Examples:
+                        {
+                            return DocumentationModel
+                                .GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?
+                                .HasElement(WellKnownTags.Example) == true;
+                        }
+                    case NamespaceDocumentationParts.Remarks:
+                        {
+                            return DocumentationModel
+                                .GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?
+                                .HasElement(WellKnownTags.Remarks) == true;
+                        }
+                    case NamespaceDocumentationParts.Classes:
+                        {
+                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Class);
+                        }
+                    case NamespaceDocumentationParts.Structs:
+                        {
+                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Struct);
+                        }
+                    case NamespaceDocumentationParts.Interfaces:
+                        {
+                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Interface);
+                        }
+                    case NamespaceDocumentationParts.Enums:
+                        {
+                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Enum);
+                        }
+                    case NamespaceDocumentationParts.Delegates:
+                        {
+                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Delegate);
+                        }
+                    case NamespaceDocumentationParts.SeeAlso:
+                        {
+                            return DocumentationModel
+                                .GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?
+                                .SeeAlsoCommentIds()
+                                .Any() == true;
+                        }
+                    default:
+                        {
+                            throw new InvalidOperationException();
+                        }
+                }
+
+                return false;
             }
         }
 
@@ -325,24 +461,21 @@ namespace Roslynator.Documentation
                 writer.WriteHeading1(heading);
                 writer.WriteList(namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
-                if (Options.IsPartEnabled(RootDocumentationParts.Namespaces))
+                foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> typesByNamespaces in extendedExternalTypes
+                    .OrderBy(f => f.ToDisplayString(FormatProvider.TypeFormat))
+                    .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
+                    .OrderBy(f => f.Key.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
                 {
-                    foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> typesByNamespaces in extendedExternalTypes
-                        .OrderBy(f => f.ToDisplayString(FormatProvider.TypeFormat))
-                        .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
-                        .OrderBy(f => f.Key.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
+                    INamespaceSymbol namespaceSymbol = typesByNamespaces.Key;
+
+                    writer.WriteHeading(2, namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+
+                    foreach (IGrouping<TypeKind, INamedTypeSymbol> typesByKind in typesByNamespaces
+                        .Where(f => IsNamespacePartEnabled(f.TypeKind))
+                        .GroupBy(f => f.TypeKind)
+                        .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer))
                     {
-                        INamespaceSymbol namespaceSymbol = typesByNamespaces.Key;
-
-                        writer.WriteHeading(2, namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
-
-                        foreach (IGrouping<TypeKind, INamedTypeSymbol> typesByKind in typesByNamespaces
-                            .Where(f => IsNamespacePartEnabled(f.TypeKind))
-                            .GroupBy(f => f.TypeKind)
-                            .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer))
-                        {
-                            writer.WriteList(typesByKind, Resources.GetPluralName(typesByKind.Key), 3, FormatProvider.TypeFormat, canCreateExternalUrl: false);
-                        }
+                        writer.WriteList(typesByKind, Resources.GetPluralName(typesByKind.Key), 3, FormatProvider.TypeFormat, canCreateExternalUrl: false);
                     }
                 }
 

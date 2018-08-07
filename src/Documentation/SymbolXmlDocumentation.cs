@@ -26,7 +26,12 @@ namespace Roslynator.Documentation
 
         public string CommentId { get; }
 
-        public void WriteElementContentTo(DocumentationWriter writer, string elementName, bool inlineOnly = false)
+        public bool HasElement(string name)
+        {
+            return _element.Element(name) != null;
+        }
+
+        public void WriteContentTo(DocumentationWriter writer, string elementName, bool inlineOnly = false)
         {
             XElement element = _element.Element(elementName);
 
@@ -381,7 +386,7 @@ namespace Roslynator.Documentation
                 writer.WriteLine();
             }
 
-            WriteElementContentTo(writer, elementName);
+            WriteContentTo(writer, elementName);
         }
 
         public void WriteExceptionsTo(DocumentationWriter writer)
@@ -425,40 +430,14 @@ namespace Roslynator.Documentation
             }
         }
 
-        public void WriteSeeAlsoTo(DocumentationWriter writer)
+        public IEnumerable<string> SeeAlsoCommentIds()
         {
-            using (IEnumerator<ISymbol> en = GetSymbols().GetEnumerator())
+            foreach (XElement element in _element.Elements(WellKnownTags.SeeAlso))
             {
-                if (en.MoveNext())
-                {
-                    writer.WriteHeading(2, writer.Resources.SeeAlsoTitle);
+                string commentId = element.Attribute("cref")?.Value;
 
-                    writer.WriteStartBulletList();
-
-                    do
-                    {
-                        writer.WriteBulletItemLink(en.Current, writer.FormatProvider.TypeFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
-                    }
-                    while (en.MoveNext());
-
-                    writer.WriteEndBulletList();
-                }
-            }
-
-            IEnumerable<ISymbol> GetSymbols()
-            {
-                foreach (XElement e in _element.Elements(WellKnownTags.SeeAlso))
-                {
-                    string commentId = e.Attribute("cref")?.Value;
-
-                    if (commentId != null)
-                    {
-                        ISymbol symbol2 = writer.DocumentationModel.GetFirstSymbolForReferenceId(commentId);
-
-                        if (symbol2 != null)
-                            yield return symbol2;
-                    }
-                }
+                if (commentId != null)
+                    yield return commentId;
             }
         }
 

@@ -18,8 +18,6 @@
 
 ## [Roslynator.Documentation.Test](Roslynator/Documentation/Test/README.md) Namespace
 
-test summary
-
 ### Classes
 
 | Class | Summary |

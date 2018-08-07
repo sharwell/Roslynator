@@ -342,7 +342,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, WellKnownTags.Returns);
+                GetXmlDocumentation(methodSymbol)?.WriteContentTo(Writer, WellKnownTags.Returns);
             }
         }
 
@@ -361,7 +361,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                GetXmlDocumentation(methodSymbol)?.WriteElementContentTo(Writer, WellKnownTags.Returns);
+                GetXmlDocumentation(methodSymbol)?.WriteContentTo(Writer, WellKnownTags.Returns);
             }
         }
 
@@ -382,7 +382,7 @@ namespace Roslynator.Documentation
 
                 string elementName = (propertySymbol.IsIndexer) ? WellKnownTags.Returns : WellKnownTags.Value;
 
-                GetXmlDocumentation(propertySymbol)?.WriteElementContentTo(Writer, elementName);
+                GetXmlDocumentation(propertySymbol)?.WriteContentTo(Writer, elementName);
             }
         }
     }

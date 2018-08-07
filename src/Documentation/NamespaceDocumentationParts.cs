@@ -8,7 +8,7 @@ namespace Roslynator.Documentation
     public enum NamespaceDocumentationParts
     {
         None = 0,
-        Heading = 1,
+        Content = 1,
         Summary = 2,
         Examples = 4,
         Remarks = 8,
@@ -18,6 +18,6 @@ namespace Roslynator.Documentation
         Enums = 128,
         Delegates = 256,
         SeeAlso = 512,
-        All = Heading | Summary | Examples | Remarks | Classes | Structs | Interfaces | Enums | Delegates | SeeAlso
+        All = Content | Summary | Examples | Remarks | Classes | Structs | Interfaces | Enums | Delegates | SeeAlso
     }
 }

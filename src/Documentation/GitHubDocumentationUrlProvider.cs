@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 
@@ -140,6 +141,21 @@ namespace Roslynator.Documentation
 
                 return true;
             }
+        }
+
+        public override string GetFragment(string s)
+        {
+            if (s == null)
+                throw new ArgumentNullException(nameof(s));
+
+            s = s.ToLowerInvariant();
+
+            char[] chars = s
+                .Where(f => f == ' ' || f == '-' || char.IsLetterOrDigit(f))
+                .Select(f => (f == ' ') ? '-' : f)
+                .ToArray();
+
+            return new string(chars);
         }
     }
 }

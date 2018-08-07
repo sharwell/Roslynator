@@ -26,6 +26,8 @@ namespace Roslynator.Documentation
 
         public abstract DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders, ImmutableArray<string> containingFolders = default);
 
+        public abstract string GetFragment(string s);
+
         public virtual ImmutableArray<string> GetFolders(ISymbol symbol)
         {
             ImmutableArray<string>.Builder builder = ImmutableArray.CreateBuilder<string>();
