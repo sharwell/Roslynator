@@ -774,28 +774,28 @@ namespace Roslynator.Documentation
                             if (nestedTypes.IsDefault)
                                 nestedTypes = typeSymbol.GetTypeMembers();
 
-                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Class && DocumentationModel.IsVisible(f));
+                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Struct && DocumentationModel.IsVisible(f));
                         }
                     case TypeDocumentationParts.Interfaces:
                         {
                             if (nestedTypes.IsDefault)
                                 nestedTypes = typeSymbol.GetTypeMembers();
 
-                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Class && DocumentationModel.IsVisible(f));
+                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Interface && DocumentationModel.IsVisible(f));
                         }
                     case TypeDocumentationParts.Enums:
                         {
                             if (nestedTypes.IsDefault)
                                 nestedTypes = typeSymbol.GetTypeMembers();
 
-                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Class && DocumentationModel.IsVisible(f));
+                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Enum && DocumentationModel.IsVisible(f));
                         }
                     case TypeDocumentationParts.Delegates:
                         {
                             if (nestedTypes.IsDefault)
                                 nestedTypes = typeSymbol.GetTypeMembers();
 
-                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Class && DocumentationModel.IsVisible(f));
+                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Delegate && DocumentationModel.IsVisible(f));
                         }
                     case TypeDocumentationParts.SeeAlso:
                         {
