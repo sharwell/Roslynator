@@ -1,8 +1,8 @@
 # CSharpFactory\.LiteralExpression\(Object\) Method
 
-Namespace: [Roslynator.CSharp](../../README.md)
+**Namespace**: [Roslynator.CSharp](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static LiteralExpressionSyntax LiteralExpression(object value)

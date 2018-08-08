@@ -1,8 +1,8 @@
 # CSharpFactory\.GreaterThanExpression Method
 
-Namespace: [Roslynator.CSharp](../../README.md)
+**Namespace**: [Roslynator.CSharp](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ## Overloads
 

@@ -1,8 +1,8 @@
 # FooCollection\.IEnumerable\<Foo>\.GetEnumerator\(\) Method
 
-Namespace: [Roslynator.Documentation.Test](../../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.TestProject\.dll
+**Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 private IEnumerator<Foo> IEnumerable<Foo>.GetEnumerator()

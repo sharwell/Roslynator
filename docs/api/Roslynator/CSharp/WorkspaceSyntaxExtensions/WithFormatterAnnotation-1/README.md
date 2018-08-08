@@ -1,8 +1,8 @@
 # WorkspaceSyntaxExtensions\.WithFormatterAnnotation Method
 
-Namespace: [Roslynator.CSharp](../../README.md)
+**Namespace**: [Roslynator.CSharp](../../README.md)
 
-Assembly: Roslynator\.CSharp\.Workspaces\.dll
+**Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 
 ## Overloads
 

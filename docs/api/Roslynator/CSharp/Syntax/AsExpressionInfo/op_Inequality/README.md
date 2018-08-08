@@ -1,8 +1,8 @@
 # AsExpressionInfo\.Inequality\(AsExpressionInfo, AsExpressionInfo\) Operator
 
-Namespace: [Roslynator.CSharp.Syntax](../../README.md)
+**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator !=(in AsExpressionInfo info1, in AsExpressionInfo info2)

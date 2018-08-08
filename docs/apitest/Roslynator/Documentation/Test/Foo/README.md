@@ -2,9 +2,9 @@
 
 [Remarks](#remarks) &#x2022; [Constructors](#constructors) &#x2022; [Fields](#fields) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [See Also](#see-also)
 
-Namespace: [Roslynator.Documentation.Test](../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../README.md)
 
-Assembly: Roslynator\.Documentation\.TestProject\.dll
+**Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
 **WARNING: This API is now obsolete\.**
 

@@ -1,8 +1,8 @@
 # IfStatementOrElseClause\.Inequality\(IfStatementOrElseClause, IfStatementOrElseClause\) Operator
 
-Namespace: [Roslynator.CSharp](../../README.md)
+**Namespace**: [Roslynator.CSharp](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator !=(in IfStatementOrElseClause left, in IfStatementOrElseClause right)

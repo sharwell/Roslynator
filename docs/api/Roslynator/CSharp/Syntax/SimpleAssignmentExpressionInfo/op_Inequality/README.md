@@ -1,8 +1,8 @@
 # SimpleAssignmentExpressionInfo\.Inequality\(SimpleAssignmentExpressionInfo, SimpleAssignmentExpressionInfo\) Operator
 
-Namespace: [Roslynator.CSharp.Syntax](../../README.md)
+**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator !=(in SimpleAssignmentExpressionInfo info1, in SimpleAssignmentExpressionInfo info2)

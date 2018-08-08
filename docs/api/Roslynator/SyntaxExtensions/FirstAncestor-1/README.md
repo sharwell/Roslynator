@@ -1,8 +1,8 @@
 # SyntaxExtensions\.FirstAncestor\<TNode>\(SyntaxNode, Func\<TNode, Boolean>, Boolean\) Method
 
-Namespace: [Roslynator](../../README.md)
+**Namespace**: [Roslynator](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 

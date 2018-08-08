@@ -1,8 +1,8 @@
 # WorkspaceExtensions\.ReplaceTriviaAsync Method
 
-Namespace: [Roslynator](../../README.md)
+**Namespace**: [Roslynator](../../README.md)
 
-Assembly: Roslynator\.CSharp\.Workspaces\.dll
+**Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 
 ## Overloads
 

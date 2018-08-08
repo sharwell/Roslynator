@@ -1,8 +1,8 @@
 # UsingDirectiveListInfo\.Inequality\(UsingDirectiveListInfo, UsingDirectiveListInfo\) Operator
 
-Namespace: [Roslynator.CSharp.Syntax](../../README.md)
+**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator !=(in UsingDirectiveListInfo info1, in UsingDirectiveListInfo info2)

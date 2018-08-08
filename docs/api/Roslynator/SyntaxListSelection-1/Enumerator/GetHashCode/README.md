@@ -1,8 +1,8 @@
 # Enumerator\.GetHashCode\(\) Method
 
-Namespace: [Roslynator](../../../README.md)
+**Namespace**: [Roslynator](../../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public override int GetHashCode()

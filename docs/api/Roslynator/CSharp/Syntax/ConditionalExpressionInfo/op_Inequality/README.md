@@ -1,8 +1,8 @@
 # ConditionalExpressionInfo\.Inequality\(ConditionalExpressionInfo, ConditionalExpressionInfo\) Operator
 
-Namespace: [Roslynator.CSharp.Syntax](../../README.md)
+**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator !=(in ConditionalExpressionInfo info1, in ConditionalExpressionInfo info2)

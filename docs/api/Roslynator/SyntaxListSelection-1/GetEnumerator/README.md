@@ -1,8 +1,8 @@
 # SyntaxListSelection\<TNode>\.GetEnumerator\(\) Method
 
-Namespace: [Roslynator](../../README.md)
+**Namespace**: [Roslynator](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 

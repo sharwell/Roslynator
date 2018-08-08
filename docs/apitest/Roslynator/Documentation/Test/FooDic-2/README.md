@@ -2,9 +2,9 @@
 
 [Constructors](#constructors) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
-Namespace: [Roslynator.Documentation.Test](../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../README.md)
 
-Assembly: Roslynator\.Documentation\.TestProject\.dll
+**Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
 **WARNING: This API is now obsolete\.**
 

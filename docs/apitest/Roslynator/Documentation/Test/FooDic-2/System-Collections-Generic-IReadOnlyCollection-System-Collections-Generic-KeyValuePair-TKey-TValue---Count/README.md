@@ -1,8 +1,8 @@
 # FooDic\<TKey, TValue>\.IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>\.Count Property
 
-Namespace: [Roslynator.Documentation.Test](../../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.TestProject\.dll
+**Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 private int IReadOnlyCollection<KeyValuePair<TKey, TValue>>.Count { get; }

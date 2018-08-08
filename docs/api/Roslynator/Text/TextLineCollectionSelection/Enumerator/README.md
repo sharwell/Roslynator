@@ -2,9 +2,9 @@
 
 [Properties](#properties) &#x2022; [Methods](#methods)
 
-Namespace: [Roslynator.Text](../../README.md)
+**Namespace**: [Roslynator.Text](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public struct TextLineCollectionSelection.Enumerator

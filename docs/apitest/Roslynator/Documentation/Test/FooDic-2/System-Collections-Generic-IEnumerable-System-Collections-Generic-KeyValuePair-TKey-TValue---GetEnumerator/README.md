@@ -1,8 +1,8 @@
 # FooDic\<TKey, TValue>\.IEnumerable\<KeyValuePair\<TKey, TValue>>\.GetEnumerator\(\) Method
 
-Namespace: [Roslynator.Documentation.Test](../../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.TestProject\.dll
+**Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 private IEnumerator<KeyValuePair<TKey, TValue>> IEnumerable<KeyValuePair<TKey, TValue>>.GetEnumerator()

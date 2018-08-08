@@ -1,8 +1,8 @@
 # SyntaxExtensions\.AsChain\(BinaryExpressionSyntax, TextSpan?\) Method
 
-Namespace: [Roslynator.CSharp](../../README.md)
+**Namespace**: [Roslynator.CSharp](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static ExpressionChain AsChain(this BinaryExpressionSyntax binaryExpression, TextSpan? span = null)

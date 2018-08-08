@@ -1,8 +1,8 @@
 # TextLineCollectionSelection\.GetEnumerator\(\) Method
 
-Namespace: [Roslynator.Text](../../README.md)
+**Namespace**: [Roslynator.Text](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 

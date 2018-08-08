@@ -1,8 +1,8 @@
 # FooAttribute\(Object, String, Boolean, Boolean, Byte, Char, Double, Single, Int32, Int64, SByte, Int16, UInt32, UInt64, UInt16, Type, Flags, Flags, Flags, Flags, Flags, Flags\) Constructor
 
-Namespace: [Roslynator.Documentation.Test](../../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.TestProject\.dll
+**Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 [FooAttribute(null, "\\n", true, false, 0, '\'', 0, 0, 0, 0, 0, 0, 0, 0, 0, typeof(System.Object), Flags.None, Flags.A, Flags.A, Flags.AB | Flags.C, Flags.AB, (Flags)100)]

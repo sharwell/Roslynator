@@ -1,8 +1,8 @@
 # SyntaxTreeExtensions\.GetEndLine\(SyntaxTree, TextSpan, CancellationToken\) Method
 
-Namespace: [Roslynator](../../README.md)
+**Namespace**: [Roslynator](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 

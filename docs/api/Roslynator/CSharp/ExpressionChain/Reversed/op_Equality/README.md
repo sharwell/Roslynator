@@ -1,8 +1,8 @@
 # Reversed\.Equality\(Reversed, Reversed\) Operator
 
-Namespace: [Roslynator.CSharp](../../../README.md)
+**Namespace**: [Roslynator.CSharp](../../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator ==(in ExpressionChain.Reversed reversed1, in ExpressionChain.Reversed reversed2)

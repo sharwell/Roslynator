@@ -1,8 +1,8 @@
 # XmlElementInfo\.Equality\(XmlElementInfo, XmlElementInfo\) Operator
 
-Namespace: [Roslynator.CSharp.Syntax](../../README.md)
+**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator ==(in XmlElementInfo info1, in XmlElementInfo info2)

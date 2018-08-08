@@ -1,8 +1,8 @@
 # NullCheckExpressionInfo\.Inequality\(NullCheckExpressionInfo, NullCheckExpressionInfo\) Operator
 
-Namespace: [Roslynator.CSharp.Syntax](../../README.md)
+**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator !=(in NullCheckExpressionInfo info1, in NullCheckExpressionInfo info2)

@@ -2,9 +2,9 @@
 
 [Constructors](#constructors) &#x2022; [Methods](#methods)
 
-Namespace: [System](../README.md)
+**Namespace**: [System](../README.md)
 
-Assembly: Roslynator\.Documentation\.TestProject\.dll
+**Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
 **WARNING: This API is now obsolete\.**
 

@@ -1,8 +1,8 @@
 # IfStatementCascade\.Equality\(IfStatementCascade, IfStatementCascade\) Operator
 
-Namespace: [Roslynator.CSharp](../../README.md)
+**Namespace**: [Roslynator.CSharp](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator ==(in IfStatementCascade info1, in IfStatementCascade info2)

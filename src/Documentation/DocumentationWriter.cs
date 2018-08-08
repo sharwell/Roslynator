@@ -316,7 +316,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteNamespace(ISymbol symbol)
         {
-            WriteString(Resources.NamespaceTitle);
+            WriteBold(Resources.NamespaceTitle);
             WriteString(Resources.Colon);
             WriteSpace();
             WriteLink(symbol.ContainingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
@@ -326,7 +326,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteAssembly(ISymbol symbol)
         {
-            WriteString(Resources.AssemblyTitle);
+            WriteBold(Resources.AssemblyTitle);
             WriteString(Resources.Colon);
             WriteSpace();
             WriteString(symbol.ContainingAssembly.Name);

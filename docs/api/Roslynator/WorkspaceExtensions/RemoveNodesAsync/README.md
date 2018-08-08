@@ -1,8 +1,8 @@
 # WorkspaceExtensions\.RemoveNodesAsync\(Document, IEnumerable\<SyntaxNode>, SyntaxRemoveOptions, CancellationToken\) Method
 
-Namespace: [Roslynator](../../README.md)
+**Namespace**: [Roslynator](../../README.md)
 
-Assembly: Roslynator\.CSharp\.Workspaces\.dll
+**Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 
 ## Summary
 

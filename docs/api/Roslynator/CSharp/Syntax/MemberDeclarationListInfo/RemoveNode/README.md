@@ -1,8 +1,8 @@
 # MemberDeclarationListInfo\.RemoveNode\(SyntaxNode, SyntaxRemoveOptions\) Method
 
-Namespace: [Roslynator.CSharp.Syntax](../../README.md)
+**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 

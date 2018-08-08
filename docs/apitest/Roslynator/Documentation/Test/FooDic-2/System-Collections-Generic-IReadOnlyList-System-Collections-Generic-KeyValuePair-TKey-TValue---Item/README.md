@@ -1,8 +1,8 @@
 # FooDic\<TKey, TValue>\.IReadOnlyList\<KeyValuePair\<TKey, TValue>>\.Item\[Int32\] Property
 
-Namespace: [Roslynator.Documentation.Test](../../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../../README.md)
 
-Assembly: Roslynator\.Documentation\.TestProject\.dll
+**Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
 ```csharp
 private KeyValuePair<TKey, TValue> IReadOnlyList<KeyValuePair<TKey, TValue>>.Item[int index] { get; }

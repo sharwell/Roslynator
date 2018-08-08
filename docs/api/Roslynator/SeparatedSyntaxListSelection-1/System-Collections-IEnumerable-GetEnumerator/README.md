@@ -1,8 +1,8 @@
 # SeparatedSyntaxListSelection\<TNode>\.IEnumerable\.GetEnumerator\(\) Method
 
-Namespace: [Roslynator](../../README.md)
+**Namespace**: [Roslynator](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 private IEnumerator IEnumerable.GetEnumerator()

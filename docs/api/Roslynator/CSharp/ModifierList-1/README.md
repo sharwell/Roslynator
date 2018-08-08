@@ -2,9 +2,9 @@
 
 [Properties](#properties) &#x2022; [Methods](#methods)
 
-Namespace: [Roslynator.CSharp](../README.md)
+**Namespace**: [Roslynator.CSharp](../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 

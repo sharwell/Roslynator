@@ -1,8 +1,8 @@
 # ExtensionMethodSymbolInfo\.Inequality\(ExtensionMethodSymbolInfo, ExtensionMethodSymbolInfo\) Operator
 
-Namespace: [Roslynator](../../README.md)
+**Namespace**: [Roslynator](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator !=(in ExtensionMethodSymbolInfo info1, in ExtensionMethodSymbolInfo info2)

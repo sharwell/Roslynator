@@ -1,8 +1,8 @@
 # Bla\.M\(\) Method
 
-Namespace: [\<global namespace>](../../README.md)
+**Namespace**: [\<global namespace>](../../README.md)
 
-Assembly: Roslynator\.Documentation\.TestProject\.dll
+**Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
 ## Summary
 

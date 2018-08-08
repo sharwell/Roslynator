@@ -1,8 +1,8 @@
 # LocalDeclarationStatementInfo\.Inequality\(LocalDeclarationStatementInfo, LocalDeclarationStatementInfo\) Operator
 
-Namespace: [Roslynator.CSharp.Syntax](../../README.md)
+**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
 
-Assembly: Roslynator\.CSharp\.dll
+**Assembly**: Roslynator\.CSharp\.dll
 
 ```csharp
 public static bool operator !=(in LocalDeclarationStatementInfo info1, in LocalDeclarationStatementInfo info2)
