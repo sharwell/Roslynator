@@ -846,18 +846,6 @@ namespace Roslynator.Documentation
                             writer.WriteContent(GetAvailableParts().OrderBy(f => f, RootPartComparer).Select(f => Resources.GetHeading(f)));
                             break;
                         }
-
-                    case RootDocumentationParts.ExtendedExternalTypesLink:
-                        {
-                            if (addExtendedExternalTypesLink)
-                            {
-                                writer.WriteStartBulletItem();
-                                writer.WriteLink(Resources.ExtendedExternalTypesTitle, WellKnownNames.ExtendedExternalTypesFileName);
-                                writer.WriteEndBulletItem();
-                            }
-
-                            break;
-                        }
                     case RootDocumentationParts.Namespaces:
                         {
                             writer.WriteList(DocumentationModel.NamespaceModels.Select(f => f.Symbol), Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
@@ -930,6 +918,18 @@ namespace Roslynator.Documentation
                             WriteTypes(TypeKind.Delegate);
                             break;
                         }
+                    case RootDocumentationParts.Other:
+                        {
+                            if (addExtendedExternalTypesLink)
+                            {
+                                writer.WriteHeading2(Resources.OtherTitle);
+                                writer.WriteStartBulletItem();
+                                writer.WriteLink(Resources.ExtendedExternalTypesTitle, WellKnownNames.ExtendedExternalTypesFileName);
+                                writer.WriteEndBulletItem();
+                            }
+
+                            break;
+                        }
                 }
             }
 
@@ -984,7 +984,6 @@ namespace Roslynator.Documentation
                 switch (part)
                 {
                     case RootDocumentationParts.Content:
-                    case RootDocumentationParts.ExtendedExternalTypesLink:
                         {
                             return false;
                         }
@@ -1015,6 +1014,10 @@ namespace Roslynator.Documentation
                     case RootDocumentationParts.Delegates:
                         {
                             return typeSymbols.Any(f => f.TypeKind == TypeKind.Delegate);
+                        }
+                    case RootDocumentationParts.Other:
+                        {
+                            return addExtendedExternalTypesLink;
                         }
                     default:
                         {

@@ -24,21 +24,21 @@ namespace Roslynator.Documentation
             {
                 case RootDocumentationParts.Content:
                     return 1;
-                case RootDocumentationParts.ExtendedExternalTypesLink:
-                    return 2;
                 case RootDocumentationParts.Namespaces:
-                    return 3;
+                    return 2;
                 case RootDocumentationParts.Classes:
-                    return 4;
+                    return 3;
                 case RootDocumentationParts.StaticClasses:
-                    return 5;
+                    return 4;
                 case RootDocumentationParts.Structs:
-                    return 6;
+                    return 5;
                 case RootDocumentationParts.Interfaces:
-                    return 7;
+                    return 6;
                 case RootDocumentationParts.Enums:
-                    return 8;
+                    return 7;
                 case RootDocumentationParts.Delegates:
+                    return 8;
+                case RootDocumentationParts.Other:
                     return 9;
             }
 

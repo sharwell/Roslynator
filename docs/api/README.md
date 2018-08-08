@@ -1,8 +1,6 @@
 # Roslynator API
 
-[Namespaces](#namespaces) &#x2022; [Classes](#classes) &#x2022; [Static Classes](#static-classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums)
-
-* [Extended External Types](_ExtendedExternalTypes.md)
+[Namespaces](#namespaces) &#x2022; [Classes](#classes) &#x2022; [Static Classes](#static-classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums) &#x2022; [Other](#other)
 
 ## Namespaces
 
@@ -93,3 +91,7 @@
 * [ModifierKinds](Roslynator/CSharp/ModifierKinds/README.md)
 * [NullCheckStyles](Roslynator/CSharp/NullCheckStyles/README.md)
 * [PreprocessorDirectiveKinds](Roslynator/CSharp/PreprocessorDirectiveKinds/README.md)
+
+## Other
+
+* [Extended External Types](_ExtendedExternalTypes.md)

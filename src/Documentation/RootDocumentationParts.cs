@@ -9,15 +9,15 @@ namespace Roslynator.Documentation
     {
         None = 0,
         Content = 1,
-        ExtendedExternalTypesLink = 2,
-        Namespaces = 4,
-        Classes = 8,
-        StaticClasses = 16,
-        Structs = 32,
-        Interfaces = 64,
-        Enums = 128,
-        Delegates = 256,
+        Namespaces = 2,
+        Classes = 4,
+        StaticClasses = 8,
+        Structs = 16,
+        Interfaces = 32,
+        Enums = 64,
+        Delegates = 128,
         Types = Classes | StaticClasses | Structs | Interfaces | Enums | Delegates,
-        All = Content | ExtendedExternalTypesLink | Namespaces | Types
+        Other = 256,
+        All = Content | Namespaces | Types | Other
     }
 }

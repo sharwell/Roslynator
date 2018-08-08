@@ -64,6 +64,7 @@ namespace Roslynator.Documentation
         public abstract string ObsoleteMessage { get; }
         public abstract string OperatorTitle { get; }
         public abstract string OperatorsTitle { get; }
+        public abstract string OtherTitle { get; }
         public abstract string OverridesTitle { get; }
         public abstract string OverloadsTitle { get; }
         public abstract string ParametersTitle { get; }
@@ -278,6 +279,8 @@ namespace Roslynator.Documentation
                     return EnumsTitle;
                 case RootDocumentationParts.Delegates:
                     return DelegatesTitle;
+                case RootDocumentationParts.Other:
+                    return OtherTitle;
                 default:
                     throw new ArgumentException("", nameof(part));
             }
@@ -326,6 +329,7 @@ namespace Roslynator.Documentation
             public override string ObsoleteMessage { get; } = "WARNING: This API is now obsolete.";
             public override string OperatorTitle { get; } = "Operator";
             public override string OperatorsTitle { get; } = "Operators";
+            public override string OtherTitle { get; } = "Other";
             public override string OverridesTitle { get; } = "Overrides";
             public override string OverloadsTitle { get; } = "Overloads";
             public override string ParametersTitle { get; } = "Parameters";
