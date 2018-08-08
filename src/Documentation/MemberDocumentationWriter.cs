@@ -19,8 +19,6 @@ namespace Roslynator.Documentation
 
         public DocumentationWriter Writer { get; }
 
-        public SymbolDisplayFormatProvider FormatProvider => Writer.FormatProvider;
-
         public DocumentationModel DocumentationModel => Writer.DocumentationModel;
 
         public DocumentationOptions Options => Writer.Options;
@@ -98,7 +96,7 @@ namespace Roslynator.Documentation
                     headingLevel: 2,
                     header1: Resources.GetName(symbol),
                     header2: Resources.SummaryTitle,
-                    format: FormatProvider.SimpleDefinitionFormat,
+                    format: SymbolDisplayFormats.SimpleDefinition,
                     additionalOptions: SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName,
                     addLink: false);
 
@@ -107,7 +105,7 @@ namespace Roslynator.Documentation
                     HeadingLevelBase++;
 
                     Writer.WriteStartHeading(1);
-                    Writer.WriteString(symbol2.ToDisplayString(FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
+                    Writer.WriteString(symbol2.ToDisplayString(SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
                     Writer.WriteEndHeading();
                     WriteContent(symbol2);
 
@@ -121,8 +119,8 @@ namespace Roslynator.Documentation
             Writer.WriteStartHeading(1);
 
             SymbolDisplayFormat format = (isOverloaded)
-                ? FormatProvider.OverloadedMemberTitleFormat
-                : FormatProvider.MemberTitleFormat;
+                ? SymbolDisplayFormats.OverloadedMemberTitle
+                : SymbolDisplayFormats.MemberTitle;
 
             Writer.WriteString(symbol.ToDisplayString(format, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
             Writer.WriteSpace();
@@ -133,7 +131,7 @@ namespace Roslynator.Documentation
         public virtual void WriteImplements(ISymbol symbol)
         {
             using (IEnumerator<ISymbol> en = symbol.FindImplementedInterfaceMembers()
-                .OrderBy(f => f.ToDisplayString(FormatProvider.MemberImplementsFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName))
+                .OrderBy(f => f.ToDisplayString(SymbolDisplayFormats.MemberImplements, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName))
                 .GetEnumerator())
             {
                 if (en.MoveNext())
@@ -145,7 +143,7 @@ namespace Roslynator.Documentation
                     do
                     {
                         Writer.WriteStartBulletItem();
-                        Writer.WriteLink(en.Current, FormatProvider.MemberImplementsFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName);
+                        Writer.WriteLink(en.Current, SymbolDisplayFormats.MemberImplements, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName);
                         Writer.WriteEndBulletItem();
                     }
                     while (en.MoveNext());
@@ -283,13 +281,13 @@ namespace Roslynator.Documentation
 
                 if (!isOverloaded)
                 {
-                    Writer.WriteString(symbol.ToDisplayString(FormatProvider.SimpleDefinitionFormat));
+                    Writer.WriteString(symbol.ToDisplayString(SymbolDisplayFormats.SimpleDefinition));
                     Writer.WriteSpace();
                     Writer.WriteString(Resources.ConstructorTitle);
                 }
                 else
                 {
-                    Writer.WriteString(symbol.ContainingType.ToDisplayString(FormatProvider.TitleFormat));
+                    Writer.WriteString(symbol.ContainingType.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters));
                     Writer.WriteSpace();
                     Writer.WriteString(Resources.ConstructorsTitle);
                 }

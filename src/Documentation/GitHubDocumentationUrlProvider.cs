@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
-using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
@@ -13,6 +13,8 @@ namespace Roslynator.Documentation
     internal class GitHubDocumentationUrlProvider : DocumentationUrlProvider
     {
         public const string ReadMeFileName = "README.md";
+
+        private static readonly Regex _notWordCharOrHyphenOrSpaceRegex = new Regex(@"[^\w- ]");
 
         private Dictionary<ISymbol, ImmutableArray<string>> _symbolToFoldersMap;
 
@@ -148,14 +150,11 @@ namespace Roslynator.Documentation
             if (s == null)
                 throw new ArgumentNullException(nameof(s));
 
-            s = s.ToLowerInvariant();
+            s = _notWordCharOrHyphenOrSpaceRegex.Replace(s, "");
 
-            char[] chars = s
-                .Where(f => f == ' ' || f == '-' || char.IsLetterOrDigit(f))
-                .Select(f => (f == ' ') ? '-' : f)
-                .ToArray();
+            s = s.Replace(' ', '-');
 
-            return "#" + new string(chars);
+            return "#" + s.ToLowerInvariant();
         }
     }
 }

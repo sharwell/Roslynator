@@ -33,8 +33,6 @@ namespace Roslynator.Documentation
 
         public DocumentationOptions Options { get; }
 
-        public SymbolDisplayFormatProvider FormatProvider => Options.FormatProvider;
-
         public DocumentationResources Resources { get; }
 
         public DocumentationUrlProvider UrlProvider { get; }
@@ -313,7 +311,7 @@ namespace Roslynator.Documentation
                     headingLevel: 2 + headingLevelBase,
                     Resources.GetName(typeKind),
                     Resources.SummaryTitle,
-                    FormatProvider.TypeFormat,
+                    SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                     addLink: Options.IsPartEnabled(DocumentationParts.Type));
             }
 
@@ -403,7 +401,7 @@ namespace Roslynator.Documentation
                 writer.WriteList(namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
                 foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> typesByNamespaces in extendedExternalTypes
-                    .OrderBy(f => f.ToDisplayString(FormatProvider.TypeFormat))
+                    .OrderBy(f => f.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters))
                     .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
                     .OrderBy(f => f.Key.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
                 {
@@ -416,7 +414,7 @@ namespace Roslynator.Documentation
                         .GroupBy(f => f.TypeKind)
                         .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer))
                     {
-                        writer.WriteList(typesByKind, Resources.GetPluralName(typesByKind.Key), 3, FormatProvider.TypeFormat, canCreateExternalUrl: false);
+                        writer.WriteList(typesByKind, Resources.GetPluralName(typesByKind.Key), 3, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, canCreateExternalUrl: false);
                     }
                 }
 
@@ -451,7 +449,7 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
                 writer.WriteStartHeading(1);
-                writer.WriteLink(typeSymbol, FormatProvider.TitleFormat);
+                writer.WriteLink(typeSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
                 writer.WriteSpace();
                 writer.WriteString(Resources.GetName(typeSymbol.TypeKind));
                 writer.WriteSpace();
@@ -464,7 +462,7 @@ namespace Roslynator.Documentation
                     headingLevel: -1,
                     Resources.ExtensionMethodTitle,
                     Resources.SummaryTitle,
-                    FormatProvider.SimpleDefinitionFormat);
+                    SymbolDisplayFormats.SimpleDefinition);
 
                 writer.WriteEndDocument();
 
@@ -836,7 +834,7 @@ namespace Roslynator.Documentation
 
         public DocumentationGeneratorResult GenerateObjectModel(string heading = null)
         {
-            SymbolDisplayFormat format = FormatProvider.TypeFormat;
+            SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
 
             using (DocumentationWriter writer = CreateWriter())
             {

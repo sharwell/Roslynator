@@ -166,7 +166,7 @@ namespace Roslynator.Documentation
 
                                             if (symbol != null)
                                             {
-                                                writer.WriteLink(symbol, writer.FormatProvider.TypeFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
+                                                writer.WriteLink(symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
                                             }
                                             else
                                             {
@@ -402,7 +402,7 @@ namespace Roslynator.Documentation
                         XElement element = en.Current.element;
                         ISymbol exceptionSymbol = en.Current.exceptionSymbol;
 
-                        writer.WriteLink(exceptionSymbol,writer. FormatProvider.TypeFormat);
+                        writer.WriteLink(exceptionSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
                         writer.WriteLine();
                         writer.WriteLine();
                         WriteElementContent(writer, element);

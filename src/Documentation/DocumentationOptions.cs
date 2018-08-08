@@ -17,7 +17,6 @@ namespace Roslynator.Documentation
             bool attributeArguments = true,
             bool inheritedInterfaceMembers = true,
             bool omitIEnumerable = true,
-            SymbolDisplayFormatProvider formatProvider = null,
             DocumentationParts parts = DocumentationParts.Namespace | DocumentationParts.Type | DocumentationParts.Member,
             RootDocumentationParts rootParts = RootDocumentationParts.All,
             NamespaceDocumentationParts namespaceParts = NamespaceDocumentationParts.All,
@@ -36,7 +35,6 @@ namespace Roslynator.Documentation
             AttributeArguments = attributeArguments;
             InheritedInterfaceMembers = inheritedInterfaceMembers;
             OmitIEnumerable = omitIEnumerable;
-            FormatProvider = formatProvider ?? SymbolDisplayFormatProvider.Default;
             DocumentationParts = parts;
             RootParts = rootParts;
             NamespaceParts = namespaceParts;
@@ -51,8 +49,6 @@ namespace Roslynator.Documentation
         public string BaseLocalUrl { get; }
 
         public int MaxDerivedItems { get; }
-
-        public SymbolDisplayFormatProvider FormatProvider { get; }
 
         public bool FormatDefinitionBaseList { get; }
 

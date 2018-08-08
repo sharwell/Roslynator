@@ -37,8 +37,6 @@ namespace Roslynator.Documentation
 
         protected internal int HeadingLevelBase { get; set; }
 
-        internal SymbolDisplayFormatProvider FormatProvider => Options.FormatProvider;
-
         public DocumentationOptions Options { get; }
 
         public DocumentationResources Resources { get; }
@@ -313,7 +311,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteTitle(ISymbol symbol)
         {
-            WriteHeading(1, symbol, FormatProvider.TitleFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName, addLink: false);
+            WriteHeading(1, symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName, addLink: false);
         }
 
         public virtual void WriteNamespace(ISymbol symbol)
@@ -368,7 +366,7 @@ namespace Roslynator.Documentation
         {
             ImmutableArray<SymbolDisplayPart> parts = SymbolDefinitionBuilder.GetDisplayParts(
                 symbol,
-                FormatProvider.FullDefinitionFormat,
+                SymbolDisplayFormats.FullDefinition,
                 typeDeclarationOptions: SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
                 isVisibleAttribute: f => DocumentationUtility.IsVisibleAttribute(f),
                 formatBaseList: Options.FormatDefinitionBaseList,
@@ -517,11 +515,11 @@ namespace Roslynator.Documentation
             {
                 if (isLast)
                 {
-                    WriteSymbol(symbol, FormatProvider.TypeFormat);
+                    WriteSymbol(symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
                 }
                 else
                 {
-                    WriteLink(symbol, FormatProvider.TypeFormat);
+                    WriteLink(symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
                 }
             }
         }
@@ -547,7 +545,7 @@ namespace Roslynator.Documentation
                 return;
 
             using (IEnumerator<AttributeInfo> en = attributes
-                .OrderBy(f => f.AttributeClass.ToDisplayString(FormatProvider.TypeFormat))
+                .OrderBy(f => f.AttributeClass.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters))
                 .GetEnumerator())
             {
                 if (en.MoveNext())
@@ -556,11 +554,11 @@ namespace Roslynator.Documentation
 
                     while (true)
                     {
-                        WriteLink(en.Current.AttributeClass, FormatProvider.TypeFormat);
+                        WriteLink(en.Current.AttributeClass, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
 
                         if (symbol != en.Current.Target)
                         {
-                            WriteInheritedFrom(en.Current.Target.OriginalDefinition, FormatProvider.TypeFormat);
+                            WriteInheritedFrom(en.Current.Target.OriginalDefinition, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
                         }
 
                         if (en.MoveNext())
@@ -581,8 +579,10 @@ namespace Roslynator.Documentation
 
         public virtual void WriteDerivedTypes(IEnumerable<INamedTypeSymbol> derivedTypes)
         {
+            SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters;
+
             using (IEnumerator<INamedTypeSymbol> en = derivedTypes
-                .OrderBy(f => f.ToDisplayString(FormatProvider.DerivedTypeFormat))
+                .OrderBy(f => f.ToDisplayString(format))
                 .GetEnumerator())
             {
                 if (en.MoveNext())
@@ -595,7 +595,7 @@ namespace Roslynator.Documentation
 
                     do
                     {
-                        WriteBulletItemLink(en.Current, FormatProvider.DerivedTypeFormat);
+                        WriteBulletItemLink(en.Current, format);
 
                         count++;
 
@@ -617,7 +617,7 @@ namespace Roslynator.Documentation
         public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
         {
             using (IEnumerator<INamedTypeSymbol> en = implementedInterfaces
-                .OrderBy(f => f.ToDisplayString(FormatProvider.TypeFormat))
+                .OrderBy(f => f.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters))
                 .GetEnumerator())
             {
                 if (en.MoveNext())
@@ -697,7 +697,7 @@ namespace Roslynator.Documentation
                         IFieldSymbol fieldSymbol = en.Current;
 
                         WriteStartTableRow();
-                        WriteTableCell(fieldSymbol.ToDisplayString(FormatProvider.SimpleDefinitionFormat));
+                        WriteTableCell(fieldSymbol.ToDisplayString(SymbolDisplayFormats.SimpleDefinition));
                         WriteTableCell(fieldSymbol.ConstantValue.ToString());
 
                         if (hasCombinedValue)
@@ -740,37 +740,37 @@ namespace Roslynator.Documentation
 
         public virtual void WriteConstructors(IEnumerable<IMethodSymbol> constructors)
         {
-            WriteTable(constructors, Resources.ConstructorsTitle, 2, Resources.ConstructorTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat);
+            WriteTable(constructors, Resources.ConstructorsTitle, 2, Resources.ConstructorTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition);
         }
 
         public virtual void WriteFields(IEnumerable<IFieldSymbol> fields, INamedTypeSymbol containingType)
         {
-            WriteTable(fields, Resources.FieldsTitle, 2, Resources.FieldTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, containingType: containingType);
+            WriteTable(fields, Resources.FieldsTitle, 2, Resources.FieldTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, containingType: containingType);
         }
 
         public virtual void WriteProperties(IEnumerable<IPropertySymbol> properties, INamedTypeSymbol containingType)
         {
-            WriteTable(properties, Resources.PropertiesTitle, 2, Resources.PropertyTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, containingType: containingType);
+            WriteTable(properties, Resources.PropertiesTitle, 2, Resources.PropertyTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, containingType: containingType);
         }
 
         public virtual void WriteMethods(IEnumerable<IMethodSymbol> methods, INamedTypeSymbol containingType)
         {
-            WriteTable(methods, Resources.MethodsTitle, 2, Resources.MethodTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, containingType: containingType);
+            WriteTable(methods, Resources.MethodsTitle, 2, Resources.MethodTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, containingType: containingType);
         }
 
         public virtual void WriteOperators(IEnumerable<IMethodSymbol> operators, INamedTypeSymbol containingType)
         {
-            WriteTable(operators, Resources.OperatorsTitle, 2, Resources.OperatorTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseOperatorName, containingType: containingType);
+            WriteTable(operators, Resources.OperatorsTitle, 2, Resources.OperatorTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseOperatorName, containingType: containingType);
         }
 
         public virtual void WriteEvents(IEnumerable<IEventSymbol> events, INamedTypeSymbol containingType)
         {
-            WriteTable(events, Resources.EventsTitle, 2, Resources.EventTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, containingType: containingType);
+            WriteTable(events, Resources.EventsTitle, 2, Resources.EventTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, containingType: containingType);
         }
 
         public virtual void WriteExplicitInterfaceImplementations(IEnumerable<ISymbol> explicitInterfaceImplementations)
         {
-            WriteTable(explicitInterfaceImplementations, Resources.ExplicitInterfaceImplementationsTitle, 2, Resources.MemberTitle, Resources.SummaryTitle, FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, canIndicateInterfaceImplementation: false);
+            WriteTable(explicitInterfaceImplementations, Resources.ExplicitInterfaceImplementationsTitle, 2, Resources.MemberTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, canIndicateInterfaceImplementation: false);
         }
 
         public virtual void WriteExtensionMethods(IEnumerable<IMethodSymbol> methods)
@@ -781,7 +781,7 @@ namespace Roslynator.Documentation
                 2,
                 Resources.MethodTitle,
                 Resources.SummaryTitle,
-                FormatProvider.SimpleDefinitionFormat);
+                SymbolDisplayFormats.SimpleDefinition);
         }
 
         public virtual void WriteSeeAlso(ISymbol symbol)
@@ -796,7 +796,7 @@ namespace Roslynator.Documentation
 
                     do
                     {
-                        WriteBulletItemLink(en.Current, FormatProvider.TypeFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
+                        WriteBulletItemLink(en.Current, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName);
                     }
                     while (en.MoveNext());
 
@@ -901,7 +901,7 @@ namespace Roslynator.Documentation
                         if (isInherited)
                         {
                             if (Options.IndicateInheritedMember)
-                                WriteInheritedFrom(symbol.ContainingType.OriginalDefinition, FormatProvider.TypeFormat, additionalOptions);
+                                WriteInheritedFrom(symbol.ContainingType.OriginalDefinition, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, additionalOptions);
                         }
                         else
                         {
@@ -936,7 +936,7 @@ namespace Roslynator.Documentation
                         WriteString(Resources.OpenParenthesis);
                         WriteString(Resources.OverridesTitle);
                         WriteSpace();
-                        WriteLink(overriddenSymbol, SymbolDisplayFormats.MemberNameAndContainingTypeName, additionalOptions);
+                        WriteLink(overriddenSymbol, SymbolDisplayFormats.TypeNameAndTypeParameters, additionalOptions);
                         WriteString(Resources.CloseParenthesis);
                     }
                 }
@@ -955,7 +955,7 @@ namespace Roslynator.Documentation
                         while (true)
                         {
                             WriteSpace();
-                            WriteLink(en.Current, SymbolDisplayFormats.MemberNameAndContainingTypeName, additionalOptions);
+                            WriteLink(en.Current, SymbolDisplayFormats.TypeNameAndTypeParameters, additionalOptions);
 
                             if (en.MoveNext())
                             {
