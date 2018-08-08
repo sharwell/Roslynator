@@ -7,11 +7,9 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using Roslynator.CSharp.CodeFixes;
 using Xunit;
 
-#pragma warning disable RCS1090
-
 namespace Roslynator.CSharp.Analysis.Tests
 {
-    public class RCSX003UnusedElementInDocumentationCommentTests : AbstractCSharpCodeFixVerifier
+    public class RCS1228UnusedElementInDocumentationCommentTests : AbstractCSharpCodeFixVerifier
     {
         public override DiagnosticDescriptor Descriptor { get; } = DiagnosticDescriptors.UnusedElementInDocumentationComment;
 

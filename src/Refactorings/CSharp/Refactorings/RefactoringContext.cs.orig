@@ -198,7 +198,11 @@ namespace Roslynator.CSharp.Refactorings
             {
                 case SyntaxKind.XmlTextLiteralToken:
                     {
+<<<<<<< HEAD
+                        if (IsRefactoringEnabled(RefactoringIdentifiers.WrapInElement)
+=======
                         if (IsRefactoringEnabled(RefactoringIdentifiers.AddTagToDocumentationComment)
+>>>>>>> master
                             && !Span.IsEmpty)
                         {
                             TextSpan span = token.Span;
@@ -216,9 +220,15 @@ namespace Roslynator.CSharp.Refactorings
                                             && !char.IsLetterOrDigit(text[Span.End - span.Start])))
                                     {
                                         RegisterRefactoring(
+<<<<<<< HEAD
+                                            "Wrap in 'c' element",
+                                            ct => Document.WithTextChangeAsync(new TextChange(Span, $"<c>{token.ToString(Span)}</c>"), ct),
+                                            RefactoringIdentifiers.WrapInElement);
+=======
                                             "Add tag 'c'",
                                             ct => Document.WithTextChangeAsync(new TextChange(Span, $"<c>{token.ToString(Span)}</c>"), ct),
                                             RefactoringIdentifiers.AddTagToDocumentationComment);
+>>>>>>> master
                                     }
                                 }
                             }

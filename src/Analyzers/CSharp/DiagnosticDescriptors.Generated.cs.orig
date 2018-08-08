@@ -9,42 +9,6 @@ namespace Roslynator.CSharp
 {
     public static partial class DiagnosticDescriptors
     {
-        /// <summary>RCS0001</summary>
-        public static readonly DiagnosticDescriptor MarkParameterWithInModifier = new DiagnosticDescriptor(
-            id:                 DiagnosticIdentifiers.MarkParameterWithInModifier, 
-            title:              "Mark parameter with 'in' modifier.", 
-            messageFormat:      "Mark parameter with 'in' modifier.", 
-            category:           DiagnosticCategories.Performance, 
-            defaultSeverity:    DiagnosticSeverity.Info, 
-            isEnabledByDefault: true, 
-            description:        null, 
-            helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.MarkParameterWithInModifier}", 
-            customTags:         Array.Empty<string>());
-
-        /// <summary>RCS0002</summary>
-        public static readonly DiagnosticDescriptor AddCommaAfterLastItemInList = new DiagnosticDescriptor(
-            id:                 DiagnosticIdentifiers.AddCommaAfterLastItemInList, 
-            title:              "Add comma after last item in list.", 
-            messageFormat:      "Add comma after last item in list.", 
-            category:           DiagnosticCategories.Maintainability, 
-            defaultSeverity:    DiagnosticSeverity.Info, 
-            isEnabledByDefault: false, 
-            description:        null, 
-            helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.AddCommaAfterLastItemInList}", 
-            customTags:         Array.Empty<string>());
-
-        /// <summary>RCS0003</summary>
-        public static readonly DiagnosticDescriptor ReplaceEnumeratorWithForEach = new DiagnosticDescriptor(
-            id:                 DiagnosticIdentifiers.ReplaceEnumeratorWithForEach, 
-            title:              "Replace enumerator with foreach.", 
-            messageFormat:      "Replace enumerator with foreach.", 
-            category:           DiagnosticCategories.Readability, 
-            defaultSeverity:    DiagnosticSeverity.Info, 
-            isEnabledByDefault: true, 
-            description:        null, 
-            helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.ReplaceEnumeratorWithForEach}", 
-            customTags:         Array.Empty<string>());
-
         /// <summary>RCS1001</summary>
         public static readonly DiagnosticDescriptor AddBracesWhenExpressionSpansOverMultipleLines = new DiagnosticDescriptor(
             id:                 DiagnosticIdentifiers.AddBracesWhenExpressionSpansOverMultipleLines, 
@@ -2519,7 +2483,47 @@ namespace Roslynator.CSharp
             helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.ValidateArgumentsCorrectly}", 
             customTags:         Array.Empty<string>());
 
+<<<<<<< HEAD
+        /// <summary>RCS1230</summary>
+        public static readonly DiagnosticDescriptor AddCommaAfterLastItemInList = new DiagnosticDescriptor(
+            id:                 DiagnosticIdentifiers.AddCommaAfterLastItemInList, 
+            title:              "Add comma after last item in list.", 
+            messageFormat:      "Add comma after last item in list.", 
+            category:           DiagnosticCategories.Maintainability, 
+            defaultSeverity:    DiagnosticSeverity.Info, 
+            isEnabledByDefault: false, 
+            description:        null, 
+            helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.AddCommaAfterLastItemInList}", 
+            customTags:         Array.Empty<string>());
+
+        /// <summary>RCS1231</summary>
+        public static readonly DiagnosticDescriptor ReplaceEnumeratorWithForEach = new DiagnosticDescriptor(
+            id:                 DiagnosticIdentifiers.ReplaceEnumeratorWithForEach, 
+            title:              "Replace enumerator with foreach.", 
+            messageFormat:      "Replace enumerator with foreach.", 
+            category:           DiagnosticCategories.Readability, 
+            defaultSeverity:    DiagnosticSeverity.Info, 
+            isEnabledByDefault: true, 
+            description:        null, 
+            helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.ReplaceEnumeratorWithForEach}", 
+            customTags:         Array.Empty<string>());
+
+        /// <summary>RCSX001</summary>
+        public static readonly DiagnosticDescriptor MarkParameterWithInModifier = new DiagnosticDescriptor(
+            id:                 DiagnosticIdentifiers.MarkParameterWithInModifier, 
+            title:              "Mark parameter with 'in' modifier.", 
+            messageFormat:      "Mark parameter with 'in' modifier.", 
+            category:           DiagnosticCategories.Performance, 
+            defaultSeverity:    DiagnosticSeverity.Info, 
+            isEnabledByDefault: true, 
+            description:        null, 
+            helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.MarkParameterWithInModifier}", 
+            customTags:         Array.Empty<string>());
+
+        /// <summary>RCSX003</summary>
+=======
         /// <summary>RCS1228</summary>
+>>>>>>> master
         public static readonly DiagnosticDescriptor UnusedElementInDocumentationComment = new DiagnosticDescriptor(
             id:                 DiagnosticIdentifiers.UnusedElementInDocumentationComment, 
             title:              "Unused element in documentation comment.", 
@@ -2531,12 +2535,20 @@ namespace Roslynator.CSharp
             helpLinkUri:        $"{HelpLinkUriRoot}{DiagnosticIdentifiers.UnusedElementInDocumentationComment}", 
             customTags:         Array.Empty<string>());
 
+<<<<<<< HEAD
+        /// <summary>RCSX006</summary>
+=======
         /// <summary>RCS1229</summary>
+>>>>>>> master
         public static readonly DiagnosticDescriptor UseAsyncAwait = new DiagnosticDescriptor(
             id:                 DiagnosticIdentifiers.UseAsyncAwait, 
             title:              "Use async/await when necessary.", 
             messageFormat:      "Use async/await when necessary.", 
+<<<<<<< HEAD
+            category:           DiagnosticCategories.Reliability, 
+=======
             category:           DiagnosticCategories.Usage, 
+>>>>>>> master
             defaultSeverity:    DiagnosticSeverity.Info, 
             isEnabledByDefault: true, 
             description:        null, 

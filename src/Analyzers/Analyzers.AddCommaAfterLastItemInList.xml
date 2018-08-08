@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Analyzers>
   <Analyzer Identifier="AddCommaAfterLastItemInList">
-    <Id>RCS1230</Id>
+    <Id>RCS0002</Id>
     <Title>Add comma after last item in list.</Title>
     <MessageFormat>Add comma after last item in list.</MessageFormat>
     <Category>Maintainability</Category>

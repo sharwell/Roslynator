@@ -43,7 +43,11 @@ namespace Roslynator.CSharp.CodeFixes
                             CodeAction codeAction = CodeAction.Create(
                                 $"Remove element '{name}'",
                                 cancellationToken => RemoveUnusedElementInDocumentationCommentAsync(context.Document, elementInfo, cancellationToken),
+<<<<<<< HEAD
+                                base.GetEquivalenceKey(diagnostic, name));
+=======
                                 GetEquivalenceKey(diagnostic));
+>>>>>>> master
 
                             context.RegisterCodeFix(codeAction, diagnostic);
                             break;

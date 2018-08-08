@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Roslynator.CSharp.Analysis.Tests
 {
-    public class RCSUseAsyncAwaitTests : AbstractCSharpCodeFixVerifier
+    public class RCS1229UseAsyncAwaitTests : AbstractCSharpCodeFixVerifier
     {
         public override DiagnosticDescriptor Descriptor { get; } = DiagnosticDescriptors.UseAsyncAwait;
 
