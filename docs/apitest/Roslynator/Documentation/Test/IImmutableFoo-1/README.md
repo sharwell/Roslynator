@@ -1,5 +1,7 @@
 # IImmutableFoo\<T> Interface
 
+[Properties](#properties) &#x2022; [Methods](#methods)
+
 Namespace: [Roslynator.Documentation.Test](../README.md)
 
 Assembly: Roslynator\.Documentation\.TestProject\.dll

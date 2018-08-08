@@ -19,8 +19,6 @@ namespace Roslynator.Documentation
 
         public DocumentationWriter Writer { get; }
 
-        public SymbolDisplayFormat Format => FormatProvider.SimpleDefinitionFormat;
-
         public SymbolDisplayFormatProvider FormatProvider => Writer.FormatProvider;
 
         public DocumentationModel DocumentationModel => Writer.DocumentationModel;
@@ -35,7 +33,10 @@ namespace Roslynator.Documentation
             set { Writer.HeadingLevelBase = value; }
         }
 
-        public virtual IComparer<MemberDocumentationParts> Comparer { get; }
+        public virtual IComparer<MemberDocumentationParts> Comparer
+        {
+            get { return MemberDocumentationPartComparer.Instance; }
+        }
 
         internal ImmutableArray<MemberDocumentationParts> EnabledAndSortedMemberParts
         {
@@ -65,6 +66,8 @@ namespace Roslynator.Documentation
         {
             ISymbol symbol = model.Symbol;
 
+            WriteTitle(symbol, isOverloaded: model.IsOverloaded);
+
             foreach (MemberDocumentationParts part in EnabledAndSortedMemberParts)
             {
                 switch (part)
@@ -77,11 +80,6 @@ namespace Roslynator.Documentation
                     case MemberDocumentationParts.Assembly:
                         {
                             Writer.WriteAssembly(symbol);
-                            break;
-                        }
-                    case MemberDocumentationParts.Title:
-                        {
-                            WriteTitle(symbol, isOverloaded: model.IsOverloaded);
                             break;
                         }
                 }
@@ -109,7 +107,7 @@ namespace Roslynator.Documentation
                     HeadingLevelBase++;
 
                     Writer.WriteStartHeading(1);
-                    Writer.WriteString(symbol2.ToDisplayString(Format, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
+                    Writer.WriteString(symbol2.ToDisplayString(FormatProvider.SimpleDefinitionFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
                     Writer.WriteEndHeading();
                     WriteContent(symbol2);
 

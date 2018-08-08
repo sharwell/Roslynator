@@ -1,5 +1,7 @@
 # ISelection\<T> Interface
 
+[Properties](#properties) &#x2022; [Methods](#methods)
+
 Namespace: [Roslynator](../README.md)
 
 Assembly: Roslynator\.CSharp\.dll

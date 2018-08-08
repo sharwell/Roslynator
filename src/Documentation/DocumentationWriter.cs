@@ -269,6 +269,48 @@ namespace Roslynator.Documentation
             WriteEndTableCell();
         }
 
+        public void WriteContent(IEnumerable<string> names)
+        {
+            IEnumerator<string> en = names.GetEnumerator();
+
+            if (en.MoveNext())
+            {
+                string heading = en.Current;
+
+                if (en.MoveNext())
+                {
+                    WriteLink(heading, UrlProvider.GetFragment(heading));
+                    WriteContentSeparator();
+
+                    while (true)
+                    {
+                        heading = en.Current;
+
+                        WriteLink(heading, UrlProvider.GetFragment(heading));
+
+                        if (en.MoveNext())
+                        {
+                            WriteContentSeparator();
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+
+                    WriteLine();
+                    WriteLine();
+                }
+            }
+
+            void WriteContentSeparator()
+            {
+                WriteSpace();
+                WriteCharEntity(Resources.ContentSeparatorChar);
+                WriteSpace();
+            }
+        }
+
         public virtual void WriteTitle(ISymbol symbol)
         {
             WriteHeading(1, symbol, FormatProvider.TitleFormat, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName, addLink: false);

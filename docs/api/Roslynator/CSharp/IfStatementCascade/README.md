@@ -1,5 +1,7 @@
 # IfStatementCascade Struct
 
+[Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+
 Namespace: [Roslynator.CSharp](../README.md)
 
 Assembly: Roslynator\.CSharp\.dll

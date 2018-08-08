@@ -1,6 +1,6 @@
 # Roslynator\.Documentation\.Test Namespace
 
-[Examples](#examples) \- [Remarks](#remarks) \- [Classes](#classes) \- [Structs](#structs) \- [Interfaces](#interfaces) \- [Enums](#enums) \- [Delegates](#delegates) \- [See Also](#see-also)
+[Examples](#examples) &#x2022; [Remarks](#remarks) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums) &#x2022; [Delegates](#delegates) &#x2022; [See Also](#see-also)
 
 test summary
 

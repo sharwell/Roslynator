@@ -1,6 +1,6 @@
 # Roslynator Namespace
 
-[Classes](#classes) \- [Structs](#structs) \- [Interfaces](#interfaces)
+[Classes](#classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces)
 
 ## Classes
 

@@ -8,7 +8,7 @@ namespace Roslynator.Documentation
     public enum TypeDocumentationParts
     {
         None = 0,
-        Title = 1,
+        Content = 1,
         Namespace = 2,
         Assembly = 4,
         Obsolete = 8,
@@ -39,6 +39,6 @@ namespace Roslynator.Documentation
         NestedTypes = Classes | Structs | Interfaces | Enums | Delegates,
         SeeAlso = 268435456,
         AllExceptNestedTypes = All & ~NestedTypes,
-        All = Title | Namespace | Assembly | Obsolete | Summary | Definition | TypeParameters | Parameters | ReturnValue | Inheritance | Attributes | Derived | Implements | Examples | Remarks | Constructors | Fields | Properties | Methods | Operators | Events | ExplicitInterfaceImplementations | ExtensionMethods | Classes | Structs | Interfaces | Enums | Delegates | SeeAlso,
+        All = Content | Namespace | Assembly | Obsolete | Summary | Definition | TypeParameters | Parameters | ReturnValue | Inheritance | Attributes | Derived | Implements | Examples | Remarks | Constructors | Fields | Properties | Methods | Operators | Events | ExplicitInterfaceImplementations | ExtensionMethods | Classes | Structs | Interfaces | Enums | Delegates | SeeAlso,
     }
 }

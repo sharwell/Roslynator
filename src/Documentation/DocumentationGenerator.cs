@@ -74,6 +74,7 @@ namespace Roslynator.Documentation
                         .Cast<TypeDocumentationParts>()
                         .Where(f => f != TypeDocumentationParts.None
                             && f != TypeDocumentationParts.All
+                            && f != TypeDocumentationParts.NestedTypes
                             && f != TypeDocumentationParts.AllExceptNestedTypes
                             && Options.IsPartEnabled(f))
                         .OrderBy(f => f, TypePartComparer)
@@ -247,40 +248,7 @@ namespace Roslynator.Documentation
                 {
                     case NamespaceDocumentationParts.Content:
                         {
-                            IEnumerator<NamespaceDocumentationParts> en = GetAvailableParts().GetEnumerator();
-
-                            if (en.MoveNext())
-                            {
-                                NamespaceDocumentationParts first = en.Current;
-
-                                if (en.MoveNext())
-                                {
-                                    string heading = GetHeading(first);
-
-                                    writer.WriteLink(heading, $"#{UrlProvider.GetFragment(heading)}");
-                                    writer.WriteString(" - ");
-
-                                    while (true)
-                                    {
-                                        heading = GetHeading(en.Current);
-
-                                        writer.WriteLink(heading, $"#{UrlProvider.GetFragment(heading)}");
-
-                                        if (en.MoveNext())
-                                        {
-                                            writer.WriteString(" - ");
-                                        }
-                                        else
-                                        {
-                                            break;
-                                        }
-                                    }
-
-                                    writer.WriteLine();
-                                    writer.WriteLine();
-                                }
-                            }
-
+                            writer.WriteContent(GetAvailableParts().Select(f => Resources.GetHeading(f)));
                             break;
                         }
                     case NamespaceDocumentationParts.Summary:
@@ -349,31 +317,6 @@ namespace Roslynator.Documentation
                     addLink: Options.IsPartEnabled(DocumentationParts.Type));
             }
 
-            string GetHeading(NamespaceDocumentationParts part)
-            {
-                switch (part)
-                {
-                    case NamespaceDocumentationParts.Examples:
-                        return Resources.ExamplesTitle;
-                    case NamespaceDocumentationParts.Remarks:
-                        return Resources.RemarksTitle;
-                    case NamespaceDocumentationParts.Classes:
-                        return Resources.ClassesTitle;
-                    case NamespaceDocumentationParts.Structs:
-                        return Resources.StructsTitle;
-                    case NamespaceDocumentationParts.Interfaces:
-                        return Resources.InterfacesTitle;
-                    case NamespaceDocumentationParts.Enums:
-                        return Resources.EnumsTitle;
-                    case NamespaceDocumentationParts.Delegates:
-                        return Resources.DelegatesTitle;
-                    case NamespaceDocumentationParts.SeeAlso:
-                        return Resources.SeeAlsoTitle;
-                    default:
-                        throw new InvalidOperationException();
-                }
-            }
-
             IEnumerable<NamespaceDocumentationParts> GetAvailableParts()
             {
                 foreach (NamespaceDocumentationParts part in EnabledAndSortedNamespaceParts)
@@ -393,7 +336,7 @@ namespace Roslynator.Documentation
                     case NamespaceDocumentationParts.Content:
                     case NamespaceDocumentationParts.Summary:
                         {
-                            break;
+                            return false;
                         }
                     case NamespaceDocumentationParts.Examples:
                         {
@@ -439,8 +382,6 @@ namespace Roslynator.Documentation
                             throw new InvalidOperationException();
                         }
                 }
-
-                return false;
             }
         }
 
@@ -537,19 +478,21 @@ namespace Roslynator.Documentation
 
             ImmutableArray<INamedTypeSymbol> nestedTypes = default;
 
+            bool includeInherited = typeSymbol.TypeKind != TypeKind.Interface || Options.InheritedInterfaceMembers;
+
             using (DocumentationWriter writer = CreateWriter(typeSymbol))
             {
                 writer.WriteStartDocument();
 
-                bool includeInherited = typeSymbol.TypeKind != TypeKind.Interface || Options.InheritedInterfaceMembers;
+                writer.WriteTitle(typeSymbol);
 
                 foreach (TypeDocumentationParts part in EnabledAndSortedTypeParts)
                 {
                     switch (part)
                     {
-                        case TypeDocumentationParts.Title:
+                        case TypeDocumentationParts.Content:
                             {
-                                writer.WriteTitle(typeSymbol);
+                                writer.WriteContent(GetAvailableParts().Select(f => Resources.GetHeading(f)));
                                 break;
                             }
                         case TypeDocumentationParts.Namespace:
@@ -737,6 +680,135 @@ namespace Roslynator.Documentation
                     Resources.GetName(typeKind),
                     Resources.SummaryTitle,
                     SymbolDisplayFormats.TypeNameAndTypeParameters);
+            }
+
+            IEnumerable<TypeDocumentationParts> GetAvailableParts()
+            {
+                foreach (TypeDocumentationParts part in EnabledAndSortedTypeParts)
+                {
+                    if (IsAvailable(part))
+                        yield return part;
+                }
+            }
+
+            bool IsAvailable(TypeDocumentationParts part)
+            {
+                switch (part)
+                {
+                    case TypeDocumentationParts.Content:
+                    case TypeDocumentationParts.Namespace:
+                    case TypeDocumentationParts.Assembly:
+                    case TypeDocumentationParts.Obsolete:
+                    case TypeDocumentationParts.Summary:
+                    case TypeDocumentationParts.Definition:
+                    case TypeDocumentationParts.TypeParameters:
+                    case TypeDocumentationParts.Parameters:
+                    case TypeDocumentationParts.ReturnValue:
+                    case TypeDocumentationParts.Inheritance:
+                    case TypeDocumentationParts.Attributes:
+                    case TypeDocumentationParts.Derived:
+                    case TypeDocumentationParts.Implements:
+                        {
+                            return false;
+                        }
+                    case TypeDocumentationParts.Examples:
+                        {
+                            return DocumentationModel
+                                .GetXmlDocumentation(typeModel.Symbol, Options.PreferredCultureName)?
+                                .HasElement(WellKnownTags.Example) == true;
+                        }
+                    case TypeDocumentationParts.Remarks:
+                        {
+                            return DocumentationModel
+                                .GetXmlDocumentation(typeModel.Symbol, Options.PreferredCultureName)?
+                                .HasElement(WellKnownTags.Remarks) == true;
+                        }
+                    case TypeDocumentationParts.Constructors:
+                        {
+                            return typeModel.GetConstructors().Any();
+                        }
+                    case TypeDocumentationParts.Fields:
+                        {
+                            if (typeModel.TypeKind == TypeKind.Enum)
+                            {
+                                return typeModel.GetFields().Any();
+                            }
+                            else
+                            {
+                                return typeModel.GetFields(includeInherited: true).Any();
+                            }
+                        }
+                    case TypeDocumentationParts.Properties:
+                        {
+                            return typeModel.GetProperties(includeInherited: includeInherited).Any();
+                        }
+                    case TypeDocumentationParts.Methods:
+                        {
+                            return typeModel.GetMethods(includeInherited: includeInherited).Any();
+                        }
+                    case TypeDocumentationParts.Operators:
+                        {
+                            return typeModel.GetOperators(includeInherited: true).Any();
+                        }
+                    case TypeDocumentationParts.Events:
+                        {
+                            return typeModel.GetEvents(includeInherited: includeInherited).Any();
+                        }
+                    case TypeDocumentationParts.ExplicitInterfaceImplementations:
+                        {
+                            return typeModel.GetExplicitInterfaceImplementations().Any();
+                        }
+                    case TypeDocumentationParts.ExtensionMethods:
+                        {
+                            return typeModel.GetExtensionMethods().Any();
+                        }
+                    case TypeDocumentationParts.Classes:
+                        {
+                            if (nestedTypes.IsDefault)
+                                nestedTypes = typeSymbol.GetTypeMembers();
+
+                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Class && DocumentationModel.IsVisible(f));
+                        }
+                    case TypeDocumentationParts.Structs:
+                        {
+                            if (nestedTypes.IsDefault)
+                                nestedTypes = typeSymbol.GetTypeMembers();
+
+                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Class && DocumentationModel.IsVisible(f));
+                        }
+                    case TypeDocumentationParts.Interfaces:
+                        {
+                            if (nestedTypes.IsDefault)
+                                nestedTypes = typeSymbol.GetTypeMembers();
+
+                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Class && DocumentationModel.IsVisible(f));
+                        }
+                    case TypeDocumentationParts.Enums:
+                        {
+                            if (nestedTypes.IsDefault)
+                                nestedTypes = typeSymbol.GetTypeMembers();
+
+                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Class && DocumentationModel.IsVisible(f));
+                        }
+                    case TypeDocumentationParts.Delegates:
+                        {
+                            if (nestedTypes.IsDefault)
+                                nestedTypes = typeSymbol.GetTypeMembers();
+
+                            return nestedTypes.Any(f => f.TypeKind == TypeKind.Class && DocumentationModel.IsVisible(f));
+                        }
+                    case TypeDocumentationParts.SeeAlso:
+                        {
+                            return DocumentationModel
+                                .GetXmlDocumentation(typeModel.Symbol, Options.PreferredCultureName)?
+                                .SeeAlsoCommentIds()
+                                .Any() == true;
+                        }
+                    default:
+                        {
+                            throw new InvalidOperationException();
+                        }
+                }
             }
         }
 

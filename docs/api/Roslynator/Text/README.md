@@ -1,6 +1,6 @@
 # Roslynator\.Text Namespace
 
-[Classes](#classes) \- [Structs](#structs)
+[Classes](#classes) &#x2022; [Structs](#structs)
 
 ## Classes
 

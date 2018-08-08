@@ -1,5 +1,7 @@
 # ClassName Class
 
+[Constructors](#constructors) &#x2022; [Methods](#methods)
+
 Namespace: [System](../README.md)
 
 Assembly: Roslynator\.Documentation\.TestProject\.dll

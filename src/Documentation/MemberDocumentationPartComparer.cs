@@ -24,36 +24,34 @@ namespace Roslynator.Documentation
             {
                 case MemberDocumentationParts.Overloads:
                     return 1;
-                case MemberDocumentationParts.Title:
-                    return 2;
                 case MemberDocumentationParts.Namespace:
-                    return 3;
+                    return 2;
                 case MemberDocumentationParts.Assembly:
-                    return 4;
+                    return 3;
                 case MemberDocumentationParts.Obsolete:
-                    return 5;
+                    return 4;
                 case MemberDocumentationParts.Summary:
-                    return 6;
+                    return 5;
                 case MemberDocumentationParts.Definition:
-                    return 7;
+                    return 6;
                 case MemberDocumentationParts.TypeParameters:
-                    return 8;
+                    return 7;
                 case MemberDocumentationParts.Parameters:
-                    return 9;
+                    return 8;
                 case MemberDocumentationParts.ReturnValue:
-                    return 10;
+                    return 9;
                 case MemberDocumentationParts.Implements:
-                    return 11;
+                    return 10;
                 case MemberDocumentationParts.Attributes:
-                    return 12;
+                    return 11;
                 case MemberDocumentationParts.Exceptions:
-                    return 13;
+                    return 12;
                 case MemberDocumentationParts.Examples:
-                    return 14;
+                    return 13;
                 case MemberDocumentationParts.Remarks:
-                    return 15;
+                    return 14;
                 case MemberDocumentationParts.SeeAlso:
-                    return 16;
+                    return 15;
             }
 
             Debug.Fail(part.ToString());

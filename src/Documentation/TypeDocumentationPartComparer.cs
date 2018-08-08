@@ -22,7 +22,7 @@ namespace Roslynator.Documentation
         {
             switch (part)
             {
-                case TypeDocumentationParts.Title:
+                case TypeDocumentationParts.Content:
                     return 1;
                 case TypeDocumentationParts.Namespace:
                     return 2;

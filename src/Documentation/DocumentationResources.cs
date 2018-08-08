@@ -10,6 +10,7 @@ namespace Roslynator.Documentation
         public static DocumentationResources Default { get; } = new DefaultDocumentationResources();
 
         public virtual char InheritanceChar { get; } = '\u2192';
+        public virtual char ContentSeparatorChar { get; } = '\u2022';
 
         public virtual string CloseParenthesis { get; } = ")";
         public virtual string Colon { get; } = ":";
@@ -191,6 +192,72 @@ namespace Roslynator.Documentation
             }
 
             throw new InvalidOperationException();
+        }
+
+        internal string GetHeading(NamespaceDocumentationParts part)
+        {
+            switch (part)
+            {
+                case NamespaceDocumentationParts.Examples:
+                    return ExamplesTitle;
+                case NamespaceDocumentationParts.Remarks:
+                    return RemarksTitle;
+                case NamespaceDocumentationParts.Classes:
+                    return ClassesTitle;
+                case NamespaceDocumentationParts.Structs:
+                    return StructsTitle;
+                case NamespaceDocumentationParts.Interfaces:
+                    return InterfacesTitle;
+                case NamespaceDocumentationParts.Enums:
+                    return EnumsTitle;
+                case NamespaceDocumentationParts.Delegates:
+                    return DelegatesTitle;
+                case NamespaceDocumentationParts.SeeAlso:
+                    return SeeAlsoTitle;
+                default:
+                    throw new ArgumentException("", nameof(part));
+            }
+        }
+
+        internal string GetHeading(TypeDocumentationParts part)
+        {
+            switch (part)
+            {
+                case TypeDocumentationParts.Examples:
+                    return ExamplesTitle;
+                case TypeDocumentationParts.Remarks:
+                    return RemarksTitle;
+                case TypeDocumentationParts.Constructors:
+                    return ConstructorsTitle;
+                case TypeDocumentationParts.Fields:
+                    return FieldsTitle;
+                case TypeDocumentationParts.Properties:
+                    return PropertiesTitle;
+                case TypeDocumentationParts.Methods:
+                    return MethodsTitle;
+                case TypeDocumentationParts.Operators:
+                    return OperatorsTitle;
+                case TypeDocumentationParts.Events:
+                    return EventsTitle;
+                case TypeDocumentationParts.ExplicitInterfaceImplementations:
+                    return ExplicitInterfaceImplementationsTitle;
+                case TypeDocumentationParts.ExtensionMethods:
+                    return ExtensionMethodsTitle;
+                case TypeDocumentationParts.Classes:
+                    return ClassesTitle;
+                case TypeDocumentationParts.Structs:
+                    return StructsTitle;
+                case TypeDocumentationParts.Interfaces:
+                    return InterfacesTitle;
+                case TypeDocumentationParts.Enums:
+                    return EnumsTitle;
+                case TypeDocumentationParts.Delegates:
+                    return DelegatesTitle;
+                case TypeDocumentationParts.SeeAlso:
+                    return SeeAlsoTitle;
+                default:
+                    throw new ArgumentException("", nameof(part));
+            }
         }
 
         private class DefaultDocumentationResources : DocumentationResources

@@ -1,5 +1,7 @@
 # Bla Class
 
+[Constructors](#constructors) &#x2022; [Methods](#methods)
+
 Namespace: [\<global namespace>](../README.md)
 
 Assembly: Roslynator\.Documentation\.TestProject\.dll

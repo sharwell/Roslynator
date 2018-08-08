@@ -1,5 +1,7 @@
 # FooCollection Class
 
+[Constructors](#constructors) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+
 Namespace: [Roslynator.Documentation.Test](../README.md)
 
 Assembly: Roslynator\.Documentation\.TestProject\.dll

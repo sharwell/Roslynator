@@ -155,7 +155,7 @@ namespace Roslynator.Documentation
                 .Select(f => (f == ' ') ? '-' : f)
                 .ToArray();
 
-            return new string(chars);
+            return "#" + new string(chars);
         }
     }
 }

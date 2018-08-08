@@ -1,5 +1,7 @@
 # IfStatementOrElseClause Struct
 
+[Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators)
+
 Namespace: [Roslynator.CSharp](../README.md)
 
 Assembly: Roslynator\.CSharp\.dll
