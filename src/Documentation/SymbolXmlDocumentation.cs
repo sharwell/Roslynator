@@ -36,10 +36,10 @@ namespace Roslynator.Documentation
             XElement element = _element.Element(elementName);
 
             if (element != null)
-                WriteElementContent(writer, element, inlineOnly);
+                WriteContent(writer, element, inlineOnly);
         }
 
-        private void WriteElementContent(DocumentationWriter writer, XElement element, bool inlineOnly = false)
+        private void WriteContent(DocumentationWriter writer, XElement element, bool inlineOnly = false)
         {
             using (IEnumerator<XNode> en = element.Nodes().GetEnumerator())
             {
@@ -133,7 +133,7 @@ namespace Roslynator.Documentation
                                     {
                                         writer.WriteLine();
                                         writer.WriteLine();
-                                        WriteElementContent(writer, e);
+                                        WriteContent(writer, e);
                                         writer.WriteLine();
                                         writer.WriteLine();
                                         break;
@@ -240,7 +240,7 @@ namespace Roslynator.Documentation
                     do
                     {
                         WriteStartItem();
-                        WriteElementContent(writer, en.Current, inlineOnly: true);
+                        WriteContent(writer, en.Current, inlineOnly: true);
                         WriteEndItem();
                     }
                     while (en.MoveNext());
@@ -329,7 +329,7 @@ namespace Roslynator.Documentation
                         foreach (XElement element2 in element.Elements())
                         {
                             writer.WriteStartTableCell();
-                            WriteElementContent(writer, element2, inlineOnly: true);
+                            WriteContent(writer, element2, inlineOnly: true);
                             writer.WriteEndTableCell();
                         }
 
@@ -346,7 +346,7 @@ namespace Roslynator.Documentation
                             foreach (XElement element2 in element.Elements())
                             {
                                 writer.WriteStartTableCell();
-                                WriteElementContent(writer, element2, inlineOnly: true);
+                                WriteContent(writer, element2, inlineOnly: true);
                                 writer.WriteEndTableCell();
                                 count++;
 
@@ -405,7 +405,7 @@ namespace Roslynator.Documentation
                         writer.WriteLink(exceptionSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
                         writer.WriteLine();
                         writer.WriteLine();
-                        WriteElementContent(writer, element);
+                        WriteContent(writer, element);
                         writer.WriteLine();
                         writer.WriteLine();
                     }
@@ -447,7 +447,7 @@ namespace Roslynator.Documentation
             {
                 if (e.Attribute("name")?.Value == name)
                 {
-                    WriteElementContent(writer, e, inlineOnly: true);
+                    WriteContent(writer, e, inlineOnly: true);
                     return;
                 }
             }

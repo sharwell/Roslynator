@@ -48,7 +48,6 @@ namespace Roslynator.Documentation
 
             foreach (DocumentationGeneratorResult result in generator.Generate(
                 heading,
-                objectModelHeading: heading + " Object Model",
                 extendedExternalTypesHeading: "External Types Extended by " + heading))
             {
                 string path = directoryPath + result.Path;
@@ -67,17 +66,13 @@ namespace Roslynator.Documentation
 
             var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHub, options);
 
-            DocumentationGeneratorResult result = generator.GenerateObjectModel(heading);
+            string content = generator.GenerateObjectModel(heading);
 
-            string path = directoryPath + result.Path;
+            string path = Path.Combine(directoryPath, GitHubDocumentationUrlProvider.ReadMeFileName);
 
-            directoryPath = Path.GetDirectoryName(path);
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
 
-            Directory.CreateDirectory(directoryPath);
-
-            path = Path.Combine(directoryPath, GitHubDocumentationUrlProvider.ReadMeFileName);
-
-            FileHelper.WriteAllText(path, result.Content, _utf8NoBom, onlyIfChanges: true, fileMustExists: false);
+            FileHelper.WriteAllText(path, content, _utf8NoBom, onlyIfChanges: true, fileMustExists: false);
         }
 
         internal static DocumentationModel CreateFromTrustedPlatformAssemblies(string[] assemblyNames)

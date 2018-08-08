@@ -8,10 +8,9 @@ namespace Roslynator.Documentation
     public enum RootDocumentationParts
     {
         None = 0,
-        ObjectModelLink = 1,
         ExtendedExternalTypesLink = 2,
-        NamespaceList = 4,
-        Namespaces = 8,
-        All = ObjectModelLink | ExtendedExternalTypesLink | NamespaceList | Namespaces,
+        Namespaces = 4,
+        Types = 8,
+        All = ExtendedExternalTypesLink | Namespaces | Types,
     }
 }

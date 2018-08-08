@@ -98,21 +98,12 @@ namespace Roslynator.Documentation
 
         public IEnumerable<DocumentationGeneratorResult> Generate(
             string heading = null,
-            string objectModelHeading = null,
             string extendedExternalTypesHeading = null)
         {
             DocumentationParts parts = Options.DocumentationParts;
 
             DocumentationGeneratorResult objectModel = default;
             DocumentationGeneratorResult extendedExternalTypes = default;
-
-            if ((parts & DocumentationParts.ObjectModel) != 0)
-            {
-                objectModel = GenerateObjectModel(objectModelHeading ?? Resources.ObjectModelTitle);
-
-                if (!objectModel.HasContent)
-                    parts &= ~DocumentationParts.ObjectModel;
-            }
 
             if ((parts & DocumentationParts.ExtendedExternalTypes) != 0)
             {
@@ -173,14 +164,6 @@ namespace Roslynator.Documentation
             if (heading != null)
                 writer.WriteHeading1(heading);
 
-            if ((documentationParts & DocumentationParts.ObjectModel) != 0
-                && Options.IsPartEnabled(RootDocumentationParts.ObjectModelLink))
-            {
-                writer.WriteStartBulletItem();
-                writer.WriteLink(Resources.ObjectModelTitle, WellKnownNames.ObjectModelFileName);
-                writer.WriteEndBulletItem();
-            }
-
             if ((documentationParts & DocumentationParts.ExtendedExternalTypes) != 0
                 && Options.IsPartEnabled(RootDocumentationParts.ExtendedExternalTypesLink))
             {
@@ -189,24 +172,14 @@ namespace Roslynator.Documentation
                 writer.WriteEndBulletItem();
             }
 
-            if (Options.IsPartEnabled(RootDocumentationParts.NamespaceList))
+            if (Options.IsPartEnabled(RootDocumentationParts.Namespaces))
             {
                 writer.WriteList(DocumentationModel.NamespaceModels.Select(f => f.Symbol), Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
             }
 
-            if (Options.IsPartEnabled(RootDocumentationParts.Namespaces))
+            if (Options.IsPartEnabled(RootDocumentationParts.Types))
             {
-                foreach (NamespaceDocumentationModel namespaceModel in DocumentationModel.NamespaceModels
-                   .OrderBy(f => f.Symbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
-                {
-                    const NamespaceDocumentationParts disabledParts = NamespaceDocumentationParts.Content
-                        | NamespaceDocumentationParts.Summary
-                        | NamespaceDocumentationParts.Examples
-                        | NamespaceDocumentationParts.Remarks
-                        | NamespaceDocumentationParts.SeeAlso;
-
-                    GenerateNamespaceContent(writer, namespaceModel, headingLevelBase: 1, disabledParts: disabledParts);
-                }
+                GenerateObjectModel(writer);
             }
 
             writer.WriteEndDocument();
@@ -832,96 +805,101 @@ namespace Roslynator.Documentation
             }
         }
 
-        public DocumentationGeneratorResult GenerateObjectModel(string heading = null)
+        internal string GenerateObjectModel(string heading = null)
         {
-            SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
-
             using (DocumentationWriter writer = CreateWriter())
             {
                 writer.WriteStartDocument();
                 writer.WriteHeading1(heading);
 
-                IEnumerable<INamedTypeSymbol> typeSymbols = DocumentationModel.TypeModels.Select(f => f.TypeSymbol);
-
-                foreach (TypeKind typeKind in _typeKinds.OrderBy(f => f.ToNamespaceDocumentationPart(), NamespacePartComparer))
-                {
-                    switch (typeKind)
-                    {
-                        case TypeKind.Class:
-                            {
-                                if (typeSymbols.Any(f => !f.IsStatic && f.TypeKind == TypeKind.Class))
-                                {
-                                    INamedTypeSymbol objectType = DocumentationModel.Compilation.ObjectType;
-
-                                    IEnumerable<INamedTypeSymbol> instanceClasses = typeSymbols.Where(f => !f.IsStatic && f.TypeKind == TypeKind.Class);
-
-                                    var nodes = new HashSet<ITypeSymbol>(instanceClasses) { objectType };
-
-                                    foreach (INamedTypeSymbol type in instanceClasses)
-                                    {
-                                        INamedTypeSymbol baseType = type.BaseType;
-
-                                        while (baseType != null)
-                                        {
-                                            nodes.Add(baseType.OriginalDefinition);
-                                            baseType = baseType.BaseType;
-                                        }
-                                    }
-
-                                    writer.WriteHeading2(Resources.GetPluralName(typeKind));
-                                    WriteBulletItem(objectType, nodes, writer);
-                                }
-
-                                using (IEnumerator<INamedTypeSymbol> en = typeSymbols
-                                    .Where(f => f.IsStatic && f.TypeKind == TypeKind.Class)
-                                    .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
-                                {
-                                    if (en.MoveNext())
-                                    {
-                                        writer.WriteHeading2(Resources.StaticClassesTitle);
-
-                                        do
-                                        {
-                                            writer.WriteBulletItemLink(en.Current, format);
-                                        }
-                                        while (en.MoveNext());
-                                    }
-                                }
-
-                                break;
-                            }
-                        case TypeKind.Struct:
-                        case TypeKind.Interface:
-                        case TypeKind.Enum:
-                        case TypeKind.Delegate:
-                            {
-                                using (IEnumerator<INamedTypeSymbol> en = typeSymbols
-                                    .Where(f => f.TypeKind == typeKind)
-                                    .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
-                                {
-                                    if (en.MoveNext())
-                                    {
-                                        writer.WriteHeading2(Resources.GetPluralName(typeKind));
-
-                                        do
-                                        {
-                                            writer.WriteBulletItemLink(en.Current, format);
-                                        }
-                                        while (en.MoveNext());
-                                    }
-                                }
-
-                                break;
-                            }
-                    }
-                }
+                GenerateObjectModel(writer);
 
                 writer.WriteEndDocument();
 
-                return CreateResult(writer, DocumentationKind.ObjectModel);
+                return writer.ToString();
+            }
+        }
+
+        private void GenerateObjectModel(DocumentationWriter writer)
+        {
+            SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
+
+            IEnumerable<INamedTypeSymbol> typeSymbols = DocumentationModel.TypeModels.Select(f => f.TypeSymbol);
+
+            foreach (TypeKind typeKind in _typeKinds.OrderBy(f => f.ToNamespaceDocumentationPart(), NamespacePartComparer))
+            {
+                switch (typeKind)
+                {
+                    case TypeKind.Class:
+                        {
+                            if (typeSymbols.Any(f => !f.IsStatic && f.TypeKind == TypeKind.Class))
+                            {
+                                INamedTypeSymbol objectType = DocumentationModel.Compilation.ObjectType;
+
+                                IEnumerable<INamedTypeSymbol> instanceClasses = typeSymbols.Where(f => !f.IsStatic && f.TypeKind == TypeKind.Class);
+
+                                var nodes = new HashSet<ITypeSymbol>(instanceClasses) { objectType };
+
+                                foreach (INamedTypeSymbol type in instanceClasses)
+                                {
+                                    INamedTypeSymbol baseType = type.BaseType;
+
+                                    while (baseType != null)
+                                    {
+                                        nodes.Add(baseType.OriginalDefinition);
+                                        baseType = baseType.BaseType;
+                                    }
+                                }
+
+                                writer.WriteHeading2(Resources.GetPluralName(typeKind));
+                                WriteBulletItem(objectType, nodes);
+                            }
+
+                            using (IEnumerator<INamedTypeSymbol> en = typeSymbols
+                                .Where(f => f.IsStatic && f.TypeKind == TypeKind.Class)
+                                .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
+                            {
+                                if (en.MoveNext())
+                                {
+                                    writer.WriteHeading2(Resources.StaticClassesTitle);
+
+                                    do
+                                    {
+                                        writer.WriteBulletItemLink(en.Current, format);
+                                    }
+                                    while (en.MoveNext());
+                                }
+                            }
+
+                            break;
+                        }
+                    case TypeKind.Struct:
+                    case TypeKind.Interface:
+                    case TypeKind.Enum:
+                    case TypeKind.Delegate:
+                        {
+                            using (IEnumerator<INamedTypeSymbol> en = typeSymbols
+                                .Where(f => f.TypeKind == typeKind)
+                                .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
+                            {
+                                if (en.MoveNext())
+                                {
+                                    writer.WriteHeading2(Resources.GetPluralName(typeKind));
+
+                                    do
+                                    {
+                                        writer.WriteBulletItemLink(en.Current, format);
+                                    }
+                                    while (en.MoveNext());
+                                }
+                            }
+
+                            break;
+                        }
+                }
             }
 
-            void WriteBulletItem(ITypeSymbol baseType, HashSet<ITypeSymbol> nodes, DocumentationWriter writer)
+            void WriteBulletItem(ITypeSymbol baseType, HashSet<ITypeSymbol> nodes)
             {
                 writer.WriteStartBulletItem();
                 writer.WriteLink(baseType, format);
@@ -933,7 +911,7 @@ namespace Roslynator.Documentation
                     .OrderBy(f => f.ToDisplayString(format))
                     .ToList())
                 {
-                    WriteBulletItem(derivedType, nodes, writer);
+                    WriteBulletItem(derivedType, nodes);
                 }
 
                 writer.WriteEndBulletItem();

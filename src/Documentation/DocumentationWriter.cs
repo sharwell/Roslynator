@@ -989,6 +989,7 @@ namespace Roslynator.Documentation
             int headingLevel,
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
+            bool addLink = true,
             bool canCreateExternalUrl = true)
         {
             using (IEnumerator<ISymbol> en = symbols
@@ -1004,7 +1005,14 @@ namespace Roslynator.Documentation
 
                     do
                     {
-                        WriteBulletItemLink(en.Current, format, canCreateExternalUrl: canCreateExternalUrl);
+                        if (addLink)
+                        {
+                            WriteBulletItemLink(en.Current, format, canCreateExternalUrl: canCreateExternalUrl);
+                        }
+                        else
+                        {
+                            WriteBulletItem(en.Current.ToDisplayString(format));
+                        }
                     }
                     while (en.MoveNext());
 

@@ -1,66 +1,42 @@
 # Foo API
 
-* [Object Model](_ObjectModel.md)
-
 ## Namespaces
 
 * [\<global namespace>](_Global/README.md)
 * [Roslynator.Documentation.Test](Roslynator/Documentation/Test/README.md)
 * [System](System/README.md)
 
-## [\<global namespace>](_Global/README.md)
+## Classes
 
-### Classes
+* [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
+  * [Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute)
+    * [FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md)
+  * [B](Roslynator/Documentation/Test/B/README.md)
+    * [C](Roslynator/Documentation/Test/C/README.md)
+  * [Bla](_Global/Bla/README.md)
+    * [Foo](Roslynator/Documentation/Test/Foo/README.md)
+  * [ClassName](System/ClassName/README.md)
+  * [FooCollection](Roslynator/Documentation/Test/FooCollection/README.md)
+  * [FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md)
+  * [FooEvent](Roslynator/Documentation/Test/FooEvent/README.md)
 
-| Class | Summary |
-| ----- | ------- |
-| [Bla](_Global/Bla/README.md) | blac |
+## Static Classes
 
-## [Roslynator.Documentation.Test](Roslynator/Documentation/Test/README.md) Namespace
+* [FooExtensions](Roslynator/Documentation/Test/FooExtensions/README.md)
 
-### Classes
+## Structs
 
-| Class | Summary |
-| ----- | ------- |
-| [B](Roslynator/Documentation/Test/B/README.md) | |
-| [C](Roslynator/Documentation/Test/C/README.md) | |
-| [Foo](Roslynator/Documentation/Test/Foo/README.md) | \[deprecated\] a → > b [Foo](Roslynator/Documentation/Test/Foo/README.md) |
-| [FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md) | |
-| [FooCollection](Roslynator/Documentation/Test/FooCollection/README.md) | |
-| [FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md) | \[deprecated\]  |
-| [FooEvent](Roslynator/Documentation/Test/FooEvent/README.md) | |
-| [FooExtensions](Roslynator/Documentation/Test/FooExtensions/README.md) | fx |
+* [FooStruct](Roslynator/Documentation/Test/FooStruct/README.md)
 
-### Structs
+## Interfaces
 
-| Struct | Summary |
-| ------ | ------- |
-| [FooStruct](Roslynator/Documentation/Test/FooStruct/README.md) | |
+* [IFoo](Roslynator/Documentation/Test/IFoo/README.md)
+* [IImmutableFoo\<T>](Roslynator/Documentation/Test/IImmutableFoo-1/README.md)
 
-### Interfaces
+## Enums
 
-| Interface | Summary |
-| --------- | ------- |
-| [IFoo](Roslynator/Documentation/Test/IFoo/README.md) | |
-| [IImmutableFoo\<T>](Roslynator/Documentation/Test/IImmutableFoo-1/README.md) | |
+* [Flags](Roslynator/Documentation/Test/Flags/README.md)
 
-### Enums
+## Delegates
 
-| Enum | Summary |
-| ---- | ------- |
-| [Flags](Roslynator/Documentation/Test/Flags/README.md) | |
-
-### Delegates
-
-| Delegate | Summary |
-| -------- | ------- |
-| [FooDelegate](Roslynator/Documentation/Test/FooDelegate/README.md) | del |
-
-## [System](System/README.md) Namespace
-
-### Classes
-
-| Class | Summary |
-| ----- | ------- |
-| [ClassName](System/ClassName/README.md) | \[deprecated\]  |
-
+* [FooDelegate](Roslynator/Documentation/Test/FooDelegate/README.md)

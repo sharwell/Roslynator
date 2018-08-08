@@ -12,7 +12,6 @@ namespace Roslynator.Documentation
         Type = 2,
         Member = 4,
         ExtendedExternalTypes = 8,
-        ObjectModel = 16,
-        All = Namespace | Type | Member | ExtendedExternalTypes | ObjectModel,
+        All = Namespace | Type | Member | ExtendedExternalTypes,
     }
 }
