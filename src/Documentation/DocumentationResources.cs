@@ -260,6 +260,29 @@ namespace Roslynator.Documentation
             }
         }
 
+        internal string GetHeading(RootDocumentationParts part)
+        {
+            switch (part)
+            {
+                case RootDocumentationParts.Namespaces:
+                    return NamespacesTitle;
+                case RootDocumentationParts.Classes:
+                    return ClassesTitle;
+                case RootDocumentationParts.StaticClasses:
+                    return StaticClassesTitle;
+                case RootDocumentationParts.Structs:
+                    return StructsTitle;
+                case RootDocumentationParts.Interfaces:
+                    return InterfacesTitle;
+                case RootDocumentationParts.Enums:
+                    return EnumsTitle;
+                case RootDocumentationParts.Delegates:
+                    return DelegatesTitle;
+                default:
+                    throw new ArgumentException("", nameof(part));
+            }
+        }
+
         private class DefaultDocumentationResources : DocumentationResources
         {
             public override string AssemblyTitle { get; } = "Assembly";

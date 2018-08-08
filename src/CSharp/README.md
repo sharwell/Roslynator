@@ -1,5 +1,14 @@
 # Roslynator\.CSharp
 
+[Namespaces](#namespaces) &#x2022; [Classes](#classes) &#x2022; [Static Classes](#static-classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums)
+
+## Namespaces
+
+* [Roslynator](../../docs/api/Roslynator/README.md)
+* [Roslynator.CSharp](../../docs/api/Roslynator/CSharp/README.md)
+* [Roslynator.CSharp.Syntax](../../docs/api/Roslynator/CSharp/Syntax/README.md)
+* [Roslynator.Text](../../docs/api/Roslynator/Text/README.md)
+
 ## Classes
 
 * [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)

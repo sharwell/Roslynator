@@ -8,9 +8,16 @@ namespace Roslynator.Documentation
     public enum RootDocumentationParts
     {
         None = 0,
+        Content = 1,
         ExtendedExternalTypesLink = 2,
         Namespaces = 4,
-        Types = 8,
-        All = ExtendedExternalTypesLink | Namespaces | Types,
+        Classes = 8,
+        StaticClasses = 16,
+        Structs = 32,
+        Interfaces = 64,
+        Enums = 128,
+        Delegates = 256,
+        Types = Classes | StaticClasses | Structs | Interfaces | Enums | Delegates,
+        All = Content | ExtendedExternalTypesLink | Namespaces | Types
     }
 }

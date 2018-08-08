@@ -66,13 +66,13 @@ namespace Roslynator.Documentation
 
             var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHub, options);
 
-            string content = generator.GenerateObjectModel(heading);
+            DocumentationGeneratorResult result = generator.GenerateRoot(heading);
 
-            string path = Path.Combine(directoryPath, GitHubDocumentationUrlProvider.ReadMeFileName);
+            string path = Path.Combine(directoryPath, result.Path);
 
             Directory.CreateDirectory(Path.GetDirectoryName(path));
 
-            FileHelper.WriteAllText(path, content, _utf8NoBom, onlyIfChanges: true, fileMustExists: false);
+            FileHelper.WriteAllText(path, result.Content, _utf8NoBom, onlyIfChanges: true, fileMustExists: false);
         }
 
         internal static DocumentationModel CreateFromTrustedPlatformAssemblies(string[] assemblyNames)
