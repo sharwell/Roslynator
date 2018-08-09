@@ -6,6 +6,7 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
 using Roslynator.CSharp;
 
@@ -357,9 +358,9 @@ namespace Roslynator.Documentation
             WriteLine();
         }
 
-        public virtual void WriteSummary(ISymbol symbol)
+        public virtual void WriteSummary(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
         {
-            WriteSection(symbol, heading: Resources.SummaryTitle, WellKnownTags.Summary);
+            WriteSection(heading: Resources.SummaryTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Summary);
         }
 
         public virtual void WriteDefinition(ISymbol symbol)
@@ -440,7 +441,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteReturnValue(ISymbol symbol)
+        public virtual void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
         {
             switch (symbol.Kind)
             {
@@ -461,7 +462,7 @@ namespace Roslynator.Documentation
                             WriteLinkOrTypeLink(returnType);
                             WriteLine();
 
-                            GetXmlDocumentation(symbol)?.WriteContentTo(this, WellKnownTags.Returns);
+                            xmlDocumentation?.WriteContentTo(this, WellKnownTags.Returns);
                         }
 
                         break;
@@ -639,19 +640,39 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteExceptions(ISymbol symbol)
+        public virtual void WriteExceptions(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
         {
-            GetXmlDocumentation(symbol)?.WriteExceptionsTo(this);
+            using (IEnumerator<(XElement element, ISymbol exceptionSymbol)> en = xmlDocumentation.GetExceptions(DocumentationModel.Compilation).GetEnumerator())
+            {
+                if (en.MoveNext())
+                {
+                    WriteHeading(3, Resources.ExceptionsTitle);
+
+                    do
+                    {
+                        XElement element = en.Current.element;
+                        ISymbol exceptionSymbol = en.Current.exceptionSymbol;
+
+                        WriteLink(exceptionSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
+                        WriteLine();
+                        WriteLine();
+                        element.WriteContentTo(this);
+                        WriteLine();
+                        WriteLine();
+                    }
+                    while (en.MoveNext());
+                }
+            }
         }
 
-        public virtual void WriteExamples(ISymbol symbol)
+        public virtual void WriteExamples(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
         {
-            WriteSection(symbol, heading: Resources.ExamplesTitle, WellKnownTags.Example);
+            WriteSection(heading: Resources.ExamplesTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Example);
         }
 
-        public virtual void WriteRemarks(ISymbol symbol)
+        public virtual void WriteRemarks(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
         {
-            WriteSection(symbol, heading: Resources.RemarksTitle, WellKnownTags.Remarks);
+            WriteSection(heading: Resources.RemarksTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Remarks);
         }
 
         public virtual void WriteEnumFields(IEnumerable<IFieldSymbol> fields, INamedTypeSymbol enumType)
@@ -720,7 +741,7 @@ namespace Roslynator.Documentation
                             WriteEndTableCell();
                         }
 
-                        SymbolXmlDocumentation xmlDocumentation = GetXmlDocumentation(fieldSymbol);
+                        SymbolXmlDocumentation xmlDocumentation = DocumentationModel.GetXmlDocumentation(fieldSymbol, Options.PreferredCultureName);
 
                         if (xmlDocumentation != null)
                         {
@@ -784,7 +805,7 @@ namespace Roslynator.Documentation
                 SymbolDisplayFormats.SimpleDefinition);
         }
 
-        public virtual void WriteSeeAlso(ISymbol symbol)
+        public virtual void WriteSeeAlso(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
         {
             using (IEnumerator<ISymbol> en = GetSymbols().GetEnumerator())
             {
@@ -806,11 +827,11 @@ namespace Roslynator.Documentation
 
             IEnumerable<ISymbol> GetSymbols()
             {
-                SymbolXmlDocumentation xmlDocumentation = GetXmlDocumentation(symbol);
-
-                if (xmlDocumentation != null)
+                foreach (XElement element in xmlDocumentation.Elements(WellKnownTags.SeeAlso))
                 {
-                    foreach (string commentId in xmlDocumentation.SeeAlsoCommentIds())
+                    string commentId = element.Attribute("cref")?.Value;
+
+                    if (commentId != null)
                     {
                         ISymbol s = DocumentationModel.GetFirstSymbolForReferenceId(commentId);
 
@@ -821,9 +842,23 @@ namespace Roslynator.Documentation
             }
         }
 
-        private void WriteSection(ISymbol symbol, string heading, string elementName)
+        private void WriteSection(string heading, SymbolXmlDocumentation xmlDocumentation, string elementName)
         {
-            GetXmlDocumentation(symbol)?.WriteSectionTo(this, heading, elementName);
+            XElement element = xmlDocumentation.Element(elementName);
+
+            if (element == null)
+                return;
+
+            if (heading != null)
+            {
+                WriteHeading(2, heading);
+            }
+            else
+            {
+                WriteLine();
+            }
+
+            element.WriteContentTo(this);
         }
 
         internal void WriteTable(
@@ -888,9 +923,13 @@ namespace Roslynator.Documentation
                         bool isInherited = containingType != null
                             && symbol.ContainingType != containingType;
 
-                        if (symbol.IsKind(SymbolKind.Parameter, SymbolKind.TypeParameter))
+                        if (symbol.Kind == SymbolKind.Parameter)
                         {
-                            GetXmlDocumentation(symbol.ContainingSymbol)?.WriteParamContentTo(this, symbol.Name);
+                            GetXmlDocumentation(symbol.ContainingSymbol)?.ParamElement(symbol.Name)?.WriteContentTo(this);
+                        }
+                        else if (symbol.Kind == SymbolKind.TypeParameter)
+                        {
+                            GetXmlDocumentation(symbol.ContainingSymbol)?.TypeParamElement(symbol.Name)?.WriteContentTo(this);
                         }
                         else
                         {

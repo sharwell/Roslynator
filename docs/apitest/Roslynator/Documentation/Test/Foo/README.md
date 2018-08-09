@@ -31,7 +31,7 @@ public class Foo : Bla
 
 bla `null`
 
-```csharp
+```
 string s = null;
 ```
 

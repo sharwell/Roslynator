@@ -55,11 +55,6 @@ namespace Roslynator.Documentation
             }
         }
 
-        private SymbolXmlDocumentation GetXmlDocumentation(ISymbol symbol)
-        {
-            return DocumentationModel.GetXmlDocumentation(symbol, Options.PreferredCultureName);
-        }
-
         public virtual void WriteMember(MemberDocumentationModel model)
         {
             ISymbol symbol = model.Symbol;
@@ -153,12 +148,14 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteReturnValue(ISymbol symbol)
+        public virtual void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
         {
         }
 
         public void WriteContent(ISymbol symbol)
         {
+            SymbolXmlDocumentation xmlDocumentation = DocumentationModel.GetXmlDocumentation(symbol, Options.PreferredCultureName);
+
             foreach (MemberDocumentationParts part in EnabledAndSortedMemberParts)
             {
                 switch (part)
@@ -172,7 +169,9 @@ namespace Roslynator.Documentation
                         }
                     case MemberDocumentationParts.Summary:
                         {
-                            Writer.WriteSummary(symbol);
+                            if (xmlDocumentation != null)
+                                Writer.WriteSummary(symbol, xmlDocumentation);
+
                             break;
                         }
                     case MemberDocumentationParts.Definition:
@@ -192,7 +191,7 @@ namespace Roslynator.Documentation
                         }
                     case MemberDocumentationParts.ReturnValue:
                         {
-                            WriteReturnValue(symbol);
+                            WriteReturnValue(symbol, xmlDocumentation);
                             break;
                         }
                     case MemberDocumentationParts.Implements:
@@ -207,22 +206,30 @@ namespace Roslynator.Documentation
                         }
                     case MemberDocumentationParts.Exceptions:
                         {
-                            Writer.WriteExceptions(symbol);
+                            if (xmlDocumentation != null)
+                                Writer.WriteExceptions(symbol, xmlDocumentation);
+
                             break;
                         }
                     case MemberDocumentationParts.Examples:
                         {
-                            Writer.WriteExamples(symbol);
+                            if (xmlDocumentation != null)
+                                Writer.WriteExamples(symbol, xmlDocumentation);
+
                             break;
                         }
                     case MemberDocumentationParts.Remarks:
                         {
-                            Writer.WriteRemarks(symbol);
+                            if (xmlDocumentation != null)
+                                Writer.WriteRemarks(symbol, xmlDocumentation);
+
                             break;
                         }
                     case MemberDocumentationParts.SeeAlso:
                         {
-                            Writer.WriteSeeAlso(symbol);
+                            if (xmlDocumentation != null)
+                                Writer.WriteSeeAlso(symbol, xmlDocumentation);
+
                             break;
                         }
                 }
@@ -309,7 +316,7 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override void WriteReturnValue(ISymbol symbol)
+            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
             {
                 var fieldSymbol = (IFieldSymbol)symbol;
 
@@ -324,7 +331,7 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override void WriteReturnValue(ISymbol symbol)
+            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
             {
                 var methodSymbol = (IMethodSymbol)symbol;
 
@@ -338,7 +345,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                GetXmlDocumentation(methodSymbol)?.WriteContentTo(Writer, WellKnownTags.Returns);
+                xmlDocumentation?.WriteContentTo(Writer, WellKnownTags.Returns);
             }
         }
 
@@ -348,7 +355,7 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override void WriteReturnValue(ISymbol symbol)
+            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
             {
                 var methodSymbol = (IMethodSymbol)symbol;
 
@@ -357,7 +364,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                GetXmlDocumentation(methodSymbol)?.WriteContentTo(Writer, WellKnownTags.Returns);
+                xmlDocumentation?.WriteContentTo(Writer, WellKnownTags.Returns);
             }
         }
 
@@ -367,7 +374,7 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override void WriteReturnValue(ISymbol symbol)
+            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
             {
                 var propertySymbol = (IPropertySymbol)symbol;
 
@@ -378,7 +385,7 @@ namespace Roslynator.Documentation
 
                 string elementName = (propertySymbol.IsIndexer) ? WellKnownTags.Returns : WellKnownTags.Value;
 
-                GetXmlDocumentation(propertySymbol)?.WriteContentTo(Writer, elementName);
+                xmlDocumentation?.WriteContentTo(Writer, elementName);
             }
         }
     }

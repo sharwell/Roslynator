@@ -234,6 +234,8 @@ namespace Roslynator.Documentation
             bool addLink = true,
             NamespaceDocumentationParts disabledParts = NamespaceDocumentationParts.None)
         {
+            SymbolXmlDocumentation xmlDocumentation = DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName);
+
             writer.WriteHeading(1 + headingLevelBase, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: addLink);
 
             foreach (NamespaceDocumentationParts part in EnabledAndSortedNamespaceParts)
@@ -250,17 +252,21 @@ namespace Roslynator.Documentation
                         }
                     case NamespaceDocumentationParts.Summary:
                         {
-                            DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?.WriteContentTo(writer, WellKnownTags.Summary);
+                            xmlDocumentation?.WriteContentTo(writer, WellKnownTags.Summary);
                             break;
                         }
                     case NamespaceDocumentationParts.Examples:
                         {
-                            writer.WriteExamples(namespaceModel.Symbol);
+                            if (xmlDocumentation != null)
+                                writer.WriteExamples(namespaceModel.Symbol, xmlDocumentation);
+
                             break;
                         }
                     case NamespaceDocumentationParts.Remarks:
                         {
-                            writer.WriteRemarks(namespaceModel.Symbol);
+                            if (xmlDocumentation != null)
+                                writer.WriteRemarks(namespaceModel.Symbol, xmlDocumentation);
+
                             break;
                         }
                     case NamespaceDocumentationParts.Classes:
@@ -290,7 +296,9 @@ namespace Roslynator.Documentation
                         }
                     case NamespaceDocumentationParts.SeeAlso:
                         {
-                            writer.WriteSeeAlso(namespaceModel.Symbol);
+                            if (xmlDocumentation != null)
+                                writer.WriteSeeAlso(namespaceModel.Symbol, xmlDocumentation);
+
                             break;
                         }
                     default:
@@ -337,15 +345,11 @@ namespace Roslynator.Documentation
                         }
                     case NamespaceDocumentationParts.Examples:
                         {
-                            return DocumentationModel
-                                .GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?
-                                .HasElement(WellKnownTags.Example) == true;
+                            return xmlDocumentation?.HasElement(WellKnownTags.Example) == true;
                         }
                     case NamespaceDocumentationParts.Remarks:
                         {
-                            return DocumentationModel
-                                .GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?
-                                .HasElement(WellKnownTags.Remarks) == true;
+                            return xmlDocumentation?.HasElement(WellKnownTags.Remarks) == true;
                         }
                     case NamespaceDocumentationParts.Classes:
                         {
@@ -369,10 +373,7 @@ namespace Roslynator.Documentation
                         }
                     case NamespaceDocumentationParts.SeeAlso:
                         {
-                            return DocumentationModel
-                                .GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName)?
-                                .SeeAlsoCommentIds()
-                                .Any() == true;
+                            return xmlDocumentation?.Elements(WellKnownTags.SeeAlso).Any() == true;
                         }
                     default:
                         {
@@ -477,6 +478,8 @@ namespace Roslynator.Documentation
 
             bool includeInherited = typeSymbol.TypeKind != TypeKind.Interface || Options.InheritedInterfaceMembers;
 
+            SymbolXmlDocumentation xmlDocumentation = DocumentationModel.GetXmlDocumentation(typeModel.Symbol, Options.PreferredCultureName);
+
             using (DocumentationWriter writer = CreateWriter(typeSymbol))
             {
                 writer.WriteStartDocument();
@@ -511,7 +514,9 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Summary:
                             {
-                                writer.WriteSummary(typeSymbol);
+                                if (xmlDocumentation != null)
+                                    writer.WriteSummary(typeSymbol, xmlDocumentation);
+
                                 break;
                             }
                         case TypeDocumentationParts.Definition:
@@ -531,7 +536,9 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.ReturnValue:
                             {
-                                writer.WriteReturnValue(typeSymbol);
+                                if (xmlDocumentation != null)
+                                    writer.WriteReturnValue(typeSymbol, xmlDocumentation);
+
                                 break;
                             }
                         case TypeDocumentationParts.Inheritance:
@@ -556,12 +563,16 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Examples:
                             {
-                                writer.WriteExamples(typeSymbol);
+                                if (xmlDocumentation != null)
+                                    writer.WriteExamples(typeSymbol, xmlDocumentation);
+
                                 break;
                             }
                         case TypeDocumentationParts.Remarks:
                             {
-                                writer.WriteRemarks(typeSymbol);
+                                if (xmlDocumentation != null)
+                                    writer.WriteRemarks(typeSymbol, xmlDocumentation);
+
                                 break;
                             }
                         case TypeDocumentationParts.Constructors:
@@ -654,7 +665,9 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.SeeAlso:
                             {
-                                writer.WriteSeeAlso(typeSymbol);
+                                if (xmlDocumentation != null)
+                                    writer.WriteSeeAlso(typeSymbol, xmlDocumentation);
+
                                 break;
                             }
                     }
@@ -710,15 +723,11 @@ namespace Roslynator.Documentation
                         }
                     case TypeDocumentationParts.Examples:
                         {
-                            return DocumentationModel
-                                .GetXmlDocumentation(typeModel.Symbol, Options.PreferredCultureName)?
-                                .HasElement(WellKnownTags.Example) == true;
+                            return xmlDocumentation?.HasElement(WellKnownTags.Example) == true;
                         }
                     case TypeDocumentationParts.Remarks:
                         {
-                            return DocumentationModel
-                                .GetXmlDocumentation(typeModel.Symbol, Options.PreferredCultureName)?
-                                .HasElement(WellKnownTags.Remarks) == true;
+                            return xmlDocumentation?.HasElement(WellKnownTags.Remarks) == true;
                         }
                     case TypeDocumentationParts.Constructors:
                         {
@@ -796,10 +805,7 @@ namespace Roslynator.Documentation
                         }
                     case TypeDocumentationParts.SeeAlso:
                         {
-                            return DocumentationModel
-                                .GetXmlDocumentation(typeModel.Symbol, Options.PreferredCultureName)?
-                                .SeeAlsoCommentIds()
-                                .Any() == true;
+                            return xmlDocumentation?.Elements(WellKnownTags.SeeAlso).Any() == true;
                         }
                     default:
                         {
