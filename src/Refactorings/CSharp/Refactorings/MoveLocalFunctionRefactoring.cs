@@ -30,16 +30,12 @@ namespace Roslynator.CSharp.Refactorings
             }
 
             SyntaxList<StatementSyntax> newStatements = statements
-                .Insert(newIndex, localFunction)
+                .Insert(newIndex, localFunction.WithNavigationAnnotation())
                 .RemoveAt(index);
 
             BlockSyntax newBlock = block.WithStatements(newStatements).WithFormatterAnnotation();
 
-            LocalFunctionStatementSyntax newLocalFunction = localFunction
-                .WithBody(newBlock)
-                .WithNavigationAnnotation();
-
-            return document.ReplaceNodeAsync(localFunction, newLocalFunction, cancellationToken);
+            return document.ReplaceNodeAsync(block, newBlock, cancellationToken);
         }
     }
 }
