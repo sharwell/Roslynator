@@ -101,7 +101,7 @@ namespace Roslynator.Documentation
                 {
                     HeadingLevelBase++;
 
-                    string id = DocumentationUrlProvider.GetFragment(symbol);
+                    string id = DocumentationUrlProvider.GetFragment(overloadSymbol);
 
                     Writer.WriteStartHeading(1);
                     Writer.WriteString(overloadSymbol.ToDisplayString(format, additionalOptions));

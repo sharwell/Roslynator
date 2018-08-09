@@ -33,7 +33,7 @@ public override bool Equals(object obj)
 
 true if **obj** and this instance are the same type and represent the same value; otherwise, false\. 
 
-## Equals\(SimpleAssignmentStatementInfo\)<a name="Roslynator_CSharp_Syntax_SimpleAssignmentStatementInfo_Equals_System_Object_"></a>
+## Equals\(SimpleAssignmentStatementInfo\)<a name="Roslynator_CSharp_Syntax_SimpleAssignmentStatementInfo_Equals_Roslynator_CSharp_Syntax_SimpleAssignmentStatementInfo_"></a>
 
 ### Summary
 

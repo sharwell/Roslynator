@@ -11,7 +11,7 @@
 | [Equals(ExpressionChain)](#Roslynator_CSharp_ExpressionChain_Equals_Roslynator_CSharp_ExpressionChain_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<ExpressionChain>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | [Equals(Object)](#Roslynator_CSharp_ExpressionChain_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
-## Equals\(ExpressionChain\)<a name="Roslynator_CSharp_ExpressionChain_Equals_System_Object_"></a>
+## Equals\(ExpressionChain\)<a name="Roslynator_CSharp_ExpressionChain_Equals_Roslynator_CSharp_ExpressionChain_"></a>
 
 ### Summary
 

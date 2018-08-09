@@ -33,7 +33,7 @@ public static StatementListSelection Create(BlockSyntax block, TextSpan span)
 
 [StatementListSelection](../README.md)
 
-## Create\(StatementListInfo, TextSpan\)<a name="Roslynator_CSharp_StatementListSelection_Create_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_Microsoft_CodeAnalysis_Text_TextSpan_"></a>
+## Create\(StatementListInfo, TextSpan\)<a name="Roslynator_CSharp_StatementListSelection_Create_Roslynator_CSharp_Syntax_StatementListInfo__Microsoft_CodeAnalysis_Text_TextSpan_"></a>
 
 ### Summary
 
@@ -54,7 +54,7 @@ public static StatementListSelection Create(in StatementListInfo statementsInfo,
 
 [StatementListSelection](../README.md)
 
-## Create\(SwitchSectionSyntax, TextSpan\)<a name="Roslynator_CSharp_StatementListSelection_Create_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_Microsoft_CodeAnalysis_Text_TextSpan_"></a>
+## Create\(SwitchSectionSyntax, TextSpan\)<a name="Roslynator_CSharp_StatementListSelection_Create_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchSectionSyntax_Microsoft_CodeAnalysis_Text_TextSpan_"></a>
 
 ### Summary
 

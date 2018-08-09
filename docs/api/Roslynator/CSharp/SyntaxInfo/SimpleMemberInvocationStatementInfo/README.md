@@ -12,7 +12,7 @@
 | [SimpleMemberInvocationStatementInfo(InvocationExpressionSyntax, Boolean)](#Roslynator_CSharp_SyntaxInfo_SimpleMemberInvocationStatementInfo_Microsoft_CodeAnalysis_CSharp_Syntax_InvocationExpressionSyntax_System_Boolean_) | Creates a new [SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md) from the specified invocation expression\. |
 | [SimpleMemberInvocationStatementInfo(SyntaxNode, Boolean)](#Roslynator_CSharp_SyntaxInfo_SimpleMemberInvocationStatementInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_) | Creates a new [SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md) from the specified node\. |
 
-## SimpleMemberInvocationStatementInfo\(ExpressionStatementSyntax, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleMemberInvocationStatementInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_"></a>
+## SimpleMemberInvocationStatementInfo\(ExpressionStatementSyntax, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleMemberInvocationStatementInfo_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionStatementSyntax_System_Boolean_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 [SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
 
-## SimpleMemberInvocationStatementInfo\(InvocationExpressionSyntax, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleMemberInvocationStatementInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_"></a>
+## SimpleMemberInvocationStatementInfo\(InvocationExpressionSyntax, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleMemberInvocationStatementInfo_Microsoft_CodeAnalysis_CSharp_Syntax_InvocationExpressionSyntax_System_Boolean_"></a>
 
 ### Summary
 

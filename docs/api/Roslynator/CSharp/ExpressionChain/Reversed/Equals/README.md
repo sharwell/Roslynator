@@ -27,7 +27,7 @@ public override bool Equals(object obj)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Equals\(Reversed\)<a name="Roslynator_CSharp_ExpressionChain_Reversed_Equals_System_Object_"></a>
+## Equals\(Reversed\)<a name="Roslynator_CSharp_ExpressionChain_Reversed_Equals_Roslynator_CSharp_ExpressionChain_Reversed_"></a>
 
 ```csharp
 public bool Equals(ExpressionChain.Reversed other)

@@ -18,7 +18,7 @@
 | [GenericInfo(TypeParameterListSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterListSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type parameter list\. |
 | [GenericInfo(TypeParameterSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type parameter\. |
 
-## GenericInfo\(DelegateDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GenericInfo\(DelegateDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -38,7 +38,7 @@ public static GenericInfo GenericInfo(DelegateDeclarationSyntax delegateDeclarat
 
 [GenericInfo](../../Syntax/GenericInfo/README.md)
 
-## GenericInfo\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GenericInfo\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_"></a>
 
 ### Summary
 
@@ -58,7 +58,7 @@ public static GenericInfo GenericInfo(LocalFunctionStatementSyntax localFunction
 
 [GenericInfo](../../Syntax/GenericInfo/README.md)
 
-## GenericInfo\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GenericInfo\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -98,7 +98,7 @@ public static GenericInfo GenericInfo(SyntaxNode node)
 
 [GenericInfo](../../Syntax/GenericInfo/README.md)
 
-## GenericInfo\(TypeDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GenericInfo\(TypeDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -118,7 +118,7 @@ public static GenericInfo GenericInfo(TypeDeclarationSyntax typeDeclaration)
 
 [GenericInfo](../../Syntax/GenericInfo/README.md)
 
-## GenericInfo\(TypeParameterConstraintClauseSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GenericInfo\(TypeParameterConstraintClauseSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintClauseSyntax_"></a>
 
 ### Summary
 
@@ -138,7 +138,7 @@ public static GenericInfo GenericInfo(TypeParameterConstraintClauseSyntax constr
 
 [GenericInfo](../../Syntax/GenericInfo/README.md)
 
-## GenericInfo\(TypeParameterConstraintSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GenericInfo\(TypeParameterConstraintSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_"></a>
 
 ### Summary
 
@@ -158,7 +158,7 @@ public static GenericInfo GenericInfo(TypeParameterConstraintSyntax typeParamete
 
 [GenericInfo](../../Syntax/GenericInfo/README.md)
 
-## GenericInfo\(TypeParameterListSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GenericInfo\(TypeParameterListSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterListSyntax_"></a>
 
 ### Summary
 
@@ -178,7 +178,7 @@ public static GenericInfo GenericInfo(TypeParameterListSyntax typeParameterList)
 
 [GenericInfo](../../Syntax/GenericInfo/README.md)
 
-## GenericInfo\(TypeParameterSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GenericInfo\(TypeParameterSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterSyntax_"></a>
 
 ### Summary
 

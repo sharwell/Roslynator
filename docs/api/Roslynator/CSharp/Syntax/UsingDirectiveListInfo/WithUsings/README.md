@@ -31,7 +31,7 @@ public UsingDirectiveListInfo WithUsings(IEnumerable<UsingDirectiveSyntax> using
 
 [UsingDirectiveListInfo](../README.md)
 
-## WithUsings\(SyntaxList\<UsingDirectiveSyntax>\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_WithUsings_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__"></a>
+## WithUsings\(SyntaxList\<UsingDirectiveSyntax>\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_WithUsings_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__"></a>
 
 ### Summary
 

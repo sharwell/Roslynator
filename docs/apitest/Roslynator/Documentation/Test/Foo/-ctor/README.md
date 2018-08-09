@@ -41,7 +41,7 @@ b
 
 * [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
 
-## Foo\(String, String\)<a name="Roslynator_Documentation_Test_Foo__ctor_System_String_"></a>
+## Foo\(String, String\)<a name="Roslynator_Documentation_Test_Foo__ctor_System_String_System_String_"></a>
 
 ```csharp
 public Foo(string s, string s2)

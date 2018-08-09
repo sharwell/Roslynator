@@ -27,7 +27,7 @@ public static BlockSyntax Block(StatementSyntax statement)
 
 [BlockSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.blocksyntax)
 
-## Block\(SyntaxToken, StatementSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_Block_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_"></a>
+## Block\(SyntaxToken, StatementSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_Block_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ```csharp
 public static BlockSyntax Block(SyntaxToken openBrace, StatementSyntax statement, SyntaxToken closeBrace)

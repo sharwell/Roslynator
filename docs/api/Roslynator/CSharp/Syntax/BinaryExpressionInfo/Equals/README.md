@@ -11,7 +11,7 @@
 | [Equals(BinaryExpressionInfo)](#Roslynator_CSharp_Syntax_BinaryExpressionInfo_Equals_Roslynator_CSharp_Syntax_BinaryExpressionInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<BinaryExpressionInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | [Equals(Object)](#Roslynator_CSharp_Syntax_BinaryExpressionInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
-## Equals\(BinaryExpressionInfo\)<a name="Roslynator_CSharp_Syntax_BinaryExpressionInfo_Equals_System_Object_"></a>
+## Equals\(BinaryExpressionInfo\)<a name="Roslynator_CSharp_Syntax_BinaryExpressionInfo_Equals_Roslynator_CSharp_Syntax_BinaryExpressionInfo_"></a>
 
 ### Summary
 

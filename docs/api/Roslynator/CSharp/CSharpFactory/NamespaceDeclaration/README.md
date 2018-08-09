@@ -28,7 +28,7 @@ public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, M
 
 [NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.namespacedeclarationsyntax)
 
-## NamespaceDeclaration\(NameSyntax, SyntaxList\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_CSharpFactory_NamespaceDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
+## NamespaceDeclaration\(NameSyntax, SyntaxList\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_CSharpFactory_NamespaceDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__"></a>
 
 ```csharp
 public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, SyntaxList<MemberDeclarationSyntax> members)

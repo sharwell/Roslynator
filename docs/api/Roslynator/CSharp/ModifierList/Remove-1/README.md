@@ -38,7 +38,7 @@ public static TNode Remove<TNode>(TNode node, SyntaxKind kind) where TNode : Mic
 
 TNode
 
-## Remove\<TNode>\(TNode, SyntaxToken\)<a name="Roslynator_CSharp_ModifierList_Remove__1___0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## Remove\<TNode>\(TNode, SyntaxToken\)<a name="Roslynator_CSharp_ModifierList_Remove__1___0_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ### Summary
 

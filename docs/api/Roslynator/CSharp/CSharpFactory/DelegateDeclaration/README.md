@@ -30,7 +30,7 @@ public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modi
 
 [DelegateDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.delegatedeclarationsyntax)
 
-## DelegateDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_DelegateDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_"></a>
+## DelegateDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_DelegateDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_"></a>
 
 ```csharp
 public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken identifier, ParameterListSyntax parameterList)

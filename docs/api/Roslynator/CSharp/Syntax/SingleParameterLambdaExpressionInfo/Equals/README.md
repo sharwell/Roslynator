@@ -33,7 +33,7 @@ public override bool Equals(object obj)
 
 true if **obj** and this instance are the same type and represent the same value; otherwise, false\. 
 
-## Equals\(SingleParameterLambdaExpressionInfo\)<a name="Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_Equals_System_Object_"></a>
+## Equals\(SingleParameterLambdaExpressionInfo\)<a name="Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_Equals_Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_"></a>
 
 ### Summary
 

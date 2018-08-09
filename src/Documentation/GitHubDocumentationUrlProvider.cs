@@ -60,27 +60,15 @@ namespace Roslynator.Documentation
         {
             string url = CreateLocalUrl();
 
-            if (!string.IsNullOrEmpty(fragment))
-            {
-                if (url == LinkToSelf)
-                {
-                    url = "#" + fragment;
-                }
-                else
-                {
-                    url += "#" + fragment;
-                }
-            }
-
             return new DocumentationUrlInfo(url, DocumentationUrlKind.Local);
 
             string CreateLocalUrl()
             {
                 if (containingFolders.IsDefault)
-                    return GetUrl(ReadMeFileName, folders, '/');
+                    return GetUrl(ReadMeFileName, folders, '/') + fragment;
 
                 if (FoldersEqual(containingFolders, folders))
-                    return LinkToSelf;
+                    return (string.IsNullOrEmpty(fragment)) ? LinkToSelf : fragment;
 
                 int count = 0;
 
@@ -135,7 +123,7 @@ namespace Roslynator.Documentation
 
                 Debug.WriteLine(sb.ToString());
 
-                return StringBuilderCache.GetStringAndFree(sb);
+                return StringBuilderCache.GetStringAndFree(sb) + fragment;
             }
 
             bool FoldersEqual(ImmutableArray<string> folders1, ImmutableArray<string> folders2)

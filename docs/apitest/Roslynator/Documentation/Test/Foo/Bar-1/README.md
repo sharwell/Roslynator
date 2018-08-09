@@ -11,7 +11,7 @@
 | [Bar()](../Bar/README.md#Roslynator_Documentation_Test_Foo_Bar) | abc |
 | [Bar\<T>(String, String)](#Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_) | s **value** **T** |
 
-## Bar\(\)<a name="Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_"></a>
+## Bar\(\)<a name="Roslynator_Documentation_Test_Foo_Bar"></a>
 
 ### Summary
 

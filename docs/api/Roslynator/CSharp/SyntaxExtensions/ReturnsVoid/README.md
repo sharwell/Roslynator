@@ -32,7 +32,7 @@ public static bool ReturnsVoid(this DelegateDeclarationSyntax delegateDeclaratio
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ReturnsVoid\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_"></a>
+## ReturnsVoid\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_"></a>
 
 ### Summary
 
@@ -52,7 +52,7 @@ public static bool ReturnsVoid(this LocalFunctionStatementSyntax localFunctionSt
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ReturnsVoid\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_"></a>
+## ReturnsVoid\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_"></a>
 
 ### Summary
 

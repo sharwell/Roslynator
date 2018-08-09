@@ -1260,11 +1260,13 @@ namespace Roslynator.Documentation
                 ? UrlProvider.GetFolders(CurrentSymbol)
                 : default;
 
-            string url = UrlProvider.GetLocalUrl(folders, containingFolders, GetFragment()).Url;
+            string id = GetId();
+
+            string url = UrlProvider.GetLocalUrl(folders, containingFolders, (id != null) ? "#" + id : null).Url;
 
             return Options.BaseLocalUrl + url;
 
-            string GetFragment()
+            string GetId()
             {
                 if (symbol.Kind == SymbolKind.Method
                     || (symbol.Kind == SymbolKind.Property && ((IPropertySymbol)symbol).IsIndexer))

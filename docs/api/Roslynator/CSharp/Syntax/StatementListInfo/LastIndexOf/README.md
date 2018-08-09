@@ -31,7 +31,7 @@ public int LastIndexOf(Func<StatementSyntax, bool> predicate)
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-## LastIndexOf\(StatementSyntax\)<a name="Roslynator_CSharp_Syntax_StatementListInfo_LastIndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_System_Boolean__"></a>
+## LastIndexOf\(StatementSyntax\)<a name="Roslynator_CSharp_Syntax_StatementListInfo_LastIndexOf_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_"></a>
 
 ### Summary
 

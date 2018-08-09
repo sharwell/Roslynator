@@ -11,7 +11,7 @@
 | [Item\[Int32, Int32\]](#Roslynator_Documentation_Test_Foo_Item_System_Int32_System_Int32_) | s |
 | [Item\[Int32\]](#Roslynator_Documentation_Test_Foo_Item_System_Int32_) | s |
 
-## Item\[Int32, Int32\]<a name="Roslynator_Documentation_Test_Foo_Item_System_Int32_"></a>
+## Item\[Int32, Int32\]<a name="Roslynator_Documentation_Test_Foo_Item_System_Int32_System_Int32_"></a>
 
 ### Summary
 

@@ -29,7 +29,7 @@ public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList 
 
 [EventFieldDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.eventfielddeclarationsyntax)
 
-## EventFieldDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_EventFieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_"></a>
+## EventFieldDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_EventFieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ```csharp
 public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier)

@@ -28,7 +28,7 @@ public void CopyTo(Array array, int index)
 
 * [ICollection.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.copyto)
 
-## CopyTo\(Foo\[\], Int32\)<a name="Roslynator_Documentation_Test_FooCollection_CopyTo_System_Array_System_Int32_"></a>
+## CopyTo\(Foo\[\], Int32\)<a name="Roslynator_Documentation_Test_FooCollection_CopyTo_Roslynator_Documentation_Test_Foo___System_Int32_"></a>
 
 ```csharp
 public void CopyTo(Foo[] array, int arrayIndex)

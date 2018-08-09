@@ -38,7 +38,7 @@ public static TSymbol FindMember<TSymbol>(this ITypeSymbol typeSymbol, Func<TSym
 
 TSymbol
 
-## FindMember\<TSymbol>\(ITypeSymbol, String, Func\<TSymbol, Boolean>\)<a name="Roslynator_SymbolExtensions_FindMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_Func___0_System_Boolean__"></a>
+## FindMember\<TSymbol>\(ITypeSymbol, String, Func\<TSymbol, Boolean>\)<a name="Roslynator_SymbolExtensions_FindMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_String_System_Func___0_System_Boolean__"></a>
 
 ### Summary
 

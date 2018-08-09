@@ -11,7 +11,7 @@
 | [Equals(AssignmentExpressionInfo)](#Roslynator_CSharp_Syntax_AssignmentExpressionInfo_Equals_Roslynator_CSharp_Syntax_AssignmentExpressionInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<AssignmentExpressionInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | [Equals(Object)](#Roslynator_CSharp_Syntax_AssignmentExpressionInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
-## Equals\(AssignmentExpressionInfo\)<a name="Roslynator_CSharp_Syntax_AssignmentExpressionInfo_Equals_System_Object_"></a>
+## Equals\(AssignmentExpressionInfo\)<a name="Roslynator_CSharp_Syntax_AssignmentExpressionInfo_Equals_Roslynator_CSharp_Syntax_AssignmentExpressionInfo_"></a>
 
 ### Summary
 

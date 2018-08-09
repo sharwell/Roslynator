@@ -31,7 +31,7 @@ public int IndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-## IndexOf\(UsingDirectiveSyntax\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_IndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax_System_Boolean__"></a>
+## IndexOf\(UsingDirectiveSyntax\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_IndexOf_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax_"></a>
 
 ### Summary
 

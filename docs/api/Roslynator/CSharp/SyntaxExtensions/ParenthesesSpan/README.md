@@ -32,7 +32,7 @@ public static TextSpan ParenthesesSpan(this CastExpressionSyntax castExpression)
 
 [TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## ParenthesesSpan\(CommonForEachStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CastExpressionSyntax_"></a>
+## ParenthesesSpan\(CommonForEachStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CommonForEachStatementSyntax_"></a>
 
 ### Summary
 
@@ -52,7 +52,7 @@ public static TextSpan ParenthesesSpan(this CommonForEachStatementSyntax forEach
 
 [TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## ParenthesesSpan\(ForStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CastExpressionSyntax_"></a>
+## ParenthesesSpan\(ForStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ForStatementSyntax_"></a>
 
 ### Summary
 

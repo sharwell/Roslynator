@@ -34,7 +34,7 @@ public static bool ImplementsAny(this ITypeSymbol typeSymbol, SpecialType interf
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ImplementsAny\(ITypeSymbol, SpecialType, SpecialType, SpecialType, Boolean\)<a name="Roslynator_SymbolExtensions_ImplementsAny_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_System_Boolean_"></a>
+## ImplementsAny\(ITypeSymbol, SpecialType, SpecialType, SpecialType, Boolean\)<a name="Roslynator_SymbolExtensions_ImplementsAny_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_System_Boolean_"></a>
 
 ### Summary
 

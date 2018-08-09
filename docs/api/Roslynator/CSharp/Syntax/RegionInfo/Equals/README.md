@@ -33,7 +33,7 @@ public override bool Equals(object obj)
 
 true if **obj** and this instance are the same type and represent the same value; otherwise, false\. 
 
-## Equals\(RegionInfo\)<a name="Roslynator_CSharp_Syntax_RegionInfo_Equals_System_Object_"></a>
+## Equals\(RegionInfo\)<a name="Roslynator_CSharp_Syntax_RegionInfo_Equals_Roslynator_CSharp_Syntax_RegionInfo_"></a>
 
 ### Summary
 

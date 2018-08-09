@@ -32,7 +32,7 @@ public TNode Remove(TNode node, SyntaxKind kind)
 
 TNode
 
-## Remove\(TNode, SyntaxToken\)<a name="Roslynator_CSharp_ModifierList_1_Remove__0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## Remove\(TNode, SyntaxToken\)<a name="Roslynator_CSharp_ModifierList_1_Remove__0_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ### Summary
 

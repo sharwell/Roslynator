@@ -31,7 +31,7 @@ public static SyntaxTrivia GetPreprocessingMessageTrivia(this EndRegionDirective
 
 [SyntaxTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivia)
 
-## GetPreprocessingMessageTrivia\(RegionDirectiveTriviaSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_GetPreprocessingMessageTrivia_Microsoft_CodeAnalysis_CSharp_Syntax_EndRegionDirectiveTriviaSyntax_"></a>
+## GetPreprocessingMessageTrivia\(RegionDirectiveTriviaSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_GetPreprocessingMessageTrivia_Microsoft_CodeAnalysis_CSharp_Syntax_RegionDirectiveTriviaSyntax_"></a>
 
 ### Summary
 

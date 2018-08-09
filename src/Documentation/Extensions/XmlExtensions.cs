@@ -57,7 +57,6 @@ namespace Roslynator.Documentation
                                         string value = e.Value;
                                         value = TextUtility.RemoveLeadingTrailingNewLine(value);
 
-                                        //TODO: language
                                         writer.WriteCodeBlock(value);
 
                                         break;

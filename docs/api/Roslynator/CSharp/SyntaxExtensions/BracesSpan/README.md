@@ -34,7 +34,7 @@ public static TextSpan BracesSpan(this ClassDeclarationSyntax classDeclaration)
 
 [TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## BracesSpan\(EnumDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_"></a>
+## BracesSpan\(EnumDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_EnumDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -54,7 +54,7 @@ public static TextSpan BracesSpan(this EnumDeclarationSyntax enumDeclaration)
 
 [TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## BracesSpan\(InterfaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_"></a>
+## BracesSpan\(InterfaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -74,7 +74,7 @@ public static TextSpan BracesSpan(this InterfaceDeclarationSyntax interfaceDecla
 
 [TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## BracesSpan\(NamespaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_"></a>
+## BracesSpan\(NamespaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -94,7 +94,7 @@ public static TextSpan BracesSpan(this NamespaceDeclarationSyntax namespaceDecla
 
 [TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## BracesSpan\(StructDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_"></a>
+## BracesSpan\(StructDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_"></a>
 
 ### Summary
 

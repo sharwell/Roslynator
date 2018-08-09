@@ -31,7 +31,7 @@ public TNode RemoveAll(TNode node)
 
 TNode
 
-## RemoveAll\(TNode, Func\<SyntaxToken, Boolean>\)<a name="Roslynator_CSharp_ModifierList_1_RemoveAll__0_"></a>
+## RemoveAll\(TNode, Func\<SyntaxToken, Boolean>\)<a name="Roslynator_CSharp_ModifierList_1_RemoveAll__0_System_Func_Microsoft_CodeAnalysis_SyntaxToken_System_Boolean__"></a>
 
 ### Summary
 

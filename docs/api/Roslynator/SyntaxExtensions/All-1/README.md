@@ -13,7 +13,7 @@
 | [All\<TNode>(SeparatedSyntaxList\<TNode>, Func\<TNode, Boolean>)](#Roslynator_SyntaxExtensions_All__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Func___0_System_Boolean__) | Returns true if all nodes in a list matches the predicate\. |
 | [All\<TNode>(SyntaxList\<TNode>, Func\<TNode, Boolean>)](#Roslynator_SyntaxExtensions_All__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Func___0_System_Boolean__) | Returns true if all nodes in a list matches the predicate\. |
 
-## All\(SyntaxTokenList, Func\<SyntaxToken, Boolean>\)<a name="Roslynator_SyntaxExtensions_All__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Func___0_System_Boolean__"></a>
+## All\(SyntaxTokenList, Func\<SyntaxToken, Boolean>\)<a name="Roslynator_SyntaxExtensions_All_Microsoft_CodeAnalysis_SyntaxTokenList_System_Func_Microsoft_CodeAnalysis_SyntaxToken_System_Boolean__"></a>
 
 ### Summary
 
@@ -34,7 +34,7 @@ public static bool All(this SyntaxTokenList list, Func<SyntaxToken, bool> predic
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## All\(SyntaxTriviaList, Func\<SyntaxTrivia, Boolean>\)<a name="Roslynator_SyntaxExtensions_All__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Func___0_System_Boolean__"></a>
+## All\(SyntaxTriviaList, Func\<SyntaxTrivia, Boolean>\)<a name="Roslynator_SyntaxExtensions_All_Microsoft_CodeAnalysis_SyntaxTriviaList_System_Func_Microsoft_CodeAnalysis_SyntaxTrivia_System_Boolean__"></a>
 
 ### Summary
 
@@ -82,7 +82,7 @@ public static bool All<TNode>(this SeparatedSyntaxList<TNode> list, Func<TNode, 
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## All\<TNode>\(SyntaxList\<TNode>, Func\<TNode, Boolean>\)<a name="Roslynator_SyntaxExtensions_All__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Func___0_System_Boolean__"></a>
+## All\<TNode>\(SyntaxList\<TNode>, Func\<TNode, Boolean>\)<a name="Roslynator_SyntaxExtensions_All__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Func___0_System_Boolean__"></a>
 
 ### Summary
 

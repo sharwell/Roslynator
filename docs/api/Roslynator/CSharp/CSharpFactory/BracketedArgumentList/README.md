@@ -11,7 +11,7 @@
 | [BracketedArgumentList(ArgumentSyntax)](#Roslynator_CSharp_CSharpFactory_BracketedArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax_) | |
 | [BracketedArgumentList(ArgumentSyntax\[\])](#Roslynator_CSharp_CSharpFactory_BracketedArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax___) | |
 
-## BracketedArgumentList\(ArgumentSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BracketedArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax___"></a>
+## BracketedArgumentList\(ArgumentSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BracketedArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax_"></a>
 
 ```csharp
 public static BracketedArgumentListSyntax BracketedArgumentList(ArgumentSyntax argument)
