@@ -1262,7 +1262,9 @@ namespace Roslynator.Documentation
 
             string id = GetId();
 
-            string url = UrlProvider.GetLocalUrl(folders, containingFolders, (id != null) ? "#" + id : null).Url;
+            string fragment = (id != null) ? "#" + id : null;
+
+            string url = UrlProvider.GetLocalUrl(folders, containingFolders, fragment).Url;
 
             return Options.BaseLocalUrl + url;
 
