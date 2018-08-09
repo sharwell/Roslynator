@@ -9,6 +9,6 @@
 
 ## Static Classes
 
-* [WorkspaceExtensions](../../docs/api/Roslynator/WorkspaceExtensions/README.md)
-* [WorkspaceExtensions](../../docs/api/Roslynator/CSharp/WorkspaceExtensions/README.md)
-* [WorkspaceSyntaxExtensions](../../docs/api/Roslynator/CSharp/WorkspaceSyntaxExtensions/README.md)
+* Roslynator\.[WorkspaceExtensions](../../docs/api/Roslynator/WorkspaceExtensions/README.md)
+* Roslynator\.CSharp\.[WorkspaceExtensions](../../docs/api/Roslynator/CSharp/WorkspaceExtensions/README.md)
+* Roslynator\.CSharp\.[WorkspaceSyntaxExtensions](../../docs/api/Roslynator/CSharp/WorkspaceSyntaxExtensions/README.md)

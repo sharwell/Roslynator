@@ -896,7 +896,7 @@ namespace Roslynator.Documentation
 
                                     do
                                     {
-                                        writer.WriteBulletItemLink(en.Current, format);
+                                        WriteBulletItemLink(en.Current);
                                     }
                                     while (en.MoveNext());
                                 }
@@ -939,6 +939,26 @@ namespace Roslynator.Documentation
                 }
             }
 
+            void WriteBulletItemLink(ISymbol symbol)
+            {
+                writer.WriteStartBulletItem();
+                WriteLink(symbol);
+                writer.WriteEndBulletItem();
+            }
+
+            void WriteLink(ISymbol symbol)
+            {
+                INamespaceSymbol containingNamespace = symbol.ContainingNamespace;
+
+                if (!containingNamespace.IsGlobalNamespace)
+                {
+                    writer.WriteSymbol(containingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                    writer.WriteString(".");
+                }
+
+                writer.WriteLink(symbol, format);
+            }
+
             void WriteTypes(TypeKind typeKind)
             {
                 using (IEnumerator<INamedTypeSymbol> en = typeSymbols
@@ -951,7 +971,7 @@ namespace Roslynator.Documentation
 
                         do
                         {
-                            writer.WriteBulletItemLink(en.Current, format);
+                            WriteBulletItemLink(en.Current);
                         }
                         while (en.MoveNext());
                     }
@@ -961,7 +981,7 @@ namespace Roslynator.Documentation
             void WriteBulletItem(ITypeSymbol baseType, HashSet<ITypeSymbol> nodes)
             {
                 writer.WriteStartBulletItem();
-                writer.WriteLink(baseType, format);
+                WriteLink(baseType);
 
                 nodes.Remove(baseType);
 
