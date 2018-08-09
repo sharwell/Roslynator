@@ -13,7 +13,7 @@
 | SetAccessorDeclaration\(SyntaxTokenList, ArrowExpressionClauseSyntax\) | |
 | SetAccessorDeclaration\(SyntaxTokenList, BlockSyntax\) | |
 
-## SetAccessorDeclaration\(BlockSyntax\)
+## SetAccessorDeclaration\(BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SetAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
 public static AccessorDeclarationSyntax SetAccessorDeclaration(BlockSyntax body)
@@ -29,7 +29,7 @@ public static AccessorDeclarationSyntax SetAccessorDeclaration(BlockSyntax body)
 
 [AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
-## SetAccessorDeclaration\(SyntaxTokenList, BlockSyntax\)
+## SetAccessorDeclaration\(SyntaxTokenList, BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SetAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
 public static AccessorDeclarationSyntax SetAccessorDeclaration(SyntaxTokenList modifiers, BlockSyntax body)
@@ -46,7 +46,7 @@ public static AccessorDeclarationSyntax SetAccessorDeclaration(SyntaxTokenList m
 
 [AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
-## SetAccessorDeclaration\(ArrowExpressionClauseSyntax\)
+## SetAccessorDeclaration\(ArrowExpressionClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SetAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
 public static AccessorDeclarationSyntax SetAccessorDeclaration(ArrowExpressionClauseSyntax expressionBody)
@@ -62,7 +62,7 @@ public static AccessorDeclarationSyntax SetAccessorDeclaration(ArrowExpressionCl
 
 [AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
-## SetAccessorDeclaration\(SyntaxTokenList, ArrowExpressionClauseSyntax\)
+## SetAccessorDeclaration\(SyntaxTokenList, ArrowExpressionClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SetAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
 public static AccessorDeclarationSyntax SetAccessorDeclaration(SyntaxTokenList modifiers, ArrowExpressionClauseSyntax expressionBody)

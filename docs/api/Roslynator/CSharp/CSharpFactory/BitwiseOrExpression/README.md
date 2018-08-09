@@ -11,7 +11,7 @@
 | BitwiseOrExpression\(ExpressionSyntax, ExpressionSyntax\) | |
 | BitwiseOrExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) | |
 
-## BitwiseOrExpression\(ExpressionSyntax, ExpressionSyntax\)
+## BitwiseOrExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BitwiseOrExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax BitwiseOrExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -28,7 +28,7 @@ public static BinaryExpressionSyntax BitwiseOrExpression(ExpressionSyntax left, 
 
 [BinaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.binaryexpressionsyntax)
 
-## BitwiseOrExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)
+## BitwiseOrExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BitwiseOrExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax BitwiseOrExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

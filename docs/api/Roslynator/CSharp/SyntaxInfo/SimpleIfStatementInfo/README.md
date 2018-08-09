@@ -11,7 +11,7 @@
 | SimpleIfStatementInfo\(IfStatementSyntax, Boolean, Boolean\) | Creates a new [SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.md) from the specified if statement\. |
 | SimpleIfStatementInfo\(SyntaxNode, Boolean, Boolean\) | Creates a new [SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.md) from the specified node\. |
 
-## SimpleIfStatementInfo\(SyntaxNode, Boolean, Boolean\)
+## SimpleIfStatementInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleIfStatementInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static SimpleIfStatementInfo SimpleIfStatementInfo(SyntaxNode node, bool 
 
 [SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.md)
 
-## SimpleIfStatementInfo\(IfStatementSyntax, Boolean, Boolean\)
+## SimpleIfStatementInfo\(IfStatementSyntax, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleIfStatementInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 

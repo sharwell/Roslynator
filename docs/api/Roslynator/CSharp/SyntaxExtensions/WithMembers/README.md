@@ -19,7 +19,7 @@
 | WithMembers\(StructDeclarationSyntax, IEnumerable\<MemberDeclarationSyntax>\) | Creates a new [StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.structdeclarationsyntax) with the members updated\. |
 | WithMembers\(StructDeclarationSyntax, MemberDeclarationSyntax\) | Creates a new [StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.structdeclarationsyntax) with the members updated\. |
 
-## WithMembers\(ClassDeclarationSyntax, MemberDeclarationSyntax\)
+## WithMembers\(ClassDeclarationSyntax, MemberDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -40,7 +40,7 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 [ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax)
 
-## WithMembers\(ClassDeclarationSyntax, IEnumerable\<MemberDeclarationSyntax>\)
+## WithMembers\(ClassDeclarationSyntax, IEnumerable\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -61,7 +61,7 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 [ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax)
 
-## WithMembers\(CompilationUnitSyntax, MemberDeclarationSyntax\)
+## WithMembers\(CompilationUnitSyntax, MemberDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -82,7 +82,7 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 [CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.compilationunitsyntax)
 
-## WithMembers\(CompilationUnitSyntax, IEnumerable\<MemberDeclarationSyntax>\)
+## WithMembers\(CompilationUnitSyntax, IEnumerable\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -103,7 +103,7 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 [CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.compilationunitsyntax)
 
-## WithMembers\(InterfaceDeclarationSyntax, MemberDeclarationSyntax\)
+## WithMembers\(InterfaceDeclarationSyntax, MemberDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -124,7 +124,7 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax)
 
-## WithMembers\(InterfaceDeclarationSyntax, IEnumerable\<MemberDeclarationSyntax>\)
+## WithMembers\(InterfaceDeclarationSyntax, IEnumerable\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -145,7 +145,7 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax)
 
-## WithMembers\(NamespaceDeclarationSyntax, MemberDeclarationSyntax\)
+## WithMembers\(NamespaceDeclarationSyntax, MemberDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -166,7 +166,7 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 [NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.namespacedeclarationsyntax)
 
-## WithMembers\(NamespaceDeclarationSyntax, IEnumerable\<MemberDeclarationSyntax>\)
+## WithMembers\(NamespaceDeclarationSyntax, IEnumerable\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -187,7 +187,7 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 [NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.namespacedeclarationsyntax)
 
-## WithMembers\(StructDeclarationSyntax, MemberDeclarationSyntax\)
+## WithMembers\(StructDeclarationSyntax, MemberDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -208,7 +208,7 @@ public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax s
 
 [StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.structdeclarationsyntax)
 
-## WithMembers\(StructDeclarationSyntax, IEnumerable\<MemberDeclarationSyntax>\)
+## WithMembers\(StructDeclarationSyntax, IEnumerable\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_SyntaxExtensions_WithMembers_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 

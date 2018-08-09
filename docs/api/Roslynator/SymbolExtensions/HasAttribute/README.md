@@ -11,7 +11,7 @@
 | HasAttribute\(ISymbol, INamedTypeSymbol\) | Returns true if the symbol has the specified attribute\. |
 | HasAttribute\(ITypeSymbol, INamedTypeSymbol, Boolean\) | Returns true if the type symbol has the specified attribute\. |
 
-## HasAttribute\(ISymbol, INamedTypeSymbol\)
+## HasAttribute\(ISymbol, INamedTypeSymbol\)<a name="Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_"></a>
 
 ### Summary
 
@@ -32,7 +32,7 @@ public static bool HasAttribute(this ISymbol symbol, INamedTypeSymbol attributeC
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasAttribute\(ITypeSymbol, INamedTypeSymbol, Boolean\)
+## HasAttribute\(ITypeSymbol, INamedTypeSymbol, Boolean\)<a name="Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_"></a>
 
 ### Summary
 

@@ -11,7 +11,7 @@
 | Equals\(Object\) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 | Equals\(Reversed\) |  \(Implements [IEquatable\<Reversed>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 
-## Equals\(Object\)
+## Equals\(Object\)<a name="Roslynator_CSharp_ExpressionChain_Reversed_Equals_System_Object_"></a>
 
 ```csharp
 public override bool Equals(object obj)
@@ -27,7 +27,7 @@ public override bool Equals(object obj)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Equals\(Reversed\)
+## Equals\(Reversed\)<a name="Roslynator_CSharp_ExpressionChain_Reversed_Equals_System_Object_"></a>
 
 ```csharp
 public bool Equals(ExpressionChain.Reversed other)

@@ -11,7 +11,7 @@
 | Foo\(String\) | aaa |
 | Foo\(String, String\) | |
 
-## Foo\(String\)
+## Foo\(String\)<a name="Roslynator_Documentation_Test_Foo__ctor_System_String_"></a>
 
 ### Summary
 
@@ -41,7 +41,7 @@ b
 
 * [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
 
-## Foo\(String, String\)
+## Foo\(String, String\)<a name="Roslynator_Documentation_Test_Foo__ctor_System_String_"></a>
 
 ```csharp
 public Foo(string s, string s2)

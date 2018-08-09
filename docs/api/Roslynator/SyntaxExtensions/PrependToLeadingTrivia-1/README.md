@@ -13,7 +13,7 @@
 | PrependToLeadingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\) | Creates a new node from this node with the leading trivia replaced with a new trivia where the specified trivia is inserted at the begining of the leading trivia\. |
 | PrependToLeadingTrivia\<TNode>\(TNode, SyntaxTrivia\) | Creates a new node from this node with the leading trivia replaced with a new trivia where the specified trivia is inserted at the begining of the leading trivia\. |
 
-## PrependToLeadingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\)
+## PrependToLeadingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_SyntaxExtensions_PrependToLeadingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -40,7 +40,7 @@ public static TNode PrependToLeadingTrivia<TNode>(this TNode node, IEnumerable<S
 
 TNode
 
-## PrependToLeadingTrivia\<TNode>\(TNode, SyntaxTrivia\)
+## PrependToLeadingTrivia\<TNode>\(TNode, SyntaxTrivia\)<a name="Roslynator_SyntaxExtensions_PrependToLeadingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -67,7 +67,7 @@ public static TNode PrependToLeadingTrivia<TNode>(this TNode node, SyntaxTrivia 
 
 TNode
 
-## PrependToLeadingTrivia\(SyntaxToken, IEnumerable\<SyntaxTrivia>\)
+## PrependToLeadingTrivia\(SyntaxToken, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_SyntaxExtensions_PrependToLeadingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -88,7 +88,7 @@ public static SyntaxToken PrependToLeadingTrivia(this SyntaxToken token, IEnumer
 
 [SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
-## PrependToLeadingTrivia\(SyntaxToken, SyntaxTrivia\)
+## PrependToLeadingTrivia\(SyntaxToken, SyntaxTrivia\)<a name="Roslynator_SyntaxExtensions_PrependToLeadingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 

@@ -12,7 +12,7 @@
 | ReplaceNodeAsync\(Document, SyntaxNode, SyntaxNode, CancellationToken\) | Creates a new document with the specified old node replaced with a new node\. |
 | ReplaceNodeAsync\<TNode>\(Solution, TNode, TNode, CancellationToken\) | Creates a new solution with the specified old node replaced with a new node\. |
 
-## ReplaceNodeAsync\(Document, SyntaxNode, SyntaxNode, CancellationToken\)
+## ReplaceNodeAsync\(Document, SyntaxNode, SyntaxNode, CancellationToken\)<a name="Roslynator_WorkspaceExtensions_ReplaceNodeAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SyntaxNode_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode
 
 [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
-## ReplaceNodeAsync\(Document, SyntaxNode, IEnumerable\<SyntaxNode>, CancellationToken\)
+## ReplaceNodeAsync\(Document, SyntaxNode, IEnumerable\<SyntaxNode>, CancellationToken\)<a name="Roslynator_WorkspaceExtensions_ReplaceNodeAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SyntaxNode_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -58,7 +58,7 @@ public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode
 
 [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
-## ReplaceNodeAsync\<TNode>\(Solution, TNode, TNode, CancellationToken\)
+## ReplaceNodeAsync\<TNode>\(Solution, TNode, TNode, CancellationToken\)<a name="Roslynator_WorkspaceExtensions_ReplaceNodeAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SyntaxNode_System_Threading_CancellationToken_"></a>
 
 ### Summary
 

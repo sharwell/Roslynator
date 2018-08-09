@@ -11,7 +11,7 @@
 | EqualsExpression\(ExpressionSyntax, ExpressionSyntax\) | |
 | EqualsExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) | |
 
-## EqualsExpression\(ExpressionSyntax, ExpressionSyntax\)
+## EqualsExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EqualsExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax EqualsExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -28,7 +28,7 @@ public static BinaryExpressionSyntax EqualsExpression(ExpressionSyntax left, Exp
 
 [BinaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.binaryexpressionsyntax)
 
-## EqualsExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)
+## EqualsExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EqualsExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax EqualsExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

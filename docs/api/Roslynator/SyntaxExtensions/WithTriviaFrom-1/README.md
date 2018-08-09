@@ -13,7 +13,7 @@
 | WithTriviaFrom\<TNode>\(SyntaxList\<TNode>, SyntaxNode\) | Creates a new list with both leading and trailing trivia of the specified node\. If the list contains more than one item, first item is updated with leading trivia and last item is updated with trailing trivia\. |
 | WithTriviaFrom\<TNode>\(TNode, SyntaxToken\) | Creates a new node from this node with both the leading and trailing trivia of the specified token\. |
 
-## WithTriviaFrom\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxNode\)
+## WithTriviaFrom\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxNode\)<a name="Roslynator_SyntaxExtensions_WithTriviaFrom__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -41,7 +41,7 @@ public static SeparatedSyntaxList<TNode> WithTriviaFrom<TNode>(this SeparatedSyn
 
 [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)
 
-## WithTriviaFrom\<TNode>\(SyntaxList\<TNode>, SyntaxNode\)
+## WithTriviaFrom\<TNode>\(SyntaxList\<TNode>, SyntaxNode\)<a name="Roslynator_SyntaxExtensions_WithTriviaFrom__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -69,7 +69,7 @@ public static SyntaxList<TNode> WithTriviaFrom<TNode>(this SyntaxList<TNode> lis
 
 [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)
 
-## WithTriviaFrom\<TNode>\(TNode, SyntaxToken\)
+## WithTriviaFrom\<TNode>\(TNode, SyntaxToken\)<a name="Roslynator_SyntaxExtensions_WithTriviaFrom__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -96,7 +96,7 @@ public static TNode WithTriviaFrom<TNode>(this TNode node, SyntaxToken token) wh
 
 TNode
 
-## WithTriviaFrom\(SyntaxToken, SyntaxNode\)
+## WithTriviaFrom\(SyntaxToken, SyntaxNode\)<a name="Roslynator_SyntaxExtensions_WithTriviaFrom__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 

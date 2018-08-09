@@ -11,7 +11,7 @@
 | ExplicitConversionOperatorDeclaration\(SyntaxTokenList, TypeSyntax, ParameterListSyntax, ArrowExpressionClauseSyntax\) | |
 | ExplicitConversionOperatorDeclaration\(SyntaxTokenList, TypeSyntax, ParameterListSyntax, BlockSyntax\) | |
 
-## ExplicitConversionOperatorDeclaration\(SyntaxTokenList, TypeSyntax, ParameterListSyntax, BlockSyntax\)
+## ExplicitConversionOperatorDeclaration\(SyntaxTokenList, TypeSyntax, ParameterListSyntax, BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ExplicitConversionOperatorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
 public static ConversionOperatorDeclarationSyntax ExplicitConversionOperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax type, ParameterListSyntax parameterList, BlockSyntax body)
@@ -30,7 +30,7 @@ public static ConversionOperatorDeclarationSyntax ExplicitConversionOperatorDecl
 
 [ConversionOperatorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.conversionoperatordeclarationsyntax)
 
-## ExplicitConversionOperatorDeclaration\(SyntaxTokenList, TypeSyntax, ParameterListSyntax, ArrowExpressionClauseSyntax\)
+## ExplicitConversionOperatorDeclaration\(SyntaxTokenList, TypeSyntax, ParameterListSyntax, ArrowExpressionClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ExplicitConversionOperatorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
 public static ConversionOperatorDeclarationSyntax ExplicitConversionOperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax type, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)

@@ -13,7 +13,7 @@
 | ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) | Returns true if a token of the specified kinds is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\. |
 | ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) | Returns true if a token of the specified kinds is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\. |
 
-## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind\)
+## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind\)
+## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -58,7 +58,7 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)
+## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -82,7 +82,7 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)
+## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 

@@ -12,7 +12,7 @@
 | LastIndexOf\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\) | Searches for a node of the specified kind and returns the zero\-based index of the last occurrence within the entire [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)\. |
 | LastIndexOf\<TNode>\(SyntaxList\<TNode>, SyntaxKind\) | Searches for a node of the specified kind and returns the zero\-based index of the last occurrence within the entire [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)\. |
 
-## LastIndexOf\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\)
+## LastIndexOf\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_LastIndexOf__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -39,7 +39,7 @@ public static int LastIndexOf<TNode>(this SeparatedSyntaxList<TNode> list, Synta
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-## LastIndexOf\<TNode>\(SyntaxList\<TNode>, SyntaxKind\)
+## LastIndexOf\<TNode>\(SyntaxList\<TNode>, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_LastIndexOf__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -66,7 +66,7 @@ public static int LastIndexOf<TNode>(this SyntaxList<TNode> list, SyntaxKind kin
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-## LastIndexOf\(SyntaxTriviaList, SyntaxKind\)
+## LastIndexOf\(SyntaxTriviaList, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_LastIndexOf__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 

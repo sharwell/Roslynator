@@ -13,7 +13,7 @@
 | FirstAncestor\(SyntaxNode, SyntaxKind, SyntaxKind, Boolean\) | Gets the first ancestor of the specified kinds\. |
 | FirstAncestor\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, Boolean\) | Gets the first ancestor of the specified kinds\. |
 
-## FirstAncestor\(SyntaxNode, SyntaxKind, Boolean\)
+## FirstAncestor\(SyntaxNode, SyntaxKind, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static SyntaxNode FirstAncestor(this SyntaxNode node, SyntaxKind kind, bo
 
 [SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
-## FirstAncestor\(SyntaxNode, SyntaxKind, SyntaxKind, Boolean\)
+## FirstAncestor\(SyntaxNode, SyntaxKind, SyntaxKind, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
 
 ### Summary
 
@@ -58,7 +58,7 @@ public static SyntaxNode FirstAncestor(this SyntaxNode node, SyntaxKind kind1, S
 
 [SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
-## FirstAncestor\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, Boolean\)
+## FirstAncestor\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
 
 ### Summary
 
@@ -82,7 +82,7 @@ public static SyntaxNode FirstAncestor(this SyntaxNode node, SyntaxKind kind1, S
 
 [SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
-## FirstAncestor\(SyntaxNode, Func\<SyntaxNode, Boolean>, Boolean\)
+## FirstAncestor\(SyntaxNode, Func\<SyntaxNode, Boolean>, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
 
 ### Summary
 

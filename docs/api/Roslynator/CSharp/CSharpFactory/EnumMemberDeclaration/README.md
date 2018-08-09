@@ -13,7 +13,7 @@
 | EnumMemberDeclaration\(SyntaxToken, EqualsValueClauseSyntax\) | |
 | EnumMemberDeclaration\(SyntaxToken, ExpressionSyntax\) | |
 
-## EnumMemberDeclaration\(String, ExpressionSyntax\)
+## EnumMemberDeclaration\(String, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EnumMemberDeclaration_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, ExpressionSyntax value)
@@ -30,7 +30,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Exp
 
 [EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 
-## EnumMemberDeclaration\(SyntaxToken, ExpressionSyntax\)
+## EnumMemberDeclaration\(SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EnumMemberDeclaration_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken identifier, ExpressionSyntax value)
@@ -47,7 +47,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 [EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 
-## EnumMemberDeclaration\(String, EqualsValueClauseSyntax\)
+## EnumMemberDeclaration\(String, EqualsValueClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EnumMemberDeclaration_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, EqualsValueClauseSyntax value)
@@ -64,7 +64,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Equ
 
 [EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 
-## EnumMemberDeclaration\(SyntaxToken, EqualsValueClauseSyntax\)
+## EnumMemberDeclaration\(SyntaxToken, EqualsValueClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EnumMemberDeclaration_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken identifier, EqualsValueClauseSyntax value)

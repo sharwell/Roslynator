@@ -11,7 +11,7 @@
 | WithUsings\(IEnumerable\<UsingDirectiveSyntax>\) | Creates a new [UsingDirectiveListInfo](../README.md) with the usings updated\. |
 | WithUsings\(SyntaxList\<UsingDirectiveSyntax>\) | Creates a new [UsingDirectiveListInfo](../README.md) with the usings updated\. |
 
-## WithUsings\(IEnumerable\<UsingDirectiveSyntax>\)
+## WithUsings\(IEnumerable\<UsingDirectiveSyntax>\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_WithUsings_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public UsingDirectiveListInfo WithUsings(IEnumerable<UsingDirectiveSyntax> using
 
 [UsingDirectiveListInfo](../README.md)
 
-## WithUsings\(SyntaxList\<UsingDirectiveSyntax>\)
+## WithUsings\(SyntaxList\<UsingDirectiveSyntax>\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_WithUsings_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__"></a>
 
 ### Summary
 

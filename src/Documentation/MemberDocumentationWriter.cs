@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
@@ -95,14 +96,21 @@ namespace Roslynator.Documentation
                     additionalOptions: SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName,
                     addLink: false);
 
-                foreach (ISymbol symbol2 in model.Overloads)
+                foreach (ISymbol overloadSymbol in model.Overloads)
                 {
                     HeadingLevelBase++;
 
+                    //TODO: 
+                    string id = symbol.GetDocumentationCommentId();
+                    id = TextUtility.RemovePrefixFromDocumentationCommentId(id);
+                    id = Regex.Replace(id, @"[^\w_]", "_");
+
                     Writer.WriteStartHeading(1);
-                    Writer.WriteString(symbol2.ToDisplayString(SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
+                    Writer.WriteString(overloadSymbol.ToDisplayString(SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
+                    Writer.WriteRaw($@"<a name=""{id}""></a>");
                     Writer.WriteEndHeading();
-                    WriteContent(symbol2);
+
+                    WriteContent(overloadSymbol);
 
                     HeadingLevelBase--;
                 }
@@ -345,7 +353,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                xmlDocumentation?.WriteContentTo(Writer, WellKnownTags.Returns);
+                xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(Writer);
             }
         }
 
@@ -364,7 +372,7 @@ namespace Roslynator.Documentation
                 Writer.WriteLine();
                 Writer.WriteLine();
 
-                xmlDocumentation?.WriteContentTo(Writer, WellKnownTags.Returns);
+                xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(Writer);
             }
         }
 
@@ -385,7 +393,7 @@ namespace Roslynator.Documentation
 
                 string elementName = (propertySymbol.IsIndexer) ? WellKnownTags.Returns : WellKnownTags.Value;
 
-                xmlDocumentation?.WriteContentTo(Writer, elementName);
+                xmlDocumentation?.Element(elementName)?.WriteContentTo(Writer);
             }
         }
     }

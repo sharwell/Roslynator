@@ -11,7 +11,7 @@
 | ModuloAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\) | |
 | ModuloAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) | |
 
-## ModuloAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\)
+## ModuloAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ModuloAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static AssignmentExpressionSyntax ModuloAssignmentExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -28,7 +28,7 @@ public static AssignmentExpressionSyntax ModuloAssignmentExpression(ExpressionSy
 
 [AssignmentExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.assignmentexpressionsyntax)
 
-## ModuloAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)
+## ModuloAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ModuloAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static AssignmentExpressionSyntax ModuloAssignmentExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

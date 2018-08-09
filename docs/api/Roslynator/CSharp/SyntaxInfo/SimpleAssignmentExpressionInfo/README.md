@@ -11,7 +11,7 @@
 | SimpleAssignmentExpressionInfo\(AssignmentExpressionSyntax, Boolean, Boolean\) | Creates a new [SimpleAssignmentExpressionInfo](../../Syntax/SimpleAssignmentExpressionInfo/README.md) from the specified assignment expression\. |
 | SimpleAssignmentExpressionInfo\(SyntaxNode, Boolean, Boolean\) | Creates a new [SimpleAssignmentExpressionInfo](../../Syntax/SimpleAssignmentExpressionInfo/README.md) from the specified node\. |
 
-## SimpleAssignmentExpressionInfo\(SyntaxNode, Boolean, Boolean\)
+## SimpleAssignmentExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleAssignmentExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static SimpleAssignmentExpressionInfo SimpleAssignmentExpressionInfo(Synt
 
 [SimpleAssignmentExpressionInfo](../../Syntax/SimpleAssignmentExpressionInfo/README.md)
 
-## SimpleAssignmentExpressionInfo\(AssignmentExpressionSyntax, Boolean, Boolean\)
+## SimpleAssignmentExpressionInfo\(AssignmentExpressionSyntax, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleAssignmentExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 

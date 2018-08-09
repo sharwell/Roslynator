@@ -11,7 +11,7 @@
 | StringLiteralExpressionInfo\(LiteralExpressionSyntax\) | Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md) from the specified literal expression\. |
 | StringLiteralExpressionInfo\(SyntaxNode, Boolean\) | Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md) from the specified node\. |
 
-## StringLiteralExpressionInfo\(SyntaxNode, Boolean\)
+## StringLiteralExpressionInfo\(SyntaxNode, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_StringLiteralExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_"></a>
 
 ### Summary
 
@@ -32,7 +32,7 @@ public static StringLiteralExpressionInfo StringLiteralExpressionInfo(SyntaxNode
 
 [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md)
 
-## StringLiteralExpressionInfo\(LiteralExpressionSyntax\)
+## StringLiteralExpressionInfo\(LiteralExpressionSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_StringLiteralExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_"></a>
 
 ### Summary
 

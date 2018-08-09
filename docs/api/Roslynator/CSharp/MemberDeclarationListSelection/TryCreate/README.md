@@ -11,7 +11,7 @@
 | TryCreate\(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection\) | Creates a new [MemberDeclarationListSelection](../README.md) based on the specified namespace declaration and span\. |
 | TryCreate\(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection\) | Creates a new [MemberDeclarationListSelection](../README.md) based on the specified type declaration and span\. |
 
-## TryCreate\(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection\)
+## TryCreate\(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection\)<a name="Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static bool TryCreate(NamespaceDeclarationSyntax namespaceDeclaration, Te
 
 True if the specified span contains at least one member; otherwise, false\.
 
-## TryCreate\(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection\)
+## TryCreate\(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection\)<a name="Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__"></a>
 
 ### Summary
 

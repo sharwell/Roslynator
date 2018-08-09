@@ -252,7 +252,7 @@ namespace Roslynator.Documentation
                         }
                     case NamespaceDocumentationParts.Summary:
                         {
-                            xmlDocumentation?.WriteContentTo(writer, WellKnownTags.Summary);
+                            xmlDocumentation?.Element(WellKnownTags.Summary)?.WriteContentTo(writer);
                             break;
                         }
                     case NamespaceDocumentationParts.Examples:

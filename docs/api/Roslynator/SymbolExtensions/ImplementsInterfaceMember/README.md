@@ -13,7 +13,7 @@
 | ImplementsInterfaceMember\<TSymbol>\(ISymbol, Boolean\) | Returns true if the symbol implements any interface member\. |
 | ImplementsInterfaceMember\<TSymbol>\(ISymbol, INamedTypeSymbol, Boolean\) | Returns true if the symbol implements any member of the specified interface\. |
 
-## ImplementsInterfaceMember\(ISymbol, Boolean\)
+## ImplementsInterfaceMember\(ISymbol, Boolean\)<a name="Roslynator_SymbolExtensions_ImplementsInterfaceMember_Microsoft_CodeAnalysis_ISymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -34,7 +34,7 @@ public static bool ImplementsInterfaceMember(this ISymbol symbol, bool allInterf
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ImplementsInterfaceMember\(ISymbol, INamedTypeSymbol, Boolean\)
+## ImplementsInterfaceMember\(ISymbol, INamedTypeSymbol, Boolean\)<a name="Roslynator_SymbolExtensions_ImplementsInterfaceMember_Microsoft_CodeAnalysis_ISymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -56,7 +56,7 @@ public static bool ImplementsInterfaceMember(this ISymbol symbol, INamedTypeSymb
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ImplementsInterfaceMember\<TSymbol>\(ISymbol, Boolean\)
+## ImplementsInterfaceMember\<TSymbol>\(ISymbol, Boolean\)<a name="Roslynator_SymbolExtensions_ImplementsInterfaceMember_Microsoft_CodeAnalysis_ISymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -83,7 +83,7 @@ public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, bool 
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ImplementsInterfaceMember\<TSymbol>\(ISymbol, INamedTypeSymbol, Boolean\)
+## ImplementsInterfaceMember\<TSymbol>\(ISymbol, INamedTypeSymbol, Boolean\)<a name="Roslynator_SymbolExtensions_ImplementsInterfaceMember_Microsoft_CodeAnalysis_ISymbol_System_Boolean_"></a>
 
 ### Summary
 

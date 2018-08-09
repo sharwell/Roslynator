@@ -11,7 +11,7 @@
 | AsExpression\(ExpressionSyntax, ExpressionSyntax\) | |
 | AsExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) | |
 
-## AsExpression\(ExpressionSyntax, ExpressionSyntax\)
+## AsExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AsExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax AsExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -28,7 +28,7 @@ public static BinaryExpressionSyntax AsExpression(ExpressionSyntax left, Express
 
 [BinaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.binaryexpressionsyntax)
 
-## AsExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)
+## AsExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AsExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax AsExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

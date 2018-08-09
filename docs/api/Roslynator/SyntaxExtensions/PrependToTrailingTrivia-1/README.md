@@ -13,7 +13,7 @@
 | PrependToTrailingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\) | Creates a new node from this node with the trailing trivia replaced with a new trivia where the specified trivia is inserted at the begining of the trailing trivia\. |
 | PrependToTrailingTrivia\<TNode>\(TNode, SyntaxTrivia\) | Creates a new node from this node with the trailing trivia replaced with a new trivia where the specified trivia is inserted at the begining of the trailing trivia\. |
 
-## PrependToTrailingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\)
+## PrependToTrailingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -40,7 +40,7 @@ public static TNode PrependToTrailingTrivia<TNode>(this TNode node, IEnumerable<
 
 TNode
 
-## PrependToTrailingTrivia\<TNode>\(TNode, SyntaxTrivia\)
+## PrependToTrailingTrivia\<TNode>\(TNode, SyntaxTrivia\)<a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -67,7 +67,7 @@ public static TNode PrependToTrailingTrivia<TNode>(this TNode node, SyntaxTrivia
 
 TNode
 
-## PrependToTrailingTrivia\(SyntaxToken, IEnumerable\<SyntaxTrivia>\)
+## PrependToTrailingTrivia\(SyntaxToken, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -88,7 +88,7 @@ public static SyntaxToken PrependToTrailingTrivia(this SyntaxToken token, IEnume
 
 [SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
-## PrependToTrailingTrivia\(SyntaxToken, SyntaxTrivia\)
+## PrependToTrailingTrivia\(SyntaxToken, SyntaxTrivia\)<a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 

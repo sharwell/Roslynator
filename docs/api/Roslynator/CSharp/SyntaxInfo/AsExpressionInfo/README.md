@@ -11,7 +11,7 @@
 | AsExpressionInfo\(BinaryExpressionSyntax, Boolean, Boolean\) | Creates a new [AsExpressionInfo](../../Syntax/AsExpressionInfo/README.md) from the specified binary expression\. |
 | AsExpressionInfo\(SyntaxNode, Boolean, Boolean\) | Creates a new [AsExpressionInfo](../../Syntax/AsExpressionInfo/README.md) from the specified node\. |
 
-## AsExpressionInfo\(SyntaxNode, Boolean, Boolean\)
+## AsExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_AsExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static AsExpressionInfo AsExpressionInfo(SyntaxNode node, bool walkDownPa
 
 [AsExpressionInfo](../../Syntax/AsExpressionInfo/README.md)
 
-## AsExpressionInfo\(BinaryExpressionSyntax, Boolean, Boolean\)
+## AsExpressionInfo\(BinaryExpressionSyntax, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_AsExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 

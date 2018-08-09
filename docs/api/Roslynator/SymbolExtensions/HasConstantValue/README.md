@@ -23,7 +23,7 @@
 | HasConstantValue\(IFieldSymbol, UInt32\) | Get a value indicating whether the field symbol has specified constant value\. |
 | HasConstantValue\(IFieldSymbol, UInt64\) | Get a value indicating whether the field symbol has specified constant value\. |
 
-## HasConstantValue\(IFieldSymbol, Boolean\)
+## HasConstantValue\(IFieldSymbol, Boolean\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -44,7 +44,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, bool value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, Char\)
+## HasConstantValue\(IFieldSymbol, Char\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -65,7 +65,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, char value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, SByte\)
+## HasConstantValue\(IFieldSymbol, SByte\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -86,7 +86,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, sbyte value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, Byte\)
+## HasConstantValue\(IFieldSymbol, Byte\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -107,7 +107,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, byte value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, Int16\)
+## HasConstantValue\(IFieldSymbol, Int16\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -128,7 +128,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, short value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, UInt16\)
+## HasConstantValue\(IFieldSymbol, UInt16\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -149,7 +149,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, ushort value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, Int32\)
+## HasConstantValue\(IFieldSymbol, Int32\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -170,7 +170,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, int value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, UInt32\)
+## HasConstantValue\(IFieldSymbol, UInt32\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -191,7 +191,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, uint value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, Int64\)
+## HasConstantValue\(IFieldSymbol, Int64\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -212,7 +212,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, long value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, UInt64\)
+## HasConstantValue\(IFieldSymbol, UInt64\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -233,7 +233,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, ulong value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, Decimal\)
+## HasConstantValue\(IFieldSymbol, Decimal\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -254,7 +254,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, decimal value
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, Single\)
+## HasConstantValue\(IFieldSymbol, Single\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -275,7 +275,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, float value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, Double\)
+## HasConstantValue\(IFieldSymbol, Double\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -296,7 +296,7 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, double value)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasConstantValue\(IFieldSymbol, String\)
+## HasConstantValue\(IFieldSymbol, String\)<a name="Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_"></a>
 
 ### Summary
 

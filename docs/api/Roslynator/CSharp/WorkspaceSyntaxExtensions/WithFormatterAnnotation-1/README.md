@@ -11,7 +11,7 @@
 | WithFormatterAnnotation\(SyntaxToken\) | Adds [Formatter.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.formatting.formatter.annotation) to the specified token, creating a new token of the same type with the [Formatter.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.formatting.formatter.annotation) on it\. |
 | WithFormatterAnnotation\<TNode>\(TNode\) | Creates a new node with the [Formatter.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.formatting.formatter.annotation) attached\. |
 
-## WithFormatterAnnotation\<TNode>\(TNode\)
+## WithFormatterAnnotation\<TNode>\(TNode\)<a name="Roslynator_CSharp_WorkspaceSyntaxExtensions_WithFormatterAnnotation__1___0_"></a>
 
 ### Summary
 
@@ -37,7 +37,7 @@ public static TNode WithFormatterAnnotation<TNode>(this TNode node) where TNode 
 
 TNode
 
-## WithFormatterAnnotation\(SyntaxToken\)
+## WithFormatterAnnotation\(SyntaxToken\)<a name="Roslynator_CSharp_WorkspaceSyntaxExtensions_WithFormatterAnnotation__1___0_"></a>
 
 ### Summary
 

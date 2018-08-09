@@ -11,7 +11,7 @@
 | MultiplyExpression\(ExpressionSyntax, ExpressionSyntax\) | |
 | MultiplyExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) | |
 
-## MultiplyExpression\(ExpressionSyntax, ExpressionSyntax\)
+## MultiplyExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_MultiplyExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax MultiplyExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -28,7 +28,7 @@ public static BinaryExpressionSyntax MultiplyExpression(ExpressionSyntax left, E
 
 [BinaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.binaryexpressionsyntax)
 
-## MultiplyExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)
+## MultiplyExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_MultiplyExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax MultiplyExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

@@ -11,7 +11,7 @@
 | WithoutLeadingTrivia\(SyntaxNodeOrToken\) | Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) with the leading trivia removed\. |
 | WithoutLeadingTrivia\(SyntaxToken\) | Creates a new token from this token with the leading trivia removed\. |
 
-## WithoutLeadingTrivia\(SyntaxNodeOrToken\)
+## WithoutLeadingTrivia\(SyntaxNodeOrToken\)<a name="Roslynator_SyntaxExtensions_WithoutLeadingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public static SyntaxNodeOrToken WithoutLeadingTrivia(this SyntaxNodeOrToken node
 
 [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken)
 
-## WithoutLeadingTrivia\(SyntaxToken\)
+## WithoutLeadingTrivia\(SyntaxToken\)<a name="Roslynator_SyntaxExtensions_WithoutLeadingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_"></a>
 
 ### Summary
 

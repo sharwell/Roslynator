@@ -13,7 +13,7 @@
 | VariableDeclaration\(TypeSyntax, SyntaxToken, ExpressionSyntax\) | |
 | VariableDeclaration\(TypeSyntax, VariableDeclaratorSyntax\) | |
 
-## VariableDeclaration\(TypeSyntax, String, ExpressionSyntax\)
+## VariableDeclaration\(TypeSyntax, String, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_VariableDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, string identifier, ExpressionSyntax value = null)
@@ -31,7 +31,7 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, str
 
 [VariableDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclarationsyntax)
 
-## VariableDeclaration\(TypeSyntax, SyntaxToken, ExpressionSyntax\)
+## VariableDeclaration\(TypeSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_VariableDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, SyntaxToken identifier, ExpressionSyntax value = null)
@@ -49,7 +49,7 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Syn
 
 [VariableDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclarationsyntax)
 
-## VariableDeclaration\(TypeSyntax, SyntaxToken, EqualsValueClauseSyntax\)
+## VariableDeclaration\(TypeSyntax, SyntaxToken, EqualsValueClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_VariableDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, SyntaxToken identifier, EqualsValueClauseSyntax initializer)
@@ -67,7 +67,7 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Syn
 
 [VariableDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclarationsyntax)
 
-## VariableDeclaration\(TypeSyntax, VariableDeclaratorSyntax\)
+## VariableDeclaration\(TypeSyntax, VariableDeclaratorSyntax\)<a name="Roslynator_CSharp_CSharpFactory_VariableDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, VariableDeclaratorSyntax variable)

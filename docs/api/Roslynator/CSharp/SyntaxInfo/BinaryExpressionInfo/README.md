@@ -11,7 +11,7 @@
 | BinaryExpressionInfo\(BinaryExpressionSyntax, Boolean, Boolean\) | Creates a new [BinaryExpressionInfo](../../Syntax/BinaryExpressionInfo/README.md) from the specified binary expression\. |
 | BinaryExpressionInfo\(SyntaxNode, Boolean, Boolean\) | Creates a new [BinaryExpressionInfo](../../Syntax/BinaryExpressionInfo/README.md) from the specified node\. |
 
-## BinaryExpressionInfo\(SyntaxNode, Boolean, Boolean\)
+## BinaryExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_BinaryExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static BinaryExpressionInfo BinaryExpressionInfo(SyntaxNode node, bool wa
 
 [BinaryExpressionInfo](../../Syntax/BinaryExpressionInfo/README.md)
 
-## BinaryExpressionInfo\(BinaryExpressionSyntax, Boolean, Boolean\)
+## BinaryExpressionInfo\(BinaryExpressionSyntax, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_BinaryExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 

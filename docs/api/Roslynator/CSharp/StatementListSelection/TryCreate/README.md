@@ -11,7 +11,7 @@
 | TryCreate\(BlockSyntax, TextSpan, StatementListSelection\) | Creates a new [StatementListSelection](../README.md) based on the specified block and span\. |
 | TryCreate\(SwitchSectionSyntax, TextSpan, StatementListSelection\) | Creates a new [StatementListSelection](../README.md) based on the specified switch section and span\. |
 
-## TryCreate\(BlockSyntax, TextSpan, StatementListSelection\)
+## TryCreate\(BlockSyntax, TextSpan, StatementListSelection\)<a name="Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static bool TryCreate(BlockSyntax block, TextSpan span, out StatementList
 
 True if the specified span contains at least one statement; otherwise, false\.
 
-## TryCreate\(SwitchSectionSyntax, TextSpan, StatementListSelection\)
+## TryCreate\(SwitchSectionSyntax, TextSpan, StatementListSelection\)<a name="Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__"></a>
 
 ### Summary
 

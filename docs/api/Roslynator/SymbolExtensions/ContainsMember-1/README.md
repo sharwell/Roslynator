@@ -11,7 +11,7 @@
 | ContainsMember\<TSymbol>\(ITypeSymbol, Func\<TSymbol, Boolean>\) | Returns true if the type contains member that matches the conditions defined by the specified predicate, if any\. |
 | ContainsMember\<TSymbol>\(ITypeSymbol, String, Func\<TSymbol, Boolean>\) | Returns true if the type contains member that has the specified name and matches the conditions defined by the specified predicate, if any\. |
 
-## ContainsMember\<TSymbol>\(ITypeSymbol, Func\<TSymbol, Boolean>\)
+## ContainsMember\<TSymbol>\(ITypeSymbol, Func\<TSymbol, Boolean>\)<a name="Roslynator_SymbolExtensions_ContainsMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_Func___0_System_Boolean__"></a>
 
 ### Summary
 
@@ -38,7 +38,7 @@ public static bool ContainsMember<TSymbol>(this ITypeSymbol typeSymbol, Func<TSy
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ContainsMember\<TSymbol>\(ITypeSymbol, String, Func\<TSymbol, Boolean>\)
+## ContainsMember\<TSymbol>\(ITypeSymbol, String, Func\<TSymbol, Boolean>\)<a name="Roslynator_SymbolExtensions_ContainsMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_Func___0_System_Boolean__"></a>
 
 ### Summary
 

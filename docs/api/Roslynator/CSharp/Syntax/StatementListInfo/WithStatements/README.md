@@ -11,7 +11,7 @@
 | WithStatements\(IEnumerable\<StatementSyntax>\) | Creates a new [StatementListInfo](../README.md) with the statements updated\. |
 | WithStatements\(SyntaxList\<StatementSyntax>\) | Creates a new [StatementListInfo](../README.md) with the statements updated\. |
 
-## WithStatements\(IEnumerable\<StatementSyntax>\)
+## WithStatements\(IEnumerable\<StatementSyntax>\)<a name="Roslynator_CSharp_Syntax_StatementListInfo_WithStatements_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax__"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public StatementListInfo WithStatements(IEnumerable<StatementSyntax> statements)
 
 [StatementListInfo](../README.md)
 
-## WithStatements\(SyntaxList\<StatementSyntax>\)
+## WithStatements\(SyntaxList\<StatementSyntax>\)<a name="Roslynator_CSharp_Syntax_StatementListInfo_WithStatements_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax__"></a>
 
 ### Summary
 

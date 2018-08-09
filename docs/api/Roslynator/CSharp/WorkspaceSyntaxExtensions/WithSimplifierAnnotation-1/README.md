@@ -11,7 +11,7 @@
 | WithSimplifierAnnotation\(SyntaxToken\) | Adds [Simplifier.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.simplification.simplifier.annotation) to the specified token, creating a new token of the same type with the [Simplifier.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.simplification.simplifier.annotation) on it\. "Rename" annotation is specified by [RenameAnnotation.Kind](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.codeactions.renameannotation.kind)\. |
 | WithSimplifierAnnotation\<TNode>\(TNode\) | Creates a new node with the [Simplifier.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.simplification.simplifier.annotation) attached\. |
 
-## WithSimplifierAnnotation\<TNode>\(TNode\)
+## WithSimplifierAnnotation\<TNode>\(TNode\)<a name="Roslynator_CSharp_WorkspaceSyntaxExtensions_WithSimplifierAnnotation__1___0_"></a>
 
 ### Summary
 
@@ -37,7 +37,7 @@ public static TNode WithSimplifierAnnotation<TNode>(this TNode node) where TNode
 
 TNode
 
-## WithSimplifierAnnotation\(SyntaxToken\)
+## WithSimplifierAnnotation\(SyntaxToken\)<a name="Roslynator_CSharp_WorkspaceSyntaxExtensions_WithSimplifierAnnotation__1___0_"></a>
 
 ### Summary
 

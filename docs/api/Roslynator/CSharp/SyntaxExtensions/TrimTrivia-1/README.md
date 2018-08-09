@@ -11,7 +11,7 @@
 | TrimTrivia\(SyntaxToken\) | Removes all leading whitespace from the leading trivia and all trailing whitespace from the trailing trivia and returns a new token with the new trivia\. [SyntaxKind.WhitespaceTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind.whitespacetrivia) and [SyntaxKind.EndOfLineTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind.endoflinetrivia) is considered to be a whitespace\. Returns the same token if there is nothing to trim\. |
 | TrimTrivia\<TNode>\(TNode\) | Removes all leading whitespace from the leading trivia and all trailing whitespace from the trailing trivia and returns a new node with the new trivia\. [SyntaxKind.WhitespaceTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind.whitespacetrivia) and [SyntaxKind.EndOfLineTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind.endoflinetrivia) is considered to be a whitespace\. Returns the same node if there is nothing to trim\. |
 
-## TrimTrivia\<TNode>\(TNode\)
+## TrimTrivia\<TNode>\(TNode\)<a name="Roslynator_CSharp_SyntaxExtensions_TrimTrivia__1___0_"></a>
 
 ### Summary
 
@@ -39,7 +39,7 @@ public static TNode TrimTrivia<TNode>(this TNode node) where TNode : Microsoft.C
 
 TNode
 
-## TrimTrivia\(SyntaxToken\)
+## TrimTrivia\(SyntaxToken\)<a name="Roslynator_CSharp_SyntaxExtensions_TrimTrivia__1___0_"></a>
 
 ### Summary
 

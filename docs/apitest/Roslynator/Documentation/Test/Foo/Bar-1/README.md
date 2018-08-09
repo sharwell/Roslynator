@@ -11,7 +11,7 @@
 | Bar\(\) | abc |
 | Bar\<T>\(String, String\) | s **value** **T** |
 
-## Bar\<T>\(String, String\)
+## Bar\<T>\(String, String\)<a name="Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_"></a>
 
 ### Summary
 
@@ -34,7 +34,7 @@ public void Bar<T>(string value, string value2)
 | value | p |
 | value2 | |
 
-## Bar\(\)
+## Bar\(\)<a name="Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_"></a>
 
 ### Summary
 

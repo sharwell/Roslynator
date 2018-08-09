@@ -11,7 +11,7 @@
 | LocalFunctionStatement\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, ArrowExpressionClauseSyntax\) | |
 | LocalFunctionStatement\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, BlockSyntax\) | |
 
-## LocalFunctionStatement\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, BlockSyntax\)
+## LocalFunctionStatement\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_LocalFunctionStatement_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
 public static LocalFunctionStatementSyntax LocalFunctionStatement(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken identifier, ParameterListSyntax parameterList, BlockSyntax body)
@@ -31,7 +31,7 @@ public static LocalFunctionStatementSyntax LocalFunctionStatement(SyntaxTokenLis
 
 [LocalFunctionStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.localfunctionstatementsyntax)
 
-## LocalFunctionStatement\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, ArrowExpressionClauseSyntax\)
+## LocalFunctionStatement\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, ArrowExpressionClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_LocalFunctionStatement_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
 public static LocalFunctionStatementSyntax LocalFunctionStatement(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken identifier, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)

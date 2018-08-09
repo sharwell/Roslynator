@@ -11,7 +11,7 @@
 | IsExpressionInfo\(BinaryExpressionSyntax, Boolean, Boolean\) | Creates a new [IsExpressionInfo](../../Syntax/IsExpressionInfo/README.md) from the specified binary expression\. |
 | IsExpressionInfo\(SyntaxNode, Boolean, Boolean\) | Creates a new [IsExpressionInfo](../../Syntax/IsExpressionInfo/README.md) from the specified node\. |
 
-## IsExpressionInfo\(SyntaxNode, Boolean, Boolean\)
+## IsExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_IsExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static IsExpressionInfo IsExpressionInfo(SyntaxNode node, bool walkDownPa
 
 [IsExpressionInfo](../../Syntax/IsExpressionInfo/README.md)
 
-## IsExpressionInfo\(BinaryExpressionSyntax, Boolean, Boolean\)
+## IsExpressionInfo\(BinaryExpressionSyntax, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_IsExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 

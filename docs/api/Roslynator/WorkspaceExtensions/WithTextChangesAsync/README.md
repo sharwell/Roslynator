@@ -11,7 +11,7 @@
 | WithTextChangesAsync\(Document, IEnumerable\<TextChange>, CancellationToken\) | Creates a new document updated with the specified text changes\. |
 | WithTextChangesAsync\(Document, TextChange\[\], CancellationToken\) | Creates a new document updated with the specified text changes\. |
 
-## WithTextChangesAsync\(Document, TextChange\[\], CancellationToken\)
+## WithTextChangesAsync\(Document, TextChange\[\], CancellationToken\)<a name="Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextChange___System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static Task<Document> WithTextChangesAsync(this Document document, TextCh
 
 [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
-## WithTextChangesAsync\(Document, IEnumerable\<TextChange>, CancellationToken\)
+## WithTextChangesAsync\(Document, IEnumerable\<TextChange>, CancellationToken\)<a name="Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextChange___System_Threading_CancellationToken_"></a>
 
 ### Summary
 

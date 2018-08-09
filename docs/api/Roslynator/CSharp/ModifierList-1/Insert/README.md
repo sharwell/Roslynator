@@ -11,7 +11,7 @@
 | Insert\(TNode, SyntaxKind, IComparer\<SyntaxKind>\) | Creates a new node with a modifier of the specified kind inserted\. |
 | Insert\(TNode, SyntaxToken, IComparer\<SyntaxToken>\) | Creates a new node with the specified modifier inserted\. |
 
-## Insert\(TNode, SyntaxKind, IComparer\<SyntaxKind>\)
+## Insert\(TNode, SyntaxKind, IComparer\<SyntaxKind>\)<a name="Roslynator_CSharp_ModifierList_1_Insert__0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Collections_Generic_IComparer_Microsoft_CodeAnalysis_CSharp_SyntaxKind__"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public TNode Insert(TNode node, SyntaxKind kind, IComparer<SyntaxKind> comparer 
 
 TNode
 
-## Insert\(TNode, SyntaxToken, IComparer\<SyntaxToken>\)
+## Insert\(TNode, SyntaxToken, IComparer\<SyntaxToken>\)<a name="Roslynator_CSharp_ModifierList_1_Insert__0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Collections_Generic_IComparer_Microsoft_CodeAnalysis_CSharp_SyntaxKind__"></a>
 
 ### Summary
 

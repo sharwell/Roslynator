@@ -13,7 +13,7 @@
 | AppendToTrailingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\) | Creates a new node from this node with the trailing trivia replaced with a new trivia where the specified trivia is added at the end of the trailing trivia\. |
 | AppendToTrailingTrivia\<TNode>\(TNode, SyntaxTrivia\) | Creates a new node from this node with the trailing trivia replaced with a new trivia where the specified trivia is added at the end of the trailing trivia\. |
 
-## AppendToTrailingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\)
+## AppendToTrailingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_SyntaxExtensions_AppendToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -40,7 +40,7 @@ public static TNode AppendToTrailingTrivia<TNode>(this TNode node, IEnumerable<S
 
 TNode
 
-## AppendToTrailingTrivia\<TNode>\(TNode, SyntaxTrivia\)
+## AppendToTrailingTrivia\<TNode>\(TNode, SyntaxTrivia\)<a name="Roslynator_SyntaxExtensions_AppendToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -67,7 +67,7 @@ public static TNode AppendToTrailingTrivia<TNode>(this TNode node, SyntaxTrivia 
 
 TNode
 
-## AppendToTrailingTrivia\(SyntaxToken, IEnumerable\<SyntaxTrivia>\)
+## AppendToTrailingTrivia\(SyntaxToken, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_SyntaxExtensions_AppendToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -88,7 +88,7 @@ public static SyntaxToken AppendToTrailingTrivia(this SyntaxToken token, IEnumer
 
 [SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
-## AppendToTrailingTrivia\(SyntaxToken, SyntaxTrivia\)
+## AppendToTrailingTrivia\(SyntaxToken, SyntaxTrivia\)<a name="Roslynator_SyntaxExtensions_AppendToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 

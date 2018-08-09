@@ -15,7 +15,7 @@
 | MemberDeclarationListInfo\(StructDeclarationSyntax\) | Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md) from the specified declaration\. |
 | MemberDeclarationListInfo\(SyntaxNode\) | Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md) from the specified node\. |
 
-## MemberDeclarationListInfo\(SyntaxNode\)
+## MemberDeclarationListInfo\(SyntaxNode\)<a name="Roslynator_CSharp_SyntaxInfo_MemberDeclarationListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(SyntaxNode nod
 
 [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
-## MemberDeclarationListInfo\(CompilationUnitSyntax\)
+## MemberDeclarationListInfo\(CompilationUnitSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_MemberDeclarationListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -55,7 +55,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(CompilationUni
 
 [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
-## MemberDeclarationListInfo\(NamespaceDeclarationSyntax\)
+## MemberDeclarationListInfo\(NamespaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_MemberDeclarationListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -75,7 +75,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(NamespaceDecla
 
 [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
-## MemberDeclarationListInfo\(ClassDeclarationSyntax\)
+## MemberDeclarationListInfo\(ClassDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_MemberDeclarationListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -95,7 +95,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(ClassDeclarati
 
 [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
-## MemberDeclarationListInfo\(StructDeclarationSyntax\)
+## MemberDeclarationListInfo\(StructDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_MemberDeclarationListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -115,7 +115,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(StructDeclarat
 
 [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
-## MemberDeclarationListInfo\(InterfaceDeclarationSyntax\)
+## MemberDeclarationListInfo\(InterfaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_MemberDeclarationListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 

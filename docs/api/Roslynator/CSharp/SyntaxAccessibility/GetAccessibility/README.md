@@ -28,7 +28,7 @@
 | GetAccessibility\(PropertyDeclarationSyntax\) | Returns an accessibility of the specified declaration\. |
 | GetAccessibility\(StructDeclarationSyntax\) | Returns an accessibility of the specified declaration\. |
 
-## GetAccessibility\(MemberDeclarationSyntax\)
+## GetAccessibility\(MemberDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -48,7 +48,7 @@ public static Accessibility GetAccessibility(MemberDeclarationSyntax declaration
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(ClassDeclarationSyntax\)
+## GetAccessibility\(ClassDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -68,7 +68,7 @@ public static Accessibility GetAccessibility(ClassDeclarationSyntax classDeclara
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(ConstructorDeclarationSyntax\)
+## GetAccessibility\(ConstructorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -88,7 +88,7 @@ public static Accessibility GetAccessibility(ConstructorDeclarationSyntax constr
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(ConversionOperatorDeclarationSyntax\)
+## GetAccessibility\(ConversionOperatorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -108,7 +108,7 @@ public static Accessibility GetAccessibility(ConversionOperatorDeclarationSyntax
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(DelegateDeclarationSyntax\)
+## GetAccessibility\(DelegateDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -128,7 +128,7 @@ public static Accessibility GetAccessibility(DelegateDeclarationSyntax delegateD
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(DestructorDeclarationSyntax\)
+## GetAccessibility\(DestructorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -148,7 +148,7 @@ public static Accessibility GetAccessibility(DestructorDeclarationSyntax destruc
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(EnumDeclarationSyntax\)
+## GetAccessibility\(EnumDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -168,7 +168,7 @@ public static Accessibility GetAccessibility(EnumDeclarationSyntax enumDeclarati
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(EnumMemberDeclarationSyntax\)
+## GetAccessibility\(EnumMemberDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -188,7 +188,7 @@ public static Accessibility GetAccessibility(EnumMemberDeclarationSyntax enumMem
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(EventDeclarationSyntax\)
+## GetAccessibility\(EventDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -208,7 +208,7 @@ public static Accessibility GetAccessibility(EventDeclarationSyntax eventDeclara
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(EventFieldDeclarationSyntax\)
+## GetAccessibility\(EventFieldDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -228,7 +228,7 @@ public static Accessibility GetAccessibility(EventFieldDeclarationSyntax eventFi
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(FieldDeclarationSyntax\)
+## GetAccessibility\(FieldDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -248,7 +248,7 @@ public static Accessibility GetAccessibility(FieldDeclarationSyntax fieldDeclara
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(IndexerDeclarationSyntax\)
+## GetAccessibility\(IndexerDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -268,7 +268,7 @@ public static Accessibility GetAccessibility(IndexerDeclarationSyntax indexerDec
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(InterfaceDeclarationSyntax\)
+## GetAccessibility\(InterfaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -288,7 +288,7 @@ public static Accessibility GetAccessibility(InterfaceDeclarationSyntax interfac
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(MethodDeclarationSyntax\)
+## GetAccessibility\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -308,7 +308,7 @@ public static Accessibility GetAccessibility(MethodDeclarationSyntax methodDecla
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(NamespaceDeclarationSyntax\)
+## GetAccessibility\(NamespaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -328,7 +328,7 @@ public static Accessibility GetAccessibility(NamespaceDeclarationSyntax namespac
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(OperatorDeclarationSyntax\)
+## GetAccessibility\(OperatorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -348,7 +348,7 @@ public static Accessibility GetAccessibility(OperatorDeclarationSyntax operatorD
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(PropertyDeclarationSyntax\)
+## GetAccessibility\(PropertyDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -368,7 +368,7 @@ public static Accessibility GetAccessibility(PropertyDeclarationSyntax propertyD
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(StructDeclarationSyntax\)
+## GetAccessibility\(StructDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -388,7 +388,7 @@ public static Accessibility GetAccessibility(StructDeclarationSyntax structDecla
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetAccessibility\(AccessorDeclarationSyntax\)
+## GetAccessibility\(AccessorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 

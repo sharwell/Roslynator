@@ -12,7 +12,7 @@
 | IsParameterArrayOf\(IParameterSymbol, SpecialType, SpecialType\) | Returns true if the parameter was declared as a parameter array that has one of specified element types\. |
 | IsParameterArrayOf\(IParameterSymbol, SpecialType, SpecialType, SpecialType\) | Returns true if the parameter was declared as a parameter array that has one of specified element types\. |
 
-## IsParameterArrayOf\(IParameterSymbol, SpecialType\)
+## IsParameterArrayOf\(IParameterSymbol, SpecialType\)<a name="Roslynator_SymbolExtensions_IsParameterArrayOf_Microsoft_CodeAnalysis_IParameterSymbol_Microsoft_CodeAnalysis_SpecialType_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParameterArrayOf\(IParameterSymbol, SpecialType, SpecialType\)
+## IsParameterArrayOf\(IParameterSymbol, SpecialType, SpecialType\)<a name="Roslynator_SymbolExtensions_IsParameterArrayOf_Microsoft_CodeAnalysis_IParameterSymbol_Microsoft_CodeAnalysis_SpecialType_"></a>
 
 ### Summary
 
@@ -55,7 +55,7 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParameterArrayOf\(IParameterSymbol, SpecialType, SpecialType, SpecialType\)
+## IsParameterArrayOf\(IParameterSymbol, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_SymbolExtensions_IsParameterArrayOf_Microsoft_CodeAnalysis_IParameterSymbol_Microsoft_CodeAnalysis_SpecialType_"></a>
 
 ### Summary
 

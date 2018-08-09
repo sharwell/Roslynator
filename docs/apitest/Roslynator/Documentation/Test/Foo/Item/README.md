@@ -11,7 +11,7 @@
 | Item\[Int32, Int32\] | s |
 | Item\[Int32\] | s |
 
-## Item\[Int32\]
+## Item\[Int32\]<a name="Roslynator_Documentation_Test_Foo_Item_System_Int32_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public Foo this[int index] { get; set; }
 
 v
 
-## Item\[Int32, Int32\]
+## Item\[Int32, Int32\]<a name="Roslynator_Documentation_Test_Foo_Item_System_Int32_"></a>
 
 ### Summary
 

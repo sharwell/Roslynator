@@ -11,7 +11,7 @@
 | DefaultSwitchSection\(StatementSyntax\) | |
 | DefaultSwitchSection\(SyntaxList\<StatementSyntax>\) | |
 
-## DefaultSwitchSection\(StatementSyntax\)
+## DefaultSwitchSection\(StatementSyntax\)<a name="Roslynator_CSharp_CSharpFactory_DefaultSwitchSection_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_"></a>
 
 ```csharp
 public static SwitchSectionSyntax DefaultSwitchSection(StatementSyntax statement)
@@ -27,7 +27,7 @@ public static SwitchSectionSyntax DefaultSwitchSection(StatementSyntax statement
 
 [SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)
 
-## DefaultSwitchSection\(SyntaxList\<StatementSyntax>\)
+## DefaultSwitchSection\(SyntaxList\<StatementSyntax>\)<a name="Roslynator_CSharp_CSharpFactory_DefaultSwitchSection_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_"></a>
 
 ```csharp
 public static SwitchSectionSyntax DefaultSwitchSection(SyntaxList<StatementSyntax> statements)

@@ -11,7 +11,7 @@
 | IndexOf\(SyntaxTokenList, Func\<SyntaxToken, Boolean>\) | Searches for a token that matches the predicate and returns the zero\-based index of the first occurrence within the entire [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\. |
 | IndexOf\(SyntaxTriviaList, Func\<SyntaxTrivia, Boolean>\) | Searches for a trivia that matches the predicate and returns the zero\-based index of the first occurrence within the entire [SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)\. |
 
-## IndexOf\(SyntaxTokenList, Func\<SyntaxToken, Boolean>\)
+## IndexOf\(SyntaxTokenList, Func\<SyntaxToken, Boolean>\)<a name="Roslynator_SyntaxExtensions_IndexOf_Microsoft_CodeAnalysis_SyntaxTokenList_System_Func_Microsoft_CodeAnalysis_SyntaxToken_System_Boolean__"></a>
 
 ### Summary
 
@@ -32,7 +32,7 @@ public static int IndexOf(this SyntaxTokenList tokens, Func<SyntaxToken, bool> p
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-## IndexOf\(SyntaxTriviaList, Func\<SyntaxTrivia, Boolean>\)
+## IndexOf\(SyntaxTriviaList, Func\<SyntaxTrivia, Boolean>\)<a name="Roslynator_SyntaxExtensions_IndexOf_Microsoft_CodeAnalysis_SyntaxTokenList_System_Func_Microsoft_CodeAnalysis_SyntaxToken_System_Boolean__"></a>
 
 ### Summary
 

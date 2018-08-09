@@ -11,7 +11,7 @@
 | ToSeparatedSyntaxList\<TNode>\(IEnumerable\<SyntaxNodeOrToken>\) | Creates a separated list of syntax nodes from a sequence of nodes and tokens\. |
 | ToSeparatedSyntaxList\<TNode>\(IEnumerable\<TNode>\) | Creates a separated list of syntax nodes from a sequence of nodes\. |
 
-## ToSeparatedSyntaxList\<TNode>\(IEnumerable\<TNode>\)
+## ToSeparatedSyntaxList\<TNode>\(IEnumerable\<TNode>\)<a name="Roslynator_CSharp_SyntaxExtensions_ToSeparatedSyntaxList__1_System_Collections_Generic_IEnumerable___0__"></a>
 
 ### Summary
 
@@ -37,7 +37,7 @@ public static SeparatedSyntaxList<TNode> ToSeparatedSyntaxList<TNode>(this IEnum
 
 [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)
 
-## ToSeparatedSyntaxList\<TNode>\(IEnumerable\<SyntaxNodeOrToken>\)
+## ToSeparatedSyntaxList\<TNode>\(IEnumerable\<SyntaxNodeOrToken>\)<a name="Roslynator_CSharp_SyntaxExtensions_ToSeparatedSyntaxList__1_System_Collections_Generic_IEnumerable___0__"></a>
 
 ### Summary
 

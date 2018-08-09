@@ -11,7 +11,7 @@
 | ThisConstructorInitializer\(ArgumentListSyntax\) | |
 | ThisConstructorInitializer\(SyntaxToken, ArgumentListSyntax\) | |
 
-## ThisConstructorInitializer\(ArgumentListSyntax\)
+## ThisConstructorInitializer\(ArgumentListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_"></a>
 
 ```csharp
 public static ConstructorInitializerSyntax ThisConstructorInitializer(ArgumentListSyntax argumentList = null)
@@ -27,7 +27,7 @@ public static ConstructorInitializerSyntax ThisConstructorInitializer(ArgumentLi
 
 [ConstructorInitializerSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructorinitializersyntax)
 
-## ThisConstructorInitializer\(SyntaxToken, ArgumentListSyntax\)
+## ThisConstructorInitializer\(SyntaxToken, ArgumentListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_"></a>
 
 ```csharp
 public static ConstructorInitializerSyntax ThisConstructorInitializer(SyntaxToken semicolonToken, ArgumentListSyntax argumentList)

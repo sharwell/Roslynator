@@ -11,7 +11,7 @@
 | WithoutTrailingTrivia\(SyntaxNodeOrToken\) | Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) with the trailing trivia removed\. |
 | WithoutTrailingTrivia\(SyntaxToken\) | Creates a new token from this token with the trailing trivia removed\. |
 
-## WithoutTrailingTrivia\(SyntaxNodeOrToken\)
+## WithoutTrailingTrivia\(SyntaxNodeOrToken\)<a name="Roslynator_SyntaxExtensions_WithoutTrailingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public static SyntaxNodeOrToken WithoutTrailingTrivia(this SyntaxNodeOrToken nod
 
 [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken)
 
-## WithoutTrailingTrivia\(SyntaxToken\)
+## WithoutTrailingTrivia\(SyntaxToken\)<a name="Roslynator_SyntaxExtensions_WithoutTrailingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_"></a>
 
 ### Summary
 

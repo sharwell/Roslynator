@@ -11,7 +11,7 @@
 | Equals\(GenericInfo\) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<GenericInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | Equals\(Object\) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
-## Equals\(Object\)
+## Equals\(Object\)<a name="Roslynator_CSharp_Syntax_GenericInfo_Equals_System_Object_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public override bool Equals(object obj)
 
 true if **obj** and this instance are the same type and represent the same value; otherwise, false\. 
 
-## Equals\(GenericInfo\)
+## Equals\(GenericInfo\)<a name="Roslynator_CSharp_Syntax_GenericInfo_Equals_System_Object_"></a>
 
 ### Summary
 

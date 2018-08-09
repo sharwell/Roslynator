@@ -11,7 +11,7 @@
 | ContainsYield\(LocalFunctionStatementSyntax\) | Returns true if the specified local function contains yield statement\. Nested local functions are excluded\. |
 | ContainsYield\(MethodDeclarationSyntax\) | Returns true if the specified method contains yield statement\. Nested local functions are excluded\. |
 
-## ContainsYield\(LocalFunctionStatementSyntax\)
+## ContainsYield\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsYield_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public static bool ContainsYield(this LocalFunctionStatementSyntax localFunction
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ContainsYield\(MethodDeclarationSyntax\)
+## ContainsYield\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsYield_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_"></a>
 
 ### Summary
 

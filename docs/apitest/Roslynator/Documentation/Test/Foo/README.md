@@ -59,8 +59,8 @@ paratext
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [Foo(String)](-ctor/README.md) | aaa |
-| [Foo(String, String)](-ctor/README.md) | |
+| [Foo(String)](-ctor/README.md#Roslynator_Documentation_Test_Foo__ctor_System_String_) | aaa |
+| [Foo(String, String)](-ctor/README.md#Roslynator_Documentation_Test_Foo__ctor_System_String_System_String_) | |
 
 ## Fields
 
@@ -72,15 +72,15 @@ paratext
 
 | Property | Summary |
 | -------- | ------- |
-| [Item\[Int32, Int32\]](Item/README.md) | s |
-| [Item\[Int32\]](Item/README.md) | s |
+| [Item\[Int32, Int32\]](Item/README.md#Roslynator_Documentation_Test_Foo_Item_System_Int32_System_Int32_) | s |
+| [Item\[Int32\]](Item/README.md#Roslynator_Documentation_Test_Foo_Item_System_Int32_) | s |
 
 ## Methods
 
 | Method | Summary |
 | ------ | ------- |
-| [Bar()](Bar/README.md) | abc |
-| [Bar\<T>(String, String)](Bar-1/README.md) | s **value** **T** |
+| [Bar()](Bar/README.md#Roslynator_Documentation_Test_Foo_Bar) | abc |
+| [Bar\<T>(String, String)](Bar-1/README.md#Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_) | s **value** **T** |
 | [Bar2()](Bar2/README.md) |     1 2 |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |

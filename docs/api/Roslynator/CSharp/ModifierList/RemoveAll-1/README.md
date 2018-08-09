@@ -11,7 +11,7 @@
 | RemoveAll\<TNode>\(TNode\) | Creates a new node with all modifiers removed\. |
 | RemoveAll\<TNode>\(TNode, Func\<SyntaxToken, Boolean>\) | Creates a new node with modifiers that matches the predicate removed\. |
 
-## RemoveAll\<TNode>\(TNode, Func\<SyntaxToken, Boolean>\)
+## RemoveAll\<TNode>\(TNode, Func\<SyntaxToken, Boolean>\)<a name="Roslynator_CSharp_ModifierList_RemoveAll__1___0_System_Func_Microsoft_CodeAnalysis_SyntaxToken_System_Boolean__"></a>
 
 ### Summary
 
@@ -38,7 +38,7 @@ public static TNode RemoveAll<TNode>(TNode node, Func<SyntaxToken, bool> predica
 
 TNode
 
-## RemoveAll\<TNode>\(TNode\)
+## RemoveAll\<TNode>\(TNode\)<a name="Roslynator_CSharp_ModifierList_RemoveAll__1___0_System_Func_Microsoft_CodeAnalysis_SyntaxToken_System_Boolean__"></a>
 
 ### Summary
 

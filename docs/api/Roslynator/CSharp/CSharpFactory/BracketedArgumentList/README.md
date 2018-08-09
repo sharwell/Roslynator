@@ -11,7 +11,7 @@
 | BracketedArgumentList\(ArgumentSyntax\) | |
 | BracketedArgumentList\(ArgumentSyntax\[\]\) | |
 
-## BracketedArgumentList\(ArgumentSyntax\[\]\)
+## BracketedArgumentList\(ArgumentSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_BracketedArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax___"></a>
 
 ```csharp
 public static BracketedArgumentListSyntax BracketedArgumentList(params ArgumentSyntax[] arguments)
@@ -27,7 +27,7 @@ public static BracketedArgumentListSyntax BracketedArgumentList(params ArgumentS
 
 [BracketedArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.bracketedargumentlistsyntax)
 
-## BracketedArgumentList\(ArgumentSyntax\)
+## BracketedArgumentList\(ArgumentSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BracketedArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax___"></a>
 
 ```csharp
 public static BracketedArgumentListSyntax BracketedArgumentList(ArgumentSyntax argument)

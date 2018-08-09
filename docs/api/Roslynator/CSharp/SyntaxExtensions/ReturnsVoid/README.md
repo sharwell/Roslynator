@@ -12,7 +12,7 @@
 | ReturnsVoid\(LocalFunctionStatementSyntax\) | Returns true if the specified local function' return type is [Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)\. |
 | ReturnsVoid\(MethodDeclarationSyntax\) | Returns true if the specified method return type is [Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)\. |
 
-## ReturnsVoid\(DelegateDeclarationSyntax\)
+## ReturnsVoid\(DelegateDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -32,7 +32,7 @@ public static bool ReturnsVoid(this DelegateDeclarationSyntax delegateDeclaratio
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ReturnsVoid\(LocalFunctionStatementSyntax\)
+## ReturnsVoid\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -52,7 +52,7 @@ public static bool ReturnsVoid(this LocalFunctionStatementSyntax localFunctionSt
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ReturnsVoid\(MethodDeclarationSyntax\)
+## ReturnsVoid\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_"></a>
 
 ### Summary
 

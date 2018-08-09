@@ -11,7 +11,7 @@
 | IsLast\<TNode>\(SeparatedSyntaxList\<TNode>, TNode\) | Returns true if the specified node is a last node in the list\. |
 | IsLast\<TNode>\(SyntaxList\<TNode>, TNode\) | Returns true if the specified node is a last node in the list\. |
 
-## IsLast\<TNode>\(SeparatedSyntaxList\<TNode>, TNode\)
+## IsLast\<TNode>\(SeparatedSyntaxList\<TNode>, TNode\)<a name="Roslynator_SyntaxExtensions_IsLast__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0____0_"></a>
 
 ### Summary
 
@@ -38,7 +38,7 @@ public static bool IsLast<TNode>(this SeparatedSyntaxList<TNode> list, TNode nod
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsLast\<TNode>\(SyntaxList\<TNode>, TNode\)
+## IsLast\<TNode>\(SyntaxList\<TNode>, TNode\)<a name="Roslynator_SyntaxExtensions_IsLast__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0____0_"></a>
 
 ### Summary
 

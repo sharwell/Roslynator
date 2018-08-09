@@ -11,7 +11,7 @@
 | RemovePreprocessorDirectivesAsync\(Document, PreprocessorDirectiveKinds, CancellationToken\) | Creates a new document with preprocessor directives of the specified kind removed\. |
 | RemovePreprocessorDirectivesAsync\(Document, TextSpan, PreprocessorDirectiveKinds, CancellationToken\) | Creates a new document with preprocessor directives of the specified kind removed\. |
 
-## RemovePreprocessorDirectivesAsync\(Document, PreprocessorDirectiveKinds, CancellationToken\)
+## RemovePreprocessorDirectivesAsync\(Document, PreprocessorDirectiveKinds, CancellationToken\)<a name="Roslynator_CSharp_WorkspaceExtensions_RemovePreprocessorDirectivesAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_PreprocessorDirectiveKinds_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static Task<Document> RemovePreprocessorDirectivesAsync(this Document doc
 
 [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
-## RemovePreprocessorDirectivesAsync\(Document, TextSpan, PreprocessorDirectiveKinds, CancellationToken\)
+## RemovePreprocessorDirectivesAsync\(Document, TextSpan, PreprocessorDirectiveKinds, CancellationToken\)<a name="Roslynator_CSharp_WorkspaceExtensions_RemovePreprocessorDirectivesAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_PreprocessorDirectiveKinds_System_Threading_CancellationToken_"></a>
 
 ### Summary
 

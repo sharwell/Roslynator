@@ -11,7 +11,7 @@
 | TypeParameterConstraintClause\(IdentifierNameSyntax, TypeParameterConstraintSyntax\) | |
 | TypeParameterConstraintClause\(String, TypeParameterConstraintSyntax\) | |
 
-## TypeParameterConstraintClause\(String, TypeParameterConstraintSyntax\)
+## TypeParameterConstraintClause\(String, TypeParameterConstraintSyntax\)<a name="Roslynator_CSharp_CSharpFactory_TypeParameterConstraintClause_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_"></a>
 
 ```csharp
 public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(string name, TypeParameterConstraintSyntax typeParameterConstraint)
@@ -28,7 +28,7 @@ public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(
 
 [TypeParameterConstraintClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeparameterconstraintclausesyntax)
 
-## TypeParameterConstraintClause\(IdentifierNameSyntax, TypeParameterConstraintSyntax\)
+## TypeParameterConstraintClause\(IdentifierNameSyntax, TypeParameterConstraintSyntax\)<a name="Roslynator_CSharp_CSharpFactory_TypeParameterConstraintClause_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_"></a>
 
 ```csharp
 public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(IdentifierNameSyntax identifierName, TypeParameterConstraintSyntax typeParameterConstraint)

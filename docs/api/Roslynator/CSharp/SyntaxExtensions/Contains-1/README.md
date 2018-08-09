@@ -13,7 +13,7 @@
 | Contains\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\) | Searches for a node of the specified kind and returns the zero\-based index of the first occurrence within the entire [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)\. |
 | Contains\<TNode>\(SyntaxList\<TNode>, SyntaxKind\) | Returns true if a node of the specified kind is in the [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)\. |
 
-## Contains\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\)
+## Contains\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -40,7 +40,7 @@ public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxK
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Contains\<TNode>\(SyntaxList\<TNode>, SyntaxKind\)
+## Contains\<TNode>\(SyntaxList\<TNode>, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -67,7 +67,7 @@ public static bool Contains<TNode>(this SyntaxList<TNode> list, SyntaxKind kind)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Contains\(SyntaxTokenList, SyntaxKind\)
+## Contains\(SyntaxTokenList, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -88,7 +88,7 @@ public static bool Contains(this SyntaxTokenList tokenList, SyntaxKind kind)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Contains\(SyntaxTriviaList, SyntaxKind\)
+## Contains\(SyntaxTriviaList, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 

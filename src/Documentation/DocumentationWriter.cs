@@ -6,6 +6,7 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
 using Roslynator.CSharp;
@@ -462,7 +463,7 @@ namespace Roslynator.Documentation
                             WriteLinkOrTypeLink(returnType);
                             WriteLine();
 
-                            xmlDocumentation?.WriteContentTo(this, WellKnownTags.Returns);
+                            xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(this);
                         }
 
                         break;
@@ -642,7 +643,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteExceptions(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
         {
-            using (IEnumerator<(XElement element, ISymbol exceptionSymbol)> en = xmlDocumentation.GetExceptions(DocumentationModel.Compilation).GetEnumerator())
+            using (IEnumerator<(XElement element, ISymbol exceptionSymbol)> en = GetExceptions().GetEnumerator())
             {
                 if (en.MoveNext())
                 {
@@ -661,6 +662,22 @@ namespace Roslynator.Documentation
                         WriteLine();
                     }
                     while (en.MoveNext());
+                }
+            }
+
+            IEnumerable<(XElement element, ISymbol exceptionSymbol)> GetExceptions()
+            {
+                foreach (XElement element in xmlDocumentation.Elements(WellKnownTags.Exception))
+                {
+                    string commentId = element.Attribute("cref")?.Value;
+
+                    if (commentId != null)
+                    {
+                        ISymbol exceptionSymbol = DocumentationModel.GetFirstSymbolForReferenceId(commentId);
+
+                        if (exceptionSymbol != null)
+                            yield return (element, exceptionSymbol);
+                    }
                 }
             }
         }
@@ -746,7 +763,7 @@ namespace Roslynator.Documentation
                         if (xmlDocumentation != null)
                         {
                             WriteStartTableCell();
-                            xmlDocumentation.WriteContentTo(this, WellKnownTags.Summary, inlineOnly: true);
+                            xmlDocumentation?.Element(WellKnownTags.Summary)?.WriteContentTo(this, inlineOnly: true);
                             WriteEndTableCell();
                         }
 
@@ -925,16 +942,17 @@ namespace Roslynator.Documentation
 
                         if (symbol.Kind == SymbolKind.Parameter)
                         {
-                            GetXmlDocumentation(symbol.ContainingSymbol)?.ParamElement(symbol.Name)?.WriteContentTo(this);
+                            GetXmlDocumentation(symbol.ContainingSymbol)?.Element(WellKnownTags.Param, "name", symbol.Name)?.WriteContentTo(this);
                         }
                         else if (symbol.Kind == SymbolKind.TypeParameter)
                         {
-                            GetXmlDocumentation(symbol.ContainingSymbol)?.TypeParamElement(symbol.Name)?.WriteContentTo(this);
+                            GetXmlDocumentation(symbol.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", symbol.Name)?.WriteContentTo(this);
                         }
                         else
                         {
                             ISymbol symbol2 = (isInherited) ? symbol.OriginalDefinition : symbol;
-                            GetXmlDocumentation(symbol2)?.WriteContentTo(this, WellKnownTags.Summary, inlineOnly: true);
+
+                            GetXmlDocumentation(symbol2)?.Element(WellKnownTags.Summary)?.WriteContentTo(this, inlineOnly: true);
                         }
 
                         if (isInherited)
@@ -1244,7 +1262,96 @@ namespace Roslynator.Documentation
 
             string url = UrlProvider.GetLocalUrl(folders, containingFolders).Url;
 
-            return Options.BaseLocalUrl + url;
+            url = Options.BaseLocalUrl + url;
+
+            if (symbol.Kind == SymbolKind.Method
+                || (symbol.Kind == SymbolKind.Property && ((IPropertySymbol)symbol).IsIndexer))
+            {
+                TypeDocumentationModel typeModel = DocumentationModel.GetTypeModel(symbol.ContainingType);
+
+                IEnumerable<ISymbol> members = GetMembers(typeModel);
+
+                if (members != null)
+                {
+                    using (IEnumerator<ISymbol> en = members.Where(f => f.Name == symbol.Name).GetEnumerator())
+                    {
+                        if (en.MoveNext()
+                            && en.MoveNext())
+                        {
+                            string id = symbol.GetDocumentationCommentId();
+
+                            id = TextUtility.RemovePrefixFromDocumentationCommentId(id);
+
+                            id = Regex.Replace(id, @"[^\w_]", "_");
+
+                            url += "#" + id;
+                        }
+                    }
+                }
+            }
+
+            return url;
+
+            IEnumerable<ISymbol> GetMembers(TypeDocumentationModel model)
+            {
+                switch (symbol.Kind)
+                {
+                    case SymbolKind.Method:
+                        {
+                            var methodSymbol = (IMethodSymbol)symbol;
+
+                            switch (methodSymbol.MethodKind)
+                            {
+                                case MethodKind.Constructor:
+                                    {
+                                        return model.GetConstructors();
+                                    }
+                                case MethodKind.Ordinary:
+                                    {
+                                        return model.GetMethods();
+                                    }
+                                case MethodKind.Conversion:
+                                case MethodKind.UserDefinedOperator:
+                                    {
+                                        return model.GetOperators();
+                                    }
+                                case MethodKind.ExplicitInterfaceImplementation:
+                                    {
+                                        ImmutableArray<IMethodSymbol> explicitInterfaceImplementations = methodSymbol.ExplicitInterfaceImplementations;
+
+                                        if (!explicitInterfaceImplementations.IsDefaultOrEmpty)
+                                            return model.GetExplicitInterfaceImplementations();
+
+                                        break;
+                                    }
+                            }
+
+                            break;
+                        }
+                    case SymbolKind.Property:
+                        {
+                            var propertySymbol = (IPropertySymbol)symbol;
+
+                            if (propertySymbol.IsIndexer)
+                            {
+                                ImmutableArray<IPropertySymbol> explicitInterfaceImplementations = propertySymbol.ExplicitInterfaceImplementations;
+
+                                if (!explicitInterfaceImplementations.IsDefaultOrEmpty)
+                                {
+                                    return model.GetExplicitInterfaceImplementations();
+                                }
+                                else
+                                {
+                                    return model.GetProperties().Where(f => f.IsIndexer);
+                                }
+                            }
+
+                            break;
+                        }
+                }
+
+                return null;
+            }
         }
 
         public void Dispose()

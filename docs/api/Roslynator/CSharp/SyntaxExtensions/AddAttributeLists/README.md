@@ -12,7 +12,7 @@
 | AddAttributeLists\(InterfaceDeclarationSyntax, Boolean, AttributeListSyntax\[\]\) | Creates a new interface declaration with the specified attribute lists added\. |
 | AddAttributeLists\(StructDeclarationSyntax, Boolean, AttributeListSyntax\[\]\) | Creates a new struct declaration with the specified attribute lists added\. |
 
-## AddAttributeLists\(ClassDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)
+## AddAttributeLists\(ClassDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)<a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
 
 ### Summary
 
@@ -34,7 +34,7 @@ public static ClassDeclarationSyntax AddAttributeLists(this ClassDeclarationSynt
 
 [ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax)
 
-## AddAttributeLists\(InterfaceDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)
+## AddAttributeLists\(InterfaceDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)<a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
 
 ### Summary
 
@@ -56,7 +56,7 @@ public static InterfaceDeclarationSyntax AddAttributeLists(this InterfaceDeclara
 
 [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax)
 
-## AddAttributeLists\(StructDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)
+## AddAttributeLists\(StructDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)<a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
 
 ### Summary
 

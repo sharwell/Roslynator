@@ -16,7 +16,7 @@
 | BodyOrExpressionBody\(MethodDeclarationSyntax\) | Returns method body or an expression body if the body is null\. |
 | BodyOrExpressionBody\(OperatorDeclarationSyntax\) | Returns operator body or an expression body if the body is null\. |
 
-## BodyOrExpressionBody\(AccessorDeclarationSyntax\)
+## BodyOrExpressionBody\(AccessorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BodyOrExpressionBody_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -36,7 +36,7 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this AccessorDeclarationSynt
 
 [CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
 
-## BodyOrExpressionBody\(ConstructorDeclarationSyntax\)
+## BodyOrExpressionBody\(ConstructorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BodyOrExpressionBody_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -56,7 +56,7 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this ConstructorDeclarationS
 
 [CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
 
-## BodyOrExpressionBody\(ConversionOperatorDeclarationSyntax\)
+## BodyOrExpressionBody\(ConversionOperatorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BodyOrExpressionBody_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -76,7 +76,7 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this ConversionOperatorDecla
 
 [CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
 
-## BodyOrExpressionBody\(DestructorDeclarationSyntax\)
+## BodyOrExpressionBody\(DestructorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BodyOrExpressionBody_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -96,7 +96,7 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this DestructorDeclarationSy
 
 [CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
 
-## BodyOrExpressionBody\(LocalFunctionStatementSyntax\)
+## BodyOrExpressionBody\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BodyOrExpressionBody_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -116,7 +116,7 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this LocalFunctionStatementS
 
 [CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
 
-## BodyOrExpressionBody\(MethodDeclarationSyntax\)
+## BodyOrExpressionBody\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BodyOrExpressionBody_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -136,7 +136,7 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this MethodDeclarationSyntax
 
 [CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
 
-## BodyOrExpressionBody\(OperatorDeclarationSyntax\)
+## BodyOrExpressionBody\(OperatorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BodyOrExpressionBody_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
 
 ### Summary
 

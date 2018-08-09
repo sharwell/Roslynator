@@ -11,7 +11,7 @@
 | NameOfExpression\(ExpressionSyntax\) | |
 | NameOfExpression\(String\) | |
 
-## NameOfExpression\(String\)
+## NameOfExpression\(String\)<a name="Roslynator_CSharp_CSharpFactory_NameOfExpression_System_String_"></a>
 
 ```csharp
 public static InvocationExpressionSyntax NameOfExpression(string identifier)
@@ -27,7 +27,7 @@ public static InvocationExpressionSyntax NameOfExpression(string identifier)
 
 [InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 
-## NameOfExpression\(ExpressionSyntax\)
+## NameOfExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_NameOfExpression_System_String_"></a>
 
 ```csharp
 public static InvocationExpressionSyntax NameOfExpression(ExpressionSyntax expression)

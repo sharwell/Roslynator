@@ -11,7 +11,7 @@
 | ConditionalExpressionInfo\(ConditionalExpressionSyntax, Boolean, Boolean\) | Creates a new [ConditionalExpressionInfo](../../Syntax/ConditionalExpressionInfo/README.md) from the specified conditional expression\. |
 | ConditionalExpressionInfo\(SyntaxNode, Boolean, Boolean\) | Creates a new [ConditionalExpressionInfo](../../Syntax/ConditionalExpressionInfo/README.md) from the specified node\. |
 
-## ConditionalExpressionInfo\(SyntaxNode, Boolean, Boolean\)
+## ConditionalExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_ConditionalExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static ConditionalExpressionInfo ConditionalExpressionInfo(SyntaxNode nod
 
 [ConditionalExpressionInfo](../../Syntax/ConditionalExpressionInfo/README.md)
 
-## ConditionalExpressionInfo\(ConditionalExpressionSyntax, Boolean, Boolean\)
+## ConditionalExpressionInfo\(ConditionalExpressionSyntax, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_ConditionalExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
 ### Summary
 

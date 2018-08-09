@@ -15,7 +15,7 @@
 | GetSymbol\(SemanticModel, OrderingSyntax, CancellationToken\) | Returns what symbol, if any, the specified ordering syntax bound to\. |
 | GetSymbol\(SemanticModel, SelectOrGroupClauseSyntax, CancellationToken\) | Returns what symbol, if any, the specified select or group clause bound to\. |
 
-## GetSymbol\(SemanticModel, AttributeSyntax, CancellationToken\)
+## GetSymbol\(SemanticModel, AttributeSyntax, CancellationToken\)<a name="Roslynator_CSharp_CSharpExtensions_GetSymbol_Microsoft_CodeAnalysis_SemanticModel_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -37,7 +37,7 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, AttributeSynta
 
 [ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
-## GetSymbol\(SemanticModel, ConstructorInitializerSyntax, CancellationToken\)
+## GetSymbol\(SemanticModel, ConstructorInitializerSyntax, CancellationToken\)<a name="Roslynator_CSharp_CSharpExtensions_GetSymbol_Microsoft_CodeAnalysis_SemanticModel_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -59,7 +59,7 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, ConstructorIni
 
 [ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
-## GetSymbol\(SemanticModel, CrefSyntax, CancellationToken\)
+## GetSymbol\(SemanticModel, CrefSyntax, CancellationToken\)<a name="Roslynator_CSharp_CSharpExtensions_GetSymbol_Microsoft_CodeAnalysis_SemanticModel_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -81,7 +81,7 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, CrefSyntax cre
 
 [ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
-## GetSymbol\(SemanticModel, ExpressionSyntax, CancellationToken\)
+## GetSymbol\(SemanticModel, ExpressionSyntax, CancellationToken\)<a name="Roslynator_CSharp_CSharpExtensions_GetSymbol_Microsoft_CodeAnalysis_SemanticModel_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -103,7 +103,7 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, ExpressionSynt
 
 [ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
-## GetSymbol\(SemanticModel, OrderingSyntax, CancellationToken\)
+## GetSymbol\(SemanticModel, OrderingSyntax, CancellationToken\)<a name="Roslynator_CSharp_CSharpExtensions_GetSymbol_Microsoft_CodeAnalysis_SemanticModel_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -125,7 +125,7 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, OrderingSyntax
 
 [ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
-## GetSymbol\(SemanticModel, SelectOrGroupClauseSyntax, CancellationToken\)
+## GetSymbol\(SemanticModel, SelectOrGroupClauseSyntax, CancellationToken\)<a name="Roslynator_CSharp_CSharpExtensions_GetSymbol_Microsoft_CodeAnalysis_SemanticModel_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax_System_Threading_CancellationToken_"></a>
 
 ### Summary
 

@@ -11,7 +11,7 @@
 | Remove\(TNode, SyntaxKind\) | Creates a new node with a modifier of the specified kind removed\. |
 | Remove\(TNode, SyntaxToken\) | Creates a new node with the specified modifier removed\. |
 
-## Remove\(TNode, SyntaxKind\)
+## Remove\(TNode, SyntaxKind\)<a name="Roslynator_CSharp_ModifierList_1_Remove__0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -32,7 +32,7 @@ public TNode Remove(TNode node, SyntaxKind kind)
 
 TNode
 
-## Remove\(TNode, SyntaxToken\)
+## Remove\(TNode, SyntaxToken\)<a name="Roslynator_CSharp_ModifierList_1_Remove__0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 

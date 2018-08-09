@@ -11,7 +11,7 @@
 | RegionInfo\(EndRegionDirectiveTriviaSyntax\) | Creates a new [RegionInfo](../../Syntax/RegionInfo/README.md) from the specified endregion directive\. |
 | RegionInfo\(RegionDirectiveTriviaSyntax\) | Creates a new [RegionInfo](../../Syntax/RegionInfo/README.md) from the specified region directive\. |
 
-## RegionInfo\(RegionDirectiveTriviaSyntax\)
+## RegionInfo\(RegionDirectiveTriviaSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_RegionInfo_Microsoft_CodeAnalysis_CSharp_Syntax_RegionDirectiveTriviaSyntax_"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public static RegionInfo RegionInfo(RegionDirectiveTriviaSyntax regionDirective)
 
 [RegionInfo](../../Syntax/RegionInfo/README.md)
 
-## RegionInfo\(EndRegionDirectiveTriviaSyntax\)
+## RegionInfo\(EndRegionDirectiveTriviaSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_RegionInfo_Microsoft_CodeAnalysis_CSharp_Syntax_RegionDirectiveTriviaSyntax_"></a>
 
 ### Summary
 

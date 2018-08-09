@@ -11,7 +11,7 @@
 | SimpleAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\) | |
 | SimpleAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) | |
 
-## SimpleAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\)
+## SimpleAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SimpleAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static AssignmentExpressionSyntax SimpleAssignmentExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -28,7 +28,7 @@ public static AssignmentExpressionSyntax SimpleAssignmentExpression(ExpressionSy
 
 [AssignmentExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.assignmentexpressionsyntax)
 
-## SimpleAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)
+## SimpleAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SimpleAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static AssignmentExpressionSyntax SimpleAssignmentExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

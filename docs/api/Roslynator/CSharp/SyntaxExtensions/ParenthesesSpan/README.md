@@ -12,7 +12,7 @@
 | ParenthesesSpan\(CommonForEachStatementSyntax\) | The absolute span of the parentheses, not including its leading and trailing trivia\. |
 | ParenthesesSpan\(ForStatementSyntax\) | Absolute span of the parentheses, not including the leading and trailing trivia\. |
 
-## ParenthesesSpan\(CastExpressionSyntax\)
+## ParenthesesSpan\(CastExpressionSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CastExpressionSyntax_"></a>
 
 ### Summary
 
@@ -32,7 +32,7 @@ public static TextSpan ParenthesesSpan(this CastExpressionSyntax castExpression)
 
 [TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## ParenthesesSpan\(CommonForEachStatementSyntax\)
+## ParenthesesSpan\(CommonForEachStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CastExpressionSyntax_"></a>
 
 ### Summary
 
@@ -52,7 +52,7 @@ public static TextSpan ParenthesesSpan(this CommonForEachStatementSyntax forEach
 
 [TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## ParenthesesSpan\(ForStatementSyntax\)
+## ParenthesesSpan\(ForStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CastExpressionSyntax_"></a>
 
 ### Summary
 

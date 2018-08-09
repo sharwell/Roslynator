@@ -11,7 +11,7 @@
 | ReplaceTokenAsync\(Document, SyntaxToken, IEnumerable\<SyntaxToken>, CancellationToken\) | Creates a new document with the specified old token replaced with new tokens\. |
 | ReplaceTokenAsync\(Document, SyntaxToken, SyntaxToken, CancellationToken\) | Creates a new document with the specified old token replaced with a new token\. |
 
-## ReplaceTokenAsync\(Document, SyntaxToken, SyntaxToken, CancellationToken\)
+## ReplaceTokenAsync\(Document, SyntaxToken, SyntaxToken, CancellationToken\)<a name="Roslynator_WorkspaceExtensions_ReplaceTokenAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxToken_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -34,7 +34,7 @@ public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxTok
 
 [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
-## ReplaceTokenAsync\(Document, SyntaxToken, IEnumerable\<SyntaxToken>, CancellationToken\)
+## ReplaceTokenAsync\(Document, SyntaxToken, IEnumerable\<SyntaxToken>, CancellationToken\)<a name="Roslynator_WorkspaceExtensions_ReplaceTokenAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxToken_System_Threading_CancellationToken_"></a>
 
 ### Summary
 

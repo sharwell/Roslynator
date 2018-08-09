@@ -11,7 +11,7 @@
 | LeftShiftExpression\(ExpressionSyntax, ExpressionSyntax\) | |
 | LeftShiftExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) | |
 
-## LeftShiftExpression\(ExpressionSyntax, ExpressionSyntax\)
+## LeftShiftExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_LeftShiftExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax LeftShiftExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -28,7 +28,7 @@ public static BinaryExpressionSyntax LeftShiftExpression(ExpressionSyntax left, 
 
 [BinaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.binaryexpressionsyntax)
 
-## LeftShiftExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)
+## LeftShiftExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_LeftShiftExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax LeftShiftExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

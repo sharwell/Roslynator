@@ -11,7 +11,7 @@
 | GetPreprocessingMessageTrivia\(EndRegionDirectiveTriviaSyntax\) | Gets preprocessing message for the specified endregion directive if such message exists\. |
 | GetPreprocessingMessageTrivia\(RegionDirectiveTriviaSyntax\) | Gets preprocessing message for the specified region directive if such message exists\. |
 
-## GetPreprocessingMessageTrivia\(EndRegionDirectiveTriviaSyntax\)
+## GetPreprocessingMessageTrivia\(EndRegionDirectiveTriviaSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_GetPreprocessingMessageTrivia_Microsoft_CodeAnalysis_CSharp_Syntax_EndRegionDirectiveTriviaSyntax_"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public static SyntaxTrivia GetPreprocessingMessageTrivia(this EndRegionDirective
 
 [SyntaxTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivia)
 
-## GetPreprocessingMessageTrivia\(RegionDirectiveTriviaSyntax\)
+## GetPreprocessingMessageTrivia\(RegionDirectiveTriviaSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_GetPreprocessingMessageTrivia_Microsoft_CodeAnalysis_CSharp_Syntax_EndRegionDirectiveTriviaSyntax_"></a>
 
 ### Summary
 

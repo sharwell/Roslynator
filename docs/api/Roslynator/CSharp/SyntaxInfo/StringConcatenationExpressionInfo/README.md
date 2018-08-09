@@ -12,7 +12,7 @@
 | StringConcatenationExpressionInfo\(ExpressionChain, SemanticModel, CancellationToken\) | Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified expression chain\. |
 | StringConcatenationExpressionInfo\(SyntaxNode, SemanticModel, Boolean, CancellationToken\) | Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified node\. |
 
-## StringConcatenationExpressionInfo\(SyntaxNode, SemanticModel, Boolean, CancellationToken\)
+## StringConcatenationExpressionInfo\(SyntaxNode, SemanticModel, Boolean, CancellationToken\)<a name="Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
 
-## StringConcatenationExpressionInfo\(BinaryExpressionSyntax, SemanticModel, CancellationToken\)
+## StringConcatenationExpressionInfo\(BinaryExpressionSyntax, SemanticModel, CancellationToken\)<a name="Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -57,7 +57,7 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
 
-## StringConcatenationExpressionInfo\(ExpressionChain, SemanticModel, CancellationToken\)
+## StringConcatenationExpressionInfo\(ExpressionChain, SemanticModel, CancellationToken\)<a name="Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_System_Threading_CancellationToken_"></a>
 
 ### Summary
 

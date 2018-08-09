@@ -11,7 +11,7 @@
 | AccessorList\(AccessorDeclarationSyntax\) | |
 | AccessorList\(AccessorDeclarationSyntax\[\]\) | |
 
-## AccessorList\(AccessorDeclarationSyntax\[\]\)
+## AccessorList\(AccessorDeclarationSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax___"></a>
 
 ```csharp
 public static AccessorListSyntax AccessorList(params AccessorDeclarationSyntax[] accessors)
@@ -27,7 +27,7 @@ public static AccessorListSyntax AccessorList(params AccessorDeclarationSyntax[]
 
 [AccessorListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessorlistsyntax)
 
-## AccessorList\(AccessorDeclarationSyntax\)
+## AccessorList\(AccessorDeclarationSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax___"></a>
 
 ```csharp
 public static AccessorListSyntax AccessorList(AccessorDeclarationSyntax accessor)

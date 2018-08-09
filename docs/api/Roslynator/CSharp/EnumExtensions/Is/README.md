@@ -14,7 +14,7 @@
 | Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) | Returns true if the kind is one of the specified kinds\. |
 | Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) | Returns true if the kind is one of the specified kinds\. |
 
-## Is\(SyntaxKind, SyntaxKind, SyntaxKind\)
+## Is\(SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_EnumExtensions_Is_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -36,7 +36,7 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2)
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)
+## Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_EnumExtensions_Is_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -59,7 +59,7 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)
+## Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_EnumExtensions_Is_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -83,7 +83,7 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)
+## Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_EnumExtensions_Is_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -108,7 +108,7 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)
+## Is\(SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_EnumExtensions_Is_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 

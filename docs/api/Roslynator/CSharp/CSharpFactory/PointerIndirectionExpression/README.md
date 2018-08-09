@@ -11,7 +11,7 @@
 | PointerIndirectionExpression\(ExpressionSyntax\) | |
 | PointerIndirectionExpression\(ExpressionSyntax, SyntaxToken\) | |
 
-## PointerIndirectionExpression\(ExpressionSyntax\)
+## PointerIndirectionExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_PointerIndirectionExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax PointerIndirectionExpression(ExpressionSyntax operand)
@@ -27,7 +27,7 @@ public static PrefixUnaryExpressionSyntax PointerIndirectionExpression(Expressio
 
 [PrefixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.prefixunaryexpressionsyntax)
 
-## PointerIndirectionExpression\(ExpressionSyntax, SyntaxToken\)
+## PointerIndirectionExpression\(ExpressionSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_PointerIndirectionExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax PointerIndirectionExpression(ExpressionSyntax operand, SyntaxToken operatorToken)

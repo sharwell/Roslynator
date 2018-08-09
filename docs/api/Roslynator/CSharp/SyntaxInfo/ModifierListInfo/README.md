@@ -30,7 +30,7 @@
 | ModifierListInfo\(StructDeclarationSyntax\) | Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from the specified struct declaration\. |
 | ModifierListInfo\(SyntaxNode\) | Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from the specified node\. |
 
-## ModifierListInfo\(SyntaxNode\)
+## ModifierListInfo\(SyntaxNode\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -50,7 +50,7 @@ public static ModifierListInfo ModifierListInfo(SyntaxNode node)
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(ClassDeclarationSyntax\)
+## ModifierListInfo\(ClassDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -70,7 +70,7 @@ public static ModifierListInfo ModifierListInfo(ClassDeclarationSyntax classDecl
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(ConstructorDeclarationSyntax\)
+## ModifierListInfo\(ConstructorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -90,7 +90,7 @@ public static ModifierListInfo ModifierListInfo(ConstructorDeclarationSyntax con
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(ConversionOperatorDeclarationSyntax\)
+## ModifierListInfo\(ConversionOperatorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -110,7 +110,7 @@ public static ModifierListInfo ModifierListInfo(ConversionOperatorDeclarationSyn
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(DelegateDeclarationSyntax\)
+## ModifierListInfo\(DelegateDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -130,7 +130,7 @@ public static ModifierListInfo ModifierListInfo(DelegateDeclarationSyntax delega
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(DestructorDeclarationSyntax\)
+## ModifierListInfo\(DestructorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -150,7 +150,7 @@ public static ModifierListInfo ModifierListInfo(DestructorDeclarationSyntax dest
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(EnumDeclarationSyntax\)
+## ModifierListInfo\(EnumDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -170,7 +170,7 @@ public static ModifierListInfo ModifierListInfo(EnumDeclarationSyntax enumDeclar
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(EventDeclarationSyntax\)
+## ModifierListInfo\(EventDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -190,7 +190,7 @@ public static ModifierListInfo ModifierListInfo(EventDeclarationSyntax eventDecl
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(EventFieldDeclarationSyntax\)
+## ModifierListInfo\(EventFieldDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -210,7 +210,7 @@ public static ModifierListInfo ModifierListInfo(EventFieldDeclarationSyntax even
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(FieldDeclarationSyntax\)
+## ModifierListInfo\(FieldDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -230,7 +230,7 @@ public static ModifierListInfo ModifierListInfo(FieldDeclarationSyntax fieldDecl
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(IndexerDeclarationSyntax\)
+## ModifierListInfo\(IndexerDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -250,7 +250,7 @@ public static ModifierListInfo ModifierListInfo(IndexerDeclarationSyntax indexer
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(InterfaceDeclarationSyntax\)
+## ModifierListInfo\(InterfaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -270,7 +270,7 @@ public static ModifierListInfo ModifierListInfo(InterfaceDeclarationSyntax inter
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(MethodDeclarationSyntax\)
+## ModifierListInfo\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -290,7 +290,7 @@ public static ModifierListInfo ModifierListInfo(MethodDeclarationSyntax methodDe
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(OperatorDeclarationSyntax\)
+## ModifierListInfo\(OperatorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -310,7 +310,7 @@ public static ModifierListInfo ModifierListInfo(OperatorDeclarationSyntax operat
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(PropertyDeclarationSyntax\)
+## ModifierListInfo\(PropertyDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -330,7 +330,7 @@ public static ModifierListInfo ModifierListInfo(PropertyDeclarationSyntax proper
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(StructDeclarationSyntax\)
+## ModifierListInfo\(StructDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -350,7 +350,7 @@ public static ModifierListInfo ModifierListInfo(StructDeclarationSyntax structDe
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(IncompleteMemberSyntax\)
+## ModifierListInfo\(IncompleteMemberSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -370,7 +370,7 @@ public static ModifierListInfo ModifierListInfo(IncompleteMemberSyntax incomplet
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(AccessorDeclarationSyntax\)
+## ModifierListInfo\(AccessorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -390,7 +390,7 @@ public static ModifierListInfo ModifierListInfo(AccessorDeclarationSyntax access
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(LocalDeclarationStatementSyntax\)
+## ModifierListInfo\(LocalDeclarationStatementSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -410,7 +410,7 @@ public static ModifierListInfo ModifierListInfo(LocalDeclarationStatementSyntax 
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(LocalFunctionStatementSyntax\)
+## ModifierListInfo\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
@@ -430,7 +430,7 @@ public static ModifierListInfo ModifierListInfo(LocalFunctionStatementSyntax loc
 
 [ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
-## ModifierListInfo\(ParameterSyntax\)
+## ModifierListInfo\(ParameterSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_ModifierListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 

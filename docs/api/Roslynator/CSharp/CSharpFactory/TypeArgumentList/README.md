@@ -11,7 +11,7 @@
 | TypeArgumentList\(TypeSyntax\) | |
 | TypeArgumentList\(TypeSyntax\[\]\) | |
 
-## TypeArgumentList\(TypeSyntax\)
+## TypeArgumentList\(TypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
 
 ```csharp
 public static TypeArgumentListSyntax TypeArgumentList(TypeSyntax argument)
@@ -27,7 +27,7 @@ public static TypeArgumentListSyntax TypeArgumentList(TypeSyntax argument)
 
 [TypeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeargumentlistsyntax)
 
-## TypeArgumentList\(TypeSyntax\[\]\)
+## TypeArgumentList\(TypeSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
 
 ```csharp
 public static TypeArgumentListSyntax TypeArgumentList(params TypeSyntax[] arguments)

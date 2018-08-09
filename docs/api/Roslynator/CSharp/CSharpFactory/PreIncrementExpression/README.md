@@ -11,7 +11,7 @@
 | PreIncrementExpression\(ExpressionSyntax\) | |
 | PreIncrementExpression\(ExpressionSyntax, SyntaxToken\) | |
 
-## PreIncrementExpression\(ExpressionSyntax\)
+## PreIncrementExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_PreIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax PreIncrementExpression(ExpressionSyntax operand)
@@ -27,7 +27,7 @@ public static PrefixUnaryExpressionSyntax PreIncrementExpression(ExpressionSynta
 
 [PrefixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.prefixunaryexpressionsyntax)
 
-## PreIncrementExpression\(ExpressionSyntax, SyntaxToken\)
+## PreIncrementExpression\(ExpressionSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_PreIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax PreIncrementExpression(ExpressionSyntax operand, SyntaxToken operatorToken)

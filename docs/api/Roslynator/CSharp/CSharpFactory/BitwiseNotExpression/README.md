@@ -11,7 +11,7 @@
 | BitwiseNotExpression\(ExpressionSyntax\) | |
 | BitwiseNotExpression\(ExpressionSyntax, SyntaxToken\) | |
 
-## BitwiseNotExpression\(ExpressionSyntax\)
+## BitwiseNotExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BitwiseNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax BitwiseNotExpression(ExpressionSyntax operand)
@@ -27,7 +27,7 @@ public static PrefixUnaryExpressionSyntax BitwiseNotExpression(ExpressionSyntax 
 
 [PrefixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.prefixunaryexpressionsyntax)
 
-## BitwiseNotExpression\(ExpressionSyntax, SyntaxToken\)
+## BitwiseNotExpression\(ExpressionSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_BitwiseNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax BitwiseNotExpression(ExpressionSyntax operand, SyntaxToken operatorToken)

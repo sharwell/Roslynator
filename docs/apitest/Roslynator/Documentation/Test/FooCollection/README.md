@@ -44,8 +44,8 @@ public class FooCollection : System.Collections.ICollection,
 | [Add(Foo)](Add/README.md) |  \(Implements [ICollection\<Foo>.Add](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.add)\) |
 | [Clear()](Clear/README.md) |  \(Implements [ICollection\<Foo>.Clear](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear)\) |
 | [Contains(Foo)](Contains/README.md) |  \(Implements [ICollection\<Foo>.Contains](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.contains)\) |
-| [CopyTo(Array, Int32)](CopyTo/README.md) |  \(Implements [ICollection.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.copyto)\) |
-| [CopyTo(Foo\[\], Int32)](CopyTo/README.md) |  \(Implements [ICollection\<Foo>.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.copyto)\) |
+| [CopyTo(Array, Int32)](CopyTo/README.md#Roslynator_Documentation_Test_FooCollection_CopyTo_System_Array_System_Int32_) |  \(Implements [ICollection.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.copyto)\) |
+| [CopyTo(Foo\[\], Int32)](CopyTo/README.md#Roslynator_Documentation_Test_FooCollection_CopyTo_Roslynator_Documentation_Test_Foo___System_Int32_) |  \(Implements [ICollection\<Foo>.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.copyto)\) |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetEnumerator()](GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |

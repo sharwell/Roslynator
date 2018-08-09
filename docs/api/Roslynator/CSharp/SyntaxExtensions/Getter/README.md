@@ -12,7 +12,7 @@
 | Getter\(IndexerDeclarationSyntax\) | Returns a get accessor that is contained in the specified indexer declaration\. |
 | Getter\(PropertyDeclarationSyntax\) | Returns property get accessor, if any\. |
 
-## Getter\(AccessorListSyntax\)
+## Getter\(AccessorListSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_"></a>
 
 ### Summary
 
@@ -32,7 +32,7 @@ public static AccessorDeclarationSyntax Getter(this AccessorListSyntax accessorL
 
 [AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
-## Getter\(IndexerDeclarationSyntax\)
+## Getter\(IndexerDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_"></a>
 
 ### Summary
 
@@ -52,7 +52,7 @@ public static AccessorDeclarationSyntax Getter(this IndexerDeclarationSyntax ind
 
 [AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
-## Getter\(PropertyDeclarationSyntax\)
+## Getter\(PropertyDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_"></a>
 
 ### Summary
 

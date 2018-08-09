@@ -13,7 +13,7 @@
 | BaseList\(SyntaxToken, BaseTypeSyntax\) | |
 | BaseList\(SyntaxToken, BaseTypeSyntax\[\]\) | |
 
-## BaseList\(BaseTypeSyntax\)
+## BaseList\(BaseTypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_"></a>
 
 ```csharp
 public static BaseListSyntax BaseList(BaseTypeSyntax type)
@@ -29,7 +29,7 @@ public static BaseListSyntax BaseList(BaseTypeSyntax type)
 
 [BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
 
-## BaseList\(BaseTypeSyntax\[\]\)
+## BaseList\(BaseTypeSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_"></a>
 
 ```csharp
 public static BaseListSyntax BaseList(params BaseTypeSyntax[] types)
@@ -45,7 +45,7 @@ public static BaseListSyntax BaseList(params BaseTypeSyntax[] types)
 
 [BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
 
-## BaseList\(SyntaxToken, BaseTypeSyntax\)
+## BaseList\(SyntaxToken, BaseTypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_"></a>
 
 ```csharp
 public static BaseListSyntax BaseList(SyntaxToken colonToken, BaseTypeSyntax baseType)
@@ -62,7 +62,7 @@ public static BaseListSyntax BaseList(SyntaxToken colonToken, BaseTypeSyntax bas
 
 [BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
 
-## BaseList\(SyntaxToken, BaseTypeSyntax\[\]\)
+## BaseList\(SyntaxToken, BaseTypeSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_"></a>
 
 ```csharp
 public static BaseListSyntax BaseList(SyntaxToken colonToken, params BaseTypeSyntax[] types)

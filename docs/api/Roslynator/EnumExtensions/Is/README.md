@@ -25,7 +25,7 @@
 | Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\) | Returns true if the type kind is one of the specified type kinds\. |
 | Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\) | Returns true if the type kind is one of the specified type kinds\. |
 
-## Is\(Accessibility, Accessibility, Accessibility\)
+## Is\(Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -47,7 +47,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(Accessibility, Accessibility, Accessibility, Accessibility\)
+## Is\(Accessibility, Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -70,7 +70,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\)
+## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -94,7 +94,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\)
+## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -119,7 +119,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(MethodKind, MethodKind, MethodKind\)
+## Is\(MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -141,7 +141,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(MethodKind, MethodKind, MethodKind, MethodKind\)
+## Is\(MethodKind, MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -164,7 +164,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\)
+## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -188,7 +188,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\)
+## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -213,7 +213,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SpecialType, SpecialType, SpecialType\)
+## Is\(SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -235,7 +235,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SpecialType, SpecialType, SpecialType, SpecialType\)
+## Is\(SpecialType, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -258,7 +258,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\)
+## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -282,7 +282,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\)
+## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -307,7 +307,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(TypeKind, TypeKind, TypeKind\)
+## Is\(TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -329,7 +329,7 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(TypeKind, TypeKind, TypeKind, TypeKind\)
+## Is\(TypeKind, TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -352,7 +352,7 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\)
+## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -376,7 +376,7 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\)
+## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 

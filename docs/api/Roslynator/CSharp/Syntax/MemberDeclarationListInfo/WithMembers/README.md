@@ -11,7 +11,7 @@
 | WithMembers\(IEnumerable\<MemberDeclarationSyntax>\) | Creates a new [MemberDeclarationListInfo](../README.md) with the members updated\. |
 | WithMembers\(SyntaxList\<MemberDeclarationSyntax>\) | Creates a new [MemberDeclarationListInfo](../README.md) with the members updated\. |
 
-## WithMembers\(IEnumerable\<MemberDeclarationSyntax>\)
+## WithMembers\(IEnumerable\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_Syntax_MemberDeclarationListInfo_WithMembers_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public MemberDeclarationListInfo WithMembers(IEnumerable<MemberDeclarationSyntax
 
 [MemberDeclarationListInfo](../README.md)
 
-## WithMembers\(SyntaxList\<MemberDeclarationSyntax>\)
+## WithMembers\(SyntaxList\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_Syntax_MemberDeclarationListInfo_WithMembers_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__"></a>
 
 ### Summary
 

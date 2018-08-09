@@ -11,7 +11,7 @@
 | GetInsertIndex\(SyntaxTokenList, SyntaxKind, IComparer\<SyntaxKind>\) | Returns an index a token with the specified kind should be inserted at\. |
 | GetInsertIndex\(SyntaxTokenList, SyntaxToken, IComparer\<SyntaxToken>\) | Returns an index the specified token should be inserted at\. |
 
-## GetInsertIndex\(SyntaxTokenList, SyntaxToken, IComparer\<SyntaxToken>\)
+## GetInsertIndex\(SyntaxTokenList, SyntaxToken, IComparer\<SyntaxToken>\)<a name="Roslynator_CSharp_ModifierList_GetInsertIndex_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_SyntaxToken_System_Collections_Generic_IComparer_Microsoft_CodeAnalysis_SyntaxToken__"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static int GetInsertIndex(SyntaxTokenList tokens, SyntaxToken token, ICom
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-## GetInsertIndex\(SyntaxTokenList, SyntaxKind, IComparer\<SyntaxKind>\)
+## GetInsertIndex\(SyntaxTokenList, SyntaxKind, IComparer\<SyntaxKind>\)<a name="Roslynator_CSharp_ModifierList_GetInsertIndex_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_SyntaxToken_System_Collections_Generic_IComparer_Microsoft_CodeAnalysis_SyntaxToken__"></a>
 
 ### Summary
 

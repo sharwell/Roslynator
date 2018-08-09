@@ -11,7 +11,7 @@
 | UsingStaticDirective\(NameSyntax\) | |
 | UsingStaticDirective\(SyntaxToken, SyntaxToken, NameSyntax, SyntaxToken\) | |
 
-## UsingStaticDirective\(NameSyntax\)
+## UsingStaticDirective\(NameSyntax\)<a name="Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_"></a>
 
 ```csharp
 public static UsingDirectiveSyntax UsingStaticDirective(NameSyntax name)
@@ -27,7 +27,7 @@ public static UsingDirectiveSyntax UsingStaticDirective(NameSyntax name)
 
 [UsingDirectiveSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.usingdirectivesyntax)
 
-## UsingStaticDirective\(SyntaxToken, SyntaxToken, NameSyntax, SyntaxToken\)
+## UsingStaticDirective\(SyntaxToken, SyntaxToken, NameSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_"></a>
 
 ```csharp
 public static UsingDirectiveSyntax UsingStaticDirective(SyntaxToken usingKeyword, SyntaxToken staticKeyword, NameSyntax name, SyntaxToken semicolonToken)

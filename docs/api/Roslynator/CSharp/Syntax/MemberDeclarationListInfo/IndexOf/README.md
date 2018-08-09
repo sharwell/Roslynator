@@ -11,7 +11,7 @@
 | IndexOf\(Func\<MemberDeclarationSyntax, Boolean>\) | Searches for a member that matches the predicate and returns returns zero\-based index of the first occurrence in the list\. |
 | IndexOf\(MemberDeclarationSyntax\) | The index of the member in the list\. |
 
-## IndexOf\(Func\<MemberDeclarationSyntax, Boolean>\)
+## IndexOf\(Func\<MemberDeclarationSyntax, Boolean>\)<a name="Roslynator_CSharp_Syntax_MemberDeclarationListInfo_IndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_System_Boolean__"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public int IndexOf(Func<MemberDeclarationSyntax, bool> predicate)
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-## IndexOf\(MemberDeclarationSyntax\)
+## IndexOf\(MemberDeclarationSyntax\)<a name="Roslynator_CSharp_Syntax_MemberDeclarationListInfo_IndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_System_Boolean__"></a>
 
 ### Summary
 
