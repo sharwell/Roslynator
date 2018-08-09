@@ -8,43 +8,10 @@
 
 | Method | Summary |
 | ------ | ------- |
-| RemoveAccessorDeclaration\(ArrowExpressionClauseSyntax\) | |
-| RemoveAccessorDeclaration\(BlockSyntax\) | |
-| RemoveAccessorDeclaration\(SyntaxTokenList, ArrowExpressionClauseSyntax\) | |
-| RemoveAccessorDeclaration\(SyntaxTokenList, BlockSyntax\) | |
-
-## RemoveAccessorDeclaration\(BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
-
-```csharp
-public static AccessorDeclarationSyntax RemoveAccessorDeclaration(BlockSyntax body)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| body | |
-
-#### Returns
-
-[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
-
-## RemoveAccessorDeclaration\(SyntaxTokenList, BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
-
-```csharp
-public static AccessorDeclarationSyntax RemoveAccessorDeclaration(SyntaxTokenList modifiers, BlockSyntax body)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| body | |
-
-#### Returns
-
-[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
+| [RemoveAccessorDeclaration(ArrowExpressionClauseSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_) | |
+| [RemoveAccessorDeclaration(BlockSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_) | |
+| [RemoveAccessorDeclaration(SyntaxTokenList, ArrowExpressionClauseSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_) | |
+| [RemoveAccessorDeclaration(SyntaxTokenList, BlockSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_) | |
 
 ## RemoveAccessorDeclaration\(ArrowExpressionClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
@@ -62,6 +29,22 @@ public static AccessorDeclarationSyntax RemoveAccessorDeclaration(ArrowExpressio
 
 [AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
+## RemoveAccessorDeclaration\(BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
+
+```csharp
+public static AccessorDeclarationSyntax RemoveAccessorDeclaration(BlockSyntax body)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| body | |
+
+#### Returns
+
+[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
+
 ## RemoveAccessorDeclaration\(SyntaxTokenList, ArrowExpressionClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
@@ -74,6 +57,23 @@ public static AccessorDeclarationSyntax RemoveAccessorDeclaration(SyntaxTokenLis
 | ---- | ------- |
 | modifiers | |
 | expressionBody | |
+
+#### Returns
+
+[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
+
+## RemoveAccessorDeclaration\(SyntaxTokenList, BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
+
+```csharp
+public static AccessorDeclarationSyntax RemoveAccessorDeclaration(SyntaxTokenList modifiers, BlockSyntax body)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| modifiers | |
+| body | |
 
 #### Returns
 

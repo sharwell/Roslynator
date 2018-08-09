@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| PostDecrementExpression\(ExpressionSyntax\) | |
-| PostDecrementExpression\(ExpressionSyntax, SyntaxToken\) | |
+| [PostDecrementExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_PostDecrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [PostDecrementExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_PostDecrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## PostDecrementExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_PostDecrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

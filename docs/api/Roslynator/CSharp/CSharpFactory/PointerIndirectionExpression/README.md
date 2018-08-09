@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| PointerIndirectionExpression\(ExpressionSyntax\) | |
-| PointerIndirectionExpression\(ExpressionSyntax, SyntaxToken\) | |
+| [PointerIndirectionExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_PointerIndirectionExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [PointerIndirectionExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_PointerIndirectionExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## PointerIndirectionExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_PointerIndirectionExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

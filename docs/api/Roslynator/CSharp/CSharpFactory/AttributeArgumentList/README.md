@@ -8,24 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| AttributeArgumentList\(AttributeArgumentSyntax\) | |
-| AttributeArgumentList\(AttributeArgumentSyntax\[\]\) | |
-
-## AttributeArgumentList\(AttributeArgumentSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_AttributeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeArgumentSyntax___"></a>
-
-```csharp
-public static AttributeArgumentListSyntax AttributeArgumentList(params AttributeArgumentSyntax[] attributeArguments)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| attributeArguments | |
-
-#### Returns
-
-[AttributeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentlistsyntax)
+| [AttributeArgumentList(AttributeArgumentSyntax)](#Roslynator_CSharp_CSharpFactory_AttributeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeArgumentSyntax_) | |
+| [AttributeArgumentList(AttributeArgumentSyntax\[\])](#Roslynator_CSharp_CSharpFactory_AttributeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeArgumentSyntax___) | |
 
 ## AttributeArgumentList\(AttributeArgumentSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AttributeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeArgumentSyntax___"></a>
 
@@ -38,6 +22,22 @@ public static AttributeArgumentListSyntax AttributeArgumentList(AttributeArgumen
 | Name | Summary |
 | ---- | ------- |
 | attributeArgument | |
+
+#### Returns
+
+[AttributeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentlistsyntax)
+
+## AttributeArgumentList\(AttributeArgumentSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_AttributeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeArgumentSyntax___"></a>
+
+```csharp
+public static AttributeArgumentListSyntax AttributeArgumentList(params AttributeArgumentSyntax[] attributeArguments)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| attributeArguments | |
 
 #### Returns
 

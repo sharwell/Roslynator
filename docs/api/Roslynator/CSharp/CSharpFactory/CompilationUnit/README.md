@@ -8,9 +8,9 @@
 
 | Method | Summary |
 | ------ | ------- |
-| CompilationUnit\(MemberDeclarationSyntax\) | |
-| CompilationUnit\(SyntaxList\<UsingDirectiveSyntax>, MemberDeclarationSyntax\) | |
-| CompilationUnit\(SyntaxList\<UsingDirectiveSyntax>, SyntaxList\<MemberDeclarationSyntax>\) | |
+| [CompilationUnit(MemberDeclarationSyntax)](#Roslynator_CSharp_CSharpFactory_CompilationUnit_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_) | |
+| [CompilationUnit(SyntaxList\<UsingDirectiveSyntax>, MemberDeclarationSyntax)](#Roslynator_CSharp_CSharpFactory_CompilationUnit_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_) | |
+| [CompilationUnit(SyntaxList\<UsingDirectiveSyntax>, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_CompilationUnit_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
 
 ## CompilationUnit\(MemberDeclarationSyntax\)<a name="Roslynator_CSharp_CSharpFactory_CompilationUnit_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 

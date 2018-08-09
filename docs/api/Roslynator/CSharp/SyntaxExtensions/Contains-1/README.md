@@ -8,10 +8,52 @@
 
 | Method | Summary |
 | ------ | ------- |
-| Contains\(SyntaxTokenList, SyntaxKind\) | Returns true if a token of the specified kind is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\. |
-| Contains\(SyntaxTriviaList, SyntaxKind\) | Returns true if a trivia of the specified kind is in the [SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)\. |
-| Contains\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\) | Searches for a node of the specified kind and returns the zero\-based index of the first occurrence within the entire [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)\. |
-| Contains\<TNode>\(SyntaxList\<TNode>, SyntaxKind\) | Returns true if a node of the specified kind is in the [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)\. |
+| [Contains(SyntaxTokenList, SyntaxKind)](../Contains/README.md#Roslynator_CSharp_SyntaxExtensions_Contains_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Returns true if a token of the specified kind is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\. |
+| [Contains(SyntaxTriviaList, SyntaxKind)](../Contains/README.md#Roslynator_CSharp_SyntaxExtensions_Contains_Microsoft_CodeAnalysis_SyntaxTriviaList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Returns true if a trivia of the specified kind is in the [SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)\. |
+| [Contains\<TNode>(SeparatedSyntaxList\<TNode>, SyntaxKind)](#Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Searches for a node of the specified kind and returns the zero\-based index of the first occurrence within the entire [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)\. |
+| [Contains\<TNode>(SyntaxList\<TNode>, SyntaxKind)](#Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Returns true if a node of the specified kind is in the [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)\. |
+
+## Contains\(SyntaxTokenList, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+
+### Summary
+
+Returns true if a token of the specified kind is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\.
+
+```csharp
+public static bool Contains(this SyntaxTokenList tokenList, SyntaxKind kind)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| tokenList | |
+| kind | |
+
+#### Returns
+
+[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+
+## Contains\(SyntaxTriviaList, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+
+### Summary
+
+Returns true if a trivia of the specified kind is in the [SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)\.
+
+```csharp
+public static bool Contains(this SyntaxTriviaList triviaList, SyntaxKind kind)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| triviaList | |
+| kind | |
+
+#### Returns
+
+[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Contains\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
@@ -61,48 +103,6 @@ public static bool Contains<TNode>(this SyntaxList<TNode> list, SyntaxKind kind)
 | Name | Summary |
 | ---- | ------- |
 | list | |
-| kind | |
-
-#### Returns
-
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
-
-## Contains\(SyntaxTokenList, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
-
-### Summary
-
-Returns true if a token of the specified kind is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\.
-
-```csharp
-public static bool Contains(this SyntaxTokenList tokenList, SyntaxKind kind)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| tokenList | |
-| kind | |
-
-#### Returns
-
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
-
-## Contains\(SyntaxTriviaList, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
-
-### Summary
-
-Returns true if a trivia of the specified kind is in the [SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)\.
-
-```csharp
-public static bool Contains(this SyntaxTriviaList triviaList, SyntaxKind kind)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| triviaList | |
 | kind | |
 
 #### Returns

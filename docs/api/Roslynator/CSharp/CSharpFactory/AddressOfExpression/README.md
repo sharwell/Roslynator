@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| AddressOfExpression\(ExpressionSyntax\) | |
-| AddressOfExpression\(ExpressionSyntax, SyntaxToken\) | |
+| [AddressOfExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_AddressOfExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [AddressOfExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_AddressOfExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## AddressOfExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AddressOfExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

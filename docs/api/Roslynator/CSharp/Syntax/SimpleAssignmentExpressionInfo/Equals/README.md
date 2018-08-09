@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| Equals\(Object\) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
-| Equals\(SimpleAssignmentExpressionInfo\) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<SimpleAssignmentExpressionInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
+| [Equals(Object)](#Roslynator_CSharp_Syntax_SimpleAssignmentExpressionInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| [Equals(SimpleAssignmentExpressionInfo)](#Roslynator_CSharp_Syntax_SimpleAssignmentExpressionInfo_Equals_Roslynator_CSharp_Syntax_SimpleAssignmentExpressionInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<SimpleAssignmentExpressionInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 
 ## Equals\(Object\)<a name="Roslynator_CSharp_Syntax_SimpleAssignmentExpressionInfo_Equals_System_Object_"></a>
 

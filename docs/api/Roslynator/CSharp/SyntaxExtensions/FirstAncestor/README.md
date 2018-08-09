@@ -8,10 +8,32 @@
 
 | Method | Summary |
 | ------ | ------- |
-| FirstAncestor\(SyntaxNode, Func\<SyntaxNode, Boolean>, Boolean\) | Gets the first ancestor that matches the predicate\. |
-| FirstAncestor\(SyntaxNode, SyntaxKind, Boolean\) | Gets the first ancestor of the specified kind\. |
-| FirstAncestor\(SyntaxNode, SyntaxKind, SyntaxKind, Boolean\) | Gets the first ancestor of the specified kinds\. |
-| FirstAncestor\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, Boolean\) | Gets the first ancestor of the specified kinds\. |
+| [FirstAncestor(SyntaxNode, Func\<SyntaxNode, Boolean>, Boolean)](#Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_System_Func_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean__System_Boolean_) | Gets the first ancestor that matches the predicate\. |
+| [FirstAncestor(SyntaxNode, SyntaxKind, Boolean)](#Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_) | Gets the first ancestor of the specified kind\. |
+| [FirstAncestor(SyntaxNode, SyntaxKind, SyntaxKind, Boolean)](#Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_) | Gets the first ancestor of the specified kinds\. |
+| [FirstAncestor(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, Boolean)](#Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_) | Gets the first ancestor of the specified kinds\. |
+
+## FirstAncestor\(SyntaxNode, Func\<SyntaxNode, Boolean>, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
+
+### Summary
+
+Gets the first ancestor that matches the predicate\.
+
+```csharp
+public static SyntaxNode FirstAncestor(this SyntaxNode node, Func<SyntaxNode, bool> predicate, bool ascendOutOfTrivia = true)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| node | |
+| predicate | |
+| ascendOutOfTrivia | |
+
+#### Returns
+
+[SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
 ## FirstAncestor\(SyntaxNode, SyntaxKind, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
 
@@ -76,28 +98,6 @@ public static SyntaxNode FirstAncestor(this SyntaxNode node, SyntaxKind kind1, S
 | kind1 | |
 | kind2 | |
 | kind3 | |
-| ascendOutOfTrivia | |
-
-#### Returns
-
-[SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
-
-## FirstAncestor\(SyntaxNode, Func\<SyntaxNode, Boolean>, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestor_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
-
-### Summary
-
-Gets the first ancestor that matches the predicate\.
-
-```csharp
-public static SyntaxNode FirstAncestor(this SyntaxNode node, Func<SyntaxNode, bool> predicate, bool ascendOutOfTrivia = true)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| predicate | |
 | ascendOutOfTrivia | |
 
 #### Returns

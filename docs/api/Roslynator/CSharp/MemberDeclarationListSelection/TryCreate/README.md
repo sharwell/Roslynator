@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| TryCreate\(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection\) | Creates a new [MemberDeclarationListSelection](../README.md) based on the specified namespace declaration and span\. |
-| TryCreate\(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection\) | Creates a new [MemberDeclarationListSelection](../README.md) based on the specified type declaration and span\. |
+| [TryCreate(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](#Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__) | Creates a new [MemberDeclarationListSelection](../README.md) based on the specified namespace declaration and span\. |
+| [TryCreate(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](#Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__) | Creates a new [MemberDeclarationListSelection](../README.md) based on the specified type declaration and span\. |
 
 ## TryCreate\(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection\)<a name="Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__"></a>
 

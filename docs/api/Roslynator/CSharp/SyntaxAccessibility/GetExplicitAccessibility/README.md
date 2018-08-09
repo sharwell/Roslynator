@@ -8,40 +8,40 @@
 
 | Method | Summary |
 | ------ | ------- |
-| GetExplicitAccessibility\(AccessorDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(ClassDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(ConstructorDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(ConversionOperatorDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(DelegateDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(DestructorDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(EnumDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(EventDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(EventFieldDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(FieldDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(IncompleteMemberSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(IndexerDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(InterfaceDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(MethodDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(OperatorDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(PropertyDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(StructDeclarationSyntax\) | Returns an explicit accessibility of the specified declaration\. |
-| GetExplicitAccessibility\(SyntaxNode\) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(AccessorDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(ClassDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(ConstructorDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_ConstructorDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(ConversionOperatorDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_ConversionOperatorDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(DelegateDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(DestructorDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_DestructorDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(EnumDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_EnumDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(EventDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_EventDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(EventFieldDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_EventFieldDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(FieldDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_FieldDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(IncompleteMemberSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_IncompleteMemberSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(IndexerDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_IndexerDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(InterfaceDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(MethodDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(OperatorDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_OperatorDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(PropertyDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_PropertyDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(StructDeclarationSyntax)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
+| [GetExplicitAccessibility(SyntaxNode)](#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_SyntaxNode_) | Returns an explicit accessibility of the specified declaration\. |
 
-## GetExplicitAccessibility\(SyntaxNode\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GetExplicitAccessibility\(AccessorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
 Returns an explicit accessibility of the specified declaration\.
 
 ```csharp
-public static Accessibility GetExplicitAccessibility(SyntaxNode declaration)
+public static Accessibility GetExplicitAccessibility(AccessorDeclarationSyntax accessorDeclaration)
 ```
 
 #### Parameters
 
 | Name | Summary |
 | ---- | ------- |
-| declaration | |
+| accessorDeclaration | |
 
 #### Returns
 
@@ -227,6 +227,26 @@ public static Accessibility GetExplicitAccessibility(FieldDeclarationSyntax fiel
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
+## GetExplicitAccessibility\(IncompleteMemberSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+
+### Summary
+
+Returns an explicit accessibility of the specified declaration\.
+
+```csharp
+public static Accessibility GetExplicitAccessibility(IncompleteMemberSyntax incompleteMember)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| incompleteMember | |
+
+#### Returns
+
+[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
+
 ## GetExplicitAccessibility\(IndexerDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
@@ -347,41 +367,21 @@ public static Accessibility GetExplicitAccessibility(StructDeclarationSyntax str
 
 [Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
-## GetExplicitAccessibility\(IncompleteMemberSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_SyntaxNode_"></a>
+## GetExplicitAccessibility\(SyntaxNode\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
 ### Summary
 
 Returns an explicit accessibility of the specified declaration\.
 
 ```csharp
-public static Accessibility GetExplicitAccessibility(IncompleteMemberSyntax incompleteMember)
+public static Accessibility GetExplicitAccessibility(SyntaxNode declaration)
 ```
 
 #### Parameters
 
 | Name | Summary |
 | ---- | ------- |
-| incompleteMember | |
-
-#### Returns
-
-[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
-
-## GetExplicitAccessibility\(AccessorDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_SyntaxNode_"></a>
-
-### Summary
-
-Returns an explicit accessibility of the specified declaration\.
-
-```csharp
-public static Accessibility GetExplicitAccessibility(AccessorDeclarationSyntax accessorDeclaration)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| accessorDeclaration | |
+| declaration | |
 
 #### Returns
 

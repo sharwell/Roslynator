@@ -8,32 +8,9 @@
 
 | Method | Summary |
 | ------ | ------- |
-| StringConcatenationExpressionInfo\(BinaryExpressionSyntax, SemanticModel, CancellationToken\) | Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified node\. |
-| StringConcatenationExpressionInfo\(ExpressionChain, SemanticModel, CancellationToken\) | Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified expression chain\. |
-| StringConcatenationExpressionInfo\(SyntaxNode, SemanticModel, Boolean, CancellationToken\) | Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified node\. |
-
-## StringConcatenationExpressionInfo\(SyntaxNode, SemanticModel, Boolean, CancellationToken\)<a name="Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_System_Threading_CancellationToken_"></a>
-
-### Summary
-
-Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified node\.
-
-```csharp
-public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(SyntaxNode node, SemanticModel semanticModel, bool walkDownParentheses = true, CancellationToken cancellationToken = default(CancellationToken))
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| semanticModel | |
-| walkDownParentheses | |
-| cancellationToken | |
-
-#### Returns
-
-[StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
+| [StringConcatenationExpressionInfo(BinaryExpressionSyntax, SemanticModel, CancellationToken)](#Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Microsoft_CodeAnalysis_CSharp_Syntax_BinaryExpressionSyntax_Microsoft_CodeAnalysis_SemanticModel_System_Threading_CancellationToken_) | Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified node\. |
+| [StringConcatenationExpressionInfo(ExpressionChain, SemanticModel, CancellationToken)](#Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Roslynator_CSharp_ExpressionChain__Microsoft_CodeAnalysis_SemanticModel_System_Threading_CancellationToken_) | Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified expression chain\. |
+| [StringConcatenationExpressionInfo(SyntaxNode, SemanticModel, Boolean, CancellationToken)](#Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_System_Threading_CancellationToken_) | Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified node\. |
 
 ## StringConcatenationExpressionInfo\(BinaryExpressionSyntax, SemanticModel, CancellationToken\)<a name="Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_System_Threading_CancellationToken_"></a>
 
@@ -73,6 +50,29 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 | ---- | ------- |
 | expressionChain | |
 | semanticModel | |
+| cancellationToken | |
+
+#### Returns
+
+[StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
+
+## StringConcatenationExpressionInfo\(SyntaxNode, SemanticModel, Boolean, CancellationToken\)<a name="Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_System_Threading_CancellationToken_"></a>
+
+### Summary
+
+Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md) from the specified node\.
+
+```csharp
+public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(SyntaxNode node, SemanticModel semanticModel, bool walkDownParentheses = true, CancellationToken cancellationToken = default(CancellationToken))
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| node | |
+| semanticModel | |
+| walkDownParentheses | |
 | cancellationToken | |
 
 #### Returns

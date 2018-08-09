@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| ParameterList\(ParameterSyntax\) | |
-| ParameterList\(ParameterSyntax\[\]\) | |
+| [ParameterList(ParameterSyntax)](#Roslynator_CSharp_CSharpFactory_ParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax_) | |
+| [ParameterList(ParameterSyntax\[\])](#Roslynator_CSharp_CSharpFactory_ParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax___) | |
 
 ## ParameterList\(ParameterSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax_"></a>
 

@@ -85,31 +85,28 @@ namespace Roslynator.Documentation
             }
             else
             {
-                //TODO: create link for overloads
+                SymbolDisplayFormat format = SymbolDisplayFormats.SimpleDefinition;
+                const SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName;
+
                 Writer.WriteTable(
                     model.Overloads,
                     heading: Resources.OverloadsTitle,
                     headingLevel: 2,
                     header1: Resources.GetName(symbol),
                     header2: Resources.SummaryTitle,
-                    format: SymbolDisplayFormats.SimpleDefinition,
-                    additionalOptions: SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName,
-                    addLink: false);
+                    format: format,
+                    additionalOptions: additionalOptions);
 
-                foreach (ISymbol overloadSymbol in model.Overloads)
+                foreach (ISymbol overloadSymbol in model.Overloads.OrderBy(f => f.ToDisplayString(format, additionalOptions)))
                 {
                     HeadingLevelBase++;
 
-                    //TODO: 
-                    string id = symbol.GetDocumentationCommentId();
-                    id = TextUtility.RemovePrefixFromDocumentationCommentId(id);
-                    id = Regex.Replace(id, @"[^\w_]", "_");
+                    string id = DocumentationUrlProvider.GetFragment(symbol);
 
                     Writer.WriteStartHeading(1);
-                    Writer.WriteString(overloadSymbol.ToDisplayString(SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
+                    Writer.WriteString(overloadSymbol.ToDisplayString(format, additionalOptions));
                     Writer.WriteRaw($@"<a name=""{id}""></a>");
                     Writer.WriteEndHeading();
-
                     WriteContent(overloadSymbol);
 
                     HeadingLevelBase--;

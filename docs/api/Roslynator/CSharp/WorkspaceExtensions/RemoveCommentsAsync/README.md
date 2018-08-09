@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| RemoveCommentsAsync\(Document, CommentKinds, CancellationToken\) | Creates a new document with comments of the specified kind removed\. |
-| RemoveCommentsAsync\(Document, TextSpan, CommentKinds, CancellationToken\) | Creates a new document with comments of the specified kind removed\. |
+| [RemoveCommentsAsync(Document, CommentKinds, CancellationToken)](#Roslynator_CSharp_WorkspaceExtensions_RemoveCommentsAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_CommentKinds_System_Threading_CancellationToken_) | Creates a new document with comments of the specified kind removed\. |
+| [RemoveCommentsAsync(Document, TextSpan, CommentKinds, CancellationToken)](#Roslynator_CSharp_WorkspaceExtensions_RemoveCommentsAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_CommentKinds_System_Threading_CancellationToken_) | Creates a new document with comments of the specified kind removed\. |
 
 ## RemoveCommentsAsync\(Document, CommentKinds, CancellationToken\)<a name="Roslynator_CSharp_WorkspaceExtensions_RemoveCommentsAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_CommentKinds_System_Threading_CancellationToken_"></a>
 

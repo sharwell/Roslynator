@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| GenericName\(String, TypeSyntax\) | |
-| GenericName\(SyntaxToken, TypeSyntax\) | |
+| [GenericName(String, TypeSyntax)](#Roslynator_CSharp_CSharpFactory_GenericName_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_) | |
+| [GenericName(SyntaxToken, TypeSyntax)](#Roslynator_CSharp_CSharpFactory_GenericName_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_) | |
 
 ## GenericName\(String, TypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_GenericName_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
 

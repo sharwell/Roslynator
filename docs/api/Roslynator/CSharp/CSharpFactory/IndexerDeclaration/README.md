@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| IndexerDeclaration\(SyntaxTokenList, TypeSyntax, BracketedParameterListSyntax, AccessorListSyntax\) | |
-| IndexerDeclaration\(SyntaxTokenList, TypeSyntax, BracketedParameterListSyntax, ArrowExpressionClauseSyntax\) | |
+| [IndexerDeclaration(SyntaxTokenList, TypeSyntax, BracketedParameterListSyntax, AccessorListSyntax)](#Roslynator_CSharp_CSharpFactory_IndexerDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BracketedParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_) | |
+| [IndexerDeclaration(SyntaxTokenList, TypeSyntax, BracketedParameterListSyntax, ArrowExpressionClauseSyntax)](#Roslynator_CSharp_CSharpFactory_IndexerDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BracketedParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_) | |
 
 ## IndexerDeclaration\(SyntaxTokenList, TypeSyntax, BracketedParameterListSyntax, AccessorListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_IndexerDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BracketedParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_"></a>
 

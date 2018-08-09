@@ -5,12 +5,15 @@ using System.Collections.Immutable;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
     public abstract class DocumentationUrlProvider
     {
+        private static readonly Regex _notWordCharOrUnderscoreRegex = new Regex(@"[^\w_]");
+
         protected DocumentationUrlProvider(IEnumerable<ExternalUrlProvider> externalProviders = null)
         {
             ExternalProviders = (externalProviders != null)
@@ -24,7 +27,7 @@ namespace Roslynator.Documentation
 
         public abstract string GetFileName(DocumentationKind kind);
 
-        public abstract DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders, ImmutableArray<string> containingFolders = default);
+        public abstract DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders, ImmutableArray<string> containingFolders = default, string fragment = null);
 
         public abstract string GetFragment(string s);
 
@@ -152,6 +155,15 @@ namespace Roslynator.Documentation
             sb.Append(fileName);
 
             return StringBuilderCache.GetStringAndFree(sb);
+        }
+
+        internal static string GetFragment(ISymbol symbol)
+        {
+            string id = symbol.GetDocumentationCommentId();
+
+            id = TextUtility.RemovePrefixFromDocumentationCommentId(id);
+
+            return _notWordCharOrUnderscoreRegex.Replace(id, "_");
         }
     }
 }

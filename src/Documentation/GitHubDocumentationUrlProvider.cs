@@ -14,6 +14,8 @@ namespace Roslynator.Documentation
     {
         public const string ReadMeFileName = "README.md";
 
+        private const string LinkToSelf = "./" + ReadMeFileName;
+
         private static readonly Regex _notWordCharOrHyphenOrSpaceRegex = new Regex(@"[^\w- ]");
 
         private Dictionary<ISymbol, ImmutableArray<string>> _symbolToFoldersMap;
@@ -54,9 +56,21 @@ namespace Roslynator.Documentation
             }
         }
 
-        public override DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders, ImmutableArray<string> containingFolders = default)
+        public override DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders, ImmutableArray<string> containingFolders = default, string fragment = null)
         {
             string url = CreateLocalUrl();
+
+            if (!string.IsNullOrEmpty(fragment))
+            {
+                if (url == LinkToSelf)
+                {
+                    url = "#" + fragment;
+                }
+                else
+                {
+                    url += "#" + fragment;
+                }
+            }
 
             return new DocumentationUrlInfo(url, DocumentationUrlKind.Local);
 
@@ -66,7 +80,7 @@ namespace Roslynator.Documentation
                     return GetUrl(ReadMeFileName, folders, '/');
 
                 if (FoldersEqual(containingFolders, folders))
-                    return "./" + ReadMeFileName;
+                    return LinkToSelf;
 
                 int count = 0;
 
@@ -99,8 +113,6 @@ namespace Roslynator.Documentation
                 }
 
                 i = count;
-
-                //i = folders.Length - 1 - count;
 
                 if (i < folders.Length)
                 {

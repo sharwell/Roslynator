@@ -8,10 +8,56 @@
 
 | Method | Summary |
 | ------ | ------- |
-| ReplaceRange\(SyntaxTokenList, Int32, Int32, IEnumerable\<SyntaxToken>\) | Creates a new list with the tokens in the specified range replaced with new tokens\. |
-| ReplaceRange\(SyntaxTriviaList, Int32, Int32, IEnumerable\<SyntaxTrivia>\) | Creates a new list with the trivia in the specified range replaced with new trivia\. |
-| ReplaceRange\<TNode>\(SeparatedSyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>\) | Creates a new list with the elements in the specified range replaced with new nodes\. |
-| ReplaceRange\<TNode>\(SyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>\) | Creates a new list with the elements in the specified range replaced with new nodes\. |
+| [ReplaceRange(SyntaxTokenList, Int32, Int32, IEnumerable\<SyntaxToken>)](../ReplaceRange/README.md#Roslynator_CSharp_SyntaxExtensions_ReplaceRange_Microsoft_CodeAnalysis_SyntaxTokenList_System_Int32_System_Int32_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxToken__) | Creates a new list with the tokens in the specified range replaced with new tokens\. |
+| [ReplaceRange(SyntaxTriviaList, Int32, Int32, IEnumerable\<SyntaxTrivia>)](../ReplaceRange/README.md#Roslynator_CSharp_SyntaxExtensions_ReplaceRange_Microsoft_CodeAnalysis_SyntaxTriviaList_System_Int32_System_Int32_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__) | Creates a new list with the trivia in the specified range replaced with new trivia\. |
+| [ReplaceRange\<TNode>(SeparatedSyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>)](#Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__) | Creates a new list with the elements in the specified range replaced with new nodes\. |
+| [ReplaceRange\<TNode>(SyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>)](#Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__) | Creates a new list with the elements in the specified range replaced with new nodes\. |
+
+## ReplaceRange\(SyntaxTokenList, Int32, Int32, IEnumerable\<SyntaxToken>\)<a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__"></a>
+
+### Summary
+
+Creates a new list with the tokens in the specified range replaced with new tokens\.
+
+```csharp
+public static SyntaxTokenList ReplaceRange(this SyntaxTokenList list, int index, int count, IEnumerable<SyntaxToken> newTokens)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| list | |
+| index | |
+| count | |
+| newTokens | |
+
+#### Returns
+
+[SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)
+
+## ReplaceRange\(SyntaxTriviaList, Int32, Int32, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__"></a>
+
+### Summary
+
+Creates a new list with the trivia in the specified range replaced with new trivia\.
+
+```csharp
+public static SyntaxTriviaList ReplaceRange(this SyntaxTriviaList list, int index, int count, IEnumerable<SyntaxTrivia> newTrivia)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| list | |
+| index | |
+| count | |
+| newTrivia | |
+
+#### Returns
+
+[SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)
 
 ## ReplaceRange\<TNode>\(SeparatedSyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>\)<a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__"></a>
 
@@ -70,50 +116,4 @@ public static SyntaxList<TNode> ReplaceRange<TNode>(this SyntaxList<TNode> list,
 #### Returns
 
 [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)
-
-## ReplaceRange\(SyntaxTokenList, Int32, Int32, IEnumerable\<SyntaxToken>\)<a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__"></a>
-
-### Summary
-
-Creates a new list with the tokens in the specified range replaced with new tokens\.
-
-```csharp
-public static SyntaxTokenList ReplaceRange(this SyntaxTokenList list, int index, int count, IEnumerable<SyntaxToken> newTokens)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| index | |
-| count | |
-| newTokens | |
-
-#### Returns
-
-[SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)
-
-## ReplaceRange\(SyntaxTriviaList, Int32, Int32, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__"></a>
-
-### Summary
-
-Creates a new list with the trivia in the specified range replaced with new trivia\.
-
-```csharp
-public static SyntaxTriviaList ReplaceRange(this SyntaxTriviaList list, int index, int count, IEnumerable<SyntaxTrivia> newTrivia)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| index | |
-| count | |
-| newTrivia | |
-
-#### Returns
-
-[SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)
 

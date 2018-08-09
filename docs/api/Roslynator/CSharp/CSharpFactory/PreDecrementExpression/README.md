@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| PreDecrementExpression\(ExpressionSyntax\) | |
-| PreDecrementExpression\(ExpressionSyntax, SyntaxToken\) | |
+| [PreDecrementExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_PreDecrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [PreDecrementExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_PreDecrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## PreDecrementExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_PreDecrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

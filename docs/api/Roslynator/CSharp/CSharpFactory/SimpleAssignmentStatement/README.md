@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| SimpleAssignmentStatement\(ExpressionSyntax, ExpressionSyntax\) | |
-| SimpleAssignmentStatement\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) | |
+| [SimpleAssignmentStatement(ExpressionSyntax, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_SimpleAssignmentStatement_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [SimpleAssignmentStatement(ExpressionSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_SimpleAssignmentStatement_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 
 ## SimpleAssignmentStatement\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SimpleAssignmentStatement_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

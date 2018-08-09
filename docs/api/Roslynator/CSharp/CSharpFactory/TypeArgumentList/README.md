@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| TypeArgumentList\(TypeSyntax\) | |
-| TypeArgumentList\(TypeSyntax\[\]\) | |
+| [TypeArgumentList(TypeSyntax)](#Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_) | |
+| [TypeArgumentList(TypeSyntax\[\])](#Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax___) | |
 
 ## TypeArgumentList\(TypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
 

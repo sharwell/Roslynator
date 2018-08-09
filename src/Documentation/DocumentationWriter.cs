@@ -1260,37 +1260,34 @@ namespace Roslynator.Documentation
                 ? UrlProvider.GetFolders(CurrentSymbol)
                 : default;
 
-            string url = UrlProvider.GetLocalUrl(folders, containingFolders).Url;
+            string url = UrlProvider.GetLocalUrl(folders, containingFolders, GetFragment()).Url;
 
-            url = Options.BaseLocalUrl + url;
+            return Options.BaseLocalUrl + url;
 
-            if (symbol.Kind == SymbolKind.Method
-                || (symbol.Kind == SymbolKind.Property && ((IPropertySymbol)symbol).IsIndexer))
+            string GetFragment()
             {
-                TypeDocumentationModel typeModel = DocumentationModel.GetTypeModel(symbol.ContainingType);
-
-                IEnumerable<ISymbol> members = GetMembers(typeModel);
-
-                if (members != null)
+                if (symbol.Kind == SymbolKind.Method
+                    || (symbol.Kind == SymbolKind.Property && ((IPropertySymbol)symbol).IsIndexer))
                 {
-                    using (IEnumerator<ISymbol> en = members.Where(f => f.Name == symbol.Name).GetEnumerator())
+                    TypeDocumentationModel typeModel = DocumentationModel.GetTypeModel(symbol.ContainingType);
+
+                    IEnumerable<ISymbol> members = GetMembers(typeModel);
+
+                    if (members != null)
                     {
-                        if (en.MoveNext()
-                            && en.MoveNext())
+                        using (IEnumerator<ISymbol> en = members.Where(f => f.Name == symbol.Name).GetEnumerator())
                         {
-                            string id = symbol.GetDocumentationCommentId();
-
-                            id = TextUtility.RemovePrefixFromDocumentationCommentId(id);
-
-                            id = Regex.Replace(id, @"[^\w_]", "_");
-
-                            url += "#" + id;
+                            if (en.MoveNext()
+                                && en.MoveNext())
+                            {
+                                return DocumentationUrlProvider.GetFragment(symbol);
+                            }
                         }
                     }
                 }
-            }
 
-            return url;
+                return null;
+            }
 
             IEnumerable<ISymbol> GetMembers(TypeDocumentationModel model)
             {

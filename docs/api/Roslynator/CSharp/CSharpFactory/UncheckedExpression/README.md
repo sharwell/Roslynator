@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| UncheckedExpression\(ExpressionSyntax\) | |
-| UncheckedExpression\(SyntaxToken, ExpressionSyntax, SyntaxToken\) | |
+| [UncheckedExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_UncheckedExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [UncheckedExpression(SyntaxToken, ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_UncheckedExpression_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## UncheckedExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_UncheckedExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

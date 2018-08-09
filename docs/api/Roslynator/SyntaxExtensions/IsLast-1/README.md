@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| IsLast\<TNode>\(SeparatedSyntaxList\<TNode>, TNode\) | Returns true if the specified node is a last node in the list\. |
-| IsLast\<TNode>\(SyntaxList\<TNode>, TNode\) | Returns true if the specified node is a last node in the list\. |
+| [IsLast\<TNode>(SeparatedSyntaxList\<TNode>, TNode)](#Roslynator_SyntaxExtensions_IsLast__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0____0_) | Returns true if the specified node is a last node in the list\. |
+| [IsLast\<TNode>(SyntaxList\<TNode>, TNode)](#Roslynator_SyntaxExtensions_IsLast__1_Microsoft_CodeAnalysis_SyntaxList___0____0_) | Returns true if the specified node is a last node in the list\. |
 
 ## IsLast\<TNode>\(SeparatedSyntaxList\<TNode>, TNode\)<a name="Roslynator_SyntaxExtensions_IsLast__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0____0_"></a>
 

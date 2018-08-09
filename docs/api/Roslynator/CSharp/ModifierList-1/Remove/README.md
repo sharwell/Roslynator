@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| Remove\(TNode, SyntaxKind\) | Creates a new node with a modifier of the specified kind removed\. |
-| Remove\(TNode, SyntaxToken\) | Creates a new node with the specified modifier removed\. |
+| [Remove(TNode, SyntaxKind)](#Roslynator_CSharp_ModifierList_1_Remove__0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Creates a new node with a modifier of the specified kind removed\. |
+| [Remove(TNode, SyntaxToken)](#Roslynator_CSharp_ModifierList_1_Remove__0_Microsoft_CodeAnalysis_SyntaxToken_) | Creates a new node with the specified modifier removed\. |
 
 ## Remove\(TNode, SyntaxKind\)<a name="Roslynator_CSharp_ModifierList_1_Remove__0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 

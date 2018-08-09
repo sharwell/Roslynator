@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| TypeParameterList\(TypeParameterSyntax\) | |
-| TypeParameterList\(TypeParameterSyntax\[\]\) | |
+| [TypeParameterList(TypeParameterSyntax)](#Roslynator_CSharp_CSharpFactory_TypeParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterSyntax_) | |
+| [TypeParameterList(TypeParameterSyntax\[\])](#Roslynator_CSharp_CSharpFactory_TypeParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterSyntax___) | |
 
 ## TypeParameterList\(TypeParameterSyntax\)<a name="Roslynator_CSharp_CSharpFactory_TypeParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterSyntax_"></a>
 

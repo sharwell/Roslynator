@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| GreaterThanOrEqualExpression\(ExpressionSyntax, ExpressionSyntax\) | |
-| GreaterThanOrEqualExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) | |
+| [GreaterThanOrEqualExpression(ExpressionSyntax, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_GreaterThanOrEqualExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [GreaterThanOrEqualExpression(ExpressionSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_GreaterThanOrEqualExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 
 ## GreaterThanOrEqualExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_GreaterThanOrEqualExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

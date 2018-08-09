@@ -8,8 +8,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| Insert\(TNode, SyntaxKind, IComparer\<SyntaxKind>\) | Creates a new node with a modifier of the specified kind inserted\. |
-| Insert\(TNode, SyntaxToken, IComparer\<SyntaxToken>\) | Creates a new node with the specified modifier inserted\. |
+| [Insert(TNode, SyntaxKind, IComparer\<SyntaxKind>)](#Roslynator_CSharp_ModifierList_1_Insert__0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Collections_Generic_IComparer_Microsoft_CodeAnalysis_CSharp_SyntaxKind__) | Creates a new node with a modifier of the specified kind inserted\. |
+| [Insert(TNode, SyntaxToken, IComparer\<SyntaxToken>)](#Roslynator_CSharp_ModifierList_1_Insert__0_Microsoft_CodeAnalysis_SyntaxToken_System_Collections_Generic_IComparer_Microsoft_CodeAnalysis_SyntaxToken__) | Creates a new node with the specified modifier inserted\. |
 
 ## Insert\(TNode, SyntaxKind, IComparer\<SyntaxKind>\)<a name="Roslynator_CSharp_ModifierList_1_Insert__0_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Collections_Generic_IComparer_Microsoft_CodeAnalysis_CSharp_SyntaxKind__"></a>
 

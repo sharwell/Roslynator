@@ -8,8 +8,18 @@
 
 | Method | Summary |
 | ------ | ------- |
-| Bar\(\) | abc |
-| Bar\<T>\(String, String\) | s **value** **T** |
+| [Bar()](../Bar/README.md#Roslynator_Documentation_Test_Foo_Bar) | abc |
+| [Bar\<T>(String, String)](#Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_) | s **value** **T** |
+
+## Bar\(\)<a name="Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_"></a>
+
+### Summary
+
+abc
+
+```csharp
+public void Bar()
+```
 
 ## Bar\<T>\(String, String\)<a name="Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_"></a>
 
@@ -33,14 +43,4 @@ public void Bar<T>(string value, string value2)
 | ---- | ------- |
 | value | p |
 | value2 | |
-
-## Bar\(\)<a name="Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_"></a>
-
-### Summary
-
-abc
-
-```csharp
-public void Bar()
-```
 

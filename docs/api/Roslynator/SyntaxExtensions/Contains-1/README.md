@@ -8,9 +8,30 @@
 
 | Method | Summary |
 | ------ | ------- |
-| Contains\(SyntaxTokenList, SyntaxToken\) | Returns true if the specified token is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\. |
-| Contains\<TNode>\(SeparatedSyntaxList\<TNode>, TNode\) | Returns true if the specified node is in the [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)\. |
-| Contains\<TNode>\(SyntaxList\<TNode>, TNode\) | Returns true if the specified node is in the [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)\. |
+| [Contains(SyntaxTokenList, SyntaxToken)](../Contains/README.md#Roslynator_SyntaxExtensions_Contains_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_SyntaxToken_) | Returns true if the specified token is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\. |
+| [Contains\<TNode>(SeparatedSyntaxList\<TNode>, TNode)](#Roslynator_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0____0_) | Returns true if the specified node is in the [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)\. |
+| [Contains\<TNode>(SyntaxList\<TNode>, TNode)](#Roslynator_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SyntaxList___0____0_) | Returns true if the specified node is in the [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)\. |
+
+## Contains\(SyntaxTokenList, SyntaxToken\)<a name="Roslynator_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0____0_"></a>
+
+### Summary
+
+Returns true if the specified token is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\.
+
+```csharp
+public static bool Contains(this SyntaxTokenList tokens, SyntaxToken token)
+```
+
+#### Parameters
+
+| Name | Summary |
+| ---- | ------- |
+| tokens | |
+| token | |
+
+#### Returns
+
+[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Contains\<TNode>\(SeparatedSyntaxList\<TNode>, TNode\)<a name="Roslynator_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0____0_"></a>
 
@@ -61,27 +82,6 @@ public static bool Contains<TNode>(this SyntaxList<TNode> list, TNode node) wher
 | ---- | ------- |
 | list | |
 | node | |
-
-#### Returns
-
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
-
-## Contains\(SyntaxTokenList, SyntaxToken\)<a name="Roslynator_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0____0_"></a>
-
-### Summary
-
-Returns true if the specified token is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\.
-
-```csharp
-public static bool Contains(this SyntaxTokenList tokens, SyntaxToken token)
-```
-
-#### Parameters
-
-| Name | Summary |
-| ---- | ------- |
-| tokens | |
-| token | |
 
 #### Returns
 
