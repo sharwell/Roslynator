@@ -581,39 +581,15 @@ namespace Roslynator.Documentation
 
         public virtual void WriteDerivedTypes(IEnumerable<INamedTypeSymbol> derivedTypes)
         {
-            SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters;
+            SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
 
-            using (IEnumerator<INamedTypeSymbol> en = derivedTypes
-                .OrderBy(f => f.ToDisplayString(format))
-                .GetEnumerator())
-            {
-                if (en.MoveNext())
-                {
-                    WriteHeading(3, Resources.DerivedTitle);
-
-                    int count = 0;
-
-                    WriteStartBulletList();
-
-                    do
-                    {
-                        WriteBulletItemLink(en.Current, format);
-
-                        count++;
-
-                        if (count == Options.MaxDerivedItems)
-                        {
-                            if (en.MoveNext())
-                                WriteBulletItem(Resources.Ellipsis);
-
-                            break;
-                        }
-                    }
-                    while (en.MoveNext());
-
-                    WriteEndBulletList();
-                }
-            }
+            WriteList(
+                derivedTypes,
+                Resources.DerivedTitle,
+                headingLevel: 3,
+                format,
+                maxItems: Options.MaxDerivedItems,
+                addNamespace: true);
         }
 
         public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
@@ -1046,10 +1022,16 @@ namespace Roslynator.Documentation
             int headingLevel,
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
+            int maxItems = -1,
             bool addLink = true,
             bool addNamespace = false,
             bool canCreateExternalUrl = true)
         {
+            Debug.Assert(!addNamespace || (format.TypeQualificationStyle & SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces) == 0, "");
+
+            if (maxItems == 0)
+                return;
+
             IEnumerable<ISymbol> sortedSymbols = null;
 
             if (addNamespace)
@@ -1072,6 +1054,8 @@ namespace Roslynator.Documentation
 
                     WriteStartBulletList();
 
+                    int count = 0;
+
                     do
                     {
                         if (addLink)
@@ -1091,6 +1075,16 @@ namespace Roslynator.Documentation
                         else
                         {
                             WriteBulletItem(en.Current.ToDisplayString(format));
+                        }
+
+                        count++;
+
+                        if (count == maxItems)
+                        {
+                            if (en.MoveNext())
+                                WriteBulletItem(Resources.Ellipsis);
+
+                            break;
                         }
                     }
                     while (en.MoveNext());

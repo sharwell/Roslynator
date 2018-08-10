@@ -25,7 +25,7 @@ public class Bla
 
 ### Derived
 
-* [Roslynator.Documentation.Test.Foo](../../Roslynator/Documentation/Test/Foo/README.md)
+* Roslynator\.Documentation\.Test\.[Foo](../../Roslynator/Documentation/Test/Foo/README.md)
 
 ## Constructors
 

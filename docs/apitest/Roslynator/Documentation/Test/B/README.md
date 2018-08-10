@@ -16,7 +16,7 @@ public class B
 
 ### Derived
 
-* [Roslynator.Documentation.Test.C](../C/README.md)
+* Roslynator\.Documentation\.Test\.[C](../C/README.md)
 
 ## Constructors
 

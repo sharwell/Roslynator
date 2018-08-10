@@ -24,11 +24,11 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 
 ### Derived
 
-* [Roslynator.CSharp.MemberDeclarationListSelection](../CSharp/MemberDeclarationListSelection/README.md)
-* [Roslynator.CSharp.StatementListSelection](../CSharp/StatementListSelection/README.md)
-* [Roslynator.SeparatedSyntaxListSelection\<TNode>](../SeparatedSyntaxListSelection-1/README.md)
-* [Roslynator.SyntaxListSelection\<TNode>](../SyntaxListSelection-1/README.md)
-* [Roslynator.Text.TextLineCollectionSelection](../Text/TextLineCollectionSelection/README.md)
+* Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../SeparatedSyntaxListSelection-1/README.md)
+* Roslynator\.[SyntaxListSelection\<TNode>](../SyntaxListSelection-1/README.md)
+* Roslynator\.CSharp\.[MemberDeclarationListSelection](../CSharp/MemberDeclarationListSelection/README.md)
+* Roslynator\.CSharp\.[StatementListSelection](../CSharp/StatementListSelection/README.md)
+* Roslynator\.Text\.[TextLineCollectionSelection](../Text/TextLineCollectionSelection/README.md)
 
 ### Implements
 

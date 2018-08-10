@@ -10,7 +10,7 @@ public interface IFoo
 
 ### Derived
 
-* [Roslynator.Documentation.Test.FooEvent](../FooEvent/README.md)
+* Roslynator\.Documentation\.Test\.[FooEvent](../FooEvent/README.md)
 
 ## Events
 

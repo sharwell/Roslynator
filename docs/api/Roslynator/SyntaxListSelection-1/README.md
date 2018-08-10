@@ -30,8 +30,8 @@ public class SyntaxListSelection<TNode> : ISelection<TNode>,
 
 ### Derived
 
-* [Roslynator.CSharp.MemberDeclarationListSelection](../CSharp/MemberDeclarationListSelection/README.md)
-* [Roslynator.CSharp.StatementListSelection](../CSharp/StatementListSelection/README.md)
+* Roslynator\.CSharp\.[MemberDeclarationListSelection](../CSharp/MemberDeclarationListSelection/README.md)
+* Roslynator\.CSharp\.[StatementListSelection](../CSharp/StatementListSelection/README.md)
 
 ### Implements
 
