@@ -9,6 +9,10 @@
 * [Roslynator.CSharp.Syntax](../../docs/api/Roslynator/CSharp/Syntax/README.md)
 * [Roslynator.Text](../../docs/api/Roslynator/Text/README.md)
 
+### Interfaces
+
+* ISelection\`1
+
 ## Classes
 
 * System\.[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
