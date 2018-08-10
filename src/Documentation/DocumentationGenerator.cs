@@ -888,7 +888,9 @@ namespace Roslynator.Documentation
                         {
                             using (IEnumerator<INamedTypeSymbol> en = typeSymbols
                                 .Where(f => f.IsStatic && f.TypeKind == TypeKind.Class)
-                                .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
+                                .OrderBy(f => f.ContainingNamespace.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces))
+                                .ThenBy(f => f.ToDisplayString(format))
+                                .GetEnumerator())
                             {
                                 if (en.MoveNext())
                                 {
@@ -939,31 +941,13 @@ namespace Roslynator.Documentation
                 }
             }
 
-            void WriteBulletItemLink(ISymbol symbol)
-            {
-                writer.WriteStartBulletItem();
-                WriteLink(symbol);
-                writer.WriteEndBulletItem();
-            }
-
-            void WriteLink(ISymbol symbol)
-            {
-                INamespaceSymbol containingNamespace = symbol.ContainingNamespace;
-
-                if (!containingNamespace.IsGlobalNamespace)
-                {
-                    writer.WriteSymbol(containingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
-                    writer.WriteString(".");
-                }
-
-                writer.WriteLink(symbol, format);
-            }
-
             void WriteTypes(TypeKind typeKind)
             {
                 using (IEnumerator<INamedTypeSymbol> en = typeSymbols
                     .Where(f => f.TypeKind == typeKind)
-                    .OrderBy(f => f.ToDisplayString(format)).GetEnumerator())
+                    .OrderBy(f => f.ContainingNamespace.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces))
+                    .ThenBy(f => f.ToDisplayString(format))
+                    .GetEnumerator())
                 {
                     if (en.MoveNext())
                     {
@@ -987,12 +971,33 @@ namespace Roslynator.Documentation
 
                 foreach (ITypeSymbol derivedType in nodes
                     .Where(f => f.BaseType?.OriginalDefinition == baseType.OriginalDefinition)
-                    .OrderBy(f => f.ToDisplayString(format))
+                    .OrderBy(f => f.ContainingNamespace.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces))
+                    .ThenBy(f => f.ToDisplayString(format))
                     .ToList())
                 {
                     WriteBulletItem(derivedType, nodes);
                 }
 
+                writer.WriteEndBulletItem();
+            }
+
+            void WriteLink(ISymbol symbol)
+            {
+                INamespaceSymbol containingNamespace = symbol.ContainingNamespace;
+
+                if (!containingNamespace.IsGlobalNamespace)
+                {
+                    writer.WriteSymbol(containingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                    writer.WriteString(".");
+                }
+
+                writer.WriteLink(symbol, format);
+            }
+
+            void WriteBulletItemLink(ISymbol symbol)
+            {
+                writer.WriteStartBulletItem();
+                WriteLink(symbol);
                 writer.WriteEndBulletItem();
             }
 
