@@ -8,8 +8,6 @@
 * [Microsoft.CodeAnalysis.Diagnostics](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnostics)
 * [System.Collections.Generic](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic)
 
-## [Microsoft.CodeAnalysis](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis) Namespace
-
 ### Classes
 
 * Microsoft\.CodeAnalysis\.[Document](Microsoft/CodeAnalysis/Document/README.md)
@@ -17,46 +15,6 @@
 * Microsoft\.CodeAnalysis\.[Solution](Microsoft/CodeAnalysis/Solution/README.md)
 * Microsoft\.CodeAnalysis\.[SyntaxNode](Microsoft/CodeAnalysis/SyntaxNode/README.md)
 * Microsoft\.CodeAnalysis\.[SyntaxTree](Microsoft/CodeAnalysis/SyntaxTree/README.md)
-
-### Structs
-
-* Microsoft\.CodeAnalysis\.[FileLinePositionSpan](Microsoft/CodeAnalysis/FileLinePositionSpan/README.md)
-* Microsoft\.CodeAnalysis\.[SeparatedSyntaxList\<TNode>](Microsoft/CodeAnalysis/SeparatedSyntaxList-1/README.md)
-* Microsoft\.CodeAnalysis\.[SyntaxList\<TNode>](Microsoft/CodeAnalysis/SyntaxList-1/README.md)
-* Microsoft\.CodeAnalysis\.[SyntaxNodeOrToken](Microsoft/CodeAnalysis/SyntaxNodeOrToken/README.md)
-* Microsoft\.CodeAnalysis\.[SyntaxToken](Microsoft/CodeAnalysis/SyntaxToken/README.md)
-* Microsoft\.CodeAnalysis\.[SyntaxTokenList](Microsoft/CodeAnalysis/SyntaxTokenList/README.md)
-* Microsoft\.CodeAnalysis\.[SyntaxTrivia](Microsoft/CodeAnalysis/SyntaxTrivia/README.md)
-* Microsoft\.CodeAnalysis\.[SyntaxTriviaList](Microsoft/CodeAnalysis/SyntaxTriviaList/README.md)
-
-### Interfaces
-
-* Microsoft\.CodeAnalysis\.[IFieldSymbol](Microsoft/CodeAnalysis/IFieldSymbol/README.md)
-* Microsoft\.CodeAnalysis\.[IMethodSymbol](Microsoft/CodeAnalysis/IMethodSymbol/README.md)
-* Microsoft\.CodeAnalysis\.[INamedTypeSymbol](Microsoft/CodeAnalysis/INamedTypeSymbol/README.md)
-* Microsoft\.CodeAnalysis\.[INamespaceOrTypeSymbol](Microsoft/CodeAnalysis/INamespaceOrTypeSymbol/README.md)
-* Microsoft\.CodeAnalysis\.[INamespaceSymbol](Microsoft/CodeAnalysis/INamespaceSymbol/README.md)
-* Microsoft\.CodeAnalysis\.[IParameterSymbol](Microsoft/CodeAnalysis/IParameterSymbol/README.md)
-* Microsoft\.CodeAnalysis\.[ISymbol](Microsoft/CodeAnalysis/ISymbol/README.md)
-* Microsoft\.CodeAnalysis\.[ITypeSymbol](Microsoft/CodeAnalysis/ITypeSymbol/README.md)
-
-### Enums
-
-* Microsoft\.CodeAnalysis\.[Accessibility](Microsoft/CodeAnalysis/Accessibility/README.md)
-* Microsoft\.CodeAnalysis\.[MethodKind](Microsoft/CodeAnalysis/MethodKind/README.md)
-* Microsoft\.CodeAnalysis\.[SpecialType](Microsoft/CodeAnalysis/SpecialType/README.md)
-* Microsoft\.CodeAnalysis\.[TypeKind](Microsoft/CodeAnalysis/TypeKind/README.md)
-
-## [Microsoft.CodeAnalysis.CSharp](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp) Namespace
-
-### Enums
-
-* Microsoft\.CodeAnalysis\.CSharp\.[SyntaxKind](Microsoft/CodeAnalysis/CSharp/SyntaxKind/README.md)
-
-## [Microsoft.CodeAnalysis.CSharp.Syntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax) Namespace
-
-### Classes
-
 * Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](Microsoft/CodeAnalysis/CSharp/Syntax/AccessorDeclarationSyntax/README.md)
 * Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorListSyntax](Microsoft/CodeAnalysis/CSharp/Syntax/AccessorListSyntax/README.md)
 * Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BinaryExpressionSyntax](Microsoft/CodeAnalysis/CSharp/Syntax/BinaryExpressionSyntax/README.md)
@@ -95,16 +53,36 @@
 * Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[UsingStatementSyntax](Microsoft/CodeAnalysis/CSharp/Syntax/UsingStatementSyntax/README.md)
 * Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[YieldStatementSyntax](Microsoft/CodeAnalysis/CSharp/Syntax/YieldStatementSyntax/README.md)
 
-## [Microsoft.CodeAnalysis.Diagnostics](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnostics) Namespace
-
 ### Structs
 
+* Microsoft\.CodeAnalysis\.[FileLinePositionSpan](Microsoft/CodeAnalysis/FileLinePositionSpan/README.md)
+* Microsoft\.CodeAnalysis\.[SeparatedSyntaxList\<TNode>](Microsoft/CodeAnalysis/SeparatedSyntaxList-1/README.md)
+* Microsoft\.CodeAnalysis\.[SyntaxList\<TNode>](Microsoft/CodeAnalysis/SyntaxList-1/README.md)
+* Microsoft\.CodeAnalysis\.[SyntaxNodeOrToken](Microsoft/CodeAnalysis/SyntaxNodeOrToken/README.md)
+* Microsoft\.CodeAnalysis\.[SyntaxToken](Microsoft/CodeAnalysis/SyntaxToken/README.md)
+* Microsoft\.CodeAnalysis\.[SyntaxTokenList](Microsoft/CodeAnalysis/SyntaxTokenList/README.md)
+* Microsoft\.CodeAnalysis\.[SyntaxTrivia](Microsoft/CodeAnalysis/SyntaxTrivia/README.md)
+* Microsoft\.CodeAnalysis\.[SyntaxTriviaList](Microsoft/CodeAnalysis/SyntaxTriviaList/README.md)
 * Microsoft\.CodeAnalysis\.Diagnostics\.[SymbolAnalysisContext](Microsoft/CodeAnalysis/Diagnostics/SymbolAnalysisContext/README.md)
 * Microsoft\.CodeAnalysis\.Diagnostics\.[SyntaxNodeAnalysisContext](Microsoft/CodeAnalysis/Diagnostics/SyntaxNodeAnalysisContext/README.md)
 * Microsoft\.CodeAnalysis\.Diagnostics\.[SyntaxTreeAnalysisContext](Microsoft/CodeAnalysis/Diagnostics/SyntaxTreeAnalysisContext/README.md)
 
-## [System.Collections.Generic](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic) Namespace
-
 ### Interfaces
 
+* Microsoft\.CodeAnalysis\.[IFieldSymbol](Microsoft/CodeAnalysis/IFieldSymbol/README.md)
+* Microsoft\.CodeAnalysis\.[IMethodSymbol](Microsoft/CodeAnalysis/IMethodSymbol/README.md)
+* Microsoft\.CodeAnalysis\.[INamedTypeSymbol](Microsoft/CodeAnalysis/INamedTypeSymbol/README.md)
+* Microsoft\.CodeAnalysis\.[INamespaceOrTypeSymbol](Microsoft/CodeAnalysis/INamespaceOrTypeSymbol/README.md)
+* Microsoft\.CodeAnalysis\.[INamespaceSymbol](Microsoft/CodeAnalysis/INamespaceSymbol/README.md)
+* Microsoft\.CodeAnalysis\.[IParameterSymbol](Microsoft/CodeAnalysis/IParameterSymbol/README.md)
+* Microsoft\.CodeAnalysis\.[ISymbol](Microsoft/CodeAnalysis/ISymbol/README.md)
+* Microsoft\.CodeAnalysis\.[ITypeSymbol](Microsoft/CodeAnalysis/ITypeSymbol/README.md)
 * System\.Collections\.Generic\.[IEnumerable\<T>](System/Collections/Generic/IEnumerable-1/README.md)
+
+### Enums
+
+* Microsoft\.CodeAnalysis\.[Accessibility](Microsoft/CodeAnalysis/Accessibility/README.md)
+* Microsoft\.CodeAnalysis\.[MethodKind](Microsoft/CodeAnalysis/MethodKind/README.md)
+* Microsoft\.CodeAnalysis\.[SpecialType](Microsoft/CodeAnalysis/SpecialType/README.md)
+* Microsoft\.CodeAnalysis\.[TypeKind](Microsoft/CodeAnalysis/TypeKind/README.md)
+* Microsoft\.CodeAnalysis\.CSharp\.[SyntaxKind](Microsoft/CodeAnalysis/CSharp/SyntaxKind/README.md)
