@@ -8,7 +8,7 @@
 * [Microsoft.CodeAnalysis.Diagnostics](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnostics)
 * [System.Collections.Generic](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic)
 
-### Classes
+## Classes
 
 * Microsoft\.CodeAnalysis\.[Document](Microsoft/CodeAnalysis/Document/README.md)
 * Microsoft\.CodeAnalysis\.[SemanticModel](Microsoft/CodeAnalysis/SemanticModel/README.md)
@@ -53,7 +53,7 @@
 * Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[UsingStatementSyntax](Microsoft/CodeAnalysis/CSharp/Syntax/UsingStatementSyntax/README.md)
 * Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[YieldStatementSyntax](Microsoft/CodeAnalysis/CSharp/Syntax/YieldStatementSyntax/README.md)
 
-### Structs
+## Structs
 
 * Microsoft\.CodeAnalysis\.[FileLinePositionSpan](Microsoft/CodeAnalysis/FileLinePositionSpan/README.md)
 * Microsoft\.CodeAnalysis\.[SeparatedSyntaxList\<TNode>](Microsoft/CodeAnalysis/SeparatedSyntaxList-1/README.md)
@@ -67,7 +67,7 @@
 * Microsoft\.CodeAnalysis\.Diagnostics\.[SyntaxNodeAnalysisContext](Microsoft/CodeAnalysis/Diagnostics/SyntaxNodeAnalysisContext/README.md)
 * Microsoft\.CodeAnalysis\.Diagnostics\.[SyntaxTreeAnalysisContext](Microsoft/CodeAnalysis/Diagnostics/SyntaxTreeAnalysisContext/README.md)
 
-### Interfaces
+## Interfaces
 
 * Microsoft\.CodeAnalysis\.[IFieldSymbol](Microsoft/CodeAnalysis/IFieldSymbol/README.md)
 * Microsoft\.CodeAnalysis\.[IMethodSymbol](Microsoft/CodeAnalysis/IMethodSymbol/README.md)
@@ -79,7 +79,7 @@
 * Microsoft\.CodeAnalysis\.[ITypeSymbol](Microsoft/CodeAnalysis/ITypeSymbol/README.md)
 * System\.Collections\.Generic\.[IEnumerable\<T>](System/Collections/Generic/IEnumerable-1/README.md)
 
-### Enums
+## Enums
 
 * Microsoft\.CodeAnalysis\.[Accessibility](Microsoft/CodeAnalysis/Accessibility/README.md)
 * Microsoft\.CodeAnalysis\.[MethodKind](Microsoft/CodeAnalysis/MethodKind/README.md)

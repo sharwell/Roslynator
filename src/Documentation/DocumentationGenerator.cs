@@ -406,36 +406,11 @@ namespace Roslynator.Documentation
                     writer.WriteList(
                         typesByKind,
                         Resources.GetPluralName(typesByKind.Key),
-                        headingLevel: 3,
+                        headingLevel: 2,
                         SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                         addNamespace: true,
                         canCreateExternalUrl: false);
                 }
-
-                //TODO: del
-                //foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> typesByNamespaces in extendedExternalTypes
-                //    .OrderBy(f => f.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters))
-                //    .GroupBy(f => f.ContainingNamespace, MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
-                //    .OrderBy(f => f.Key.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces)))
-                //{
-                //    INamespaceSymbol namespaceSymbol = typesByNamespaces.Key;
-
-                //    writer.WriteHeading(2, namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
-
-                //    foreach (IGrouping<TypeKind, INamedTypeSymbol> typesByKind in typesByNamespaces
-                //        .Where(f => IsNamespacePartEnabled(f.TypeKind))
-                //        .GroupBy(f => f.TypeKind)
-                //        .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer))
-                //    {
-                //        writer.WriteList(
-                //            typesByKind,
-                //            Resources.GetPluralName(typesByKind.Key),
-                //            headingLevel: 3,
-                //            SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
-                //            addNamespace: true,
-                //            canCreateExternalUrl: false);
-                //    }
-                //}
 
                 writer.WriteEndDocument();
 
