@@ -136,17 +136,17 @@ namespace Roslynator.Documentation
             DocumentationGeneratorResult objectModel = default;
             DocumentationGeneratorResult extensions = default;
 
-            if ((parts & DocumentationParts.ExternalTypesExtensions) != 0)
+            if ((parts & DocumentationParts.ExtensionsOfExternalTypes) != 0)
             {
-                extensions = GenerateExternalTypesExtensions();
+                extensions = GenerateExtensionsOfExternalTypes();
 
                 if (!extensions.HasContent)
-                    parts &= ~DocumentationParts.ExternalTypesExtensions;
+                    parts &= ~DocumentationParts.ExtensionsOfExternalTypes;
             }
 
             using (DocumentationWriter writer = CreateWriter())
             {
-                yield return GenerateRoot(writer, heading, addExtensionsLink: (parts & DocumentationParts.ExternalTypesExtensions) != 0);
+                yield return GenerateRoot(writer, heading, addExtensionsLink: (parts & DocumentationParts.ExtensionsOfExternalTypes) != 0);
             }
 
             bool generateTypes = (parts & DocumentationParts.Type) != 0;
@@ -381,7 +381,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        private DocumentationGeneratorResult GenerateExternalTypesExtensions()
+        private DocumentationGeneratorResult GenerateExtensionsOfExternalTypes()
         {
             IEnumerable<INamedTypeSymbol> extendedExternalTypes = DocumentationModel.GetExtendedExternalTypes();
 
@@ -926,7 +926,7 @@ namespace Roslynator.Documentation
                             {
                                 writer.WriteHeading2(Resources.OtherTitle);
                                 writer.WriteStartBulletItem();
-                                writer.WriteLink(Resources.ExtensionsOfExternalTypesTitle, WellKnownNames.ExternalTypesExtensions);
+                                writer.WriteLink(Resources.ExtensionsOfExternalTypesTitle, WellKnownNames.ExtensionsOfExternalTypes);
                                 writer.WriteEndBulletItem();
                             }
 
