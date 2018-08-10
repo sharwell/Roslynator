@@ -1,4 +1,4 @@
-# Extension Methods of External Types
+# Extensions of External Types
 
 ## Namespaces
 

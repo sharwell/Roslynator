@@ -10,6 +10,6 @@ namespace Roslynator.Documentation
         Type = 3,
         Member = 4,
         ObjectModel = 5,
-        ExtensionMembersOfExternalTypes = 6,
+        ExtensionsOfExternalTypes = 6,
     }
 }

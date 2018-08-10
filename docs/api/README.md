@@ -94,4 +94,4 @@
 
 ## Other
 
-* [Extension Methods of External Types](_ExtensionMembersOfExternalTypes.md)
+* [Extensions of External Types](_ExternalTypesExtensions.md)
