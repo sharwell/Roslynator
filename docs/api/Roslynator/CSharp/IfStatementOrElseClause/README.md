@@ -20,7 +20,7 @@ public readonly struct IfStatementOrElseClause : System.IEquatable<IfStatementOr
 
 ### Implements
 
-* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IfStatementOrElseClause](./README.md)>
+[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IfStatementOrElseClause](./README.md)>
 
 ## Properties
 

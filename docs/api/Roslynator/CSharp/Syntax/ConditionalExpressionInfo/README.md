@@ -20,7 +20,7 @@ public readonly struct ConditionalExpressionInfo : System.IEquatable<Conditional
 
 ### Implements
 
-* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[ConditionalExpressionInfo](./README.md)>
+[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[ConditionalExpressionInfo](./README.md)>
 
 ## Properties
 

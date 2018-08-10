@@ -20,7 +20,7 @@ public readonly struct BinaryExpressionInfo : System.IEquatable<BinaryExpression
 
 ### Implements
 
-* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[BinaryExpressionInfo](./README.md)>
+[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[BinaryExpressionInfo](./README.md)>
 
 ## Properties
 

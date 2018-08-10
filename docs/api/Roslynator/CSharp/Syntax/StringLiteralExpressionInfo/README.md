@@ -20,7 +20,7 @@ public readonly struct StringLiteralExpressionInfo : System.IEquatable<StringLit
 
 ### Implements
 
-* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[StringLiteralExpressionInfo](./README.md)>
+[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[StringLiteralExpressionInfo](./README.md)>
 
 ## Properties
 

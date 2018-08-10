@@ -20,7 +20,7 @@ public readonly struct LocalDeclarationStatementInfo : System.IEquatable<LocalDe
 
 ### Implements
 
-* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[LocalDeclarationStatementInfo](./README.md)>
+[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[LocalDeclarationStatementInfo](./README.md)>
 
 ## Properties
 

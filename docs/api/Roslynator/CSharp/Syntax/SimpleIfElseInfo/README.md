@@ -21,7 +21,7 @@ public readonly struct SimpleIfElseInfo : System.IEquatable<SimpleIfElseInfo>
 
 ### Implements
 
-* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[SimpleIfElseInfo](./README.md)>
+[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[SimpleIfElseInfo](./README.md)>
 
 ## Properties
 

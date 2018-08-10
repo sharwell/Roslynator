@@ -20,7 +20,7 @@ public readonly struct ModifierListInfo : System.IEquatable<ModifierListInfo>
 
 ### Implements
 
-* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[ModifierListInfo](./README.md)>
+[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[ModifierListInfo](./README.md)>
 
 ## Properties
 

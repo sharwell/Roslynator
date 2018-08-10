@@ -592,13 +592,32 @@ namespace Roslynator.Documentation
 
         public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
         {
-            WriteList(
-                implementedInterfaces,
-                heading: Resources.ImplementsTitle,
-                headingLevel: 3,
-                format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
-                addLinkForTypeParameters: true,
-                addNamespace: true);
+            SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
+
+            using (IEnumerator<INamedTypeSymbol> en = implementedInterfaces
+                .OrderBy(f => f.ToDisplayString(format))
+                .GetEnumerator())
+            {
+                if (en.MoveNext())
+                {
+                    WriteHeading(3, Resources.ImplementsTitle);
+
+                    while (true)
+                    {
+                        WriteLink(en.Current, format, addLinkForTypeParameters: true);
+
+                        if (en.MoveNext())
+                        {
+                            WriteString(Resources.Comma);
+                            WriteSpace();
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
         public virtual void WriteExceptions(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
