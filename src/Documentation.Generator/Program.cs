@@ -46,9 +46,7 @@ namespace Roslynator.Documentation
 
             FileHelper.WriteAllText(directoryPath + "_api.cs", defintionList, Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
 
-            foreach (DocumentationGeneratorResult result in generator.Generate(
-                heading,
-                extendedExternalTypesHeading: "External Types Extended by " + heading))
+            foreach (DocumentationGeneratorResult result in generator.Generate(heading))
             {
                 string path = directoryPath + result.Path;
 

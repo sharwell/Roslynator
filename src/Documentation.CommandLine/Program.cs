@@ -96,10 +96,7 @@ namespace Roslynator.Documentation
 
             //Directory.Delete(directoryPath, recursive: true);
 
-            foreach (DocumentationGeneratorResult documentationFile in generator.Generate(
-                heading: options.Heading,
-                objectModelHeading: options.ObjectModelHeading,
-                extendedExternalTypesHeading: options.ExtendedExternalTypesHeading))
+            foreach (DocumentationGeneratorResult documentationFile in generator.Generate(heading: options.Heading))
             {
                 string path = Path.Combine(directoryPath, documentationFile.Path);
 

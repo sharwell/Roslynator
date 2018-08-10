@@ -49,8 +49,8 @@ namespace Roslynator.Documentation
                 case DocumentationKind.Type:
                 case DocumentationKind.Member:
                     return ReadMeFileName;
-                case DocumentationKind.ExtendedExternalTypes:
-                    return WellKnownNames.ExtendedExternalTypesFileName;
+                case DocumentationKind.ExtensionMembersOfExternalTypes:
+                    return WellKnownNames.ExtensionMembersOfExternalTypes;
                 default:
                     throw new ArgumentException("", nameof(kind));
             }

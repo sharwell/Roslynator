@@ -11,7 +11,7 @@ namespace Roslynator.Documentation
         Namespace = 1,
         Type = 2,
         Member = 4,
-        ExtendedExternalTypes = 8,
-        All = Namespace | Type | Member | ExtendedExternalTypes,
+        ExtensionMembersOfExternalTypes = 8,
+        All = Namespace | Type | Member | ExtensionMembersOfExternalTypes,
     }
 }

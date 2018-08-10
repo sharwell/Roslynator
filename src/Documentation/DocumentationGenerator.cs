@@ -129,26 +129,24 @@ namespace Roslynator.Documentation
 
         protected abstract DocumentationWriter CreateWriterCore();
 
-        public IEnumerable<DocumentationGeneratorResult> Generate(
-            string heading = null,
-            string extendedExternalTypesHeading = null)
+        public IEnumerable<DocumentationGeneratorResult> Generate(string heading = null)
         {
             DocumentationParts parts = Options.DocumentationParts;
 
             DocumentationGeneratorResult objectModel = default;
-            DocumentationGeneratorResult extendedExternalTypes = default;
+            DocumentationGeneratorResult extensionMembers = default;
 
-            if ((parts & DocumentationParts.ExtendedExternalTypes) != 0)
+            if ((parts & DocumentationParts.ExtensionMembersOfExternalTypes) != 0)
             {
-                extendedExternalTypes = GenerateExtendedExternalTypes(extendedExternalTypesHeading ?? Resources.ExtendedExternalTypesTitle);
+                extensionMembers = GenerateExtendedExternalTypes();
 
-                if (!extendedExternalTypes.HasContent)
-                    parts &= ~DocumentationParts.ExtendedExternalTypes;
+                if (!extensionMembers.HasContent)
+                    parts &= ~DocumentationParts.ExtensionMembersOfExternalTypes;
             }
 
             using (DocumentationWriter writer = CreateWriter())
             {
-                yield return GenerateRoot(writer, heading, addExtendedExternalTypesLink: (parts & DocumentationParts.ExtendedExternalTypes) != 0);
+                yield return GenerateRoot(writer, heading, addExtensionMembersLink: (parts & DocumentationParts.ExtensionMembersOfExternalTypes) != 0);
             }
 
             bool generateTypes = (parts & DocumentationParts.Type) != 0;
@@ -178,9 +176,9 @@ namespace Roslynator.Documentation
             if (objectModel.HasContent)
                 yield return objectModel;
 
-            if (extendedExternalTypes.HasContent)
+            if (extensionMembers.HasContent)
             {
-                yield return extendedExternalTypes;
+                yield return extensionMembers;
 
                 foreach (INamedTypeSymbol typeSymbol in DocumentationModel.GetExtendedExternalTypes())
                     yield return GenerateExtendedExternalType(typeSymbol);
@@ -189,24 +187,24 @@ namespace Roslynator.Documentation
 
         internal DocumentationGeneratorResult GenerateRoot(
             string heading,
-            bool addExtendedExternalTypesLink = false)
+            bool addExtensionMembersLink = false)
         {
             using (DocumentationWriter writer = CreateWriter())
             {
-                return GenerateRoot(writer, heading, addExtendedExternalTypesLink: addExtendedExternalTypesLink);
+                return GenerateRoot(writer, heading, addExtensionMembersLink: addExtensionMembersLink);
             }
         }
 
         internal DocumentationGeneratorResult GenerateRoot(
             DocumentationWriter writer,
             string heading,
-            bool addExtendedExternalTypesLink = false)
+            bool addExtensionMembersLink = false)
         {
             writer.WriteStartDocument();
 
             writer.WriteHeading1(heading);
 
-            GenerateRoot(writer, addExtendedExternalTypesLink: addExtendedExternalTypesLink);
+            GenerateRoot(writer, addExtensionMembersLink: addExtensionMembersLink);
 
             writer.WriteEndDocument();
 
@@ -383,7 +381,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        private DocumentationGeneratorResult GenerateExtendedExternalTypes(string heading = null)
+        private DocumentationGeneratorResult GenerateExtendedExternalTypes()
         {
             IEnumerable<INamedTypeSymbol> extendedExternalTypes = DocumentationModel.GetExtendedExternalTypes();
 
@@ -392,12 +390,12 @@ namespace Roslynator.Documentation
                 .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
             if (!namespaces.Any())
-                return CreateResult(null, DocumentationKind.ExtendedExternalTypes);
+                return CreateResult(null, DocumentationKind.ExtensionMembersOfExternalTypes);
 
             using (DocumentationWriter writer = CreateWriter())
             {
                 writer.WriteStartDocument();
-                writer.WriteHeading1(heading);
+                writer.WriteHeading1(Resources.ExtensionMethodsOfExternalTypesTitle);
                 writer.WriteList(namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
                 foreach (IGrouping<INamespaceSymbol, INamedTypeSymbol> typesByNamespaces in extendedExternalTypes
@@ -414,13 +412,19 @@ namespace Roslynator.Documentation
                         .GroupBy(f => f.TypeKind)
                         .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer))
                     {
-                        writer.WriteList(typesByKind, Resources.GetPluralName(typesByKind.Key), 3, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, canCreateExternalUrl: false);
+                        writer.WriteList(
+                            typesByKind,
+                            Resources.GetPluralName(typesByKind.Key),
+                            headingLevel: 3,
+                            SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
+                            addNamespace: true,
+                            canCreateExternalUrl: false);
                     }
                 }
 
                 writer.WriteEndDocument();
 
-                return CreateResult(writer, DocumentationKind.ExtendedExternalTypes);
+                return CreateResult(writer, DocumentationKind.ExtensionMembersOfExternalTypes);
             }
 
             bool IsNamespacePartEnabled(TypeKind typeKind)
@@ -837,7 +841,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        private void GenerateRoot(DocumentationWriter writer, bool addExtendedExternalTypesLink = false)
+        private void GenerateRoot(DocumentationWriter writer, bool addExtensionMembersLink = false)
         {
             SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
 
@@ -928,11 +932,11 @@ namespace Roslynator.Documentation
                         }
                     case RootDocumentationParts.Other:
                         {
-                            if (addExtendedExternalTypesLink)
+                            if (addExtensionMembersLink)
                             {
                                 writer.WriteHeading2(Resources.OtherTitle);
                                 writer.WriteStartBulletItem();
-                                writer.WriteLink(Resources.ExtendedExternalTypesTitle, WellKnownNames.ExtendedExternalTypesFileName);
+                                writer.WriteLink(Resources.ExtensionMethodsOfExternalTypesTitle, WellKnownNames.ExtensionMembersOfExternalTypes);
                                 writer.WriteEndBulletItem();
                             }
 
@@ -1048,7 +1052,7 @@ namespace Roslynator.Documentation
                         }
                     case RootDocumentationParts.Other:
                         {
-                            return addExtendedExternalTypesLink;
+                            return addExtensionMembersLink;
                         }
                     default:
                         {
@@ -1070,7 +1074,7 @@ namespace Roslynator.Documentation
                 {
                     case DocumentationKind.Root:
                     case DocumentationKind.ObjectModel:
-                    case DocumentationKind.ExtendedExternalTypes:
+                    case DocumentationKind.ExtensionMembersOfExternalTypes:
                         return fileName;
                     case DocumentationKind.Namespace:
                     case DocumentationKind.Type:

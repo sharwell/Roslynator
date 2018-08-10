@@ -6,6 +6,6 @@ namespace Roslynator.Documentation
     {
         public const string GlobalNamespaceName = "_Global";
         public const string ConstructorName = "-ctor";
-        public const string ExtendedExternalTypesFileName = "_ExtendedExternalTypes.md";
+        public const string ExtensionMembersOfExternalTypes = "_ExtensionMembersOfExternalTypes.md";
     }
 }

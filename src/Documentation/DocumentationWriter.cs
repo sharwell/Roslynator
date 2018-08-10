@@ -1047,11 +1047,23 @@ namespace Roslynator.Documentation
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             bool addLink = true,
+            bool addNamespace = false,
             bool canCreateExternalUrl = true)
         {
-            using (IEnumerator<ISymbol> en = symbols
-                .OrderBy(f => f.ToDisplayString(format, additionalOptions))
-                .GetEnumerator())
+            IEnumerable<ISymbol> sortedSymbols = null;
+
+            if (addNamespace)
+            {
+                sortedSymbols = symbols
+                    .OrderBy(f => f.ContainingNamespace.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces))
+                    .ThenBy(f => f.ToDisplayString(format, additionalOptions));
+            }
+            else
+            {
+                sortedSymbols = symbols.OrderBy(f => f.ToDisplayString(format, additionalOptions));
+            }
+
+            using (IEnumerator<ISymbol> en = sortedSymbols.GetEnumerator())
             {
                 if (en.MoveNext())
                 {
@@ -1064,7 +1076,17 @@ namespace Roslynator.Documentation
                     {
                         if (addLink)
                         {
-                            WriteBulletItemLink(en.Current, format, canCreateExternalUrl: canCreateExternalUrl);
+                            WriteStartBulletItem();
+
+                            if (addNamespace
+                                && !en.Current.ContainingNamespace.IsGlobalNamespace)
+                            {
+                                WriteSymbol(en.Current.ContainingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                                WriteString(".");
+                            }
+
+                            WriteLink(en.Current, format, canCreateExternalUrl: canCreateExternalUrl);
+                            WriteEndBulletItem();
                         }
                         else
                         {

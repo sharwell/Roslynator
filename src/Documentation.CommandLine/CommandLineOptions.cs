@@ -34,12 +34,6 @@ namespace Roslynator.Documentation
         [Option(longName: "memberParts")]
         public IEnumerable<string> MemberParts { get; set; }
 
-        [Option(longName: "objectModelHeading")]
-        public string ObjectModelHeading { get; set; }
-
-        [Option(longName: "extendedExternalTypesHeading")]
-        public string ExtendedExternalTypesHeading { get; set; }
-
         [Option(longName: "preferredCultureName")]
         public string PreferredCultureName { get; set; }
 
