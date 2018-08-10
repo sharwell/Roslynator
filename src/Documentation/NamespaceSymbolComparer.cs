@@ -6,9 +6,9 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    internal sealed class NamespaceDefinitionComparer : IComparer<INamespaceSymbol>
+    internal sealed class NamespaceSymbolComparer : IComparer<INamespaceSymbol>
     {
-        public static NamespaceDefinitionComparer Instance { get; } = new NamespaceDefinitionComparer();
+        public static NamespaceSymbolComparer Instance { get; } = new NamespaceSymbolComparer();
 
         public int Compare(INamespaceSymbol x, INamespaceSymbol y)
         {

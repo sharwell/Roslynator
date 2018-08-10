@@ -20,7 +20,7 @@ public readonly struct SingleParameterLambdaExpressionInfo : System.IEquatable<S
 
 ### Implements
 
-* [IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[SingleParameterLambdaExpressionInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[SingleParameterLambdaExpressionInfo](./README.md)>
 
 ## Properties
 

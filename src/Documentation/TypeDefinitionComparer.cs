@@ -44,14 +44,14 @@ namespace Roslynator.Documentation
             {
                 case TypeKind.Class:
                     return 1;
-                case TypeKind.Delegate:
-                    return 5;
-                case TypeKind.Enum:
-                    return 4;
-                case TypeKind.Interface:
-                    return 3;
                 case TypeKind.Struct:
                     return 2;
+                case TypeKind.Interface:
+                    return 3;
+                case TypeKind.Enum:
+                    return 4;
+                case TypeKind.Delegate:
+                    return 5;
             }
 
             Debug.Fail(symbol.ToDisplayString(Roslynator.SymbolDisplayFormats.Test));

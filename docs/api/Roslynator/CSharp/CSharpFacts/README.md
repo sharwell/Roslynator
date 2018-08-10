@@ -29,6 +29,7 @@ public static class CSharpFacts
 | [IsIterationStatement(SyntaxKind)](IsIterationStatement/README.md) | Returns true if a syntax of the specified kind is a for, foreach, while or do statement\. |
 | [IsJumpStatement(SyntaxKind)](IsJumpStatement/README.md) | Returns true if a syntax of the specified kind is a jump statement\. |
 | [IsLambdaExpression(SyntaxKind)](IsLambdaExpression/README.md) | Returns true if a syntax of the specified kind is a lambda expression\. |
+| [IsLiteralExpression(SyntaxKind)](IsLiteralExpression/README.md) | Returns true if a syntax of the specified kind is a literal expression\. |
 | [IsPredefinedType(SpecialType)](IsPredefinedType/README.md) | Returns true if a syntax of the specified kind is a predefined type\. |
 | [IsSimpleType(SpecialType)](IsSimpleType/README.md) | Returns true if a syntax of the specified kind is a simple type\. |
 | [IsSwitchLabel(SyntaxKind)](IsSwitchLabel/README.md) | Returns true if a syntax of the specified kind is a switch label\. |

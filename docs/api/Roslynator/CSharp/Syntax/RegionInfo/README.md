@@ -20,7 +20,7 @@ public readonly struct RegionInfo : System.IEquatable<RegionInfo>
 
 ### Implements
 
-* [IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[RegionInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[RegionInfo](./README.md)>
 
 ## Properties
 

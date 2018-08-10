@@ -69,6 +69,7 @@
 
 ## Interfaces
 
+* System\.Collections\.Generic\.[IEnumerable\<T>](System/Collections/Generic/IEnumerable-1/README.md)
 * Microsoft\.CodeAnalysis\.[IFieldSymbol](Microsoft/CodeAnalysis/IFieldSymbol/README.md)
 * Microsoft\.CodeAnalysis\.[IMethodSymbol](Microsoft/CodeAnalysis/IMethodSymbol/README.md)
 * Microsoft\.CodeAnalysis\.[INamedTypeSymbol](Microsoft/CodeAnalysis/INamedTypeSymbol/README.md)
@@ -77,7 +78,6 @@
 * Microsoft\.CodeAnalysis\.[IParameterSymbol](Microsoft/CodeAnalysis/IParameterSymbol/README.md)
 * Microsoft\.CodeAnalysis\.[ISymbol](Microsoft/CodeAnalysis/ISymbol/README.md)
 * Microsoft\.CodeAnalysis\.[ITypeSymbol](Microsoft/CodeAnalysis/ITypeSymbol/README.md)
-* System\.Collections\.Generic\.[IEnumerable\<T>](System/Collections/Generic/IEnumerable-1/README.md)
 
 ## Enums
 

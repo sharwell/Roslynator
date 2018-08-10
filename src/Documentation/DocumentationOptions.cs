@@ -2,6 +2,7 @@
 
 namespace Roslynator.Documentation
 {
+    //TODO: SystemNamespaceFirst
     public class DocumentationOptions
     {
         public DocumentationOptions(

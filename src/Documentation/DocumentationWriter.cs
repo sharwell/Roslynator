@@ -460,7 +460,7 @@ namespace Roslynator.Documentation
                                 return;
 
                             WriteHeading(3, Resources.ReturnValueTitle);
-                            WriteLinkOrTypeLink(returnType);
+                            WriteTypeLink(returnType);
                             WriteLine();
 
                             xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(this);
@@ -592,27 +592,13 @@ namespace Roslynator.Documentation
 
         public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
         {
-            using (IEnumerator<INamedTypeSymbol> en = implementedInterfaces
-                .OrderBy(f => f.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters))
-                .GetEnumerator())
-            {
-                if (en.MoveNext())
-                {
-                    WriteHeading(3, Resources.ImplementsTitle);
-
-                    WriteStartBulletList();
-
-                    do
-                    {
-                        WriteStartBulletItem();
-                        WriteTypeLink(en.Current);
-                        WriteEndBulletItem();
-                    }
-                    while (en.MoveNext());
-
-                    WriteEndBulletList();
-                }
-            }
+            WriteList(
+                implementedInterfaces,
+                heading: Resources.ImplementsTitle,
+                headingLevel: 3,
+                format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
+                addLinkForTypeParameters: true,
+                addNamespace: true);
         }
 
         public virtual void WriteExceptions(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
@@ -1022,10 +1008,11 @@ namespace Roslynator.Documentation
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             int maxItems = -1,
             bool addLink = true,
+            bool addLinkForTypeParameters = false,
             bool addNamespace = false,
             bool canCreateExternalUrl = true)
         {
-            Debug.Assert(!addNamespace || (format.TypeQualificationStyle & SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces) == 0, "");
+            Debug.Assert(!addNamespace || format.TypeQualificationStyle != SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces, "");
 
             if (maxItems == 0)
                 return;
@@ -1035,7 +1022,7 @@ namespace Roslynator.Documentation
             if (addNamespace)
             {
                 sortedSymbols = symbols
-                    .OrderBy(f => f.ContainingNamespace.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces))
+                    .OrderBy(f => f.ContainingNamespace, NamespaceSymbolComparer.Instance)
                     .ThenBy(f => f.ToDisplayString(format, additionalOptions));
             }
             else
@@ -1067,7 +1054,7 @@ namespace Roslynator.Documentation
                                 WriteString(".");
                             }
 
-                            WriteLink(en.Current, format, canCreateExternalUrl: canCreateExternalUrl);
+                            WriteLink(en.Current, format, addLinkForTypeParameters: addLinkForTypeParameters, canCreateExternalUrl: canCreateExternalUrl);
                             WriteEndBulletItem();
                         }
                         else
@@ -1135,14 +1122,25 @@ namespace Roslynator.Documentation
             ISymbol symbol,
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
+            bool addLinkForTypeParameters = false,
             bool canCreateExternalUrl = true)
         {
-            string url = GetUrl(symbol, canCreateExternalUrl);
+            if (addLinkForTypeParameters
+                && symbol is INamedTypeSymbol namedType)
+            {
+                bool containingTypes = format.TypeQualificationStyle != SymbolDisplayTypeQualificationStyle.NameOnly;
 
-            WriteLinkOrText(symbol.ToDisplayString(format, additionalOptions), url);
+                WriteTypeLink(namedType, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
+            }
+            else
+            {
+                string url = GetUrl(symbol, canCreateExternalUrl);
+
+                WriteLinkOrText(symbol.ToDisplayString(format, additionalOptions), url);
+            }
         }
 
-        internal void WriteLinkOrTypeLink(
+        internal void WriteTypeLink(
             ITypeSymbol typeSymbol,
             bool containingTypes = true,
             bool canCreateExternalUrl = true)
@@ -1172,7 +1170,7 @@ namespace Roslynator.Documentation
             {
                 ITypeSymbol typeArgument = typeSymbol.TypeArguments[0];
 
-                WriteLinkOrTypeLink(typeArgument, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
+                WriteTypeLink(typeArgument, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
                 WriteString("?");
             }
             else if (typeArguments.Any(f => f.Kind != SymbolKind.TypeParameter))

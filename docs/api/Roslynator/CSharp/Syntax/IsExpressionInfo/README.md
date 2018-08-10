@@ -20,7 +20,7 @@ public readonly struct IsExpressionInfo : System.IEquatable<IsExpressionInfo>
 
 ### Implements
 
-* [IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IsExpressionInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IsExpressionInfo](./README.md)>
 
 ## Properties
 

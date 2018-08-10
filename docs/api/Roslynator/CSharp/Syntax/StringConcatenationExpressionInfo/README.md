@@ -20,7 +20,7 @@ public readonly struct StringConcatenationExpressionInfo : System.IEquatable<Str
 
 ### Implements
 
-* [IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[StringConcatenationExpressionInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[StringConcatenationExpressionInfo](./README.md)>
 
 ## Properties
 

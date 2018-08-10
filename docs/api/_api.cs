@@ -837,6 +837,7 @@ namespace Roslynator.CSharp
         public static bool IsIterationStatement(SyntaxKind kind);
         public static bool IsJumpStatement(SyntaxKind kind);
         public static bool IsLambdaExpression(SyntaxKind kind);
+        public static bool IsLiteralExpression(SyntaxKind kind);
         public static bool IsPredefinedType(SpecialType specialType);
         public static bool IsSimpleType(SpecialType specialType);
         public static bool IsSwitchLabel(SyntaxKind kind);

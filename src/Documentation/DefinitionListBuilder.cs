@@ -39,7 +39,7 @@ namespace Roslynator.Documentation
 
         internal HashSet<INamespaceSymbol> Namespaces { get; } = new HashSet<INamespaceSymbol>(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
 
-        public virtual IComparer<INamespaceSymbol> NamespaceComparer => NamespaceDefinitionComparer.Instance;
+        public virtual IComparer<INamespaceSymbol> NamespaceComparer => NamespaceSymbolComparer.Instance;
 
         public virtual IComparer<INamedTypeSymbol> TypeComparer => TypeDefinitionComparer.Instance;
 

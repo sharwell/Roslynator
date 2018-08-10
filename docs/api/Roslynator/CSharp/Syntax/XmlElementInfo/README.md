@@ -20,7 +20,7 @@ public readonly struct XmlElementInfo : System.IEquatable<XmlElementInfo>
 
 ### Implements
 
-* [IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[XmlElementInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[XmlElementInfo](./README.md)>
 
 ## Properties
 

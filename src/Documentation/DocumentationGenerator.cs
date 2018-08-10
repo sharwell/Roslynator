@@ -882,7 +882,7 @@ namespace Roslynator.Documentation
                         {
                             using (IEnumerator<INamedTypeSymbol> en = typeSymbols
                                 .Where(f => f.IsStatic && f.TypeKind == TypeKind.Class)
-                                .OrderBy(f => f.ContainingNamespace.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces))
+                                .OrderBy(f => f.ContainingNamespace, NamespaceSymbolComparer.Instance)
                                 .ThenBy(f => f.ToDisplayString(format))
                                 .GetEnumerator())
                             {
@@ -939,7 +939,7 @@ namespace Roslynator.Documentation
             {
                 using (IEnumerator<INamedTypeSymbol> en = typeSymbols
                     .Where(f => f.TypeKind == typeKind)
-                    .OrderBy(f => f.ContainingNamespace.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces))
+                    .OrderBy(f => f.ContainingNamespace, NamespaceSymbolComparer.Instance)
                     .ThenBy(f => f.ToDisplayString(format))
                     .GetEnumerator())
                 {
@@ -965,7 +965,7 @@ namespace Roslynator.Documentation
 
                 foreach (ITypeSymbol derivedType in nodes
                     .Where(f => f.BaseType?.OriginalDefinition == baseType.OriginalDefinition)
-                    .OrderBy(f => f.ContainingNamespace.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces))
+                    .OrderBy(f => f.ContainingNamespace, NamespaceSymbolComparer.Instance)
                     .ThenBy(f => f.ToDisplayString(format))
                     .ToList())
                 {
