@@ -581,13 +581,11 @@ namespace Roslynator.Documentation
 
         public virtual void WriteDerivedTypes(IEnumerable<INamedTypeSymbol> derivedTypes)
         {
-            SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
-
             WriteList(
                 derivedTypes,
-                Resources.DerivedTitle,
+                heading: Resources.DerivedTitle,
                 headingLevel: 3,
-                format,
+                format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                 maxItems: Options.MaxDerivedItems,
                 addNamespace: true);
         }
