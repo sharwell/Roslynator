@@ -10,27 +10,17 @@
 
 ## Classes
 
-System\.[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
-
-\|\-System\.[Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute)
-
-\|\-\|\-Roslynator\.Documentation\.Test\.[FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md)
-
-\|\-System\.[ClassName](System/ClassName/README.md)
-
-\|\-Roslynator\.Documentation\.Test\.[B](Roslynator/Documentation/Test/B/README.md)
-
-\|\-\|\-Roslynator\.Documentation\.Test\.[C](Roslynator/Documentation/Test/C/README.md)
-
-\|\-Roslynator\.Documentation\.Test\.[FooCollection](Roslynator/Documentation/Test/FooCollection/README.md)
-
-\|\-Roslynator\.Documentation\.Test\.[FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md)
-
-\|\-Roslynator\.Documentation\.Test\.[FooEvent](Roslynator/Documentation/Test/FooEvent/README.md)
-
-\|\-[Bla](_Global/Bla/README.md)
-
-\|\-\|\-Roslynator\.Documentation\.Test\.[Foo](Roslynator/Documentation/Test/Foo/README.md)
+* System\.[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
+*  &#x2022; System\.[Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute)
+*  &#x2022;  &#x2022; Roslynator\.Documentation\.Test\.[FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md)
+*  &#x2022; System\.[ClassName](System/ClassName/README.md)
+*  &#x2022; Roslynator\.Documentation\.Test\.[B](Roslynator/Documentation/Test/B/README.md)
+*  &#x2022;  &#x2022; Roslynator\.Documentation\.Test\.[C](Roslynator/Documentation/Test/C/README.md)
+*  &#x2022; Roslynator\.Documentation\.Test\.[FooCollection](Roslynator/Documentation/Test/FooCollection/README.md)
+*  &#x2022; Roslynator\.Documentation\.Test\.[FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md)
+*  &#x2022; Roslynator\.Documentation\.Test\.[FooEvent](Roslynator/Documentation/Test/FooEvent/README.md)
+*  &#x2022; [Bla](_Global/Bla/README.md)
+*  &#x2022;  &#x2022; Roslynator\.Documentation\.Test\.[Foo](Roslynator/Documentation/Test/Foo/README.md)
 
 ## Static Classes
 

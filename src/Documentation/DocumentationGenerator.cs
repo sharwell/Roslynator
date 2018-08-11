@@ -959,10 +959,18 @@ namespace Roslynator.Documentation
 
             void WriteTypeHierarchy(ITypeSymbol baseType, HashSet<ITypeSymbol> nodes, int level)
             {
+                writer.WriteStartBulletItem();
+
                 for (int i = 0; i < level; i++)
-                    writer.WriteString("|-");
+                {
+                    writer.WriteSpace();
+                    writer.WriteCharEntity('\u2022');
+                    writer.WriteSpace();
+                }
 
                 WriteLink(baseType);
+
+                writer.WriteEndBulletItem();
 
                 nodes.Remove(baseType);
 
@@ -974,12 +982,11 @@ namespace Roslynator.Documentation
                     .ThenBy(f => f.ToDisplayString(format))
                     .ToList())
                 {
-                    writer.WriteLine();
-                    writer.WriteLine();
                     WriteTypeHierarchy(derivedType, nodes, level);
                 }
 
                 level--;
+
             }
 
             void WriteLink(ISymbol symbol)
