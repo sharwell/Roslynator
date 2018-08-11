@@ -966,12 +966,21 @@ namespace Roslynator.Documentation
                     if (i > 0)
                         writer.WriteSpace();
 
-                    writer.WriteString(". .");
+                    writer.WriteEntityRef("middot");
+                    writer.WriteSpace();
+                    writer.WriteEntityRef("middot");
                 }
 
                 writer.WriteSpace();
 
-                WriteLink(baseType);
+                if (DocumentationModel.IsExternal(baseType))
+                {
+                    writer.WriteSymbol(baseType, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
+                }
+                else
+                {
+                    WriteLink(baseType);
+                }
 
                 writer.WriteEndBulletItem();
 
