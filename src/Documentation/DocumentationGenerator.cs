@@ -962,7 +962,7 @@ namespace Roslynator.Documentation
                 writer.WriteStartBulletItem();
 
                 for (int i = 0; i < level; i++)
-                    writer.WriteString("--");
+                    writer.WriteString(". .");
 
                 writer.WriteSpace();
 
