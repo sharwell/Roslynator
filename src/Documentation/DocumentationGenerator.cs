@@ -963,8 +963,12 @@ namespace Roslynator.Documentation
 
                 for (int i = 0; i < level; i++)
                 {
+                    if (i > 0)
+                        writer.WriteSpace();
+
                     writer.WriteSpace();
                     writer.WriteCharEntity('\u2022');
+                    writer.WriteSpace();
                     writer.WriteSpace();
                 }
 
