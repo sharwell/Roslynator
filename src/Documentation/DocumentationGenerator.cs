@@ -962,9 +962,9 @@ namespace Roslynator.Documentation
                 writer.WriteStartBulletItem();
 
                 for (int i = 0; i < level; i++)
-                {
                     writer.WriteString("--");
-                }
+
+                writer.WriteSpace();
 
                 WriteLink(baseType);
 
@@ -984,7 +984,6 @@ namespace Roslynator.Documentation
                 }
 
                 level--;
-
             }
 
             void WriteLink(ISymbol symbol)
