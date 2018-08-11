@@ -2,9 +2,11 @@
 
 using System.Collections.Generic;
 using CommandLine;
+using static Roslynator.Documentation.DocumentationOptions;
 
 namespace Roslynator.Documentation
 {
+    //TODO: encoding
     public class CommandLineOptions
     {
         [Option(longName: "assemblyReferences", Required = true)]
@@ -37,34 +39,37 @@ namespace Roslynator.Documentation
         [Option(longName: "preferredCultureName")]
         public string PreferredCultureName { get; set; }
 
-        [Option(longName: "formatDefinitionBaseList")]
+        [Option(longName: "baseLocalUrl")]
+        public string BaseLocalUrl { get; set; }
+
+        [Option(longName: "formatDefinitionBaseList", Default = DefaultValues.FormatDefinitionBaseList)]
         public bool FormatDefinitionBaseList { get; set; }
 
-        [Option(longName: "formatDefinitionConstraints")]
+        [Option(longName: "formatDefinitionConstraints", Default = DefaultValues.FormatDefinitionConstraints)]
         public bool FormatDefinitionConstraints { get; set; }
 
-        [Option(longName: "maxDerivedItems", Default = -1)]
+        [Option(longName: "maxDerivedItems", Default = DefaultValues.MaxDerivedItems)]
         public int MaxDerivedItems { get; set; }
 
-        [Option(longName: "indicateObsolete")]
+        [Option(longName: "indicateObsolete", Default = DefaultValues.IndicateObsolete)]
         public bool IndicateObsolete { get; set; }
 
-        [Option(longName: "indicateInheritedMember")]
+        [Option(longName: "indicateInheritedMember", Default = DefaultValues.IndicateInheritedMember)]
         public bool IndicateInheritedMember { get; set; }
 
-        [Option(longName: "indicateOverriddenMember")]
+        [Option(longName: "indicateOverriddenMember", Default = DefaultValues.IndicateOverriddenMember)]
         public bool IndicateOverriddenMember { get; set; }
 
-        [Option(longName: "indicateInterfaceImplementation")]
+        [Option(longName: "indicateInterfaceImplementation", Default = DefaultValues.IndicateInterfaceImplementation)]
         public bool IndicateInterfaceImplementation { get; set; }
 
-        [Option(longName: "attributeArguments")]
+        [Option(longName: "attributeArguments", Default = DefaultValues.AttributeArguments)]
         public bool AttributeArguments { get; set; }
 
-        [Option(longName: "inheritedInterfaceMembers")]
+        [Option(longName: "inheritedInterfaceMembers", Default = DefaultValues.InheritedInterfaceMembers)]
         public bool InheritedInterfaceMembers { get; set; }
 
-        [Option(longName: "omitIEnumerable")]
+        [Option(longName: "omitIEnumerable", Default = DefaultValues.OmitIEnumerable)]
         public bool OmitIEnumerable { get; set; }
     }
 }

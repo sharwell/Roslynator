@@ -565,7 +565,8 @@ namespace Roslynator.Documentation
 
                         if (en.MoveNext())
                         {
-                            WriteString(Resources.Comma);
+                            WriteSpace();
+                            WriteCharEntity(Resources.ContentSeparatorChar);
                             WriteSpace();
                         }
                         else
@@ -608,7 +609,8 @@ namespace Roslynator.Documentation
 
                         if (en.MoveNext())
                         {
-                            WriteString(Resources.Comma);
+                            WriteSpace();
+                            WriteCharEntity(Resources.ContentSeparatorChar);
                             WriteSpace();
                         }
                         else

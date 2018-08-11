@@ -5,23 +5,37 @@ namespace Roslynator.Documentation
     //TODO: SystemNamespaceFirst
     public class DocumentationOptions
     {
+        internal static class DefaultValues
+        {
+            public const int MaxDerivedItems = 10;
+            public const bool FormatDefinitionBaseList = false;
+            public const bool FormatDefinitionConstraints = false;
+            public const bool IndicateObsolete = true;
+            public const bool IndicateInheritedMember = true;
+            public const bool IndicateOverriddenMember = false;
+            public const bool IndicateInterfaceImplementation = false;
+            public const bool AttributeArguments = true;
+            public const bool InheritedInterfaceMembers = true;
+            public const bool OmitIEnumerable = true;
+        }
+
         public DocumentationOptions(
             string preferredCultureName = null,
             string baseLocalUrl = null,
-            int maxDerivedItems = 10,
-            bool formatDefinitionBaseList = false,
-            bool formatDefinitionConstraints = false,
-            bool indicateObsolete = true,
-            bool indicateInheritedMember = true,
-            bool indicateOverriddenMember = false,
-            bool indicateInterfaceImplementation = false,
-            bool attributeArguments = true,
-            bool inheritedInterfaceMembers = true,
-            bool omitIEnumerable = true,
-            DocumentationParts parts = DocumentationParts.Namespace | DocumentationParts.Type | DocumentationParts.Member,
+            int maxDerivedItems = DefaultValues.MaxDerivedItems,
+            bool formatDefinitionBaseList = DefaultValues.FormatDefinitionBaseList,
+            bool formatDefinitionConstraints = DefaultValues.FormatDefinitionConstraints,
+            bool indicateObsolete = DefaultValues.IndicateObsolete,
+            bool indicateInheritedMember = DefaultValues.IndicateInheritedMember,
+            bool indicateOverriddenMember = DefaultValues.IndicateOverriddenMember,
+            bool indicateInterfaceImplementation = DefaultValues.IndicateInterfaceImplementation,
+            bool attributeArguments = DefaultValues.AttributeArguments,
+            bool inheritedInterfaceMembers = DefaultValues.InheritedInterfaceMembers,
+            bool omitIEnumerable = DefaultValues.OmitIEnumerable,
+            DocumentationParts documentationParts = DocumentationParts.All,
             RootDocumentationParts rootParts = RootDocumentationParts.All,
             NamespaceDocumentationParts namespaceParts = NamespaceDocumentationParts.All,
-            TypeDocumentationParts typeParts = TypeDocumentationParts.AllExceptNestedTypes,
+            TypeDocumentationParts typeParts = TypeDocumentationParts.All,
             MemberDocumentationParts memberParts = MemberDocumentationParts.All)
         {
             PreferredCultureName = preferredCultureName;
@@ -36,7 +50,7 @@ namespace Roslynator.Documentation
             AttributeArguments = attributeArguments;
             InheritedInterfaceMembers = inheritedInterfaceMembers;
             OmitIEnumerable = omitIEnumerable;
-            DocumentationParts = parts;
+            DocumentationParts = documentationParts;
             RootParts = rootParts;
             NamespaceParts = namespaceParts;
             TypeParts = typeParts;

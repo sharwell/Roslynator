@@ -45,6 +45,22 @@ namespace Roslynator.Documentation
                 .Select(f => MetadataReference.CreateFromFile(f))
                 .ToList();
 
+            foreach (string assemblyPath in options.Assemblies)
+            {
+                if (!TryGetReference(references, assemblyPath, out PortableExecutableReference reference))
+                {
+                    if (File.Exists(assemblyPath))
+                    {
+                        reference = MetadataReference.CreateFromFile(assemblyPath);
+                        references.Add(reference);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Assembly '{assemblyPath}' not found.");
+                    }
+                }
+            }
+
             CSharpCompilation compilation = CSharpCompilation.Create(
                 "",
                 syntaxTrees: default(IEnumerable<SyntaxTree>),
@@ -53,15 +69,15 @@ namespace Roslynator.Documentation
 
             var documentationModel = new DocumentationModel(
                 compilation,
-                options.Assemblies.Select(f =>
+                options.Assemblies.Select(assemblyPath =>
                 {
-                    if (!TryGetReference(references, f, out PortableExecutableReference reference))
-                        Console.WriteLine($"Assembly '{f}' not found in the list of assembly references.");
+                    if (!TryGetReference(references, assemblyPath, out PortableExecutableReference reference))
+                        Console.WriteLine($"Assembly '{assemblyPath}' not found.");
 
                     return (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(reference);
                 }));
 
-            if (!TryGetDocumentationParts(options.DocumentationParts, out DocumentationParts parts))
+            if (!TryGetDocumentationParts(options.DocumentationParts, out DocumentationParts documentationParts))
                 return;
 
             if (!TryGetNamespaceDocumentationParts(options.NamespaceParts, out NamespaceDocumentationParts namespaceParts))
@@ -74,12 +90,13 @@ namespace Roslynator.Documentation
                 return;
 
             var documentationOptions = new DocumentationOptions(
-                parts: parts,
+                preferredCultureName: options.PreferredCultureName,
+                baseLocalUrl: options.BaseLocalUrl,
+                documentationParts: documentationParts,
                 namespaceParts: namespaceParts,
                 typeParts: typeParts,
                 memberParts: memberParts,
-                preferredCultureName: options.PreferredCultureName,
-                maxDerivedItems: (options.MaxDerivedItems == -1) ? DocumentationOptions.Default.MaxDerivedItems : options.MaxDerivedItems,
+                maxDerivedItems: options.MaxDerivedItems,
                 formatDefinitionBaseList: options.FormatDefinitionBaseList,
                 formatDefinitionConstraints: options.FormatDefinitionConstraints,
                 indicateObsolete: options.IndicateObsolete,
@@ -94,16 +111,16 @@ namespace Roslynator.Documentation
 
             string directoryPath = options.OutputDirectory;
 
-            //Directory.Delete(directoryPath, recursive: true);
-
             foreach (DocumentationGeneratorResult documentationFile in generator.Generate(heading: options.Heading))
             {
                 string path = Path.Combine(directoryPath, documentationFile.Path);
 
+#if DEBUG
                 Console.WriteLine($"saving '{path}'");
-
-                //Directory.CreateDirectory(Path.GetDirectoryName(path));
-                //File.WriteAllText(path, documentationFile.Content, _utf8NoBom);
+#else
+                Directory.CreateDirectory(Path.GetDirectoryName(path));
+                File.WriteAllText(path, documentationFile.Content, _utf8NoBom);
+#endif
             }
         }
 

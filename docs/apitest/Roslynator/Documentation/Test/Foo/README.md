@@ -25,7 +25,7 @@ public class Foo : Bla
 
 ### Attributes
 
-[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute) \(Inherited from [Bla](../../../../_Global/Bla/README.md)\), [ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
+[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute) \(Inherited from [Bla](../../../../_Global/Bla/README.md)\) &#x2022; [ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
 
 ## Remarks
 
