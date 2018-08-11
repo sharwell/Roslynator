@@ -2,27 +2,13 @@
 
 namespace Roslynator.Documentation
 {
-    //TODO: SystemNamespaceFirst, ClassHierarchy
     public class DocumentationOptions
     {
-        internal static class DefaultValues
-        {
-            public const int MaxDerivedItems = 10;
-            public const bool FormatDefinitionBaseList = false;
-            public const bool FormatDefinitionConstraints = false;
-            public const bool IndicateObsolete = true;
-            public const bool IndicateInheritedMember = true;
-            public const bool IndicateOverriddenMember = false;
-            public const bool IndicateInterfaceImplementation = false;
-            public const bool AttributeArguments = true;
-            public const bool InheritedInterfaceMembers = true;
-            public const bool OmitIEnumerable = true;
-        }
-
         public DocumentationOptions(
             string preferredCultureName = null,
             string baseLocalUrl = null,
             int maxDerivedItems = DefaultValues.MaxDerivedItems,
+            bool systemNamespaceFirst = DefaultValues.SystemNamespaceFirst,
             bool formatDefinitionBaseList = DefaultValues.FormatDefinitionBaseList,
             bool formatDefinitionConstraints = DefaultValues.FormatDefinitionConstraints,
             bool indicateObsolete = DefaultValues.IndicateObsolete,
@@ -41,6 +27,7 @@ namespace Roslynator.Documentation
             PreferredCultureName = preferredCultureName;
             BaseLocalUrl = baseLocalUrl;
             MaxDerivedItems = maxDerivedItems;
+            SystemNamespaceFirst = systemNamespaceFirst;
             FormatDefinitionBaseList = formatDefinitionBaseList;
             FormatDefinitionConstraints = formatDefinitionConstraints;
             IndicateObsolete = indicateObsolete;
@@ -64,6 +51,8 @@ namespace Roslynator.Documentation
         public string BaseLocalUrl { get; }
 
         public int MaxDerivedItems { get; }
+
+        public bool SystemNamespaceFirst { get; }
 
         public bool FormatDefinitionBaseList { get; }
 
@@ -116,6 +105,21 @@ namespace Roslynator.Documentation
         internal bool IsPartEnabled(MemberDocumentationParts parts)
         {
             return (MemberParts & parts) != 0;
+        }
+
+        internal static class DefaultValues
+        {
+            public const int MaxDerivedItems = 10;
+            public const bool SystemNamespaceFirst = true;
+            public const bool FormatDefinitionBaseList = false;
+            public const bool FormatDefinitionConstraints = false;
+            public const bool IndicateObsolete = true;
+            public const bool IndicateInheritedMember = true;
+            public const bool IndicateOverriddenMember = false;
+            public const bool IndicateInterfaceImplementation = false;
+            public const bool AttributeArguments = true;
+            public const bool InheritedInterfaceMembers = true;
+            public const bool OmitIEnumerable = true;
         }
     }
 }

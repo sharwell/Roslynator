@@ -8,7 +8,28 @@ namespace Roslynator.Documentation
 {
     internal sealed class NamespaceSymbolComparer : IComparer<INamespaceSymbol>
     {
-        public static NamespaceSymbolComparer Instance { get; } = new NamespaceSymbolComparer();
+        public static NamespaceSymbolComparer SystemFirst { get; } = new NamespaceSymbolComparer(systemNamespaceFirst: true);
+
+        public static NamespaceSymbolComparer Default { get; } = new NamespaceSymbolComparer(systemNamespaceFirst: false);
+
+        public bool SystemNamespaceFirst { get; }
+
+        internal NamespaceSymbolComparer(bool systemNamespaceFirst = true)
+        {
+            SystemNamespaceFirst = systemNamespaceFirst;
+        }
+
+        public static NamespaceSymbolComparer GetInstance(bool systemNamespaceFirst)
+        {
+            if (systemNamespaceFirst)
+            {
+                return SystemFirst;
+            }
+            else
+            {
+                return Default;
+            }
+        }
 
         public int Compare(INamespaceSymbol x, INamespaceSymbol y)
         {
@@ -30,17 +51,20 @@ namespace Roslynator.Documentation
                 return -1;
             }
 
-            INamespaceSymbol a = GetRootNamespace(x);
-            INamespaceSymbol b = GetRootNamespace(y);
+            if (SystemNamespaceFirst)
+            {
+                INamespaceSymbol a = GetRootNamespace(x);
+                INamespaceSymbol b = GetRootNamespace(y);
 
-            if (a.Name == "System")
-            {
-                if (b.Name != "System")
-                    return -1;
-            }
-            else if (b.Name == "System")
-            {
-                return 1;
+                if (a.Name == "System")
+                {
+                    if (b.Name != "System")
+                        return -1;
+                }
+                else if (b.Name == "System")
+                {
+                    return 1;
+                }
             }
 
             return string.Compare(

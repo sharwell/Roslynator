@@ -568,7 +568,7 @@ namespace Roslynator.Documentation
                 return;
 
             using (IEnumerator<AttributeInfo> en = attributes
-                .OrderBy(f => f.AttributeClass.ContainingNamespace, NamespaceSymbolComparer.Instance)
+                .OrderBy(f => f.AttributeClass.ContainingNamespace, NamespaceSymbolComparer.GetInstance(Options.SystemNamespaceFirst))
                 .ThenBy(f => f.AttributeClass.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters))
                 .GetEnumerator())
             {
@@ -1038,7 +1038,7 @@ namespace Roslynator.Documentation
             if (addNamespace)
             {
                 sortedSymbols = symbols
-                    .OrderBy(f => f.ContainingNamespace, NamespaceSymbolComparer.Instance)
+                    .OrderBy(f => f.ContainingNamespace, NamespaceSymbolComparer.GetInstance(Options.SystemNamespaceFirst))
                     .ThenBy(f => f.ToDisplayString(format, additionalOptions));
             }
             else

@@ -42,6 +42,9 @@ namespace Roslynator.Documentation
         [Option(longName: "baseLocalUrl")]
         public string BaseLocalUrl { get; set; }
 
+        [Option(longName: "systemNamespaceFirst", Default = DefaultValues.SystemNamespaceFirst)]
+        public bool SystemNamespaceFirst { get; set; }
+
         [Option(longName: "formatDefinitionBaseList", Default = DefaultValues.FormatDefinitionBaseList)]
         public bool FormatDefinitionBaseList { get; set; }
 

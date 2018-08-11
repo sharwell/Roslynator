@@ -97,6 +97,7 @@ namespace Roslynator.Documentation
                 typeParts: typeParts,
                 memberParts: memberParts,
                 maxDerivedItems: options.MaxDerivedItems,
+                systemNamespaceFirst: options.SystemNamespaceFirst,
                 formatDefinitionBaseList: options.FormatDefinitionBaseList,
                 formatDefinitionConstraints: options.FormatDefinitionConstraints,
                 indicateObsolete: options.IndicateObsolete,
