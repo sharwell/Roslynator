@@ -12,15 +12,15 @@
 
 *  System\.Object
 * &middot; &middot; System\.Attribute
-* \| &middot; &middot; \| &middot; &middot; Roslynator\.Documentation\.Test\.[FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md)
+* &middot; &middot; \| &middot; &middot; Roslynator\.Documentation\.Test\.[FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md)
 * &middot; &middot; System\.[ClassName](System/ClassName/README.md)
 * &middot; &middot; Roslynator\.Documentation\.Test\.[B](Roslynator/Documentation/Test/B/README.md)
-* \| &middot; &middot; \| &middot; &middot; Roslynator\.Documentation\.Test\.[C](Roslynator/Documentation/Test/C/README.md)
+* &middot; &middot; \| &middot; &middot; Roslynator\.Documentation\.Test\.[C](Roslynator/Documentation/Test/C/README.md)
 * &middot; &middot; Roslynator\.Documentation\.Test\.[FooCollection](Roslynator/Documentation/Test/FooCollection/README.md)
 * &middot; &middot; Roslynator\.Documentation\.Test\.[FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md)
 * &middot; &middot; Roslynator\.Documentation\.Test\.[FooEvent](Roslynator/Documentation/Test/FooEvent/README.md)
 * &middot; &middot; [Bla](_Global/Bla/README.md)
-* \| &middot; &middot; \| &middot; &middot; Roslynator\.Documentation\.Test\.[Foo](Roslynator/Documentation/Test/Foo/README.md)
+* &middot; &middot; \| &middot; &middot; Roslynator\.Documentation\.Test\.[Foo](Roslynator/Documentation/Test/Foo/README.md)
 
 ## Static Classes
 

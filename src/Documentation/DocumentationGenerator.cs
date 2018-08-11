@@ -964,10 +964,8 @@ namespace Roslynator.Documentation
                 for (int i = 0; i < level; i++)
                 {
                     if (i > 0)
-                        writer.WriteSpace();
-
-                    if (baseType.BaseType?.SpecialType != SpecialType.System_Object)
                     {
+                        writer.WriteSpace();
                         writer.WriteString("|");
                         writer.WriteSpace();
                     }
