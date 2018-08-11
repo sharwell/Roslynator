@@ -15,8 +15,8 @@
 * \. \. Roslynator\.[NameGenerator](../../docs/api/Roslynator/NameGenerator/README.md)
 * \. \. Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../../docs/api/Roslynator/SeparatedSyntaxListSelection-1/README.md)
 * \. \. Roslynator\.[SyntaxListSelection\<TNode>](../../docs/api/Roslynator/SyntaxListSelection-1/README.md)
-* \. \.\. \. Roslynator\.CSharp\.[MemberDeclarationListSelection](../../docs/api/Roslynator/CSharp/MemberDeclarationListSelection/README.md)
-* \. \.\. \. Roslynator\.CSharp\.[StatementListSelection](../../docs/api/Roslynator/CSharp/StatementListSelection/README.md)
+* \. \. \. \. Roslynator\.CSharp\.[MemberDeclarationListSelection](../../docs/api/Roslynator/CSharp/MemberDeclarationListSelection/README.md)
+* \. \. \. \. Roslynator\.CSharp\.[StatementListSelection](../../docs/api/Roslynator/CSharp/StatementListSelection/README.md)
 * \. \. Roslynator\.CSharp\.[ModifierList\<TNode>](../../docs/api/Roslynator/CSharp/ModifierList-1/README.md)
 * \. \. Roslynator\.Text\.[TextLineCollectionSelection](../../docs/api/Roslynator/Text/TextLineCollectionSelection/README.md)
 
