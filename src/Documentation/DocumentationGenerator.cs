@@ -966,6 +966,8 @@ namespace Roslynator.Documentation
                     if (i > 0)
                         writer.WriteSpace();
 
+                    writer.WriteString("|");
+                    writer.WriteSpace();
                     writer.WriteEntityRef("middot");
                     writer.WriteSpace();
                     writer.WriteEntityRef("middot");
