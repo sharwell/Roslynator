@@ -6,7 +6,6 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
 using Roslynator.CSharp;
@@ -616,35 +615,6 @@ namespace Roslynator.Documentation
                 format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                 addLinkForTypeParameters: true,
                 addNamespace: true);
-
-            //TODO: del
-            //SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
-
-            //using (IEnumerator<INamedTypeSymbol> en = implementedInterfaces
-            //    .OrderBy(f => f.ToDisplayString(format))
-            //    .GetEnumerator())
-            //{
-            //    if (en.MoveNext())
-            //    {
-            //        WriteHeading(3, Resources.ImplementsTitle);
-
-            //        while (true)
-            //        {
-            //            WriteLink(en.Current, format, addLinkForTypeParameters: true);
-
-            //            if (en.MoveNext())
-            //            {
-            //                WriteSpace();
-            //                WriteCharEntity(Resources.InlineSeparatorChar);
-            //                WriteSpace();
-            //            }
-            //            else
-            //            {
-            //                break;
-            //            }
-            //        }
-            //    }
-            //}
         }
 
         public virtual void WriteExceptions(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
