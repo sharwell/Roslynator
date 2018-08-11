@@ -966,8 +966,12 @@ namespace Roslynator.Documentation
                     if (i > 0)
                         writer.WriteSpace();
 
-                    writer.WriteString("|");
-                    writer.WriteSpace();
+                    if (baseType.BaseType?.SpecialType != SpecialType.System_Object)
+                    {
+                        writer.WriteString("|");
+                        writer.WriteSpace();
+                    }
+
                     writer.WriteEntityRef("middot");
                     writer.WriteSpace();
                     writer.WriteEntityRef("middot");
