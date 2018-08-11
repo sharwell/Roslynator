@@ -12,13 +12,13 @@
 ## Classes
 
 * System\.[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
-*  &#x2022;  Roslynator\.[NameGenerator](Roslynator/NameGenerator/README.md)
-*  &#x2022;  Roslynator\.[SeparatedSyntaxListSelection\<TNode>](Roslynator/SeparatedSyntaxListSelection-1/README.md)
-*  &#x2022;  Roslynator\.[SyntaxListSelection\<TNode>](Roslynator/SyntaxListSelection-1/README.md)
-*  &#x2022;    &#x2022;  Roslynator\.CSharp\.[MemberDeclarationListSelection](Roslynator/CSharp/MemberDeclarationListSelection/README.md)
-*  &#x2022;    &#x2022;  Roslynator\.CSharp\.[StatementListSelection](Roslynator/CSharp/StatementListSelection/README.md)
-*  &#x2022;  Roslynator\.CSharp\.[ModifierList\<TNode>](Roslynator/CSharp/ModifierList-1/README.md)
-*  &#x2022;  Roslynator\.Text\.[TextLineCollectionSelection](Roslynator/Text/TextLineCollectionSelection/README.md)
+* \-\-Roslynator\.[NameGenerator](Roslynator/NameGenerator/README.md)
+* \-\-Roslynator\.[SeparatedSyntaxListSelection\<TNode>](Roslynator/SeparatedSyntaxListSelection-1/README.md)
+* \-\-Roslynator\.[SyntaxListSelection\<TNode>](Roslynator/SyntaxListSelection-1/README.md)
+* \-\-\-\-Roslynator\.CSharp\.[MemberDeclarationListSelection](Roslynator/CSharp/MemberDeclarationListSelection/README.md)
+* \-\-\-\-Roslynator\.CSharp\.[StatementListSelection](Roslynator/CSharp/StatementListSelection/README.md)
+* \-\-Roslynator\.CSharp\.[ModifierList\<TNode>](Roslynator/CSharp/ModifierList-1/README.md)
+* \-\-Roslynator\.Text\.[TextLineCollectionSelection](Roslynator/Text/TextLineCollectionSelection/README.md)
 
 ## Static Classes
 
