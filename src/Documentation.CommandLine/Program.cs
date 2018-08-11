@@ -111,6 +111,8 @@ namespace Roslynator.Documentation
 
             string directoryPath = options.OutputDirectory;
 
+            Console.WriteLine($"Documentation is being generated to '{options.OutputDirectory}'.");
+
             foreach (DocumentationGeneratorResult documentationFile in generator.Generate(heading: options.Heading))
             {
                 string path = Path.Combine(directoryPath, documentationFile.Path);
@@ -122,6 +124,8 @@ namespace Roslynator.Documentation
                 File.WriteAllText(path, documentationFile.Content, _utf8NoBom);
 #endif
             }
+
+            Console.WriteLine($"Documentation successfully generated to '{options.OutputDirectory}'.");
         }
 
         private static IEnumerable<string> GetReferencePaths(string assemblyReferences)

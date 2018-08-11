@@ -20,7 +20,7 @@ public readonly struct ExtensionMethodSymbolInfo : System.IEquatable<ExtensionMe
 
 ### Implements
 
-[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[ExtensionMethodSymbolInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[ExtensionMethodSymbolInfo](./README.md)>
 
 ## Properties
 

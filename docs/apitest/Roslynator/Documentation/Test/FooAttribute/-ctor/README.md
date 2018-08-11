@@ -38,4 +38,5 @@ public FooAttribute(object object1, string s1, bool bool1, bool bool2, byte byte
 
 ### Attributes
 
-[FooAttribute](../README.md)
+* Roslynator\.Documentation\.Test\.[FooAttribute](../README.md)
+

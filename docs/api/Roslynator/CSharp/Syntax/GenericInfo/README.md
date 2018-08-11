@@ -20,7 +20,7 @@ public readonly struct GenericInfo : System.IEquatable<GenericInfo>
 
 ### Implements
 
-[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[GenericInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[GenericInfo](./README.md)>
 
 ## Properties
 

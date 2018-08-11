@@ -55,5 +55,5 @@ public static TNode WithFormatterAnnotation<TNode>(this TNode node) where TNode 
 
 #### Returns
 
-Roslynator\.CSharp\.TNode
+TNode
 

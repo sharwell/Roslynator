@@ -2,7 +2,7 @@
 
 namespace Roslynator.Documentation
 {
-    //TODO: SystemNamespaceFirst
+    //TODO: SystemNamespaceFirst, ClassHierarchy
     public class DocumentationOptions
     {
         internal static class DefaultValues

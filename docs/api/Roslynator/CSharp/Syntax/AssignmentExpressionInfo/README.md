@@ -20,7 +20,7 @@ public readonly struct AssignmentExpressionInfo : System.IEquatable<AssignmentEx
 
 ### Implements
 
-[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[AssignmentExpressionInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[AssignmentExpressionInfo](./README.md)>
 
 ## Properties
 

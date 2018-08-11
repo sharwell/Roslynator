@@ -20,7 +20,7 @@ public readonly struct SingleLocalDeclarationStatementInfo : System.IEquatable<S
 
 ### Implements
 
-[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[SingleLocalDeclarationStatementInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[SingleLocalDeclarationStatementInfo](./README.md)>
 
 ## Properties
 

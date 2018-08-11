@@ -19,7 +19,7 @@ public enum NullCheckStyles
 
 ### Attributes
 
-[FlagsAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.flagsattribute)
+* System\.[FlagsAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.flagsattribute)
 
 ## Fields
 

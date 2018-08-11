@@ -17,7 +17,7 @@ public sealed class FooAttribute : System.Attribute
 
 ### Attributes
 
-[AttributeUsageAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.attributeusageattribute)
+* System\.[AttributeUsageAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.attributeusageattribute)
 
 ## Constructors
 

@@ -20,7 +20,7 @@ public readonly struct NullCheckExpressionInfo : System.IEquatable<NullCheckExpr
 
 ### Implements
 
-[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[NullCheckExpressionInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[NullCheckExpressionInfo](./README.md)>
 
 ## Properties
 

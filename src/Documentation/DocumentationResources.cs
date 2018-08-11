@@ -10,7 +10,7 @@ namespace Roslynator.Documentation
         public static DocumentationResources Default { get; } = new DefaultDocumentationResources();
 
         public virtual char InheritanceChar { get; } = '\u2192';
-        public virtual char ContentSeparatorChar { get; } = '\u2022'; //TODO: rename
+        public virtual char InlineSeparatorChar { get; } = '\u2022';
 
         public virtual string CloseParenthesis { get; } = ")";
         public virtual string Colon { get; } = ":";

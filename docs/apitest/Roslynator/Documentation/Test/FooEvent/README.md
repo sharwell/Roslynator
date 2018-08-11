@@ -16,7 +16,7 @@ public class FooEvent : IFoo
 
 ### Implements
 
-[IFoo](../IFoo/README.md)
+* Roslynator\.Documentation\.Test\.[IFoo](../IFoo/README.md)
 
 ## Constructors
 

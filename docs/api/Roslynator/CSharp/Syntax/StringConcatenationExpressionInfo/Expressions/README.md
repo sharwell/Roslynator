@@ -29,4 +29,5 @@ System\.Collections\.Generic\.[IEnumerable](https://docs.microsoft.com/en-us/dot
 
 ### Attributes
 
-[ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
+* System\.[ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
+

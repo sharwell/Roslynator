@@ -56,5 +56,5 @@ public static TNode WithSimplifierAnnotation<TNode>(this TNode node) where TNode
 
 #### Returns
 
-Roslynator\.CSharp\.TNode
+TNode
 

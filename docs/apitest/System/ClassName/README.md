@@ -21,7 +21,8 @@ public class ClassName
 
 ### Attributes
 
-[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute) &#x2022; [ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
+* System\.[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute)
+* System\.[ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
 
 ## Constructors
 

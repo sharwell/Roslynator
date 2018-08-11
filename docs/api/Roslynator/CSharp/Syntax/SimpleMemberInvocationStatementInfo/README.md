@@ -20,7 +20,7 @@ public readonly struct SimpleMemberInvocationStatementInfo : System.IEquatable<S
 
 ### Implements
 
-[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[SimpleMemberInvocationStatementInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[SimpleMemberInvocationStatementInfo](./README.md)>
 
 ## Properties
 

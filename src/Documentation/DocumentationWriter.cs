@@ -311,7 +311,7 @@ namespace Roslynator.Documentation
             void WriteContentSeparator()
             {
                 WriteSpace();
-                WriteCharEntity(Resources.ContentSeparatorChar);
+                WriteCharEntity(Resources.InlineSeparatorChar);
                 WriteSpace();
             }
         }
@@ -569,33 +569,27 @@ namespace Roslynator.Documentation
                 return;
 
             using (IEnumerator<AttributeInfo> en = attributes
-                .OrderBy(f => f.AttributeClass.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters))
+                .OrderBy(f => f.AttributeClass.ContainingNamespace, NamespaceSymbolComparer.Instance)
+                .ThenBy(f => f.AttributeClass.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters))
                 .GetEnumerator())
             {
                 if (en.MoveNext())
                 {
                     WriteHeading(3, Resources.AttributesTitle);
 
-                    while (true)
+                    do
                     {
-                        WriteLink(en.Current.AttributeClass, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
+                        WriteStartBulletItem();
+                        WriteTypeLink(en.Current.AttributeClass);
 
                         if (symbol != en.Current.Target)
                         {
                             WriteInheritedFrom(en.Current.Target.OriginalDefinition, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
                         }
 
-                        if (en.MoveNext())
-                        {
-                            WriteSpace();
-                            WriteCharEntity(Resources.ContentSeparatorChar);
-                            WriteSpace();
-                        }
-                        else
-                        {
-                            break;
-                        }
+                        WriteEndBulletItem();
                     }
+                    while (en.MoveNext());
                 }
             }
 
@@ -615,33 +609,42 @@ namespace Roslynator.Documentation
 
         public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
         {
-            SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
+            WriteList(
+                implementedInterfaces,
+                heading: Resources.ImplementsTitle,
+                headingLevel: 3,
+                format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
+                addLinkForTypeParameters: true,
+                addNamespace: true);
 
-            using (IEnumerator<INamedTypeSymbol> en = implementedInterfaces
-                .OrderBy(f => f.ToDisplayString(format))
-                .GetEnumerator())
-            {
-                if (en.MoveNext())
-                {
-                    WriteHeading(3, Resources.ImplementsTitle);
+            //TODO: del
+            //SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
 
-                    while (true)
-                    {
-                        WriteLink(en.Current, format, addLinkForTypeParameters: true);
+            //using (IEnumerator<INamedTypeSymbol> en = implementedInterfaces
+            //    .OrderBy(f => f.ToDisplayString(format))
+            //    .GetEnumerator())
+            //{
+            //    if (en.MoveNext())
+            //    {
+            //        WriteHeading(3, Resources.ImplementsTitle);
 
-                        if (en.MoveNext())
-                        {
-                            WriteSpace();
-                            WriteCharEntity(Resources.ContentSeparatorChar);
-                            WriteSpace();
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-                }
-            }
+            //        while (true)
+            //        {
+            //            WriteLink(en.Current, format, addLinkForTypeParameters: true);
+
+            //            if (en.MoveNext())
+            //            {
+            //                WriteSpace();
+            //                WriteCharEntity(Resources.InlineSeparatorChar);
+            //                WriteSpace();
+            //            }
+            //            else
+            //            {
+            //                break;
+            //            }
+            //        }
+            //    }
+            //}
         }
 
         public virtual void WriteExceptions(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
@@ -1208,7 +1211,7 @@ namespace Roslynator.Documentation
 
         protected void WriteTypeLink(
             INamedTypeSymbol typeSymbol,
-            bool containingNamespace = false,
+            bool containingNamespace = true,
             bool containingTypes = true,
             bool canCreateExternalUrl = true)
         {

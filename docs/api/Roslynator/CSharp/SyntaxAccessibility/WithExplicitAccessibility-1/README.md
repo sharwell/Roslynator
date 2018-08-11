@@ -28,5 +28,5 @@ public static TNode WithExplicitAccessibility<TNode>(TNode node, Accessibility n
 
 ### Returns
 
-Roslynator\.CSharp\.TNode
+TNode
 

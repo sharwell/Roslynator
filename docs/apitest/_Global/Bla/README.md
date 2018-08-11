@@ -21,7 +21,7 @@ public class Bla
 
 ### Attributes
 
-[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute)
+* System\.[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute)
 
 ### Derived
 

@@ -28,7 +28,17 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 
 ### Implements
 
-[ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection) &#x2022; [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1) &#x2022; [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1) &#x2022; [IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IImmutableFoo\<T>](./README.md)> &#x2022; [IImmutableList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.immutable.iimmutablelist-1) &#x2022; [IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist) &#x2022; [IList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1) &#x2022; [IReadOnlyCollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1) &#x2022; [IReadOnlyList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1) &#x2022; [IStructuralComparable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralcomparable) &#x2022; [IStructuralEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralequatable)
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IImmutableFoo\<T>](./README.md)>
+* System\.Collections\.[ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)
+* System\.Collections\.[IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)
+* System\.Collections\.[IStructuralComparable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralcomparable)
+* System\.Collections\.[IStructuralEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralequatable)
+* System\.Collections\.Generic\.[ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)
+* System\.Collections\.Generic\.[IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
+* System\.Collections\.Generic\.[IList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)
+* System\.Collections\.Generic\.[IReadOnlyCollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)
+* System\.Collections\.Generic\.[IReadOnlyList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)
+* System\.Collections\.Immutable\.[IImmutableList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.immutable.iimmutablelist-1)
 
 ## Properties
 
