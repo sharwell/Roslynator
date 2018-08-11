@@ -32,7 +32,7 @@ public static bool All(this SyntaxTokenList list, Func<SyntaxToken, bool> predic
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## All\(SyntaxTriviaList, Func\<SyntaxTrivia, Boolean>\)<a name="Roslynator_SyntaxExtensions_All_Microsoft_CodeAnalysis_SyntaxTriviaList_System_Func_Microsoft_CodeAnalysis_SyntaxTrivia_System_Boolean__"></a>
 
@@ -53,7 +53,7 @@ public static bool All(this SyntaxTriviaList list, Func<SyntaxTrivia, bool> pred
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## All\<TNode>\(SeparatedSyntaxList\<TNode>, Func\<TNode, Boolean>\)<a name="Roslynator_SyntaxExtensions_All__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Func___0_System_Boolean__"></a>
 
@@ -80,7 +80,7 @@ public static bool All<TNode>(this SeparatedSyntaxList<TNode> list, Func<TNode, 
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## All\<TNode>\(SyntaxList\<TNode>, Func\<TNode, Boolean>\)<a name="Roslynator_SyntaxExtensions_All__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Func___0_System_Boolean__"></a>
 
@@ -107,5 +107,5 @@ public static bool All<TNode>(this SyntaxList<TNode> list, Func<TNode, bool> pre
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

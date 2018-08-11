@@ -14,5 +14,5 @@ public SyntaxList<StatementSyntax>.Enumerator GetEnumerator()
 
 ### Returns
 
-[SyntaxList\<StatementSyntax>.Enumerator](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1.enumerator)
+Microsoft\.CodeAnalysis\.[SyntaxList\<StatementSyntax>.Enumerator](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1.enumerator)
 

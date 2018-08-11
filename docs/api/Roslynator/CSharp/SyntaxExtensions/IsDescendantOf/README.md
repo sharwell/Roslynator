@@ -22,5 +22,5 @@ public static bool IsDescendantOf(this SyntaxNode node, SyntaxKind kind, bool as
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

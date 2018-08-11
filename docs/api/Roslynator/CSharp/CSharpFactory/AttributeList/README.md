@@ -25,7 +25,7 @@ public static AttributeListSyntax AttributeList(AttributeSyntax attribute)
 
 #### Returns
 
-[AttributeListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributelistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributelistsyntax)
 
 ## AttributeList\(AttributeSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_AttributeList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax___"></a>
 
@@ -41,5 +41,5 @@ public static AttributeListSyntax AttributeList(params AttributeSyntax[] attribu
 
 #### Returns
 
-[AttributeListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributelistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributelistsyntax)
 

@@ -31,7 +31,7 @@ public static ConditionalExpressionInfo ConditionalExpressionInfo(ConditionalExp
 
 #### Returns
 
-[ConditionalExpressionInfo](../../Syntax/ConditionalExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[ConditionalExpressionInfo](../../Syntax/ConditionalExpressionInfo/README.md)
 
 ## ConditionalExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_ConditionalExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
@@ -53,5 +53,5 @@ public static ConditionalExpressionInfo ConditionalExpressionInfo(SyntaxNode nod
 
 #### Returns
 
-[ConditionalExpressionInfo](../../Syntax/ConditionalExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[ConditionalExpressionInfo](../../Syntax/ConditionalExpressionInfo/README.md)
 

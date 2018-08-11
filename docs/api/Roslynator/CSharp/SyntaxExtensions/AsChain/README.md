@@ -17,5 +17,5 @@ public static ExpressionChain AsChain(this BinaryExpressionSyntax binaryExpressi
 
 ### Returns
 
-[ExpressionChain](../../ExpressionChain/README.md)
+Roslynator\.CSharp\.[ExpressionChain](../../ExpressionChain/README.md)
 

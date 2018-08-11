@@ -31,7 +31,7 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### Returns
 
-[SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
 
 ## SimpleMemberInvocationStatementInfo\(InvocationExpressionSyntax, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleMemberInvocationStatementInfo_Microsoft_CodeAnalysis_CSharp_Syntax_InvocationExpressionSyntax_System_Boolean_"></a>
 
@@ -52,7 +52,7 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### Returns
 
-[SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
 
 ## SimpleMemberInvocationStatementInfo\(SyntaxNode, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleMemberInvocationStatementInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_"></a>
 
@@ -73,5 +73,5 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### Returns
 
-[SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
 

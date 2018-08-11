@@ -31,7 +31,7 @@ public static bool Contains(this SyntaxTokenList tokens, SyntaxToken token)
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Contains\<TNode>\(SeparatedSyntaxList\<TNode>, TNode\)<a name="Roslynator_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0____0_"></a>
 
@@ -58,7 +58,7 @@ public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, TNode n
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Contains\<TNode>\(SyntaxList\<TNode>, TNode\)<a name="Roslynator_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SyntaxList___0____0_"></a>
 
@@ -85,5 +85,5 @@ public static bool Contains<TNode>(this SyntaxList<TNode> list, TNode node) wher
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

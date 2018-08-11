@@ -17,5 +17,5 @@ public static bool operator ==(in SimpleAssignmentExpressionInfo info1, in Simpl
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

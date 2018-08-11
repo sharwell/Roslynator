@@ -17,5 +17,5 @@ public static bool operator !=(in StatementListInfo info1, in StatementListInfo 
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

@@ -10,5 +10,5 @@ public static SyntaxToken InterpolatedVerbatimStringStartToken()
 
 ### Returns
 
-[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
+Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 

@@ -21,5 +21,5 @@ public StatementListInfo Replace(StatementSyntax statementInList, StatementSynta
 
 ### Returns
 
-[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
 

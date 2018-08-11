@@ -17,5 +17,5 @@ public static ObjectCreationExpressionSyntax ObjectCreationExpression(TypeSyntax
 
 ### Returns
 
-[ObjectCreationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.objectcreationexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ObjectCreationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.objectcreationexpressionsyntax)
 

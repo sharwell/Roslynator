@@ -17,5 +17,5 @@ public static bool operator ==(in GenericInfo info1, in GenericInfo info2)
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

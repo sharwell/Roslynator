@@ -30,7 +30,7 @@ public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressio
 
 #### Returns
 
-[SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameterLambdaExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameterLambdaExpressionInfo/README.md)
 
 ## SingleParameterLambdaExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SingleParameterLambdaExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
@@ -52,5 +52,5 @@ public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressio
 
 #### Returns
 
-[SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameterLambdaExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameterLambdaExpressionInfo/README.md)
 

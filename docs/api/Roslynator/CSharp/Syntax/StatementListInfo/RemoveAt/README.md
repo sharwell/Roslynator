@@ -20,5 +20,5 @@ public StatementListInfo RemoveAt(int index)
 
 ### Returns
 
-[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
 

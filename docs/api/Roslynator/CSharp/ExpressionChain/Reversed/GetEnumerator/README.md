@@ -10,5 +10,5 @@ public ExpressionChain.Reversed.Enumerator GetEnumerator()
 
 ### Returns
 
-[ExpressionChain.Reversed.Enumerator](../Enumerator/README.md)
+Roslynator\.CSharp\.[ExpressionChain.Reversed.Enumerator](../Enumerator/README.md)
 

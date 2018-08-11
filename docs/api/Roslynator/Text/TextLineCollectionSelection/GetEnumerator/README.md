@@ -14,5 +14,5 @@ public TextLineCollectionSelection.Enumerator GetEnumerator()
 
 ### Returns
 
-[TextLineCollectionSelection.Enumerator](../Enumerator/README.md)
+Roslynator\.Text\.[TextLineCollectionSelection.Enumerator](../Enumerator/README.md)
 

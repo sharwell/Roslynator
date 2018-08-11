@@ -36,7 +36,7 @@ public static bool IsFirst<TNode>(this SeparatedSyntaxList<TNode> list, TNode no
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## IsFirst\<TNode>\(SyntaxList\<TNode>, TNode\)<a name="Roslynator_SyntaxExtensions_IsFirst__1_Microsoft_CodeAnalysis_SyntaxList___0____0_"></a>
 
@@ -63,5 +63,5 @@ public static bool IsFirst<TNode>(this SyntaxList<TNode> list, TNode node) where
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

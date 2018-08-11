@@ -30,7 +30,7 @@ public Foo this[int index, int index2] { get; set; }
 
 #### Property Value
 
-[Foo](../README.md)
+Roslynator\.Documentation\.Test\.[Foo](../README.md)
 
 v
 
@@ -52,6 +52,6 @@ public Foo this[int index] { get; set; }
 
 #### Property Value
 
-[Foo](../README.md)
+Roslynator\.Documentation\.Test\.[Foo](../README.md)
 
 v

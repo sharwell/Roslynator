@@ -31,7 +31,7 @@ public static BinaryExpressionInfo BinaryExpressionInfo(BinaryExpressionSyntax b
 
 #### Returns
 
-[BinaryExpressionInfo](../../Syntax/BinaryExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[BinaryExpressionInfo](../../Syntax/BinaryExpressionInfo/README.md)
 
 ## BinaryExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_BinaryExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
@@ -53,5 +53,5 @@ public static BinaryExpressionInfo BinaryExpressionInfo(SyntaxNode node, bool wa
 
 #### Returns
 
-[BinaryExpressionInfo](../../Syntax/BinaryExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[BinaryExpressionInfo](../../Syntax/BinaryExpressionInfo/README.md)
 

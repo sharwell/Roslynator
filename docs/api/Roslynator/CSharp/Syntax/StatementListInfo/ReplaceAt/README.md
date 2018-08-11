@@ -21,5 +21,5 @@ public StatementListInfo ReplaceAt(int index, StatementSyntax newStatement)
 
 ### Returns
 
-[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
 

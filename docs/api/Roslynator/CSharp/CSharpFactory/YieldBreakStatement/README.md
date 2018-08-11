@@ -10,5 +10,5 @@ public static YieldStatementSyntax YieldBreakStatement()
 
 ### Returns
 
-[YieldStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.yieldstatementsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[YieldStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.yieldstatementsyntax)
 

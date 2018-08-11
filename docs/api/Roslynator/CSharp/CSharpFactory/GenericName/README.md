@@ -26,7 +26,7 @@ public static GenericNameSyntax GenericName(string identifier, TypeSyntax typeAr
 
 #### Returns
 
-[GenericNameSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.genericnamesyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[GenericNameSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.genericnamesyntax)
 
 ## GenericName\(SyntaxToken, TypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_GenericName_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
 
@@ -43,5 +43,5 @@ public static GenericNameSyntax GenericName(SyntaxToken identifier, TypeSyntax t
 
 #### Returns
 
-[GenericNameSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.genericnamesyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[GenericNameSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.genericnamesyntax)
 

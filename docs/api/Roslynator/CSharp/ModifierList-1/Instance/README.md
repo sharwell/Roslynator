@@ -14,5 +14,5 @@ public static ModifierList<TNode> Instance { get; }
 
 ### Property Value
 
-[ModifierList\<TNode>](../README.md)
+Roslynator\.CSharp\.[ModifierList\<TNode>](../README.md)
 

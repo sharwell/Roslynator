@@ -29,7 +29,7 @@ public override bool Equals(object obj)
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 true if **obj** and this instance are the same type and represent the same value; otherwise, false\. 
 
@@ -51,7 +51,7 @@ public bool Equals(StatementListInfo other)
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 true if the current object is equal to the **other** parameter; otherwise, false\.
 

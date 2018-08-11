@@ -262,6 +262,11 @@ namespace Roslynator.Documentation
             WriteString(symbol.ToDisplayString(format, additionalOptions));
         }
 
+        internal void WriteNamespaceSymbol(INamespaceSymbol namespaceSymbol)
+        {
+            WriteString(namespaceSymbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces));
+        }
+
         public void WriteTableCell(string text)
         {
             WriteStartTableCell();
@@ -1088,7 +1093,7 @@ namespace Roslynator.Documentation
                             if (addNamespace
                                 && !en.Current.ContainingNamespace.IsGlobalNamespace)
                             {
-                                WriteSymbol(en.Current.ContainingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                                WriteNamespaceSymbol(en.Current.ContainingNamespace);
                                 WriteString(".");
                             }
 
@@ -1166,9 +1171,10 @@ namespace Roslynator.Documentation
             if (addLinkForTypeParameters
                 && symbol is INamedTypeSymbol namedType)
             {
+                bool containingNamespace = format.TypeQualificationStyle == SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces;
                 bool containingTypes = format.TypeQualificationStyle != SymbolDisplayTypeQualificationStyle.NameOnly;
 
-                WriteTypeLink(namedType, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
+                WriteTypeLink(namedType, containingNamespace: containingNamespace, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
             }
             else
             {
@@ -1180,35 +1186,46 @@ namespace Roslynator.Documentation
 
         internal void WriteTypeLink(
             ITypeSymbol typeSymbol,
+            bool containingNamespace = true,
             bool containingTypes = true,
             bool canCreateExternalUrl = true)
         {
             if (typeSymbol is INamedTypeSymbol namedTypeSymbol)
             {
-                WriteTypeLink(namedTypeSymbol, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
+                WriteTypeLink(namedTypeSymbol, containingNamespace: containingNamespace, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
             }
             else
             {
+                string url = GetUrl(typeSymbol, canCreateExternalUrl);
+
                 SymbolDisplayFormat format = (containingTypes)
                     ? SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters
                     : SymbolDisplayFormats.TypeNameAndTypeParameters;
 
-                WriteLink(typeSymbol, format, canCreateExternalUrl: canCreateExternalUrl);
+                WriteLinkOrText(typeSymbol.ToDisplayString(format), url);
             }
         }
 
         protected void WriteTypeLink(
             INamedTypeSymbol typeSymbol,
+            bool containingNamespace = false,
             bool containingTypes = true,
             bool canCreateExternalUrl = true)
         {
+            if (containingNamespace
+                && !typeSymbol.ContainingNamespace.IsGlobalNamespace)
+            {
+                WriteNamespaceSymbol(typeSymbol.ContainingNamespace);
+                WriteString(".");
+            }
+
             ImmutableArray<ITypeSymbol> typeArguments = typeSymbol.TypeArguments;
 
             if (typeSymbol.IsNullableType())
             {
                 ITypeSymbol typeArgument = typeSymbol.TypeArguments[0];
 
-                WriteTypeLink(typeArgument, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
+                WriteTypeLink(typeArgument, containingNamespace: false, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
                 WriteString("?");
             }
             else if (typeArguments.Any(f => f.Kind != SymbolKind.TypeParameter))
@@ -1231,7 +1248,7 @@ namespace Roslynator.Documentation
                     {
                         if (en.Current.Kind == SymbolKind.NamedType)
                         {
-                            WriteTypeLink((INamedTypeSymbol)en.Current, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
+                            WriteTypeLink((INamedTypeSymbol)en.Current, containingNamespace: containingNamespace, containingTypes: containingTypes, canCreateExternalUrl: canCreateExternalUrl);
                         }
                         else
                         {

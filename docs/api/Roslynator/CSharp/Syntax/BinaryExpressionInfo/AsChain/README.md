@@ -10,5 +10,5 @@ public ExpressionChain AsChain()
 
 ### Returns
 
-[ExpressionChain](../../../ExpressionChain/README.md)
+Roslynator\.CSharp\.[ExpressionChain](../../../ExpressionChain/README.md)
 

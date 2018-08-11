@@ -14,5 +14,5 @@ public LambdaExpressionSyntax LambdaExpression { get; }
 
 ### Property Value
 
-[LambdaExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.lambdaexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LambdaExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.lambdaexpressionsyntax)
 

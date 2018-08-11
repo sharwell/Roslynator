@@ -17,5 +17,5 @@ public static bool operator !=(in SimpleIfElseInfo info1, in SimpleIfElseInfo in
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

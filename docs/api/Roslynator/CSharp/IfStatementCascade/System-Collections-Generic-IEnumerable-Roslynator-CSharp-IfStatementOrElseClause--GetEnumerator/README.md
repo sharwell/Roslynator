@@ -10,7 +10,7 @@ private IEnumerator<IfStatementOrElseClause> IEnumerable<IfStatementOrElseClause
 
 ### Returns
 
-[IEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1)\<[IfStatementOrElseClause](../../IfStatementOrElseClause/README.md)>
+System\.Collections\.Generic\.[IEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1)\<Roslynator\.CSharp\.[IfStatementOrElseClause](../../IfStatementOrElseClause/README.md)>
 
 ### Implements
 

@@ -14,5 +14,5 @@ public EqualsValueClauseSyntax Initializer { get; }
 
 ### Property Value
 
-[EqualsValueClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.equalsvalueclausesyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EqualsValueClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.equalsvalueclausesyntax)
 

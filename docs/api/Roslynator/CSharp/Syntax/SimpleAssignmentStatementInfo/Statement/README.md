@@ -14,5 +14,5 @@ public ExpressionStatementSyntax Statement { get; }
 
 ### Property Value
 
-[ExpressionStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionstatementsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ExpressionStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionstatementsyntax)
 

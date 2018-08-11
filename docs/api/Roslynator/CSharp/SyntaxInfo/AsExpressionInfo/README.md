@@ -31,7 +31,7 @@ public static AsExpressionInfo AsExpressionInfo(BinaryExpressionSyntax binaryExp
 
 #### Returns
 
-[AsExpressionInfo](../../Syntax/AsExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[AsExpressionInfo](../../Syntax/AsExpressionInfo/README.md)
 
 ## AsExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_AsExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
@@ -53,5 +53,5 @@ public static AsExpressionInfo AsExpressionInfo(SyntaxNode node, bool walkDownPa
 
 #### Returns
 
-[AsExpressionInfo](../../Syntax/AsExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[AsExpressionInfo](../../Syntax/AsExpressionInfo/README.md)
 

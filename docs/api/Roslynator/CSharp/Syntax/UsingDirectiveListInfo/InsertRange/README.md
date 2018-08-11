@@ -21,5 +21,5 @@ public UsingDirectiveListInfo InsertRange(int index, IEnumerable<UsingDirectiveS
 
 ### Returns
 
-[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
 

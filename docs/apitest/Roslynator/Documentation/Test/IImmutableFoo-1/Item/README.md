@@ -16,5 +16,5 @@ T this[int index] { get; set; }
 
 ### Property Value
 
-T
+Roslynator\.Documentation\.Test\.T
 

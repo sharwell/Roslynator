@@ -21,5 +21,5 @@ public MemberDeclarationListInfo InsertRange(int index, IEnumerable<MemberDeclar
 
 ### Returns
 
-[MemberDeclarationListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 

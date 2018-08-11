@@ -21,5 +21,5 @@ public static SyntaxListSelection<TNode> Create(SyntaxList<TNode> list, TextSpan
 
 ### Returns
 
-[SyntaxListSelection\<TNode>](../README.md)
+Roslynator\.[SyntaxListSelection\<TNode>](../README.md)
 

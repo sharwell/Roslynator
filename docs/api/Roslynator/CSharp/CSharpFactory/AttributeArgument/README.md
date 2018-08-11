@@ -26,7 +26,7 @@ public static AttributeArgumentSyntax AttributeArgument(NameColonSyntax nameColo
 
 #### Returns
 
-[AttributeArgumentSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeArgumentSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentsyntax)
 
 ## AttributeArgument\(NameEqualsSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AttributeArgument_Microsoft_CodeAnalysis_CSharp_Syntax_NameEqualsSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
@@ -43,5 +43,5 @@ public static AttributeArgumentSyntax AttributeArgument(NameEqualsSyntax nameEqu
 
 #### Returns
 
-[AttributeArgumentSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeArgumentSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentsyntax)
 

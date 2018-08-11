@@ -29,7 +29,7 @@ public int LastIndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 
 #### Returns
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
+System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
 ## LastIndexOf\(UsingDirectiveSyntax\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_LastIndexOf_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax_"></a>
 
@@ -49,5 +49,5 @@ public int LastIndexOf(UsingDirectiveSyntax usingDirective)
 
 #### Returns
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
+System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 

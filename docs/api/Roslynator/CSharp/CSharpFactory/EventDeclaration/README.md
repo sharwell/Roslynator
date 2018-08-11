@@ -28,7 +28,7 @@ public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers,
 
 #### Returns
 
-[EventDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.eventdeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EventDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.eventdeclarationsyntax)
 
 ## EventDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, AccessorListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EventDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_"></a>
 
@@ -47,5 +47,5 @@ public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers,
 
 #### Returns
 
-[EventDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.eventdeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EventDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.eventdeclarationsyntax)
 

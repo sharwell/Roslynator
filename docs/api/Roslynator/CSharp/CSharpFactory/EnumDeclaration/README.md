@@ -18,5 +18,5 @@ public static EnumDeclarationSyntax EnumDeclaration(SyntaxTokenList modifiers, S
 
 ### Returns
 
-[EnumDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enumdeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enumdeclarationsyntax)
 

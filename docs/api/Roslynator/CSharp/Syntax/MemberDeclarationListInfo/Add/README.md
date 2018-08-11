@@ -20,5 +20,5 @@ public MemberDeclarationListInfo Add(MemberDeclarationSyntax member)
 
 ### Returns
 
-[MemberDeclarationListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 

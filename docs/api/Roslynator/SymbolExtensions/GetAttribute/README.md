@@ -21,5 +21,5 @@ public static AttributeData GetAttribute(this ISymbol symbol, INamedTypeSymbol a
 
 ### Returns
 
-[AttributeData](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.attributedata)
+Microsoft\.CodeAnalysis\.[AttributeData](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.attributedata)
 

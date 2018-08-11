@@ -20,5 +20,5 @@ public UsingDirectiveListInfo AddRange(IEnumerable<UsingDirectiveSyntax> usings)
 
 ### Returns
 
-[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
 

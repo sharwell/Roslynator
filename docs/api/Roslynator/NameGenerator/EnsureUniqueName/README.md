@@ -31,7 +31,7 @@ public abstract string EnsureUniqueName(string baseName, IEnumerable<string> res
 
 #### Returns
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
+System\.[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 
 ## EnsureUniqueName\(String, ImmutableArray\<ISymbol>, Boolean\)<a name="Roslynator_NameGenerator_EnsureUniqueName_System_String_System_Collections_Immutable_ImmutableArray_Microsoft_CodeAnalysis_ISymbol__System_Boolean_"></a>
 
@@ -53,5 +53,5 @@ public abstract string EnsureUniqueName(string baseName, ImmutableArray<ISymbol>
 
 #### Returns
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
+System\.[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 

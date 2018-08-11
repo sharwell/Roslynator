@@ -21,5 +21,5 @@ public MemberDeclarationListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newN
 
 ### Returns
 
-[MemberDeclarationListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 

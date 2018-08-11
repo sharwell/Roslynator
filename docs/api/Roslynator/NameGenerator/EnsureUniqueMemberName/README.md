@@ -27,7 +27,7 @@ public string EnsureUniqueMemberName(string baseName, INamedTypeSymbol typeSymbo
 
 #### Returns
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
+System\.[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 
 ## EnsureUniqueMemberName\(String, SemanticModel, Int32, Boolean, CancellationToken\)<a name="Roslynator_NameGenerator_EnsureUniqueMemberName_System_String_Microsoft_CodeAnalysis_SemanticModel_System_Int32_System_Boolean_System_Threading_CancellationToken_"></a>
 
@@ -51,5 +51,5 @@ public string EnsureUniqueMemberName(string baseName, SemanticModel semanticMode
 
 #### Returns
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
+System\.[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 

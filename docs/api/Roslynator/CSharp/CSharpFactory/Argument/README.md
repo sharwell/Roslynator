@@ -17,5 +17,5 @@ public static ArgumentSyntax Argument(NameColonSyntax nameColon, ExpressionSynta
 
 ### Returns
 
-[ArgumentSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.argumentsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ArgumentSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.argumentsyntax)
 

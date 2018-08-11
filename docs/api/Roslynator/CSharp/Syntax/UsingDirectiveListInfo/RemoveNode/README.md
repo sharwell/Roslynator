@@ -21,5 +21,5 @@ public UsingDirectiveListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions op
 
 ### Returns
 
-[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
 

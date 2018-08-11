@@ -14,5 +14,5 @@ public VariableDeclaratorSyntax Declarator { get; }
 
 ### Property Value
 
-[VariableDeclaratorSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclaratorsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclaratorSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclaratorsyntax)
 

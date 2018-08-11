@@ -31,7 +31,7 @@ public static bool TryCreate(NamespaceDeclarationSyntax namespaceDeclaration, Te
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 True if the specified span contains at least one member; otherwise, false\.
 
@@ -55,6 +55,6 @@ public static bool TryCreate(TypeDeclarationSyntax typeDeclaration, TextSpan spa
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 True if the specified span contains at least one member; otherwise, false\.

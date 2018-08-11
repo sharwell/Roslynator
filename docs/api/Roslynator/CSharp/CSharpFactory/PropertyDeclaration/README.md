@@ -29,7 +29,7 @@ public static PropertyDeclarationSyntax PropertyDeclaration(SyntaxTokenList modi
 
 #### Returns
 
-[PropertyDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.propertydeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PropertyDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.propertydeclarationsyntax)
 
 ## PropertyDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, ArrowExpressionClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_PropertyDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_"></a>
 
@@ -48,5 +48,5 @@ public static PropertyDeclarationSyntax PropertyDeclaration(SyntaxTokenList modi
 
 #### Returns
 
-[PropertyDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.propertydeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PropertyDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.propertydeclarationsyntax)
 

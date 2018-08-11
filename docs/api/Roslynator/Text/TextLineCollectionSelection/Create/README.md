@@ -21,5 +21,5 @@ public static TextLineCollectionSelection Create(TextLineCollection lines, TextS
 
 ### Returns
 
-[TextLineCollectionSelection](../README.md)
+Roslynator\.Text\.[TextLineCollectionSelection](../README.md)
 

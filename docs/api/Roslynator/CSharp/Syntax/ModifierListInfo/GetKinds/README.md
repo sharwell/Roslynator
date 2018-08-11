@@ -14,5 +14,5 @@ public ModifierKinds GetKinds()
 
 ### Returns
 
-[ModifierKinds](../../../ModifierKinds/README.md)
+Roslynator\.CSharp\.[ModifierKinds](../../../ModifierKinds/README.md)
 

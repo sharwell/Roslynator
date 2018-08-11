@@ -14,5 +14,5 @@ public TextLineCollection UnderlyingLines { get; }
 
 ### Property Value
 
-[TextLineCollection](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textlinecollection)
+Microsoft\.CodeAnalysis\.Text\.[TextLineCollection](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textlinecollection)
 

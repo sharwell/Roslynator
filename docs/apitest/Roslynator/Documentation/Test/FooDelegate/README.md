@@ -20,7 +20,7 @@ public delegate Foo FooDelegate(object p)
 
 ### Return Value
 
-[Foo](../Foo/README.md)
+Roslynator\.Documentation\.Test\.[Foo](../Foo/README.md)
 
 ### Inheritance
 

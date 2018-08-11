@@ -17,5 +17,5 @@ public static bool operator ==(in ModifierListInfo info1, in ModifierListInfo in
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

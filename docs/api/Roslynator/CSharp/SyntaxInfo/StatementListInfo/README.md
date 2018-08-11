@@ -20,5 +20,5 @@ public static StatementListInfo StatementListInfo(StatementSyntax statement)
 
 ### Returns
 
-[StatementListInfo](../../Syntax/StatementListInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../../Syntax/StatementListInfo/README.md)
 

@@ -22,5 +22,5 @@ public static ExtensionMethodSymbolInfo GetReducedExtensionMethodInfo(this Seman
 
 ### Returns
 
-[ExtensionMethodSymbolInfo](../../../ExtensionMethodSymbolInfo/README.md)
+Roslynator\.[ExtensionMethodSymbolInfo](../../../ExtensionMethodSymbolInfo/README.md)
 

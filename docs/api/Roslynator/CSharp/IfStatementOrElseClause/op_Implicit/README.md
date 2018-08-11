@@ -27,7 +27,7 @@ public static implicit operator IfStatementOrElseClause(ElseClauseSyntax elseCla
 
 #### Returns
 
-[IfStatementOrElseClause](../README.md)
+Roslynator\.CSharp\.[IfStatementOrElseClause](../README.md)
 
 ## Implicit\(IfStatementOrElseClause to ElseClauseSyntax\)<a name="Roslynator_CSharp_IfStatementOrElseClause_op_Implicit_Roslynator_CSharp_IfStatementOrElseClause___Microsoft_CodeAnalysis_CSharp_Syntax_ElseClauseSyntax"></a>
 
@@ -43,7 +43,7 @@ public static implicit operator ElseClauseSyntax(in IfStatementOrElseClause ifOr
 
 #### Returns
 
-[ElseClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.elseclausesyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ElseClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.elseclausesyntax)
 
 ## Implicit\(IfStatementOrElseClause to IfStatementSyntax\)<a name="Roslynator_CSharp_IfStatementOrElseClause_op_Implicit_Roslynator_CSharp_IfStatementOrElseClause___Microsoft_CodeAnalysis_CSharp_Syntax_IfStatementSyntax"></a>
 
@@ -59,7 +59,7 @@ public static implicit operator IfStatementSyntax(in IfStatementOrElseClause ifO
 
 #### Returns
 
-[IfStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.ifstatementsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[IfStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.ifstatementsyntax)
 
 ## Implicit\(IfStatementSyntax to IfStatementOrElseClause\)<a name="Roslynator_CSharp_IfStatementOrElseClause_op_Implicit_Microsoft_CodeAnalysis_CSharp_Syntax_IfStatementSyntax__Roslynator_CSharp_IfStatementOrElseClause"></a>
 
@@ -75,5 +75,5 @@ public static implicit operator IfStatementOrElseClause(IfStatementSyntax ifStat
 
 #### Returns
 
-[IfStatementOrElseClause](../README.md)
+Roslynator\.CSharp\.[IfStatementOrElseClause](../README.md)
 

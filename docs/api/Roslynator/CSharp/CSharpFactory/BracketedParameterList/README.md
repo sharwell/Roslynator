@@ -25,7 +25,7 @@ public static BracketedParameterListSyntax BracketedParameterList(ParameterSynta
 
 #### Returns
 
-[BracketedParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.bracketedparameterlistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BracketedParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.bracketedparameterlistsyntax)
 
 ## BracketedParameterList\(ParameterSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_BracketedParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax___"></a>
 
@@ -41,5 +41,5 @@ public static BracketedParameterListSyntax BracketedParameterList(params Paramet
 
 #### Returns
 
-[BracketedParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.bracketedparameterlistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BracketedParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.bracketedparameterlistsyntax)
 

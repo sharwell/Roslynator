@@ -16,7 +16,7 @@ private KeyValuePair<TKey, TValue> IReadOnlyList<KeyValuePair<TKey, TValue>>.Ite
 
 ### Property Value
 
-[KeyValuePair\<TKey, TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.keyvaluepair-2)
+System\.Collections\.Generic\.[KeyValuePair\<TKey, TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.keyvaluepair-2)
 
 ### Implements
 

@@ -21,5 +21,5 @@ public static SeparatedSyntaxListSelection<TNode> Create(SeparatedSyntaxList<TNo
 
 ### Returns
 
-[SeparatedSyntaxListSelection\<TNode>](../README.md)
+Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../README.md)
 

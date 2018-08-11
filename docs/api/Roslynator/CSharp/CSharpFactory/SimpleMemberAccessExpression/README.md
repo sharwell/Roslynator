@@ -26,7 +26,7 @@ public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(Expressi
 
 #### Returns
 
-[MemberAccessExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberaccessexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[MemberAccessExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberaccessexpressionsyntax)
 
 ## SimpleMemberAccessExpression\(ExpressionSyntax, SyntaxToken, SimpleNameSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SimpleMemberAccessExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_SimpleNameSyntax_"></a>
 
@@ -44,5 +44,5 @@ public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(Expressi
 
 #### Returns
 
-[MemberAccessExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberaccessexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[MemberAccessExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberaccessexpressionsyntax)
 

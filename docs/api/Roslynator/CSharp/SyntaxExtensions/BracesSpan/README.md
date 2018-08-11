@@ -32,7 +32,7 @@ public static TextSpan BracesSpan(this ClassDeclarationSyntax classDeclaration)
 
 #### Returns
 
-[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
+Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
 ## BracesSpan\(EnumDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_EnumDeclarationSyntax_"></a>
 
@@ -52,7 +52,7 @@ public static TextSpan BracesSpan(this EnumDeclarationSyntax enumDeclaration)
 
 #### Returns
 
-[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
+Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
 ## BracesSpan\(InterfaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_"></a>
 
@@ -72,7 +72,7 @@ public static TextSpan BracesSpan(this InterfaceDeclarationSyntax interfaceDecla
 
 #### Returns
 
-[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
+Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
 ## BracesSpan\(NamespaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_"></a>
 
@@ -92,7 +92,7 @@ public static TextSpan BracesSpan(this NamespaceDeclarationSyntax namespaceDecla
 
 #### Returns
 
-[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
+Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
 ## BracesSpan\(StructDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_"></a>
 
@@ -112,5 +112,5 @@ public static TextSpan BracesSpan(this StructDeclarationSyntax structDeclaration
 
 #### Returns
 
-[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
+Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 

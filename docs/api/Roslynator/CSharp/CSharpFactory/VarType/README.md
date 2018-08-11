@@ -10,5 +10,5 @@ public static IdentifierNameSyntax VarType()
 
 ### Returns
 
-[IdentifierNameSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.identifiernamesyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[IdentifierNameSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.identifiernamesyntax)
 

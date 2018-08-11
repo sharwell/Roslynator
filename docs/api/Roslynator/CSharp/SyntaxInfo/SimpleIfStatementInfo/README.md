@@ -31,7 +31,7 @@ public static SimpleIfStatementInfo SimpleIfStatementInfo(IfStatementSyntax ifSt
 
 #### Returns
 
-[SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.md)
 
 ## SimpleIfStatementInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleIfStatementInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
@@ -53,5 +53,5 @@ public static SimpleIfStatementInfo SimpleIfStatementInfo(SyntaxNode node, bool 
 
 #### Returns
 
-[SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.md)
 

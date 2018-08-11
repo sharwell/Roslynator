@@ -21,5 +21,5 @@ public ModifierListInfo WithExplicitAccessibility(Accessibility newAccessibility
 
 ### Returns
 
-[ModifierListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../README.md)
 

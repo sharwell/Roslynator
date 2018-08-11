@@ -31,7 +31,7 @@ public static bool IsUniqueName(string name, IEnumerable<string> reservedNames, 
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## IsUniqueName\(String, ImmutableArray\<ISymbol>, Boolean\)<a name="Roslynator_NameGenerator_IsUniqueName_System_String_System_Collections_Immutable_ImmutableArray_Microsoft_CodeAnalysis_ISymbol__System_Boolean_"></a>
 
@@ -53,5 +53,5 @@ public static bool IsUniqueName(string name, ImmutableArray<ISymbol> symbols, bo
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

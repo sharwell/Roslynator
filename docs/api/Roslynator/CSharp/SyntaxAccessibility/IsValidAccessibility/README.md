@@ -22,5 +22,5 @@ public static bool IsValidAccessibility(SyntaxNode node, Accessibility accessibi
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

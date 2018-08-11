@@ -10,7 +10,7 @@ private IEnumerator<TValue> IEnumerable<TValue>.GetEnumerator()
 
 ### Returns
 
-[IEnumerator\<TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1)
+System\.Collections\.Generic\.[IEnumerator\<TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1)
 
 ### Implements
 

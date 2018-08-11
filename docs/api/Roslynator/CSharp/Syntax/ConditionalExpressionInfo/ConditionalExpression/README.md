@@ -14,5 +14,5 @@ public ConditionalExpressionSyntax ConditionalExpression { get; }
 
 ### Property Value
 
-[ConditionalExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.conditionalexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConditionalExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.conditionalexpressionsyntax)
 

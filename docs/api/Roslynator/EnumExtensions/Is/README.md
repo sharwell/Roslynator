@@ -45,7 +45,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(Accessibility, Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
@@ -68,7 +68,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
@@ -92,7 +92,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
@@ -117,7 +117,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
 
@@ -139,7 +139,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(MethodKind, MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
 
@@ -162,7 +162,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
 
@@ -186,7 +186,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
 
@@ -211,7 +211,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
@@ -233,7 +233,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(SpecialType, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
@@ -256,7 +256,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
@@ -280,7 +280,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
@@ -305,7 +305,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
 
@@ -327,7 +327,7 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(TypeKind, TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
 
@@ -350,7 +350,7 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
 
@@ -374,7 +374,7 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
 
@@ -399,5 +399,5 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

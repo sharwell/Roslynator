@@ -14,5 +14,5 @@ public MemberAccessExpressionSyntax MemberAccessExpression { get; }
 
 ### Property Value
 
-[MemberAccessExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberaccessexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[MemberAccessExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberaccessexpressionsyntax)
 

@@ -32,7 +32,7 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### Returns
 
-[StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
 
 ## StringConcatenationExpressionInfo\(ExpressionChain, SemanticModel, CancellationToken\)<a name="Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Roslynator_CSharp_ExpressionChain__Microsoft_CodeAnalysis_SemanticModel_System_Threading_CancellationToken_"></a>
 
@@ -54,7 +54,7 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### Returns
 
-[StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
 
 ## StringConcatenationExpressionInfo\(SyntaxNode, SemanticModel, Boolean, CancellationToken\)<a name="Roslynator_CSharp_SyntaxInfo_StringConcatenationExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_System_Threading_CancellationToken_"></a>
 
@@ -77,5 +77,5 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### Returns
 
-[StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[StringConcatenationExpressionInfo](../../Syntax/StringConcatenationExpressionInfo/README.md)
 

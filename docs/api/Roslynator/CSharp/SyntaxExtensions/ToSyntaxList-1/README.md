@@ -26,5 +26,5 @@ public static SyntaxList<TNode> ToSyntaxList<TNode>(this IEnumerable<TNode> node
 
 ### Returns
 
-[SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)
+Microsoft\.CodeAnalysis\.[SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)
 

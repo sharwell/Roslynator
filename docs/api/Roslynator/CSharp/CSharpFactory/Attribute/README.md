@@ -17,5 +17,5 @@ public static AttributeSyntax Attribute(NameSyntax name, AttributeArgumentSyntax
 
 ### Returns
 
-[AttributeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributesyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributesyntax)
 

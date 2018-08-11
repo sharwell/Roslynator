@@ -22,5 +22,5 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Syntax
 
 ### Returns
 
-[ITypeSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol)
+Microsoft\.CodeAnalysis\.[ITypeSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol)
 

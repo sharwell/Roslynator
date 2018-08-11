@@ -14,5 +14,5 @@ public SyntaxListSelection<TNode>.Enumerator GetEnumerator()
 
 ### Returns
 
-[SyntaxListSelection\<TNode>.Enumerator](../Enumerator/README.md)
+Roslynator\.[SyntaxListSelection\<TNode>.Enumerator](../Enumerator/README.md)
 

@@ -31,7 +31,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(decimal value)
 
 #### Returns
 
-[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
 ## NumericLiteralExpression\(Double\)<a name="Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Double_"></a>
 
@@ -47,7 +47,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(double value)
 
 #### Returns
 
-[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
 ## NumericLiteralExpression\(Int32\)<a name="Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Int32_"></a>
 
@@ -63,7 +63,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(int value)
 
 #### Returns
 
-[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
 ## NumericLiteralExpression\(Int64\)<a name="Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Int64_"></a>
 
@@ -79,7 +79,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(long value)
 
 #### Returns
 
-[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
 ## NumericLiteralExpression\(SByte\)<a name="Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_SByte_"></a>
 
@@ -95,7 +95,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(sbyte value)
 
 #### Returns
 
-[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
 ## NumericLiteralExpression\(Single\)<a name="Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Single_"></a>
 
@@ -111,7 +111,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(float value)
 
 #### Returns
 
-[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
 ## NumericLiteralExpression\(UInt32\)<a name="Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_UInt32_"></a>
 
@@ -127,7 +127,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(uint value)
 
 #### Returns
 
-[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
 ## NumericLiteralExpression\(UInt64\)<a name="Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_UInt64_"></a>
 
@@ -143,5 +143,5 @@ public static LiteralExpressionSyntax NumericLiteralExpression(ulong value)
 
 #### Returns
 
-[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 

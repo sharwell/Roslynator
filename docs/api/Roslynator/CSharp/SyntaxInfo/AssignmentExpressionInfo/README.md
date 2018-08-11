@@ -31,7 +31,7 @@ public static AssignmentExpressionInfo AssignmentExpressionInfo(AssignmentExpres
 
 #### Returns
 
-[AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/README.md)
 
 ## AssignmentExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_AssignmentExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
@@ -53,5 +53,5 @@ public static AssignmentExpressionInfo AssignmentExpressionInfo(SyntaxNode node,
 
 #### Returns
 
-[AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/README.md)
 

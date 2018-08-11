@@ -25,7 +25,7 @@ public static ArgumentListSyntax ArgumentList(ArgumentSyntax argument)
 
 #### Returns
 
-[ArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.argumentlistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.argumentlistsyntax)
 
 ## ArgumentList\(ArgumentSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_ArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax___"></a>
 
@@ -41,5 +41,5 @@ public static ArgumentListSyntax ArgumentList(params ArgumentSyntax[] arguments)
 
 #### Returns
 
-[ArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.argumentlistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.argumentlistsyntax)
 

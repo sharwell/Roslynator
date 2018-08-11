@@ -29,7 +29,7 @@ public static StringLiteralExpressionInfo StringLiteralExpressionInfo(LiteralExp
 
 #### Returns
 
-[StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md)
 
 ## StringLiteralExpressionInfo\(SyntaxNode, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_StringLiteralExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_"></a>
 
@@ -50,5 +50,5 @@ public static StringLiteralExpressionInfo StringLiteralExpressionInfo(SyntaxNode
 
 #### Returns
 
-[StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md)
 

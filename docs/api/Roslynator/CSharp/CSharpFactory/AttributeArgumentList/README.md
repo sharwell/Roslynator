@@ -25,7 +25,7 @@ public static AttributeArgumentListSyntax AttributeArgumentList(AttributeArgumen
 
 #### Returns
 
-[AttributeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentlistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentlistsyntax)
 
 ## AttributeArgumentList\(AttributeArgumentSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_AttributeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeArgumentSyntax___"></a>
 
@@ -41,5 +41,5 @@ public static AttributeArgumentListSyntax AttributeArgumentList(params Attribute
 
 #### Returns
 
-[AttributeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentlistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentlistsyntax)
 

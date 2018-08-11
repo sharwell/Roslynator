@@ -17,5 +17,5 @@ public static bool operator !=(in ExtensionMethodSymbolInfo info1, in ExtensionM
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

@@ -36,7 +36,7 @@ public static bool ContainsMember<TSymbol>(this ITypeSymbol typeSymbol, Func<TSy
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## ContainsMember\<TSymbol>\(ITypeSymbol, String, Func\<TSymbol, Boolean>\)<a name="Roslynator_SymbolExtensions_ContainsMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_String_System_Func___0_System_Boolean__"></a>
 
@@ -64,5 +64,5 @@ public static bool ContainsMember<TSymbol>(this ITypeSymbol typeSymbol, string n
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

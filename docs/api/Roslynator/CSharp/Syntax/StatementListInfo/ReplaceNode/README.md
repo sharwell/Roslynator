@@ -21,5 +21,5 @@ public StatementListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newNode)
 
 ### Returns
 
-[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
 

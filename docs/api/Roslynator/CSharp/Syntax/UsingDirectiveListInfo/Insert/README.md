@@ -21,5 +21,5 @@ public UsingDirectiveListInfo Insert(int index, UsingDirectiveSyntax usingDirect
 
 ### Returns
 
-[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
 

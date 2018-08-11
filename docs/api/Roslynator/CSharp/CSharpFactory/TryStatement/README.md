@@ -18,5 +18,5 @@ public static TryStatementSyntax TryStatement(BlockSyntax block, CatchClauseSynt
 
 ### Returns
 
-[TryStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.trystatementsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TryStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.trystatementsyntax)
 

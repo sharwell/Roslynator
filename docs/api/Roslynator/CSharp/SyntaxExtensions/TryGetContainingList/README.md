@@ -22,6 +22,6 @@ public static bool TryGetContainingList(this StatementSyntax statement, out Synt
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 True if the statement is contained in the list; otherwise, false\.

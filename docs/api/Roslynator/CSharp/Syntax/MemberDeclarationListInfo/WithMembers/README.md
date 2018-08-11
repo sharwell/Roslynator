@@ -29,7 +29,7 @@ public MemberDeclarationListInfo WithMembers(IEnumerable<MemberDeclarationSyntax
 
 #### Returns
 
-[MemberDeclarationListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 
 ## WithMembers\(SyntaxList\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_Syntax_MemberDeclarationListInfo_WithMembers_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__"></a>
 
@@ -49,5 +49,5 @@ public MemberDeclarationListInfo WithMembers(SyntaxList<MemberDeclarationSyntax>
 
 #### Returns
 
-[MemberDeclarationListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 

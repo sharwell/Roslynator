@@ -30,7 +30,7 @@ public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpress
 
 #### Returns
 
-[SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberInvocationExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberInvocationExpressionInfo/README.md)
 
 ## SimpleMemberInvocationExpressionInfo\(SyntaxNode, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleMemberInvocationExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_System_Boolean_"></a>
 
@@ -52,5 +52,5 @@ public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpress
 
 #### Returns
 
-[SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberInvocationExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberInvocationExpressionInfo/README.md)
 

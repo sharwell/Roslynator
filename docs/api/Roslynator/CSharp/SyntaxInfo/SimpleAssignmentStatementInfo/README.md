@@ -32,7 +32,7 @@ public static SimpleAssignmentStatementInfo SimpleAssignmentStatementInfo(Assign
 
 #### Returns
 
-[SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentStatementInfo/README.md)
 
 ## SimpleAssignmentStatementInfo\(ExpressionStatementSyntax, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleAssignmentStatementInfo_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionStatementSyntax_System_Boolean_System_Boolean_"></a>
 
@@ -54,7 +54,7 @@ public static SimpleAssignmentStatementInfo SimpleAssignmentStatementInfo(Expres
 
 #### Returns
 
-[SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentStatementInfo/README.md)
 
 ## SimpleAssignmentStatementInfo\(StatementSyntax, Boolean, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SimpleAssignmentStatementInfo_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_System_Boolean_System_Boolean_"></a>
 
@@ -76,5 +76,5 @@ public static SimpleAssignmentStatementInfo SimpleAssignmentStatementInfo(Statem
 
 #### Returns
 
-[SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentStatementInfo/README.md)
 

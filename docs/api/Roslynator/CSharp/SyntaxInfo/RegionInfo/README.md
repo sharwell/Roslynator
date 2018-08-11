@@ -29,7 +29,7 @@ public static RegionInfo RegionInfo(EndRegionDirectiveTriviaSyntax endRegionDire
 
 #### Returns
 
-[RegionInfo](../../Syntax/RegionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[RegionInfo](../../Syntax/RegionInfo/README.md)
 
 ## RegionInfo\(RegionDirectiveTriviaSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_RegionInfo_Microsoft_CodeAnalysis_CSharp_Syntax_RegionDirectiveTriviaSyntax_"></a>
 
@@ -49,5 +49,5 @@ public static RegionInfo RegionInfo(RegionDirectiveTriviaSyntax regionDirective)
 
 #### Returns
 
-[RegionInfo](../../Syntax/RegionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[RegionInfo](../../Syntax/RegionInfo/README.md)
 

@@ -14,5 +14,5 @@ public static NameGenerator Default { get; }
 
 ### Property Value
 
-[NameGenerator](../README.md)
+Roslynator\.[NameGenerator](../README.md)
 

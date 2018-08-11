@@ -32,7 +32,7 @@ public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, N
 
 #### Returns
 
-[NullCheckExpressionInfo](../../Syntax/NullCheckExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[NullCheckExpressionInfo](../../Syntax/NullCheckExpressionInfo/README.md)
 
 ## NullCheckExpressionInfo\(SyntaxNode, SemanticModel, NullCheckStyles, Boolean, Boolean, CancellationToken\)<a name="Roslynator_CSharp_SyntaxInfo_NullCheckExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_SemanticModel_Roslynator_CSharp_NullCheckStyles_System_Boolean_System_Boolean_System_Threading_CancellationToken_"></a>
 
@@ -57,5 +57,5 @@ public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, S
 
 #### Returns
 
-[NullCheckExpressionInfo](../../Syntax/NullCheckExpressionInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[NullCheckExpressionInfo](../../Syntax/NullCheckExpressionInfo/README.md)
 

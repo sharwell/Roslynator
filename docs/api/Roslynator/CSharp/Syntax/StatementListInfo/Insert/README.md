@@ -21,5 +21,5 @@ public StatementListInfo Insert(int index, StatementSyntax statement)
 
 ### Returns
 
-[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
 

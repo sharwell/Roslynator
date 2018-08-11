@@ -20,5 +20,5 @@ public GenericInfo WithConstraintClauses(SyntaxList<TypeParameterConstraintClaus
 
 ### Returns
 
-[GenericInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md)
 

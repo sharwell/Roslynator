@@ -1006,7 +1006,7 @@ namespace Roslynator.Documentation
 
                 if (!containingNamespace.IsGlobalNamespace)
                 {
-                    writer.WriteSymbol(containingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                    writer.WriteNamespaceSymbol(containingNamespace);
                     writer.WriteString(".");
                 }
 

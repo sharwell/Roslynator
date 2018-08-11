@@ -10,5 +10,5 @@ public IfStatementOrElseClause Current { get; }
 
 ### Property Value
 
-[IfStatementOrElseClause](../../../IfStatementOrElseClause/README.md)
+Roslynator\.CSharp\.[IfStatementOrElseClause](../../../IfStatementOrElseClause/README.md)
 

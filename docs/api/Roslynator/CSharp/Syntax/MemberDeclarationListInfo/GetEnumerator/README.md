@@ -14,5 +14,5 @@ public SyntaxList<MemberDeclarationSyntax>.Enumerator GetEnumerator()
 
 ### Returns
 
-[SyntaxList\<MemberDeclarationSyntax>.Enumerator](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1.enumerator)
+Microsoft\.CodeAnalysis\.[SyntaxList\<MemberDeclarationSyntax>.Enumerator](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1.enumerator)
 

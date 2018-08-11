@@ -20,5 +20,5 @@ public MemberDeclarationListInfo AddRange(IEnumerable<MemberDeclarationSyntax> m
 
 ### Returns
 
-[MemberDeclarationListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 

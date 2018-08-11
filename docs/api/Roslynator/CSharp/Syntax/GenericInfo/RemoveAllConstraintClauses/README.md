@@ -14,5 +14,5 @@ public GenericInfo RemoveAllConstraintClauses()
 
 ### Returns
 
-[GenericInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md)
 

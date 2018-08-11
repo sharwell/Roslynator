@@ -30,7 +30,7 @@ public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(Expres
 
 #### Returns
 
-[LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationStatementInfo/README.md)
 
 ## LocalDeclarationStatementInfo\(LocalDeclarationStatementSyntax, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_LocalDeclarationStatementInfo_Microsoft_CodeAnalysis_CSharp_Syntax_LocalDeclarationStatementSyntax_System_Boolean_"></a>
 
@@ -51,5 +51,5 @@ public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(LocalD
 
 #### Returns
 
-[LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationStatementInfo/README.md)
 

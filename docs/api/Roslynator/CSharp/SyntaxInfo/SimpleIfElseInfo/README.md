@@ -22,5 +22,5 @@ public static SimpleIfElseInfo SimpleIfElseInfo(IfStatementSyntax ifStatement, b
 
 ### Returns
 
-[SimpleIfElseInfo](../../Syntax/SimpleIfElseInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SimpleIfElseInfo](../../Syntax/SimpleIfElseInfo/README.md)
 

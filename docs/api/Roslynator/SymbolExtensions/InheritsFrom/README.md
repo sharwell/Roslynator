@@ -22,5 +22,5 @@ public static bool InheritsFrom(this ITypeSymbol type, ITypeSymbol baseType, boo
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

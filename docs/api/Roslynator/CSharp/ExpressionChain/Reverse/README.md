@@ -14,5 +14,5 @@ public ExpressionChain.Reversed Reverse()
 
 ### Returns
 
-[ExpressionChain.Reversed](../Reversed/README.md)
+Roslynator\.CSharp\.[ExpressionChain.Reversed](../Reversed/README.md)
 

@@ -20,5 +20,5 @@ public static bool IsAutoImplemented(this AccessorDeclarationSyntax accessorDecl
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

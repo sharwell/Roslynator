@@ -31,7 +31,7 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## IsParameterArrayOf\(IParameterSymbol, SpecialType, SpecialType\)<a name="Roslynator_SymbolExtensions_IsParameterArrayOf_Microsoft_CodeAnalysis_IParameterSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
@@ -53,7 +53,7 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## IsParameterArrayOf\(IParameterSymbol, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_SymbolExtensions_IsParameterArrayOf_Microsoft_CodeAnalysis_IParameterSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
@@ -76,5 +76,5 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

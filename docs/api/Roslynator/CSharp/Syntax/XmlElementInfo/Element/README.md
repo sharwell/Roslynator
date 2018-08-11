@@ -14,5 +14,5 @@ public XmlNodeSyntax Element { get; }
 
 ### Property Value
 
-[XmlNodeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.xmlnodesyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[XmlNodeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.xmlnodesyntax)
 

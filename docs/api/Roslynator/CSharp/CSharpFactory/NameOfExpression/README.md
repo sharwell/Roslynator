@@ -25,7 +25,7 @@ public static InvocationExpressionSyntax NameOfExpression(ExpressionSyntax expre
 
 #### Returns
 
-[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 
 ## NameOfExpression\(String\)<a name="Roslynator_CSharp_CSharpFactory_NameOfExpression_System_String_"></a>
 
@@ -41,5 +41,5 @@ public static InvocationExpressionSyntax NameOfExpression(string identifier)
 
 #### Returns
 
-[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 

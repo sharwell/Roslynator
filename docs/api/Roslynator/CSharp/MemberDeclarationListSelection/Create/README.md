@@ -31,7 +31,7 @@ public static MemberDeclarationListSelection Create(CompilationUnitSyntax compil
 
 #### Returns
 
-[MemberDeclarationListSelection](../README.md)
+Roslynator\.CSharp\.[MemberDeclarationListSelection](../README.md)
 
 ## Create\(NamespaceDeclarationSyntax, TextSpan\)<a name="Roslynator_CSharp_MemberDeclarationListSelection_Create_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_"></a>
 
@@ -52,7 +52,7 @@ public static MemberDeclarationListSelection Create(NamespaceDeclarationSyntax n
 
 #### Returns
 
-[MemberDeclarationListSelection](../README.md)
+Roslynator\.CSharp\.[MemberDeclarationListSelection](../README.md)
 
 ## Create\(TypeDeclarationSyntax, TextSpan\)<a name="Roslynator_CSharp_MemberDeclarationListSelection_Create_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_"></a>
 
@@ -73,5 +73,5 @@ public static MemberDeclarationListSelection Create(TypeDeclarationSyntax typeDe
 
 #### Returns
 
-[MemberDeclarationListSelection](../README.md)
+Roslynator\.CSharp\.[MemberDeclarationListSelection](../README.md)
 

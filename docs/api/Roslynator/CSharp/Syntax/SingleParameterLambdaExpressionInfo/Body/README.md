@@ -14,5 +14,5 @@ public CSharpSyntaxNode Body { get; }
 
 ### Property Value
 
-[CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
+Microsoft\.CodeAnalysis\.CSharp\.[CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
 

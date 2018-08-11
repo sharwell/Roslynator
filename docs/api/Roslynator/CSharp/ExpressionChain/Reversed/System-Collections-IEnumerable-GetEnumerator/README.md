@@ -10,7 +10,7 @@ private IEnumerator IEnumerable.GetEnumerator()
 
 ### Returns
 
-[IEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator)
+System\.Collections\.[IEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator)
 
 ### Implements
 

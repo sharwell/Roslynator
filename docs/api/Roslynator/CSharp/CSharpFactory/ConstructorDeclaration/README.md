@@ -28,7 +28,7 @@ public static ConstructorDeclarationSyntax ConstructorDeclaration(SyntaxTokenLis
 
 #### Returns
 
-[ConstructorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructordeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructordeclarationsyntax)
 
 ## ConstructorDeclaration\(SyntaxTokenList, SyntaxToken, ParameterListSyntax, BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ConstructorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
@@ -47,5 +47,5 @@ public static ConstructorDeclarationSyntax ConstructorDeclaration(SyntaxTokenLis
 
 #### Returns
 
-[ConstructorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructordeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructordeclarationsyntax)
 

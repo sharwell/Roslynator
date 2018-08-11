@@ -28,7 +28,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Equ
 
 #### Returns
 
-[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 
 ## EnumMemberDeclaration\(String, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EnumMemberDeclaration_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
@@ -45,7 +45,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Exp
 
 #### Returns
 
-[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 
 ## EnumMemberDeclaration\(SyntaxToken, EqualsValueClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EnumMemberDeclaration_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_"></a>
 
@@ -62,7 +62,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 #### Returns
 
-[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 
 ## EnumMemberDeclaration\(SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EnumMemberDeclaration_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
@@ -79,5 +79,5 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 #### Returns
 
-[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 

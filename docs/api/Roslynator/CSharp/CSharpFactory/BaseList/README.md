@@ -27,7 +27,7 @@ public static BaseListSyntax BaseList(BaseTypeSyntax type)
 
 #### Returns
 
-[BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
 
 ## BaseList\(BaseTypeSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax___"></a>
 
@@ -43,7 +43,7 @@ public static BaseListSyntax BaseList(params BaseTypeSyntax[] types)
 
 #### Returns
 
-[BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
 
 ## BaseList\(SyntaxToken, BaseTypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_"></a>
 
@@ -60,7 +60,7 @@ public static BaseListSyntax BaseList(SyntaxToken colonToken, BaseTypeSyntax bas
 
 #### Returns
 
-[BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
 
 ## BaseList\(SyntaxToken, BaseTypeSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax___"></a>
 
@@ -77,5 +77,5 @@ public static BaseListSyntax BaseList(SyntaxToken colonToken, params BaseTypeSyn
 
 #### Returns
 
-[BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
 

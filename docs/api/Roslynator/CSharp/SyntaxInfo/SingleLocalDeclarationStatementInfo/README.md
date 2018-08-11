@@ -30,7 +30,7 @@ public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatemen
 
 #### Returns
 
-[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
 
 ## SingleLocalDeclarationStatementInfo\(LocalDeclarationStatementSyntax, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SingleLocalDeclarationStatementInfo_Microsoft_CodeAnalysis_CSharp_Syntax_LocalDeclarationStatementSyntax_System_Boolean_"></a>
 
@@ -51,7 +51,7 @@ public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatemen
 
 #### Returns
 
-[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
 
 ## SingleLocalDeclarationStatementInfo\(VariableDeclarationSyntax, Boolean\)<a name="Roslynator_CSharp_SyntaxInfo_SingleLocalDeclarationStatementInfo_Microsoft_CodeAnalysis_CSharp_Syntax_VariableDeclarationSyntax_System_Boolean_"></a>
 
@@ -72,5 +72,5 @@ public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatemen
 
 #### Returns
 
-[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
 

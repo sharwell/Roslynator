@@ -20,5 +20,5 @@ public UsingDirectiveListInfo Add(UsingDirectiveSyntax usingDirective)
 
 ### Returns
 
-[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
 

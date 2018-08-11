@@ -20,5 +20,5 @@ public static int EndLine(this FileLinePositionSpan fileLinePositionSpan)
 
 ### Returns
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
+System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 

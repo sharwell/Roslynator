@@ -21,5 +21,5 @@ public MemberDeclarationListInfo Replace(MemberDeclarationSyntax memberInList, M
 
 ### Returns
 
-[MemberDeclarationListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 

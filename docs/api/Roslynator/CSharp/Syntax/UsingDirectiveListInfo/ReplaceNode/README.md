@@ -21,5 +21,5 @@ public UsingDirectiveListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newNode
 
 ### Returns
 
-[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
 

@@ -29,7 +29,7 @@ public StatementListInfo WithStatements(IEnumerable<StatementSyntax> statements)
 
 #### Returns
 
-[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
 
 ## WithStatements\(SyntaxList\<StatementSyntax>\)<a name="Roslynator_CSharp_Syntax_StatementListInfo_WithStatements_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax__"></a>
 
@@ -49,5 +49,5 @@ public StatementListInfo WithStatements(SyntaxList<StatementSyntax> statements)
 
 #### Returns
 
-[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
 

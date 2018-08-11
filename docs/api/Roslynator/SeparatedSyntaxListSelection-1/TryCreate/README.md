@@ -22,6 +22,6 @@ public static bool TryCreate(SeparatedSyntaxList<TNode> list, TextSpan span, out
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 True if the specified span contains at least one node; otherwise, false\.

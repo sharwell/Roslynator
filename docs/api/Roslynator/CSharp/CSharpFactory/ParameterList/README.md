@@ -25,7 +25,7 @@ public static ParameterListSyntax ParameterList(ParameterSyntax parameter)
 
 #### Returns
 
-[ParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parameterlistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parameterlistsyntax)
 
 ## ParameterList\(ParameterSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_ParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax___"></a>
 
@@ -41,5 +41,5 @@ public static ParameterListSyntax ParameterList(params ParameterSyntax[] paramet
 
 #### Returns
 
-[ParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parameterlistsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parameterlistsyntax)
 

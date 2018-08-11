@@ -27,7 +27,7 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 #### Returns
 
-[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 
 ## SimpleMemberInvocationExpression\(ExpressionSyntax, SimpleNameSyntax, ArgumentListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SimpleMemberInvocationExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_SimpleNameSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_"></a>
 
@@ -45,7 +45,7 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 #### Returns
 
-[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 
 ## SimpleMemberInvocationExpression\(ExpressionSyntax, SimpleNameSyntax, ArgumentSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SimpleMemberInvocationExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_SimpleNameSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax_"></a>
 
@@ -63,5 +63,5 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 #### Returns
 
-[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 

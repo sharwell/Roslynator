@@ -17,5 +17,5 @@ public static bool operator ==(in AsExpressionInfo info1, in AsExpressionInfo in
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

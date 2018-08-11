@@ -20,5 +20,5 @@ public static IfStatementCascade AsCascade(this IfStatementSyntax ifStatement)
 
 ### Returns
 
-[IfStatementCascade](../../IfStatementCascade/README.md)
+Roslynator\.CSharp\.[IfStatementCascade](../../IfStatementCascade/README.md)
 

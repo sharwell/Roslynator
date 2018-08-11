@@ -21,5 +21,5 @@ public StatementListInfo ReplaceRange(StatementSyntax statementInList, IEnumerab
 
 ### Returns
 
-[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
 

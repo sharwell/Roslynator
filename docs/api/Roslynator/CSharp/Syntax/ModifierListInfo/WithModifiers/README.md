@@ -20,5 +20,5 @@ public ModifierListInfo WithModifiers(SyntaxTokenList modifiers)
 
 ### Returns
 
-[ModifierListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../README.md)
 

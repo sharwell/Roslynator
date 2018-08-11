@@ -14,5 +14,5 @@ public IfStatementCascade.Enumerator GetEnumerator()
 
 ### Returns
 
-[IfStatementCascade.Enumerator](../Enumerator/README.md)
+Roslynator\.CSharp\.[IfStatementCascade.Enumerator](../Enumerator/README.md)
 

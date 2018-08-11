@@ -17,5 +17,5 @@ public static bool operator ==(in XmlElementInfo info1, in XmlElementInfo info2)
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

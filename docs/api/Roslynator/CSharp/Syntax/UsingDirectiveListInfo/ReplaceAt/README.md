@@ -21,5 +21,5 @@ public UsingDirectiveListInfo ReplaceAt(int index, UsingDirectiveSyntax newUsing
 
 ### Returns
 
-[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
 

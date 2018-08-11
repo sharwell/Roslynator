@@ -14,5 +14,5 @@ public string ValueText { get; }
 
 ### Property Value
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
+System\.[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 

@@ -31,7 +31,7 @@ public static bool Implements(this ITypeSymbol typeSymbol, INamedTypeSymbol inte
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 ## Implements\(ITypeSymbol, SpecialType, Boolean\)<a name="Roslynator_SymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_System_Boolean_"></a>
 
@@ -53,5 +53,5 @@ public static bool Implements(this ITypeSymbol typeSymbol, SpecialType interface
 
 #### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

@@ -29,7 +29,7 @@ public static SyntaxToken WithFormatterAnnotation(this SyntaxToken token)
 
 #### Returns
 
-[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
+Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
 ## WithFormatterAnnotation\<TNode>\(TNode\)<a name="Roslynator_CSharp_WorkspaceSyntaxExtensions_WithFormatterAnnotation__1___0_"></a>
 
@@ -55,5 +55,5 @@ public static TNode WithFormatterAnnotation<TNode>(this TNode node) where TNode 
 
 #### Returns
 
-TNode
+Roslynator\.CSharp\.TNode
 

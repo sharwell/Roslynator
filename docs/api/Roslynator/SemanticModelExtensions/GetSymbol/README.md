@@ -22,5 +22,5 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, SyntaxNode nod
 
 ### Returns
 
-[ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
+Microsoft\.CodeAnalysis\.[ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 

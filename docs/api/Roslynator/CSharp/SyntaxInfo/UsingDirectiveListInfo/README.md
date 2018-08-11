@@ -30,7 +30,7 @@ public static UsingDirectiveListInfo UsingDirectiveListInfo(CompilationUnitSynta
 
 #### Returns
 
-[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
 
 ## UsingDirectiveListInfo\(NamespaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_UsingDirectiveListInfo_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_"></a>
 
@@ -50,7 +50,7 @@ public static UsingDirectiveListInfo UsingDirectiveListInfo(NamespaceDeclaration
 
 #### Returns
 
-[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
 
 ## UsingDirectiveListInfo\(SyntaxNode\)<a name="Roslynator_CSharp_SyntaxInfo_UsingDirectiveListInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
@@ -70,5 +70,5 @@ public static UsingDirectiveListInfo UsingDirectiveListInfo(SyntaxNode node)
 
 #### Returns
 
-[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
 

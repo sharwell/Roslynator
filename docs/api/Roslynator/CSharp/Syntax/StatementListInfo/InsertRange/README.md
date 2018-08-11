@@ -21,5 +21,5 @@ public StatementListInfo InsertRange(int index, IEnumerable<StatementSyntax> sta
 
 ### Returns
 
-[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
 

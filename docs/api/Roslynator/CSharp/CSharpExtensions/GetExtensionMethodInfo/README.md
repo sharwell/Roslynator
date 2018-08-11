@@ -22,5 +22,5 @@ public static ExtensionMethodSymbolInfo GetExtensionMethodInfo(this SemanticMode
 
 ### Returns
 
-[ExtensionMethodSymbolInfo](../../../ExtensionMethodSymbolInfo/README.md)
+Roslynator\.[ExtensionMethodSymbolInfo](../../../ExtensionMethodSymbolInfo/README.md)
 

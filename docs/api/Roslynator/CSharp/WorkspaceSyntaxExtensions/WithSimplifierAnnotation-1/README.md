@@ -30,7 +30,7 @@ public static SyntaxToken WithSimplifierAnnotation(this SyntaxToken token)
 
 #### Returns
 
-[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
+Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
 ## WithSimplifierAnnotation\<TNode>\(TNode\)<a name="Roslynator_CSharp_WorkspaceSyntaxExtensions_WithSimplifierAnnotation__1___0_"></a>
 
@@ -56,5 +56,5 @@ public static TNode WithSimplifierAnnotation<TNode>(this TNode node) where TNode
 
 #### Returns
 
-TNode
+Roslynator\.CSharp\.TNode
 

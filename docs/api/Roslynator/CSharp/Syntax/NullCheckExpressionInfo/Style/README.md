@@ -14,5 +14,5 @@ public NullCheckStyles Style { get; }
 
 ### Property Value
 
-[NullCheckStyles](../../../NullCheckStyles/README.md)
+Roslynator\.CSharp\.[NullCheckStyles](../../../NullCheckStyles/README.md)
 

@@ -22,5 +22,5 @@ public static bool IsMultiLineSpan(this SyntaxTree syntaxTree, TextSpan span, Ca
 
 ### Returns
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
+System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

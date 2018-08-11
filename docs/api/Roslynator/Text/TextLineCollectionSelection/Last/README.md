@@ -14,7 +14,7 @@ public TextLine Last()
 
 ### Returns
 
-[TextLine](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textline)
+Microsoft\.CodeAnalysis\.Text\.[TextLine](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textline)
 
 ### Implements
 

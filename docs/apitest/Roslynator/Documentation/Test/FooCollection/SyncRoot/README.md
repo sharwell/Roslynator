@@ -10,7 +10,7 @@ public object SyncRoot { get; }
 
 ### Property Value
 
-[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
+System\.[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
 
 ### Implements
 

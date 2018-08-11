@@ -20,5 +20,5 @@ public UsingDirectiveListInfo RemoveAt(int index)
 
 ### Returns
 
-[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
 

@@ -20,5 +20,5 @@ public static SyntaxTriviaList GetLeadingAndTrailingTrivia(this SyntaxNode node)
 
 ### Returns
 
-[SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)
+Microsoft\.CodeAnalysis\.[SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)
 

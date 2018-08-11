@@ -36,7 +36,7 @@ public static GenericInfo GenericInfo(DelegateDeclarationSyntax delegateDeclarat
 
 #### Returns
 
-[GenericInfo](../../Syntax/GenericInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
 ## GenericInfo\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_"></a>
 
@@ -56,7 +56,7 @@ public static GenericInfo GenericInfo(LocalFunctionStatementSyntax localFunction
 
 #### Returns
 
-[GenericInfo](../../Syntax/GenericInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
 ## GenericInfo\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_"></a>
 
@@ -76,7 +76,7 @@ public static GenericInfo GenericInfo(MethodDeclarationSyntax methodDeclaration)
 
 #### Returns
 
-[GenericInfo](../../Syntax/GenericInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
 ## GenericInfo\(SyntaxNode\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_"></a>
 
@@ -96,7 +96,7 @@ public static GenericInfo GenericInfo(SyntaxNode node)
 
 #### Returns
 
-[GenericInfo](../../Syntax/GenericInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
 ## GenericInfo\(TypeDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_"></a>
 
@@ -116,7 +116,7 @@ public static GenericInfo GenericInfo(TypeDeclarationSyntax typeDeclaration)
 
 #### Returns
 
-[GenericInfo](../../Syntax/GenericInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
 ## GenericInfo\(TypeParameterConstraintClauseSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintClauseSyntax_"></a>
 
@@ -136,7 +136,7 @@ public static GenericInfo GenericInfo(TypeParameterConstraintClauseSyntax constr
 
 #### Returns
 
-[GenericInfo](../../Syntax/GenericInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
 ## GenericInfo\(TypeParameterConstraintSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_"></a>
 
@@ -156,7 +156,7 @@ public static GenericInfo GenericInfo(TypeParameterConstraintSyntax typeParamete
 
 #### Returns
 
-[GenericInfo](../../Syntax/GenericInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
 ## GenericInfo\(TypeParameterListSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterListSyntax_"></a>
 
@@ -176,7 +176,7 @@ public static GenericInfo GenericInfo(TypeParameterListSyntax typeParameterList)
 
 #### Returns
 
-[GenericInfo](../../Syntax/GenericInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
 ## GenericInfo\(TypeParameterSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterSyntax_"></a>
 
@@ -196,5 +196,5 @@ public static GenericInfo GenericInfo(TypeParameterSyntax typeParameter)
 
 #### Returns
 
-[GenericInfo](../../Syntax/GenericInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 

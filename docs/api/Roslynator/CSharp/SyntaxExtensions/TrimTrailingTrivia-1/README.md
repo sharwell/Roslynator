@@ -31,7 +31,7 @@ public static SyntaxToken TrimTrailingTrivia(this SyntaxToken token)
 
 #### Returns
 
-[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
+Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
 ## TrimTrailingTrivia\<TNode>\(TNode\)<a name="Roslynator_CSharp_SyntaxExtensions_TrimTrailingTrivia__1___0_"></a>
 

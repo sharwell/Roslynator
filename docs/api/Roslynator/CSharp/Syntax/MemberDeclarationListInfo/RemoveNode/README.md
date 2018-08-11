@@ -21,5 +21,5 @@ public MemberDeclarationListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions
 
 ### Returns
 
-[MemberDeclarationListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 

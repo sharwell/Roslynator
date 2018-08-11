@@ -21,5 +21,5 @@ public UsingDirectiveListInfo ReplaceRange(UsingDirectiveSyntax usingInLine, IEn
 
 ### Returns
 
-[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
 

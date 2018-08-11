@@ -14,5 +14,5 @@ public SimpleNameSyntax Name { get; }
 
 ### Property Value
 
-[SimpleNameSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.simplenamesyntax)
+Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SimpleNameSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.simplenamesyntax)
 

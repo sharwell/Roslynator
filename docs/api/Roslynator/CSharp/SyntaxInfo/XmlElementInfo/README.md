@@ -20,5 +20,5 @@ public static XmlElementInfo XmlElementInfo(XmlNodeSyntax xmlNode)
 
 ### Returns
 
-[XmlElementInfo](../../Syntax/XmlElementInfo/README.md)
+Roslynator\.CSharp\.Syntax\.[XmlElementInfo](../../Syntax/XmlElementInfo/README.md)
 
