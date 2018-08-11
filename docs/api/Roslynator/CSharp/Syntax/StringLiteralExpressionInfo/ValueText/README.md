@@ -1,6 +1,6 @@
 # StringLiteralExpressionInfo\.ValueText Property
 
-**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[StringLiteralExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

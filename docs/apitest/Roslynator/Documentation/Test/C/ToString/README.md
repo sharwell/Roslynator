@@ -1,6 +1,6 @@
 # C\.ToString\(\) Method
 
-**Namespace**: [Roslynator.Documentation.Test](../../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[C](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

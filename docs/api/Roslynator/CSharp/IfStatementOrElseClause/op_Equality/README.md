@@ -1,6 +1,6 @@
 # IfStatementOrElseClause\.Equality\(IfStatementOrElseClause, IfStatementOrElseClause\) Operator
 
-**Namespace**: [Roslynator.CSharp](../../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementOrElseClause](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

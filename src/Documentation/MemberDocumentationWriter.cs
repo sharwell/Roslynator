@@ -68,7 +68,7 @@ namespace Roslynator.Documentation
                 {
                     case MemberDocumentationParts.Namespace:
                         {
-                            Writer.WriteNamespace(symbol);
+                            Writer.WriteContainingNamespaceAndContainingType(symbol);
                             break;
                         }
                     case MemberDocumentationParts.Assembly:

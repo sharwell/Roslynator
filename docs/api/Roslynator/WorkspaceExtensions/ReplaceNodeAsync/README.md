@@ -1,6 +1,6 @@
 # WorkspaceExtensions\.ReplaceNodeAsync Method
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[WorkspaceExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 

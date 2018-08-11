@@ -1,6 +1,6 @@
 # ClassName\(\) Constructor
 
-**Namespace**: [System](../../README.md)
+**Containing Type**: [System](../../README.md)\.[ClassName](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

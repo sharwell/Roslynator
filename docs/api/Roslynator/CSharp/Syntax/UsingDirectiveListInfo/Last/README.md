@@ -1,6 +1,6 @@
 # UsingDirectiveListInfo\.Last\(\) Method
 
-**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[UsingDirectiveListInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,6 +1,6 @@
 # WorkspaceSyntaxExtensions\.WithRenameAnnotation\(SyntaxToken\) Method
 
-**Namespace**: [Roslynator.CSharp](../../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md)\.[WorkspaceSyntaxExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 

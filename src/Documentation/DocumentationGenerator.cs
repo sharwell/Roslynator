@@ -491,7 +491,7 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Namespace:
                             {
-                                writer.WriteNamespace(typeSymbol);
+                                writer.WriteContainingNamespace(typeSymbol);
                                 break;
                             }
                         case TypeDocumentationParts.Assembly:
@@ -873,7 +873,8 @@ namespace Roslynator.Documentation
                                 }
 
                                 writer.WriteHeading2(Resources.GetPluralName(TypeKind.Class));
-                                WriteBulletItem(objectType, nodes);
+                                WriteTypeHierarchy(objectType, nodes, level: 0);
+                                writer.WriteLine();
                             }
 
                             break;
@@ -956,12 +957,18 @@ namespace Roslynator.Documentation
                 }
             }
 
-            void WriteBulletItem(ITypeSymbol baseType, HashSet<ITypeSymbol> nodes)
+            void WriteTypeHierarchy(ITypeSymbol baseType, HashSet<ITypeSymbol> nodes, int level)
             {
-                writer.WriteStartBulletItem();
+                writer.WriteLine();
+
+                for (int i = 0; i < level; i++)
+                    writer.WriteString("|-");
+
                 WriteLink(baseType);
 
                 nodes.Remove(baseType);
+
+                level++;
 
                 foreach (ITypeSymbol derivedType in nodes
                     .Where(f => f.BaseType?.OriginalDefinition == baseType.OriginalDefinition)
@@ -969,10 +976,10 @@ namespace Roslynator.Documentation
                     .ThenBy(f => f.ToDisplayString(format))
                     .ToList())
                 {
-                    WriteBulletItem(derivedType, nodes);
+                    WriteTypeHierarchy(derivedType, nodes, level);
                 }
 
-                writer.WriteEndBulletItem();
+                level--;
             }
 
             void WriteLink(ISymbol symbol)

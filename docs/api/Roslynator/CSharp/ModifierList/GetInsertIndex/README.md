@@ -1,6 +1,6 @@
 # ModifierList\.GetInsertIndex Method
 
-**Namespace**: [Roslynator.CSharp](../../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md)\.[ModifierList](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

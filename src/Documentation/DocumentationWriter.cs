@@ -316,12 +316,29 @@ namespace Roslynator.Documentation
             WriteHeading(1, symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName, addLink: false);
         }
 
-        public virtual void WriteNamespace(ISymbol symbol)
+        public virtual void WriteContainingNamespace(ISymbol symbol)
         {
             WriteBold(Resources.NamespaceTitle);
             WriteString(Resources.Colon);
             WriteSpace();
             WriteLink(symbol.ContainingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+            WriteLine();
+            WriteLine();
+        }
+
+        public virtual void WriteContainingNamespaceAndContainingType(ISymbol symbol)
+        {
+            WriteBold(Resources.ContainingTypeTitle);
+            WriteString(Resources.Colon);
+            WriteSpace();
+
+            if (!symbol.ContainingNamespace.IsGlobalNamespace)
+            {
+                WriteLink(symbol.ContainingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                WriteString(".");
+            }
+
+            WriteLink(symbol.ContainingType, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
             WriteLine();
             WriteLine();
         }

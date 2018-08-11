@@ -1,6 +1,6 @@
 # FileLinePositionSpanExtensions\.IsMultiLine\(FileLinePositionSpan\) Method
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[FileLinePositionSpanExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

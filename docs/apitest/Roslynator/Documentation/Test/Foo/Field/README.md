@@ -1,6 +1,6 @@
 # Foo\.Field Field
 
-**Namespace**: [Roslynator.Documentation.Test](../../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[Foo](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

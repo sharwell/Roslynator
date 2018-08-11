@@ -1,6 +1,6 @@
 # EnumExtensions\.IsMoreRestrictiveThan\(Accessibility, Accessibility\) Method
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[EnumExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

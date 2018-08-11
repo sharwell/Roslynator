@@ -1,6 +1,6 @@
 # CSharpFactory\.TryStatement\(BlockSyntax, CatchClauseSyntax, FinallyClauseSyntax\) Method
 
-**Namespace**: [Roslynator.CSharp](../../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

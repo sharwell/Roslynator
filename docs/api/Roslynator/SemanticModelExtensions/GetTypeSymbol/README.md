@@ -1,6 +1,6 @@
 # SemanticModelExtensions\.GetTypeSymbol\(SemanticModel, SyntaxNode, CancellationToken\) Method
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[SemanticModelExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

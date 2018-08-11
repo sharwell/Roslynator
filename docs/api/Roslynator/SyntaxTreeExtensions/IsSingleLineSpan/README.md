@@ -1,6 +1,6 @@
 # SyntaxTreeExtensions\.IsSingleLineSpan\(SyntaxTree, TextSpan, CancellationToken\) Method
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[SyntaxTreeExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

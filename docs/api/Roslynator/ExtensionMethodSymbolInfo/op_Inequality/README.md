@@ -1,6 +1,6 @@
 # ExtensionMethodSymbolInfo\.Inequality\(ExtensionMethodSymbolInfo, ExtensionMethodSymbolInfo\) Operator
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[ExtensionMethodSymbolInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

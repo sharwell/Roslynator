@@ -1,6 +1,6 @@
 # SingleLocalDeclarationStatementInfo\.Initializer Property
 
-**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SingleLocalDeclarationStatementInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

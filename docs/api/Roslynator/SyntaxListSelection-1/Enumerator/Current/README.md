@@ -1,6 +1,6 @@
 # Enumerator\.Current Property
 
-**Namespace**: [Roslynator](../../../README.md)
+**Containing Type**: [Roslynator](../../../README.md)\.[SyntaxListSelection\<TNode>.Enumerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

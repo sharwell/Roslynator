@@ -1,6 +1,6 @@
 # Enumerator\.Equals\(Object\) Method
 
-**Namespace**: [Roslynator.Text](../../../README.md)
+**Containing Type**: [Roslynator.Text](../../../README.md)\.[TextLineCollectionSelection.Enumerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

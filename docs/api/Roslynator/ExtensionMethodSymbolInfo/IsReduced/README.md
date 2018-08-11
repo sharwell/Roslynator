@@ -1,6 +1,6 @@
 # ExtensionMethodSymbolInfo\.IsReduced Property
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[ExtensionMethodSymbolInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,6 +1,6 @@
 # WorkspaceExtensions\.InsertNodeBeforeAsync\(Document, SyntaxNode, SyntaxNode, CancellationToken\) Method
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[WorkspaceExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 

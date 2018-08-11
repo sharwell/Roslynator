@@ -1,6 +1,6 @@
 # CSharpFacts\.IsLambdaExpression\(SyntaxKind\) Method
 
-**Namespace**: [Roslynator.CSharp](../../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFacts](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

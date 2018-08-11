@@ -1,6 +1,6 @@
 # IImmutableFoo\<T>\.Item\[Int32\] Property
 
-**Namespace**: [Roslynator.Documentation.Test](../../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[IImmutableFoo\<T>](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

@@ -1,6 +1,6 @@
 # FooAttribute\(Object, String, Boolean, Boolean, Byte, Char, Double, Single, Int32, Int64, SByte, Int16, UInt32, UInt64, UInt16, Type, Flags, Flags, Flags, Flags, Flags, Flags\) Constructor
 
-**Namespace**: [Roslynator.Documentation.Test](../../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooAttribute](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

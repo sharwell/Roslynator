@@ -1,6 +1,6 @@
 # IfStatementCascade\.Inequality\(IfStatementCascade, IfStatementCascade\) Operator
 
-**Namespace**: [Roslynator.CSharp](../../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementCascade](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,6 +1,6 @@
 # SeparatedSyntaxListSelection\(SeparatedSyntaxList\<TNode>, TextSpan, Int32, Int32\) Constructor
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[SeparatedSyntaxListSelection\<TNode>](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

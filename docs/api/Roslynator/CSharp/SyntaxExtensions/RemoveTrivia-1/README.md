@@ -1,6 +1,6 @@
 # SyntaxExtensions\.RemoveTrivia\<TNode>\(TNode, TextSpan?\) Method
 
-**Namespace**: [Roslynator.CSharp](../../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

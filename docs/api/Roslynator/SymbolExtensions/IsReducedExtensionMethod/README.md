@@ -1,6 +1,6 @@
 # SymbolExtensions\.IsReducedExtensionMethod\(IMethodSymbol\) Method
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

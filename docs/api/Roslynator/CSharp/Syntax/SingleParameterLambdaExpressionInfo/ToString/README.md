@@ -1,6 +1,6 @@
 # SingleParameterLambdaExpressionInfo\.ToString\(\) Method
 
-**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SingleParameterLambdaExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

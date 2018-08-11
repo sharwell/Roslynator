@@ -1,6 +1,6 @@
 # Bla\.M\(\) Method
 
-**Namespace**: [\<global namespace>](../../README.md)
+**Containing Type**: [Bla](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

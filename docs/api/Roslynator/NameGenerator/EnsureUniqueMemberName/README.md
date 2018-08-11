@@ -1,6 +1,6 @@
 # NameGenerator\.EnsureUniqueMemberName Method
 
-**Namespace**: [Roslynator](../../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[NameGenerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

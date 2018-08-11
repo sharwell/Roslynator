@@ -1,6 +1,6 @@
 # FooDic\<TKey, TValue>\.IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>\.Count Property
 
-**Namespace**: [Roslynator.Documentation.Test](../../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooDic\<TKey, TValue>](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

@@ -1,6 +1,6 @@
 # MemberDeclarationListInfo\.RemoveAt\(Int32\) Method
 
-**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[MemberDeclarationListInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

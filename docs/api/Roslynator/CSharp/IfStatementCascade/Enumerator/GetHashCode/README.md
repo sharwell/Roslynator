@@ -1,6 +1,6 @@
 # Enumerator\.GetHashCode\(\) Method
 
-**Namespace**: [Roslynator.CSharp](../../../README.md)
+**Containing Type**: [Roslynator.CSharp](../../../README.md)\.[IfStatementCascade.Enumerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

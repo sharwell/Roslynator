@@ -1,6 +1,6 @@
 # RegionInfo\.Equals Method
 
-**Namespace**: [Roslynator.CSharp.Syntax](../../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[RegionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
