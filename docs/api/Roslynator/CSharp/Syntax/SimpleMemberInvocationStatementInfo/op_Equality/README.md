@@ -1,6 +1,8 @@
 # SimpleMemberInvocationStatementInfo\.Equality\(SimpleMemberInvocationStatementInfo, SimpleMemberInvocationStatementInfo\) Operator
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleMemberInvocationStatementInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleMemberInvocationStatementInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,6 +1,8 @@
 # Enumerator\.Current Property
 
-**Containing Type**: [Roslynator.Text](../../../README.md)\.[TextLineCollectionSelection.Enumerator](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.Text](../../../README.md)\.[TextLineCollectionSelection.Enumerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

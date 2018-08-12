@@ -1,6 +1,8 @@
 # B\.Item\[Int32\] Property
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[B](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.Documentation.Test](../../README.md)\.[B](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

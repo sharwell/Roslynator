@@ -24,17 +24,6 @@ namespace Roslynator.Documentation
 
         public TypeKind TypeKind => TypeSymbol.TypeKind;
 
-        public IEnumerable<TypeDocumentationModel> TypeModels
-        {
-            get
-            {
-                return TypeSymbol
-                    .GetTypeMembers()
-                    .Where(f => DocumentationModel.IsVisible(f))
-                    .Select(f => DocumentationModel.GetTypeModel(f));
-            }
-        }
-
         internal ImmutableArray<ISymbol> Members
         {
             get

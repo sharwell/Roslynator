@@ -1,5 +1,7 @@
 # SymbolExtensions Class
 
+[Home](../../../README.md)
+
 **Namespace**: [Roslynator.CSharp](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll

@@ -1,6 +1,8 @@
 # IfStatementCascade\.IEnumerable\<IfStatementOrElseClause>\.GetEnumerator\(\) Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementCascade](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementCascade](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

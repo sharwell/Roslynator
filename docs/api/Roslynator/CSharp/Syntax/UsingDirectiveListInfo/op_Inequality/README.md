@@ -1,6 +1,8 @@
 # UsingDirectiveListInfo\.Inequality\(UsingDirectiveListInfo, UsingDirectiveListInfo\) Operator
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[UsingDirectiveListInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[UsingDirectiveListInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

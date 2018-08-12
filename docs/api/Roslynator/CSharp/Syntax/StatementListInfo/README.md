@@ -1,6 +1,6 @@
 # StatementListInfo Struct
 
-[Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+[Home](../../../../README.md) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
 **Namespace**: [Roslynator.CSharp.Syntax](../README.md)
 

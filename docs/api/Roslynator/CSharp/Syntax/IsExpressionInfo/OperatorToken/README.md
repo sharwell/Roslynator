@@ -1,6 +1,8 @@
 # IsExpressionInfo\.OperatorToken Property
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[IsExpressionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[IsExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

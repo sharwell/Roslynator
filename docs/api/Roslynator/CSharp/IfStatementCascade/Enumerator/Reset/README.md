@@ -1,6 +1,8 @@
 # Enumerator\.Reset\(\) Method
 
-**Containing Type**: [Roslynator.CSharp](../../../README.md)\.[IfStatementCascade.Enumerator](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../../README.md)\.[IfStatementCascade.Enumerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

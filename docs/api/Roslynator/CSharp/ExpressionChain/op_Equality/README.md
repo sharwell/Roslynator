@@ -1,6 +1,8 @@
 # ExpressionChain\.Equality\(ExpressionChain, ExpressionChain\) Operator
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[ExpressionChain](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[ExpressionChain](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

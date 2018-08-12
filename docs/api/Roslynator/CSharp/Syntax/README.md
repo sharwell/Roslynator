@@ -1,5 +1,7 @@
 # Roslynator\.CSharp\.Syntax Namespace
 
+[Home](../../../README.md)
+
 ## Structs
 
 | Struct | Summary |

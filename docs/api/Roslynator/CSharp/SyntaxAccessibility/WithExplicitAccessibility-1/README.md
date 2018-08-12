@@ -1,6 +1,8 @@
 # SyntaxAccessibility\.WithExplicitAccessibility\<TNode>\(TNode, Accessibility, IComparer\<SyntaxKind>\) Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxAccessibility](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxAccessibility](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

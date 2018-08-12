@@ -1,6 +1,8 @@
 # CSharpExtensions\.GetTypeSymbol Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpExtensions](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[CSharpExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

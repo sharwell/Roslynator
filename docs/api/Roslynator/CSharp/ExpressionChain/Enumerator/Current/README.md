@@ -1,6 +1,8 @@
 # Enumerator\.Current Property
 
-**Containing Type**: [Roslynator.CSharp](../../../README.md)\.[ExpressionChain.Enumerator](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../../README.md)\.[ExpressionChain.Enumerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

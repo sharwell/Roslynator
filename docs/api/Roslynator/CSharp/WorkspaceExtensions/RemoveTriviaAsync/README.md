@@ -1,6 +1,8 @@
 # WorkspaceExtensions\.RemoveTriviaAsync\(Document, TextSpan, CancellationToken\) Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[WorkspaceExtensions](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[WorkspaceExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 

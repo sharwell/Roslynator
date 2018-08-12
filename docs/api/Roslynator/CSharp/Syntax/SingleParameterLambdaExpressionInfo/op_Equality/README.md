@@ -1,6 +1,8 @@
 # SingleParameterLambdaExpressionInfo\.Equality\(SingleParameterLambdaExpressionInfo, SingleParameterLambdaExpressionInfo\) Operator
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SingleParameterLambdaExpressionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SingleParameterLambdaExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

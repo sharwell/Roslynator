@@ -30,7 +30,6 @@ namespace Roslynator.Documentation
         public abstract string CombinationOfTitle { get; }
         public abstract string ConstructorTitle { get; }
         public abstract string ConstructorsTitle { get; }
-        public abstract string ContainingTypeTitle { get; }
         public abstract string DelegateTitle { get; }
         public abstract string DelegatesTitle { get; }
         public abstract string DeprecatedTitle { get; }
@@ -81,6 +80,7 @@ namespace Roslynator.Documentation
         public abstract string StructsTitle { get; }
         public abstract string SummaryTitle { get; }
         public abstract string TypeParametersTitle { get; }
+        public abstract string TypeTitle { get; }
         public abstract string ValueTitle { get; }
         public abstract string ValuesTitle { get; }
 
@@ -296,7 +296,6 @@ namespace Roslynator.Documentation
             public override string CombinationOfTitle { get; } = "Combination of";
             public override string ConstructorTitle { get; } = "Constructor";
             public override string ConstructorsTitle { get; } = "Constructors";
-            public override string ContainingTypeTitle { get; } = "Containing Type";
             public override string DelegateTitle { get; } = "Delegate";
             public override string DelegatesTitle { get; } = "Delegates";
             public override string DeprecatedTitle { get; } = "deprecated";
@@ -347,6 +346,7 @@ namespace Roslynator.Documentation
             public override string StructsTitle { get; } = "Structs";
             public override string SummaryTitle { get; } = "Summary";
             public override string TypeParametersTitle { get; } = "Type Parameters";
+            public override string TypeTitle { get; } = "Type";
             public override string ValueTitle { get; } = "Value";
             public override string ValuesTitle { get; } = "Values";
         }

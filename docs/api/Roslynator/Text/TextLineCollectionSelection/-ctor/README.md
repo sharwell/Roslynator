@@ -1,6 +1,8 @@
 # TextLineCollectionSelection\(TextLineCollection, TextSpan, Int32, Int32\) Constructor
 
-**Containing Type**: [Roslynator.Text](../../README.md)\.[TextLineCollectionSelection](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.Text](../../README.md)\.[TextLineCollectionSelection](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,6 +1,8 @@
 # MemberDeclarationListSelection\.TryCreate Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[MemberDeclarationListSelection](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[MemberDeclarationListSelection](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

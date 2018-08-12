@@ -1,6 +1,8 @@
 # SyntaxTreeExtensions\.IsMultiLineSpan\(SyntaxTree, TextSpan, CancellationToken\) Method
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxTreeExtensions](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[SyntaxTreeExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,6 +1,8 @@
 # ExtensionMethodSymbolInfo\.Symbol Property
 
-**Containing Type**: [Roslynator](../../README.md)\.[ExtensionMethodSymbolInfo](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[ExtensionMethodSymbolInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

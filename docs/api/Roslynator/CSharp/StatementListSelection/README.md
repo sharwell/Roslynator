@@ -1,6 +1,6 @@
 # StatementListSelection Class
 
-[Properties](#properties) &#x2022; [Methods](#methods)
+[Home](../../../README.md) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
 
 **Namespace**: [Roslynator.CSharp](../README.md)
 

@@ -1,6 +1,8 @@
 # FileLinePositionSpanExtensions\.EndLine\(FileLinePositionSpan\) Method
 
-**Containing Type**: [Roslynator](../../README.md)\.[FileLinePositionSpanExtensions](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[FileLinePositionSpanExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

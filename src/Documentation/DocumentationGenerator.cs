@@ -251,7 +251,7 @@ namespace Roslynator.Documentation
                 {
                     case NamespaceDocumentationParts.Content:
                         {
-                            writer.WriteContent(GetAvailableParts().OrderBy(f => f, NamespacePartComparer).Select(f => Resources.GetHeading(f)));
+                            writer.WriteContent(GetAvailableParts().OrderBy(f => f, NamespacePartComparer).Select(f => Resources.GetHeading(f)), addLinkToRoot: true);
                             break;
                         }
                     case NamespaceDocumentationParts.Summary:
@@ -492,7 +492,7 @@ namespace Roslynator.Documentation
                     {
                         case TypeDocumentationParts.Content:
                             {
-                                writer.WriteContent(GetAvailableParts().OrderBy(f => f, TypePartComparer).Select(f => Resources.GetHeading(f)));
+                                writer.WriteContent(GetAvailableParts().OrderBy(f => f, TypePartComparer).Select(f => Resources.GetHeading(f)), addLinkToRoot: true);
                                 break;
                             }
                         case TypeDocumentationParts.Namespace:

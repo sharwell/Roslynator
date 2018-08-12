@@ -1,6 +1,8 @@
 # BinaryExpressionInfo\.Inequality\(BinaryExpressionInfo, BinaryExpressionInfo\) Operator
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[BinaryExpressionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[BinaryExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,6 +1,8 @@
 # Reversed\.Inequality\(Reversed, Reversed\) Operator
 
-**Containing Type**: [Roslynator.CSharp](../../../README.md)\.[ExpressionChain.Reversed](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../../README.md)\.[ExpressionChain.Reversed](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

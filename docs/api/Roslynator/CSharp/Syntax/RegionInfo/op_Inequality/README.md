@@ -1,6 +1,8 @@
 # RegionInfo\.Inequality\(RegionInfo, RegionInfo\) Operator
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[RegionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[RegionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,6 +1,8 @@
 # SemanticModelExtensions\.GetEnclosingSymbol\<TSymbol>\(SemanticModel, Int32, CancellationToken\) Method
 
-**Containing Type**: [Roslynator](../../README.md)\.[SemanticModelExtensions](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[SemanticModelExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

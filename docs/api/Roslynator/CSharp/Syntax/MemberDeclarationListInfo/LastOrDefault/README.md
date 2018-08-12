@@ -1,6 +1,8 @@
 # MemberDeclarationListInfo\.LastOrDefault\(\) Method
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[MemberDeclarationListInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[MemberDeclarationListInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

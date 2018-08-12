@@ -1,6 +1,8 @@
 # SyntaxExtensions\.IndexOf Method
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxExtensions](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[SyntaxExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

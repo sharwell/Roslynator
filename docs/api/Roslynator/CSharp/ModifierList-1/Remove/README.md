@@ -1,6 +1,8 @@
 # ModifierList\.Remove Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[ModifierList\<TNode>](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[ModifierList\<TNode>](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

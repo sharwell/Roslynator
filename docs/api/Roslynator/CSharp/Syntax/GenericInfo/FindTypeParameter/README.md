@@ -1,6 +1,8 @@
 # GenericInfo\.FindTypeParameter\(String\) Method
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[GenericInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[GenericInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

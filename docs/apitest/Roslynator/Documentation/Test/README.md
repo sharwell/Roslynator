@@ -1,6 +1,6 @@
 # Roslynator\.Documentation\.Test Namespace
 
-[Examples](#examples) &#x2022; [Remarks](#remarks) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums) &#x2022; [Delegates](#delegates) &#x2022; [See Also](#see-also)
+[Home](../../../README.md) &#x2022; [Examples](#examples) &#x2022; [Remarks](#remarks) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums) &#x2022; [Delegates](#delegates) &#x2022; [See Also](#see-also)
 
 test summary
 

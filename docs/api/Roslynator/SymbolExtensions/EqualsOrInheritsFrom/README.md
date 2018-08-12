@@ -1,6 +1,8 @@
 # SymbolExtensions\.EqualsOrInheritsFrom\(ITypeSymbol, ITypeSymbol, Boolean\) Method
 
-**Containing Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

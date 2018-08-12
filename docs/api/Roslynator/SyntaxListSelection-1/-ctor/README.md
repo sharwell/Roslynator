@@ -1,6 +1,8 @@
 # SyntaxListSelection\(SyntaxList\<TNode>, TextSpan, Int32, Int32\) Constructor
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxListSelection\<TNode>](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[SyntaxListSelection\<TNode>](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

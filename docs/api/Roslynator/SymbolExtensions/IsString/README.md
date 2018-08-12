@@ -1,6 +1,8 @@
 # SymbolExtensions\.IsString\(ITypeSymbol\) Method
 
-**Containing Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

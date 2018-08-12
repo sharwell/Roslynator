@@ -1,6 +1,8 @@
 # SeparatedSyntaxListSelection\<TNode>\.Item\[Int32\] Property
 
-**Containing Type**: [Roslynator](../../README.md)\.[SeparatedSyntaxListSelection\<TNode>](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[SeparatedSyntaxListSelection\<TNode>](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

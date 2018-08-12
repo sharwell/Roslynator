@@ -1,6 +1,8 @@
 # AsExpressionInfo\.Type Property
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[AsExpressionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[AsExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

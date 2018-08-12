@@ -1,6 +1,8 @@
 # StringConcatenationExpressionInfo\.BinaryExpression Property
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[StringConcatenationExpressionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[StringConcatenationExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

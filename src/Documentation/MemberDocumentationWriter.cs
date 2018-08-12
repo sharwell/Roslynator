@@ -62,13 +62,15 @@ namespace Roslynator.Documentation
 
             WriteTitle(symbol, isOverloaded: model.IsOverloaded);
 
+            Writer.WriteContent(Array.Empty<string>(), addLinkToRoot: true);
+
             foreach (MemberDocumentationParts part in EnabledAndSortedMemberParts)
             {
                 switch (part)
                 {
                     case MemberDocumentationParts.Namespace:
                         {
-                            Writer.WriteContainingNamespaceAndContainingType(symbol);
+                            Writer.WriteContainingType(symbol);
                             break;
                         }
                     case MemberDocumentationParts.Assembly:

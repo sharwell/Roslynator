@@ -1,6 +1,8 @@
 # FooEvent\.IFoo\.Changed Event
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooEvent](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooEvent](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

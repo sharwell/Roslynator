@@ -1,6 +1,8 @@
 # AssignmentExpressionInfo\.GetHashCode\(\) Method
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[AssignmentExpressionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[AssignmentExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

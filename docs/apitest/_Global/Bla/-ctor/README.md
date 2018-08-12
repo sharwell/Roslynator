@@ -1,6 +1,8 @@
 # Bla\(\) Constructor
 
-**Containing Type**: [Bla](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Bla](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

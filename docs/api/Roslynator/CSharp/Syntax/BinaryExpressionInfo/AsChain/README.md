@@ -1,6 +1,8 @@
 # BinaryExpressionInfo\.AsChain\(\) Method
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[BinaryExpressionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[BinaryExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

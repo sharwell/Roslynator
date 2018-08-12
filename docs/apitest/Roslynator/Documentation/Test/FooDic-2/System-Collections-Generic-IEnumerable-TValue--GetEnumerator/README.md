@@ -1,6 +1,8 @@
 # FooDic\<TKey, TValue>\.IEnumerable\<TValue>\.GetEnumerator\(\) Method
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooDic\<TKey, TValue>](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooDic\<TKey, TValue>](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

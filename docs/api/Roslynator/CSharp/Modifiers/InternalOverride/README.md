@@ -1,6 +1,8 @@
 # Modifiers\.InternalOverride\(\) Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[Modifiers](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[Modifiers](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

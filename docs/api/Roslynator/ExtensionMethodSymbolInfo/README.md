@@ -1,6 +1,6 @@
 # ExtensionMethodSymbolInfo Struct
 
-[Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators)
+[Home](../../README.md) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators)
 
 **Namespace**: [Roslynator](../README.md)
 

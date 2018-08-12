@@ -1,6 +1,8 @@
 # SyntaxAccessibility\.IsPubliclyVisible\(MemberDeclarationSyntax\) Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxAccessibility](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxAccessibility](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,6 +1,8 @@
 # TextLineCollectionSelection\.Item\[Int32\] Property
 
-**Containing Type**: [Roslynator.Text](../../README.md)\.[TextLineCollectionSelection](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.Text](../../README.md)\.[TextLineCollectionSelection](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

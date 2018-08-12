@@ -1,6 +1,8 @@
 # FooDic\<TKey, TValue>\.IReadOnlyList\<KeyValuePair\<TKey, TValue>>\.Item\[Int32\] Property
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooDic\<TKey, TValue>](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooDic\<TKey, TValue>](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

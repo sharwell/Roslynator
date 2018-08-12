@@ -1,6 +1,8 @@
 # StatementListSelection\.TryCreate Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[StatementListSelection](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[StatementListSelection](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

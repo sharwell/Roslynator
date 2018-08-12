@@ -1,6 +1,8 @@
 # SingleLocalDeclarationStatementInfo\.Value Property
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SingleLocalDeclarationStatementInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SingleLocalDeclarationStatementInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

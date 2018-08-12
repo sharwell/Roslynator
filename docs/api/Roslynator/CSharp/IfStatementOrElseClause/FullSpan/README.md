@@ -1,6 +1,8 @@
 # IfStatementOrElseClause\.FullSpan Property
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementOrElseClause](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementOrElseClause](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

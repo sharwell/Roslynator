@@ -1,6 +1,8 @@
 # Enumerator\.Equals\(Object\) Method
 
-**Containing Type**: [Roslynator](../../../README.md)\.[SeparatedSyntaxListSelection\<TNode>.Enumerator](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator](../../../README.md)\.[SeparatedSyntaxListSelection\<TNode>.Enumerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

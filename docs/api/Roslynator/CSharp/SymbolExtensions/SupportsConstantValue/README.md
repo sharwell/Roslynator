@@ -1,6 +1,8 @@
 # SymbolExtensions\.SupportsConstantValue\(ITypeSymbol\) Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SymbolExtensions](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[SymbolExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

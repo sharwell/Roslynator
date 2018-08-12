@@ -1,6 +1,8 @@
 # DiagnosticsExtensions\.ReportDiagnostic Method
 
-**Containing Type**: [Roslynator](../../README.md)\.[DiagnosticsExtensions](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[DiagnosticsExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

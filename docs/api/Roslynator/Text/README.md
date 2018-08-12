@@ -1,6 +1,6 @@
 # Roslynator\.Text Namespace
 
-[Classes](#classes) &#x2022; [Structs](#structs)
+[Home](../../README.md) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs)
 
 ## Classes
 

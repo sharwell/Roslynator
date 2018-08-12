@@ -1,6 +1,8 @@
 # SimpleAssignmentStatementInfo\.Inequality\(SimpleAssignmentStatementInfo, SimpleAssignmentStatementInfo\) Operator
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleAssignmentStatementInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleAssignmentStatementInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

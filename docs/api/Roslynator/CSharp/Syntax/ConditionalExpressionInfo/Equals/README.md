@@ -1,6 +1,8 @@
 # ConditionalExpressionInfo\.Equals Method
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[ConditionalExpressionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[ConditionalExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

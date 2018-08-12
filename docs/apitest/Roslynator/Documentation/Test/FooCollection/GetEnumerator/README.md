@@ -1,6 +1,8 @@
 # FooCollection\.GetEnumerator\(\) Method
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooCollection](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooCollection](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

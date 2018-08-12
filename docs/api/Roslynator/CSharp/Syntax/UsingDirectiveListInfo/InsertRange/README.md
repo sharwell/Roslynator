@@ -1,6 +1,8 @@
 # UsingDirectiveListInfo\.InsertRange\(Int32, IEnumerable\<UsingDirectiveSyntax>\) Method
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[UsingDirectiveListInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[UsingDirectiveListInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

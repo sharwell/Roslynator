@@ -1,6 +1,8 @@
 # CSharpFactory\.SetKeyword\(\) Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

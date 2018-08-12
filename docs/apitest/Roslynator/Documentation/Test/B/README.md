@@ -1,6 +1,6 @@
 # B Class
 
-[Constructors](#constructors) &#x2022; [Fields](#fields) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Events](#events)
+[Home](../../../../README.md) &#x2022; [Constructors](#constructors) &#x2022; [Fields](#fields) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Events](#events)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md)
 

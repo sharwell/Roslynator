@@ -1,6 +1,8 @@
 # SimpleMemberInvocationExpressionInfo\.ArgumentList Property
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleMemberInvocationExpressionInfo](../README.md)
+[Home](../../../../../README.md)
+
+**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleMemberInvocationExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

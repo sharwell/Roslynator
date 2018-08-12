@@ -1,6 +1,8 @@
 # ISelection\<T>\.FirstIndex Property
 
-**Containing Type**: [Roslynator](../../README.md)\.[ISelection\<T>](../README.md)
+[Home](../../../README.md)
+
+**Type**: [Roslynator](../../README.md)\.[ISelection\<T>](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

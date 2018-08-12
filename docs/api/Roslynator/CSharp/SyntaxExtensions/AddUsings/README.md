@@ -1,6 +1,8 @@
 # SyntaxExtensions\.AddUsings\(CompilationUnitSyntax, Boolean, UsingDirectiveSyntax\[\]\) Method
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+[Home](../../../../README.md)
+
+**Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
