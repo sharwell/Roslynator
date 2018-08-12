@@ -153,16 +153,22 @@ namespace Roslynator.Documentation
 
             if ((parts & DocumentationParts.Namespace) != 0)
             {
-                foreach (NamespaceDocumentationModel namespaceModel in DocumentationModel.NamespaceModels)
+                foreach (INamespaceSymbol namespaceSymbol in DocumentationModel.NamespaceSymbols)
+                {
+                    NamespaceDocumentationModel namespaceModel = DocumentationModel.GetNamespaceModel(namespaceSymbol);
+
                     yield return GenerateNamespace(namespaceModel);
+                }
             }
 
             if (generateTypes)
             {
                 bool generateMembers = (parts & DocumentationParts.Member) != 0;
 
-                foreach (TypeDocumentationModel typeModel in DocumentationModel.TypeModels)
+                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.TypeSymbols)
                 {
+                    TypeDocumentationModel typeModel = DocumentationModel.GetTypeModel(typeSymbol);
+
                     yield return GenerateType(typeModel);
 
                     if (generateMembers)
@@ -269,27 +275,27 @@ namespace Roslynator.Documentation
                         }
                     case NamespaceDocumentationParts.Classes:
                         {
-                            WriteTypes(namespaceModel.TypeModels, TypeKind.Class);
+                            WriteTypes(namespaceModel.GetTypeSymbols(), TypeKind.Class);
                             break;
                         }
                     case NamespaceDocumentationParts.Structs:
                         {
-                            WriteTypes(namespaceModel.TypeModels, TypeKind.Struct);
+                            WriteTypes(namespaceModel.GetTypeSymbols(), TypeKind.Struct);
                             break;
                         }
                     case NamespaceDocumentationParts.Interfaces:
                         {
-                            WriteTypes(namespaceModel.TypeModels, TypeKind.Interface);
+                            WriteTypes(namespaceModel.GetTypeSymbols(), TypeKind.Interface);
                             break;
                         }
                     case NamespaceDocumentationParts.Enums:
                         {
-                            WriteTypes(namespaceModel.TypeModels, TypeKind.Enum);
+                            WriteTypes(namespaceModel.GetTypeSymbols(), TypeKind.Enum);
                             break;
                         }
                     case NamespaceDocumentationParts.Delegates:
                         {
-                            WriteTypes(namespaceModel.TypeModels, TypeKind.Delegate);
+                            WriteTypes(namespaceModel.GetTypeSymbols(), TypeKind.Delegate);
                             break;
                         }
                     case NamespaceDocumentationParts.SeeAlso:
@@ -307,11 +313,11 @@ namespace Roslynator.Documentation
             }
 
             void WriteTypes(
-                IEnumerable<TypeDocumentationModel> types,
+                IEnumerable<INamedTypeSymbol> types,
                 TypeKind typeKind)
             {
                 writer.WriteTable(
-                    types.Where(f => f.TypeKind == typeKind).Select(f => f.TypeSymbol),
+                    types.Where(f => f.TypeKind == typeKind),
                     Resources.GetPluralName(typeKind),
                     headingLevel: 2 + headingLevelBase,
                     Resources.GetName(typeKind),
@@ -351,23 +357,23 @@ namespace Roslynator.Documentation
                         }
                     case NamespaceDocumentationParts.Classes:
                         {
-                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Class);
+                            return namespaceModel.GetTypeSymbols().Any(f => f.TypeKind == TypeKind.Class);
                         }
                     case NamespaceDocumentationParts.Structs:
                         {
-                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Struct);
+                            return namespaceModel.GetTypeSymbols().Any(f => f.TypeKind == TypeKind.Struct);
                         }
                     case NamespaceDocumentationParts.Interfaces:
                         {
-                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Interface);
+                            return namespaceModel.GetTypeSymbols().Any(f => f.TypeKind == TypeKind.Interface);
                         }
                     case NamespaceDocumentationParts.Enums:
                         {
-                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Enum);
+                            return namespaceModel.GetTypeSymbols().Any(f => f.TypeKind == TypeKind.Enum);
                         }
                     case NamespaceDocumentationParts.Delegates:
                         {
-                            return namespaceModel.TypeModels.Any(f => f.TypeKind == TypeKind.Delegate);
+                            return namespaceModel.GetTypeSymbols().Any(f => f.TypeKind == TypeKind.Delegate);
                         }
                     case NamespaceDocumentationParts.SeeAlso:
                         {
@@ -835,7 +841,7 @@ namespace Roslynator.Documentation
         {
             SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
 
-            IEnumerable<INamedTypeSymbol> typeSymbols = DocumentationModel.TypeModels.Select(f => f.TypeSymbol);
+            IEnumerable<INamedTypeSymbol> typeSymbols = DocumentationModel.TypeSymbols;
 
             foreach (RootDocumentationParts part in EnabledAndSortedRootParts)
             {
@@ -848,7 +854,7 @@ namespace Roslynator.Documentation
                         }
                     case RootDocumentationParts.Namespaces:
                         {
-                            writer.WriteList(DocumentationModel.NamespaceModels.Select(f => f.Symbol), Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                            writer.WriteList(DocumentationModel.NamespaceSymbols, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
                             break;
                         }
                     case RootDocumentationParts.Classes:
@@ -970,9 +976,8 @@ namespace Roslynator.Documentation
                         writer.WriteSpace();
                     }
 
-                    writer.WriteEntityRef("middot");
-                    writer.WriteSpace();
-                    writer.WriteEntityRef("middot");
+                    writer.WriteEntityRef("emsp");
+                    writer.WriteEntityRef("emsp");
                 }
 
                 writer.WriteSpace();

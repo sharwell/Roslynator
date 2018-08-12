@@ -237,10 +237,10 @@ namespace Roslynator.Documentation
             if (TypeKind.Is(TypeKind.Class, TypeKind.Interface)
                 && !TypeSymbol.IsStatic)
             {
-                foreach (TypeDocumentationModel typeModel in DocumentationModel.TypeModels)
+                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.TypeSymbols)
                 {
-                    if (typeModel.TypeSymbol.InheritsFrom(TypeSymbol, includeInterfaces: true))
-                        yield return typeModel.TypeSymbol;
+                    if (typeSymbol.InheritsFrom(TypeSymbol, includeInterfaces: true))
+                        yield return typeSymbol;
                 }
             }
         }

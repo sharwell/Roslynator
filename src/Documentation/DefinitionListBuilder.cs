@@ -115,10 +115,8 @@ namespace Roslynator.Documentation
 
         public void Append(DocumentationModel documentationModel)
         {
-            foreach (NamespaceDocumentationModel namespaceModel in documentationModel.NamespaceModels.OrderBy(f => f.NamespaceSymbol, NamespaceComparer))
+            foreach (INamespaceSymbol namespaceSymbol in documentationModel.NamespaceSymbols.OrderBy(f => f, NamespaceComparer))
             {
-                INamespaceSymbol namespaceSymbol = namespaceModel.NamespaceSymbol;
-
                 if (!namespaceSymbol.IsGlobalNamespace)
                 {
                     Append(namespaceSymbol, _namespaceFormat);
@@ -126,7 +124,13 @@ namespace Roslynator.Documentation
                 }
 
                 _currentNamespace = namespaceSymbol;
-                AppendTypes(namespaceModel.TypeModels.Select(f => f.TypeSymbol).Where(f => f.ContainingType == null));
+
+                IEnumerable<INamedTypeSymbol> types = documentationModel
+                    .TypeSymbols
+                    .Where(f => f.ContainingType == null && MetadataNameEqualityComparer<INamespaceSymbol>.Instance.Equals(f.ContainingNamespace, namespaceSymbol));
+
+                AppendTypes(types);
+
                 _currentNamespace = null;
 
                 if (!namespaceSymbol.IsGlobalNamespace)

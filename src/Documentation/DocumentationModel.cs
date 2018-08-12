@@ -10,10 +10,6 @@ namespace Roslynator.Documentation
 {
     public class DocumentationModel
     {
-        private ImmutableArray<NamespaceDocumentationModel> _namespaceModels;
-
-        private ImmutableArray<TypeDocumentationModel> _typeModels;
-
         private readonly Dictionary<ISymbol, SymbolDocumentationData> _symbolData;
 
         private readonly Dictionary<IAssemblySymbol, XmlDocumentation> _xmlDocumentations;
@@ -45,37 +41,19 @@ namespace Roslynator.Documentation
 
         public IEnumerable<MetadataReference> References => Compilation.References;
 
-        public ImmutableArray<NamespaceDocumentationModel> NamespaceModels
+        public IEnumerable<INamespaceSymbol> NamespaceSymbols
         {
             get
             {
-                if (_namespaceModels.IsDefault)
-                {
-                    _namespaceModels = TypeModels
-                        .Select(f => f.Symbol.ContainingNamespace)
-                        .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance)
-                        .Select(f => GetNamespaceModel(f))
-                        .ToImmutableArray();
-                }
-
-                return _namespaceModels;
+                return TypeSymbols
+                    .Select(f => f.ContainingNamespace)
+                    .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
             }
         }
 
-        public ImmutableArray<TypeDocumentationModel> TypeModels
+        public IEnumerable<INamedTypeSymbol> TypeSymbols
         {
-            get
-            {
-                if (_typeModels.IsDefault)
-                {
-                    _typeModels = Assemblies
-                        .SelectMany(f => f.GetTypes(typeSymbol => IsVisible(typeSymbol)))
-                        .Select(f => GetTypeModel(f))
-                        .ToImmutableArray();
-                }
-
-                return _typeModels;
-            }
+            get { return Assemblies.SelectMany(f => f.GetTypes(typeSymbol => IsVisible(typeSymbol))); }
         }
 
         public virtual bool IsVisible(ISymbol symbol)
@@ -85,14 +63,15 @@ namespace Roslynator.Documentation
 
         public IEnumerable<IMethodSymbol> GetExtensionMethods()
         {
-            foreach (TypeDocumentationModel typeModel in TypeModels)
+            foreach (INamedTypeSymbol typeSymbol in TypeSymbols)
             {
-                if (typeModel.TypeSymbol.MightContainExtensionMethods)
+                if (typeSymbol.MightContainExtensionMethods)
                 {
-                    foreach (ISymbol member in typeModel.Members)
+                    foreach (ISymbol member in GetTypeModel(typeSymbol).Members)
                     {
                         if (member.Kind == SymbolKind.Method
-                            && member.IsStatic)
+                            && member.IsStatic
+                            && IsVisible(member))
                         {
                             var methodSymbol = (IMethodSymbol)member;
 
@@ -106,14 +85,15 @@ namespace Roslynator.Documentation
 
         public IEnumerable<IMethodSymbol> GetExtensionMethods(INamedTypeSymbol typeSymbol)
         {
-            foreach (TypeDocumentationModel typeModel in TypeModels)
+            foreach (INamedTypeSymbol symbol in TypeSymbols)
             {
-                if (typeModel.TypeSymbol.MightContainExtensionMethods)
+                if (symbol.MightContainExtensionMethods)
                 {
-                    foreach (ISymbol member in typeModel.Members)
+                    foreach (ISymbol member in GetTypeModel(symbol).Members)
                     {
                         if (member.Kind == SymbolKind.Method
-                            && member.IsStatic)
+                            && member.IsStatic
+                            && IsVisible(member))
                         {
                             var methodSymbol = (IMethodSymbol)member;
 
