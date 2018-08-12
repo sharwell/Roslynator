@@ -14,8 +14,6 @@ namespace Roslynator.Documentation
 {
     internal static class Program
     {
-        private static readonly UTF8Encoding _utf8NoBom = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
-
         private static void Main(string[] args)
         {
             ParserResult<CommandLineOptions> result = Parser.Default.ParseArguments<CommandLineOptions>(args);
@@ -25,23 +23,23 @@ namespace Roslynator.Documentation
 
             CommandLineOptions options = parsed.Value;
 
-            if (options.MaxDerivedItems < -1)
+            Encoding encoding = GetEncoding();
+
+            if (encoding == null)
+                return;
+
+            if (options.MaxDerivedItems < 0)
             {
                 Console.WriteLine("Maximum number of derived items must be equal or greater than 0.");
-            }
-
-            if (!string.Equals(options.Environment, "github", StringComparison.OrdinalIgnoreCase))
-            {
-                Console.WriteLine($"Unknown environment value '{options.Environment}'.");
                 return;
             }
 
-            IEnumerable<string> referencePaths = GetReferencePaths(options.AssemblyReferences);
+            IEnumerable<string> assemblyReferences = GetAssemblyReferences(options.AssemblyReferences);
 
-            if (referencePaths == null)
+            if (assemblyReferences == null)
                 return;
 
-            List<PortableExecutableReference> references = referencePaths
+            List<PortableExecutableReference> references = assemblyReferences
                 .Select(f => MetadataReference.CreateFromFile(f))
                 .ToList();
 
@@ -71,9 +69,7 @@ namespace Roslynator.Documentation
                 compilation,
                 options.Assemblies.Select(assemblyPath =>
                 {
-                    if (!TryGetReference(references, assemblyPath, out PortableExecutableReference reference))
-                        Console.WriteLine($"Assembly '{assemblyPath}' not found.");
-
+                    TryGetReference(references, assemblyPath, out PortableExecutableReference reference);
                     return (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(reference);
                 }));
 
@@ -90,7 +86,7 @@ namespace Roslynator.Documentation
                 return;
 
             var documentationOptions = new DocumentationOptions(
-                preferredCultureName: options.PreferredCultureName,
+                preferredCultureName: options.PreferredCulture,
                 baseLocalUrl: options.BaseLocalUrl,
                 documentationParts: documentationParts,
                 namespaceParts: namespaceParts,
@@ -122,14 +118,23 @@ namespace Roslynator.Documentation
                 Console.WriteLine($"saving '{path}'");
 #else
                 Directory.CreateDirectory(Path.GetDirectoryName(path));
-                File.WriteAllText(path, documentationFile.Content, _utf8NoBom);
+                File.WriteAllText(path, documentationFile.Content, encoding);
 #endif
             }
 
             Console.WriteLine($"Documentation successfully generated to '{options.OutputDirectory}'.");
+
+            Encoding GetEncoding()
+            {
+                if (string.Equals(options.Mode, "github", StringComparison.OrdinalIgnoreCase))
+                    return new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
+
+                Console.WriteLine($"Unknown mode '{options.Mode}'.");
+                return null;
+            }
         }
 
-        private static IEnumerable<string> GetReferencePaths(string assemblyReferences)
+        private static IEnumerable<string> GetAssemblyReferences(string assemblyReferences)
         {
             if (assemblyReferences.Contains(";"))
             {

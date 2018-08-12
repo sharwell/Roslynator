@@ -1,9 +1,7 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.Immutable;
 using System.Diagnostics;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
@@ -11,9 +9,7 @@ namespace Roslynator.Documentation
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class SymbolDocumentationModel : IEquatable<SymbolDocumentationModel>
     {
-        private ImmutableArray<AttributeData> _attributes;
-
-        public SymbolDocumentationModel(
+        internal SymbolDocumentationModel(
             ISymbol symbol,
             DocumentationModel documentationModel)
         {
@@ -24,27 +20,6 @@ namespace Roslynator.Documentation
         public ISymbol Symbol { get; }
 
         internal DocumentationModel DocumentationModel { get; }
-
-        public ImmutableArray<AttributeData> Attributes
-        {
-            get
-            {
-                if (_attributes.IsDefault)
-                    _attributes = Symbol.GetAttributes();
-
-                return _attributes;
-            }
-        }
-
-        public bool IsObsolete
-        {
-            get { return Attributes.Any(f => f.AttributeClass.HasMetadataName(MetadataNames.System_ObsoleteAttribute)); }
-        }
-
-        public bool IsExternal
-        {
-            get { return DocumentationModel.IsExternal(Symbol); }
-        }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private string DebuggerDisplay

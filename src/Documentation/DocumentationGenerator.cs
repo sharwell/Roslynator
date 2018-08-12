@@ -501,7 +501,7 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Obsolete:
                             {
-                                if (typeModel.IsObsolete)
+                                if (typeSymbol.HasAttribute(MetadataNames.System_ObsoleteAttribute))
                                     writer.WriteObsoleteMessage(typeSymbol);
 
                                 break;

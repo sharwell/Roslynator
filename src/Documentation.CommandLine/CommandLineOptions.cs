@@ -6,7 +6,6 @@ using static Roslynator.Documentation.DocumentationOptions;
 
 namespace Roslynator.Documentation
 {
-    //TODO: encoding
     public class CommandLineOptions
     {
         [Option(longName: "assemblyReferences", Required = true)]
@@ -21,8 +20,8 @@ namespace Roslynator.Documentation
         [Option(longName: "heading", Required = true)]
         public string Heading { get; set; }
 
-        [Option(longName: "environment", Required = true)]
-        public string Environment { get; set; }
+        [Option(longName: "mode", Required = true)]
+        public string Mode { get; set; }
 
         [Option(longName: "documentationParts")]
         public IEnumerable<string> DocumentationParts { get; set; }
@@ -36,8 +35,8 @@ namespace Roslynator.Documentation
         [Option(longName: "memberParts")]
         public IEnumerable<string> MemberParts { get; set; }
 
-        [Option(longName: "preferredCultureName")]
-        public string PreferredCultureName { get; set; }
+        [Option(longName: "preferredCulture")]
+        public string PreferredCulture { get; set; }
 
         [Option(longName: "baseLocalUrl")]
         public string BaseLocalUrl { get; set; }
