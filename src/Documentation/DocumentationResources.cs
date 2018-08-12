@@ -49,6 +49,7 @@ namespace Roslynator.Documentation
         public abstract string FieldTitle { get; }
         public abstract string FieldsTitle { get; }
         public abstract string FieldValueTitle { get; }
+        public abstract string HomeTitle { get; }
         public abstract string ImplementsTitle { get; }
         public abstract string InheritanceTitle { get; }
         public abstract string InheritedFrom { get; }
@@ -315,6 +316,7 @@ namespace Roslynator.Documentation
             public override string FieldTitle { get; } = "Field";
             public override string FieldsTitle { get; } = "Fields";
             public override string FieldValueTitle { get; } = "Field Value";
+            public override string HomeTitle { get; } = "Home";
             public override string ImplementsTitle { get; } = "Implements";
             public override string InheritanceTitle { get; } = "Inheritance";
             public override string InheritedFrom { get; } = "Inherited from";

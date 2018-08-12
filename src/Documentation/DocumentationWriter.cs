@@ -278,7 +278,7 @@ namespace Roslynator.Documentation
             IEnumerator<string> en = names.GetEnumerator();
 
             if (addLinkToRoot)
-                WriteLink("Home", UrlProvider.GetUrlToRoot(UrlProvider.GetFolders(CurrentSymbol).Length, '/'));
+                WriteLink(Resources.HomeTitle, UrlProvider.GetUrlToRoot(UrlProvider.GetFolders(CurrentSymbol).Length, '/'));
 
             if (en.MoveNext())
             {

@@ -107,6 +107,8 @@ namespace Roslynator.Documentation
 
                     Writer.WriteStartHeading(1);
                     Writer.WriteString(overloadSymbol.ToDisplayString(format, additionalOptions));
+
+                    //TODO: <a name="id"></a>
                     Writer.WriteRaw($@"<a name=""{id}""></a>");
                     Writer.WriteEndHeading();
                     WriteContent(overloadSymbol);

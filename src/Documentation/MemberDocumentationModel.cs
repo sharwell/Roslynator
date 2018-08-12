@@ -23,5 +23,17 @@ namespace Roslynator.Documentation
         {
             get { return Overloads.Length > 1; }
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is MemberDocumentationModel other
+                && other.Symbol.Name == Symbol.Name
+                && other.Symbol.ContainingType.Equals(Symbol.ContainingType);
+        }
+
+        public override int GetHashCode()
+        {
+            return Hash.Combine(Symbol.ContainingType, Hash.Create(Symbol.Name));
+        }
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO:  abstract
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class SymbolDocumentationModel : IEquatable<SymbolDocumentationModel>
     {

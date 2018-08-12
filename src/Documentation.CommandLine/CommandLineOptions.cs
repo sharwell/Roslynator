@@ -8,19 +8,19 @@ namespace Roslynator.Documentation
 {
     public class CommandLineOptions
     {
-        [Option(longName: "assemblyReferences", Required = true)]
+        [Option(longName: "assemblyReferences", shortName: 'r', Required = true)]
         public string AssemblyReferences { get; set; }
 
-        [Option(longName: "assemblies", Separator = ';', Required = true)]
+        [Option(longName: "assemblies", shortName: 'a', Separator = ';', Required = true)]
         public IEnumerable<string> Assemblies { get; set; }
 
-        [Option(longName: "outputDirectory", Required = true)]
+        [Option(longName: "outputDirectory", shortName: 'o', Required = true)]
         public string OutputDirectory { get; set; }
 
-        [Option(longName: "heading", Required = true)]
+        [Option(longName: "heading", shortName: 'h', Required = true)]
         public string Heading { get; set; }
 
-        [Option(longName: "mode", Required = true)]
+        [Option(longName: "mode", shortName: 'm', Required = true)]
         public string Mode { get; set; }
 
         [Option(longName: "documentationParts")]
@@ -35,10 +35,10 @@ namespace Roslynator.Documentation
         [Option(longName: "memberParts")]
         public IEnumerable<string> MemberParts { get; set; }
 
-        [Option(longName: "preferredCulture")]
+        [Option(longName: "preferredCulture", shortName: 'c')]
         public string PreferredCulture { get; set; }
 
-        [Option(longName: "baseLocalUrl")]
+        [Option(longName: "baseLocalUrl", shortName: 'u')]
         public string BaseLocalUrl { get; set; }
 
         [Option(longName: "systemNamespaceFirst", Default = DefaultValues.SystemNamespaceFirst)]
