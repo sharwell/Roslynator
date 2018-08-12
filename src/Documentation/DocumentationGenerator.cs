@@ -977,7 +977,6 @@ namespace Roslynator.Documentation
                     }
 
                     writer.WriteEntityRef("emsp");
-                    writer.WriteEntityRef("emsp");
                 }
 
                 writer.WriteSpace();

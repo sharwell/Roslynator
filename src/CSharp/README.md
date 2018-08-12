@@ -12,13 +12,13 @@
 ## Classes
 
 *  System\.Object
-* &emsp;&emsp; Roslynator\.[NameGenerator](../../docs/api/Roslynator/NameGenerator/README.md)
-* &emsp;&emsp; Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../../docs/api/Roslynator/SeparatedSyntaxListSelection-1/README.md)
-* &emsp;&emsp; Roslynator\.[SyntaxListSelection\<TNode>](../../docs/api/Roslynator/SyntaxListSelection-1/README.md)
-* &emsp;&emsp; \| &emsp;&emsp; Roslynator\.CSharp\.[MemberDeclarationListSelection](../../docs/api/Roslynator/CSharp/MemberDeclarationListSelection/README.md)
-* &emsp;&emsp; \| &emsp;&emsp; Roslynator\.CSharp\.[StatementListSelection](../../docs/api/Roslynator/CSharp/StatementListSelection/README.md)
-* &emsp;&emsp; Roslynator\.CSharp\.[ModifierList\<TNode>](../../docs/api/Roslynator/CSharp/ModifierList-1/README.md)
-* &emsp;&emsp; Roslynator\.Text\.[TextLineCollectionSelection](../../docs/api/Roslynator/Text/TextLineCollectionSelection/README.md)
+* &emsp; Roslynator\.[NameGenerator](../../docs/api/Roslynator/NameGenerator/README.md)
+* &emsp; Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../../docs/api/Roslynator/SeparatedSyntaxListSelection-1/README.md)
+* &emsp; Roslynator\.[SyntaxListSelection\<TNode>](../../docs/api/Roslynator/SyntaxListSelection-1/README.md)
+* &emsp; \| &emsp; Roslynator\.CSharp\.[MemberDeclarationListSelection](../../docs/api/Roslynator/CSharp/MemberDeclarationListSelection/README.md)
+* &emsp; \| &emsp; Roslynator\.CSharp\.[StatementListSelection](../../docs/api/Roslynator/CSharp/StatementListSelection/README.md)
+* &emsp; Roslynator\.CSharp\.[ModifierList\<TNode>](../../docs/api/Roslynator/CSharp/ModifierList-1/README.md)
+* &emsp; Roslynator\.Text\.[TextLineCollectionSelection](../../docs/api/Roslynator/Text/TextLineCollectionSelection/README.md)
 
 ## Static Classes
 
