@@ -138,7 +138,7 @@ namespace Roslynator.Documentation
         {
             if (assemblyReferences.Contains(";"))
             {
-                return assemblyReferences.Split(";", StringSplitOptions.RemoveEmptyEntries);
+                return assemblyReferences.Split(new string[] { ";" }, StringSplitOptions.RemoveEmptyEntries);
             }
             else
             {
@@ -154,7 +154,7 @@ namespace Roslynator.Documentation
 
                 if (string.Equals(extension, ".dll", StringComparison.OrdinalIgnoreCase))
                 {
-                    return assemblyReferences.Split(";", StringSplitOptions.RemoveEmptyEntries);
+                    return assemblyReferences.Split(new string[] { ";" }, StringSplitOptions.RemoveEmptyEntries);
                 }
                 else
                 {
@@ -175,7 +175,7 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse(typeof(DocumentationParts), value, ignoreCase: true, out object result))
+                if (Enum.TryParse< DocumentationParts>(value, ignoreCase: true, out DocumentationParts result))
                 {
                     parts |= ((DocumentationParts)result);
                 }
@@ -201,7 +201,7 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse(typeof(NamespaceDocumentationParts), value, ignoreCase: true, out object result))
+                if (Enum.TryParse< NamespaceDocumentationParts>(value, ignoreCase: true, out NamespaceDocumentationParts result))
                 {
                     parts |= ((NamespaceDocumentationParts)result);
                 }
@@ -227,7 +227,7 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse(typeof(TypeDocumentationParts), value, ignoreCase: true, out object result))
+                if (Enum.TryParse< TypeDocumentationParts>(value, ignoreCase: true, out TypeDocumentationParts result))
                 {
                     parts |= ((TypeDocumentationParts)result);
                 }
@@ -253,7 +253,7 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse(typeof(MemberDocumentationParts), value, ignoreCase: true, out object result))
+                if (Enum.TryParse< MemberDocumentationParts>(value, ignoreCase: true, out MemberDocumentationParts result))
                 {
                     parts |= ((MemberDocumentationParts)result);
                 }

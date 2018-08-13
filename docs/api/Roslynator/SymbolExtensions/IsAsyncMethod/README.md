@@ -2,7 +2,7 @@
 
 [Home](../../../README.md)
 
-**Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

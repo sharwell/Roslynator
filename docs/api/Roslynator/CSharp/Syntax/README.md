@@ -1,6 +1,6 @@
 # Roslynator\.CSharp\.Syntax Namespace
 
-[Home](../../../README.md)
+[Home](../../../README.md) &#x2022; [Structs](#structs)
 
 ## Structs
 

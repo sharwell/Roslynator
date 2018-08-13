@@ -2,7 +2,7 @@
 
 [Home](../../../../../README.md)
 
-**Type**: [Roslynator.Text](../../../README.md)\.[TextLineCollectionSelection.Enumerator](../README.md)
+**Containing Type**: [Roslynator.Text](../../../README.md)\.[TextLineCollectionSelection.Enumerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

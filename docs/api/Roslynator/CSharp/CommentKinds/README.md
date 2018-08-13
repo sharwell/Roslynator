@@ -1,6 +1,6 @@
 # CommentKinds Enum
 
-[Home](../../../README.md)
+[Home](../../../README.md) &#x2022; [Fields](#fields)
 
 **Namespace**: [Roslynator.CSharp](../README.md)
 

@@ -2,7 +2,7 @@
 
 [Home](../../../../../README.md)
 
-**Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleAssignmentExpressionInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleAssignmentExpressionInfo](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

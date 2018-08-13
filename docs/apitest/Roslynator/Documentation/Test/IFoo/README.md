@@ -1,6 +1,6 @@
 # IFoo Interface
 
-[Home](../../../../README.md)
+[Home](../../../../README.md) &#x2022; [Events](#events)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md)
 

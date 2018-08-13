@@ -1,6 +1,6 @@
 # CSharpFacts Class
 
-[Home](../../../README.md)
+[Home](../../../README.md) &#x2022; [Methods](#methods)
 
 **Namespace**: [Roslynator.CSharp](../README.md)
 

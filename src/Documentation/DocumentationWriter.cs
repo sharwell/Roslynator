@@ -282,40 +282,25 @@ namespace Roslynator.Documentation
 
             if (en.MoveNext())
             {
-                string heading = en.Current;
-
-                if (en.MoveNext())
-                {
-                    if (addLinkToRoot)
-                        WriteContentSeparator();
-
-                    WriteLink(heading, UrlProvider.GetFragment(heading));
+                if (addLinkToRoot)
                     WriteContentSeparator();
 
-                    while (true)
-                    {
-                        heading = en.Current;
-
-                        WriteLink(heading, UrlProvider.GetFragment(heading));
-
-                        if (en.MoveNext())
-                        {
-                            WriteContentSeparator();
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-
-                    WriteLine();
-                    WriteLine();
-                }
-                else if (addLinkToRoot)
+                while (true)
                 {
-                    WriteLine();
-                    WriteLine();
+                    WriteLink(en.Current, UrlProvider.GetFragment(en.Current));
+
+                    if (en.MoveNext())
+                    {
+                        WriteContentSeparator();
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
+
+                WriteLine();
+                WriteLine();
             }
             else if (addLinkToRoot)
             {
@@ -348,7 +333,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteContainingType(ISymbol symbol)
         {
-            WriteBold(Resources.TypeTitle);
+            WriteBold(Resources.ContainingTypeTitle);
             WriteString(Resources.Colon);
             WriteSpace();
 

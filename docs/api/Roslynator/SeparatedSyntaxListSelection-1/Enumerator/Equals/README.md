@@ -2,7 +2,7 @@
 
 [Home](../../../../README.md)
 
-**Type**: [Roslynator](../../../README.md)\.[SeparatedSyntaxListSelection\<TNode>.Enumerator](../README.md)
+**Containing Type**: [Roslynator](../../../README.md)\.[SeparatedSyntaxListSelection\<TNode>.Enumerator](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

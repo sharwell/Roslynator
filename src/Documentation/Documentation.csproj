@@ -14,17 +14,34 @@
     <AssemblyOriginatorKeyFile>Documentation.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <IsPackable>false</IsPackable>
-    <Authors>Josef Pihrt</Authors>
-    <Company></Company>
-    <Description></Description>
-    <Copyright>Copyright (c) 2017-2018 Josef Pihrt</Copyright>
-  </PropertyGroup>
-
   <ItemGroup>
     <None Remove="Documentation.snk" />
   </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.3\Roslynator.Documentation.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Roslynator.Documentation</PackageId>
+    <PackageVersion>1.0.0-test</PackageVersion>
+    <Authors>Josef Pihrt</Authors>
+    <Company></Company>
+    <Description>This API enables to generate documentation for your .NET library
+
+Commonly Used Types:
+Roslynator.Documentation.DocumentationWriter
+Roslynator.Documentation.DocumentationGenerator</Description>
+    <Copyright>Copyright (c) 2017-2018 Josef Pihrt</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>http://github.com/JosefPihrt/Roslynator/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>http://github.com/JosefPihrt/Roslynator</PackageProjectUrl>
+    <PackageIconUrl>http://pihrt.net/images/Roslynator.ico</PackageIconUrl>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageTags>Roslyn;Documentation;GitHub;C#;CSharp</PackageTags>
+    <RepositoryUrl>http://github.com/JosefPihrt/Roslynator.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.8.0" />

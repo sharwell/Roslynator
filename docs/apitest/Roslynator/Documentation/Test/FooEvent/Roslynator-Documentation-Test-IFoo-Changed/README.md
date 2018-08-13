@@ -2,7 +2,7 @@
 
 [Home](../../../../../README.md)
 
-**Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooEvent](../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooEvent](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

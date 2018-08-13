@@ -2,7 +2,7 @@
 
 [Home](../../../../README.md)
 
-**Type**: [Roslynator.CSharp](../../README.md)\.[WorkspaceExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md)\.[WorkspaceExtensions](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 

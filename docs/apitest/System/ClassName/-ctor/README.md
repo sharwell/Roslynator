@@ -2,7 +2,7 @@
 
 [Home](../../../README.md)
 
-**Type**: [System](../../README.md)\.[ClassName](../README.md)
+**Containing Type**: [System](../../README.md)\.[ClassName](../README.md)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

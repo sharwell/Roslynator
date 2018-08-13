@@ -2,7 +2,7 @@
 
 [Home](../../../../README.md)
 
-**Type**: [Roslynator.CSharp](../../README.md)\.[ModifierList](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md)\.[ModifierList](../README.md)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
