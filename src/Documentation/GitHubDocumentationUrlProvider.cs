@@ -121,8 +121,6 @@ namespace Roslynator.Documentation
                 sb.Append("/");
                 sb.Append(ReadMeFileName);
 
-                Debug.WriteLine(sb.ToString());
-
                 return StringBuilderCache.GetStringAndFree(sb) + fragment;
             }
 

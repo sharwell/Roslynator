@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFrameworks>netcoreapp1.0;net46</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -13,36 +13,21 @@
     <LangVersion>latest</LangVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Documentation.CommandLine.snk</AssemblyOriginatorKeyFile>
+    <NuspecFile>Documentation.CommandLine.nuspec</NuspecFile> 
+    <NuspecProperties>configuration=$(Configuration)</NuspecProperties>
+    <Copyright>Copyright (c) 2017-2018 Josef Pihrt</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Documentation.CommandLine.snk" />
+    <None Remove="_._" />
   </ItemGroup>
-
-  <PropertyGroup>
-    <PackageId>Roslynator.Documentation.CommandLine</PackageId>
-    <PackageVersion>1.0.0-test</PackageVersion>
-    <Authors>Josef Pihrt</Authors>
-    <Company></Company>
-    <Description>Command line tool for Roslynator.Documentation</Description>
-    <Copyright>Copyright (c) 2017-2018 Josef Pihrt</Copyright>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageLicenseUrl>http://github.com/JosefPihrt/Roslynator/blob/master/LICENSE.txt</PackageLicenseUrl>
-    <PackageProjectUrl>http://github.com/JosefPihrt/Roslynator</PackageProjectUrl>
-    <PackageIconUrl>http://pihrt.net/images/Roslynator.ico</PackageIconUrl>
-    <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageTags>Roslyn;Documentation;GitHub;C#;CSharp;CLI</PackageTags>
-    <RepositoryUrl>http://github.com/JosefPihrt/Roslynator.git</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.2.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="2.8.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Documentation\Documentation.csproj" />
+    <PackageReference Include="Roslynator.CSharp" Version="1.0.0-test" />
+    <PackageReference Include="Roslynator.Documentation" Version="1.0.0-test" />
   </ItemGroup>
 
 </Project>

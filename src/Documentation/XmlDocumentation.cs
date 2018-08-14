@@ -62,8 +62,6 @@ namespace Roslynator.Documentation
                 rawXml = (string.CompareOrdinal(s, index, DefaultIndentChars, 0, DefaultIndentChars.Length) == 0)
                     ? _indentationRegex.Replace(rawXml, "")
                     : Regex.Replace(rawXml, "(?<=\n)" + s.Substring(index), "");
-
-                Debug.WriteLine(rawXml);
             }
 
             XDocument document = XDocument.Parse(rawXml, LoadOptions.PreserveWhitespace);

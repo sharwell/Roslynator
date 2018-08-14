@@ -1,0 +1,15 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <DocumentationGeneratorExe Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">"$(MSBuildThisFileDirectory)net46\Roslynator.Documentation.CommandLine.exe"</DocumentationGeneratorExe>
+    <DocumentationGeneratorExe Condition="'$(TargetFrameworkIdentifier)' == '.NETCoreApp' OR '$(TargetFrameworkIdentifier)' == '.NETStandard'">dotnet "$(MSBuildThisFileDirectory)netcoreapp1.0\Roslynator.Documentation.CommandLine.dll"</DocumentationGeneratorExe>
+  </PropertyGroup>
+
+  <Target Name="GenerateDocumentation" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release'">
+    <WriteLinesToFile File="Roslynator.Documentation.CommandLine.assemblyreferences" Lines="@(_ResolveAssemblyReferenceResolvedFiles)" Overwrite="true" Encoding="Unicode" />  
+    <Exec Command="$(DocumentationGeneratorExe) --assemblyReferences Roslynator.Documentation.CommandLine.assemblyreferences $(DocumentationGeneratorParameters)" LogStandardErrorAsError="true" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+  </Target>
+
+</Project>
