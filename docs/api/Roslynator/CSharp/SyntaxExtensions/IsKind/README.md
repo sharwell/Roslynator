@@ -36,27 +36,27 @@ Returns true if a node's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### kind1
+### node
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### Returns
+### kind2
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -70,33 +70,33 @@ Returns true if a node's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### kind1
+### node
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### Returns
+### kind3
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -110,39 +110,39 @@ Returns true if a node's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### kind1
+### node
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### Returns
+### kind4
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -156,45 +156,45 @@ Returns true if a node's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### kind1
+### node
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### kind5
+### kind4
 
 
 
 
 
-#### Returns
+### kind5
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -208,51 +208,51 @@ Returns true if a node's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5, SyntaxKind kind6)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### kind1
+### node
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### kind5
+### kind4
 
 
 
 
 
-#### kind6
+### kind5
 
 
 
 
 
-#### Returns
+### kind6
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -266,27 +266,27 @@ Returns true if a token's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2)
 ```
 
-### Parameters
+## Parameters
 
-#### token
-
-
-
-
-
-#### kind1
+### token
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### Returns
+### kind2
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -300,33 +300,33 @@ Returns true if a token's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3)
 ```
 
-### Parameters
+## Parameters
 
-#### token
-
-
-
-
-
-#### kind1
+### token
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### Returns
+### kind3
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -340,39 +340,39 @@ Returns true if a token's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4)
 ```
 
-### Parameters
+## Parameters
 
-#### token
-
-
-
-
-
-#### kind1
+### token
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### Returns
+### kind4
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -386,45 +386,45 @@ Returns true if a token's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5)
 ```
 
-### Parameters
+## Parameters
 
-#### token
-
-
-
-
-
-#### kind1
+### token
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### kind5
+### kind4
 
 
 
 
 
-#### Returns
+### kind5
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -438,51 +438,51 @@ Returns true if a token's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5, SyntaxKind kind6)
 ```
 
-### Parameters
+## Parameters
 
-#### token
-
-
-
-
-
-#### kind1
+### token
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### kind5
+### kind4
 
 
 
 
 
-#### kind6
+### kind5
 
 
 
 
 
-#### Returns
+### kind6
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -496,27 +496,27 @@ Returns true if a trivia's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind kind2)
 ```
 
-### Parameters
+## Parameters
 
-#### trivia
-
-
-
-
-
-#### kind1
+### trivia
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### Returns
+### kind2
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -530,33 +530,33 @@ Returns true if a token's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3)
 ```
 
-### Parameters
+## Parameters
 
-#### trivia
-
-
-
-
-
-#### kind1
+### trivia
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### Returns
+### kind3
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -570,39 +570,39 @@ Returns true if a token's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4)
 ```
 
-### Parameters
+## Parameters
 
-#### trivia
-
-
-
-
-
-#### kind1
+### trivia
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### Returns
+### kind4
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -616,45 +616,45 @@ Returns true if a token's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5)
 ```
 
-### Parameters
+## Parameters
 
-#### trivia
-
-
-
-
-
-#### kind1
+### trivia
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### kind5
+### kind4
 
 
 
 
 
-#### Returns
+### kind5
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -668,51 +668,51 @@ Returns true if a token's kind is one of the specified kinds\.
 public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5, SyntaxKind kind6)
 ```
 
-### Parameters
+## Parameters
 
-#### trivia
-
-
-
-
-
-#### kind1
+### trivia
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### kind5
+### kind4
 
 
 
 
 
-#### kind6
+### kind5
 
 
 
 
 
-#### Returns
+### kind6
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

@@ -19,15 +19,15 @@
 public static BlockSyntax Block(StatementSyntax statement)
 ```
 
-### Parameters
+## Parameters
 
-#### statement
-
-
+### statement
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BlockSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.blocksyntax)
 
@@ -37,27 +37,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BlockSyntax](https://docs.microsoft.co
 public static BlockSyntax Block(SyntaxToken openBrace, StatementSyntax statement, SyntaxToken closeBrace)
 ```
 
-### Parameters
+## Parameters
 
-#### openBrace
-
-
-
-
-
-#### statement
+### openBrace
 
 
 
 
 
-#### closeBrace
+### statement
 
 
 
 
 
-#### Returns
+### closeBrace
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BlockSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.blocksyntax)
 

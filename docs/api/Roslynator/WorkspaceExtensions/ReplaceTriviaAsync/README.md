@@ -23,33 +23,33 @@ Creates a new document with the specified old trivia replaced with a new trivia\
 public static Task<Document> ReplaceTriviaAsync(this Document document, SyntaxTrivia oldTrivia, IEnumerable<SyntaxTrivia> newTrivia, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### oldTrivia
+### document
 
 
 
 
 
-#### newTrivia
+### oldTrivia
 
 
 
 
 
-#### cancellationToken
+### newTrivia
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
@@ -63,33 +63,33 @@ Creates a new document with the specified old trivia replaced with a new trivia\
 public static Task<Document> ReplaceTriviaAsync(this Document document, SyntaxTrivia oldTrivia, SyntaxTrivia newTrivia, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### oldTrivia
+### document
 
 
 
 
 
-#### newTrivia
+### oldTrivia
 
 
 
 
 
-#### cancellationToken
+### newTrivia
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 

@@ -23,21 +23,21 @@ Searches for a token that matches the predicate and returns the zero\-based inde
 public static int IndexOf(this SyntaxTokenList tokens, Func<SyntaxToken, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### tokens
-
-
-
-
-
-#### predicate
+### tokens
 
 
 
 
 
-#### Returns
+### predicate
+
+
+
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
@@ -51,21 +51,21 @@ Searches for a trivia that matches the predicate and returns the zero\-based ind
 public static int IndexOf(this SyntaxTriviaList triviaList, Func<SyntaxTrivia, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### triviaList
-
-
-
-
-
-#### predicate
+### triviaList
 
 
 
 
 
-#### Returns
+### predicate
+
+
+
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 

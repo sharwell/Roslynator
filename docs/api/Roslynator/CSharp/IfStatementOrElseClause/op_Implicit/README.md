@@ -21,15 +21,15 @@
 public static implicit operator IfStatementOrElseClause(ElseClauseSyntax elseClause)
 ```
 
-### Parameters
+## Parameters
 
-#### elseClause
-
-
+### elseClause
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.[IfStatementOrElseClause](../README.md)
 
@@ -39,15 +39,15 @@ Roslynator\.CSharp\.[IfStatementOrElseClause](../README.md)
 public static implicit operator ElseClauseSyntax(in IfStatementOrElseClause ifOrElse)
 ```
 
-### Parameters
+## Parameters
 
-#### ifOrElse
-
-
+### ifOrElse
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ElseClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.elseclausesyntax)
 
@@ -57,15 +57,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ElseClauseSyntax](https://docs.microso
 public static implicit operator IfStatementSyntax(in IfStatementOrElseClause ifOrElse)
 ```
 
-### Parameters
+## Parameters
 
-#### ifOrElse
-
-
+### ifOrElse
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[IfStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.ifstatementsyntax)
 
@@ -75,15 +75,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[IfStatementSyntax](https://docs.micros
 public static implicit operator IfStatementOrElseClause(IfStatementSyntax ifStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### ifStatement
-
-
+### ifStatement
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.[IfStatementOrElseClause](../README.md)
 

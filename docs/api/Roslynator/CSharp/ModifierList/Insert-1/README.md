@@ -25,27 +25,27 @@ Creates a new list of modifiers with the modifier of the specified kind inserted
 public static SyntaxTokenList Insert(SyntaxTokenList modifiers, SyntaxKind kind, IComparer<SyntaxKind> comparer = null)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### kind
+### modifiers
 
 
 
 
 
-#### comparer
+### kind
 
 
 
 
 
-#### Returns
+### comparer
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)
 
@@ -59,27 +59,27 @@ Creates a new list of modifiers with a specified modifier inserted\.
 public static SyntaxTokenList Insert(SyntaxTokenList modifiers, SyntaxToken modifier, IComparer<SyntaxToken> comparer = null)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### modifier
+### modifiers
 
 
 
 
 
-#### comparer
+### modifier
 
 
 
 
 
-#### Returns
+### comparer
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)
 
@@ -93,35 +93,35 @@ Creates a new node with a modifier of the specified kind inserted\.
 public static TNode Insert<TNode>(TNode node, SyntaxKind kind, IComparer<SyntaxKind> comparer = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### node
+### TNode
 
 
 
 
 
-#### kind
+## Parameters
+
+### node
 
 
 
 
 
-#### comparer
+### kind
 
 
 
 
 
-#### Returns
+### comparer
+
+
+
+
+
+### Returns
 
 TNode
 
@@ -135,35 +135,35 @@ Creates a new node with the specified modifier inserted\.
 public static TNode Insert<TNode>(TNode node, SyntaxToken modifier, IComparer<SyntaxToken> comparer = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### node
+### TNode
 
 
 
 
 
-#### modifier
+## Parameters
+
+### node
 
 
 
 
 
-#### comparer
+### modifier
 
 
 
 
 
-#### Returns
+### comparer
+
+
+
+
+
+### Returns
 
 TNode
 

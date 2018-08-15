@@ -25,21 +25,21 @@ Returns true if all tokens in a [SyntaxTokenList](https://docs.microsoft.com/en-
 public static bool All(this SyntaxTokenList list, Func<SyntaxToken, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### list
-
-
-
-
-
-#### predicate
+### list
 
 
 
 
 
-#### Returns
+### predicate
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -53,21 +53,21 @@ Returns true if all trivia in a [SyntaxTriviaList](https://docs.microsoft.com/en
 public static bool All(this SyntaxTriviaList list, Func<SyntaxTrivia, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### list
-
-
-
-
-
-#### predicate
+### list
 
 
 
 
 
-#### Returns
+### predicate
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -81,29 +81,29 @@ Returns true if all nodes in a list matches the predicate\.
 public static bool All<TNode>(this SeparatedSyntaxList<TNode> list, Func<TNode, bool> predicate) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### predicate
+## Parameters
+
+### list
 
 
 
 
 
-#### Returns
+### predicate
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -117,29 +117,29 @@ Returns true if all nodes in a list matches the predicate\.
 public static bool All<TNode>(this SyntaxList<TNode> list, Func<TNode, bool> predicate) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### predicate
+## Parameters
+
+### list
 
 
 
 
 
-#### Returns
+### predicate
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

@@ -19,15 +19,15 @@
 public static AttributeListSyntax AttributeList(AttributeSyntax attribute)
 ```
 
-### Parameters
+## Parameters
 
-#### attribute
-
-
+### attribute
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributelistsyntax)
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeListSyntax](https://docs.micr
 public static AttributeListSyntax AttributeList(params AttributeSyntax[] attributes)
 ```
 
-### Parameters
+## Parameters
 
-#### attributes
-
-
+### attributes
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributelistsyntax)
 

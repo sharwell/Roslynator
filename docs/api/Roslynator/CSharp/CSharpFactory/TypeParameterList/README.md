@@ -19,15 +19,15 @@
 public static TypeParameterListSyntax TypeParameterList(TypeParameterSyntax parameter)
 ```
 
-### Parameters
+## Parameters
 
-#### parameter
-
-
+### parameter
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeparameterlistsyntax)
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterListSyntax](https://docs.
 public static TypeParameterListSyntax TypeParameterList(params TypeParameterSyntax[] parameters)
 ```
 
-### Parameters
+## Parameters
 
-#### parameters
-
-
+### parameters
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeparameterlistsyntax)
 

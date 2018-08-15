@@ -25,27 +25,27 @@ Creates a new list with tokens in the specified range removed\.
 public static SyntaxTokenList RemoveRange(this SyntaxTokenList list, int index, int count)
 ```
 
-### Parameters
+## Parameters
 
-#### list
-
-
+### list
 
 
 
-#### index
+
+
+### index
 
 
 
 An index of the first element to remove\.
 
-#### count
+### count
 
 
 
 A number of elements to remove\.
 
-#### Returns
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)
 
@@ -59,27 +59,27 @@ Creates a new list with trivia in the specified range removed\.
 public static SyntaxTriviaList RemoveRange(this SyntaxTriviaList list, int index, int count)
 ```
 
-### Parameters
+## Parameters
 
-#### list
-
-
+### list
 
 
 
-#### index
+
+
+### index
 
 
 
 An index of the first element to remove\.
 
-#### count
+### count
 
 
 
 A number of elements to remove\.
 
-#### Returns
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)
 
@@ -93,35 +93,35 @@ Creates a new list with elements in the specified range removed\.
 public static SeparatedSyntaxList<TNode> RemoveRange<TNode>(this SeparatedSyntaxList<TNode> list, int index, int count) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### index
+## Parameters
+
+### list
+
+
+
+
+
+### index
 
 
 
 An index of the first element to remove\.
 
-#### count
+### count
 
 
 
 A number of elements to remove\.
 
-#### Returns
+### Returns
 
 Microsoft\.CodeAnalysis\.[SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)
 
@@ -135,35 +135,35 @@ Creates a new list with elements in the specified range removed\.
 public static SyntaxList<TNode> RemoveRange<TNode>(this SyntaxList<TNode> list, int index, int count) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### index
+## Parameters
+
+### list
+
+
+
+
+
+### index
 
 
 
 An index of the first element to remove\.
 
-#### count
+### count
 
 
 
 A number of elements to remove\.
 
-#### Returns
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)
 

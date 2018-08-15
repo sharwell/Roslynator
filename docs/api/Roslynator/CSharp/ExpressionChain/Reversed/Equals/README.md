@@ -19,15 +19,15 @@
 public override bool Equals(object obj)
 ```
 
-### Parameters
+## Parameters
 
-#### obj
-
-
+### obj
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -37,18 +37,18 @@ System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 public bool Equals(ExpressionChain.Reversed other)
 ```
 
-### Parameters
+## Parameters
 
-#### other
-
-
+### other
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-#### Implements
+### Implements
 
 * [IEquatable\<Reversed>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)

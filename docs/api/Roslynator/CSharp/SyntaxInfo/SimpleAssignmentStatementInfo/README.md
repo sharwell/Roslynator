@@ -24,27 +24,27 @@ Creates a new [SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentState
 public static SimpleAssignmentStatementInfo SimpleAssignmentStatementInfo(AssignmentExpressionSyntax assignmentExpression, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### assignmentExpression
-
-
-
-
-
-#### walkDownParentheses
+### assignmentExpression
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentStatementInfo/README.md)
 
@@ -58,27 +58,27 @@ Creates a new [SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentState
 public static SimpleAssignmentStatementInfo SimpleAssignmentStatementInfo(ExpressionStatementSyntax expressionStatement, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### expressionStatement
-
-
-
-
-
-#### walkDownParentheses
+### expressionStatement
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentStatementInfo/README.md)
 
@@ -92,27 +92,27 @@ Creates a new [SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentState
 public static SimpleAssignmentStatementInfo SimpleAssignmentStatementInfo(StatementSyntax statement, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### statement
-
-
-
-
-
-#### walkDownParentheses
+### statement
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleAssignmentStatementInfo](../../Syntax/SimpleAssignmentStatementInfo/README.md)
 

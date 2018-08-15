@@ -19,21 +19,21 @@
 public static AttributeArgumentSyntax AttributeArgument(NameColonSyntax nameColon, ExpressionSyntax expression)
 ```
 
-### Parameters
+## Parameters
 
-#### nameColon
-
-
-
-
-
-#### expression
+### nameColon
 
 
 
 
 
-#### Returns
+### expression
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeArgumentSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentsyntax)
 
@@ -43,21 +43,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeArgumentSyntax](https://docs.
 public static AttributeArgumentSyntax AttributeArgument(NameEqualsSyntax nameEquals, ExpressionSyntax expression)
 ```
 
-### Parameters
+## Parameters
 
-#### nameEquals
-
-
-
-
-
-#### expression
+### nameEquals
 
 
 
 
 
-#### Returns
+### expression
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AttributeArgumentSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.attributeargumentsyntax)
 

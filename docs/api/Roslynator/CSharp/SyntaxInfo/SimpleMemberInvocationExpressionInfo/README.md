@@ -23,21 +23,21 @@ Creates a new [SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberIn
 public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpressionInfo(InvocationExpressionSyntax invocationExpression, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### invocationExpression
-
-
-
-
-
-#### allowMissing
+### invocationExpression
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberInvocationExpressionInfo/README.md)
 
@@ -51,27 +51,27 @@ Creates a new [SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberIn
 public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### walkDownParentheses
+### node
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberInvocationExpressionInfo/README.md)
 

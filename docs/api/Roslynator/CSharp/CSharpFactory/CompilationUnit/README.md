@@ -20,15 +20,15 @@
 public static CompilationUnitSyntax CompilationUnit(MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### member
-
-
+### member
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.compilationunitsyntax)
 
@@ -38,21 +38,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.mi
 public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyntax> usings, MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### usings
-
-
-
-
-
-#### member
+### usings
 
 
 
 
 
-#### Returns
+### member
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.compilationunitsyntax)
 
@@ -62,21 +62,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.mi
 public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyntax> usings, SyntaxList<MemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### usings
-
-
-
-
-
-#### members
+### usings
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.compilationunitsyntax)
 

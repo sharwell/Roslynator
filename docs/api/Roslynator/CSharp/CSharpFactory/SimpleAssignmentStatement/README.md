@@ -19,21 +19,21 @@
 public static ExpressionStatementSyntax SimpleAssignmentStatement(ExpressionSyntax left, ExpressionSyntax right)
 ```
 
-### Parameters
+## Parameters
 
-#### left
-
-
-
-
-
-#### right
+### left
 
 
 
 
 
-#### Returns
+### right
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ExpressionStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionstatementsyntax)
 
@@ -43,27 +43,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ExpressionStatementSyntax](https://doc
 public static ExpressionStatementSyntax SimpleAssignmentStatement(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)
 ```
 
-### Parameters
+## Parameters
 
-#### left
-
-
-
-
-
-#### operatorToken
+### left
 
 
 
 
 
-#### right
+### operatorToken
 
 
 
 
 
-#### Returns
+### right
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ExpressionStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionstatementsyntax)
 

@@ -19,21 +19,21 @@
 public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(ExpressionSyntax expression, SimpleNameSyntax name)
 ```
 
-### Parameters
+## Parameters
 
-#### expression
-
-
-
-
-
-#### name
+### expression
 
 
 
 
 
-#### Returns
+### name
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[MemberAccessExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberaccessexpressionsyntax)
 
@@ -43,27 +43,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[MemberAccessExpressionSyntax](https://
 public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(ExpressionSyntax expression, SyntaxToken operatorToken, SimpleNameSyntax name)
 ```
 
-### Parameters
+## Parameters
 
-#### expression
-
-
-
-
-
-#### operatorToken
+### expression
 
 
 
 
 
-#### name
+### operatorToken
 
 
 
 
 
-#### Returns
+### name
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[MemberAccessExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberaccessexpressionsyntax)
 

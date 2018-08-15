@@ -20,21 +20,21 @@
 public static InvocationExpressionSyntax SimpleMemberInvocationExpression(ExpressionSyntax expression, SimpleNameSyntax name)
 ```
 
-### Parameters
+## Parameters
 
-#### expression
-
-
-
-
-
-#### name
+### expression
 
 
 
 
 
-#### Returns
+### name
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 
@@ -44,27 +44,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://do
 public static InvocationExpressionSyntax SimpleMemberInvocationExpression(ExpressionSyntax expression, SimpleNameSyntax name, ArgumentListSyntax argumentList)
 ```
 
-### Parameters
+## Parameters
 
-#### expression
-
-
-
-
-
-#### name
+### expression
 
 
 
 
 
-#### argumentList
+### name
 
 
 
 
 
-#### Returns
+### argumentList
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 
@@ -74,27 +74,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://do
 public static InvocationExpressionSyntax SimpleMemberInvocationExpression(ExpressionSyntax expression, SimpleNameSyntax name, ArgumentSyntax argument)
 ```
 
-### Parameters
+## Parameters
 
-#### expression
-
-
-
-
-
-#### name
+### expression
 
 
 
 
 
-#### argument
+### name
 
 
 
 
 
-#### Returns
+### argument
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 

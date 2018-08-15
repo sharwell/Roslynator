@@ -19,21 +19,21 @@
 public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(IdentifierNameSyntax identifierName, TypeParameterConstraintSyntax typeParameterConstraint)
 ```
 
-### Parameters
+## Parameters
 
-#### identifierName
-
-
-
-
-
-#### typeParameterConstraint
+### identifierName
 
 
 
 
 
-#### Returns
+### typeParameterConstraint
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterConstraintClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeparameterconstraintclausesyntax)
 
@@ -43,21 +43,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterConstraintClauseSyntax](h
 public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(string name, TypeParameterConstraintSyntax typeParameterConstraint)
 ```
 
-### Parameters
+## Parameters
 
-#### name
-
-
-
-
-
-#### typeParameterConstraint
+### name
 
 
 
 
 
-#### Returns
+### typeParameterConstraint
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterConstraintClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeparameterconstraintclausesyntax)
 

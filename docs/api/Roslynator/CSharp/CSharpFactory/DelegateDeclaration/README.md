@@ -19,33 +19,33 @@
 public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modifiers, TypeSyntax returnType, string identifier, ParameterListSyntax parameterList)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### returnType
+### modifiers
 
 
 
 
 
-#### identifier
+### returnType
 
 
 
 
 
-#### parameterList
+### identifier
 
 
 
 
 
-#### Returns
+### parameterList
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[DelegateDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.delegatedeclarationsyntax)
 
@@ -55,33 +55,33 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[DelegateDeclarationSyntax](https://doc
 public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken identifier, ParameterListSyntax parameterList)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### returnType
+### modifiers
 
 
 
 
 
-#### identifier
+### returnType
 
 
 
 
 
-#### parameterList
+### identifier
 
 
 
 
 
-#### Returns
+### parameterList
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[DelegateDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.delegatedeclarationsyntax)
 

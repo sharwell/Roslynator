@@ -23,15 +23,15 @@ Searches for an using directive that matches the predicate and returns returns z
 public int LastIndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### predicate
-
-
+### predicate
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
@@ -45,15 +45,15 @@ Searches for an using directive and returns zero\-based index of the last occurr
 public int LastIndexOf(UsingDirectiveSyntax usingDirective)
 ```
 
-### Parameters
+## Parameters
 
-#### usingDirective
-
-
+### usingDirective
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 

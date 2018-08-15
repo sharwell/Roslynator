@@ -21,15 +21,15 @@
 public static AccessorDeclarationSyntax SetAccessorDeclaration(ArrowExpressionClauseSyntax expressionBody)
 ```
 
-### Parameters
+## Parameters
 
-#### expressionBody
-
-
+### expressionBody
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
@@ -39,15 +39,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://doc
 public static AccessorDeclarationSyntax SetAccessorDeclaration(BlockSyntax body)
 ```
 
-### Parameters
+## Parameters
 
-#### body
-
-
+### body
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
@@ -57,21 +57,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://doc
 public static AccessorDeclarationSyntax SetAccessorDeclaration(SyntaxTokenList modifiers, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### expressionBody
+### modifiers
 
 
 
 
 
-#### Returns
+### expressionBody
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
@@ -81,21 +81,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://doc
 public static AccessorDeclarationSyntax SetAccessorDeclaration(SyntaxTokenList modifiers, BlockSyntax body)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### body
+### modifiers
 
 
 
 
 
-#### Returns
+### body
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 

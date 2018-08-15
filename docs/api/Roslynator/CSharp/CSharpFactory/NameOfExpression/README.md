@@ -19,15 +19,15 @@
 public static InvocationExpressionSyntax NameOfExpression(ExpressionSyntax expression)
 ```
 
-### Parameters
+## Parameters
 
-#### expression
-
-
+### expression
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://do
 public static InvocationExpressionSyntax NameOfExpression(string identifier)
 ```
 
-### Parameters
+## Parameters
 
-#### identifier
-
-
+### identifier
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
 

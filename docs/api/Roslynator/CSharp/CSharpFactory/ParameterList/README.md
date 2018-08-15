@@ -19,15 +19,15 @@
 public static ParameterListSyntax ParameterList(ParameterSyntax parameter)
 ```
 
-### Parameters
+## Parameters
 
-#### parameter
-
-
+### parameter
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parameterlistsyntax)
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterListSyntax](https://docs.micr
 public static ParameterListSyntax ParameterList(params ParameterSyntax[] parameters)
 ```
 
-### Parameters
+## Parameters
 
-#### parameters
-
-
+### parameters
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parameterlistsyntax)
 

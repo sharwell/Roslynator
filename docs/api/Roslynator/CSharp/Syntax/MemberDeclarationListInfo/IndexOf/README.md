@@ -23,15 +23,15 @@ Searches for a member that matches the predicate and returns returns zero\-based
 public int IndexOf(Func<MemberDeclarationSyntax, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### predicate
-
-
+### predicate
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
@@ -45,15 +45,15 @@ The index of the member in the list\.
 public int IndexOf(MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### member
-
-
+### member
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 

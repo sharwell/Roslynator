@@ -19,27 +19,27 @@
 public string EnsureUniqueMemberName(string baseName, INamedTypeSymbol typeSymbol, bool isCaseSensitive = true)
 ```
 
-### Parameters
+## Parameters
 
-#### baseName
-
-
-
-
-
-#### typeSymbol
+### baseName
 
 
 
 
 
-#### isCaseSensitive
+### typeSymbol
 
 
 
 
 
-#### Returns
+### isCaseSensitive
+
+
+
+
+
+### Returns
 
 System\.[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 
@@ -53,39 +53,39 @@ Returns a member name that will be unique at the specified position\.
 public string EnsureUniqueMemberName(string baseName, SemanticModel semanticModel, int position, bool isCaseSensitive = true, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### baseName
-
-
-
-
-
-#### semanticModel
+### baseName
 
 
 
 
 
-#### position
+### semanticModel
 
 
 
 
 
-#### isCaseSensitive
+### position
 
 
 
 
 
-#### cancellationToken
+### isCaseSensitive
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 System\.[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 

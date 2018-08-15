@@ -23,21 +23,21 @@ Creates a new [LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationState
 public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(ExpressionSyntax value, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
-
-
-
-#### allowMissing
+### value
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationStatementInfo/README.md)
 
@@ -51,21 +51,21 @@ Creates a new [LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationState
 public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(LocalDeclarationStatementSyntax localDeclarationStatement, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### localDeclarationStatement
-
-
-
-
-
-#### allowMissing
+### localDeclarationStatement
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationStatementInfo/README.md)
 

@@ -23,33 +23,33 @@ Creates a new document with the specified old token replaced with new tokens\.
 public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxToken oldToken, IEnumerable<SyntaxToken> newTokens, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### oldToken
+### document
 
 
 
 
 
-#### newTokens
+### oldToken
 
 
 
 
 
-#### cancellationToken
+### newTokens
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
@@ -63,33 +63,33 @@ Creates a new document with the specified old token replaced with a new token\.
 public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxToken oldToken, SyntaxToken newToken, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### oldToken
+### document
 
 
 
 
 
-#### newToken
+### oldToken
 
 
 
 
 
-#### cancellationToken
+### newToken
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 

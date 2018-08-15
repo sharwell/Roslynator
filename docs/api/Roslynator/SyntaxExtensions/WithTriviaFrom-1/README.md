@@ -25,21 +25,21 @@ Creates a new token from this token with both the leading and trailing trivia of
 public static SyntaxToken WithTriviaFrom(this SyntaxToken token, SyntaxNode node)
 ```
 
-### Parameters
+## Parameters
 
-#### token
-
-
-
-
-
-#### node
+### token
 
 
 
 
 
-#### Returns
+### node
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
@@ -54,29 +54,29 @@ If the list contains more than one item, first item is updated with leading triv
 public static SeparatedSyntaxList<TNode> WithTriviaFrom<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### node
+## Parameters
+
+### list
 
 
 
 
 
-#### Returns
+### node
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)
 
@@ -91,29 +91,29 @@ If the list contains more than one item, first item is updated with leading triv
 public static SyntaxList<TNode> WithTriviaFrom<TNode>(this SyntaxList<TNode> list, SyntaxNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### node
+## Parameters
+
+### list
 
 
 
 
 
-#### Returns
+### node
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)
 
@@ -127,29 +127,29 @@ Creates a new node from this node with both the leading and trailing trivia of t
 public static TNode WithTriviaFrom<TNode>(this TNode node, SyntaxToken token) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### node
+### TNode
 
 
 
 
 
-#### token
+## Parameters
+
+### node
 
 
 
 
 
-#### Returns
+### token
+
+
+
+
+
+### Returns
 
 TNode
 

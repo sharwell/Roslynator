@@ -25,21 +25,21 @@ Creates a new token from this token with the leading trivia replaced with a new 
 public static SyntaxToken AppendToLeadingTrivia(this SyntaxToken token, IEnumerable<SyntaxTrivia> trivia)
 ```
 
-### Parameters
+## Parameters
 
-#### token
-
-
-
-
-
-#### trivia
+### token
 
 
 
 
 
-#### Returns
+### trivia
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
@@ -53,21 +53,21 @@ Creates a new token from this token with the leading trivia replaced with a new 
 public static SyntaxToken AppendToLeadingTrivia(this SyntaxToken token, SyntaxTrivia trivia)
 ```
 
-### Parameters
+## Parameters
 
-#### token
-
-
-
-
-
-#### trivia
+### token
 
 
 
 
 
-#### Returns
+### trivia
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
@@ -81,29 +81,29 @@ Creates a new node from this node with the leading trivia replaced with a new tr
 public static TNode AppendToLeadingTrivia<TNode>(this TNode node, IEnumerable<SyntaxTrivia> trivia) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### node
+### TNode
 
 
 
 
 
-#### trivia
+## Parameters
+
+### node
 
 
 
 
 
-#### Returns
+### trivia
+
+
+
+
+
+### Returns
 
 TNode
 
@@ -117,29 +117,29 @@ Creates a new node from this node with the leading trivia replaced with a new tr
 public static TNode AppendToLeadingTrivia<TNode>(this TNode node, SyntaxTrivia trivia) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### node
+### TNode
 
 
 
 
 
-#### trivia
+## Parameters
+
+### node
 
 
 
 
 
-#### Returns
+### trivia
+
+
+
+
+
+### Returns
 
 TNode
 

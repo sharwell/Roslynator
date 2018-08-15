@@ -19,39 +19,39 @@
 public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken operatorToken, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### returnType
+### modifiers
 
 
 
 
 
-#### operatorToken
+### returnType
 
 
 
 
 
-#### parameterList
+### operatorToken
 
 
 
 
 
-#### expressionBody
+### parameterList
 
 
 
 
 
-#### Returns
+### expressionBody
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[OperatorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.operatordeclarationsyntax)
 
@@ -61,39 +61,39 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[OperatorDeclarationSyntax](https://doc
 public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken operatorToken, ParameterListSyntax parameterList, BlockSyntax body)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### returnType
+### modifiers
 
 
 
 
 
-#### operatorToken
+### returnType
 
 
 
 
 
-#### parameterList
+### operatorToken
 
 
 
 
 
-#### body
+### parameterList
 
 
 
 
 
-#### Returns
+### body
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[OperatorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.operatordeclarationsyntax)
 

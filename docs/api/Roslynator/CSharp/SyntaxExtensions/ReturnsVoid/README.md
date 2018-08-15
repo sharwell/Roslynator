@@ -24,15 +24,15 @@ Returns true the specified delegate return type is [Void](https://docs.microsoft
 public static bool ReturnsVoid(this DelegateDeclarationSyntax delegateDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### delegateDeclaration
-
-
+### delegateDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -46,15 +46,15 @@ Returns true if the specified local function' return type is [Void](https://docs
 public static bool ReturnsVoid(this LocalFunctionStatementSyntax localFunctionStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### localFunctionStatement
-
-
+### localFunctionStatement
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -68,15 +68,15 @@ Returns true if the specified method return type is [Void](https://docs.microsof
 public static bool ReturnsVoid(this MethodDeclarationSyntax methodDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### methodDeclaration
-
-
+### methodDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

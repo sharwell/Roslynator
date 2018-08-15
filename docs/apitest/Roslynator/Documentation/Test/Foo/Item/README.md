@@ -23,21 +23,21 @@ s
 public Foo this[int index, int index2] { get; set; }
 ```
 
-### Parameters
+## Parameters
 
-#### index
-
-
-
-p
-
-#### index2
+### index
 
 
 
 p
 
-#### Property Value
+### index2
+
+
+
+p
+
+### Property Value
 
 Roslynator\.Documentation\.Test\.[Foo](../README.md)
 
@@ -53,15 +53,15 @@ s
 public Foo this[int index] { get; set; }
 ```
 
-### Parameters
+## Parameters
 
-#### index
+### index
 
 
 
 p
 
-#### Property Value
+### Property Value
 
 Roslynator\.Documentation\.Test\.[Foo](../README.md)
 

@@ -20,27 +20,27 @@
 public static ParameterSyntax Parameter(TypeSyntax type, string identifier, ExpressionSyntax @default = null)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### default
+### identifier
 
 
 
 
 
-#### Returns
+### default
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parametersyntax)
 
@@ -50,27 +50,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterSyntax](https://docs.microsof
 public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier, EqualsValueClauseSyntax @default)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### default
+### identifier
 
 
 
 
 
-#### Returns
+### default
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parametersyntax)
 
@@ -80,27 +80,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterSyntax](https://docs.microsof
 public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier, ExpressionSyntax @default = null)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### default
+### identifier
 
 
 
 
 
-#### Returns
+### default
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parametersyntax)
 

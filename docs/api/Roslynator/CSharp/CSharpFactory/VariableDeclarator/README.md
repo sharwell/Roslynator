@@ -19,21 +19,21 @@
 public static VariableDeclaratorSyntax VariableDeclarator(string identifier, EqualsValueClauseSyntax initializer)
 ```
 
-### Parameters
+## Parameters
 
-#### identifier
-
-
-
-
-
-#### initializer
+### identifier
 
 
 
 
 
-#### Returns
+### initializer
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclaratorSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclaratorsyntax)
 
@@ -43,21 +43,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclaratorSyntax](https://docs
 public static VariableDeclaratorSyntax VariableDeclarator(SyntaxToken identifier, EqualsValueClauseSyntax initializer)
 ```
 
-### Parameters
+## Parameters
 
-#### identifier
-
-
-
-
-
-#### initializer
+### identifier
 
 
 
 
 
-#### Returns
+### initializer
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclaratorSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclaratorsyntax)
 

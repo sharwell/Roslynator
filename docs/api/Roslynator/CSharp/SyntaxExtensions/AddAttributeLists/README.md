@@ -24,27 +24,27 @@ Creates a new class declaration with the specified attribute lists added\.
 public static ClassDeclarationSyntax AddAttributeLists(this ClassDeclarationSyntax classDeclaration, bool keepDocumentationCommentOnTop, params AttributeListSyntax[] attributeLists)
 ```
 
-### Parameters
+## Parameters
 
-#### classDeclaration
-
-
+### classDeclaration
 
 
 
-#### keepDocumentationCommentOnTop
+
+
+### keepDocumentationCommentOnTop
 
 
 
 If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment\.
 
-#### attributeLists
+### attributeLists
 
 
 
 
 
-#### Returns
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax)
 
@@ -58,27 +58,27 @@ Creates a new interface declaration with the specified attribute lists added\.
 public static InterfaceDeclarationSyntax AddAttributeLists(this InterfaceDeclarationSyntax interfaceDeclaration, bool keepDocumentationCommentOnTop, params AttributeListSyntax[] attributeLists)
 ```
 
-### Parameters
+## Parameters
 
-#### interfaceDeclaration
-
-
+### interfaceDeclaration
 
 
 
-#### keepDocumentationCommentOnTop
+
+
+### keepDocumentationCommentOnTop
 
 
 
 If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment\.
 
-#### attributeLists
+### attributeLists
 
 
 
 
 
-#### Returns
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax)
 
@@ -92,27 +92,27 @@ Creates a new struct declaration with the specified attribute lists added\.
 public static StructDeclarationSyntax AddAttributeLists(this StructDeclarationSyntax structDeclaration, bool keepDocumentationCommentOnTop, params AttributeListSyntax[] attributeLists)
 ```
 
-### Parameters
+## Parameters
 
-#### structDeclaration
-
-
+### structDeclaration
 
 
 
-#### keepDocumentationCommentOnTop
+
+
+### keepDocumentationCommentOnTop
 
 
 
 If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment\.
 
-#### attributeLists
+### attributeLists
 
 
 
 
 
-#### Returns
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.structdeclarationsyntax)
 

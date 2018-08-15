@@ -23,15 +23,15 @@ Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/mi
 public static SyntaxNodeOrToken WithoutLeadingTrivia(this SyntaxNodeOrToken nodeOrToken)
 ```
 
-### Parameters
+## Parameters
 
-#### nodeOrToken
-
-
+### nodeOrToken
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken)
 
@@ -45,15 +45,15 @@ Creates a new token from this token with the leading trivia removed\.
 public static SyntaxToken WithoutLeadingTrivia(this SyntaxToken token)
 ```
 
-### Parameters
+## Parameters
 
-#### token
-
-
+### token
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 

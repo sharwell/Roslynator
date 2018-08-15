@@ -19,15 +19,15 @@
 public static UsingDirectiveSyntax UsingStaticDirective(NameSyntax name)
 ```
 
-### Parameters
+## Parameters
 
-#### name
-
-
+### name
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[UsingDirectiveSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.usingdirectivesyntax)
 
@@ -37,33 +37,33 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[UsingDirectiveSyntax](https://docs.mic
 public static UsingDirectiveSyntax UsingStaticDirective(SyntaxToken usingKeyword, SyntaxToken staticKeyword, NameSyntax name, SyntaxToken semicolonToken)
 ```
 
-### Parameters
+## Parameters
 
-#### usingKeyword
-
-
-
-
-
-#### staticKeyword
+### usingKeyword
 
 
 
 
 
-#### name
+### staticKeyword
 
 
 
 
 
-#### semicolonToken
+### name
 
 
 
 
 
-#### Returns
+### semicolonToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[UsingDirectiveSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.usingdirectivesyntax)
 

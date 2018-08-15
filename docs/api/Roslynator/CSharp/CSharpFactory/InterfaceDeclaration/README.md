@@ -19,27 +19,27 @@
 public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>))
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### identifier
+### modifiers
 
 
 
 
 
-#### members
+### identifier
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax)
 
@@ -49,27 +49,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InterfaceDeclarationSyntax](https://do
 public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>))
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### identifier
+### modifiers
 
 
 
 
 
-#### members
+### identifier
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax)
 

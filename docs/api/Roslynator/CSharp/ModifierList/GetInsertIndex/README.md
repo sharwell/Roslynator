@@ -23,27 +23,27 @@ Returns an index a token with the specified kind should be inserted at\.
 public static int GetInsertIndex(SyntaxTokenList tokens, SyntaxKind kind, IComparer<SyntaxKind> comparer = null)
 ```
 
-### Parameters
+## Parameters
 
-#### tokens
-
-
-
-
-
-#### kind
+### tokens
 
 
 
 
 
-#### comparer
+### kind
 
 
 
 
 
-#### Returns
+### comparer
+
+
+
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
@@ -57,27 +57,27 @@ Returns an index the specified token should be inserted at\.
 public static int GetInsertIndex(SyntaxTokenList tokens, SyntaxToken token, IComparer<SyntaxToken> comparer = null)
 ```
 
-### Parameters
+## Parameters
 
-#### tokens
-
-
-
-
-
-#### token
+### tokens
 
 
 
 
 
-#### comparer
+### token
 
 
 
 
 
-#### Returns
+### comparer
+
+
+
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 

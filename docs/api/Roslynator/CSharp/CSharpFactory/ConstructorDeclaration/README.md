@@ -19,33 +19,33 @@
 public static ConstructorDeclarationSyntax ConstructorDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### identifier
+### modifiers
 
 
 
 
 
-#### parameterList
+### identifier
 
 
 
 
 
-#### expressionBody
+### parameterList
 
 
 
 
 
-#### Returns
+### expressionBody
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructordeclarationsyntax)
 
@@ -55,33 +55,33 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorDeclarationSyntax](https://
 public static ConstructorDeclarationSyntax ConstructorDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, ParameterListSyntax parameterList, BlockSyntax body)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### identifier
+### modifiers
 
 
 
 
 
-#### parameterList
+### identifier
 
 
 
 
 
-#### body
+### parameterList
 
 
 
 
 
-#### Returns
+### body
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructordeclarationsyntax)
 

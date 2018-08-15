@@ -19,21 +19,21 @@
 public void CopyTo(Array array, int index)
 ```
 
-### Parameters
+## Parameters
 
-#### array
-
-
-
-
-
-#### index
+### array
 
 
 
 
 
-#### Implements
+### index
+
+
+
+
+
+### Implements
 
 * [ICollection.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.copyto)
 
@@ -43,20 +43,20 @@ public void CopyTo(Array array, int index)
 public void CopyTo(Foo[] array, int arrayIndex)
 ```
 
-### Parameters
+## Parameters
 
-#### array
-
-
-
-
-
-#### arrayIndex
+### array
 
 
 
 
 
-#### Implements
+### arrayIndex
+
+
+
+
+
+### Implements
 
 * [ICollection\<Foo>.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.copyto)

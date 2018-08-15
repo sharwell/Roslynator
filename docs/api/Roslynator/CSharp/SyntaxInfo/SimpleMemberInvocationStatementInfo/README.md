@@ -24,21 +24,21 @@ Creates a new [SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInv
 public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatementInfo(ExpressionStatementSyntax expressionStatement, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### expressionStatement
-
-
-
-
-
-#### allowMissing
+### expressionStatement
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
 
@@ -52,21 +52,21 @@ Creates a new [SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInv
 public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatementInfo(InvocationExpressionSyntax invocationExpression, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### invocationExpression
-
-
-
-
-
-#### allowMissing
+### invocationExpression
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
 
@@ -80,21 +80,21 @@ Creates a new [SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInv
 public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatementInfo(SyntaxNode node, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### allowMissing
+### node
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInvocationStatementInfo/README.md)
 

@@ -31,21 +31,21 @@ Creates a new [ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/a
 public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax classDeclaration, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### classDeclaration
-
-
-
-
-
-#### members
+### classDeclaration
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax)
 
@@ -59,21 +59,21 @@ Creates a new [ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/a
 public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax classDeclaration, MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### classDeclaration
-
-
-
-
-
-#### member
+### classDeclaration
 
 
 
 
 
-#### Returns
+### member
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax)
 
@@ -87,21 +87,21 @@ Creates a new [CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/ap
 public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compilationUnit, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### compilationUnit
-
-
-
-
-
-#### members
+### compilationUnit
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.compilationunitsyntax)
 
@@ -115,21 +115,21 @@ Creates a new [CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/ap
 public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compilationUnit, MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### compilationUnit
-
-
-
-
-
-#### member
+### compilationUnit
 
 
 
 
 
-#### Returns
+### member
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.compilationunitsyntax)
 
@@ -143,21 +143,21 @@ Creates a new [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotn
 public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSyntax interfaceDeclaration, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### interfaceDeclaration
-
-
-
-
-
-#### members
+### interfaceDeclaration
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax)
 
@@ -171,21 +171,21 @@ Creates a new [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotn
 public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSyntax interfaceDeclaration, MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### interfaceDeclaration
-
-
-
-
-
-#### member
+### interfaceDeclaration
 
 
 
 
 
-#### Returns
+### member
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax)
 
@@ -199,21 +199,21 @@ Creates a new [NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotn
 public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSyntax namespaceDeclaration, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### namespaceDeclaration
-
-
-
-
-
-#### members
+### namespaceDeclaration
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.namespacedeclarationsyntax)
 
@@ -227,21 +227,21 @@ Creates a new [NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotn
 public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSyntax namespaceDeclaration, MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### namespaceDeclaration
-
-
-
-
-
-#### member
+### namespaceDeclaration
 
 
 
 
 
-#### Returns
+### member
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.namespacedeclarationsyntax)
 
@@ -255,21 +255,21 @@ Creates a new [StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/
 public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax structDeclaration, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### structDeclaration
-
-
-
-
-
-#### members
+### structDeclaration
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.structdeclarationsyntax)
 
@@ -283,21 +283,21 @@ Creates a new [StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/
 public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax structDeclaration, MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### structDeclaration
-
-
-
-
-
-#### member
+### structDeclaration
 
 
 
 
 
-#### Returns
+### member
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.structdeclarationsyntax)
 

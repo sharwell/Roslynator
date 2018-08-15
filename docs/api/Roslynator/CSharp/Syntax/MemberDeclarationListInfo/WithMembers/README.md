@@ -23,15 +23,15 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the members updated
 public MemberDeclarationListInfo WithMembers(IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### members
-
-
+### members
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 
@@ -45,15 +45,15 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the members updated
 public MemberDeclarationListInfo WithMembers(SyntaxList<MemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### members
-
-
+### members
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
 

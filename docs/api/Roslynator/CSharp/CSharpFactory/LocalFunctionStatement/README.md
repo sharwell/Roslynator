@@ -19,39 +19,39 @@
 public static LocalFunctionStatementSyntax LocalFunctionStatement(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken identifier, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### returnType
+### modifiers
 
 
 
 
 
-#### identifier
+### returnType
 
 
 
 
 
-#### parameterList
+### identifier
 
 
 
 
 
-#### expressionBody
+### parameterList
 
 
 
 
 
-#### Returns
+### expressionBody
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalFunctionStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.localfunctionstatementsyntax)
 
@@ -61,39 +61,39 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalFunctionStatementSyntax](https://
 public static LocalFunctionStatementSyntax LocalFunctionStatement(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken identifier, ParameterListSyntax parameterList, BlockSyntax body)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### returnType
+### modifiers
 
 
 
 
 
-#### identifier
+### returnType
 
 
 
 
 
-#### parameterList
+### identifier
 
 
 
 
 
-#### body
+### parameterList
 
 
 
 
 
-#### Returns
+### body
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalFunctionStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.localfunctionstatementsyntax)
 

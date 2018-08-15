@@ -19,15 +19,15 @@
 public static ArgumentListSyntax ArgumentList(ArgumentSyntax argument)
 ```
 
-### Parameters
+## Parameters
 
-#### argument
-
-
+### argument
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.argumentlistsyntax)
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ArgumentListSyntax](https://docs.micro
 public static ArgumentListSyntax ArgumentList(params ArgumentSyntax[] arguments)
 ```
 
-### Parameters
+## Parameters
 
-#### arguments
-
-
+### arguments
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.argumentlistsyntax)
 

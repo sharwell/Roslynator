@@ -23,15 +23,15 @@ Creates a new node with all modifiers removed\.
 public TNode RemoveAll(TNode node)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
+### node
 
 
 
-#### Returns
+
+
+### Returns
 
 TNode
 
@@ -45,21 +45,21 @@ Creates a new node with modifiers that matches the predicate removed\.
 public TNode RemoveAll(TNode node, Func<SyntaxToken, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### predicate
+### node
 
 
 
 
 
-#### Returns
+### predicate
+
+
+
+
+
+### Returns
 
 TNode
 

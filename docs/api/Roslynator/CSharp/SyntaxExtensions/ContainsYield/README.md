@@ -23,15 +23,15 @@ Returns true if the specified local function contains yield statement\. Nested l
 public static bool ContainsYield(this LocalFunctionStatementSyntax localFunctionStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### localFunctionStatement
-
-
+### localFunctionStatement
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -45,15 +45,15 @@ Returns true if the specified method contains yield statement\. Nested local fun
 public static bool ContainsYield(this MethodDeclarationSyntax methodDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### methodDeclaration
-
-
+### methodDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

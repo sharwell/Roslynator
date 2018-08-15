@@ -19,27 +19,27 @@
 public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>))
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### identifier
+### modifiers
 
 
 
 
 
-#### members
+### identifier
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax)
 
@@ -49,27 +49,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ClassDeclarationSyntax](https://docs.m
 public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>))
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### identifier
+### modifiers
 
 
 
 
 
-#### members
+### identifier
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax)
 

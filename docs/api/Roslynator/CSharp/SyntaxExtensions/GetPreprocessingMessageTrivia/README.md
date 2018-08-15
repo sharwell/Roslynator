@@ -23,15 +23,15 @@ Gets preprocessing message for the specified endregion directive if such message
 public static SyntaxTrivia GetPreprocessingMessageTrivia(this EndRegionDirectiveTriviaSyntax endRegionDirective)
 ```
 
-### Parameters
+## Parameters
 
-#### endRegionDirective
-
-
+### endRegionDirective
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivia)
 
@@ -45,15 +45,15 @@ Gets preprocessing message for the specified region directive if such message ex
 public static SyntaxTrivia GetPreprocessingMessageTrivia(this RegionDirectiveTriviaSyntax regionDirective)
 ```
 
-### Parameters
+## Parameters
 
-#### regionDirective
-
-
+### regionDirective
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivia)
 

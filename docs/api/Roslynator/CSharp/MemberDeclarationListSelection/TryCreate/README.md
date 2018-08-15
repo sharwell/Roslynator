@@ -23,27 +23,27 @@ Creates a new [MemberDeclarationListSelection](../README.md) based on the specif
 public static bool TryCreate(NamespaceDeclarationSyntax namespaceDeclaration, TextSpan span, out MemberDeclarationListSelection selectedMembers)
 ```
 
-### Parameters
+## Parameters
 
-#### namespaceDeclaration
-
-
-
-
-
-#### span
+### namespaceDeclaration
 
 
 
 
 
-#### selectedMembers
+### span
 
 
 
 
 
-#### Returns
+### selectedMembers
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -59,27 +59,27 @@ Creates a new [MemberDeclarationListSelection](../README.md) based on the specif
 public static bool TryCreate(TypeDeclarationSyntax typeDeclaration, TextSpan span, out MemberDeclarationListSelection selectedMembers)
 ```
 
-### Parameters
+## Parameters
 
-#### typeDeclaration
-
-
-
-
-
-#### span
+### typeDeclaration
 
 
 
 
 
-#### selectedMembers
+### span
 
 
 
 
 
-#### Returns
+### selectedMembers
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

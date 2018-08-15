@@ -19,27 +19,27 @@
 public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, string identifier)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### type
+### modifiers
 
 
 
 
 
-#### identifier
+### type
 
 
 
 
 
-#### Returns
+### identifier
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EventFieldDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.eventfielddeclarationsyntax)
 
@@ -49,27 +49,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EventFieldDeclarationSyntax](https://d
 public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### type
+### modifiers
 
 
 
 
 
-#### identifier
+### type
 
 
 
 
 
-#### Returns
+### identifier
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EventFieldDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.eventfielddeclarationsyntax)
 

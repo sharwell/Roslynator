@@ -23,27 +23,27 @@ Creates a new document with comments of the specified kind removed\.
 public static Task<Document> RemoveCommentsAsync(this Document document, CommentKinds kinds, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### kinds
+### document
 
 
 
 
 
-#### cancellationToken
+### kinds
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
@@ -57,33 +57,33 @@ Creates a new document with comments of the specified kind removed\.
 public static Task<Document> RemoveCommentsAsync(this Document document, TextSpan span, CommentKinds kinds, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### span
+### document
 
 
 
 
 
-#### kinds
+### span
 
 
 
 
 
-#### cancellationToken
+### kinds
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 

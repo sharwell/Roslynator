@@ -23,27 +23,27 @@ Returns true if the name is not contained in the specified list\.
 public static bool IsUniqueName(string name, IEnumerable<string> reservedNames, bool isCaseSensitive = true)
 ```
 
-### Parameters
+## Parameters
 
-#### name
-
-
-
-
-
-#### reservedNames
+### name
 
 
 
 
 
-#### isCaseSensitive
+### reservedNames
 
 
 
 
 
-#### Returns
+### isCaseSensitive
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -57,27 +57,27 @@ Returns true if the name is not contained in the specified list\. [ISymbol.Name]
 public static bool IsUniqueName(string name, ImmutableArray<ISymbol> symbols, bool isCaseSensitive = true)
 ```
 
-### Parameters
+## Parameters
 
-#### name
-
-
-
-
-
-#### symbols
+### name
 
 
 
 
 
-#### isCaseSensitive
+### symbols
 
 
 
 
 
-#### Returns
+### isCaseSensitive
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

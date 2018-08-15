@@ -33,35 +33,35 @@ s **value** **T**
 public void Bar<T, T2>(string value, string value2)
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### T
+### T
 
 
 
 doc for T1
 
-#### T2
+### T2
 
 
 
 doc for T2
 
-### Parameters
+## Parameters
 
-#### value
+### value
 
 
 
 doc for value
 
-#### value2
+### value2
 
 
 
+doc for value2
 
-
-### Exceptions
+## Exceptions
 
 [ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)
 

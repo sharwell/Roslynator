@@ -20,21 +20,21 @@
 public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, StatementSyntax statement)
 ```
 
-### Parameters
+## Parameters
 
-#### switchLabel
-
-
-
-
-
-#### statement
+### switchLabel
 
 
 
 
 
-#### Returns
+### statement
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)
 
@@ -44,21 +44,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.micr
 public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, SyntaxList<StatementSyntax> statements)
 ```
 
-### Parameters
+## Parameters
 
-#### switchLabel
-
-
-
-
-
-#### statements
+### switchLabel
 
 
 
 
 
-#### Returns
+### statements
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)
 
@@ -68,21 +68,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.micr
 public static SwitchSectionSyntax SwitchSection(SyntaxList<SwitchLabelSyntax> switchLabels, StatementSyntax statement)
 ```
 
-### Parameters
+## Parameters
 
-#### switchLabels
-
-
-
-
-
-#### statement
+### switchLabels
 
 
 
 
 
-#### Returns
+### statement
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)
 

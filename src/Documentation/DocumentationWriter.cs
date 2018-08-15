@@ -36,8 +36,6 @@ namespace Roslynator.Documentation
 
         internal ISymbol CurrentSymbol { get; set; }
 
-        protected internal int HeadingLevelBase { get; set; }
-
         public DocumentationOptions Options { get; }
 
         public DocumentationResources Resources { get; }
@@ -381,9 +379,9 @@ namespace Roslynator.Documentation
             WriteLine();
         }
 
-        public virtual void WriteSummary(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
+        public virtual void WriteSummary(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation, int headingLevelBase = 0)
         {
-            WriteSection(heading: Resources.SummaryTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Summary);
+            WriteSection(heading: Resources.SummaryTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Summary, headingLevelBase: headingLevelBase);
         }
 
         public virtual void WriteDefinition(ISymbol symbol)
@@ -402,7 +400,7 @@ namespace Roslynator.Documentation
             WriteCodeBlock(parts.ToDisplayString(), symbol.Language);
         }
 
-        public virtual void WriteTypeParameters(ISymbol symbol)
+        public virtual void WriteTypeParameters(ISymbol symbol, int headingLevelBase = 0)
         {
             ImmutableArray<ITypeParameterSymbol> typeParameters = symbol.GetTypeParameters();
 
@@ -410,11 +408,11 @@ namespace Roslynator.Documentation
 
             if (en.MoveNext())
             {
-                WriteHeading(2, Resources.TypeParametersTitle);
+                WriteHeading(2 + headingLevelBase, Resources.TypeParametersTitle);
 
                 do
                 {
-                    WriteHeading(3, en.Current.Name);
+                    WriteHeading(3 + headingLevelBase, en.Current.Name);
                     WriteLine();
                     WriteLine();
                     GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", en.Current.Name)?.WriteContentTo(this);
@@ -423,13 +421,9 @@ namespace Roslynator.Documentation
                 }
                 while (en.MoveNext());
             }
-
-            //TODO: del
-            //if (typeParameters.Any())
-            //    WriteTable(typeParameters, Resources.TypeParametersTitle, 3, Resources.NameTitle, Resources.SummaryTitle, SymbolDisplayFormats.TypeName);
         }
 
-        public virtual void WriteParameters(ISymbol symbol)
+        public virtual void WriteParameters(ISymbol symbol, int headingLevelBase = 0)
         {
             switch (symbol.Kind)
             {
@@ -438,14 +432,6 @@ namespace Roslynator.Documentation
                         var methodSymbol = (IMethodSymbol)symbol;
 
                         WriteParameters(methodSymbol.Parameters);
-
-                        //WriteTable(
-                        //    methodSymbol.Parameters,
-                        //    Resources.ParametersTitle,
-                        //    3,
-                        //    Resources.NameTitle,
-                        //    Resources.SummaryTitle,
-                        //    SymbolDisplayFormats.TypeName);
 
                         break;
                     }
@@ -456,17 +442,7 @@ namespace Roslynator.Documentation
                         IMethodSymbol methodSymbol = namedTypeSymbol.DelegateInvokeMethod;
 
                         if (methodSymbol != null)
-                        {
                             WriteParameters(methodSymbol.Parameters);
-
-                            //WriteTable(
-                            //    methodSymbol.Parameters,
-                            //    Resources.ParametersTitle,
-                            //    3,
-                            //    Resources.NameTitle,
-                            //    Resources.SummaryTitle,
-                            //    SymbolDisplayFormats.TypeName);
-                        }
 
                         break;
                     }
@@ -475,14 +451,6 @@ namespace Roslynator.Documentation
                         var propertySymbol = (IPropertySymbol)symbol;
 
                         WriteParameters(propertySymbol.Parameters);
-
-                        //WriteTable(
-                        //    propertySymbol.Parameters,
-                        //    Resources.ParametersTitle,
-                        //    3,
-                        //    Resources.NameTitle,
-                        //    Resources.SummaryTitle,
-                        //    SymbolDisplayFormats.TypeName);
 
                         break;
                     }
@@ -494,11 +462,11 @@ namespace Roslynator.Documentation
 
                 if (en.MoveNext())
                 {
-                    WriteHeading(2, Resources.ParametersTitle);
+                    WriteHeading(2 + headingLevelBase, Resources.ParametersTitle);
 
                     do
                     {
-                        WriteHeading(3, en.Current.Name);
+                        WriteHeading(3 + headingLevelBase, en.Current.Name);
                         WriteLine();
                         WriteLine();
                         GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", en.Current.Name)?.WriteContentTo(this);
@@ -594,7 +562,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteAttributes(ISymbol symbol)
+        public virtual void WriteAttributes(ISymbol symbol, int headingLevelBase = 0)
         {
             ImmutableArray<AttributeInfo> attributes;
 
@@ -621,7 +589,7 @@ namespace Roslynator.Documentation
             {
                 if (en.MoveNext())
                 {
-                    WriteHeading(2, Resources.AttributesTitle);
+                    WriteHeading(2 + headingLevelBase, Resources.AttributesTitle);
 
                     do
                     {
@@ -664,13 +632,13 @@ namespace Roslynator.Documentation
                 addNamespace: true);
         }
 
-        public virtual void WriteExceptions(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
+        public virtual void WriteExceptions(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation, int headingLevelBase = 0)
         {
             using (IEnumerator<(XElement element, ISymbol exceptionSymbol)> en = GetExceptions().GetEnumerator())
             {
                 if (en.MoveNext())
                 {
-                    WriteHeading(2, Resources.ExceptionsTitle);
+                    WriteHeading(2 + headingLevelBase, Resources.ExceptionsTitle);
 
                     do
                     {
@@ -705,14 +673,14 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteExamples(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
+        public virtual void WriteExamples(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation, int headingLevelBase = 0)
         {
-            WriteSection(heading: Resources.ExamplesTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Example);
+            WriteSection(heading: Resources.ExamplesTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Example, headingLevelBase: headingLevelBase);
         }
 
-        public virtual void WriteRemarks(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
+        public virtual void WriteRemarks(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation, int headingLevelBase = 0)
         {
-            WriteSection(heading: Resources.RemarksTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Remarks);
+            WriteSection(heading: Resources.RemarksTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Remarks, headingLevelBase: headingLevelBase);
         }
 
         public virtual void WriteEnumFields(IEnumerable<IFieldSymbol> fields, INamedTypeSymbol enumType)
@@ -845,13 +813,13 @@ namespace Roslynator.Documentation
                 SymbolDisplayFormats.SimpleDefinition);
         }
 
-        public virtual void WriteSeeAlso(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation)
+        public virtual void WriteSeeAlso(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation, int headingLevelBase = 0)
         {
             using (IEnumerator<ISymbol> en = GetSymbols().GetEnumerator())
             {
                 if (en.MoveNext())
                 {
-                    WriteHeading(2, Resources.SeeAlsoTitle);
+                    WriteHeading(2 + headingLevelBase, Resources.SeeAlsoTitle);
 
                     WriteStartBulletList();
 
@@ -882,7 +850,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        private void WriteSection(string heading, SymbolXmlDocumentation xmlDocumentation, string elementName)
+        private void WriteSection(string heading, SymbolXmlDocumentation xmlDocumentation, string elementName, int headingLevelBase = 0)
         {
             XElement element = xmlDocumentation.Element(elementName);
 
@@ -891,7 +859,7 @@ namespace Roslynator.Documentation
 
             if (heading != null)
             {
-                WriteHeading(2, heading);
+                WriteHeading(2 + headingLevelBase, heading);
             }
             else
             {
@@ -932,6 +900,8 @@ namespace Roslynator.Documentation
                     do
                     {
                         ISymbol symbol = en.Current;
+
+                        Debug.Assert(!symbol.IsKind(SymbolKind.Parameter, SymbolKind.TypeParameter), symbol.Kind.ToString());
 
                         WriteStartTableRow();
                         WriteStartTableCell();

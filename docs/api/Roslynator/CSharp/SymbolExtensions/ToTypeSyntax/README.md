@@ -24,21 +24,21 @@ Creates a new [TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft
 public static TypeSyntax ToTypeSyntax(this INamespaceOrTypeSymbol namespaceOrTypeSymbol, SymbolDisplayFormat format = null)
 ```
 
-### Parameters
+## Parameters
 
-#### namespaceOrTypeSymbol
-
-
-
-
-
-#### format
+### namespaceOrTypeSymbol
 
 
 
 
 
-#### Returns
+### format
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typesyntax)
 
@@ -52,21 +52,21 @@ Creates a new [TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft
 public static TypeSyntax ToTypeSyntax(this INamespaceSymbol namespaceSymbol, SymbolDisplayFormat format = null)
 ```
 
-### Parameters
+## Parameters
 
-#### namespaceSymbol
-
-
-
-
-
-#### format
+### namespaceSymbol
 
 
 
 
 
-#### Returns
+### format
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typesyntax)
 
@@ -80,21 +80,21 @@ Creates a new [TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft
 public static TypeSyntax ToTypeSyntax(this ITypeSymbol typeSymbol, SymbolDisplayFormat format = null)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
-
-
-
-
-
-#### format
+### typeSymbol
 
 
 
 
 
-#### Returns
+### format
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typesyntax)
 

@@ -25,21 +25,21 @@ Searches for a token of the specified kind and returns the first occurrence with
 public static SyntaxToken Find(this SyntaxTokenList tokenList, SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### tokenList
-
-
-
-
-
-#### kind
+### tokenList
 
 
 
 
 
-#### Returns
+### kind
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
@@ -53,21 +53,21 @@ Searches for a trivia of the specified kind and returns the first occurrence wit
 public static SyntaxTrivia Find(this SyntaxTriviaList triviaList, SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### triviaList
-
-
-
-
-
-#### kind
+### triviaList
 
 
 
 
 
-#### Returns
+### kind
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivia)
 
@@ -81,29 +81,29 @@ Searches for a node of the specified kind and returns the first occurrence withi
 public static TNode Find<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### kind
+## Parameters
+
+### list
 
 
 
 
 
-#### Returns
+### kind
+
+
+
+
+
+### Returns
 
 TNode
 
@@ -117,29 +117,29 @@ Searches for a node of the specified kind and returns the first occurrence withi
 public static TNode Find<TNode>(this SyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### kind
+## Parameters
+
+### list
 
 
 
 
 
-#### Returns
+### kind
+
+
+
+
+
+### Returns
 
 TNode
 

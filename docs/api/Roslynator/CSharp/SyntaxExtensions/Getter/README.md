@@ -24,15 +24,15 @@ Returns a get accessor contained in the specified list\.
 public static AccessorDeclarationSyntax Getter(this AccessorListSyntax accessorList)
 ```
 
-### Parameters
+## Parameters
 
-#### accessorList
-
-
+### accessorList
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
@@ -46,15 +46,15 @@ Returns a get accessor that is contained in the specified indexer declaration\.
 public static AccessorDeclarationSyntax Getter(this IndexerDeclarationSyntax indexerDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### indexerDeclaration
-
-
+### indexerDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 
@@ -68,15 +68,15 @@ Returns property get accessor, if any\.
 public static AccessorDeclarationSyntax Getter(this PropertyDeclarationSyntax propertyDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### propertyDeclaration
-
-
+### propertyDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
 

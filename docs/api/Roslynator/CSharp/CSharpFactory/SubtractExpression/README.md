@@ -19,21 +19,21 @@
 public static BinaryExpressionSyntax SubtractExpression(ExpressionSyntax left, ExpressionSyntax right)
 ```
 
-### Parameters
+## Parameters
 
-#### left
-
-
-
-
-
-#### right
+### left
 
 
 
 
 
-#### Returns
+### right
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BinaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.binaryexpressionsyntax)
 
@@ -43,27 +43,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BinaryExpressionSyntax](https://docs.m
 public static BinaryExpressionSyntax SubtractExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)
 ```
 
-### Parameters
+## Parameters
 
-#### left
-
-
-
-
-
-#### operatorToken
+### left
 
 
 
 
 
-#### right
+### operatorToken
 
 
 
 
 
-#### Returns
+### right
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BinaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.binaryexpressionsyntax)
 

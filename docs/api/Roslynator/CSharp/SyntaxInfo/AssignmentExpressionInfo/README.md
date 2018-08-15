@@ -23,27 +23,27 @@ Creates a new [AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/R
 public static AssignmentExpressionInfo AssignmentExpressionInfo(AssignmentExpressionSyntax assignmentExpression, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### assignmentExpression
-
-
-
-
-
-#### walkDownParentheses
+### assignmentExpression
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/README.md)
 
@@ -57,27 +57,27 @@ Creates a new [AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/R
 public static AssignmentExpressionInfo AssignmentExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### walkDownParentheses
+### node
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/README.md)
 

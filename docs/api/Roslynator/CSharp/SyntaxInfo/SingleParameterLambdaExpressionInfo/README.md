@@ -23,21 +23,21 @@ Creates a new [SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameter
 public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressionInfo(LambdaExpressionSyntax lambdaExpression, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### lambdaExpression
-
-
-
-
-
-#### allowMissing
+### lambdaExpression
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameterLambdaExpressionInfo/README.md)
 
@@ -51,27 +51,27 @@ Creates a new [SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameter
 public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### walkDownParentheses
+### node
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameterLambdaExpressionInfo/README.md)
 

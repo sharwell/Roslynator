@@ -19,15 +19,15 @@
 public static ConstructorInitializerSyntax BaseConstructorInitializer(ArgumentListSyntax argumentList = null)
 ```
 
-### Parameters
+## Parameters
 
-#### argumentList
-
-
+### argumentList
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorInitializerSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructorinitializersyntax)
 
@@ -37,21 +37,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorInitializerSyntax](https://
 public static ConstructorInitializerSyntax BaseConstructorInitializer(SyntaxToken semicolonToken, ArgumentListSyntax argumentList)
 ```
 
-### Parameters
+## Parameters
 
-#### semicolonToken
-
-
-
-
-
-#### argumentList
+### semicolonToken
 
 
 
 
 
-#### Returns
+### argumentList
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorInitializerSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructorinitializersyntax)
 

@@ -21,27 +21,27 @@
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, string identifier, ExpressionSyntax value = null)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### value
+### identifier
 
 
 
 
 
-#### Returns
+### value
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclarationsyntax)
 
@@ -51,27 +51,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://doc
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, SyntaxToken identifier, EqualsValueClauseSyntax initializer)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### initializer
+### identifier
 
 
 
 
 
-#### Returns
+### initializer
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclarationsyntax)
 
@@ -81,27 +81,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://doc
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, SyntaxToken identifier, ExpressionSyntax value = null)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### value
+### identifier
 
 
 
 
 
-#### Returns
+### value
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclarationsyntax)
 
@@ -111,21 +111,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://doc
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, VariableDeclaratorSyntax variable)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### variable
+### type
 
 
 
 
 
-#### Returns
+### variable
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclarationsyntax)
 

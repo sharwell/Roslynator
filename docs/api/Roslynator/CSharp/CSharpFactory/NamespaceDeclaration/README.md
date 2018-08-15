@@ -19,21 +19,21 @@
 public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### name
-
-
-
-
-
-#### member
+### name
 
 
 
 
 
-#### Returns
+### member
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.namespacedeclarationsyntax)
 
@@ -43,21 +43,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[NamespaceDeclarationSyntax](https://do
 public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, SyntaxList<MemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### name
-
-
-
-
-
-#### members
+### name
 
 
 
 
 
-#### Returns
+### members
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.namespacedeclarationsyntax)
 

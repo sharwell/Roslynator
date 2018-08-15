@@ -23,27 +23,27 @@ Creates a new document updated with the specified text changes\.
 public static Task<Document> WithTextChangesAsync(this Document document, IEnumerable<TextChange> textChanges, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### textChanges
+### document
 
 
 
 
 
-#### cancellationToken
+### textChanges
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
@@ -57,27 +57,27 @@ Creates a new document updated with the specified text changes\.
 public static Task<Document> WithTextChangesAsync(this Document document, TextChange[] textChanges, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### textChanges
+### document
 
 
 
 
 
-#### cancellationToken
+### textChanges
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 

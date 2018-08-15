@@ -23,15 +23,15 @@ Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpression
 public static StringLiteralExpressionInfo StringLiteralExpressionInfo(LiteralExpressionSyntax literalExpression)
 ```
 
-### Parameters
+## Parameters
 
-#### literalExpression
-
-
+### literalExpression
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md)
 
@@ -45,21 +45,21 @@ Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpression
 public static StringLiteralExpressionInfo StringLiteralExpressionInfo(SyntaxNode node, bool walkDownParentheses = true)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### walkDownParentheses
+### node
 
 
 
 
 
-#### Returns
+### walkDownParentheses
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md)
 

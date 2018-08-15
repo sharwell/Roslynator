@@ -23,27 +23,27 @@ Creates a new [SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.
 public static SimpleIfStatementInfo SimpleIfStatementInfo(IfStatementSyntax ifStatement, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### ifStatement
-
-
-
-
-
-#### walkDownParentheses
+### ifStatement
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.md)
 
@@ -57,27 +57,27 @@ Creates a new [SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.
 public static SimpleIfStatementInfo SimpleIfStatementInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### walkDownParentheses
+### node
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.md)
 

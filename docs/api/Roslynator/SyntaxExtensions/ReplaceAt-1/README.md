@@ -25,27 +25,27 @@ Creates a new [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/micr
 public static SyntaxTokenList ReplaceAt(this SyntaxTokenList tokenList, int index, SyntaxToken newToken)
 ```
 
-### Parameters
+## Parameters
 
-#### tokenList
-
-
-
-
-
-#### index
+### tokenList
 
 
 
 
 
-#### newToken
+### index
 
 
 
 
 
-#### Returns
+### newToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)
 
@@ -59,27 +59,27 @@ Creates a new [SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/mic
 public static SyntaxTriviaList ReplaceAt(this SyntaxTriviaList triviaList, int index, SyntaxTrivia newTrivia)
 ```
 
-### Parameters
+## Parameters
 
-#### triviaList
-
-
-
-
-
-#### index
+### triviaList
 
 
 
 
 
-#### newTrivia
+### index
 
 
 
 
 
-#### Returns
+### newTrivia
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)
 
@@ -93,35 +93,35 @@ Creates a new list with a node at the specified index replaced with a new node\.
 public static SeparatedSyntaxList<TNode> ReplaceAt<TNode>(this SeparatedSyntaxList<TNode> list, int index, TNode newNode) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### index
+## Parameters
+
+### list
 
 
 
 
 
-#### newNode
+### index
 
 
 
 
 
-#### Returns
+### newNode
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)
 
@@ -135,35 +135,35 @@ Creates a new list with the node at the specified index replaced with a new node
 public static SyntaxList<TNode> ReplaceAt<TNode>(this SyntaxList<TNode> list, int index, TNode newNode) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### list
+### TNode
 
 
 
 
 
-#### index
+## Parameters
+
+### list
 
 
 
 
 
-#### newNode
+### index
 
 
 
 
 
-#### Returns
+### newNode
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)
 

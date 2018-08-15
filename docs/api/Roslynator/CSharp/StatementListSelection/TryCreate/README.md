@@ -23,27 +23,27 @@ Creates a new [StatementListSelection](../README.md) based on the specified bloc
 public static bool TryCreate(BlockSyntax block, TextSpan span, out StatementListSelection selectedStatements)
 ```
 
-### Parameters
+## Parameters
 
-#### block
-
-
-
-
-
-#### span
+### block
 
 
 
 
 
-#### selectedStatements
+### span
 
 
 
 
 
-#### Returns
+### selectedStatements
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -59,27 +59,27 @@ Creates a new [StatementListSelection](../README.md) based on the specified swit
 public static bool TryCreate(SwitchSectionSyntax switchSection, TextSpan span, out StatementListSelection selectedStatements)
 ```
 
-### Parameters
+## Parameters
 
-#### switchSection
-
-
-
-
-
-#### span
+### switchSection
 
 
 
 
 
-#### selectedStatements
+### span
 
 
 
 
 
-#### Returns
+### selectedStatements
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

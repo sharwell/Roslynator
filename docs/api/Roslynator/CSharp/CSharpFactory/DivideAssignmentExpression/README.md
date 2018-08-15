@@ -19,21 +19,21 @@
 public static AssignmentExpressionSyntax DivideAssignmentExpression(ExpressionSyntax left, ExpressionSyntax right)
 ```
 
-### Parameters
+## Parameters
 
-#### left
-
-
-
-
-
-#### right
+### left
 
 
 
 
 
-#### Returns
+### right
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AssignmentExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.assignmentexpressionsyntax)
 
@@ -43,27 +43,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AssignmentExpressionSyntax](https://do
 public static AssignmentExpressionSyntax DivideAssignmentExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)
 ```
 
-### Parameters
+## Parameters
 
-#### left
-
-
-
-
-
-#### operatorToken
+### left
 
 
 
 
 
-#### right
+### operatorToken
 
 
 
 
 
-#### Returns
+### right
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AssignmentExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.assignmentexpressionsyntax)
 

@@ -42,15 +42,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(AccessorDeclarationSyntax accessorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### accessorDeclaration
-
-
+### accessorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -64,15 +64,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(ClassDeclarationSyntax classDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### classDeclaration
-
-
+### classDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -86,15 +86,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(ConstructorDeclarationSyntax constructorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### constructorDeclaration
-
-
+### constructorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -108,15 +108,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(ConversionOperatorDeclarationSyntax conversionOperatorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### conversionOperatorDeclaration
-
-
+### conversionOperatorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -130,15 +130,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(DelegateDeclarationSyntax delegateDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### delegateDeclaration
-
-
+### delegateDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -152,15 +152,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(DestructorDeclarationSyntax destructorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### destructorDeclaration
-
-
+### destructorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -174,15 +174,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(EnumDeclarationSyntax enumDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### enumDeclaration
-
-
+### enumDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -196,15 +196,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(EventDeclarationSyntax eventDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### eventDeclaration
-
-
+### eventDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -218,15 +218,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(EventFieldDeclarationSyntax eventFieldDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### eventFieldDeclaration
-
-
+### eventFieldDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -240,15 +240,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(FieldDeclarationSyntax fieldDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### fieldDeclaration
-
-
+### fieldDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -262,15 +262,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(IncompleteMemberSyntax incompleteMember)
 ```
 
-### Parameters
+## Parameters
 
-#### incompleteMember
-
-
+### incompleteMember
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -284,15 +284,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(IndexerDeclarationSyntax indexerDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### indexerDeclaration
-
-
+### indexerDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -306,15 +306,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(InterfaceDeclarationSyntax interfaceDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### interfaceDeclaration
-
-
+### interfaceDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -328,15 +328,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(LocalDeclarationStatementSyntax localDeclarationStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### localDeclarationStatement
-
-
+### localDeclarationStatement
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -350,15 +350,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(LocalFunctionStatementSyntax localFunctionStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### localFunctionStatement
-
-
+### localFunctionStatement
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -372,15 +372,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(MethodDeclarationSyntax methodDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### methodDeclaration
-
-
+### methodDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -394,15 +394,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(OperatorDeclarationSyntax operatorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### operatorDeclaration
-
-
+### operatorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -416,15 +416,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(ParameterSyntax parameter)
 ```
 
-### Parameters
+## Parameters
 
-#### parameter
-
-
+### parameter
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -438,15 +438,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(PropertyDeclarationSyntax propertyDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### propertyDeclaration
-
-
+### propertyDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -460,15 +460,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(StructDeclarationSyntax structDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### structDeclaration
-
-
+### structDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 
@@ -482,15 +482,15 @@ Creates a new [ModifierListInfo](../../Syntax/ModifierListInfo/README.md) from t
 public static ModifierListInfo ModifierListInfo(SyntaxNode node)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
+### node
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../../Syntax/ModifierListInfo/README.md)
 

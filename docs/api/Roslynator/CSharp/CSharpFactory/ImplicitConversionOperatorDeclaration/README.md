@@ -19,33 +19,33 @@
 public static ConversionOperatorDeclarationSyntax ImplicitConversionOperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax type, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### type
+### modifiers
 
 
 
 
 
-#### parameterList
+### type
 
 
 
 
 
-#### expressionBody
+### parameterList
 
 
 
 
 
-#### Returns
+### expressionBody
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConversionOperatorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.conversionoperatordeclarationsyntax)
 
@@ -55,33 +55,33 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConversionOperatorDeclarationSyntax](h
 public static ConversionOperatorDeclarationSyntax ImplicitConversionOperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax type, ParameterListSyntax parameterList, BlockSyntax body)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### type
+### modifiers
 
 
 
 
 
-#### parameterList
+### type
 
 
 
 
 
-#### body
+### parameterList
 
 
 
 
 
-#### Returns
+### body
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConversionOperatorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.conversionoperatordeclarationsyntax)
 

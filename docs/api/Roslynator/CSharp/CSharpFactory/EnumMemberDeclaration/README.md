@@ -21,21 +21,21 @@
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, EqualsValueClauseSyntax value)
 ```
 
-### Parameters
+## Parameters
 
-#### name
-
-
-
-
-
-#### value
+### name
 
 
 
 
 
-#### Returns
+### value
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 
@@ -45,21 +45,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://d
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, ExpressionSyntax value)
 ```
 
-### Parameters
+## Parameters
 
-#### name
-
-
-
-
-
-#### value
+### name
 
 
 
 
 
-#### Returns
+### value
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 
@@ -69,21 +69,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://d
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken identifier, EqualsValueClauseSyntax value)
 ```
 
-### Parameters
+## Parameters
 
-#### identifier
-
-
-
-
-
-#### value
+### identifier
 
 
 
 
 
-#### Returns
+### value
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 
@@ -93,21 +93,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://d
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken identifier, ExpressionSyntax value)
 ```
 
-### Parameters
+## Parameters
 
-#### identifier
-
-
-
-
-
-#### value
+### identifier
 
 
 
 
 
-#### Returns
+### value
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enummemberdeclarationsyntax)
 

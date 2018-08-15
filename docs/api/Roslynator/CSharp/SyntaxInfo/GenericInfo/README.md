@@ -30,15 +30,15 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(DelegateDeclarationSyntax delegateDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### delegateDeclaration
-
-
+### delegateDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
@@ -52,15 +52,15 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(LocalFunctionStatementSyntax localFunctionStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### localFunctionStatement
-
-
+### localFunctionStatement
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
@@ -74,15 +74,15 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(MethodDeclarationSyntax methodDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### methodDeclaration
-
-
+### methodDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
@@ -96,15 +96,15 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(SyntaxNode node)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
+### node
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
@@ -118,15 +118,15 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeDeclarationSyntax typeDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### typeDeclaration
-
-
+### typeDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
@@ -140,15 +140,15 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeParameterConstraintClauseSyntax constraintClause)
 ```
 
-### Parameters
+## Parameters
 
-#### constraintClause
-
-
+### constraintClause
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
@@ -162,15 +162,15 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeParameterConstraintSyntax typeParameterConstraint)
 ```
 
-### Parameters
+## Parameters
 
-#### typeParameterConstraint
-
-
+### typeParameterConstraint
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
@@ -184,15 +184,15 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeParameterListSyntax typeParameterList)
 ```
 
-### Parameters
+## Parameters
 
-#### typeParameterList
-
-
+### typeParameterList
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 
@@ -206,15 +206,15 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeParameterSyntax typeParameter)
 ```
 
-### Parameters
+## Parameters
 
-#### typeParameter
-
-
+### typeParameter
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
 

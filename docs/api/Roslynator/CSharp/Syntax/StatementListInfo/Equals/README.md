@@ -23,15 +23,15 @@ Determines whether this instance and a specified object are equal\.
 public override bool Equals(object obj)
 ```
 
-### Parameters
+## Parameters
 
-#### obj
+### obj
 
 
 
 The object to compare with the current instance\. 
 
-#### Returns
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -47,20 +47,20 @@ Determines whether this instance is equal to another object of the same type\.
 public bool Equals(StatementListInfo other)
 ```
 
-### Parameters
+## Parameters
 
-#### other
+### other
 
 
 
 An object to compare with this object\.
 
-#### Returns
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 true if the current object is equal to the **other** parameter; otherwise, false\.
 
-#### Implements
+### Implements
 
 * [IEquatable\<StatementListInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)

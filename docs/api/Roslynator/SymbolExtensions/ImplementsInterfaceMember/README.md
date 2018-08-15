@@ -25,21 +25,21 @@ Returns true if the the symbol implements any interface member\.
 public static bool ImplementsInterfaceMember(this ISymbol symbol, bool allInterfaces = false)
 ```
 
-### Parameters
+## Parameters
 
-#### symbol
-
-
+### symbol
 
 
 
-#### allInterfaces
+
+
+### allInterfaces
 
 
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
-#### Returns
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -53,27 +53,27 @@ Returns true if the symbol implements any member of the specified interface\.
 public static bool ImplementsInterfaceMember(this ISymbol symbol, INamedTypeSymbol interfaceSymbol, bool allInterfaces = false)
 ```
 
-### Parameters
+## Parameters
 
-#### symbol
-
-
-
-
-
-#### interfaceSymbol
+### symbol
 
 
 
 
 
-#### allInterfaces
+### interfaceSymbol
+
+
+
+
+
+### allInterfaces
 
 
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
-#### Returns
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -87,29 +87,29 @@ Returns true if the symbol implements any interface member\.
 public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, bool allInterfaces = false) where TSymbol : Microsoft.CodeAnalysis.ISymbol
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TSymbol
-
-
-
-
-
-### Parameters
-
-#### symbol
+### TSymbol
 
 
 
 
 
-#### allInterfaces
+## Parameters
+
+### symbol
+
+
+
+
+
+### allInterfaces
 
 
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
-#### Returns
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -123,35 +123,35 @@ Returns true if the symbol implements any member of the specified interface\.
 public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, INamedTypeSymbol interfaceSymbol, bool allInterfaces = false) where TSymbol : Microsoft.CodeAnalysis.ISymbol
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TSymbol
-
-
-
-
-
-### Parameters
-
-#### symbol
+### TSymbol
 
 
 
 
 
-#### interfaceSymbol
+## Parameters
+
+### symbol
 
 
 
 
 
-#### allInterfaces
+### interfaceSymbol
+
+
+
+
+
+### allInterfaces
 
 
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
-#### Returns
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

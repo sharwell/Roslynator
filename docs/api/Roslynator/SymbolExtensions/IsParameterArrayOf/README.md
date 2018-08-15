@@ -24,21 +24,21 @@ Returns true if the parameter was declared as a parameter array that has a speci
 public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, SpecialType elementType)
 ```
 
-### Parameters
+## Parameters
 
-#### parameterSymbol
-
-
-
-
-
-#### elementType
+### parameterSymbol
 
 
 
 
 
-#### Returns
+### elementType
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -52,27 +52,27 @@ Returns true if the parameter was declared as a parameter array that has one of 
 public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, SpecialType elementType1, SpecialType elementType2)
 ```
 
-### Parameters
+## Parameters
 
-#### parameterSymbol
-
-
-
-
-
-#### elementType1
+### parameterSymbol
 
 
 
 
 
-#### elementType2
+### elementType1
 
 
 
 
 
-#### Returns
+### elementType2
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -86,33 +86,33 @@ Returns true if the parameter was declared as a parameter array that has one of 
 public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, SpecialType elementType1, SpecialType elementType2, SpecialType elementType3)
 ```
 
-### Parameters
+## Parameters
 
-#### parameterSymbol
-
-
-
-
-
-#### elementType1
+### parameterSymbol
 
 
 
 
 
-#### elementType2
+### elementType1
 
 
 
 
 
-#### elementType3
+### elementType2
 
 
 
 
 
-#### Returns
+### elementType3
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

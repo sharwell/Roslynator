@@ -19,15 +19,15 @@
 public static TypeArgumentListSyntax TypeArgumentList(TypeSyntax argument)
 ```
 
-### Parameters
+## Parameters
 
-#### argument
-
-
+### argument
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeargumentlistsyntax)
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeArgumentListSyntax](https://docs.m
 public static TypeArgumentListSyntax TypeArgumentList(params TypeSyntax[] arguments)
 ```
 
-### Parameters
+## Parameters
 
-#### arguments
-
-
+### arguments
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeargumentlistsyntax)
 

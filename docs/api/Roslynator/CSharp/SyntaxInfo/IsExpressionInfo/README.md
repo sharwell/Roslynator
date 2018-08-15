@@ -23,27 +23,27 @@ Creates a new [IsExpressionInfo](../../Syntax/IsExpressionInfo/README.md) from t
 public static IsExpressionInfo IsExpressionInfo(BinaryExpressionSyntax binaryExpression, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### binaryExpression
-
-
-
-
-
-#### walkDownParentheses
+### binaryExpression
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[IsExpressionInfo](../../Syntax/IsExpressionInfo/README.md)
 
@@ -57,27 +57,27 @@ Creates a new [IsExpressionInfo](../../Syntax/IsExpressionInfo/README.md) from t
 public static IsExpressionInfo IsExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### walkDownParentheses
+### node
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[IsExpressionInfo](../../Syntax/IsExpressionInfo/README.md)
 

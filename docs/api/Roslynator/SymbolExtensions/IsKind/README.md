@@ -25,27 +25,27 @@ Returns true if the symbol is one of the specified kinds\.
 public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind2)
 ```
 
-### Parameters
+## Parameters
 
-#### symbol
-
-
-
-
-
-#### kind1
+### symbol
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### Returns
+### kind2
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -59,33 +59,33 @@ Returns true if the symbol is one of the specified kinds\.
 public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind2, SymbolKind kind3)
 ```
 
-### Parameters
+## Parameters
 
-#### symbol
-
-
-
-
-
-#### kind1
+### symbol
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### Returns
+### kind3
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -99,39 +99,39 @@ Returns true if the symbol is one of the specified kinds\.
 public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind2, SymbolKind kind3, SymbolKind kind4)
 ```
 
-### Parameters
+## Parameters
 
-#### symbol
-
-
-
-
-
-#### kind1
+### symbol
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### Returns
+### kind4
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -145,45 +145,45 @@ Returns true if the symbol is one of the specified kinds\.
 public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind2, SymbolKind kind3, SymbolKind kind4, SymbolKind kind5)
 ```
 
-### Parameters
+## Parameters
 
-#### symbol
-
-
-
-
-
-#### kind1
+### symbol
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### kind4
+### kind3
 
 
 
 
 
-#### kind5
+### kind4
 
 
 
 
 
-#### Returns
+### kind5
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

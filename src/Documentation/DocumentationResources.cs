@@ -80,7 +80,7 @@ namespace Roslynator.Documentation
         public abstract string StaticClassesTitle { get; }
         public abstract string StructTitle { get; }
         public abstract string StructsTitle { get; }
-        public abstract string SummaryTitle { get; } //TODO: summary
+        public abstract string SummaryTitle { get; }
         public abstract string TypeParametersTitle { get; }
         public abstract string ValueTitle { get; }
         public abstract string ValuesTitle { get; }

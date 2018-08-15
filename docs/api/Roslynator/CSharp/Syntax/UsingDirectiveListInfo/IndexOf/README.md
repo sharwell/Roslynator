@@ -23,15 +23,15 @@ Searches for an using directive that matches the predicate and returns returns z
 public int IndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### predicate
-
-
+### predicate
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
@@ -45,15 +45,15 @@ The index of the using directive in the list\.
 public int IndexOf(UsingDirectiveSyntax usingDirective)
 ```
 
-### Parameters
+## Parameters
 
-#### usingDirective
-
-
+### usingDirective
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 

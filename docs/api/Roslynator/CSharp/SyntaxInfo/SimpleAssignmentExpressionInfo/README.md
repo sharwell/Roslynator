@@ -23,27 +23,27 @@ Creates a new [SimpleAssignmentExpressionInfo](../../Syntax/SimpleAssignmentExpr
 public static SimpleAssignmentExpressionInfo SimpleAssignmentExpressionInfo(AssignmentExpressionSyntax assignmentExpression, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### assignmentExpression
-
-
-
-
-
-#### walkDownParentheses
+### assignmentExpression
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleAssignmentExpressionInfo](../../Syntax/SimpleAssignmentExpressionInfo/README.md)
 
@@ -57,27 +57,27 @@ Creates a new [SimpleAssignmentExpressionInfo](../../Syntax/SimpleAssignmentExpr
 public static SimpleAssignmentExpressionInfo SimpleAssignmentExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### walkDownParentheses
+### node
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SimpleAssignmentExpressionInfo](../../Syntax/SimpleAssignmentExpressionInfo/README.md)
 

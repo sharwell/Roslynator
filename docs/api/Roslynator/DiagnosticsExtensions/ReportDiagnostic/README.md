@@ -42,39 +42,39 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SymbolAnalysisContext context, DiagnosticDescriptor descriptor, Location location, IEnumerable<Location> additionalLocations, ImmutableDictionary<string, string> properties, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### additionalLocations
+### location
 
 
 
 
 
-#### properties
+### additionalLocations
 
 
 
 
 
-#### messageArgs
+### properties
+
+
+
+
+
+### messageArgs
 
 
 
@@ -90,33 +90,33 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SymbolAnalysisContext context, DiagnosticDescriptor descriptor, Location location, IEnumerable<Location> additionalLocations, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### additionalLocations
+### location
 
 
 
 
 
-#### messageArgs
+### additionalLocations
+
+
+
+
+
+### messageArgs
 
 
 
@@ -132,33 +132,33 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SymbolAnalysisContext context, DiagnosticDescriptor descriptor, Location location, ImmutableDictionary<string, string> properties, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### properties
+### location
 
 
 
 
 
-#### messageArgs
+### properties
+
+
+
+
+
+### messageArgs
 
 
 
@@ -174,27 +174,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SymbolAnalysisContext context, DiagnosticDescriptor descriptor, Location location, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
+### context
 
 
 
-#### descriptor
+
+
+### descriptor
 
 
 
 A [DiagnosticDescriptor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor) describing the diagnostic\.
 
-#### location
+### location
 
 
 
 
 
-#### messageArgs
+### messageArgs
 
 
 
@@ -210,27 +210,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SymbolAnalysisContext context, DiagnosticDescriptor descriptor, SyntaxNode node, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### node
+### descriptor
 
 
 
 
 
-#### messageArgs
+### node
+
+
+
+
+
+### messageArgs
 
 
 
@@ -246,27 +246,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SymbolAnalysisContext context, DiagnosticDescriptor descriptor, SyntaxToken token, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### token
+### descriptor
 
 
 
 
 
-#### messageArgs
+### token
+
+
+
+
+
+### messageArgs
 
 
 
@@ -282,27 +282,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SymbolAnalysisContext context, DiagnosticDescriptor descriptor, SyntaxTrivia trivia, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### trivia
+### descriptor
 
 
 
 
 
-#### messageArgs
+### trivia
+
+
+
+
+
+### messageArgs
 
 
 
@@ -318,39 +318,39 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, DiagnosticDescriptor descriptor, Location location, IEnumerable<Location> additionalLocations, ImmutableDictionary<string, string> properties, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### additionalLocations
+### location
 
 
 
 
 
-#### properties
+### additionalLocations
 
 
 
 
 
-#### messageArgs
+### properties
+
+
+
+
+
+### messageArgs
 
 
 
@@ -366,33 +366,33 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, DiagnosticDescriptor descriptor, Location location, IEnumerable<Location> additionalLocations, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### additionalLocations
+### location
 
 
 
 
 
-#### messageArgs
+### additionalLocations
+
+
+
+
+
+### messageArgs
 
 
 
@@ -408,33 +408,33 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, DiagnosticDescriptor descriptor, Location location, ImmutableDictionary<string, string> properties, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### properties
+### location
 
 
 
 
 
-#### messageArgs
+### properties
+
+
+
+
+
+### messageArgs
 
 
 
@@ -450,27 +450,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, DiagnosticDescriptor descriptor, Location location, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### messageArgs
+### location
+
+
+
+
+
+### messageArgs
 
 
 
@@ -486,27 +486,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, DiagnosticDescriptor descriptor, SyntaxNode node, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### node
+### descriptor
 
 
 
 
 
-#### messageArgs
+### node
+
+
+
+
+
+### messageArgs
 
 
 
@@ -522,27 +522,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, DiagnosticDescriptor descriptor, SyntaxToken token, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### token
+### descriptor
 
 
 
 
 
-#### messageArgs
+### token
+
+
+
+
+
+### messageArgs
 
 
 
@@ -558,27 +558,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, DiagnosticDescriptor descriptor, SyntaxTrivia trivia, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### trivia
+### descriptor
 
 
 
 
 
-#### messageArgs
+### trivia
+
+
+
+
+
+### messageArgs
 
 
 
@@ -594,39 +594,39 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, DiagnosticDescriptor descriptor, Location location, IEnumerable<Location> additionalLocations, ImmutableDictionary<string, string> properties, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### additionalLocations
+### location
 
 
 
 
 
-#### properties
+### additionalLocations
 
 
 
 
 
-#### messageArgs
+### properties
+
+
+
+
+
+### messageArgs
 
 
 
@@ -642,33 +642,33 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, DiagnosticDescriptor descriptor, Location location, IEnumerable<Location> additionalLocations, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### additionalLocations
+### location
 
 
 
 
 
-#### messageArgs
+### additionalLocations
+
+
+
+
+
+### messageArgs
 
 
 
@@ -684,33 +684,33 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, DiagnosticDescriptor descriptor, Location location, ImmutableDictionary<string, string> properties, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### properties
+### location
 
 
 
 
 
-#### messageArgs
+### properties
+
+
+
+
+
+### messageArgs
 
 
 
@@ -726,27 +726,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, DiagnosticDescriptor descriptor, Location location, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### location
+### descriptor
 
 
 
 
 
-#### messageArgs
+### location
+
+
+
+
+
+### messageArgs
 
 
 
@@ -762,27 +762,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, DiagnosticDescriptor descriptor, SyntaxNode node, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### node
+### descriptor
 
 
 
 
 
-#### messageArgs
+### node
+
+
+
+
+
+### messageArgs
 
 
 
@@ -798,27 +798,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, DiagnosticDescriptor descriptor, SyntaxToken token, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### token
+### descriptor
 
 
 
 
 
-#### messageArgs
+### token
+
+
+
+
+
+### messageArgs
 
 
 
@@ -834,27 +834,27 @@ Report a [Diagnostic](https://docs.microsoft.com/en-us/dotnet/api/microsoft.code
 public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, DiagnosticDescriptor descriptor, SyntaxTrivia trivia, params object[] messageArgs)
 ```
 
-### Parameters
+## Parameters
 
-#### context
-
-
-
-
-
-#### descriptor
+### context
 
 
 
 
 
-#### trivia
+### descriptor
 
 
 
 
 
-#### messageArgs
+### trivia
+
+
+
+
+
+### messageArgs
 
 
 

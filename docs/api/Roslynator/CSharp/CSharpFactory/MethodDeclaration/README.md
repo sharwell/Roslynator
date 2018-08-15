@@ -19,39 +19,39 @@
 public static MethodDeclarationSyntax MethodDeclaration(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken identifier, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### returnType
+### modifiers
 
 
 
 
 
-#### identifier
+### returnType
 
 
 
 
 
-#### parameterList
+### identifier
 
 
 
 
 
-#### expressionBody
+### parameterList
 
 
 
 
 
-#### Returns
+### expressionBody
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[MethodDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.methoddeclarationsyntax)
 
@@ -61,39 +61,39 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[MethodDeclarationSyntax](https://docs.
 public static MethodDeclarationSyntax MethodDeclaration(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken identifier, ParameterListSyntax parameterList, BlockSyntax body)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### returnType
+### modifiers
 
 
 
 
 
-#### identifier
+### returnType
 
 
 
 
 
-#### parameterList
+### identifier
 
 
 
 
 
-#### body
+### parameterList
 
 
 
 
 
-#### Returns
+### body
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[MethodDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.methoddeclarationsyntax)
 

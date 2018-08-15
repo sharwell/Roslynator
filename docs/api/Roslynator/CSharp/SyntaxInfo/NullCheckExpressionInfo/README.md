@@ -23,33 +23,33 @@ Creates a new [NullCheckExpressionInfo](../../Syntax/NullCheckExpressionInfo/REA
 public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, NullCheckStyles allowedStyles = ComparisonToNull | IsPattern, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### allowedStyles
+### node
 
 
 
 
 
-#### walkDownParentheses
+### allowedStyles
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[NullCheckExpressionInfo](../../Syntax/NullCheckExpressionInfo/README.md)
 
@@ -63,45 +63,45 @@ Creates a new [NullCheckExpressionInfo](../../Syntax/NullCheckExpressionInfo/REA
 public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, SemanticModel semanticModel, NullCheckStyles allowedStyles = All, bool walkDownParentheses = true, bool allowMissing = false, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### semanticModel
+### node
 
 
 
 
 
-#### allowedStyles
+### semanticModel
 
 
 
 
 
-#### walkDownParentheses
+### allowedStyles
 
 
 
 
 
-#### allowMissing
+### walkDownParentheses
 
 
 
 
 
-#### cancellationToken
+### allowMissing
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[NullCheckExpressionInfo](../../Syntax/NullCheckExpressionInfo/README.md)
 

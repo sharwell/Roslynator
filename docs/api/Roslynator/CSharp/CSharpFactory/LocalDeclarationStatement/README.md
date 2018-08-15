@@ -21,27 +21,27 @@
 public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSyntax type, string identifier, EqualsValueClauseSyntax initializer)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### initializer
+### identifier
 
 
 
 
 
-#### Returns
+### initializer
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalDeclarationStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.localdeclarationstatementsyntax)
 
@@ -51,27 +51,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalDeclarationStatementSyntax](https
 public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSyntax type, string identifier, ExpressionSyntax value = null)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### value
+### identifier
 
 
 
 
 
-#### Returns
+### value
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalDeclarationStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.localdeclarationstatementsyntax)
 
@@ -81,27 +81,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalDeclarationStatementSyntax](https
 public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSyntax type, SyntaxToken identifier, EqualsValueClauseSyntax initializer)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### initializer
+### identifier
 
 
 
 
 
-#### Returns
+### initializer
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalDeclarationStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.localdeclarationstatementsyntax)
 
@@ -111,27 +111,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalDeclarationStatementSyntax](https
 public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSyntax type, SyntaxToken identifier, ExpressionSyntax value = null)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### identifier
+### type
 
 
 
 
 
-#### value
+### identifier
 
 
 
 
 
-#### Returns
+### value
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LocalDeclarationStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.localdeclarationstatementsyntax)
 

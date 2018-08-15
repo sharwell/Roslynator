@@ -24,15 +24,15 @@ Creates a new [UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/READM
 public static UsingDirectiveListInfo UsingDirectiveListInfo(CompilationUnitSyntax compilationUnit)
 ```
 
-### Parameters
+## Parameters
 
-#### compilationUnit
-
-
+### compilationUnit
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
 
@@ -46,15 +46,15 @@ Creates a new [UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/READM
 public static UsingDirectiveListInfo UsingDirectiveListInfo(NamespaceDeclarationSyntax declaration)
 ```
 
-### Parameters
+## Parameters
 
-#### declaration
-
-
+### declaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
 
@@ -68,15 +68,15 @@ Creates a new [UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/READM
 public static UsingDirectiveListInfo UsingDirectiveListInfo(SyntaxNode node)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
+### node
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
 

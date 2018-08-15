@@ -23,33 +23,33 @@ Creates a new [ExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/mic
 public static ExpressionSyntax GetDefaultValueSyntax(this ITypeSymbol typeSymbol, SemanticModel semanticModel, int position, SymbolDisplayFormat format = null)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
-
-
-
-
-
-#### semanticModel
+### typeSymbol
 
 
 
 
 
-#### position
+### semanticModel
 
 
 
 
 
-#### format
+### position
 
 
 
 
 
-#### Returns
+### format
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionsyntax)
 
@@ -63,21 +63,21 @@ Creates a new [ExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/mic
 public static ExpressionSyntax GetDefaultValueSyntax(this ITypeSymbol typeSymbol, TypeSyntax type)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
-
-
-
-
-
-#### type
+### typeSymbol
 
 
 
 
 
-#### Returns
+### type
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionsyntax)
 

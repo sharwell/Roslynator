@@ -25,27 +25,27 @@ Gets the first ancestor that matches the predicate\.
 public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, Func<SyntaxNode, bool> predicate, bool ascendOutOfTrivia = true)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### predicate
+### node
 
 
 
 
 
-#### ascendOutOfTrivia
+### predicate
 
 
 
 
 
-#### Returns
+### ascendOutOfTrivia
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
@@ -59,27 +59,27 @@ Gets the first ancestor of the specified kind\.
 public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind kind, bool ascendOutOfTrivia = true)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### kind
+### node
 
 
 
 
 
-#### ascendOutOfTrivia
+### kind
 
 
 
 
 
-#### Returns
+### ascendOutOfTrivia
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
@@ -93,33 +93,33 @@ Gets the first ancestor of the specified kinds\.
 public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, bool ascendOutOfTrivia = true)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### kind1
+### node
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### ascendOutOfTrivia
+### kind2
 
 
 
 
 
-#### Returns
+### ascendOutOfTrivia
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
@@ -133,39 +133,39 @@ Gets the first ancestor of the specified kinds\.
 public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, bool ascendOutOfTrivia = true)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### kind1
+### node
 
 
 
 
 
-#### kind2
+### kind1
 
 
 
 
 
-#### kind3
+### kind2
 
 
 
 
 
-#### ascendOutOfTrivia
+### kind3
 
 
 
 
 
-#### Returns
+### ascendOutOfTrivia
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 

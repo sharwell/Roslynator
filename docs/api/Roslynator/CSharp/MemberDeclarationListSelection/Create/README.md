@@ -24,21 +24,21 @@ Creates a new [MemberDeclarationListSelection](../README.md) based on the specif
 public static MemberDeclarationListSelection Create(CompilationUnitSyntax compilationUnit, TextSpan span)
 ```
 
-### Parameters
+## Parameters
 
-#### compilationUnit
-
-
-
-
-
-#### span
+### compilationUnit
 
 
 
 
 
-#### Returns
+### span
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.[MemberDeclarationListSelection](../README.md)
 
@@ -52,21 +52,21 @@ Creates a new [MemberDeclarationListSelection](../README.md) based on the specif
 public static MemberDeclarationListSelection Create(NamespaceDeclarationSyntax namespaceDeclaration, TextSpan span)
 ```
 
-### Parameters
+## Parameters
 
-#### namespaceDeclaration
-
-
-
-
-
-#### span
+### namespaceDeclaration
 
 
 
 
 
-#### Returns
+### span
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.[MemberDeclarationListSelection](../README.md)
 
@@ -80,21 +80,21 @@ Creates a new [MemberDeclarationListSelection](../README.md) based on the specif
 public static MemberDeclarationListSelection Create(TypeDeclarationSyntax typeDeclaration, TextSpan span)
 ```
 
-### Parameters
+## Parameters
 
-#### typeDeclaration
-
-
-
-
-
-#### span
+### typeDeclaration
 
 
 
 
 
-#### Returns
+### span
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.[MemberDeclarationListSelection](../README.md)
 

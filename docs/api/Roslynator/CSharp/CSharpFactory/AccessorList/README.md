@@ -19,15 +19,15 @@
 public static AccessorListSyntax AccessorList(AccessorDeclarationSyntax accessor)
 ```
 
-### Parameters
+## Parameters
 
-#### accessor
-
-
+### accessor
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessorlistsyntax)
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorListSyntax](https://docs.micro
 public static AccessorListSyntax AccessorList(params AccessorDeclarationSyntax[] accessors)
 ```
 
-### Parameters
+## Parameters
 
-#### accessors
-
-
+### accessors
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessorlistsyntax)
 

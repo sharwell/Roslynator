@@ -25,15 +25,15 @@
 public static LiteralExpressionSyntax NumericLiteralExpression(decimal value)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
+### value
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
@@ -43,15 +43,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.
 public static LiteralExpressionSyntax NumericLiteralExpression(double value)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
+### value
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
@@ -61,15 +61,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.
 public static LiteralExpressionSyntax NumericLiteralExpression(int value)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
+### value
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
@@ -79,15 +79,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.
 public static LiteralExpressionSyntax NumericLiteralExpression(long value)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
+### value
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
@@ -97,15 +97,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.
 public static LiteralExpressionSyntax NumericLiteralExpression(sbyte value)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
+### value
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
@@ -115,15 +115,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.
 public static LiteralExpressionSyntax NumericLiteralExpression(float value)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
+### value
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
@@ -133,15 +133,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.
 public static LiteralExpressionSyntax NumericLiteralExpression(uint value)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
+### value
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 
@@ -151,15 +151,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.
 public static LiteralExpressionSyntax NumericLiteralExpression(ulong value)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
+### value
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)
 

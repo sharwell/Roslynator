@@ -23,27 +23,27 @@ Returns true if the type implements specified interface\.
 public static bool Implements(this ITypeSymbol typeSymbol, INamedTypeSymbol interfaceSymbol, bool allInterfaces = false)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
-
-
-
-
-
-#### interfaceSymbol
+### typeSymbol
 
 
 
 
 
-#### allInterfaces
+### interfaceSymbol
+
+
+
+
+
+### allInterfaces
 
 
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
-#### Returns
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -57,27 +57,27 @@ Returns true if the type implements specified interface\.
 public static bool Implements(this ITypeSymbol typeSymbol, SpecialType interfaceType, bool allInterfaces = false)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
-
-
-
-
-
-#### interfaceType
+### typeSymbol
 
 
 
 
 
-#### allInterfaces
+### interfaceType
+
+
+
+
+
+### allInterfaces
 
 
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
-#### Returns
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

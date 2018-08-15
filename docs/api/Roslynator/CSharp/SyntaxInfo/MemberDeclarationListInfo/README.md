@@ -27,15 +27,15 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(ClassDeclarationSyntax declaration)
 ```
 
-### Parameters
+## Parameters
 
-#### declaration
-
-
+### declaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
@@ -49,15 +49,15 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(CompilationUnitSyntax compilationUnit)
 ```
 
-### Parameters
+## Parameters
 
-#### compilationUnit
-
-
+### compilationUnit
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
@@ -71,15 +71,15 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(InterfaceDeclarationSyntax declaration)
 ```
 
-### Parameters
+## Parameters
 
-#### declaration
-
-
+### declaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
@@ -93,15 +93,15 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(NamespaceDeclarationSyntax declaration)
 ```
 
-### Parameters
+## Parameters
 
-#### declaration
-
-
+### declaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
@@ -115,15 +115,15 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(StructDeclarationSyntax declaration)
 ```
 
-### Parameters
+## Parameters
 
-#### declaration
-
-
+### declaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 
@@ -137,15 +137,15 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(SyntaxNode node)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
+### node
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
 

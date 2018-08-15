@@ -19,15 +19,15 @@
 public static PrefixUnaryExpressionSyntax BitwiseNotExpression(ExpressionSyntax operand)
 ```
 
-### Parameters
+## Parameters
 
-#### operand
-
-
+### operand
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PrefixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.prefixunaryexpressionsyntax)
 
@@ -37,21 +37,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PrefixUnaryExpressionSyntax](https://d
 public static PrefixUnaryExpressionSyntax BitwiseNotExpression(ExpressionSyntax operand, SyntaxToken operatorToken)
 ```
 
-### Parameters
+## Parameters
 
-#### operand
-
-
-
-
-
-#### operatorToken
+### operand
 
 
 
 
 
-#### Returns
+### operatorToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PrefixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.prefixunaryexpressionsyntax)
 

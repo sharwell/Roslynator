@@ -19,15 +19,15 @@
 public static SwitchSectionSyntax DefaultSwitchSection(StatementSyntax statement)
 ```
 
-### Parameters
+## Parameters
 
-#### statement
-
-
+### statement
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.micr
 public static SwitchSectionSyntax DefaultSwitchSection(SyntaxList<StatementSyntax> statements)
 ```
 
-### Parameters
+## Parameters
 
-#### statements
-
-
+### statements
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)
 

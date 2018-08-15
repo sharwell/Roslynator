@@ -23,15 +23,15 @@ Searches for a member that matches the predicate and returns returns zero\-based
 public int LastIndexOf(Func<MemberDeclarationSyntax, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### predicate
-
-
+### predicate
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
@@ -45,15 +45,15 @@ Searches for a member and returns zero\-based index of the last occurrence in th
 public int LastIndexOf(MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### member
-
-
+### member
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 

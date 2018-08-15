@@ -26,15 +26,15 @@ The absolute span of the braces, not including its leading and trailing trivia\.
 public static TextSpan BracesSpan(this ClassDeclarationSyntax classDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### classDeclaration
-
-
+### classDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
@@ -48,15 +48,15 @@ The absolute span of the braces, not including its leading and trailing trivia\.
 public static TextSpan BracesSpan(this EnumDeclarationSyntax enumDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### enumDeclaration
-
-
+### enumDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
@@ -70,15 +70,15 @@ The absolute span of the braces, not including it leading and trailing trivia\.
 public static TextSpan BracesSpan(this InterfaceDeclarationSyntax interfaceDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### interfaceDeclaration
-
-
+### interfaceDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
@@ -92,15 +92,15 @@ The absolute span of the braces, not including leading and trailing trivia\.
 public static TextSpan BracesSpan(this NamespaceDeclarationSyntax namespaceDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### namespaceDeclaration
-
-
+### namespaceDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
@@ -114,15 +114,15 @@ The absolute span of the braces, not including its leading and trailing trivia\.
 public static TextSpan BracesSpan(this StructDeclarationSyntax structDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### structDeclaration
-
-
+### structDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 

@@ -23,15 +23,15 @@ Searches for a statement that matches the predicate and returns returns zero\-ba
 public int IndexOf(Func<StatementSyntax, bool> predicate)
 ```
 
-### Parameters
+## Parameters
 
-#### predicate
-
-
+### predicate
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
@@ -45,15 +45,15 @@ The index of the statement in the list\.
 public int IndexOf(StatementSyntax statement)
 ```
 
-### Parameters
+## Parameters
 
-#### statement
-
-
+### statement
 
 
 
-#### Returns
+
+
+### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 

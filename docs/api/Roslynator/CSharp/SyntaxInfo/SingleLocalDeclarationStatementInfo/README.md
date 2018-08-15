@@ -24,15 +24,15 @@ Creates a new [SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDecl
 public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatementInfo(ExpressionSyntax value)
 ```
 
-### Parameters
+## Parameters
 
-#### value
-
-
+### value
 
 
 
-#### Returns
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
 
@@ -46,21 +46,21 @@ Creates a new [SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDecl
 public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatementInfo(LocalDeclarationStatementSyntax localDeclarationStatement, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### localDeclarationStatement
-
-
-
-
-
-#### allowMissing
+### localDeclarationStatement
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
 
@@ -74,21 +74,21 @@ Creates a new [SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDecl
 public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatementInfo(VariableDeclarationSyntax variableDeclaration, bool allowMissing = false)
 ```
 
-### Parameters
+## Parameters
 
-#### variableDeclaration
-
-
-
-
-
-#### allowMissing
+### variableDeclaration
 
 
 
 
 
-#### Returns
+### allowMissing
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.Syntax\.[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
 

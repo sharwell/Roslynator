@@ -19,15 +19,15 @@
 public static BracketedArgumentListSyntax BracketedArgumentList(ArgumentSyntax argument)
 ```
 
-### Parameters
+## Parameters
 
-#### argument
-
-
+### argument
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BracketedArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.bracketedargumentlistsyntax)
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BracketedArgumentListSyntax](https://d
 public static BracketedArgumentListSyntax BracketedArgumentList(params ArgumentSyntax[] arguments)
 ```
 
-### Parameters
+## Parameters
 
-#### arguments
-
-
+### arguments
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BracketedArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.bracketedargumentlistsyntax)
 

@@ -41,15 +41,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(AccessorDeclarationSyntax accessorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### accessorDeclaration
-
-
+### accessorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -63,15 +63,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(BaseTypeDeclarationSyntax baseTypeDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### baseTypeDeclaration
-
-
+### baseTypeDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -85,15 +85,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(ClassDeclarationSyntax classDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### classDeclaration
-
-
+### classDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -107,15 +107,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(ConstructorDeclarationSyntax constructorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### constructorDeclaration
-
-
+### constructorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -129,15 +129,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(ConversionOperatorDeclarationSyntax conversionOperatorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### conversionOperatorDeclaration
-
-
+### conversionOperatorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -151,15 +151,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(DelegateDeclarationSyntax delegateDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### delegateDeclaration
-
-
+### delegateDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -173,15 +173,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(DestructorDeclarationSyntax destructorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### destructorDeclaration
-
-
+### destructorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -195,15 +195,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(EnumDeclarationSyntax enumDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### enumDeclaration
-
-
+### enumDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -217,15 +217,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(EnumMemberDeclarationSyntax enumMemberDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### enumMemberDeclaration
-
-
+### enumMemberDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -239,15 +239,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(EventDeclarationSyntax eventDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### eventDeclaration
-
-
+### eventDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -261,15 +261,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(EventFieldDeclarationSyntax eventFieldDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### eventFieldDeclaration
-
-
+### eventFieldDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -283,15 +283,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(FieldDeclarationSyntax fieldDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### fieldDeclaration
-
-
+### fieldDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -305,15 +305,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(IndexerDeclarationSyntax indexerDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### indexerDeclaration
-
-
+### indexerDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -327,15 +327,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(InterfaceDeclarationSyntax interfaceDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### interfaceDeclaration
-
-
+### interfaceDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -349,15 +349,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(MemberDeclarationSyntax declaration)
 ```
 
-### Parameters
+## Parameters
 
-#### declaration
-
-
+### declaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -371,15 +371,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(MethodDeclarationSyntax methodDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### methodDeclaration
-
-
+### methodDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -393,15 +393,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(NamespaceDeclarationSyntax namespaceDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### namespaceDeclaration
-
-
+### namespaceDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -415,15 +415,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(OperatorDeclarationSyntax operatorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### operatorDeclaration
-
-
+### operatorDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -437,15 +437,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(PropertyDeclarationSyntax propertyDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### propertyDeclaration
-
-
+### propertyDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 
@@ -459,15 +459,15 @@ Returns a default accessibility of the specified declaration\.
 public static Accessibility GetDefaultAccessibility(StructDeclarationSyntax structDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### structDeclaration
-
-
+### structDeclaration
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
 

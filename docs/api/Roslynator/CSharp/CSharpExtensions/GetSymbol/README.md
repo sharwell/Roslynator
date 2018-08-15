@@ -27,27 +27,27 @@ Returns what symbol, if any, the specified attribute syntax bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, AttributeSyntax attribute, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
-
-
-
-#### attribute
+### semanticModel
 
 
 
 
 
-#### cancellationToken
+### attribute
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
@@ -61,27 +61,27 @@ Returns what symbol, if any, the specified constructor initializer syntax bound 
 public static ISymbol GetSymbol(this SemanticModel semanticModel, ConstructorInitializerSyntax constructorInitializer, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
-
-
-
-#### constructorInitializer
+### semanticModel
 
 
 
 
 
-#### cancellationToken
+### constructorInitializer
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
@@ -95,27 +95,27 @@ Returns what symbol, if any, the specified cref syntax bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, CrefSyntax cref, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
-
-
-
-#### cref
+### semanticModel
 
 
 
 
 
-#### cancellationToken
+### cref
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
@@ -129,27 +129,27 @@ Returns what symbol, if any, the specified expression syntax bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
-
-
-
-#### expression
+### semanticModel
 
 
 
 
 
-#### cancellationToken
+### expression
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
@@ -163,27 +163,27 @@ Returns what symbol, if any, the specified ordering syntax bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, OrderingSyntax ordering, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
-
-
-
-#### ordering
+### semanticModel
 
 
 
 
 
-#### cancellationToken
+### ordering
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 
@@ -197,27 +197,27 @@ Returns what symbol, if any, the specified select or group clause bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, SelectOrGroupClauseSyntax selectOrGroupClause, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
-
-
-
-#### selectOrGroupClause
+### semanticModel
 
 
 
 
 
-#### cancellationToken
+### selectOrGroupClause
 
 
 
 
 
-#### Returns
+### cancellationToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.[ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol)
 

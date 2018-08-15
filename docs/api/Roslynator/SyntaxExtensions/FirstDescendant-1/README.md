@@ -23,35 +23,35 @@ Searches a list of descendant nodes in prefix document order and returns first d
 public static TNode FirstDescendant<TNode>(this SyntaxNode node, Func<SyntaxNode, bool> descendIntoChildren = null, bool descendIntoTrivia = false) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### node
+### TNode
 
 
 
 
 
-#### descendIntoChildren
+## Parameters
+
+### node
 
 
 
 
 
-#### descendIntoTrivia
+### descendIntoChildren
 
 
 
 
 
-#### Returns
+### descendIntoTrivia
+
+
+
+
+
+### Returns
 
 TNode
 
@@ -65,41 +65,41 @@ Searches a list of descendant nodes in prefix document order and returns first d
 public static TNode FirstDescendant<TNode>(this SyntaxNode node, TextSpan span, Func<SyntaxNode, bool> descendIntoChildren = null, bool descendIntoTrivia = false) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### node
+### TNode
 
 
 
 
 
-#### span
+## Parameters
+
+### node
 
 
 
 
 
-#### descendIntoChildren
+### span
 
 
 
 
 
-#### descendIntoTrivia
+### descendIntoChildren
 
 
 
 
 
-#### Returns
+### descendIntoTrivia
+
+
+
+
+
+### Returns
 
 TNode
 

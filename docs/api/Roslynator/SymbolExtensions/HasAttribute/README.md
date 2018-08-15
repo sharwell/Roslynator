@@ -23,21 +23,21 @@ Returns true if the symbol has the specified attribute\.
 public static bool HasAttribute(this ISymbol symbol, INamedTypeSymbol attributeClass)
 ```
 
-### Parameters
+## Parameters
 
-#### symbol
-
-
-
-
-
-#### attributeClass
+### symbol
 
 
 
 
 
-#### Returns
+### attributeClass
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -51,27 +51,27 @@ Returns true if the type symbol has the specified attribute\.
 public static bool HasAttribute(this ITypeSymbol typeSymbol, INamedTypeSymbol attributeClass, bool includeBaseTypes)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
-
-
-
-
-
-#### attributeClass
+### typeSymbol
 
 
 
 
 
-#### includeBaseTypes
+### attributeClass
 
 
 
 
 
-#### Returns
+### includeBaseTypes
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

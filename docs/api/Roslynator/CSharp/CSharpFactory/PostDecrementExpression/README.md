@@ -19,15 +19,15 @@
 public static PostfixUnaryExpressionSyntax PostDecrementExpression(ExpressionSyntax operand)
 ```
 
-### Parameters
+## Parameters
 
-#### operand
-
-
+### operand
 
 
 
-#### Returns
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PostfixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.postfixunaryexpressionsyntax)
 
@@ -37,21 +37,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PostfixUnaryExpressionSyntax](https://
 public static PostfixUnaryExpressionSyntax PostDecrementExpression(ExpressionSyntax operand, SyntaxToken operatorToken)
 ```
 
-### Parameters
+## Parameters
 
-#### operand
-
-
-
-
-
-#### operatorToken
+### operand
 
 
 
 
 
-#### Returns
+### operatorToken
+
+
+
+
+
+### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PostfixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.postfixunaryexpressionsyntax)
 

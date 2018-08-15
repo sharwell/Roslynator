@@ -25,21 +25,21 @@ Returns true if the type is [Nullable\<T>](https://docs.microsoft.com/en-us/dotn
 public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, ITypeSymbol typeArgument)
 ```
 
-### Parameters
+## Parameters
 
-#### namedTypeSymbol
-
-
-
-
-
-#### typeArgument
+### namedTypeSymbol
 
 
 
 
 
-#### Returns
+### typeArgument
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -53,21 +53,21 @@ Returns true if the type is [Nullable\<T>](https://docs.microsoft.com/en-us/dotn
 public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, SpecialType specialType)
 ```
 
-### Parameters
+## Parameters
 
-#### namedTypeSymbol
-
-
-
-
-
-#### specialType
+### namedTypeSymbol
 
 
 
 
 
-#### Returns
+### specialType
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -81,21 +81,21 @@ Returns true if the type is [Nullable\<T>](https://docs.microsoft.com/en-us/dotn
 public static bool IsNullableOf(this ITypeSymbol typeSymbol, ITypeSymbol typeArgument)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
-
-
-
-
-
-#### typeArgument
+### typeSymbol
 
 
 
 
 
-#### Returns
+### typeArgument
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
@@ -109,21 +109,21 @@ Returns true if the type is [Nullable\<T>](https://docs.microsoft.com/en-us/dotn
 public static bool IsNullableOf(this ITypeSymbol typeSymbol, SpecialType specialType)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
-
-
-
-
-
-#### specialType
+### typeSymbol
 
 
 
 
 
-#### Returns
+### specialType
+
+
+
+
+
+### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 

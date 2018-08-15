@@ -24,21 +24,21 @@ Creates a new [StatementListSelection](../README.md) based on the specified bloc
 public static StatementListSelection Create(BlockSyntax block, TextSpan span)
 ```
 
-### Parameters
+## Parameters
 
-#### block
-
-
-
-
-
-#### span
+### block
 
 
 
 
 
-#### Returns
+### span
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.[StatementListSelection](../README.md)
 
@@ -52,21 +52,21 @@ Creates a new [StatementListSelection](../README.md) based on the specified [Sta
 public static StatementListSelection Create(in StatementListInfo statementsInfo, TextSpan span)
 ```
 
-### Parameters
+## Parameters
 
-#### statementsInfo
-
-
-
-
-
-#### span
+### statementsInfo
 
 
 
 
 
-#### Returns
+### span
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.[StatementListSelection](../README.md)
 
@@ -80,21 +80,21 @@ Creates a new [StatementListSelection](../README.md) based on the specified swit
 public static StatementListSelection Create(SwitchSectionSyntax switchSection, TextSpan span)
 ```
 
-### Parameters
+## Parameters
 
-#### switchSection
-
-
-
-
-
-#### span
+### switchSection
 
 
 
 
 
-#### Returns
+### span
+
+
+
+
+
+### Returns
 
 Roslynator\.CSharp\.[StatementListSelection](../README.md)
 
