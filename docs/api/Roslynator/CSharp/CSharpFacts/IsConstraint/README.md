@@ -16,7 +16,7 @@ public static bool IsConstraint(SyntaxKind kind)
 
 ### Parameters
 
-**kind**
+kind
 
 
 

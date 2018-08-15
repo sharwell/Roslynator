@@ -12,11 +12,11 @@ public static bool operator !=(in IfStatementCascade info1, in IfStatementCascad
 
 ### Parameters
 
-**info1**
+info1
 
 
 
-**info2**
+info2
 
 
 

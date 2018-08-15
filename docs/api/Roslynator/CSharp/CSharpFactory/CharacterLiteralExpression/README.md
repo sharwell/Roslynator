@@ -12,7 +12,7 @@ public static LiteralExpressionSyntax CharacterLiteralExpression(char value)
 
 ### Parameters
 
-**value**
+value
 
 
 

@@ -16,7 +16,7 @@ public static bool IsTopmostIf(this IfStatementSyntax ifStatement)
 
 ### Parameters
 
-**ifStatement**
+ifStatement
 
 
 

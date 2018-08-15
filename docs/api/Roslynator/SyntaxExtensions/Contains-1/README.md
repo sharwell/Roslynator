@@ -26,11 +26,11 @@ public static bool Contains(this SyntaxTokenList tokens, SyntaxToken token)
 
 #### Parameters
 
-**tokens**
+tokens
 
 
 
-**token**
+token
 
 
 
@@ -48,19 +48,19 @@ Returns true if the specified node is in the [SeparatedSyntaxList\<TNode>](https
 public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+list
 
 
 
-#### Parameters
-
-**list**
-
-
-
-**node**
+node
 
 
 
@@ -78,19 +78,19 @@ Returns true if the specified node is in the [SyntaxList\<TNode>](https://docs.m
 public static bool Contains<TNode>(this SyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+list
 
 
 
-#### Parameters
-
-**list**
-
-
-
-**node**
+node
 
 
 

@@ -16,15 +16,15 @@ public static bool EqualsOrInheritsFrom(this ITypeSymbol type, ITypeSymbol baseT
 
 ### Parameters
 
-**type**
+type
 
 
 
-**baseType**
+baseType
 
 
 
-**includeInterfaces**
+includeInterfaces
 
 
 

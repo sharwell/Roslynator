@@ -16,7 +16,7 @@ public static bool IsAutoImplemented(this AccessorDeclarationSyntax accessorDecl
 
 ### Parameters
 
-**accessorDeclaration**
+accessorDeclaration
 
 
 

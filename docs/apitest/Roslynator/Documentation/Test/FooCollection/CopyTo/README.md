@@ -21,11 +21,11 @@ public void CopyTo(Array array, int index)
 
 #### Parameters
 
-**array**
+array
 
 
 
-**index**
+index
 
 
 
@@ -41,11 +41,11 @@ public void CopyTo(Foo[] array, int arrayIndex)
 
 #### Parameters
 
-**array**
+array
 
 
 
-**arrayIndex**
+arrayIndex
 
 
 

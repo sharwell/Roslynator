@@ -16,7 +16,7 @@ public static XmlElementInfo XmlElementInfo(XmlNodeSyntax xmlNode)
 
 ### Parameters
 
-**xmlNode**
+xmlNode
 
 
 

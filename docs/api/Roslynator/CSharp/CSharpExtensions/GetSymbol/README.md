@@ -29,15 +29,15 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, AttributeSynta
 
 #### Parameters
 
-**semanticModel**
+semanticModel
 
 
 
-**attribute**
+attribute
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 
@@ -57,15 +57,15 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, ConstructorIni
 
 #### Parameters
 
-**semanticModel**
+semanticModel
 
 
 
-**constructorInitializer**
+constructorInitializer
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 
@@ -85,15 +85,15 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, CrefSyntax cre
 
 #### Parameters
 
-**semanticModel**
+semanticModel
 
 
 
-**cref**
+cref
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 
@@ -113,15 +113,15 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, ExpressionSynt
 
 #### Parameters
 
-**semanticModel**
+semanticModel
 
 
 
-**expression**
+expression
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 
@@ -141,15 +141,15 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, OrderingSyntax
 
 #### Parameters
 
-**semanticModel**
+semanticModel
 
 
 
-**ordering**
+ordering
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 
@@ -169,15 +169,15 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, SelectOrGroupC
 
 #### Parameters
 
-**semanticModel**
+semanticModel
 
 
 
-**selectOrGroupClause**
+selectOrGroupClause
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 

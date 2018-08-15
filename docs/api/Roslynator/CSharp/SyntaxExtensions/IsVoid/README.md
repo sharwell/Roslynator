@@ -16,7 +16,7 @@ public static bool IsVoid(this TypeSyntax type)
 
 ### Parameters
 
-**type**
+type
 
 
 

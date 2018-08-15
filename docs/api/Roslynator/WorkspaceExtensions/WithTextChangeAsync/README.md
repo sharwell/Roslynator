@@ -16,15 +16,15 @@ public static Task<Document> WithTextChangeAsync(this Document document, TextCha
 
 ### Parameters
 
-**document**
+document
 
 
 
-**textChange**
+textChange
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 

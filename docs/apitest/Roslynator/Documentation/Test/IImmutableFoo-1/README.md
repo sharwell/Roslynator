@@ -20,9 +20,9 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
     System.Collections.Immutable.IImmutableList<T>
 ```
 
-### Parameters
+### Type Parameters
 
-**T**
+T
 
 
 

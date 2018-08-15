@@ -16,7 +16,7 @@ public static bool IsLiteralExpression(SyntaxKind kind)
 
 ### Parameters
 
-**kind**
+kind
 
 
 

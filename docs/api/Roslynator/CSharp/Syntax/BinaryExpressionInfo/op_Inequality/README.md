@@ -12,11 +12,11 @@ public static bool operator !=(in BinaryExpressionInfo info1, in BinaryExpressio
 
 ### Parameters
 
-**info1**
+info1
 
 
 
-**info2**
+info2
 
 
 

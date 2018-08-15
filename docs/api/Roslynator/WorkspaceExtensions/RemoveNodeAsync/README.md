@@ -16,19 +16,19 @@ public static Task<Document> RemoveNodeAsync(this Document document, SyntaxNode 
 
 ### Parameters
 
-**document**
+document
 
 
 
-**node**
+node
 
 
 
-**options**
+options
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 

@@ -21,7 +21,7 @@ public static AccessorListSyntax AccessorList(AccessorDeclarationSyntax accessor
 
 #### Parameters
 
-**accessor**
+accessor
 
 
 
@@ -37,7 +37,7 @@ public static AccessorListSyntax AccessorList(params AccessorDeclarationSyntax[]
 
 #### Parameters
 
-**accessors**
+accessors
 
 
 

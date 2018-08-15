@@ -21,11 +21,11 @@ public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, M
 
 #### Parameters
 
-**name**
+name
 
 
 
-**member**
+member
 
 
 
@@ -41,11 +41,11 @@ public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, S
 
 #### Parameters
 
-**name**
+name
 
 
 
-**members**
+members
 
 
 

@@ -21,11 +21,11 @@ public static ExpressionStatementSyntax SimpleAssignmentStatement(ExpressionSynt
 
 #### Parameters
 
-**left**
+left
 
 
 
-**right**
+right
 
 
 
@@ -41,15 +41,15 @@ public static ExpressionStatementSyntax SimpleAssignmentStatement(ExpressionSynt
 
 #### Parameters
 
-**left**
+left
 
 
 
-**operatorToken**
+operatorToken
 
 
 
-**right**
+right
 
 
 

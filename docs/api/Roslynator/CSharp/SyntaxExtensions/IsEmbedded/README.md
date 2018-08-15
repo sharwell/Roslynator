@@ -16,21 +16,21 @@ public static bool IsEmbedded(this StatementSyntax statement, bool canBeBlock = 
 
 ### Parameters
 
-**statement**
+statement
 
 
 
-**canBeBlock**
+canBeBlock
 
+Block can be considered as embedded statement
 
+canBeIfInsideElse
 
-**canBeIfInsideElse**
+If statement that is a child of an else statement can be considered as an embedded statement\.
 
+canBeUsingInsideUsing
 
-
-**canBeUsingInsideUsing**
-
-
+Using statement that is a child of an using statement can be considered as en embedded statement\.
 
 ### Returns
 

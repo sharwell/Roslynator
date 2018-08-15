@@ -16,7 +16,7 @@ public static bool CanHaveModifiers(SyntaxKind kind)
 
 ### Parameters
 
-**kind**
+kind
 
 
 

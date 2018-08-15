@@ -25,21 +25,21 @@ public static bool ImplementsAny(this ITypeSymbol typeSymbol, SpecialType interf
 
 #### Parameters
 
-**typeSymbol**
+typeSymbol
 
 
 
-**interfaceType1**
+interfaceType1
 
 
 
-**interfaceType2**
+interfaceType2
 
 
 
-**allInterfaces**
+allInterfaces
 
-
+If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
 #### Returns
 
@@ -57,25 +57,25 @@ public static bool ImplementsAny(this ITypeSymbol typeSymbol, SpecialType interf
 
 #### Parameters
 
-**typeSymbol**
+typeSymbol
 
 
 
-**interfaceType1**
+interfaceType1
 
 
 
-**interfaceType2**
+interfaceType2
 
 
 
-**interfaceType3**
+interfaceType3
 
 
 
-**allInterfaces**
+allInterfaces
 
-
+If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
 #### Returns
 

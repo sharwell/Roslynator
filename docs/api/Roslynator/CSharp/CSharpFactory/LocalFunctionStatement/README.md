@@ -21,23 +21,23 @@ public static LocalFunctionStatementSyntax LocalFunctionStatement(SyntaxTokenLis
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**returnType**
+returnType
 
 
 
-**identifier**
+identifier
 
 
 
-**parameterList**
+parameterList
 
 
 
-**expressionBody**
+expressionBody
 
 
 
@@ -53,23 +53,23 @@ public static LocalFunctionStatementSyntax LocalFunctionStatement(SyntaxTokenLis
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**returnType**
+returnType
 
 
 
-**identifier**
+identifier
 
 
 
-**parameterList**
+parameterList
 
 
 
-**body**
+body
 
 
 

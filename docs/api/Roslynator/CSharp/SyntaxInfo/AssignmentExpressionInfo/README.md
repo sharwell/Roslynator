@@ -25,15 +25,15 @@ public static AssignmentExpressionInfo AssignmentExpressionInfo(AssignmentExpres
 
 #### Parameters
 
-**assignmentExpression**
+assignmentExpression
 
 
 
-**walkDownParentheses**
+walkDownParentheses
 
 
 
-**allowMissing**
+allowMissing
 
 
 
@@ -53,15 +53,15 @@ public static AssignmentExpressionInfo AssignmentExpressionInfo(SyntaxNode node,
 
 #### Parameters
 
-**node**
+node
 
 
 
-**walkDownParentheses**
+walkDownParentheses
 
 
 
-**allowMissing**
+allowMissing
 
 
 

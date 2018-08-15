@@ -21,11 +21,11 @@ public static AssignmentExpressionSyntax AddAssignmentExpression(ExpressionSynta
 
 #### Parameters
 
-**left**
+left
 
 
 
-**right**
+right
 
 
 
@@ -41,15 +41,15 @@ public static AssignmentExpressionSyntax AddAssignmentExpression(ExpressionSynta
 
 #### Parameters
 
-**left**
+left
 
 
 
-**operatorToken**
+operatorToken
 
 
 
-**right**
+right
 
 
 

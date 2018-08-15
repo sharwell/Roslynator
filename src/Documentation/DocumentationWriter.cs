@@ -410,14 +410,14 @@ namespace Roslynator.Documentation
 
             if (en.MoveNext())
             {
-                WriteHeading(3, Resources.ParametersTitle);
+                WriteHeading(3, Resources.TypeParametersTitle);
 
                 do
                 {
-                    WriteBold(en.Current.Name);
+                    WriteString(en.Current.Name);
                     WriteLine();
                     WriteLine();
-                    GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", symbol.Name)?.WriteContentTo(this);
+                    GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", en.Current.Name)?.WriteContentTo(this);
                     WriteLine();
                     WriteLine();
                 }
@@ -498,10 +498,10 @@ namespace Roslynator.Documentation
 
                     do
                     {
-                        WriteBold(en.Current.Name);
+                        WriteString(en.Current.Name);
                         WriteLine();
                         WriteLine();
-                        GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", symbol.Name)?.WriteContentTo(this);
+                        GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", en.Current.Name)?.WriteContentTo(this);
                         WriteLine();
                         WriteLine();
                     }

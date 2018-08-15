@@ -21,11 +21,11 @@ public static AttributeArgumentSyntax AttributeArgument(NameColonSyntax nameColo
 
 #### Parameters
 
-**nameColon**
+nameColon
 
 
 
-**expression**
+expression
 
 
 
@@ -41,11 +41,11 @@ public static AttributeArgumentSyntax AttributeArgument(NameEqualsSyntax nameEqu
 
 #### Parameters
 
-**nameEquals**
+nameEquals
 
 
 
-**expression**
+expression
 
 
 

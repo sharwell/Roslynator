@@ -21,7 +21,7 @@ public static InitializerExpressionSyntax ObjectInitializerExpression(SeparatedS
 
 #### Parameters
 
-**expressions**
+expressions
 
 
 
@@ -37,15 +37,15 @@ public static InitializerExpressionSyntax ObjectInitializerExpression(SyntaxToke
 
 #### Parameters
 
-**openBraceToken**
+openBraceToken
 
 
 
-**expressions**
+expressions
 
 
 
-**closeBraceToken**
+closeBraceToken
 
 
 

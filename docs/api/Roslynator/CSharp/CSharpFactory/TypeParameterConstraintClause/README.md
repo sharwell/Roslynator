@@ -21,11 +21,11 @@ public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(
 
 #### Parameters
 
-**identifierName**
+identifierName
 
 
 
-**typeParameterConstraint**
+typeParameterConstraint
 
 
 
@@ -41,11 +41,11 @@ public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(
 
 #### Parameters
 
-**name**
+name
 
 
 
-**typeParameterConstraint**
+typeParameterConstraint
 
 
 

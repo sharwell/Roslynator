@@ -22,15 +22,15 @@ public static ParameterSyntax Parameter(TypeSyntax type, string identifier, Expr
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**default**
+default
 
 
 
@@ -46,15 +46,15 @@ public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier,
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**default**
+default
 
 
 
@@ -70,15 +70,15 @@ public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier,
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**default**
+default
 
 
 

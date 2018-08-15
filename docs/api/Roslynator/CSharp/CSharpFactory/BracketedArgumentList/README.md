@@ -21,7 +21,7 @@ public static BracketedArgumentListSyntax BracketedArgumentList(ArgumentSyntax a
 
 #### Parameters
 
-**argument**
+argument
 
 
 
@@ -37,7 +37,7 @@ public static BracketedArgumentListSyntax BracketedArgumentList(params ArgumentS
 
 #### Parameters
 
-**arguments**
+arguments
 
 
 

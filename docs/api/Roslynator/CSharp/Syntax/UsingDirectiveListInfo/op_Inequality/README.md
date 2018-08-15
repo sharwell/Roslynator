@@ -12,11 +12,11 @@ public static bool operator !=(in UsingDirectiveListInfo info1, in UsingDirectiv
 
 ### Parameters
 
-**info1**
+info1
 
 
 
-**info2**
+info2
 
 
 

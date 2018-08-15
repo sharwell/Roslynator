@@ -16,17 +16,17 @@ public static ParenthesizedExpressionSyntax Parenthesize(this ExpressionSyntax e
 
 ### Parameters
 
-**expression**
+expression
 
 
 
-**includeElasticTrivia**
+includeElasticTrivia
 
+If true, add elastic trivia\.
 
+simplifiable
 
-**simplifiable**
-
-
+If true, attach [Simplifier.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.simplification.simplifier.annotation) to the parenthesized expression\.
 
 ### Returns
 

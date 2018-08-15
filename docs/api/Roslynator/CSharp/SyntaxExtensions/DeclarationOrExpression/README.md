@@ -16,7 +16,7 @@ public static CSharpSyntaxNode DeclarationOrExpression(this UsingStatementSyntax
 
 ### Parameters
 
-**usingStatement**
+usingStatement
 
 
 

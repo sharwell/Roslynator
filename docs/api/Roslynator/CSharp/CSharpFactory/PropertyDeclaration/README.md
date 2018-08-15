@@ -21,23 +21,23 @@ public static PropertyDeclarationSyntax PropertyDeclaration(SyntaxTokenList modi
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**accessorList**
+accessorList
 
 
 
-**value**
+value
 
 
 
@@ -53,19 +53,19 @@ public static PropertyDeclarationSyntax PropertyDeclaration(SyntaxTokenList modi
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**expressionBody**
+expressionBody
 
 
 

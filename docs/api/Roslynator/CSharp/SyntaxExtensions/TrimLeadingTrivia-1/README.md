@@ -27,7 +27,7 @@ public static SyntaxToken TrimLeadingTrivia(this SyntaxToken token)
 
 #### Parameters
 
-**token**
+token
 
 
 
@@ -47,15 +47,15 @@ Returns the same node if there is nothing to trim\.
 public static TNode TrimLeadingTrivia<TNode>(this TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
-
-
-
-#### Parameters
-
-**node**
+node
 
 
 

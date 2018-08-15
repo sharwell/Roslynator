@@ -25,11 +25,11 @@ public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpress
 
 #### Parameters
 
-**invocationExpression**
+invocationExpression
 
 
 
-**allowMissing**
+allowMissing
 
 
 
@@ -49,15 +49,15 @@ public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpress
 
 #### Parameters
 
-**node**
+node
 
 
 
-**walkDownParentheses**
+walkDownParentheses
 
 
 
-**allowMissing**
+allowMissing
 
 
 

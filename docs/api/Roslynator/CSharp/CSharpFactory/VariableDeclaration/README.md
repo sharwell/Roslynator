@@ -23,15 +23,15 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, str
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**value**
+value
 
 
 
@@ -47,15 +47,15 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Syn
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**initializer**
+initializer
 
 
 
@@ -71,15 +71,15 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Syn
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**value**
+value
 
 
 
@@ -95,11 +95,11 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Var
 
 #### Parameters
 
-**type**
+type
 
 
 
-**variable**
+variable
 
 
 

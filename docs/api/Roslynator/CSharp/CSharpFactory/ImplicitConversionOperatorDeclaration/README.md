@@ -21,19 +21,19 @@ public static ConversionOperatorDeclarationSyntax ImplicitConversionOperatorDecl
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**type**
+type
 
 
 
-**parameterList**
+parameterList
 
 
 
-**expressionBody**
+expressionBody
 
 
 
@@ -49,19 +49,19 @@ public static ConversionOperatorDeclarationSyntax ImplicitConversionOperatorDecl
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**type**
+type
 
 
 
-**parameterList**
+parameterList
 
 
 
-**body**
+body
 
 
 

@@ -23,15 +23,15 @@ Creates a new node with all modifiers removed\.
 public static TNode RemoveAll<TNode>(TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
-
-
-
-#### Parameters
-
-**node**
+node
 
 
 
@@ -49,19 +49,19 @@ Creates a new node with modifiers that matches the predicate removed\.
 public static TNode RemoveAll<TNode>(TNode node, Func<SyntaxToken, bool> predicate) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+node
 
 
 
-#### Parameters
-
-**node**
-
-
-
-**predicate**
+predicate
 
 
 

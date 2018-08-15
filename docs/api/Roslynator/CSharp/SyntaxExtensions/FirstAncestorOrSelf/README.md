@@ -27,15 +27,15 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, Func<SyntaxNo
 
 #### Parameters
 
-**node**
+node
 
 
 
-**predicate**
+predicate
 
 
 
-**ascendOutOfTrivia**
+ascendOutOfTrivia
 
 
 
@@ -55,15 +55,15 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind ki
 
 #### Parameters
 
-**node**
+node
 
 
 
-**kind**
+kind
 
 
 
-**ascendOutOfTrivia**
+ascendOutOfTrivia
 
 
 
@@ -83,19 +83,19 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind ki
 
 #### Parameters
 
-**node**
+node
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**ascendOutOfTrivia**
+ascendOutOfTrivia
 
 
 
@@ -115,23 +115,23 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind ki
 
 #### Parameters
 
-**node**
+node
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**ascendOutOfTrivia**
+ascendOutOfTrivia
 
 
 

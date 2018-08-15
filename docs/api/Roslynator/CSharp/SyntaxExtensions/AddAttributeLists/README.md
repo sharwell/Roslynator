@@ -26,15 +26,15 @@ public static ClassDeclarationSyntax AddAttributeLists(this ClassDeclarationSynt
 
 #### Parameters
 
-**classDeclaration**
+classDeclaration
 
 
 
-**keepDocumentationCommentOnTop**
+keepDocumentationCommentOnTop
 
+If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment\.
 
-
-**attributeLists**
+attributeLists
 
 
 
@@ -54,15 +54,15 @@ public static InterfaceDeclarationSyntax AddAttributeLists(this InterfaceDeclara
 
 #### Parameters
 
-**interfaceDeclaration**
+interfaceDeclaration
 
 
 
-**keepDocumentationCommentOnTop**
+keepDocumentationCommentOnTop
 
+If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment\.
 
-
-**attributeLists**
+attributeLists
 
 
 
@@ -82,15 +82,15 @@ public static StructDeclarationSyntax AddAttributeLists(this StructDeclarationSy
 
 #### Parameters
 
-**structDeclaration**
+structDeclaration
 
 
 
-**keepDocumentationCommentOnTop**
+keepDocumentationCommentOnTop
 
+If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment\.
 
-
-**attributeLists**
+attributeLists
 
 
 

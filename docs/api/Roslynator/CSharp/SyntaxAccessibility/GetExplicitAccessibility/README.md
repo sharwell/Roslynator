@@ -41,7 +41,7 @@ public static Accessibility GetExplicitAccessibility(AccessorDeclarationSyntax a
 
 #### Parameters
 
-**accessorDeclaration**
+accessorDeclaration
 
 
 
@@ -61,7 +61,7 @@ public static Accessibility GetExplicitAccessibility(ClassDeclarationSyntax clas
 
 #### Parameters
 
-**classDeclaration**
+classDeclaration
 
 
 
@@ -81,7 +81,7 @@ public static Accessibility GetExplicitAccessibility(ConstructorDeclarationSynta
 
 #### Parameters
 
-**constructorDeclaration**
+constructorDeclaration
 
 
 
@@ -101,7 +101,7 @@ public static Accessibility GetExplicitAccessibility(ConversionOperatorDeclarati
 
 #### Parameters
 
-**conversionOperatorDeclaration**
+conversionOperatorDeclaration
 
 
 
@@ -121,7 +121,7 @@ public static Accessibility GetExplicitAccessibility(DelegateDeclarationSyntax d
 
 #### Parameters
 
-**delegateDeclaration**
+delegateDeclaration
 
 
 
@@ -141,7 +141,7 @@ public static Accessibility GetExplicitAccessibility(DestructorDeclarationSyntax
 
 #### Parameters
 
-**destructorDeclaration**
+destructorDeclaration
 
 
 
@@ -161,7 +161,7 @@ public static Accessibility GetExplicitAccessibility(EnumDeclarationSyntax enumD
 
 #### Parameters
 
-**enumDeclaration**
+enumDeclaration
 
 
 
@@ -181,7 +181,7 @@ public static Accessibility GetExplicitAccessibility(EventDeclarationSyntax even
 
 #### Parameters
 
-**eventDeclaration**
+eventDeclaration
 
 
 
@@ -201,7 +201,7 @@ public static Accessibility GetExplicitAccessibility(EventFieldDeclarationSyntax
 
 #### Parameters
 
-**eventFieldDeclaration**
+eventFieldDeclaration
 
 
 
@@ -221,7 +221,7 @@ public static Accessibility GetExplicitAccessibility(FieldDeclarationSyntax fiel
 
 #### Parameters
 
-**fieldDeclaration**
+fieldDeclaration
 
 
 
@@ -241,7 +241,7 @@ public static Accessibility GetExplicitAccessibility(IncompleteMemberSyntax inco
 
 #### Parameters
 
-**incompleteMember**
+incompleteMember
 
 
 
@@ -261,7 +261,7 @@ public static Accessibility GetExplicitAccessibility(IndexerDeclarationSyntax in
 
 #### Parameters
 
-**indexerDeclaration**
+indexerDeclaration
 
 
 
@@ -281,7 +281,7 @@ public static Accessibility GetExplicitAccessibility(InterfaceDeclarationSyntax 
 
 #### Parameters
 
-**interfaceDeclaration**
+interfaceDeclaration
 
 
 
@@ -301,7 +301,7 @@ public static Accessibility GetExplicitAccessibility(MethodDeclarationSyntax met
 
 #### Parameters
 
-**methodDeclaration**
+methodDeclaration
 
 
 
@@ -321,7 +321,7 @@ public static Accessibility GetExplicitAccessibility(OperatorDeclarationSyntax o
 
 #### Parameters
 
-**operatorDeclaration**
+operatorDeclaration
 
 
 
@@ -341,7 +341,7 @@ public static Accessibility GetExplicitAccessibility(PropertyDeclarationSyntax p
 
 #### Parameters
 
-**propertyDeclaration**
+propertyDeclaration
 
 
 
@@ -361,7 +361,7 @@ public static Accessibility GetExplicitAccessibility(StructDeclarationSyntax str
 
 #### Parameters
 
-**structDeclaration**
+structDeclaration
 
 
 
@@ -381,7 +381,7 @@ public static Accessibility GetExplicitAccessibility(SyntaxNode declaration)
 
 #### Parameters
 
-**declaration**
+declaration
 
 
 

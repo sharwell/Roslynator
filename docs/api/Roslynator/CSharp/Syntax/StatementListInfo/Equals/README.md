@@ -25,9 +25,9 @@ public override bool Equals(object obj)
 
 #### Parameters
 
-**obj**
+obj
 
-
+The object to compare with the current instance\. 
 
 #### Returns
 
@@ -47,9 +47,9 @@ public bool Equals(StatementListInfo other)
 
 #### Parameters
 
-**other**
+other
 
-
+An object to compare with this object\.
 
 #### Returns
 

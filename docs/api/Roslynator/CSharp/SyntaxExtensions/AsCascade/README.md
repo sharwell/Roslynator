@@ -16,7 +16,7 @@ public static IfStatementCascade AsCascade(this IfStatementSyntax ifStatement)
 
 ### Parameters
 
-**ifStatement**
+ifStatement
 
 
 

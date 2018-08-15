@@ -25,7 +25,7 @@ public static SyntaxNodeOrToken WithoutTrailingTrivia(this SyntaxNodeOrToken nod
 
 #### Parameters
 
-**nodeOrToken**
+nodeOrToken
 
 
 
@@ -45,7 +45,7 @@ public static SyntaxToken WithoutTrailingTrivia(this SyntaxToken token)
 
 #### Parameters
 
-**token**
+token
 
 
 

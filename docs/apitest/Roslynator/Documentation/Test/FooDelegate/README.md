@@ -16,7 +16,7 @@ public delegate Foo FooDelegate(object p)
 
 ### Parameters
 
-**p**
+p
 
 
 

@@ -14,19 +14,19 @@ Creates a new node with the whitespace removed\.
 public static TNode RemoveWhitespace<TNode>(this TNode node, TextSpan? span = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+### Type Parameters
+
+TNode
+
+
+
 ### Parameters
 
-**TNode**
+node
 
 
 
-### Parameters
-
-**node**
-
-
-
-**span**
+span
 
 
 

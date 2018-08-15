@@ -16,11 +16,11 @@ public ModifierListInfo WithExplicitAccessibility(Accessibility newAccessibility
 
 ### Parameters
 
-**newAccessibility**
+newAccessibility
 
 
 
-**comparer**
+comparer
 
 
 

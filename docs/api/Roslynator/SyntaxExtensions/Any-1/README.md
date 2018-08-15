@@ -27,11 +27,11 @@ public static bool Any(this SyntaxTokenList list, Func<SyntaxToken, bool> predic
 
 #### Parameters
 
-**list**
+list
 
 
 
-**predicate**
+predicate
 
 
 
@@ -51,11 +51,11 @@ public static bool Any(this SyntaxTriviaList list, Func<SyntaxTrivia, bool> pred
 
 #### Parameters
 
-**list**
+list
 
 
 
-**predicate**
+predicate
 
 
 
@@ -73,19 +73,19 @@ Returns true if any node in a list matches the predicate\.
 public static bool Any<TNode>(this SeparatedSyntaxList<TNode> list, Func<TNode, bool> predicate) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+list
 
 
 
-#### Parameters
-
-**list**
-
-
-
-**predicate**
+predicate
 
 
 
@@ -103,19 +103,19 @@ Returns true if any node in a list matches the predicate\.
 public static bool Any<TNode>(this SyntaxList<TNode> list, Func<TNode, bool> predicate) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+list
 
 
 
-#### Parameters
-
-**list**
-
-
-
-**predicate**
+predicate
 
 
 

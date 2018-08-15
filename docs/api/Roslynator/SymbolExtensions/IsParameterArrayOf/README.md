@@ -26,11 +26,11 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 #### Parameters
 
-**parameterSymbol**
+parameterSymbol
 
 
 
-**elementType**
+elementType
 
 
 
@@ -50,15 +50,15 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 #### Parameters
 
-**parameterSymbol**
+parameterSymbol
 
 
 
-**elementType1**
+elementType1
 
 
 
-**elementType2**
+elementType2
 
 
 
@@ -78,19 +78,19 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 #### Parameters
 
-**parameterSymbol**
+parameterSymbol
 
 
 
-**elementType1**
+elementType1
 
 
 
-**elementType2**
+elementType2
 
 
 
-**elementType3**
+elementType3
 
 
 

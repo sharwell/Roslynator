@@ -14,23 +14,23 @@ Creates a new node with the specified explicit accessibility updated\.
 public static TNode WithExplicitAccessibility<TNode>(TNode node, Accessibility newAccessibility, IComparer<SyntaxKind> comparer = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+### Type Parameters
+
+TNode
+
+
+
 ### Parameters
 
-**TNode**
+node
 
 
 
-### Parameters
-
-**node**
+newAccessibility
 
 
 
-**newAccessibility**
-
-
-
-**comparer**
+comparer
 
 
 

@@ -16,7 +16,7 @@ public static bool IsAsyncMethod(this ISymbol symbol)
 
 ### Parameters
 
-**symbol**
+symbol
 
 
 

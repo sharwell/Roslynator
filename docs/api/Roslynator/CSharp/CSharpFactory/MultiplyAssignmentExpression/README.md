@@ -21,11 +21,11 @@ public static AssignmentExpressionSyntax MultiplyAssignmentExpression(Expression
 
 #### Parameters
 
-**left**
+left
 
 
 
-**right**
+right
 
 
 
@@ -41,15 +41,15 @@ public static AssignmentExpressionSyntax MultiplyAssignmentExpression(Expression
 
 #### Parameters
 
-**left**
+left
 
 
 
-**operatorToken**
+operatorToken
 
 
 
-**right**
+right
 
 
 

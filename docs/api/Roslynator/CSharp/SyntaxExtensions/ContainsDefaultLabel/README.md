@@ -16,7 +16,7 @@ public static bool ContainsDefaultLabel(this SwitchSectionSyntax switchSection)
 
 ### Parameters
 
-**switchSection**
+switchSection
 
 
 

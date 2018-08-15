@@ -16,11 +16,11 @@ public MemberDeclarationListInfo ReplaceRange(MemberDeclarationSyntax memberInLi
 
 ### Parameters
 
-**memberInList**
+memberInList
 
 
 
-**newMembers**
+newMembers
 
 
 

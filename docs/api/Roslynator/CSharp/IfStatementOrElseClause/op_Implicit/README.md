@@ -23,7 +23,7 @@ public static implicit operator IfStatementOrElseClause(ElseClauseSyntax elseCla
 
 #### Parameters
 
-**elseClause**
+elseClause
 
 
 
@@ -39,7 +39,7 @@ public static implicit operator ElseClauseSyntax(in IfStatementOrElseClause ifOr
 
 #### Parameters
 
-**ifOrElse**
+ifOrElse
 
 
 
@@ -55,7 +55,7 @@ public static implicit operator IfStatementSyntax(in IfStatementOrElseClause ifO
 
 #### Parameters
 
-**ifOrElse**
+ifOrElse
 
 
 
@@ -71,7 +71,7 @@ public static implicit operator IfStatementOrElseClause(IfStatementSyntax ifStat
 
 #### Parameters
 
-**ifStatement**
+ifStatement
 
 
 

@@ -33,11 +33,11 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 #### Parameters
 
-**classDeclaration**
+classDeclaration
 
 
 
-**members**
+members
 
 
 
@@ -57,11 +57,11 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 #### Parameters
 
-**classDeclaration**
+classDeclaration
 
 
 
-**member**
+member
 
 
 
@@ -81,11 +81,11 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 #### Parameters
 
-**compilationUnit**
+compilationUnit
 
 
 
-**members**
+members
 
 
 
@@ -105,11 +105,11 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 #### Parameters
 
-**compilationUnit**
+compilationUnit
 
 
 
-**member**
+member
 
 
 
@@ -129,11 +129,11 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 #### Parameters
 
-**interfaceDeclaration**
+interfaceDeclaration
 
 
 
-**members**
+members
 
 
 
@@ -153,11 +153,11 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 #### Parameters
 
-**interfaceDeclaration**
+interfaceDeclaration
 
 
 
-**member**
+member
 
 
 
@@ -177,11 +177,11 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 #### Parameters
 
-**namespaceDeclaration**
+namespaceDeclaration
 
 
 
-**members**
+members
 
 
 
@@ -201,11 +201,11 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 #### Parameters
 
-**namespaceDeclaration**
+namespaceDeclaration
 
 
 
-**member**
+member
 
 
 
@@ -225,11 +225,11 @@ public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax s
 
 #### Parameters
 
-**structDeclaration**
+structDeclaration
 
 
 
-**members**
+members
 
 
 
@@ -249,11 +249,11 @@ public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax s
 
 #### Parameters
 
-**structDeclaration**
+structDeclaration
 
 
 
-**member**
+member
 
 
 

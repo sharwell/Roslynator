@@ -84,10 +84,10 @@ namespace Roslynator.Documentation.Test
         /// <summary>
         /// s <paramref name="value"/> <typeparamref name="T"/>
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <typeparam name="T2"></typeparam>
-        /// <param name="value">p</param>
-        /// <PARAM name="value2">p</PARAM>
+        /// <typeparam name="T">doc for T1</typeparam>
+        /// <typeparam name="T2">doc for T2</typeparam>
+        /// <param name="value">doc for value</param>
+        /// <PARAM name="value2">doc for value2</PARAM>
         /// <permission cref="Foo">ppp</permission>
         /// <exception cref="ArgumentException"></exception>
         /// <exception cref="ArgumentNullException"></exception>

@@ -27,15 +27,15 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 #### Parameters
 
-**symbol**
+symbol
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
@@ -55,19 +55,19 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 #### Parameters
 
-**symbol**
+symbol
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
@@ -87,23 +87,23 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 #### Parameters
 
-**symbol**
+symbol
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
@@ -123,27 +123,27 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 #### Parameters
 
-**symbol**
+symbol
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
-**kind5**
+kind5
 
 
 

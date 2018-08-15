@@ -26,7 +26,7 @@ public static SyntaxToken WithSimplifierAnnotation(this SyntaxToken token)
 
 #### Parameters
 
-**token**
+token
 
 
 
@@ -44,15 +44,15 @@ Creates a new node with the [Simplifier.Annotation](https://docs.microsoft.com/e
 public static TNode WithSimplifierAnnotation<TNode>(this TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
-
-
-
-#### Parameters
-
-**node**
+node
 
 
 

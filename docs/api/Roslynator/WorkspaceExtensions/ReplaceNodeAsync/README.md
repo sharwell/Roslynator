@@ -26,19 +26,19 @@ public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode
 
 #### Parameters
 
-**document**
+document
 
 
 
-**oldNode**
+oldNode
 
 
 
-**newNodes**
+newNodes
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 
@@ -58,19 +58,19 @@ public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode
 
 #### Parameters
 
-**document**
+document
 
 
 
-**oldNode**
+oldNode
 
 
 
-**newNode**
+newNode
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 
@@ -88,27 +88,27 @@ Creates a new solution with the specified old node replaced with a new node\.
 public static Task<Solution> ReplaceNodeAsync<TNode>(this Solution solution, TNode oldNode, TNode newNode, CancellationToken cancellationToken = default(CancellationToken)) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+solution
 
 
 
-#### Parameters
-
-**solution**
+oldNode
 
 
 
-**oldNode**
+newNode
 
 
 
-**newNode**
-
-
-
-**cancellationToken**
+cancellationToken
 
 
 

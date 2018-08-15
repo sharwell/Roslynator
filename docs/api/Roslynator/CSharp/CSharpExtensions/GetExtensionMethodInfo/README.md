@@ -16,15 +16,15 @@ public static ExtensionMethodSymbolInfo GetExtensionMethodInfo(this SemanticMode
 
 ### Parameters
 
-**semanticModel**
+semanticModel
 
 
 
-**expression**
+expression
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 

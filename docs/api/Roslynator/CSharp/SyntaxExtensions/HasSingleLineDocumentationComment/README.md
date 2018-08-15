@@ -16,7 +16,7 @@ public static bool HasSingleLineDocumentationComment(this MemberDeclarationSynta
 
 ### Parameters
 
-**member**
+member
 
 
 

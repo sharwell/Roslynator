@@ -12,7 +12,7 @@ public override bool Equals(object obj)
 
 ### Parameters
 
-**obj**
+obj
 
 
 

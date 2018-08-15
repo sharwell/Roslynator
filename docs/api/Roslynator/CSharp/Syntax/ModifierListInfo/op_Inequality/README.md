@@ -12,11 +12,11 @@ public static bool operator !=(in ModifierListInfo info1, in ModifierListInfo in
 
 ### Parameters
 
-**info1**
+info1
 
 
 
-**info2**
+info2
 
 
 

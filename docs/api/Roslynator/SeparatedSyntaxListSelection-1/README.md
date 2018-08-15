@@ -18,9 +18,9 @@ public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>,
     where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Parameters
+### Type Parameters
 
-**TNode**
+TNode
 
 
 

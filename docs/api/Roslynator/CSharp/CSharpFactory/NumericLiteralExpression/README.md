@@ -27,7 +27,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(decimal value)
 
 #### Parameters
 
-**value**
+value
 
 
 
@@ -43,7 +43,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(double value)
 
 #### Parameters
 
-**value**
+value
 
 
 
@@ -59,7 +59,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(int value)
 
 #### Parameters
 
-**value**
+value
 
 
 
@@ -75,7 +75,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(long value)
 
 #### Parameters
 
-**value**
+value
 
 
 
@@ -91,7 +91,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(sbyte value)
 
 #### Parameters
 
-**value**
+value
 
 
 
@@ -107,7 +107,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(float value)
 
 #### Parameters
 
-**value**
+value
 
 
 
@@ -123,7 +123,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(uint value)
 
 #### Parameters
 
-**value**
+value
 
 
 
@@ -139,7 +139,7 @@ public static LiteralExpressionSyntax NumericLiteralExpression(ulong value)
 
 #### Parameters
 
-**value**
+value
 
 
 

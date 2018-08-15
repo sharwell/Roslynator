@@ -25,7 +25,7 @@ public UsingDirectiveListInfo WithUsings(IEnumerable<UsingDirectiveSyntax> using
 
 #### Parameters
 
-**usings**
+usings
 
 
 
@@ -45,7 +45,7 @@ public UsingDirectiveListInfo WithUsings(SyntaxList<UsingDirectiveSyntax> usings
 
 #### Parameters
 
-**usings**
+usings
 
 
 

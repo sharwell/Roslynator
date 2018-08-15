@@ -12,7 +12,7 @@ public static LiteralExpressionSyntax LiteralExpression(object value)
 
 ### Parameters
 
-**value**
+value
 
 
 

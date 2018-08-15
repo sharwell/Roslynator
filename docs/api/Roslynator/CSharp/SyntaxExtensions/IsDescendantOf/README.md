@@ -16,15 +16,15 @@ public static bool IsDescendantOf(this SyntaxNode node, SyntaxKind kind, bool as
 
 ### Parameters
 
-**node**
+node
 
 
 
-**kind**
+kind
 
 
 
-**ascendOutOfTrivia**
+ascendOutOfTrivia
 
 
 

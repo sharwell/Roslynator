@@ -16,7 +16,7 @@ public static bool IsIncrementOrDecrementExpression(SyntaxKind kind)
 
 ### Parameters
 
-**kind**
+kind
 
 
 

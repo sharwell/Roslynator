@@ -16,7 +16,7 @@ public UsingDirectiveListInfo AddRange(IEnumerable<UsingDirectiveSyntax> usings)
 
 ### Parameters
 
-**usings**
+usings
 
 
 

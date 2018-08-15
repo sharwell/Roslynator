@@ -17,7 +17,7 @@ public static StatementSyntax NextStatement(this StatementSyntax statement)
 
 ### Parameters
 
-**statement**
+statement
 
 
 

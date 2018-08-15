@@ -16,7 +16,7 @@ public MemberDeclarationListInfo Remove(MemberDeclarationSyntax member)
 
 ### Parameters
 
-**member**
+member
 
 
 

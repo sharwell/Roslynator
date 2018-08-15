@@ -16,15 +16,15 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Syntax
 
 ### Parameters
 
-**semanticModel**
+semanticModel
 
 
 
-**node**
+node
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 

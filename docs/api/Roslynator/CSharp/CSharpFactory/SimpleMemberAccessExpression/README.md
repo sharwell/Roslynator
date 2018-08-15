@@ -21,11 +21,11 @@ public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(Expressi
 
 #### Parameters
 
-**expression**
+expression
 
 
 
-**name**
+name
 
 
 
@@ -41,15 +41,15 @@ public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(Expressi
 
 #### Parameters
 
-**expression**
+expression
 
 
 
-**operatorToken**
+operatorToken
 
 
 
-**name**
+name
 
 
 

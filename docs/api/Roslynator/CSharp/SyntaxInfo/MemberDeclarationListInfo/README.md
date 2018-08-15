@@ -29,7 +29,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(ClassDeclarati
 
 #### Parameters
 
-**declaration**
+declaration
 
 
 
@@ -49,7 +49,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(CompilationUni
 
 #### Parameters
 
-**compilationUnit**
+compilationUnit
 
 
 
@@ -69,7 +69,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(InterfaceDecla
 
 #### Parameters
 
-**declaration**
+declaration
 
 
 
@@ -89,7 +89,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(NamespaceDecla
 
 #### Parameters
 
-**declaration**
+declaration
 
 
 
@@ -109,7 +109,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(StructDeclarat
 
 #### Parameters
 
-**declaration**
+declaration
 
 
 
@@ -129,7 +129,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(SyntaxNode nod
 
 #### Parameters
 
-**node**
+node
 
 
 

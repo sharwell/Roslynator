@@ -44,27 +44,27 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**additionalLocations**
+additionalLocations
 
 
 
-**properties**
+properties
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -80,23 +80,23 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**additionalLocations**
+additionalLocations
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -112,23 +112,23 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**properties**
+properties
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -144,19 +144,19 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
+
+A [DiagnosticDescriptor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor) describing the diagnostic\.
+
+location
 
 
 
-**location**
-
-
-
-**messageArgs**
+messageArgs
 
 
 
@@ -172,19 +172,19 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**node**
+node
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -200,19 +200,19 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**token**
+token
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -228,19 +228,19 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**trivia**
+trivia
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -256,27 +256,27 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**additionalLocations**
+additionalLocations
 
 
 
-**properties**
+properties
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -292,23 +292,23 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**additionalLocations**
+additionalLocations
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -324,23 +324,23 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**properties**
+properties
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -356,19 +356,19 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -384,19 +384,19 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**node**
+node
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -412,19 +412,19 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**token**
+token
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -440,19 +440,19 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**trivia**
+trivia
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -468,27 +468,27 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**additionalLocations**
+additionalLocations
 
 
 
-**properties**
+properties
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -504,23 +504,23 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**additionalLocations**
+additionalLocations
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -536,23 +536,23 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**properties**
+properties
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -568,19 +568,19 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**location**
+location
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -596,19 +596,19 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**node**
+node
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -624,19 +624,19 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**token**
+token
 
 
 
-**messageArgs**
+messageArgs
 
 
 
@@ -652,19 +652,19 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 #### Parameters
 
-**context**
+context
 
 
 
-**descriptor**
+descriptor
 
 
 
-**trivia**
+trivia
 
 
 
-**messageArgs**
+messageArgs
 
 
 

@@ -22,11 +22,11 @@ public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, S
 
 #### Parameters
 
-**switchLabel**
+switchLabel
 
 
 
-**statement**
+statement
 
 
 
@@ -42,11 +42,11 @@ public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, S
 
 #### Parameters
 
-**switchLabel**
+switchLabel
 
 
 
-**statements**
+statements
 
 
 
@@ -62,11 +62,11 @@ public static SwitchSectionSyntax SwitchSection(SyntaxList<SwitchLabelSyntax> sw
 
 #### Parameters
 
-**switchLabels**
+switchLabels
 
 
 
-**statement**
+statement
 
 
 

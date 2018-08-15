@@ -23,19 +23,19 @@ Returns true if the specified node is a last node in the list\.
 public static bool IsLast<TNode>(this SeparatedSyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+list
 
 
 
-#### Parameters
-
-**list**
-
-
-
-**node**
+node
 
 
 
@@ -53,19 +53,19 @@ Returns true if the specified node is a last node in the list\.
 public static bool IsLast<TNode>(this SyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+list
 
 
 
-#### Parameters
-
-**list**
-
-
-
-**node**
+node
 
 
 

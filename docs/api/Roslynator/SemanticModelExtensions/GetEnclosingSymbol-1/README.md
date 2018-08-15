@@ -14,23 +14,23 @@ Returns the innermost symbol of type **TSymbol** that the specified position is 
 public static TSymbol GetEnclosingSymbol<TSymbol>(this SemanticModel semanticModel, int position, CancellationToken cancellationToken = default(CancellationToken)) where TSymbol : Microsoft.CodeAnalysis.ISymbol
 ```
 
+### Type Parameters
+
+TSymbol
+
+
+
 ### Parameters
 
-**TSymbol**
+semanticModel
 
 
 
-### Parameters
-
-**semanticModel**
+position
 
 
 
-**position**
-
-
-
-**cancellationToken**
+cancellationToken
 
 
 

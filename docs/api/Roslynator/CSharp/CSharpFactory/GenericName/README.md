@@ -21,11 +21,11 @@ public static GenericNameSyntax GenericName(string identifier, TypeSyntax typeAr
 
 #### Parameters
 
-**identifier**
+identifier
 
 
 
-**typeArgument**
+typeArgument
 
 
 
@@ -41,11 +41,11 @@ public static GenericNameSyntax GenericName(SyntaxToken identifier, TypeSyntax t
 
 #### Parameters
 
-**identifier**
+identifier
 
 
 
-**typeArgument**
+typeArgument
 
 
 

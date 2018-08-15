@@ -28,15 +28,15 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2)
 
 #### Parameters
 
-**kind**
+kind
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
@@ -56,19 +56,19 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 #### Parameters
 
-**kind**
+kind
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
@@ -88,23 +88,23 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 #### Parameters
 
-**kind**
+kind
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
@@ -124,27 +124,27 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 #### Parameters
 
-**kind**
+kind
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
-**kind5**
+kind5
 
 
 
@@ -164,31 +164,31 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 #### Parameters
 
-**kind**
+kind
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
-**kind5**
+kind5
 
 
 
-**kind6**
+kind6
 
 
 

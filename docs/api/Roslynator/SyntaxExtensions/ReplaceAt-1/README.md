@@ -27,15 +27,15 @@ public static SyntaxTokenList ReplaceAt(this SyntaxTokenList tokenList, int inde
 
 #### Parameters
 
-**tokenList**
+tokenList
 
 
 
-**index**
+index
 
 
 
-**newToken**
+newToken
 
 
 
@@ -55,15 +55,15 @@ public static SyntaxTriviaList ReplaceAt(this SyntaxTriviaList triviaList, int i
 
 #### Parameters
 
-**triviaList**
+triviaList
 
 
 
-**index**
+index
 
 
 
-**newTrivia**
+newTrivia
 
 
 
@@ -81,23 +81,23 @@ Creates a new list with a node at the specified index replaced with a new node\.
 public static SeparatedSyntaxList<TNode> ReplaceAt<TNode>(this SeparatedSyntaxList<TNode> list, int index, TNode newNode) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+list
 
 
 
-#### Parameters
-
-**list**
+index
 
 
 
-**index**
-
-
-
-**newNode**
+newNode
 
 
 
@@ -115,23 +115,23 @@ Creates a new list with the node at the specified index replaced with a new node
 public static SyntaxList<TNode> ReplaceAt<TNode>(this SyntaxList<TNode> list, int index, TNode newNode) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
+#### Type Parameters
+
+TNode
+
+
+
 #### Parameters
 
-**TNode**
+list
 
 
 
-#### Parameters
-
-**list**
+index
 
 
 
-**index**
-
-
-
-**newNode**
+newNode
 
 
 

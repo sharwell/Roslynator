@@ -23,15 +23,15 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**initializer**
+initializer
 
 
 
@@ -47,15 +47,15 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**value**
+value
 
 
 
@@ -71,15 +71,15 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**initializer**
+initializer
 
 
 
@@ -95,15 +95,15 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 #### Parameters
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**value**
+value
 
 
 

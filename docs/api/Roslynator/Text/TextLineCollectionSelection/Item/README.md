@@ -16,9 +16,9 @@ public TextLine this[int index] { get; }
 
 ### Parameters
 
-**index**
+index
 
-
+The zero\-based index of the line to get\. 
 
 ### Property Value
 

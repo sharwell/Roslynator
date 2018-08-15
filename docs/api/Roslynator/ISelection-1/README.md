@@ -16,9 +16,9 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
     System.Collections.Generic.IReadOnlyList<T>
 ```
 
-### Parameters
+### Type Parameters
 
-**T**
+T
 
 
 

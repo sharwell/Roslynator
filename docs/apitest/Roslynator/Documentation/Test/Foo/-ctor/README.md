@@ -25,9 +25,9 @@ public Foo(string s)
 
 #### Parameters
 
-**s**
+s
 
-
+qqq
 
 #### Exceptions
 
@@ -51,11 +51,11 @@ public Foo(string s, string s2)
 
 #### Parameters
 
-**s**
+s
 
 
 
-**s2**
+s2
 
 
 

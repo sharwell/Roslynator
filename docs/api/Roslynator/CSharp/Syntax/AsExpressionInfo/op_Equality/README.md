@@ -12,11 +12,11 @@ public static bool operator ==(in AsExpressionInfo info1, in AsExpressionInfo in
 
 ### Parameters
 
-**info1**
+info1
 
 
 
-**info2**
+info2
 
 
 

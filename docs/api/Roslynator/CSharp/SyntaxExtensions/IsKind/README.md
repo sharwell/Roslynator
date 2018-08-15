@@ -38,15 +38,15 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-**node**
+node
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
@@ -66,19 +66,19 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-**node**
+node
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
@@ -98,23 +98,23 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-**node**
+node
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
@@ -134,27 +134,27 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-**node**
+node
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
-**kind5**
+kind5
 
 
 
@@ -174,31 +174,31 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-**node**
+node
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
-**kind5**
+kind5
 
 
 
-**kind6**
+kind6
 
 
 
@@ -218,15 +218,15 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-**token**
+token
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
@@ -246,19 +246,19 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-**token**
+token
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
@@ -278,23 +278,23 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-**token**
+token
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
@@ -314,27 +314,27 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-**token**
+token
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
-**kind5**
+kind5
 
 
 
@@ -354,31 +354,31 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-**token**
+token
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
-**kind5**
+kind5
 
 
 
-**kind6**
+kind6
 
 
 
@@ -398,15 +398,15 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-**trivia**
+trivia
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
@@ -426,19 +426,19 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-**trivia**
+trivia
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
@@ -458,23 +458,23 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-**trivia**
+trivia
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
@@ -494,27 +494,27 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-**trivia**
+trivia
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
-**kind5**
+kind5
 
 
 
@@ -534,31 +534,31 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-**trivia**
+trivia
 
 
 
-**kind1**
+kind1
 
 
 
-**kind2**
+kind2
 
 
 
-**kind3**
+kind3
 
 
 
-**kind4**
+kind4
 
 
 
-**kind5**
+kind5
 
 
 
-**kind6**
+kind6
 
 
 

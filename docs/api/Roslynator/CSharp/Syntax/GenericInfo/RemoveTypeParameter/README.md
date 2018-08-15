@@ -16,7 +16,7 @@ public GenericInfo RemoveTypeParameter(TypeParameterSyntax typeParameter)
 
 ### Parameters
 
-**typeParameter**
+typeParameter
 
 
 

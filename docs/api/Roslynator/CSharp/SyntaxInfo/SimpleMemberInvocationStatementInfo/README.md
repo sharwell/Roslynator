@@ -26,11 +26,11 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### Parameters
 
-**expressionStatement**
+expressionStatement
 
 
 
-**allowMissing**
+allowMissing
 
 
 
@@ -50,11 +50,11 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### Parameters
 
-**invocationExpression**
+invocationExpression
 
 
 
-**allowMissing**
+allowMissing
 
 
 
@@ -74,11 +74,11 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### Parameters
 
-**node**
+node
 
 
 
-**allowMissing**
+allowMissing
 
 
 

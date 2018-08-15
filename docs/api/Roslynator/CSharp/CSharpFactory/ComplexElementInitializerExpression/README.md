@@ -21,7 +21,7 @@ public static InitializerExpressionSyntax ComplexElementInitializerExpression(Se
 
 #### Parameters
 
-**expressions**
+expressions
 
 
 
@@ -37,15 +37,15 @@ public static InitializerExpressionSyntax ComplexElementInitializerExpression(Sy
 
 #### Parameters
 
-**openBraceToken**
+openBraceToken
 
 
 
-**expressions**
+expressions
 
 
 
-**closeBraceToken**
+closeBraceToken
 
 
 

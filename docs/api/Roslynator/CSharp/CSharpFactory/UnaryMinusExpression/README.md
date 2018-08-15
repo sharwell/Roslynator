@@ -21,7 +21,7 @@ public static PrefixUnaryExpressionSyntax UnaryMinusExpression(ExpressionSyntax 
 
 #### Parameters
 
-**operand**
+operand
 
 
 
@@ -37,11 +37,11 @@ public static PrefixUnaryExpressionSyntax UnaryMinusExpression(ExpressionSyntax 
 
 #### Parameters
 
-**operand**
+operand
 
 
 
-**operatorToken**
+operatorToken
 
 
 

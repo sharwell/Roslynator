@@ -25,7 +25,7 @@ public static RegionInfo RegionInfo(EndRegionDirectiveTriviaSyntax endRegionDire
 
 #### Parameters
 
-**endRegionDirective**
+endRegionDirective
 
 
 
@@ -45,7 +45,7 @@ public static RegionInfo RegionInfo(RegionDirectiveTriviaSyntax regionDirective)
 
 #### Parameters
 
-**regionDirective**
+regionDirective
 
 
 

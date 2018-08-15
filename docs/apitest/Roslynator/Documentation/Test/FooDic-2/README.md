@@ -19,13 +19,13 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
     where TValue : Foo
 ```
 
-### Parameters
+### Type Parameters
 
-**TKey**
+TKey
 
 
 
-**TValue**
+TValue
 
 
 

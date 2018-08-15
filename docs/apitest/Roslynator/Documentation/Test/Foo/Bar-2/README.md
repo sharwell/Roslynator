@@ -33,23 +33,23 @@ s **value** **T**
 public void Bar<T, T2>(string value, string value2)
 ```
 
+#### Type Parameters
+
+T
+
+doc for T1
+
+T2
+
+doc for T2
+
 #### Parameters
 
-**T**
+value
 
+doc for value
 
-
-**T2**
-
-
-
-#### Parameters
-
-**value**
-
-
-
-**value2**
+value2
 
 
 

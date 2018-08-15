@@ -16,11 +16,11 @@ public MemberDeclarationListInfo Insert(int index, MemberDeclarationSyntax membe
 
 ### Parameters
 
-**index**
+index
 
 
 
-**member**
+member
 
 
 

@@ -16,7 +16,7 @@ public static bool IsString(this ITypeSymbol typeSymbol)
 
 ### Parameters
 
-**typeSymbol**
+typeSymbol
 
 
 

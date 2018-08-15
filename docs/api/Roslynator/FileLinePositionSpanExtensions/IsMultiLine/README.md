@@ -16,7 +16,7 @@ public static bool IsMultiLine(this FileLinePositionSpan fileLinePositionSpan)
 
 ### Parameters
 
-**fileLinePositionSpan**
+fileLinePositionSpan
 
 
 

@@ -12,11 +12,11 @@ public static bool operator !=(in StatementListInfo info1, in StatementListInfo 
 
 ### Parameters
 
-**info1**
+info1
 
 
 
-**info2**
+info2
 
 
 

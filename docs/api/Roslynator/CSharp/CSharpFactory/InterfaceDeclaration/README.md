@@ -21,15 +21,15 @@ public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList mo
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**identifier**
+identifier
 
 
 
-**members**
+members
 
 
 
@@ -45,15 +45,15 @@ public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList mo
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**identifier**
+identifier
 
 
 
-**members**
+members
 
 
 

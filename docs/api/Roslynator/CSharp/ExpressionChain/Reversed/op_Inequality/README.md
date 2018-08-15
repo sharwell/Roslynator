@@ -12,11 +12,11 @@ public static bool operator !=(in ExpressionChain.Reversed reversed1, in Express
 
 ### Parameters
 
-**reversed1**
+reversed1
 
 
 
-**reversed2**
+reversed2
 
 
 

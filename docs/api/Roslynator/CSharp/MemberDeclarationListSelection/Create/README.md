@@ -26,11 +26,11 @@ public static MemberDeclarationListSelection Create(CompilationUnitSyntax compil
 
 #### Parameters
 
-**compilationUnit**
+compilationUnit
 
 
 
-**span**
+span
 
 
 
@@ -50,11 +50,11 @@ public static MemberDeclarationListSelection Create(NamespaceDeclarationSyntax n
 
 #### Parameters
 
-**namespaceDeclaration**
+namespaceDeclaration
 
 
 
-**span**
+span
 
 
 
@@ -74,11 +74,11 @@ public static MemberDeclarationListSelection Create(TypeDeclarationSyntax typeDe
 
 #### Parameters
 
-**typeDeclaration**
+typeDeclaration
 
 
 
-**span**
+span
 
 
 

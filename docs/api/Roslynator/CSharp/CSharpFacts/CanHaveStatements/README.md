@@ -16,7 +16,7 @@ public static bool CanHaveStatements(SyntaxKind kind)
 
 ### Parameters
 
-**kind**
+kind
 
 
 

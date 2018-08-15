@@ -16,7 +16,7 @@ public static bool IsBooleanExpression(SyntaxKind kind)
 
 ### Parameters
 
-**kind**
+kind
 
 
 

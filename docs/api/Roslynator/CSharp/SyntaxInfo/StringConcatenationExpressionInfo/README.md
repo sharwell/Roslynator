@@ -26,15 +26,15 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### Parameters
 
-**binaryExpression**
+binaryExpression
 
 
 
-**semanticModel**
+semanticModel
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 
@@ -54,15 +54,15 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### Parameters
 
-**expressionChain**
+expressionChain
 
 
 
-**semanticModel**
+semanticModel
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 
@@ -82,19 +82,19 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### Parameters
 
-**node**
+node
 
 
 
-**semanticModel**
+semanticModel
 
 
 
-**walkDownParentheses**
+walkDownParentheses
 
 
 
-**cancellationToken**
+cancellationToken
 
 
 

@@ -12,7 +12,7 @@ public static AccessorDeclarationSyntax AutoGetAccessorDeclaration(SyntaxTokenLi
 
 ### Parameters
 
-**modifiers**
+modifiers
 
 
 

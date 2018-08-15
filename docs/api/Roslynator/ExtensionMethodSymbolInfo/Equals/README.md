@@ -21,7 +21,7 @@ public bool Equals(ExtensionMethodSymbolInfo other)
 
 #### Parameters
 
-**other**
+other
 
 
 
@@ -41,7 +41,7 @@ public override bool Equals(object obj)
 
 #### Parameters
 
-**obj**
+obj
 
 
 

@@ -16,7 +16,7 @@ public static bool IsVoid(this ITypeSymbol typeSymbol)
 
 ### Parameters
 
-**typeSymbol**
+typeSymbol
 
 
 

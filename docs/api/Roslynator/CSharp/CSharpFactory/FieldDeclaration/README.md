@@ -23,19 +23,19 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**initializer**
+initializer
 
 
 
@@ -51,19 +51,19 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**value**
+value
 
 
 
@@ -79,19 +79,19 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**initializer**
+initializer
 
 
 
@@ -107,19 +107,19 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-**modifiers**
+modifiers
 
 
 
-**type**
+type
 
 
 
-**identifier**
+identifier
 
 
 
-**value**
+value
 
 
 

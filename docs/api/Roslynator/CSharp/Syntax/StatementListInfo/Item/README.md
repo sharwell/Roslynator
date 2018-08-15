@@ -16,9 +16,9 @@ public StatementSyntax this[int index] { get; }
 
 ### Parameters
 
-**index**
+index
 
-
+The zero\-based index of the statement to get\. 
 
 ### Property Value
 

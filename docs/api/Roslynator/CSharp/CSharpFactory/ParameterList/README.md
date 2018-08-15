@@ -21,7 +21,7 @@ public static ParameterListSyntax ParameterList(ParameterSyntax parameter)
 
 #### Parameters
 
-**parameter**
+parameter
 
 
 
@@ -37,7 +37,7 @@ public static ParameterListSyntax ParameterList(params ParameterSyntax[] paramet
 
 #### Parameters
 
-**parameters**
+parameters
 
 
 

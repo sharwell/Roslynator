@@ -26,7 +26,7 @@ public static AccessorDeclarationSyntax Getter(this AccessorListSyntax accessorL
 
 #### Parameters
 
-**accessorList**
+accessorList
 
 
 
@@ -46,7 +46,7 @@ public static AccessorDeclarationSyntax Getter(this IndexerDeclarationSyntax ind
 
 #### Parameters
 
-**indexerDeclaration**
+indexerDeclaration
 
 
 
@@ -66,7 +66,7 @@ public static AccessorDeclarationSyntax Getter(this PropertyDeclarationSyntax pr
 
 #### Parameters
 
-**propertyDeclaration**
+propertyDeclaration
 
 
 
