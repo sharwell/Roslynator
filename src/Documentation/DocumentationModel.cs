@@ -332,18 +332,18 @@ namespace Roslynator.Documentation
         private readonly struct SymbolDocumentationData
         {
             public SymbolDocumentationData(
-                SymbolDocumentationModel model,
+                object model,
                 SymbolXmlDocumentation xmlDocumentation)
             {
                 Model = model;
                 XmlDocumentation = xmlDocumentation;
             }
 
-            public SymbolDocumentationModel Model { get; }
+            public object Model { get; }
 
             public SymbolXmlDocumentation XmlDocumentation { get; }
 
-            public SymbolDocumentationData WithModel(SymbolDocumentationModel model)
+            public SymbolDocumentationData WithModel(object model)
             {
                 return new SymbolDocumentationData(model, XmlDocumentation);
             }

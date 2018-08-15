@@ -472,7 +472,7 @@ namespace Roslynator.Documentation
 
         private DocumentationGeneratorResult GenerateType(TypeDocumentationModel typeModel)
         {
-            INamedTypeSymbol typeSymbol = typeModel.TypeSymbol;
+            INamedTypeSymbol typeSymbol = typeModel.Symbol;
 
             ImmutableArray<INamedTypeSymbol> nestedTypes = default;
 

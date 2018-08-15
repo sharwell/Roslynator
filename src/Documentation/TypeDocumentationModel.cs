@@ -3,26 +3,31 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Diagnostics;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    public sealed class TypeDocumentationModel : SymbolDocumentationModel
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
+    public sealed class TypeDocumentationModel : IEquatable<TypeDocumentationModel>
     {
         private ImmutableArray<ISymbol> _members;
         private ImmutableArray<ISymbol> _membersIncludingInherited;
 
         internal TypeDocumentationModel(
             INamedTypeSymbol typeSymbol,
-            DocumentationModel documentationModel) : base(typeSymbol, documentationModel)
+            DocumentationModel documentationModel)
         {
-            TypeSymbol = typeSymbol;
+            Symbol = typeSymbol;
+            DocumentationModel = documentationModel;
         }
 
-        public INamedTypeSymbol TypeSymbol { get; }
+        public INamedTypeSymbol Symbol { get; }
 
-        public TypeKind TypeKind => TypeSymbol.TypeKind;
+        internal DocumentationModel DocumentationModel { get; }
+
+        public TypeKind TypeKind => Symbol.TypeKind;
 
         internal ImmutableArray<ISymbol> Members
         {
@@ -30,7 +35,7 @@ namespace Roslynator.Documentation
             {
                 if (_members.IsDefault)
                 {
-                    _members = TypeSymbol.GetMembers(f => DocumentationModel.IsVisible(f));
+                    _members = Symbol.GetMembers(f => DocumentationModel.IsVisible(f));
                 }
 
                 return _members;
@@ -49,7 +54,7 @@ namespace Roslynator.Documentation
                     }
                     else
                     {
-                        _membersIncludingInherited = TypeSymbol.GetMembers(f => DocumentationModel.IsVisible(f), includeInherited: true);
+                        _membersIncludingInherited = Symbol.GetMembers(f => DocumentationModel.IsVisible(f), includeInherited: true);
                     }
                 }
 
@@ -164,7 +169,7 @@ namespace Roslynator.Documentation
             if (TypeKind.Is(TypeKind.Delegate, TypeKind.Enum))
                 yield break;
 
-            foreach (ISymbol member in TypeSymbol.GetMembers())
+            foreach (ISymbol member in Symbol.GetMembers())
             {
                 switch (member.Kind)
                 {
@@ -218,17 +223,17 @@ namespace Roslynator.Documentation
 
         public IEnumerable<IMethodSymbol> GetExtensionMethods()
         {
-            return DocumentationModel.GetExtensionMethods(TypeSymbol);
+            return DocumentationModel.GetExtensionMethods(Symbol);
         }
 
         public IEnumerable<INamedTypeSymbol> GetDerivedTypes()
         {
             if (TypeKind.Is(TypeKind.Class, TypeKind.Interface)
-                && !TypeSymbol.IsStatic)
+                && !Symbol.IsStatic)
             {
                 foreach (INamedTypeSymbol typeSymbol in DocumentationModel.TypeSymbols)
                 {
-                    if (typeSymbol.InheritsFrom(TypeSymbol, includeInterfaces: true))
+                    if (typeSymbol.InheritsFrom(Symbol, includeInterfaces: true))
                         yield return typeSymbol;
                 }
             }
@@ -236,10 +241,10 @@ namespace Roslynator.Documentation
 
         public IEnumerable<INamedTypeSymbol> GetImplementedInterfaces(bool omitIEnumerable = false)
         {
-            if (!TypeSymbol.IsStatic
-                && !TypeSymbol.TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
+            if (!Symbol.IsStatic
+                && !Symbol.TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
             {
-                ImmutableArray<INamedTypeSymbol> allInterfaces = TypeSymbol.AllInterfaces;
+                ImmutableArray<INamedTypeSymbol> allInterfaces = Symbol.AllInterfaces;
 
                 if (omitIEnumerable
                     && allInterfaces.Any(f => f.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IEnumerable_T))
@@ -321,6 +326,28 @@ namespace Roslynator.Documentation
                     yield return new MemberDocumentationModel(symbol, symbolsWithName, DocumentationModel);
                 }
             }
+        }
+
+        public bool Equals(TypeDocumentationModel other)
+        {
+            return Symbol.Equals(other);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is TypeDocumentationModel other
+                && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return Symbol.GetHashCode();
+        }
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private string DebuggerDisplay
+        {
+            get { return $"{Symbol.Kind} {Symbol.ToDisplayString(Roslynator.SymbolDisplayFormats.Test)}"; }
         }
     }
 }

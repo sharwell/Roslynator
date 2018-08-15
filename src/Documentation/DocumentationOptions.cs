@@ -2,6 +2,7 @@
 
 namespace Roslynator.Documentation
 {
+    //TODO: AddFootNote
     public class DocumentationOptions
     {
         public DocumentationOptions(
