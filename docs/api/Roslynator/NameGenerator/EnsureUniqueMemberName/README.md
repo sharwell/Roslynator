@@ -21,11 +21,17 @@ public string EnsureUniqueMemberName(string baseName, INamedTypeSymbol typeSymbo
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| baseName | |
-| typeSymbol | |
-| isCaseSensitive | |
+**baseName**
+
+
+
+**typeSymbol**
+
+
+
+**isCaseSensitive**
+
+
 
 #### Returns
 
@@ -43,13 +49,25 @@ public string EnsureUniqueMemberName(string baseName, SemanticModel semanticMode
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| baseName | |
-| semanticModel | |
-| position | |
-| isCaseSensitive | |
-| cancellationToken | |
+**baseName**
+
+
+
+**semanticModel**
+
+
+
+**position**
+
+
+
+**isCaseSensitive**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 

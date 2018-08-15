@@ -12,9 +12,9 @@ public bool Remove(Foo item)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| item | |
+**item**
+
+
 
 ### Returns
 

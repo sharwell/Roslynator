@@ -12,10 +12,13 @@ public static bool operator ==(in RegionInfo info1, in RegionInfo info2)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

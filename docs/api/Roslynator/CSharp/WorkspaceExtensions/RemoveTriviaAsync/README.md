@@ -16,11 +16,17 @@ public static Task<Document> RemoveTriviaAsync(this Document document, TextSpan 
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| document | |
-| span | |
-| cancellationToken | |
+**document**
+
+
+
+**span**
+
+
+
+**cancellationToken**
+
+
 
 ### Returns
 

@@ -38,11 +38,17 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
 
 #### Returns
 
@@ -60,12 +66,21 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
 
 #### Returns
 
@@ -83,13 +98,25 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
 
 #### Returns
 
@@ -107,14 +134,29 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
 
 #### Returns
 
@@ -132,15 +174,33 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
-| kind6 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
+
+**kind6**
+
+
 
 #### Returns
 
@@ -158,11 +218,17 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
 
 #### Returns
 
@@ -180,12 +246,21 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
 
 #### Returns
 
@@ -203,13 +278,25 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
 
 #### Returns
 
@@ -227,14 +314,29 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
 
 #### Returns
 
@@ -252,15 +354,33 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
-| kind6 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
+
+**kind6**
+
+
 
 #### Returns
 
@@ -278,11 +398,17 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| trivia | |
-| kind1 | |
-| kind2 | |
+**trivia**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
 
 #### Returns
 
@@ -300,12 +426,21 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| trivia | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
+**trivia**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
 
 #### Returns
 
@@ -323,13 +458,25 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| trivia | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
+**trivia**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
 
 #### Returns
 
@@ -347,14 +494,29 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| trivia | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
+**trivia**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
 
 #### Returns
 
@@ -372,15 +534,33 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| trivia | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
-| kind6 | |
+**trivia**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
+
+**kind6**
+
+
 
 #### Returns
 

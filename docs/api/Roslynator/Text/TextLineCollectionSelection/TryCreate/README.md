@@ -16,11 +16,17 @@ public static bool TryCreate(TextLineCollection lines, TextSpan span, out TextLi
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| lines | |
-| span | |
-| selectedLines | |
+**lines**
+
+
+
+**span**
+
+
+
+**selectedLines**
+
+
 
 ### Returns
 

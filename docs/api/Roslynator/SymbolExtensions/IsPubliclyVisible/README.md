@@ -16,9 +16,9 @@ public static bool IsPubliclyVisible(this ISymbol symbol)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| symbol | |
+**symbol**
+
+
 
 ### Returns
 

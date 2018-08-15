@@ -16,9 +16,9 @@ public static bool IsObject(this ITypeSymbol typeSymbol)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
+**typeSymbol**
+
+
 
 ### Returns
 

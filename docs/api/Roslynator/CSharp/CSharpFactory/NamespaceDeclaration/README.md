@@ -21,10 +21,13 @@ public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, M
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| name | |
-| member | |
+**name**
+
+
+
+**member**
+
+
 
 #### Returns
 
@@ -38,10 +41,13 @@ public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, S
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| name | |
-| members | |
+**name**
+
+
+
+**members**
+
+
 
 #### Returns
 

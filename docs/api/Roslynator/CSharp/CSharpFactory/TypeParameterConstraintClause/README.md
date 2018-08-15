@@ -21,10 +21,13 @@ public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| identifierName | |
-| typeParameterConstraint | |
+**identifierName**
+
+
+
+**typeParameterConstraint**
+
+
 
 #### Returns
 
@@ -38,10 +41,13 @@ public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| name | |
-| typeParameterConstraint | |
+**name**
+
+
+
+**typeParameterConstraint**
+
+
 
 #### Returns
 

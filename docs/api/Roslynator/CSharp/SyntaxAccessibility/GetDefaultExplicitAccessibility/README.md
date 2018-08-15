@@ -42,9 +42,9 @@ public static Accessibility GetDefaultExplicitAccessibility(BaseTypeDeclarationS
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| baseTypeDeclaration | |
+**baseTypeDeclaration**
+
+
 
 #### Returns
 
@@ -62,9 +62,9 @@ public static Accessibility GetDefaultExplicitAccessibility(ClassDeclarationSynt
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| classDeclaration | |
+**classDeclaration**
+
+
 
 #### Returns
 
@@ -82,9 +82,9 @@ public static Accessibility GetDefaultExplicitAccessibility(ConstructorDeclarati
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| constructorDeclaration | |
+**constructorDeclaration**
+
+
 
 #### Returns
 
@@ -102,9 +102,9 @@ public static Accessibility GetDefaultExplicitAccessibility(ConversionOperatorDe
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| conversionOperatorDeclaration | |
+**conversionOperatorDeclaration**
+
+
 
 #### Returns
 
@@ -122,9 +122,9 @@ public static Accessibility GetDefaultExplicitAccessibility(DelegateDeclarationS
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| delegateDeclaration | |
+**delegateDeclaration**
+
+
 
 #### Returns
 
@@ -142,9 +142,9 @@ public static Accessibility GetDefaultExplicitAccessibility(DestructorDeclaratio
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| destructorDeclaration | |
+**destructorDeclaration**
+
+
 
 #### Returns
 
@@ -162,9 +162,9 @@ public static Accessibility GetDefaultExplicitAccessibility(EnumDeclarationSynta
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| enumDeclaration | |
+**enumDeclaration**
+
+
 
 #### Returns
 
@@ -182,9 +182,9 @@ public static Accessibility GetDefaultExplicitAccessibility(EnumMemberDeclaratio
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| enumMemberDeclaration | |
+**enumMemberDeclaration**
+
+
 
 #### Returns
 
@@ -202,9 +202,9 @@ public static Accessibility GetDefaultExplicitAccessibility(EventDeclarationSynt
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| eventDeclaration | |
+**eventDeclaration**
+
+
 
 #### Returns
 
@@ -222,9 +222,9 @@ public static Accessibility GetDefaultExplicitAccessibility(EventFieldDeclaratio
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| eventFieldDeclaration | |
+**eventFieldDeclaration**
+
+
 
 #### Returns
 
@@ -242,9 +242,9 @@ public static Accessibility GetDefaultExplicitAccessibility(FieldDeclarationSynt
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldDeclaration | |
+**fieldDeclaration**
+
+
 
 #### Returns
 
@@ -262,9 +262,9 @@ public static Accessibility GetDefaultExplicitAccessibility(IndexerDeclarationSy
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| indexerDeclaration | |
+**indexerDeclaration**
+
+
 
 #### Returns
 
@@ -282,9 +282,9 @@ public static Accessibility GetDefaultExplicitAccessibility(InterfaceDeclaration
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| interfaceDeclaration | |
+**interfaceDeclaration**
+
+
 
 #### Returns
 
@@ -302,9 +302,9 @@ public static Accessibility GetDefaultExplicitAccessibility(MemberDeclarationSyn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| declaration | |
+**declaration**
+
+
 
 #### Returns
 
@@ -322,9 +322,9 @@ public static Accessibility GetDefaultExplicitAccessibility(MethodDeclarationSyn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| methodDeclaration | |
+**methodDeclaration**
+
+
 
 #### Returns
 
@@ -342,9 +342,9 @@ public static Accessibility GetDefaultExplicitAccessibility(NamespaceDeclaration
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namespaceDeclaration | |
+**namespaceDeclaration**
+
+
 
 #### Returns
 
@@ -362,9 +362,9 @@ public static Accessibility GetDefaultExplicitAccessibility(OperatorDeclarationS
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| operatorDeclaration | |
+**operatorDeclaration**
+
+
 
 #### Returns
 
@@ -382,9 +382,9 @@ public static Accessibility GetDefaultExplicitAccessibility(PropertyDeclarationS
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| propertyDeclaration | |
+**propertyDeclaration**
+
+
 
 #### Returns
 
@@ -402,9 +402,9 @@ public static Accessibility GetDefaultExplicitAccessibility(StructDeclarationSyn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| structDeclaration | |
+**structDeclaration**
+
+
 
 #### Returns
 

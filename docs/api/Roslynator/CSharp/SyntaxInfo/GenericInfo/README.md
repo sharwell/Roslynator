@@ -32,9 +32,9 @@ public static GenericInfo GenericInfo(DelegateDeclarationSyntax delegateDeclarat
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| delegateDeclaration | |
+**delegateDeclaration**
+
+
 
 #### Returns
 
@@ -52,9 +52,9 @@ public static GenericInfo GenericInfo(LocalFunctionStatementSyntax localFunction
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| localFunctionStatement | |
+**localFunctionStatement**
+
+
 
 #### Returns
 
@@ -72,9 +72,9 @@ public static GenericInfo GenericInfo(MethodDeclarationSyntax methodDeclaration)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| methodDeclaration | |
+**methodDeclaration**
+
+
 
 #### Returns
 
@@ -92,9 +92,9 @@ public static GenericInfo GenericInfo(SyntaxNode node)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
+**node**
+
+
 
 #### Returns
 
@@ -112,9 +112,9 @@ public static GenericInfo GenericInfo(TypeDeclarationSyntax typeDeclaration)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeDeclaration | |
+**typeDeclaration**
+
+
 
 #### Returns
 
@@ -132,9 +132,9 @@ public static GenericInfo GenericInfo(TypeParameterConstraintClauseSyntax constr
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| constraintClause | |
+**constraintClause**
+
+
 
 #### Returns
 
@@ -152,9 +152,9 @@ public static GenericInfo GenericInfo(TypeParameterConstraintSyntax typeParamete
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeParameterConstraint | |
+**typeParameterConstraint**
+
+
 
 #### Returns
 
@@ -172,9 +172,9 @@ public static GenericInfo GenericInfo(TypeParameterListSyntax typeParameterList)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeParameterList | |
+**typeParameterList**
+
+
 
 #### Returns
 
@@ -192,9 +192,9 @@ public static GenericInfo GenericInfo(TypeParameterSyntax typeParameter)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeParameter | |
+**typeParameter**
+
+
 
 #### Returns
 

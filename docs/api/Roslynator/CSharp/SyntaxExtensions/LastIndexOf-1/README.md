@@ -26,10 +26,13 @@ public static int LastIndexOf(this SyntaxTriviaList triviaList, SyntaxKind kind)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| triviaList | |
-| kind | |
+**triviaList**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -45,18 +48,21 @@ Searches for a node of the specified kind and returns the zero\-based index of t
 public static int LastIndexOf<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| kind | |
+**list**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -72,18 +78,21 @@ Searches for a node of the specified kind and returns the zero\-based index of t
 public static int LastIndexOf<TNode>(this SyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| kind | |
+**list**
+
+
+
+**kind**
+
+
 
 #### Returns
 

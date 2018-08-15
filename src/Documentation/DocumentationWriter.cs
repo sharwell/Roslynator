@@ -406,8 +406,27 @@ namespace Roslynator.Documentation
         {
             ImmutableArray<ITypeParameterSymbol> typeParameters = symbol.GetTypeParameters();
 
-            if (typeParameters.Any())
-                WriteTable(typeParameters, Resources.TypeParametersTitle, 3, Resources.NameTitle, Resources.SummaryTitle, SymbolDisplayFormats.TypeName);
+            ImmutableArray<ITypeParameterSymbol>.Enumerator en = symbol.GetTypeParameters().GetEnumerator();
+
+            if (en.MoveNext())
+            {
+                WriteHeading(3, Resources.ParametersTitle);
+
+                do
+                {
+                    WriteBold(en.Current.Name);
+                    WriteLine();
+                    WriteLine();
+                    GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", symbol.Name)?.WriteContentTo(this);
+                    WriteLine();
+                    WriteLine();
+                }
+                while (en.MoveNext());
+            }
+
+            //TODO: del
+            //if (typeParameters.Any())
+            //    WriteTable(typeParameters, Resources.TypeParametersTitle, 3, Resources.NameTitle, Resources.SummaryTitle, SymbolDisplayFormats.TypeName);
         }
 
         public virtual void WriteParameters(ISymbol symbol)
@@ -418,13 +437,15 @@ namespace Roslynator.Documentation
                     {
                         var methodSymbol = (IMethodSymbol)symbol;
 
-                        WriteTable(
-                            methodSymbol.Parameters,
-                            Resources.ParametersTitle,
-                            3,
-                            Resources.NameTitle,
-                            Resources.SummaryTitle,
-                            SymbolDisplayFormats.TypeName);
+                        WriteParameters(methodSymbol.Parameters);
+
+                        //WriteTable(
+                        //    methodSymbol.Parameters,
+                        //    Resources.ParametersTitle,
+                        //    3,
+                        //    Resources.NameTitle,
+                        //    Resources.SummaryTitle,
+                        //    SymbolDisplayFormats.TypeName);
 
                         break;
                     }
@@ -436,13 +457,15 @@ namespace Roslynator.Documentation
 
                         if (methodSymbol != null)
                         {
-                            WriteTable(
-                                methodSymbol.Parameters,
-                                Resources.ParametersTitle,
-                                3,
-                                Resources.NameTitle,
-                                Resources.SummaryTitle,
-                                SymbolDisplayFormats.TypeName);
+                            WriteParameters(methodSymbol.Parameters);
+
+                            //WriteTable(
+                            //    methodSymbol.Parameters,
+                            //    Resources.ParametersTitle,
+                            //    3,
+                            //    Resources.NameTitle,
+                            //    Resources.SummaryTitle,
+                            //    SymbolDisplayFormats.TypeName);
                         }
 
                         break;
@@ -451,16 +474,39 @@ namespace Roslynator.Documentation
                     {
                         var propertySymbol = (IPropertySymbol)symbol;
 
-                        WriteTable(
-                            propertySymbol.Parameters,
-                            Resources.ParametersTitle,
-                            3,
-                            Resources.NameTitle,
-                            Resources.SummaryTitle,
-                            SymbolDisplayFormats.TypeName);
+                        WriteParameters(propertySymbol.Parameters);
+
+                        //WriteTable(
+                        //    propertySymbol.Parameters,
+                        //    Resources.ParametersTitle,
+                        //    3,
+                        //    Resources.NameTitle,
+                        //    Resources.SummaryTitle,
+                        //    SymbolDisplayFormats.TypeName);
 
                         break;
                     }
+            }
+
+            void WriteParameters(ImmutableArray<IParameterSymbol> parameters)
+            {
+                ImmutableArray<IParameterSymbol>.Enumerator en = parameters.GetEnumerator();
+
+                if (en.MoveNext())
+                {
+                    WriteHeading(3, Resources.ParametersTitle);
+
+                    do
+                    {
+                        WriteBold(en.Current.Name);
+                        WriteLine();
+                        WriteLine();
+                        GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", symbol.Name)?.WriteContentTo(this);
+                        WriteLine();
+                        WriteLine();
+                    }
+                    while (en.MoveNext());
+                }
             }
         }
 

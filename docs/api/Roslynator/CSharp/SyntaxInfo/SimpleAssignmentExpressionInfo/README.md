@@ -25,11 +25,17 @@ public static SimpleAssignmentExpressionInfo SimpleAssignmentExpressionInfo(Assi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| assignmentExpression | |
-| walkDownParentheses | |
-| allowMissing | |
+**assignmentExpression**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 
@@ -47,11 +53,17 @@ public static SimpleAssignmentExpressionInfo SimpleAssignmentExpressionInfo(Synt
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| walkDownParentheses | |
-| allowMissing | |
+**node**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 

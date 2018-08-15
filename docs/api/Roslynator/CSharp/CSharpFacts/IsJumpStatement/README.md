@@ -16,9 +16,9 @@ public static bool IsJumpStatement(SyntaxKind kind)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| kind | |
+**kind**
+
+
 
 ### Returns
 

@@ -25,10 +25,13 @@ public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpress
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| invocationExpression | |
-| allowMissing | |
+**invocationExpression**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 
@@ -46,11 +49,17 @@ public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpress
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| walkDownParentheses | |
-| allowMissing | |
+**node**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 

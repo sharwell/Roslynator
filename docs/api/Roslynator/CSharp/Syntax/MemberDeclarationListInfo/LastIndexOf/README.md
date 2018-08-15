@@ -25,9 +25,9 @@ public int LastIndexOf(Func<MemberDeclarationSyntax, bool> predicate)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| predicate | |
+**predicate**
+
+
 
 #### Returns
 
@@ -45,9 +45,9 @@ public int LastIndexOf(MemberDeclarationSyntax member)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| member | |
+**member**
+
+
 
 #### Returns
 

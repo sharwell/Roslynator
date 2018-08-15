@@ -16,10 +16,13 @@ public static bool IsMoreRestrictiveThan(this Accessibility accessibility, Acces
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| accessibility | |
-| other | |
+**accessibility**
+
+
+
+**other**
+
+
 
 ### Returns
 

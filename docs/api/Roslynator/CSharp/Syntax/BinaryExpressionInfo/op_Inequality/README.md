@@ -12,10 +12,13 @@ public static bool operator !=(in BinaryExpressionInfo info1, in BinaryExpressio
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

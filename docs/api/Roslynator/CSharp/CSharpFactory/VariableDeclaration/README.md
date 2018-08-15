@@ -23,11 +23,17 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, str
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| type | |
-| identifier | |
-| value | |
+**type**
+
+
+
+**identifier**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -41,11 +47,17 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Syn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| type | |
-| identifier | |
-| initializer | |
+**type**
+
+
+
+**identifier**
+
+
+
+**initializer**
+
+
 
 #### Returns
 
@@ -59,11 +71,17 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Syn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| type | |
-| identifier | |
-| value | |
+**type**
+
+
+
+**identifier**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -77,10 +95,13 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Var
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| type | |
-| variable | |
+**type**
+
+
+
+**variable**
+
+
 
 #### Returns
 

@@ -21,10 +21,13 @@ public static BinaryExpressionSyntax DivideExpression(ExpressionSyntax left, Exp
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| left | |
-| right | |
+**left**
+
+
+
+**right**
+
+
 
 #### Returns
 
@@ -38,11 +41,17 @@ public static BinaryExpressionSyntax DivideExpression(ExpressionSyntax left, Syn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| left | |
-| operatorToken | |
-| right | |
+**left**
+
+
+
+**operatorToken**
+
+
+
+**right**
+
+
 
 #### Returns
 

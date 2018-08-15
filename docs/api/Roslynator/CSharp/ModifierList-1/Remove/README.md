@@ -25,10 +25,13 @@ public TNode Remove(TNode node, SyntaxKind kind)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind | |
+**node**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -46,10 +49,13 @@ public TNode Remove(TNode node, SyntaxToken modifier)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| modifier | |
+**node**
+
+
+
+**modifier**
+
+
 
 #### Returns
 

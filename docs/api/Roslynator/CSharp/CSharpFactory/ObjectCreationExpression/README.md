@@ -12,10 +12,13 @@ public static ObjectCreationExpressionSyntax ObjectCreationExpression(TypeSyntax
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| type | |
-| argumentList | |
+**type**
+
+
+
+**argumentList**
+
+
 
 ### Returns
 

@@ -21,9 +21,9 @@ public static AccessorListSyntax AccessorList(AccessorDeclarationSyntax accessor
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| accessor | |
+**accessor**
+
+
 
 #### Returns
 
@@ -37,9 +37,9 @@ public static AccessorListSyntax AccessorList(params AccessorDeclarationSyntax[]
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| accessors | |
+**accessors**
+
+
 
 #### Returns
 

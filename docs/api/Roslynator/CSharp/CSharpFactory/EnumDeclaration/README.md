@@ -12,11 +12,17 @@ public static EnumDeclarationSyntax EnumDeclaration(SyntaxTokenList modifiers, S
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| identifier | |
-| members | |
+**modifiers**
+
+
+
+**identifier**
+
+
+
+**members**
+
+
 
 ### Returns
 

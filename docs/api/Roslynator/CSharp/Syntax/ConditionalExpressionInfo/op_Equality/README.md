@@ -12,10 +12,13 @@ public static bool operator ==(in ConditionalExpressionInfo info1, in Conditiona
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

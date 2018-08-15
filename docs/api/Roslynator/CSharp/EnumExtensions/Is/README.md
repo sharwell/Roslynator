@@ -28,11 +28,17 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| kind | |
-| kind1 | |
-| kind2 | |
+**kind**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
 
 #### Returns
 
@@ -50,12 +56,21 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| kind | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
+**kind**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
 
 #### Returns
 
@@ -73,13 +88,25 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| kind | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
+**kind**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
 
 #### Returns
 
@@ -97,14 +124,29 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| kind | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
+**kind**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
 
 #### Returns
 
@@ -122,15 +164,33 @@ public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, 
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| kind | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
-| kind6 | |
+**kind**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
+
+**kind6**
+
+
 
 #### Returns
 

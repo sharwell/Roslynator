@@ -16,9 +16,9 @@ public static SyntaxTriviaList LeadingAndTrailingTrivia(this SyntaxToken token)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
+**token**
+
+
 
 ### Returns
 

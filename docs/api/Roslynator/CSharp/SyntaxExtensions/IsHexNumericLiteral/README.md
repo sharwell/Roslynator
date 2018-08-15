@@ -16,9 +16,9 @@ public static bool IsHexNumericLiteral(this LiteralExpressionSyntax literalExpre
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| literalExpression | |
+**literalExpression**
+
+
 
 ### Returns
 

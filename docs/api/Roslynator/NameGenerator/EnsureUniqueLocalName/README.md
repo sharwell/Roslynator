@@ -16,13 +16,25 @@ public string EnsureUniqueLocalName(string baseName, SemanticModel semanticModel
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| baseName | |
-| semanticModel | |
-| position | |
-| isCaseSensitive | |
-| cancellationToken | |
+**baseName**
+
+
+
+**semanticModel**
+
+
+
+**position**
+
+
+
+**isCaseSensitive**
+
+
+
+**cancellationToken**
+
+
 
 ### Returns
 

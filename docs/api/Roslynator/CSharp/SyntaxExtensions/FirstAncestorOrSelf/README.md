@@ -27,11 +27,17 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, Func<SyntaxNo
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| predicate | |
-| ascendOutOfTrivia | |
+**node**
+
+
+
+**predicate**
+
+
+
+**ascendOutOfTrivia**
+
+
 
 #### Returns
 
@@ -49,11 +55,17 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind ki
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind | |
-| ascendOutOfTrivia | |
+**node**
+
+
+
+**kind**
+
+
+
+**ascendOutOfTrivia**
+
+
 
 #### Returns
 
@@ -71,12 +83,21 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind ki
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| ascendOutOfTrivia | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**ascendOutOfTrivia**
+
+
 
 #### Returns
 
@@ -94,13 +115,25 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind ki
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| ascendOutOfTrivia | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**ascendOutOfTrivia**
+
+
 
 #### Returns
 

@@ -12,9 +12,9 @@ public static LiteralExpressionSyntax BooleanLiteralExpression(bool value)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| value | |
+**value**
+
+
 
 ### Returns
 

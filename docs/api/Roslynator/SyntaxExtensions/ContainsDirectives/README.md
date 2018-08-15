@@ -16,10 +16,13 @@ public static bool ContainsDirectives(this SyntaxNode node, TextSpan span)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| span | |
+**node**
+
+
+
+**span**
+
+
 
 ### Returns
 

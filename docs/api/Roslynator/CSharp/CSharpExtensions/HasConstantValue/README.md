@@ -16,11 +16,17 @@ public static bool HasConstantValue(this SemanticModel semanticModel, Expression
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semanticModel | |
-| expression | |
-| cancellationToken | |
+**semanticModel**
+
+
+
+**expression**
+
+
+
+**cancellationToken**
+
+
 
 ### Returns
 

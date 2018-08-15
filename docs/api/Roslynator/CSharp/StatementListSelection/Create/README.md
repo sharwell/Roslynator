@@ -26,10 +26,13 @@ public static StatementListSelection Create(BlockSyntax block, TextSpan span)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| block | |
-| span | |
+**block**
+
+
+
+**span**
+
+
 
 #### Returns
 
@@ -47,10 +50,13 @@ public static StatementListSelection Create(in StatementListInfo statementsInfo,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statementsInfo | |
-| span | |
+**statementsInfo**
+
+
+
+**span**
+
+
 
 #### Returns
 
@@ -68,10 +74,13 @@ public static StatementListSelection Create(SwitchSectionSyntax switchSection, T
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| switchSection | |
-| span | |
+**switchSection**
+
+
+
+**span**
+
+
 
 #### Returns
 

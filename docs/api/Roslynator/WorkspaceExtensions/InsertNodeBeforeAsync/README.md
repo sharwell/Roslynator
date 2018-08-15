@@ -16,12 +16,21 @@ public static Task<Document> InsertNodeBeforeAsync(this Document document, Synta
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| document | |
-| nodeInList | |
-| newNode | |
-| cancellationToken | |
+**document**
+
+
+
+**nodeInList**
+
+
+
+**newNode**
+
+
+
+**cancellationToken**
+
+
 
 ### Returns
 

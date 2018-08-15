@@ -16,11 +16,17 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, SyntaxNode nod
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semanticModel | |
-| node | |
-| cancellationToken | |
+**semanticModel**
+
+
+
+**node**
+
+
+
+**cancellationToken**
+
+
 
 ### Returns
 

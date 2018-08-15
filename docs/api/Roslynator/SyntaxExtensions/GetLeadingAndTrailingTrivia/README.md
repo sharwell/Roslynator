@@ -16,9 +16,9 @@ public static SyntaxTriviaList GetLeadingAndTrailingTrivia(this SyntaxNode node)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
+**node**
+
+
 
 ### Returns
 

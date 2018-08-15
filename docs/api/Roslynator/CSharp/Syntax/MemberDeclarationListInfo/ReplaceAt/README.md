@@ -16,10 +16,13 @@ public MemberDeclarationListInfo ReplaceAt(int index, MemberDeclarationSyntax ne
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
-| newMember | |
+**index**
+
+
+
+**newMember**
+
+
 
 ### Returns
 

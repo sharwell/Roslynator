@@ -16,10 +16,13 @@ public StatementListInfo Replace(StatementSyntax statementInList, StatementSynta
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statementInList | |
-| newStatement | |
+**statementInList**
+
+
+
+**newStatement**
+
+
 
 ### Returns
 

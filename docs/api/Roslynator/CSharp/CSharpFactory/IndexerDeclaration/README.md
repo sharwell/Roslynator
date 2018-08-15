@@ -21,12 +21,21 @@ public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| parameterList | |
-| accessorList | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**parameterList**
+
+
+
+**accessorList**
+
+
 
 #### Returns
 
@@ -40,12 +49,21 @@ public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| parameterList | |
-| expressionBody | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**parameterList**
+
+
+
+**expressionBody**
+
+
 
 #### Returns
 

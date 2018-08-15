@@ -25,9 +25,9 @@ public override bool Equals(object obj)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| obj | The object to compare with the current instance\.  |
+**obj**
+
+
 
 #### Returns
 
@@ -47,9 +47,9 @@ public bool Equals(XmlElementInfo other)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| other | An object to compare with this object\. |
+**other**
+
+
 
 #### Returns
 

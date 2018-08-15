@@ -21,9 +21,9 @@ public static BracketedParameterListSyntax BracketedParameterList(ParameterSynta
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| parameter | |
+**parameter**
+
+
 
 #### Returns
 
@@ -37,9 +37,9 @@ public static BracketedParameterListSyntax BracketedParameterList(params Paramet
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| parameters | |
+**parameters**
+
+
 
 #### Returns
 

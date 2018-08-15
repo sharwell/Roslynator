@@ -12,10 +12,13 @@ public static AttributeSyntax Attribute(NameSyntax name, AttributeArgumentSyntax
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| name | |
-| argument | |
+**name**
+
+
+
+**argument**
+
+
 
 ### Returns
 

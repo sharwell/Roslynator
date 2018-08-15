@@ -16,9 +16,9 @@ public static bool IsNullableType(this ITypeSymbol typeSymbol)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
+**typeSymbol**
+
+
 
 ### Returns
 

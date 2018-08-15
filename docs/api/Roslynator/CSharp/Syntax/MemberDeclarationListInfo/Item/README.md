@@ -16,9 +16,9 @@ public MemberDeclarationSyntax this[int index] { get; }
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | The zero\-based index of the member to get\.  |
+**index**
+
+
 
 ### Property Value
 

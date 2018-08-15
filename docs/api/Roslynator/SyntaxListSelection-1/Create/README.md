@@ -16,10 +16,13 @@ public static SyntaxListSelection<TNode> Create(SyntaxList<TNode> list, TextSpan
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| span | |
+**list**
+
+
+
+**span**
+
+
 
 ### Returns
 

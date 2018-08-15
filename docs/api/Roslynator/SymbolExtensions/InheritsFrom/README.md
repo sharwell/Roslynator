@@ -16,11 +16,17 @@ public static bool InheritsFrom(this ITypeSymbol type, ITypeSymbol baseType, boo
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| type | |
-| baseType | |
-| includeInterfaces | |
+**type**
+
+
+
+**baseType**
+
+
+
+**includeInterfaces**
+
+
 
 ### Returns
 

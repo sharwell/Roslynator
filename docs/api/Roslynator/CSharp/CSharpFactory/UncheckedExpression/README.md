@@ -21,9 +21,9 @@ public static CheckedExpressionSyntax UncheckedExpression(ExpressionSyntax expre
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expression | |
+**expression**
+
+
 
 #### Returns
 
@@ -37,11 +37,17 @@ public static CheckedExpressionSyntax UncheckedExpression(SyntaxToken openParenT
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| openParenToken | |
-| expression | |
-| closeParenToken | |
+**openParenToken**
+
+
+
+**expression**
+
+
+
+**closeParenToken**
+
+
 
 #### Returns
 

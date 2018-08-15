@@ -16,10 +16,13 @@ public MemberDeclarationListInfo Replace(MemberDeclarationSyntax memberInList, M
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| memberInList | |
-| newMember | |
+**memberInList**
+
+
+
+**newMember**
+
+
 
 ### Returns
 

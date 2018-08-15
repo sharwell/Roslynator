@@ -16,9 +16,9 @@ public StatementListInfo Remove(StatementSyntax statement)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statement | |
+**statement**
+
+
 
 ### Returns
 

@@ -22,11 +22,17 @@ public static ParameterSyntax Parameter(TypeSyntax type, string identifier, Expr
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| type | |
-| identifier | |
-| default | |
+**type**
+
+
+
+**identifier**
+
+
+
+**default**
+
+
 
 #### Returns
 
@@ -40,11 +46,17 @@ public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| type | |
-| identifier | |
-| default | |
+**type**
+
+
+
+**identifier**
+
+
+
+**default**
+
+
 
 #### Returns
 
@@ -58,11 +70,17 @@ public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| type | |
-| identifier | |
-| default | |
+**type**
+
+
+
+**identifier**
+
+
+
+**default**
+
+
 
 #### Returns
 

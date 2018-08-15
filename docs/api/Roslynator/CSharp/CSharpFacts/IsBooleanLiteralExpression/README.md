@@ -16,9 +16,9 @@ public static bool IsBooleanLiteralExpression(SyntaxKind kind)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| kind | |
+**kind**
+
+
 
 ### Returns
 

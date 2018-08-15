@@ -25,11 +25,17 @@ public static Task<Document> RemovePreprocessorDirectivesAsync(this Document doc
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| document | |
-| directiveKinds | |
-| cancellationToken | |
+**document**
+
+
+
+**directiveKinds**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 
@@ -47,12 +53,21 @@ public static Task<Document> RemovePreprocessorDirectivesAsync(this Document doc
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| document | |
-| span | |
-| directiveKinds | |
-| cancellationToken | |
+**document**
+
+
+
+**span**
+
+
+
+**directiveKinds**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 

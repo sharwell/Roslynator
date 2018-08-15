@@ -58,7 +58,7 @@ namespace Roslynator.Documentation.Test
         public Foo this[int index] { get; set; }
 
         public void Bar();
-        public void Bar<T>(string value, string value2);
+        public void Bar<T, T2>(string value, string value2);
         public void Bar2();
         public void WriteString(char* pSrcStart, char* pSrcEnd);
     }

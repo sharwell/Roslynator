@@ -12,9 +12,9 @@ public static LiteralExpressionSyntax CharacterLiteralExpression(char value)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| value | |
+**value**
+
+
 
 ### Returns
 

@@ -25,11 +25,17 @@ public static Task<Document> RemoveCommentsAsync(this Document document, Comment
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| document | |
-| kinds | |
-| cancellationToken | |
+**document**
+
+
+
+**kinds**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 
@@ -47,12 +53,21 @@ public static Task<Document> RemoveCommentsAsync(this Document document, TextSpa
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| document | |
-| span | |
-| kinds | |
-| cancellationToken | |
+**document**
+
+
+
+**span**
+
+
+
+**kinds**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 

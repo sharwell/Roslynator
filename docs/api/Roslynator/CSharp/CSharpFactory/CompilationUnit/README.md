@@ -22,9 +22,9 @@ public static CompilationUnitSyntax CompilationUnit(MemberDeclarationSyntax memb
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| member | |
+**member**
+
+
 
 #### Returns
 
@@ -38,10 +38,13 @@ public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| usings | |
-| member | |
+**usings**
+
+
+
+**member**
+
+
 
 #### Returns
 
@@ -55,10 +58,13 @@ public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| usings | |
-| members | |
+**usings**
+
+
+
+**members**
+
+
 
 #### Returns
 

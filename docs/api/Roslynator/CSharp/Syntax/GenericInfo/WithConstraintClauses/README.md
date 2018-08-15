@@ -16,9 +16,9 @@ public GenericInfo WithConstraintClauses(SyntaxList<TypeParameterConstraintClaus
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| constraintClauses | |
+**constraintClauses**
+
+
 
 ### Returns
 

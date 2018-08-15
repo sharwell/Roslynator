@@ -26,9 +26,9 @@ public static AccessorDeclarationSyntax Setter(this AccessorListSyntax accessorL
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| accessorList | |
+**accessorList**
+
+
 
 #### Returns
 
@@ -46,9 +46,9 @@ public static AccessorDeclarationSyntax Setter(this IndexerDeclarationSyntax ind
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| indexerDeclaration | |
+**indexerDeclaration**
+
+
 
 #### Returns
 
@@ -66,9 +66,9 @@ public static AccessorDeclarationSyntax Setter(this PropertyDeclarationSyntax pr
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| propertyDeclaration | |
+**propertyDeclaration**
+
+
 
 #### Returns
 

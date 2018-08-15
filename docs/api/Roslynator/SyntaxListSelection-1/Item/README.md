@@ -16,9 +16,9 @@ public TNode this[int index] { get; }
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | The zero\-based index of the node to get\.  |
+**index**
+
+
 
 ### Property Value
 

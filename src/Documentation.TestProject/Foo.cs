@@ -85,12 +85,15 @@ namespace Roslynator.Documentation.Test
         /// s <paramref name="value"/> <typeparamref name="T"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T2"></typeparam>
         /// <param name="value">p</param>
         /// <PARAM name="value2">p</PARAM>
         /// <permission cref="Foo">ppp</permission>
-        public void Bar<T>(string value, string value2)
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentNullException"></exception>
+        public void Bar<T, T2>(string value, string value2)
         {
-            Bar<T>(value, value2);
+            Bar<T, T2>(value, value2);
         }
 
         /// <summary>abc</summary>

@@ -23,19 +23,25 @@ Get a list of all the trivia associated with the nodes in the list\.
 public static IEnumerable<SyntaxTrivia> DescendantTrivia<TNode>(this SyntaxList<TNode> list, Func<SyntaxNode, bool> descendIntoChildren = null, bool descendIntoTrivia = false) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| descendIntoChildren | |
-| descendIntoTrivia | |
+**list**
+
+
+
+**descendIntoChildren**
+
+
+
+**descendIntoTrivia**
+
+
 
 #### Returns
 
@@ -51,20 +57,29 @@ Get a list of all the trivia associated with the nodes in the list\.
 public static IEnumerable<SyntaxTrivia> DescendantTrivia<TNode>(this SyntaxList<TNode> list, TextSpan span, Func<SyntaxNode, bool> descendIntoChildren = null, bool descendIntoTrivia = false) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| span | |
-| descendIntoChildren | |
-| descendIntoTrivia | |
+**list**
+
+
+
+**span**
+
+
+
+**descendIntoChildren**
+
+
+
+**descendIntoTrivia**
+
+
 
 #### Returns
 

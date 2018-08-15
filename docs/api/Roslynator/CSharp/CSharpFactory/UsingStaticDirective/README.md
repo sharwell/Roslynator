@@ -21,9 +21,9 @@ public static UsingDirectiveSyntax UsingStaticDirective(NameSyntax name)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| name | |
+**name**
+
+
 
 #### Returns
 
@@ -37,12 +37,21 @@ public static UsingDirectiveSyntax UsingStaticDirective(SyntaxToken usingKeyword
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| usingKeyword | |
-| staticKeyword | |
-| name | |
-| semicolonToken | |
+**usingKeyword**
+
+
+
+**staticKeyword**
+
+
+
+**name**
+
+
+
+**semicolonToken**
+
+
 
 #### Returns
 

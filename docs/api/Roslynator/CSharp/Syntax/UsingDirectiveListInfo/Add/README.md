@@ -16,9 +16,9 @@ public UsingDirectiveListInfo Add(UsingDirectiveSyntax usingDirective)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| usingDirective | |
+**usingDirective**
+
+
 
 ### Returns
 

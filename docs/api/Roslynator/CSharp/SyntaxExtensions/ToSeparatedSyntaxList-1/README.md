@@ -23,17 +23,17 @@ Creates a separated list of syntax nodes from a sequence of nodes and tokens\.
 public static SeparatedSyntaxList<TNode> ToSeparatedSyntaxList<TNode>(this IEnumerable<SyntaxNodeOrToken> nodesAndTokens) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| nodesAndTokens | |
+**nodesAndTokens**
+
+
 
 #### Returns
 
@@ -49,17 +49,17 @@ Creates a separated list of syntax nodes from a sequence of nodes\.
 public static SeparatedSyntaxList<TNode> ToSeparatedSyntaxList<TNode>(this IEnumerable<TNode> nodes) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| nodes | |
+**nodes**
+
+
 
 #### Returns
 

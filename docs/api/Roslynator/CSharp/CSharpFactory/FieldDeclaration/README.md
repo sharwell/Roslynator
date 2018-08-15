@@ -23,12 +23,21 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| identifier | |
-| initializer | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**identifier**
+
+
+
+**initializer**
+
+
 
 #### Returns
 
@@ -42,12 +51,21 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| identifier | |
-| value | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**identifier**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -61,12 +79,21 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| identifier | |
-| initializer | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**identifier**
+
+
+
+**initializer**
+
+
 
 #### Returns
 
@@ -80,12 +107,21 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| identifier | |
-| value | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**identifier**
+
+
+
+**value**
+
+
 
 #### Returns
 

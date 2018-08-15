@@ -25,11 +25,17 @@ public static ConditionalExpressionInfo ConditionalExpressionInfo(ConditionalExp
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| conditionalExpression | |
-| walkDownParentheses | |
-| allowMissing | |
+**conditionalExpression**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 
@@ -47,11 +53,17 @@ public static ConditionalExpressionInfo ConditionalExpressionInfo(SyntaxNode nod
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| walkDownParentheses | |
-| allowMissing | |
+**node**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 

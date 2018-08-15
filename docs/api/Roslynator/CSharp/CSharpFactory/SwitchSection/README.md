@@ -22,10 +22,13 @@ public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, S
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| switchLabel | |
-| statement | |
+**switchLabel**
+
+
+
+**statement**
+
+
 
 #### Returns
 
@@ -39,10 +42,13 @@ public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, S
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| switchLabel | |
-| statements | |
+**switchLabel**
+
+
+
+**statements**
+
+
 
 #### Returns
 
@@ -56,10 +62,13 @@ public static SwitchSectionSyntax SwitchSection(SyntaxList<SwitchLabelSyntax> sw
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| switchLabels | |
-| statement | |
+**switchLabels**
+
+
+
+**statement**
+
+
 
 #### Returns
 

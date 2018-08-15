@@ -14,18 +14,21 @@ Creates a new node with a modifier at the specified index removed\.
 public static TNode RemoveAt<TNode>(TNode node, int index) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| index | |
+**node**
+
+
+
+**index**
+
+
 
 ### Returns
 

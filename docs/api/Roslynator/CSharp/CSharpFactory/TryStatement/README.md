@@ -12,11 +12,17 @@ public static TryStatementSyntax TryStatement(BlockSyntax block, CatchClauseSynt
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| block | |
-| catch | |
-| finally | |
+**block**
+
+
+
+**catch**
+
+
+
+**finally**
+
+
 
 ### Returns
 

@@ -16,11 +16,17 @@ public static CompilationUnitSyntax AddUsings(this CompilationUnitSyntax compila
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| compilationUnit | |
-| keepSingleLineCommentsOnTop | |
-| usings | |
+**compilationUnit**
+
+
+
+**keepSingleLineCommentsOnTop**
+
+
+
+**usings**
+
+
 
 ### Returns
 

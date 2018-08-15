@@ -21,10 +21,13 @@ public static AttributeArgumentSyntax AttributeArgument(NameColonSyntax nameColo
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| nameColon | |
-| expression | |
+**nameColon**
+
+
+
+**expression**
+
+
 
 #### Returns
 
@@ -38,10 +41,13 @@ public static AttributeArgumentSyntax AttributeArgument(NameEqualsSyntax nameEqu
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| nameEquals | |
-| expression | |
+**nameEquals**
+
+
+
+**expression**
+
+
 
 #### Returns
 

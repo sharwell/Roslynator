@@ -12,10 +12,13 @@ public static bool operator ==(in SimpleAssignmentExpressionInfo info1, in Simpl
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

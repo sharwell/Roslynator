@@ -12,10 +12,13 @@ public static bool operator ==(in StringLiteralExpressionInfo info1, in StringLi
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

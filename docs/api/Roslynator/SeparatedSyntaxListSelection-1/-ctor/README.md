@@ -16,10 +16,19 @@ protected SeparatedSyntaxListSelection(SeparatedSyntaxList<TNode> list, TextSpan
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| span | |
-| firstIndex | |
-| lastIndex | |
+**list**
+
+
+
+**span**
+
+
+
+**firstIndex**
+
+
+
+**lastIndex**
+
+
 

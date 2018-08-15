@@ -12,10 +12,13 @@ public static ExpressionChain AsChain(this BinaryExpressionSyntax binaryExpressi
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| binaryExpression | |
-| span | |
+**binaryExpression**
+
+
+
+**span**
+
+
 
 ### Returns
 

@@ -21,10 +21,13 @@ public static VariableDeclaratorSyntax VariableDeclarator(string identifier, Equ
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| identifier | |
-| initializer | |
+**identifier**
+
+
+
+**initializer**
+
+
 
 #### Returns
 
@@ -38,10 +41,13 @@ public static VariableDeclaratorSyntax VariableDeclarator(SyntaxToken identifier
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| identifier | |
-| initializer | |
+**identifier**
+
+
+
+**initializer**
+
+
 
 #### Returns
 

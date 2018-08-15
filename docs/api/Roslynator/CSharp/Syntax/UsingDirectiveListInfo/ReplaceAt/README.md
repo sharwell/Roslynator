@@ -16,10 +16,13 @@ public UsingDirectiveListInfo ReplaceAt(int index, UsingDirectiveSyntax newUsing
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
-| newUsingDirective | |
+**index**
+
+
+
+**newUsingDirective**
+
+
 
 ### Returns
 

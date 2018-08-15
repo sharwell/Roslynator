@@ -27,11 +27,17 @@ public static SyntaxTokenList RemoveRange(this SyntaxTokenList list, int index, 
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| index | An index of the first element to remove\. |
-| count | A number of elements to remove\. |
+**list**
+
+
+
+**index**
+
+
+
+**count**
+
+
 
 #### Returns
 
@@ -49,11 +55,17 @@ public static SyntaxTriviaList RemoveRange(this SyntaxTriviaList list, int index
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| index | An index of the first element to remove\. |
-| count | A number of elements to remove\. |
+**list**
+
+
+
+**index**
+
+
+
+**count**
+
+
 
 #### Returns
 
@@ -69,19 +81,25 @@ Creates a new list with elements in the specified range removed\.
 public static SeparatedSyntaxList<TNode> RemoveRange<TNode>(this SeparatedSyntaxList<TNode> list, int index, int count) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| index | An index of the first element to remove\. |
-| count | A number of elements to remove\. |
+**list**
+
+
+
+**index**
+
+
+
+**count**
+
+
 
 #### Returns
 
@@ -97,19 +115,25 @@ Creates a new list with elements in the specified range removed\.
 public static SyntaxList<TNode> RemoveRange<TNode>(this SyntaxList<TNode> list, int index, int count) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| index | An index of the first element to remove\. |
-| count | A number of elements to remove\. |
+**list**
+
+
+
+**index**
+
+
+
+**count**
+
+
 
 #### Returns
 

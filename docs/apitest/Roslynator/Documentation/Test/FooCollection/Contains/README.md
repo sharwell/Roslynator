@@ -12,9 +12,9 @@ public bool Contains(Foo item)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| item | |
+**item**
+
+
 
 ### Returns
 

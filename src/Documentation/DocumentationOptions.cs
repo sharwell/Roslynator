@@ -109,16 +109,16 @@ namespace Roslynator.Documentation
 
         internal static class DefaultValues
         {
-            public const int MaxDerivedItems = 10;
+            public const int MaxDerivedItems = 10; //TODO: MaxDerivedItems default value
             public const bool SystemNamespaceFirst = true;
-            public const bool FormatDefinitionBaseList = false;
-            public const bool FormatDefinitionConstraints = false;
+            public const bool FormatDefinitionBaseList = true;
+            public const bool FormatDefinitionConstraints = true;
             public const bool IndicateObsolete = true;
             public const bool IndicateInheritedMember = true;
-            public const bool IndicateOverriddenMember = false;
-            public const bool IndicateInterfaceImplementation = false;
+            public const bool IndicateOverriddenMember = true;
+            public const bool IndicateInterfaceImplementation = true;
             public const bool AttributeArguments = true;
-            public const bool InheritedInterfaceMembers = true;
+            public const bool InheritedInterfaceMembers = true; //TODO: InheritedInterfaceMembers default value
             public const bool OmitIEnumerable = true;
         }
     }

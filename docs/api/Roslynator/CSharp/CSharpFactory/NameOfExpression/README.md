@@ -21,9 +21,9 @@ public static InvocationExpressionSyntax NameOfExpression(ExpressionSyntax expre
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expression | |
+**expression**
+
+
 
 #### Returns
 
@@ -37,9 +37,9 @@ public static InvocationExpressionSyntax NameOfExpression(string identifier)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| identifier | |
+**identifier**
+
+
 
 #### Returns
 

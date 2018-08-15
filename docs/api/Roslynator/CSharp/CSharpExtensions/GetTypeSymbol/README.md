@@ -27,11 +27,17 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Attrib
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semanticModel | |
-| attribute | |
-| cancellationToken | |
+**semanticModel**
+
+
+
+**attribute**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 
@@ -49,11 +55,17 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Constr
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semanticModel | |
-| constructorInitializer | |
-| cancellationToken | |
+**semanticModel**
+
+
+
+**constructorInitializer**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 
@@ -71,11 +83,17 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Expres
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semanticModel | |
-| expression | |
-| cancellationToken | |
+**semanticModel**
+
+
+
+**expression**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 
@@ -93,11 +111,17 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Select
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semanticModel | |
-| selectOrGroupClause | |
-| cancellationToken | |
+**semanticModel**
+
+
+
+**selectOrGroupClause**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 

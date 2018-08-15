@@ -21,12 +21,21 @@ public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| identifier | |
-| accessorList | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**identifier**
+
+
+
+**accessorList**
+
+
 
 #### Returns
 
@@ -40,12 +49,21 @@ public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| identifier | |
-| accessorList | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**identifier**
+
+
+
+**accessorList**
+
+
 
 #### Returns
 

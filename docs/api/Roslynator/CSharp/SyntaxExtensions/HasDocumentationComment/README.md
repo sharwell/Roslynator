@@ -16,9 +16,9 @@ public static bool HasDocumentationComment(this MemberDeclarationSyntax member)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| member | |
+**member**
+
+
 
 ### Returns
 

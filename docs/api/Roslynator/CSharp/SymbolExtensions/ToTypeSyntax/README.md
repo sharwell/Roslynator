@@ -26,10 +26,13 @@ public static TypeSyntax ToTypeSyntax(this INamespaceOrTypeSymbol namespaceOrTyp
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namespaceOrTypeSymbol | |
-| format | |
+**namespaceOrTypeSymbol**
+
+
+
+**format**
+
+
 
 #### Returns
 
@@ -47,10 +50,13 @@ public static TypeSyntax ToTypeSyntax(this INamespaceSymbol namespaceSymbol, Sym
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namespaceSymbol | |
-| format | |
+**namespaceSymbol**
+
+
+
+**format**
+
+
 
 #### Returns
 
@@ -68,10 +74,13 @@ public static TypeSyntax ToTypeSyntax(this ITypeSymbol typeSymbol, SymbolDisplay
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
-| format | |
+**typeSymbol**
+
+
+
+**format**
+
+
 
 #### Returns
 

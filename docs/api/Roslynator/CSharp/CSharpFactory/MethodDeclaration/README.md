@@ -21,13 +21,25 @@ public static MethodDeclarationSyntax MethodDeclaration(SyntaxTokenList modifier
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| returnType | |
-| identifier | |
-| parameterList | |
-| expressionBody | |
+**modifiers**
+
+
+
+**returnType**
+
+
+
+**identifier**
+
+
+
+**parameterList**
+
+
+
+**expressionBody**
+
+
 
 #### Returns
 
@@ -41,13 +53,25 @@ public static MethodDeclarationSyntax MethodDeclaration(SyntaxTokenList modifier
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| returnType | |
-| identifier | |
-| parameterList | |
-| body | |
+**modifiers**
+
+
+
+**returnType**
+
+
+
+**identifier**
+
+
+
+**parameterList**
+
+
+
+**body**
+
+
 
 #### Returns
 

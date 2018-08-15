@@ -25,11 +25,17 @@ public static SimpleIfStatementInfo SimpleIfStatementInfo(IfStatementSyntax ifSt
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| ifStatement | |
-| walkDownParentheses | |
-| allowMissing | |
+**ifStatement**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 
@@ -47,11 +53,17 @@ public static SimpleIfStatementInfo SimpleIfStatementInfo(SyntaxNode node, bool 
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| walkDownParentheses | |
-| allowMissing | |
+**node**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 

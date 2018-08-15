@@ -16,10 +16,13 @@ public UsingDirectiveListInfo ReplaceRange(UsingDirectiveSyntax usingInLine, IEn
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| usingInLine | |
-| newUsingDirectives | |
+**usingInLine**
+
+
+
+**newUsingDirectives**
+
+
 
 ### Returns
 

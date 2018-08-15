@@ -21,10 +21,13 @@ public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(Expressi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expression | |
-| name | |
+**expression**
+
+
+
+**name**
+
+
 
 #### Returns
 
@@ -38,11 +41,17 @@ public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(Expressi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expression | |
-| operatorToken | |
-| name | |
+**expression**
+
+
+
+**operatorToken**
+
+
+
+**name**
+
+
 
 #### Returns
 

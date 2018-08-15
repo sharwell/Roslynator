@@ -12,10 +12,13 @@ public static bool operator ==(in IfStatementCascade info1, in IfStatementCascad
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

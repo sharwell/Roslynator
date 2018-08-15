@@ -16,10 +16,13 @@ public StatementListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions options
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| options | |
+**node**
+
+
+
+**options**
+
+
 
 ### Returns
 

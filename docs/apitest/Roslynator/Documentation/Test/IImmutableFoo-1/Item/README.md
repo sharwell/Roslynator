@@ -12,9 +12,9 @@ T this[int index] { get; set; }
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
+**index**
+
+
 
 ### Property Value
 

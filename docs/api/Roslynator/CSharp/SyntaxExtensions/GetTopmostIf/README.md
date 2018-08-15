@@ -25,9 +25,9 @@ public static IfStatementSyntax GetTopmostIf(this ElseClauseSyntax elseClause)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| elseClause | |
+**elseClause**
+
+
 
 #### Returns
 
@@ -45,9 +45,9 @@ public static IfStatementSyntax GetTopmostIf(this IfStatementSyntax ifStatement)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| ifStatement | |
+**ifStatement**
+
+
 
 #### Returns
 

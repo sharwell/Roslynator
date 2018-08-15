@@ -16,10 +16,13 @@ public static AttributeData GetAttribute(this ISymbol symbol, INamedTypeSymbol a
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| symbol | |
-| attributeClass | |
+**symbol**
+
+
+
+**attributeClass**
+
+
 
 ### Returns
 

@@ -16,9 +16,9 @@ public MemberDeclarationListInfo RemoveAt(int index)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
+**index**
+
+
 
 ### Returns
 

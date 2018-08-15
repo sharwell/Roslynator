@@ -12,10 +12,13 @@ public static bool operator ==(in UsingDirectiveListInfo info1, in UsingDirectiv
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

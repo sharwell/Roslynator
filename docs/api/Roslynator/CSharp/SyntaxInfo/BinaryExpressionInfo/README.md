@@ -25,11 +25,17 @@ public static BinaryExpressionInfo BinaryExpressionInfo(BinaryExpressionSyntax b
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| binaryExpression | |
-| walkDownParentheses | |
-| allowMissing | |
+**binaryExpression**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 
@@ -47,11 +53,17 @@ public static BinaryExpressionInfo BinaryExpressionInfo(SyntaxNode node, bool wa
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| walkDownParentheses | |
-| allowMissing | |
+**node**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 

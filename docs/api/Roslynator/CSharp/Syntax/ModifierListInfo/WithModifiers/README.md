@@ -16,9 +16,9 @@ public ModifierListInfo WithModifiers(SyntaxTokenList modifiers)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
+**modifiers**
+
+
 
 ### Returns
 

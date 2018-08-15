@@ -37,10 +37,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, bool value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -58,10 +61,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, byte value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -79,10 +85,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, decimal value
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -100,10 +109,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, double value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -121,10 +133,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, char value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -142,10 +157,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, short value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -163,10 +181,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, int value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -184,10 +205,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, long value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -205,10 +229,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, sbyte value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -226,10 +253,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, float value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -247,10 +277,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, string value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -268,10 +301,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, ushort value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -289,10 +325,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, uint value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -310,10 +349,13 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, ulong value)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldSymbol | |
-| value | |
+**fieldSymbol**
+
+
+
+**value**
+
+
 
 #### Returns
 

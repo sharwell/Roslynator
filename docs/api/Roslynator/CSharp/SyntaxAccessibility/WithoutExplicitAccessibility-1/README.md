@@ -14,17 +14,17 @@ Creates a new node with the explicit accessibility removed\.
 public static TNode WithoutExplicitAccessibility<TNode>(TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
+**node**
+
+
 
 ### Returns
 

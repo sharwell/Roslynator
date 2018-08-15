@@ -27,10 +27,13 @@ public static SyntaxToken Find(this SyntaxTokenList tokenList, SyntaxKind kind)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| tokenList | |
-| kind | |
+**tokenList**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -48,10 +51,13 @@ public static SyntaxTrivia Find(this SyntaxTriviaList triviaList, SyntaxKind kin
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| triviaList | |
-| kind | |
+**triviaList**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -67,18 +73,21 @@ Searches for a node of the specified kind and returns the first occurrence withi
 public static TNode Find<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| kind | |
+**list**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -94,18 +103,21 @@ Searches for a node of the specified kind and returns the first occurrence withi
 public static TNode Find<TNode>(this SyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| kind | |
+**list**
+
+
+
+**kind**
+
+
 
 #### Returns
 

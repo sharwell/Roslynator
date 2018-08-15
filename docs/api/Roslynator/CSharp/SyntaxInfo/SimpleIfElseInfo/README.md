@@ -16,11 +16,17 @@ public static SimpleIfElseInfo SimpleIfElseInfo(IfStatementSyntax ifStatement, b
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| ifStatement | |
-| walkDownParentheses | |
-| allowMissing | |
+**ifStatement**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 ### Returns
 

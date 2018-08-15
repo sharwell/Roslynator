@@ -27,10 +27,13 @@ public static bool Contains(this SyntaxTokenList tokenList, SyntaxKind kind)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| tokenList | |
-| kind | |
+**tokenList**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -48,10 +51,13 @@ public static bool Contains(this SyntaxTriviaList triviaList, SyntaxKind kind)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| triviaList | |
-| kind | |
+**triviaList**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -67,18 +73,21 @@ Searches for a node of the specified kind and returns the zero\-based index of t
 public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| kind | |
+**list**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -94,18 +103,21 @@ Returns true if a node of the specified kind is in the [SyntaxList\<TNode>](http
 public static bool Contains<TNode>(this SyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| kind | |
+**list**
+
+
+
+**kind**
+
+
 
 #### Returns
 

@@ -23,18 +23,21 @@ Creates a new node with a modifier of the specified kind removed\.
 public static TNode Remove<TNode>(TNode node, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind | |
+**node**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -50,18 +53,21 @@ Creates a new node with the specified modifier removed\.
 public static TNode Remove<TNode>(TNode node, SyntaxToken modifier) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| modifier | |
+**node**
+
+
+
+**modifier**
+
+
 
 #### Returns
 

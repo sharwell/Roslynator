@@ -12,10 +12,13 @@ public static bool operator !=(in SimpleIfStatementInfo info1, in SimpleIfStatem
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

@@ -16,10 +16,13 @@ public MemberDeclarationListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| options | |
+**node**
+
+
+
+**options**
+
+
 
 ### Returns
 

@@ -26,10 +26,13 @@ public static bool Contains(this SyntaxTokenList tokens, SyntaxToken token)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| tokens | |
-| token | |
+**tokens**
+
+
+
+**token**
+
+
 
 #### Returns
 
@@ -45,18 +48,21 @@ Returns true if the specified node is in the [SeparatedSyntaxList\<TNode>](https
 public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| node | |
+**list**
+
+
+
+**node**
+
+
 
 #### Returns
 
@@ -72,18 +78,21 @@ Returns true if the specified node is in the [SyntaxList\<TNode>](https://docs.m
 public static bool Contains<TNode>(this SyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| node | |
+**list**
+
+
+
+**node**
+
+
 
 #### Returns
 

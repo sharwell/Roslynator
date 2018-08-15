@@ -25,10 +25,13 @@ public Foo this[int index, int index2] { get; set; }
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | p |
-| index2 | p |
+**index**
+
+
+
+**index2**
+
+
 
 #### Property Value
 
@@ -48,9 +51,9 @@ public Foo this[int index] { get; set; }
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | p |
+**index**
+
+
 
 #### Property Value
 

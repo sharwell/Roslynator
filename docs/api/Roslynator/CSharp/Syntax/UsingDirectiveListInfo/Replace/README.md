@@ -16,10 +16,13 @@ public UsingDirectiveListInfo Replace(UsingDirectiveSyntax usingInLine, UsingDir
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| usingInLine | |
-| newUsingDirective | |
+**usingInLine**
+
+
+
+**newUsingDirective**
+
+
 
 ### Returns
 

@@ -27,11 +27,17 @@ public static SyntaxTokenList Insert(SyntaxTokenList modifiers, SyntaxKind kind,
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| kind | |
-| comparer | |
+**modifiers**
+
+
+
+**kind**
+
+
+
+**comparer**
+
+
 
 #### Returns
 
@@ -49,11 +55,17 @@ public static SyntaxTokenList Insert(SyntaxTokenList modifiers, SyntaxToken modi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| modifier | |
-| comparer | |
+**modifiers**
+
+
+
+**modifier**
+
+
+
+**comparer**
+
+
 
 #### Returns
 
@@ -69,19 +81,25 @@ Creates a new node with a modifier of the specified kind inserted\.
 public static TNode Insert<TNode>(TNode node, SyntaxKind kind, IComparer<SyntaxKind> comparer = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind | |
-| comparer | |
+**node**
+
+
+
+**kind**
+
+
+
+**comparer**
+
+
 
 #### Returns
 
@@ -97,19 +115,25 @@ Creates a new node with the specified modifier inserted\.
 public static TNode Insert<TNode>(TNode node, SyntaxToken modifier, IComparer<SyntaxToken> comparer = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| modifier | |
-| comparer | |
+**node**
+
+
+
+**modifier**
+
+
+
+**comparer**
+
+
 
 #### Returns
 

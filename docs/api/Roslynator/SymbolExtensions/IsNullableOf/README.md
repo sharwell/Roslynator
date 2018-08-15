@@ -27,10 +27,13 @@ public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, ITypeSymb
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namedTypeSymbol | |
-| typeArgument | |
+**namedTypeSymbol**
+
+
+
+**typeArgument**
+
+
 
 #### Returns
 
@@ -48,10 +51,13 @@ public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, SpecialTy
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namedTypeSymbol | |
-| specialType | |
+**namedTypeSymbol**
+
+
+
+**specialType**
+
+
 
 #### Returns
 
@@ -69,10 +75,13 @@ public static bool IsNullableOf(this ITypeSymbol typeSymbol, ITypeSymbol typeArg
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
-| typeArgument | |
+**typeSymbol**
+
+
+
+**typeArgument**
+
+
 
 #### Returns
 
@@ -90,10 +99,13 @@ public static bool IsNullableOf(this ITypeSymbol typeSymbol, SpecialType special
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
-| specialType | |
+**typeSymbol**
+
+
+
+**specialType**
+
+
 
 #### Returns
 

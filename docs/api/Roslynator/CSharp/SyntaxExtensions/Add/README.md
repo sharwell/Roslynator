@@ -16,11 +16,17 @@ public static SyntaxList<StatementSyntax> Add(this SyntaxList<StatementSyntax> s
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statements | |
-| statement | |
-| ignoreLocalFunctions | Insert statement before local function statements at the end of the list\. |
+**statements**
+
+
+
+**statement**
+
+
+
+**ignoreLocalFunctions**
+
+
 
 ### Returns
 

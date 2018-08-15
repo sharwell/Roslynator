@@ -12,10 +12,13 @@ public static bool operator !=(in SimpleAssignmentStatementInfo info1, in Simple
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

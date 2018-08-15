@@ -23,9 +23,9 @@ public static implicit operator IfStatementOrElseClause(ElseClauseSyntax elseCla
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| elseClause | |
+**elseClause**
+
+
 
 #### Returns
 
@@ -39,9 +39,9 @@ public static implicit operator ElseClauseSyntax(in IfStatementOrElseClause ifOr
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| ifOrElse | |
+**ifOrElse**
+
+
 
 #### Returns
 
@@ -55,9 +55,9 @@ public static implicit operator IfStatementSyntax(in IfStatementOrElseClause ifO
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| ifOrElse | |
+**ifOrElse**
+
+
 
 #### Returns
 
@@ -71,9 +71,9 @@ public static implicit operator IfStatementOrElseClause(IfStatementSyntax ifStat
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| ifStatement | |
+**ifStatement**
+
+
 
 #### Returns
 

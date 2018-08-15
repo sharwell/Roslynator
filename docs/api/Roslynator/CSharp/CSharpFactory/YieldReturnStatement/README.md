@@ -12,9 +12,9 @@ public static YieldStatementSyntax YieldReturnStatement(ExpressionSyntax express
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expression | |
+**expression**
+
+
 
 ### Returns
 

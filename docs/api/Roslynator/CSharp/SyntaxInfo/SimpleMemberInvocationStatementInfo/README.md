@@ -26,10 +26,13 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expressionStatement | |
-| allowMissing | |
+**expressionStatement**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 
@@ -47,10 +50,13 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| invocationExpression | |
-| allowMissing | |
+**invocationExpression**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 
@@ -68,10 +74,13 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| allowMissing | |
+**node**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 

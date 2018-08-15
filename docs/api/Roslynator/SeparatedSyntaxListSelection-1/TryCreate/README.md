@@ -16,11 +16,17 @@ public static bool TryCreate(SeparatedSyntaxList<TNode> list, TextSpan span, out
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| span | |
-| selection | |
+**list**
+
+
+
+**span**
+
+
+
+**selection**
+
+
 
 ### Returns
 

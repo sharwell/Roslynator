@@ -25,10 +25,13 @@ public static int IndexOf(this SyntaxTokenList tokens, Func<SyntaxToken, bool> p
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| tokens | |
-| predicate | |
+**tokens**
+
+
+
+**predicate**
+
+
 
 #### Returns
 
@@ -46,10 +49,13 @@ public static int IndexOf(this SyntaxTriviaList triviaList, Func<SyntaxTrivia, b
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| triviaList | |
-| predicate | |
+**triviaList**
+
+
+
+**predicate**
+
+
 
 #### Returns
 

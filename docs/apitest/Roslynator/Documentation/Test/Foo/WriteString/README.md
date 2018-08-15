@@ -12,8 +12,11 @@ public void WriteString(char* pSrcStart, char* pSrcEnd)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| pSrcStart | |
-| pSrcEnd | |
+**pSrcStart**
+
+
+
+**pSrcEnd**
+
+
 

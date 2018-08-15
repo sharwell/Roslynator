@@ -26,12 +26,21 @@ public static TypeSyntax ToMinimalTypeSyntax(this INamespaceOrTypeSymbol namespa
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namespaceOrTypeSymbol | |
-| semanticModel | |
-| position | |
-| format | |
+**namespaceOrTypeSymbol**
+
+
+
+**semanticModel**
+
+
+
+**position**
+
+
+
+**format**
+
+
 
 #### Returns
 
@@ -49,12 +58,21 @@ public static TypeSyntax ToMinimalTypeSyntax(this INamespaceSymbol namespaceSymb
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namespaceSymbol | |
-| semanticModel | |
-| position | |
-| format | |
+**namespaceSymbol**
+
+
+
+**semanticModel**
+
+
+
+**position**
+
+
+
+**format**
+
+
 
 #### Returns
 
@@ -72,12 +90,21 @@ public static TypeSyntax ToMinimalTypeSyntax(this ITypeSymbol typeSymbol, Semant
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
-| semanticModel | |
-| position | |
-| format | |
+**typeSymbol**
+
+
+
+**semanticModel**
+
+
+
+**position**
+
+
+
+**format**
+
+
 
 #### Returns
 

@@ -14,19 +14,25 @@ Creates a new node with the whitespace replaced\.
 public static TNode ReplaceWhitespace<TNode>(this TNode node, SyntaxTrivia replacement, TextSpan? span = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| replacement | |
-| span | |
+**node**
+
+
+
+**replacement**
+
+
+
+**span**
+
+
 
 ### Returns
 

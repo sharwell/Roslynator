@@ -12,10 +12,13 @@ public static bool operator ==(in NullCheckExpressionInfo info1, in NullCheckExp
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

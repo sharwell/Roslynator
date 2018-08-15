@@ -25,10 +25,13 @@ public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressio
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| lambdaExpression | |
-| allowMissing | |
+**lambdaExpression**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 
@@ -46,11 +49,17 @@ public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressio
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| walkDownParentheses | |
-| allowMissing | |
+**node**
+
+
+
+**walkDownParentheses**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 

@@ -16,9 +16,9 @@ public GenericInfo RemoveConstraintClause(TypeParameterConstraintClauseSyntax co
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| constraintClause | |
+**constraintClause**
+
+
 
 ### Returns
 

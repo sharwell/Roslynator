@@ -12,9 +12,9 @@ public int this[int index] { get; }
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
+**index**
+
+
 
 ### Property Value
 

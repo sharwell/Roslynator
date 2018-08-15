@@ -21,12 +21,21 @@ public static ConstructorDeclarationSyntax ConstructorDeclaration(SyntaxTokenLis
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| identifier | |
-| parameterList | |
-| expressionBody | |
+**modifiers**
+
+
+
+**identifier**
+
+
+
+**parameterList**
+
+
+
+**expressionBody**
+
+
 
 #### Returns
 
@@ -40,12 +49,21 @@ public static ConstructorDeclarationSyntax ConstructorDeclaration(SyntaxTokenLis
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| identifier | |
-| parameterList | |
-| body | |
+**modifiers**
+
+
+
+**identifier**
+
+
+
+**parameterList**
+
+
+
+**body**
+
+
 
 #### Returns
 

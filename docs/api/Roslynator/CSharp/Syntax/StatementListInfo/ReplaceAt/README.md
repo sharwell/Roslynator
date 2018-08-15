@@ -16,10 +16,13 @@ public StatementListInfo ReplaceAt(int index, StatementSyntax newStatement)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
-| newStatement | |
+**index**
+
+
+
+**newStatement**
+
+
 
 ### Returns
 

@@ -16,9 +16,9 @@ public static bool IsReducedExtensionMethod(this IMethodSymbol methodSymbol)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| methodSymbol | |
+**methodSymbol**
+
+
 
 ### Returns
 

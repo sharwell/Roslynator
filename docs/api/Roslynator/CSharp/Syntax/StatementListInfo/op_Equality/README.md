@@ -12,10 +12,13 @@ public static bool operator ==(in StatementListInfo info1, in StatementListInfo 
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

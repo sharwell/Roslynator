@@ -16,9 +16,9 @@ public static IEnumerable<ITypeSymbol> BaseTypesAndSelf(this ITypeSymbol typeSym
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
+**typeSymbol**
+
+
 
 ### Returns
 

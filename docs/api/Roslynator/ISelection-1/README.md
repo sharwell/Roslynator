@@ -16,11 +16,11 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
     System.Collections.Generic.IReadOnlyList<T>
 ```
 
-### Type Parameters
+### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| T | |
+**T**
+
+
 
 ### Derived
 

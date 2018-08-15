@@ -16,12 +16,21 @@ public static Task<Document> RemoveNodeAsync(this Document document, SyntaxNode 
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| document | |
-| node | |
-| options | |
-| cancellationToken | |
+**document**
+
+
+
+**node**
+
+
+
+**options**
+
+
+
+**cancellationToken**
+
+
 
 ### Returns
 

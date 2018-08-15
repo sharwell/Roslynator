@@ -16,9 +16,9 @@ public UsingDirectiveListInfo RemoveAt(int index)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
+**index**
+
+
 
 ### Returns
 

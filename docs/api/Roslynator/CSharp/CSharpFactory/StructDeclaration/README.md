@@ -21,11 +21,17 @@ public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifier
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| identifier | |
-| members | |
+**modifiers**
+
+
+
+**identifier**
+
+
+
+**members**
+
+
 
 #### Returns
 
@@ -39,11 +45,17 @@ public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifier
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| identifier | |
-| members | |
+**modifiers**
+
+
+
+**identifier**
+
+
+
+**members**
+
+
 
 #### Returns
 

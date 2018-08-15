@@ -26,11 +26,17 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| binaryExpression | |
-| semanticModel | |
-| cancellationToken | |
+**binaryExpression**
+
+
+
+**semanticModel**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 
@@ -48,11 +54,17 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expressionChain | |
-| semanticModel | |
-| cancellationToken | |
+**expressionChain**
+
+
+
+**semanticModel**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 
@@ -70,12 +82,21 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| semanticModel | |
-| walkDownParentheses | |
-| cancellationToken | |
+**node**
+
+
+
+**semanticModel**
+
+
+
+**walkDownParentheses**
+
+
+
+**cancellationToken**
+
+
 
 #### Returns
 

@@ -16,10 +16,13 @@ public StatementListInfo InsertRange(int index, IEnumerable<StatementSyntax> sta
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
-| statements | |
+**index**
+
+
+
+**statements**
+
+
 
 ### Returns
 

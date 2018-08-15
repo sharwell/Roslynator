@@ -12,10 +12,19 @@ protected TextLineCollectionSelection(TextLineCollection lines, TextSpan span, i
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| lines | |
-| span | |
-| firstIndex | |
-| lastIndex | |
+**lines**
+
+
+
+**span**
+
+
+
+**firstIndex**
+
+
+
+**lastIndex**
+
+
 

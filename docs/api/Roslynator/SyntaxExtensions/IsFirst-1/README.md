@@ -23,18 +23,21 @@ Returns true if the specified node is a first node in the list\.
 public static bool IsFirst<TNode>(this SeparatedSyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| node | |
+**list**
+
+
+
+**node**
+
+
 
 #### Returns
 
@@ -50,18 +53,21 @@ Returns true if the specified node is a first node in the list\.
 public static bool IsFirst<TNode>(this SyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| node | |
+**list**
+
+
+
+**node**
+
+
 
 #### Returns
 

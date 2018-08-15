@@ -35,10 +35,13 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind | |
+**node**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -56,11 +59,17 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
 
 #### Returns
 
@@ -78,12 +87,21 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
 
 #### Returns
 
@@ -101,13 +119,25 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
 
 #### Returns
 
@@ -125,14 +155,29 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
 
 #### Returns
 
@@ -150,15 +195,33 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
-| kind6 | |
+**node**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
+
+**kind6**
+
+
 
 #### Returns
 
@@ -176,10 +239,13 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind | |
+**token**
+
+
+
+**kind**
+
+
 
 #### Returns
 
@@ -197,11 +263,17 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
 
 #### Returns
 
@@ -219,12 +291,21 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
 
 #### Returns
 
@@ -242,13 +323,25 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
 
 #### Returns
 
@@ -266,14 +359,29 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
 
 #### Returns
 
@@ -291,15 +399,33 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| kind1 | |
-| kind2 | |
-| kind3 | |
-| kind4 | |
-| kind5 | |
-| kind6 | |
+**token**
+
+
+
+**kind1**
+
+
+
+**kind2**
+
+
+
+**kind3**
+
+
+
+**kind4**
+
+
+
+**kind5**
+
+
+
+**kind6**
+
+
 
 #### Returns
 

@@ -16,9 +16,9 @@ public static bool IsVerbatim(this InterpolatedStringExpressionSyntax interpolat
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| interpolatedString | |
+**interpolatedString**
+
+
 
 ### Returns
 

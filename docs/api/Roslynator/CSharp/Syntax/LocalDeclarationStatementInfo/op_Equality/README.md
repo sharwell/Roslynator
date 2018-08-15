@@ -12,10 +12,13 @@ public static bool operator ==(in LocalDeclarationStatementInfo info1, in LocalD
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

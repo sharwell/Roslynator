@@ -12,9 +12,9 @@ private KeyValuePair<TKey, TValue> IReadOnlyList<KeyValuePair<TKey, TValue>>.Ite
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
+**index**
+
+
 
 ### Property Value
 

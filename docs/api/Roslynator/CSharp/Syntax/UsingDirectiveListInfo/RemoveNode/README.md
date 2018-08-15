@@ -16,10 +16,13 @@ public UsingDirectiveListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions op
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| options | |
+**node**
+
+
+
+**options**
+
+
 
 ### Returns
 

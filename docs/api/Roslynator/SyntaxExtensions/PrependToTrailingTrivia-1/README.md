@@ -27,10 +27,13 @@ public static SyntaxToken PrependToTrailingTrivia(this SyntaxToken token, IEnume
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| trivia | |
+**token**
+
+
+
+**trivia**
+
+
 
 #### Returns
 
@@ -48,10 +51,13 @@ public static SyntaxToken PrependToTrailingTrivia(this SyntaxToken token, Syntax
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| trivia | |
+**token**
+
+
+
+**trivia**
+
+
 
 #### Returns
 
@@ -67,18 +73,21 @@ Creates a new node from this node with the trailing trivia replaced with a new t
 public static TNode PrependToTrailingTrivia<TNode>(this TNode node, IEnumerable<SyntaxTrivia> trivia) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| trivia | |
+**node**
+
+
+
+**trivia**
+
+
 
 #### Returns
 
@@ -94,18 +103,21 @@ Creates a new node from this node with the trailing trivia replaced with a new t
 public static TNode PrependToTrailingTrivia<TNode>(this TNode node, SyntaxTrivia trivia) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| trivia | |
+**node**
+
+
+
+**trivia**
+
+
 
 #### Returns
 

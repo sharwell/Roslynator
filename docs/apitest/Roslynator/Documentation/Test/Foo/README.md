@@ -81,7 +81,7 @@ paratext
 | Method | Summary |
 | ------ | ------- |
 | [Bar()](Bar/README.md#Roslynator_Documentation_Test_Foo_Bar) | abc |
-| [Bar\<T>(String, String)](Bar-1/README.md#Roslynator_Documentation_Test_Foo_Bar__1_System_String_System_String_) | s **value** **T** |
+| [Bar\<T, T2>(String, String)](Bar-2/README.md#Roslynator_Documentation_Test_Foo_Bar__2_System_String_System_String_) | s **value** **T** |
 | [Bar2()](Bar2/README.md) |     1 2 |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |

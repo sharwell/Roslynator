@@ -26,9 +26,9 @@ public static TextSpan ParenthesesSpan(this CastExpressionSyntax castExpression)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| castExpression | |
+**castExpression**
+
+
 
 #### Returns
 
@@ -46,9 +46,9 @@ public static TextSpan ParenthesesSpan(this CommonForEachStatementSyntax forEach
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| forEachStatement | |
+**forEachStatement**
+
+
 
 #### Returns
 
@@ -66,9 +66,9 @@ public static TextSpan ParenthesesSpan(this ForStatementSyntax forStatement)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| forStatement | |
+**forStatement**
+
+
 
 #### Returns
 

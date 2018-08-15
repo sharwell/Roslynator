@@ -17,9 +17,9 @@ public static SyntaxToken WithRenameAnnotation(this SyntaxToken token)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
+**token**
+
+
 
 ### Returns
 

@@ -21,13 +21,25 @@ public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| returnType | |
-| operatorToken | |
-| parameterList | |
-| expressionBody | |
+**modifiers**
+
+
+
+**returnType**
+
+
+
+**operatorToken**
+
+
+
+**parameterList**
+
+
+
+**expressionBody**
+
+
 
 #### Returns
 
@@ -41,13 +53,25 @@ public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| returnType | |
-| operatorToken | |
-| parameterList | |
-| body | |
+**modifiers**
+
+
+
+**returnType**
+
+
+
+**operatorToken**
+
+
+
+**parameterList**
+
+
+
+**body**
+
+
 
 #### Returns
 

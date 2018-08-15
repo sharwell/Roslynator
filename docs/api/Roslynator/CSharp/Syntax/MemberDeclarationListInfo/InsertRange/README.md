@@ -16,10 +16,13 @@ public MemberDeclarationListInfo InsertRange(int index, IEnumerable<MemberDeclar
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
-| members | |
+**index**
+
+
+
+**members**
+
+
 
 ### Returns
 

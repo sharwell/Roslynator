@@ -16,12 +16,21 @@ public static bool TryGetContainingList(this SyntaxTrivia trivia, out SyntaxTriv
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| trivia | |
-| triviaList | |
-| allowLeading | If true, trivia can be part of leading trivia\. |
-| allowTrailing | If true, trivia can be part of trailing trivia\. |
+**trivia**
+
+
+
+**triviaList**
+
+
+
+**allowLeading**
+
+
+
+**allowTrailing**
+
+
 
 ### Returns
 

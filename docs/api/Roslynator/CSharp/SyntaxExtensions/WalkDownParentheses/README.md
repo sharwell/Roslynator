@@ -16,9 +16,9 @@ public static ExpressionSyntax WalkDownParentheses(this ExpressionSyntax express
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expression | |
+**expression**
+
+
 
 ### Returns
 

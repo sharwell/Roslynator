@@ -16,9 +16,9 @@ public UsingDirectiveSyntax this[int index] { get; }
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | The zero\-based index of the using directive to get\.  |
+**index**
+
+
 
 ### Property Value
 

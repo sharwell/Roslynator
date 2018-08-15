@@ -21,13 +21,25 @@ public static PropertyDeclarationSyntax PropertyDeclaration(SyntaxTokenList modi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| identifier | |
-| accessorList | |
-| value | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**identifier**
+
+
+
+**accessorList**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -41,12 +53,21 @@ public static PropertyDeclarationSyntax PropertyDeclaration(SyntaxTokenList modi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| identifier | |
-| expressionBody | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**identifier**
+
+
+
+**expressionBody**
+
+
 
 #### Returns
 

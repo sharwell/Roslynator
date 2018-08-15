@@ -21,9 +21,9 @@ public static SwitchSectionSyntax DefaultSwitchSection(StatementSyntax statement
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statement | |
+**statement**
+
+
 
 #### Returns
 
@@ -37,9 +37,9 @@ public static SwitchSectionSyntax DefaultSwitchSection(SyntaxList<StatementSynta
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statements | |
+**statements**
+
+
 
 #### Returns
 

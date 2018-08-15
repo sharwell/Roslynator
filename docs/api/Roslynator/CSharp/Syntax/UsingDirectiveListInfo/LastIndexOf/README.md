@@ -25,9 +25,9 @@ public int LastIndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| predicate | |
+**predicate**
+
+
 
 #### Returns
 
@@ -45,9 +45,9 @@ public int LastIndexOf(UsingDirectiveSyntax usingDirective)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| usingDirective | |
+**usingDirective**
+
+
 
 #### Returns
 

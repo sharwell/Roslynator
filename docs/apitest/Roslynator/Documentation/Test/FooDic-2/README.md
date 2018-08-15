@@ -19,12 +19,15 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
     where TValue : Foo
 ```
 
-### Type Parameters
+### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TKey | |
-| TValue | |
+**TKey**
+
+
+
+**TValue**
+
+
 
 ### Inheritance
 

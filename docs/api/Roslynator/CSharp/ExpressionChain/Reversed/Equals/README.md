@@ -21,9 +21,9 @@ public override bool Equals(object obj)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| obj | |
+**obj**
+
+
 
 #### Returns
 
@@ -37,9 +37,9 @@ public bool Equals(ExpressionChain.Reversed other)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| other | |
+**other**
+
+
 
 #### Returns
 

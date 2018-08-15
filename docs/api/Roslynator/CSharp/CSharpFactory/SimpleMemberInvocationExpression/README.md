@@ -22,10 +22,13 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expression | |
-| name | |
+**expression**
+
+
+
+**name**
+
+
 
 #### Returns
 
@@ -39,11 +42,17 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expression | |
-| name | |
-| argumentList | |
+**expression**
+
+
+
+**name**
+
+
+
+**argumentList**
+
+
 
 #### Returns
 
@@ -57,11 +66,17 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| expression | |
-| name | |
-| argument | |
+**expression**
+
+
+
+**name**
+
+
+
+**argument**
+
+
 
 #### Returns
 

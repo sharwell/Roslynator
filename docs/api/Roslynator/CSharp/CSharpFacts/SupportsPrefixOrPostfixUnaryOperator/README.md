@@ -16,9 +16,9 @@ public static bool SupportsPrefixOrPostfixUnaryOperator(SpecialType specialType)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| specialType | |
+**specialType**
+
+
 
 ### Returns
 

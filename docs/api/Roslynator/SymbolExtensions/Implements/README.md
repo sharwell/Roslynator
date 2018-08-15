@@ -25,11 +25,17 @@ public static bool Implements(this ITypeSymbol typeSymbol, INamedTypeSymbol inte
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
-| interfaceSymbol | |
-| allInterfaces | If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\. |
+**typeSymbol**
+
+
+
+**interfaceSymbol**
+
+
+
+**allInterfaces**
+
+
 
 #### Returns
 
@@ -47,11 +53,17 @@ public static bool Implements(this ITypeSymbol typeSymbol, SpecialType interface
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
-| interfaceType | |
-| allInterfaces | If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\. |
+**typeSymbol**
+
+
+
+**interfaceType**
+
+
+
+**allInterfaces**
+
+
 
 #### Returns
 

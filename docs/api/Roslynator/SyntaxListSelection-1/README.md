@@ -18,11 +18,11 @@ public class SyntaxListSelection<TNode> : ISelection<TNode>,
     where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 ### Inheritance
 

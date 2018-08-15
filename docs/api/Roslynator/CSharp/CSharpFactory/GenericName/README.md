@@ -21,10 +21,13 @@ public static GenericNameSyntax GenericName(string identifier, TypeSyntax typeAr
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| identifier | |
-| typeArgument | |
+**identifier**
+
+
+
+**typeArgument**
+
+
 
 #### Returns
 
@@ -38,10 +41,13 @@ public static GenericNameSyntax GenericName(SyntaxToken identifier, TypeSyntax t
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| identifier | |
-| typeArgument | |
+**identifier**
+
+
+
+**typeArgument**
+
+
 
 #### Returns
 

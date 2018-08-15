@@ -41,9 +41,9 @@ public static Accessibility GetExplicitAccessibility(AccessorDeclarationSyntax a
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| accessorDeclaration | |
+**accessorDeclaration**
+
+
 
 #### Returns
 
@@ -61,9 +61,9 @@ public static Accessibility GetExplicitAccessibility(ClassDeclarationSyntax clas
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| classDeclaration | |
+**classDeclaration**
+
+
 
 #### Returns
 
@@ -81,9 +81,9 @@ public static Accessibility GetExplicitAccessibility(ConstructorDeclarationSynta
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| constructorDeclaration | |
+**constructorDeclaration**
+
+
 
 #### Returns
 
@@ -101,9 +101,9 @@ public static Accessibility GetExplicitAccessibility(ConversionOperatorDeclarati
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| conversionOperatorDeclaration | |
+**conversionOperatorDeclaration**
+
+
 
 #### Returns
 
@@ -121,9 +121,9 @@ public static Accessibility GetExplicitAccessibility(DelegateDeclarationSyntax d
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| delegateDeclaration | |
+**delegateDeclaration**
+
+
 
 #### Returns
 
@@ -141,9 +141,9 @@ public static Accessibility GetExplicitAccessibility(DestructorDeclarationSyntax
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| destructorDeclaration | |
+**destructorDeclaration**
+
+
 
 #### Returns
 
@@ -161,9 +161,9 @@ public static Accessibility GetExplicitAccessibility(EnumDeclarationSyntax enumD
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| enumDeclaration | |
+**enumDeclaration**
+
+
 
 #### Returns
 
@@ -181,9 +181,9 @@ public static Accessibility GetExplicitAccessibility(EventDeclarationSyntax even
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| eventDeclaration | |
+**eventDeclaration**
+
+
 
 #### Returns
 
@@ -201,9 +201,9 @@ public static Accessibility GetExplicitAccessibility(EventFieldDeclarationSyntax
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| eventFieldDeclaration | |
+**eventFieldDeclaration**
+
+
 
 #### Returns
 
@@ -221,9 +221,9 @@ public static Accessibility GetExplicitAccessibility(FieldDeclarationSyntax fiel
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| fieldDeclaration | |
+**fieldDeclaration**
+
+
 
 #### Returns
 
@@ -241,9 +241,9 @@ public static Accessibility GetExplicitAccessibility(IncompleteMemberSyntax inco
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| incompleteMember | |
+**incompleteMember**
+
+
 
 #### Returns
 
@@ -261,9 +261,9 @@ public static Accessibility GetExplicitAccessibility(IndexerDeclarationSyntax in
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| indexerDeclaration | |
+**indexerDeclaration**
+
+
 
 #### Returns
 
@@ -281,9 +281,9 @@ public static Accessibility GetExplicitAccessibility(InterfaceDeclarationSyntax 
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| interfaceDeclaration | |
+**interfaceDeclaration**
+
+
 
 #### Returns
 
@@ -301,9 +301,9 @@ public static Accessibility GetExplicitAccessibility(MethodDeclarationSyntax met
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| methodDeclaration | |
+**methodDeclaration**
+
+
 
 #### Returns
 
@@ -321,9 +321,9 @@ public static Accessibility GetExplicitAccessibility(OperatorDeclarationSyntax o
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| operatorDeclaration | |
+**operatorDeclaration**
+
+
 
 #### Returns
 
@@ -341,9 +341,9 @@ public static Accessibility GetExplicitAccessibility(PropertyDeclarationSyntax p
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| propertyDeclaration | |
+**propertyDeclaration**
+
+
 
 #### Returns
 
@@ -361,9 +361,9 @@ public static Accessibility GetExplicitAccessibility(StructDeclarationSyntax str
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| structDeclaration | |
+**structDeclaration**
+
+
 
 #### Returns
 
@@ -381,9 +381,9 @@ public static Accessibility GetExplicitAccessibility(SyntaxNode declaration)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| declaration | |
+**declaration**
+
+
 
 #### Returns
 

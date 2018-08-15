@@ -21,9 +21,9 @@ public static AttributeListSyntax AttributeList(AttributeSyntax attribute)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| attribute | |
+**attribute**
+
+
 
 #### Returns
 
@@ -37,9 +37,9 @@ public static AttributeListSyntax AttributeList(params AttributeSyntax[] attribu
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| attributes | |
+**attributes**
+
+
 
 #### Returns
 

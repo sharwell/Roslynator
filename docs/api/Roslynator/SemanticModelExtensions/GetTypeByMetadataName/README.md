@@ -16,10 +16,13 @@ public static INamedTypeSymbol GetTypeByMetadataName(this SemanticModel semantic
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semanticModel | |
-| fullyQualifiedMetadataName | |
+**semanticModel**
+
+
+
+**fullyQualifiedMetadataName**
+
+
 
 ### Returns
 

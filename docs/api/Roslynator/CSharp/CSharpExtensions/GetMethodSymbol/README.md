@@ -16,11 +16,17 @@ public static IMethodSymbol GetMethodSymbol(this SemanticModel semanticModel, Ex
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semanticModel | |
-| expression | |
-| cancellationToken | |
+**semanticModel**
+
+
+
+**expression**
+
+
+
+**cancellationToken**
+
+
 
 ### Returns
 

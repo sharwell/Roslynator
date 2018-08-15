@@ -12,9 +12,9 @@ public void Add(Foo item)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| item | |
+**item**
+
+
 
 ### Implements
 

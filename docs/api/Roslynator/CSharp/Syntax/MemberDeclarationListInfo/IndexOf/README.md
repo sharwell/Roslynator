@@ -25,9 +25,9 @@ public int IndexOf(Func<MemberDeclarationSyntax, bool> predicate)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| predicate | |
+**predicate**
+
+
 
 #### Returns
 
@@ -45,9 +45,9 @@ public int IndexOf(MemberDeclarationSyntax member)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| member | |
+**member**
+
+
 
 #### Returns
 

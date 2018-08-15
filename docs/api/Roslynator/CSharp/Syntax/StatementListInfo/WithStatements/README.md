@@ -25,9 +25,9 @@ public StatementListInfo WithStatements(IEnumerable<StatementSyntax> statements)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statements | |
+**statements**
+
+
 
 #### Returns
 
@@ -45,9 +45,9 @@ public StatementListInfo WithStatements(SyntaxList<StatementSyntax> statements)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statements | |
+**statements**
+
+
 
 #### Returns
 

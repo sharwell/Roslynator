@@ -23,18 +23,21 @@ Searches for a member that matches the conditions defined by the specified predi
 public static TSymbol FindMember<TSymbol>(this ITypeSymbol typeSymbol, Func<TSymbol, bool> predicate = null) where TSymbol : Microsoft.CodeAnalysis.ISymbol
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TSymbol | |
+**TSymbol**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
-| predicate | |
+**typeSymbol**
+
+
+
+**predicate**
+
+
 
 #### Returns
 
@@ -50,19 +53,25 @@ Searches for a member that has the specified name and matches the conditions def
 public static TSymbol FindMember<TSymbol>(this ITypeSymbol typeSymbol, string name, Func<TSymbol, bool> predicate = null) where TSymbol : Microsoft.CodeAnalysis.ISymbol
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TSymbol | |
+**TSymbol**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeSymbol | |
-| name | |
-| predicate | |
+**typeSymbol**
+
+
+
+**name**
+
+
+
+**predicate**
+
+
 
 #### Returns
 

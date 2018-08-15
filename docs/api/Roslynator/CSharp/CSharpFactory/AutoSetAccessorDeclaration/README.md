@@ -12,9 +12,9 @@ public static AccessorDeclarationSyntax AutoSetAccessorDeclaration(SyntaxTokenLi
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
+**modifiers**
+
+
 
 ### Returns
 

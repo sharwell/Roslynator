@@ -16,9 +16,9 @@ public StatementListInfo AddRange(IEnumerable<StatementSyntax> statements)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statements | |
+**statements**
+
+
 
 ### Returns
 

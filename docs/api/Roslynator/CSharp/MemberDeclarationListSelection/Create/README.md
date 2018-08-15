@@ -26,10 +26,13 @@ public static MemberDeclarationListSelection Create(CompilationUnitSyntax compil
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| compilationUnit | |
-| span | |
+**compilationUnit**
+
+
+
+**span**
+
+
 
 #### Returns
 
@@ -47,10 +50,13 @@ public static MemberDeclarationListSelection Create(NamespaceDeclarationSyntax n
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namespaceDeclaration | |
-| span | |
+**namespaceDeclaration**
+
+
+
+**span**
+
+
 
 #### Returns
 
@@ -68,10 +74,13 @@ public static MemberDeclarationListSelection Create(TypeDeclarationSyntax typeDe
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| typeDeclaration | |
-| span | |
+**typeDeclaration**
+
+
+
+**span**
+
+
 
 #### Returns
 

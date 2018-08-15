@@ -12,10 +12,13 @@ public static bool operator ==(in IfStatementOrElseClause left, in IfStatementOr
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| left | |
-| right | |
+**left**
+
+
+
+**right**
+
+
 
 ### Returns
 

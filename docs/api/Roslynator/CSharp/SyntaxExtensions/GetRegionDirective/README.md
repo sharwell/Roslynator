@@ -16,9 +16,9 @@ public static RegionDirectiveTriviaSyntax GetRegionDirective(this EndRegionDirec
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| endRegionDirective | |
+**endRegionDirective**
+
+
 
 ### Returns
 

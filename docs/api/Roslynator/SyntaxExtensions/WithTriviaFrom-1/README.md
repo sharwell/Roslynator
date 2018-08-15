@@ -27,10 +27,13 @@ public static SyntaxToken WithTriviaFrom(this SyntaxToken token, SyntaxNode node
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| token | |
-| node | |
+**token**
+
+
+
+**node**
+
+
 
 #### Returns
 
@@ -47,18 +50,21 @@ If the list contains more than one item, first item is updated with leading triv
 public static SeparatedSyntaxList<TNode> WithTriviaFrom<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| node | |
+**list**
+
+
+
+**node**
+
+
 
 #### Returns
 
@@ -75,18 +81,21 @@ If the list contains more than one item, first item is updated with leading triv
 public static SyntaxList<TNode> WithTriviaFrom<TNode>(this SyntaxList<TNode> list, SyntaxNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| node | |
+**list**
+
+
+
+**node**
+
+
 
 #### Returns
 
@@ -102,18 +111,21 @@ Creates a new node from this node with both the leading and trailing trivia of t
 public static TNode WithTriviaFrom<TNode>(this TNode node, SyntaxToken token) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| token | |
+**node**
+
+
+
+**token**
+
+
 
 #### Returns
 

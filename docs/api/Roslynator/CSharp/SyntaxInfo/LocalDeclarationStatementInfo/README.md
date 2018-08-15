@@ -25,10 +25,13 @@ public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(Expres
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| value | |
-| allowMissing | |
+**value**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 
@@ -46,10 +49,13 @@ public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(LocalD
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| localDeclarationStatement | |
-| allowMissing | |
+**localDeclarationStatement**
+
+
+
+**allowMissing**
+
+
 
 #### Returns
 

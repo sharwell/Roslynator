@@ -12,10 +12,13 @@ public static bool operator !=(in ExtensionMethodSymbolInfo info1, in ExtensionM
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

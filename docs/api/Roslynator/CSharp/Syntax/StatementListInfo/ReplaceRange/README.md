@@ -16,10 +16,13 @@ public StatementListInfo ReplaceRange(StatementSyntax statementInList, IEnumerab
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| statementInList | |
-| newStatements | |
+**statementInList**
+
+
+
+**newStatements**
+
+
 
 ### Returns
 

@@ -12,10 +12,13 @@ public static bool operator ==(in ExpressionChain info1, in ExpressionChain info
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

@@ -33,10 +33,13 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| classDeclaration | |
-| members | |
+**classDeclaration**
+
+
+
+**members**
+
+
 
 #### Returns
 
@@ -54,10 +57,13 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| classDeclaration | |
-| member | |
+**classDeclaration**
+
+
+
+**member**
+
+
 
 #### Returns
 
@@ -75,10 +81,13 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| compilationUnit | |
-| members | |
+**compilationUnit**
+
+
+
+**members**
+
+
 
 #### Returns
 
@@ -96,10 +105,13 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| compilationUnit | |
-| member | |
+**compilationUnit**
+
+
+
+**member**
+
+
 
 #### Returns
 
@@ -117,10 +129,13 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| interfaceDeclaration | |
-| members | |
+**interfaceDeclaration**
+
+
+
+**members**
+
+
 
 #### Returns
 
@@ -138,10 +153,13 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| interfaceDeclaration | |
-| member | |
+**interfaceDeclaration**
+
+
+
+**member**
+
+
 
 #### Returns
 
@@ -159,10 +177,13 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namespaceDeclaration | |
-| members | |
+**namespaceDeclaration**
+
+
+
+**members**
+
+
 
 #### Returns
 
@@ -180,10 +201,13 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namespaceDeclaration | |
-| member | |
+**namespaceDeclaration**
+
+
+
+**member**
+
+
 
 #### Returns
 
@@ -201,10 +225,13 @@ public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax s
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| structDeclaration | |
-| members | |
+**structDeclaration**
+
+
+
+**members**
+
+
 
 #### Returns
 
@@ -222,10 +249,13 @@ public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax s
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| structDeclaration | |
-| member | |
+**structDeclaration**
+
+
+
+**member**
+
+
 
 #### Returns
 

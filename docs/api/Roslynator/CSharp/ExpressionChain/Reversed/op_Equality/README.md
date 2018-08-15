@@ -12,10 +12,13 @@ public static bool operator ==(in ExpressionChain.Reversed reversed1, in Express
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| reversed1 | |
-| reversed2 | |
+**reversed1**
+
+
+
+**reversed2**
+
+
 
 ### Returns
 

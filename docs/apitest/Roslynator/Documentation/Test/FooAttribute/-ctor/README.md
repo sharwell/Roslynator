@@ -13,30 +13,93 @@ public FooAttribute(object object1, string s1, bool bool1, bool bool2, byte byte
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| object1 | |
-| s1 | |
-| bool1 | |
-| bool2 | |
-| byte1 | |
-| ch1 | |
-| double1 | |
-| float1 | |
-| int1 | |
-| long1 | |
-| sbyte1 | |
-| short1 | |
-| uint1 | |
-| ulong1 | |
-| ushort1 | |
-| type | |
-| f1 | |
-| f2 | |
-| f3 | |
-| f4 | |
-| f5 | |
-| f6 | |
+**object1**
+
+
+
+**s1**
+
+
+
+**bool1**
+
+
+
+**bool2**
+
+
+
+**byte1**
+
+
+
+**ch1**
+
+
+
+**double1**
+
+
+
+**float1**
+
+
+
+**int1**
+
+
+
+**long1**
+
+
+
+**sbyte1**
+
+
+
+**short1**
+
+
+
+**uint1**
+
+
+
+**ulong1**
+
+
+
+**ushort1**
+
+
+
+**type**
+
+
+
+**f1**
+
+
+
+**f2**
+
+
+
+**f3**
+
+
+
+**f4**
+
+
+
+**f5**
+
+
+
+**f6**
+
+
 
 ### Attributes
 

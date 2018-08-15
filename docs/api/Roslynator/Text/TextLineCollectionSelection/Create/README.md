@@ -16,10 +16,13 @@ public static TextLineCollectionSelection Create(TextLineCollection lines, TextS
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| lines | |
-| span | |
+**lines**
+
+
+
+**span**
+
+
 
 ### Returns
 

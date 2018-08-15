@@ -16,10 +16,13 @@ public UsingDirectiveListInfo InsertRange(int index, IEnumerable<UsingDirectiveS
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
-| usings | |
+**index**
+
+
+
+**usings**
+
+
 
 ### Returns
 

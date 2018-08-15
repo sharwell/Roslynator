@@ -21,9 +21,9 @@ public static PostfixUnaryExpressionSyntax PostIncrementExpression(ExpressionSyn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| operand | |
+**operand**
+
+
 
 #### Returns
 
@@ -37,10 +37,13 @@ public static PostfixUnaryExpressionSyntax PostIncrementExpression(ExpressionSyn
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| operand | |
-| operatorToken | |
+**operand**
+
+
+
+**operatorToken**
+
+
 
 #### Returns
 

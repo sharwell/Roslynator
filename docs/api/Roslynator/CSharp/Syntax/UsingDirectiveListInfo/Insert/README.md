@@ -16,10 +16,13 @@ public UsingDirectiveListInfo Insert(int index, UsingDirectiveSyntax usingDirect
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| index | |
-| usingDirective | |
+**index**
+
+
+
+**usingDirective**
+
+
 
 ### Returns
 

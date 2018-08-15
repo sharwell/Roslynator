@@ -27,11 +27,17 @@ public static SyntaxTokenList ReplaceAt(this SyntaxTokenList tokenList, int inde
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| tokenList | |
-| index | |
-| newToken | |
+**tokenList**
+
+
+
+**index**
+
+
+
+**newToken**
+
+
 
 #### Returns
 
@@ -49,11 +55,17 @@ public static SyntaxTriviaList ReplaceAt(this SyntaxTriviaList triviaList, int i
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| triviaList | |
-| index | |
-| newTrivia | |
+**triviaList**
+
+
+
+**index**
+
+
+
+**newTrivia**
+
+
 
 #### Returns
 
@@ -69,19 +81,25 @@ Creates a new list with a node at the specified index replaced with a new node\.
 public static SeparatedSyntaxList<TNode> ReplaceAt<TNode>(this SeparatedSyntaxList<TNode> list, int index, TNode newNode) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| index | |
-| newNode | |
+**list**
+
+
+
+**index**
+
+
+
+**newNode**
+
+
 
 #### Returns
 
@@ -97,19 +115,25 @@ Creates a new list with the node at the specified index replaced with a new node
 public static SyntaxList<TNode> ReplaceAt<TNode>(this SyntaxList<TNode> list, int index, TNode newNode) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| list | |
-| index | |
-| newNode | |
+**list**
+
+
+
+**index**
+
+
+
+**newNode**
+
+
 
 #### Returns
 

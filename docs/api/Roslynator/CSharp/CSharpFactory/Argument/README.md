@@ -12,10 +12,13 @@ public static ArgumentSyntax Argument(NameColonSyntax nameColon, ExpressionSynta
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| nameColon | |
-| expression | |
+**nameColon**
+
+
+
+**expression**
+
+
 
 ### Returns
 

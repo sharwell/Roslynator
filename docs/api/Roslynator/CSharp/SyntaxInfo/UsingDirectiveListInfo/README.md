@@ -26,9 +26,9 @@ public static UsingDirectiveListInfo UsingDirectiveListInfo(CompilationUnitSynta
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| compilationUnit | |
+**compilationUnit**
+
+
 
 #### Returns
 
@@ -46,9 +46,9 @@ public static UsingDirectiveListInfo UsingDirectiveListInfo(NamespaceDeclaration
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| declaration | |
+**declaration**
+
+
 
 #### Returns
 
@@ -66,9 +66,9 @@ public static UsingDirectiveListInfo UsingDirectiveListInfo(SyntaxNode node)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
+**node**
+
+
 
 #### Returns
 

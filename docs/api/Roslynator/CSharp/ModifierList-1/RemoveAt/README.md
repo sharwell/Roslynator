@@ -16,10 +16,13 @@ public TNode RemoveAt(TNode node, int index)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| node | |
-| index | |
+**node**
+
+
+
+**index**
+
+
 
 ### Returns
 

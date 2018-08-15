@@ -12,10 +12,13 @@ public static bool operator !=(in StringConcatenationExpressionInfo info1, in St
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

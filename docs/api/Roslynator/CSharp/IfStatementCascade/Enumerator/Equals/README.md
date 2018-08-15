@@ -12,9 +12,9 @@ public override bool Equals(object obj)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| obj | |
+**obj**
+
+
 
 ### Returns
 

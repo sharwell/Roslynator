@@ -14,11 +14,11 @@ Represents a list of modifiers\.
 public abstract class ModifierList<TNode> where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TNode | |
+**TNode**
+
+
 
 ### Inheritance
 

@@ -16,9 +16,9 @@ public static SyntaxTokenList FromAccessibility(Accessibility accessibility)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| accessibility | |
+**accessibility**
+
+
 
 ### Returns
 

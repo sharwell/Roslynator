@@ -21,12 +21,21 @@ public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| returnType | |
-| identifier | |
-| parameterList | |
+**modifiers**
+
+
+
+**returnType**
+
+
+
+**identifier**
+
+
+
+**parameterList**
+
+
 
 #### Returns
 
@@ -40,12 +49,21 @@ public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| returnType | |
-| identifier | |
-| parameterList | |
+**modifiers**
+
+
+
+**returnType**
+
+
+
+**identifier**
+
+
+
+**parameterList**
+
+
 
 #### Returns
 

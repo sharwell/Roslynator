@@ -27,10 +27,13 @@ public static bool ImplementsInterfaceMember(this ISymbol symbol, bool allInterf
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| symbol | |
-| allInterfaces | If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\. |
+**symbol**
+
+
+
+**allInterfaces**
+
+
 
 #### Returns
 
@@ -48,11 +51,17 @@ public static bool ImplementsInterfaceMember(this ISymbol symbol, INamedTypeSymb
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| symbol | |
-| interfaceSymbol | |
-| allInterfaces | If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\. |
+**symbol**
+
+
+
+**interfaceSymbol**
+
+
+
+**allInterfaces**
+
+
 
 #### Returns
 
@@ -68,18 +77,21 @@ Returns true if the symbol implements any interface member\.
 public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, bool allInterfaces = false) where TSymbol : Microsoft.CodeAnalysis.ISymbol
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TSymbol | |
+**TSymbol**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| symbol | |
-| allInterfaces | If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\. |
+**symbol**
+
+
+
+**allInterfaces**
+
+
 
 #### Returns
 
@@ -95,19 +107,25 @@ Returns true if the symbol implements any member of the specified interface\.
 public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, INamedTypeSymbol interfaceSymbol, bool allInterfaces = false) where TSymbol : Microsoft.CodeAnalysis.ISymbol
 ```
 
-#### Type Parameters
+#### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| TSymbol | |
+**TSymbol**
+
+
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| symbol | |
-| interfaceSymbol | |
-| allInterfaces | If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\. |
+**symbol**
+
+
+
+**interfaceSymbol**
+
+
+
+**allInterfaces**
+
+
 
 #### Returns
 

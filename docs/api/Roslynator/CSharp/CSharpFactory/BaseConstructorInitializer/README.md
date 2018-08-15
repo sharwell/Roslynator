@@ -21,9 +21,9 @@ public static ConstructorInitializerSyntax BaseConstructorInitializer(ArgumentLi
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| argumentList | |
+**argumentList**
+
+
 
 #### Returns
 
@@ -37,10 +37,13 @@ public static ConstructorInitializerSyntax BaseConstructorInitializer(SyntaxToke
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semicolonToken | |
-| argumentList | |
+**semicolonToken**
+
+
+
+**argumentList**
+
+
 
 #### Returns
 

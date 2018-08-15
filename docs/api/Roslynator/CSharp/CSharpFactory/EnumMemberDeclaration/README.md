@@ -23,10 +23,13 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Equ
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| name | |
-| value | |
+**name**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -40,10 +43,13 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Exp
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| name | |
-| value | |
+**name**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -57,10 +63,13 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| identifier | |
-| value | |
+**identifier**
+
+
+
+**value**
+
+
 
 #### Returns
 
@@ -74,10 +83,13 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| identifier | |
-| value | |
+**identifier**
+
+
+
+**value**
+
+
 
 #### Returns
 

@@ -16,9 +16,9 @@ public static DocumentationCommentTriviaSyntax GetSingleLineDocumentationComment
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| member | |
+**member**
+
+
 
 ### Returns
 

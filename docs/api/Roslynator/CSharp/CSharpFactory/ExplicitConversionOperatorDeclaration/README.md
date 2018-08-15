@@ -21,12 +21,21 @@ public static ConversionOperatorDeclarationSyntax ExplicitConversionOperatorDecl
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| parameterList | |
-| expressionBody | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**parameterList**
+
+
+
+**expressionBody**
+
+
 
 #### Returns
 
@@ -40,12 +49,21 @@ public static ConversionOperatorDeclarationSyntax ExplicitConversionOperatorDecl
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| modifiers | |
-| type | |
-| parameterList | |
-| body | |
+**modifiers**
+
+
+
+**type**
+
+
+
+**parameterList**
+
+
+
+**body**
+
+
 
 #### Returns
 

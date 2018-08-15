@@ -12,9 +12,9 @@ public static LiteralExpressionSyntax LiteralExpression(object value)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| value | |
+**value**
+
+
 
 ### Returns
 

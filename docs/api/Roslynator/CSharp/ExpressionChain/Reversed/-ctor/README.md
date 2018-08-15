@@ -12,7 +12,7 @@ public Reversed(in ExpressionChain chain)
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| chain | |
+**chain**
+
+
 

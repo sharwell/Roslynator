@@ -16,10 +16,13 @@ public static IEnumerable<XmlElementSyntax> Elements(this DocumentationCommentTr
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| documentationComment | |
-| localName | |
+**documentationComment**
+
+
+
+**localName**
+
+
 
 ### Returns
 

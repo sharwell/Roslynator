@@ -16,12 +16,21 @@ public static bool IsDefaultValue(this SemanticModel semanticModel, ITypeSymbol 
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| semanticModel | |
-| typeSymbol | |
-| expression | |
-| cancellationToken | |
+**semanticModel**
+
+
+
+**typeSymbol**
+
+
+
+**expression**
+
+
+
+**cancellationToken**
+
+
 
 ### Returns
 

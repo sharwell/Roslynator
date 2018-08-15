@@ -16,10 +16,13 @@ public MemberDeclarationListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newN
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| oldNode | |
-| newNode | |
+**oldNode**
+
+
+
+**newNode**
+
+
 
 ### Returns
 

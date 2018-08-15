@@ -12,10 +12,13 @@ public static bool operator ==(in ModifierListInfo info1, in ModifierListInfo in
 
 ### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| info1 | |
-| info2 | |
+**info1**
+
+
+
+**info2**
+
+
 
 ### Returns
 

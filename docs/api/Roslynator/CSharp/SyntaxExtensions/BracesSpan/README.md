@@ -28,9 +28,9 @@ public static TextSpan BracesSpan(this ClassDeclarationSyntax classDeclaration)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| classDeclaration | |
+**classDeclaration**
+
+
 
 #### Returns
 
@@ -48,9 +48,9 @@ public static TextSpan BracesSpan(this EnumDeclarationSyntax enumDeclaration)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| enumDeclaration | |
+**enumDeclaration**
+
+
 
 #### Returns
 
@@ -68,9 +68,9 @@ public static TextSpan BracesSpan(this InterfaceDeclarationSyntax interfaceDecla
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| interfaceDeclaration | |
+**interfaceDeclaration**
+
+
 
 #### Returns
 
@@ -88,9 +88,9 @@ public static TextSpan BracesSpan(this NamespaceDeclarationSyntax namespaceDecla
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| namespaceDeclaration | |
+**namespaceDeclaration**
+
+
 
 #### Returns
 
@@ -108,9 +108,9 @@ public static TextSpan BracesSpan(this StructDeclarationSyntax structDeclaration
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| structDeclaration | |
+**structDeclaration**
+
+
 
 #### Returns
 

@@ -21,9 +21,9 @@ public static ParameterListSyntax ParameterList(ParameterSyntax parameter)
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| parameter | |
+**parameter**
+
+
 
 #### Returns
 
@@ -37,9 +37,9 @@ public static ParameterListSyntax ParameterList(params ParameterSyntax[] paramet
 
 #### Parameters
 
-| Name | Summary |
-| ---- | ------- |
-| parameters | |
+**parameters**
+
+
 
 #### Returns
 
