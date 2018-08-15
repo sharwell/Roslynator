@@ -43,7 +43,9 @@ public static Accessibility GetDefaultAccessibility(AccessorDeclarationSyntax ac
 
 #### Parameters
 
-accessorDeclaration
+##### accessorDeclaration
+
+
 
 
 
@@ -63,7 +65,9 @@ public static Accessibility GetDefaultAccessibility(BaseTypeDeclarationSyntax ba
 
 #### Parameters
 
-baseTypeDeclaration
+##### baseTypeDeclaration
+
+
 
 
 
@@ -83,7 +87,9 @@ public static Accessibility GetDefaultAccessibility(ClassDeclarationSyntax class
 
 #### Parameters
 
-classDeclaration
+##### classDeclaration
+
+
 
 
 
@@ -103,7 +109,9 @@ public static Accessibility GetDefaultAccessibility(ConstructorDeclarationSyntax
 
 #### Parameters
 
-constructorDeclaration
+##### constructorDeclaration
+
+
 
 
 
@@ -123,7 +131,9 @@ public static Accessibility GetDefaultAccessibility(ConversionOperatorDeclaratio
 
 #### Parameters
 
-conversionOperatorDeclaration
+##### conversionOperatorDeclaration
+
+
 
 
 
@@ -143,7 +153,9 @@ public static Accessibility GetDefaultAccessibility(DelegateDeclarationSyntax de
 
 #### Parameters
 
-delegateDeclaration
+##### delegateDeclaration
+
+
 
 
 
@@ -163,7 +175,9 @@ public static Accessibility GetDefaultAccessibility(DestructorDeclarationSyntax 
 
 #### Parameters
 
-destructorDeclaration
+##### destructorDeclaration
+
+
 
 
 
@@ -183,7 +197,9 @@ public static Accessibility GetDefaultAccessibility(EnumDeclarationSyntax enumDe
 
 #### Parameters
 
-enumDeclaration
+##### enumDeclaration
+
+
 
 
 
@@ -203,7 +219,9 @@ public static Accessibility GetDefaultAccessibility(EnumMemberDeclarationSyntax 
 
 #### Parameters
 
-enumMemberDeclaration
+##### enumMemberDeclaration
+
+
 
 
 
@@ -223,7 +241,9 @@ public static Accessibility GetDefaultAccessibility(EventDeclarationSyntax event
 
 #### Parameters
 
-eventDeclaration
+##### eventDeclaration
+
+
 
 
 
@@ -243,7 +263,9 @@ public static Accessibility GetDefaultAccessibility(EventFieldDeclarationSyntax 
 
 #### Parameters
 
-eventFieldDeclaration
+##### eventFieldDeclaration
+
+
 
 
 
@@ -263,7 +285,9 @@ public static Accessibility GetDefaultAccessibility(FieldDeclarationSyntax field
 
 #### Parameters
 
-fieldDeclaration
+##### fieldDeclaration
+
+
 
 
 
@@ -283,7 +307,9 @@ public static Accessibility GetDefaultAccessibility(IndexerDeclarationSyntax ind
 
 #### Parameters
 
-indexerDeclaration
+##### indexerDeclaration
+
+
 
 
 
@@ -303,7 +329,9 @@ public static Accessibility GetDefaultAccessibility(InterfaceDeclarationSyntax i
 
 #### Parameters
 
-interfaceDeclaration
+##### interfaceDeclaration
+
+
 
 
 
@@ -323,7 +351,9 @@ public static Accessibility GetDefaultAccessibility(MemberDeclarationSyntax decl
 
 #### Parameters
 
-declaration
+##### declaration
+
+
 
 
 
@@ -343,7 +373,9 @@ public static Accessibility GetDefaultAccessibility(MethodDeclarationSyntax meth
 
 #### Parameters
 
-methodDeclaration
+##### methodDeclaration
+
+
 
 
 
@@ -363,7 +395,9 @@ public static Accessibility GetDefaultAccessibility(NamespaceDeclarationSyntax n
 
 #### Parameters
 
-namespaceDeclaration
+##### namespaceDeclaration
+
+
 
 
 
@@ -383,7 +417,9 @@ public static Accessibility GetDefaultAccessibility(OperatorDeclarationSyntax op
 
 #### Parameters
 
-operatorDeclaration
+##### operatorDeclaration
+
+
 
 
 
@@ -403,7 +439,9 @@ public static Accessibility GetDefaultAccessibility(PropertyDeclarationSyntax pr
 
 #### Parameters
 
-propertyDeclaration
+##### propertyDeclaration
+
+
 
 
 
@@ -423,7 +461,9 @@ public static Accessibility GetDefaultAccessibility(StructDeclarationSyntax stru
 
 #### Parameters
 
-structDeclaration
+##### structDeclaration
+
+
 
 
 

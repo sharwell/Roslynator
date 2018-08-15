@@ -12,7 +12,9 @@ public bool Remove(Foo item)
 
 ### Parameters
 
-item
+#### item
+
+
 
 
 

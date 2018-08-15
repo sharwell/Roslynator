@@ -16,15 +16,21 @@ public static Task<Document> RemoveRegionAsync(this Document document, RegionInf
 
 ### Parameters
 
-document
+#### document
 
 
 
-region
+
+
+#### region
 
 
 
-cancellationToken
+
+
+#### cancellationToken
+
+
 
 
 

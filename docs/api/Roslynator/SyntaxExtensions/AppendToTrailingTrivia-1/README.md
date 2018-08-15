@@ -27,11 +27,15 @@ public static SyntaxToken AppendToTrailingTrivia(this SyntaxToken token, IEnumer
 
 #### Parameters
 
-token
+##### token
 
 
 
-trivia
+
+
+##### trivia
+
+
 
 
 
@@ -51,11 +55,15 @@ public static SyntaxToken AppendToTrailingTrivia(this SyntaxToken token, SyntaxT
 
 #### Parameters
 
-token
+##### token
 
 
 
-trivia
+
+
+##### trivia
+
+
 
 
 
@@ -75,17 +83,23 @@ public static TNode AppendToTrailingTrivia<TNode>(this TNode node, IEnumerable<S
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-node
+##### node
 
 
 
-trivia
+
+
+##### trivia
+
+
 
 
 
@@ -105,17 +119,23 @@ public static TNode AppendToTrailingTrivia<TNode>(this TNode node, SyntaxTrivia 
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-node
+##### node
 
 
 
-trivia
+
+
+##### trivia
+
+
 
 
 

@@ -12,11 +12,15 @@ public static bool operator ==(in SimpleIfElseInfo info1, in SimpleIfElseInfo in
 
 ### Parameters
 
-info1
+#### info1
 
 
 
-info2
+
+
+#### info2
+
+
 
 
 

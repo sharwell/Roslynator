@@ -21,11 +21,15 @@ public static BinaryExpressionSyntax LessThanOrEqualExpression(ExpressionSyntax 
 
 #### Parameters
 
-left
+##### left
 
 
 
-right
+
+
+##### right
+
+
 
 
 
@@ -41,15 +45,21 @@ public static BinaryExpressionSyntax LessThanOrEqualExpression(ExpressionSyntax 
 
 #### Parameters
 
-left
+##### left
 
 
 
-operatorToken
+
+
+##### operatorToken
 
 
 
-right
+
+
+##### right
+
+
 
 
 

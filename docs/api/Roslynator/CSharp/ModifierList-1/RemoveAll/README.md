@@ -25,7 +25,9 @@ public TNode RemoveAll(TNode node)
 
 #### Parameters
 
-node
+##### node
+
+
 
 
 
@@ -45,11 +47,15 @@ public TNode RemoveAll(TNode node, Func<SyntaxToken, bool> predicate)
 
 #### Parameters
 
-node
+##### node
 
 
 
-predicate
+
+
+##### predicate
+
+
 
 
 

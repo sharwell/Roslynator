@@ -21,15 +21,21 @@ public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList 
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-type
+
+
+##### type
 
 
 
-identifier
+
+
+##### identifier
+
+
 
 
 
@@ -45,15 +51,21 @@ public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList 
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-type
+
+
+##### type
 
 
 
-identifier
+
+
+##### identifier
+
+
 
 
 

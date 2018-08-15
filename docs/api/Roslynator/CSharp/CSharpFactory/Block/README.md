@@ -21,7 +21,9 @@ public static BlockSyntax Block(StatementSyntax statement)
 
 #### Parameters
 
-statement
+##### statement
+
+
 
 
 
@@ -37,15 +39,21 @@ public static BlockSyntax Block(SyntaxToken openBrace, StatementSyntax statement
 
 #### Parameters
 
-openBrace
+##### openBrace
 
 
 
-statement
+
+
+##### statement
 
 
 
-closeBrace
+
+
+##### closeBrace
+
+
 
 
 

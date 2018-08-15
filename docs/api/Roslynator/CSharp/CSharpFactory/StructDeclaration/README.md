@@ -21,15 +21,21 @@ public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifier
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-identifier
+
+
+##### identifier
 
 
 
-members
+
+
+##### members
+
+
 
 
 
@@ -45,15 +51,21 @@ public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifier
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-identifier
+
+
+##### identifier
 
 
 
-members
+
+
+##### members
+
+
 
 
 

@@ -16,7 +16,9 @@ public static bool IsErrorType(this ISymbol symbol)
 
 ### Parameters
 
-symbol
+#### symbol
+
+
 
 
 

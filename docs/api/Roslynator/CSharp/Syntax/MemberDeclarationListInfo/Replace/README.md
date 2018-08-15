@@ -16,11 +16,15 @@ public MemberDeclarationListInfo Replace(MemberDeclarationSyntax memberInList, M
 
 ### Parameters
 
-memberInList
+#### memberInList
 
 
 
-newMember
+
+
+#### newMember
+
+
 
 
 

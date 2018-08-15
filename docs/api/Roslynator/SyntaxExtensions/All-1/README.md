@@ -27,11 +27,15 @@ public static bool All(this SyntaxTokenList list, Func<SyntaxToken, bool> predic
 
 #### Parameters
 
-list
+##### list
 
 
 
-predicate
+
+
+##### predicate
+
+
 
 
 
@@ -51,11 +55,15 @@ public static bool All(this SyntaxTriviaList list, Func<SyntaxTrivia, bool> pred
 
 #### Parameters
 
-list
+##### list
 
 
 
-predicate
+
+
+##### predicate
+
+
 
 
 
@@ -75,17 +83,23 @@ public static bool All<TNode>(this SeparatedSyntaxList<TNode> list, Func<TNode, 
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-list
+##### list
 
 
 
-predicate
+
+
+##### predicate
+
+
 
 
 
@@ -105,17 +119,23 @@ public static bool All<TNode>(this SyntaxList<TNode> list, Func<TNode, bool> pre
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-list
+##### list
 
 
 
-predicate
+
+
+##### predicate
+
+
 
 
 

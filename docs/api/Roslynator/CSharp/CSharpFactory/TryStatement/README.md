@@ -12,15 +12,21 @@ public static TryStatementSyntax TryStatement(BlockSyntax block, CatchClauseSynt
 
 ### Parameters
 
-block
+#### block
 
 
 
-catch
+
+
+#### catch
 
 
 
-finally
+
+
+#### finally
+
+
 
 
 

@@ -16,7 +16,9 @@ public static bool CanHaveMembers(SyntaxKind kind)
 
 ### Parameters
 
-kind
+#### kind
+
+
 
 
 

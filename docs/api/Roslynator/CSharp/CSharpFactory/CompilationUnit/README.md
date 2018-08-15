@@ -22,7 +22,9 @@ public static CompilationUnitSyntax CompilationUnit(MemberDeclarationSyntax memb
 
 #### Parameters
 
-member
+##### member
+
+
 
 
 
@@ -38,11 +40,15 @@ public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyn
 
 #### Parameters
 
-usings
+##### usings
 
 
 
-member
+
+
+##### member
+
+
 
 
 
@@ -58,11 +64,15 @@ public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyn
 
 #### Parameters
 
-usings
+##### usings
 
 
 
-members
+
+
+##### members
+
+
 
 
 

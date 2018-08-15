@@ -12,11 +12,15 @@ public static bool operator ==(in ExtensionMethodSymbolInfo info1, in ExtensionM
 
 ### Parameters
 
-info1
+#### info1
 
 
 
-info2
+
+
+#### info2
+
+
 
 
 

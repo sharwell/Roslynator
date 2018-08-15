@@ -16,7 +16,9 @@ public static bool IsIEnumerableOfT(this ITypeSymbol typeSymbol)
 
 ### Parameters
 
-typeSymbol
+#### typeSymbol
+
+
 
 
 

@@ -25,11 +25,15 @@ public static bool HasAttribute(this ISymbol symbol, INamedTypeSymbol attributeC
 
 #### Parameters
 
-symbol
+##### symbol
 
 
 
-attributeClass
+
+
+##### attributeClass
+
+
 
 
 
@@ -49,15 +53,21 @@ public static bool HasAttribute(this ITypeSymbol typeSymbol, INamedTypeSymbol at
 
 #### Parameters
 
-typeSymbol
+##### typeSymbol
 
 
 
-attributeClass
+
+
+##### attributeClass
 
 
 
-includeBaseTypes
+
+
+##### includeBaseTypes
+
+
 
 
 

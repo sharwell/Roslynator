@@ -16,11 +16,15 @@ public static string CreateName(ITypeSymbol typeSymbol, bool firstCharToLower = 
 
 ### Parameters
 
-typeSymbol
+#### typeSymbol
 
 
 
-firstCharToLower
+
+
+#### firstCharToLower
+
+
 
 
 

@@ -16,7 +16,9 @@ public static bool IsCommentTrivia(SyntaxKind kind)
 
 ### Parameters
 
-kind
+#### kind
+
+
 
 
 

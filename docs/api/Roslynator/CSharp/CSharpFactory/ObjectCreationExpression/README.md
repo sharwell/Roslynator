@@ -12,11 +12,15 @@ public static ObjectCreationExpressionSyntax ObjectCreationExpression(TypeSyntax
 
 ### Parameters
 
-type
+#### type
 
 
 
-argumentList
+
+
+#### argumentList
+
+
 
 
 

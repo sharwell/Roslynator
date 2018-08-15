@@ -27,11 +27,15 @@ public static SyntaxToken WithTriviaFrom(this SyntaxToken token, SyntaxNode node
 
 #### Parameters
 
-token
+##### token
 
 
 
-node
+
+
+##### node
+
+
 
 
 
@@ -52,17 +56,23 @@ public static SeparatedSyntaxList<TNode> WithTriviaFrom<TNode>(this SeparatedSyn
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-list
+##### list
 
 
 
-node
+
+
+##### node
+
+
 
 
 
@@ -83,17 +93,23 @@ public static SyntaxList<TNode> WithTriviaFrom<TNode>(this SyntaxList<TNode> lis
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-list
+##### list
 
 
 
-node
+
+
+##### node
+
+
 
 
 
@@ -113,17 +129,23 @@ public static TNode WithTriviaFrom<TNode>(this TNode node, SyntaxToken token) wh
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-node
+##### node
 
 
 
-token
+
+
+##### token
+
+
 
 
 

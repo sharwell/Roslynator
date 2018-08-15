@@ -39,15 +39,21 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 #### Parameters
 
-accessibility
+##### accessibility
 
 
 
-accessibility1
+
+
+##### accessibility1
 
 
 
-accessibility2
+
+
+##### accessibility2
+
+
 
 
 
@@ -67,19 +73,27 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 #### Parameters
 
-accessibility
+##### accessibility
 
 
 
-accessibility1
+
+
+##### accessibility1
 
 
 
-accessibility2
+
+
+##### accessibility2
 
 
 
-accessibility3
+
+
+##### accessibility3
+
+
 
 
 
@@ -99,23 +113,33 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 #### Parameters
 
-accessibility
+##### accessibility
 
 
 
-accessibility1
+
+
+##### accessibility1
 
 
 
-accessibility2
+
+
+##### accessibility2
 
 
 
-accessibility3
+
+
+##### accessibility3
 
 
 
-accessibility4
+
+
+##### accessibility4
+
+
 
 
 
@@ -135,27 +159,39 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 #### Parameters
 
-accessibility
+##### accessibility
 
 
 
-accessibility1
+
+
+##### accessibility1
 
 
 
-accessibility2
+
+
+##### accessibility2
 
 
 
-accessibility3
+
+
+##### accessibility3
 
 
 
-accessibility4
+
+
+##### accessibility4
 
 
 
-accessibility5
+
+
+##### accessibility5
+
+
 
 
 
@@ -175,15 +211,21 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 #### Parameters
 
-methodKind
+##### methodKind
 
 
 
-methodKind1
+
+
+##### methodKind1
 
 
 
-methodKind2
+
+
+##### methodKind2
+
+
 
 
 
@@ -203,19 +245,27 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 #### Parameters
 
-methodKind
+##### methodKind
 
 
 
-methodKind1
+
+
+##### methodKind1
 
 
 
-methodKind2
+
+
+##### methodKind2
 
 
 
-methodKind3
+
+
+##### methodKind3
+
+
 
 
 
@@ -235,23 +285,33 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 #### Parameters
 
-methodKind
+##### methodKind
 
 
 
-methodKind1
+
+
+##### methodKind1
 
 
 
-methodKind2
+
+
+##### methodKind2
 
 
 
-methodKind3
+
+
+##### methodKind3
 
 
 
-methodKind4
+
+
+##### methodKind4
+
+
 
 
 
@@ -271,27 +331,39 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 #### Parameters
 
-methodKind
+##### methodKind
 
 
 
-methodKind1
+
+
+##### methodKind1
 
 
 
-methodKind2
+
+
+##### methodKind2
 
 
 
-methodKind3
+
+
+##### methodKind3
 
 
 
-methodKind4
+
+
+##### methodKind4
 
 
 
-methodKind5
+
+
+##### methodKind5
+
+
 
 
 
@@ -311,15 +383,21 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 #### Parameters
 
-specialType
+##### specialType
 
 
 
-specialType1
+
+
+##### specialType1
 
 
 
-specialType2
+
+
+##### specialType2
+
+
 
 
 
@@ -339,19 +417,27 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 #### Parameters
 
-specialType
+##### specialType
 
 
 
-specialType1
+
+
+##### specialType1
 
 
 
-specialType2
+
+
+##### specialType2
 
 
 
-specialType3
+
+
+##### specialType3
+
+
 
 
 
@@ -371,23 +457,33 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 #### Parameters
 
-specialType
+##### specialType
 
 
 
-specialType1
+
+
+##### specialType1
 
 
 
-specialType2
+
+
+##### specialType2
 
 
 
-specialType3
+
+
+##### specialType3
 
 
 
-specialType4
+
+
+##### specialType4
+
+
 
 
 
@@ -407,27 +503,39 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 #### Parameters
 
-specialType
+##### specialType
 
 
 
-specialType1
+
+
+##### specialType1
 
 
 
-specialType2
+
+
+##### specialType2
 
 
 
-specialType3
+
+
+##### specialType3
 
 
 
-specialType4
+
+
+##### specialType4
 
 
 
-specialType5
+
+
+##### specialType5
+
+
 
 
 
@@ -447,15 +555,21 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 #### Parameters
 
-typeKind
+##### typeKind
 
 
 
-typeKind1
+
+
+##### typeKind1
 
 
 
-typeKind2
+
+
+##### typeKind2
+
+
 
 
 
@@ -475,19 +589,27 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 #### Parameters
 
-typeKind
+##### typeKind
 
 
 
-typeKind1
+
+
+##### typeKind1
 
 
 
-typeKind2
+
+
+##### typeKind2
 
 
 
-typeKind3
+
+
+##### typeKind3
+
+
 
 
 
@@ -507,23 +629,33 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 #### Parameters
 
-typeKind
+##### typeKind
 
 
 
-typeKind1
+
+
+##### typeKind1
 
 
 
-typeKind2
+
+
+##### typeKind2
 
 
 
-typeKind3
+
+
+##### typeKind3
 
 
 
-typeKind4
+
+
+##### typeKind4
+
+
 
 
 
@@ -543,27 +675,39 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 #### Parameters
 
-typeKind
+##### typeKind
 
 
 
-typeKind1
+
+
+##### typeKind1
 
 
 
-typeKind2
+
+
+##### typeKind2
 
 
 
-typeKind3
+
+
+##### typeKind3
 
 
 
-typeKind4
+
+
+##### typeKind4
 
 
 
-typeKind5
+
+
+##### typeKind5
+
+
 
 
 

@@ -21,7 +21,9 @@ public static BracketedParameterListSyntax BracketedParameterList(ParameterSynta
 
 #### Parameters
 
-parameter
+##### parameter
+
+
 
 
 
@@ -37,7 +39,9 @@ public static BracketedParameterListSyntax BracketedParameterList(params Paramet
 
 #### Parameters
 
-parameters
+##### parameters
+
+
 
 
 

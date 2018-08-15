@@ -26,19 +26,27 @@ public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode
 
 #### Parameters
 
-document
+##### document
 
 
 
-oldNode
+
+
+##### oldNode
 
 
 
-newNodes
+
+
+##### newNodes
 
 
 
-cancellationToken
+
+
+##### cancellationToken
+
+
 
 
 
@@ -58,19 +66,27 @@ public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode
 
 #### Parameters
 
-document
+##### document
 
 
 
-oldNode
+
+
+##### oldNode
 
 
 
-newNode
+
+
+##### newNode
 
 
 
-cancellationToken
+
+
+##### cancellationToken
+
+
 
 
 
@@ -90,25 +106,35 @@ public static Task<Solution> ReplaceNodeAsync<TNode>(this Solution solution, TNo
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-solution
+##### solution
 
 
 
-oldNode
+
+
+##### oldNode
 
 
 
-newNode
+
+
+##### newNode
 
 
 
-cancellationToken
+
+
+##### cancellationToken
+
+
 
 
 

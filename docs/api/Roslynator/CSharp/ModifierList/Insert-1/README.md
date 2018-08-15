@@ -27,15 +27,21 @@ public static SyntaxTokenList Insert(SyntaxTokenList modifiers, SyntaxKind kind,
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-kind
+
+
+##### kind
 
 
 
-comparer
+
+
+##### comparer
+
+
 
 
 
@@ -55,15 +61,21 @@ public static SyntaxTokenList Insert(SyntaxTokenList modifiers, SyntaxToken modi
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-modifier
+
+
+##### modifier
 
 
 
-comparer
+
+
+##### comparer
+
+
 
 
 
@@ -83,21 +95,29 @@ public static TNode Insert<TNode>(TNode node, SyntaxKind kind, IComparer<SyntaxK
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-node
+##### node
 
 
 
-kind
+
+
+##### kind
 
 
 
-comparer
+
+
+##### comparer
+
+
 
 
 
@@ -117,21 +137,29 @@ public static TNode Insert<TNode>(TNode node, SyntaxToken modifier, IComparer<Sy
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-node
+##### node
 
 
 
-modifier
+
+
+##### modifier
 
 
 
-comparer
+
+
+##### comparer
+
+
 
 
 

@@ -27,7 +27,9 @@ public static SyntaxToken TrimTrailingTrivia(this SyntaxToken token)
 
 #### Parameters
 
-token
+##### token
+
+
 
 
 
@@ -49,13 +51,17 @@ public static TNode TrimTrailingTrivia<TNode>(this TNode node) where TNode : Mic
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-node
+##### node
+
+
 
 
 

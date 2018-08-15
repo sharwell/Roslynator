@@ -25,15 +25,21 @@ public static AsExpressionInfo AsExpressionInfo(BinaryExpressionSyntax binaryExp
 
 #### Parameters
 
-binaryExpression
+##### binaryExpression
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
 
 
 
-allowMissing
+
+
+##### allowMissing
+
+
 
 
 
@@ -53,15 +59,21 @@ public static AsExpressionInfo AsExpressionInfo(SyntaxNode node, bool walkDownPa
 
 #### Parameters
 
-node
+##### node
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
 
 
 
-allowMissing
+
+
+##### allowMissing
+
+
 
 
 

@@ -16,11 +16,15 @@ public MemberDeclarationListInfo ReplaceAt(int index, MemberDeclarationSyntax ne
 
 ### Parameters
 
-index
+#### index
 
 
 
-newMember
+
+
+#### newMember
+
+
 
 
 

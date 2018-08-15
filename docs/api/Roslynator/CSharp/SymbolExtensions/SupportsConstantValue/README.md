@@ -16,7 +16,9 @@ public static bool SupportsConstantValue(this ITypeSymbol typeSymbol)
 
 ### Parameters
 
-typeSymbol
+#### typeSymbol
+
+
 
 
 

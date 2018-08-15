@@ -23,7 +23,9 @@ public static BaseListSyntax BaseList(BaseTypeSyntax type)
 
 #### Parameters
 
-type
+##### type
+
+
 
 
 
@@ -39,7 +41,9 @@ public static BaseListSyntax BaseList(params BaseTypeSyntax[] types)
 
 #### Parameters
 
-types
+##### types
+
+
 
 
 
@@ -55,11 +59,15 @@ public static BaseListSyntax BaseList(SyntaxToken colonToken, BaseTypeSyntax bas
 
 #### Parameters
 
-colonToken
+##### colonToken
 
 
 
-baseType
+
+
+##### baseType
+
+
 
 
 
@@ -75,11 +83,15 @@ public static BaseListSyntax BaseList(SyntaxToken colonToken, params BaseTypeSyn
 
 #### Parameters
 
-colonToken
+##### colonToken
 
 
 
-types
+
+
+##### types
+
+
 
 
 

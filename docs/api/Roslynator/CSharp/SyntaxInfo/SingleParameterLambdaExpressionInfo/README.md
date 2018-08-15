@@ -25,11 +25,15 @@ public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressio
 
 #### Parameters
 
-lambdaExpression
+##### lambdaExpression
 
 
 
-allowMissing
+
+
+##### allowMissing
+
+
 
 
 
@@ -49,15 +53,21 @@ public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressio
 
 #### Parameters
 
-node
+##### node
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
 
 
 
-allowMissing
+
+
+##### allowMissing
+
+
 
 
 

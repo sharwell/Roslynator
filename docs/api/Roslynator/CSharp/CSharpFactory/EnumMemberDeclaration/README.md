@@ -23,11 +23,15 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Equ
 
 #### Parameters
 
-name
+##### name
 
 
 
-value
+
+
+##### value
+
+
 
 
 
@@ -43,11 +47,15 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Exp
 
 #### Parameters
 
-name
+##### name
 
 
 
-value
+
+
+##### value
+
+
 
 
 
@@ -63,11 +71,15 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 #### Parameters
 
-identifier
+##### identifier
 
 
 
-value
+
+
+##### value
+
+
 
 
 
@@ -83,11 +95,15 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 #### Parameters
 
-identifier
+##### identifier
 
 
 
-value
+
+
+##### value
+
+
 
 
 

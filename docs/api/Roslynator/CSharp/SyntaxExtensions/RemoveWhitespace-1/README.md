@@ -16,17 +16,23 @@ public static TNode RemoveWhitespace<TNode>(this TNode node, TextSpan? span = nu
 
 ### Type Parameters
 
-TNode
+#### TNode
+
+
 
 
 
 ### Parameters
 
-node
+#### node
 
 
 
-span
+
+
+#### span
+
+
 
 
 

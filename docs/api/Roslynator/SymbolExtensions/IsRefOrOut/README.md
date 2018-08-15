@@ -16,7 +16,9 @@ public static bool IsRefOrOut(this IParameterSymbol parameterSymbol)
 
 ### Parameters
 
-parameterSymbol
+#### parameterSymbol
+
+
 
 
 

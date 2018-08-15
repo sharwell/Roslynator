@@ -21,7 +21,9 @@ public static InitializerExpressionSyntax CollectionInitializerExpression(Separa
 
 #### Parameters
 
-expressions
+##### expressions
+
+
 
 
 
@@ -37,15 +39,21 @@ public static InitializerExpressionSyntax CollectionInitializerExpression(Syntax
 
 #### Parameters
 
-openBraceToken
+##### openBraceToken
 
 
 
-expressions
+
+
+##### expressions
 
 
 
-closeBraceToken
+
+
+##### closeBraceToken
+
+
 
 
 

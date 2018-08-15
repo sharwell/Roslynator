@@ -16,15 +16,21 @@ public static int GetEndLine(this SyntaxTree syntaxTree, TextSpan span, Cancella
 
 ### Parameters
 
-syntaxTree
+#### syntaxTree
 
 
 
-span
+
+
+#### span
 
 
 
-cancellationToken
+
+
+#### cancellationToken
+
+
 
 
 

@@ -25,7 +25,9 @@ public static StringLiteralExpressionInfo StringLiteralExpressionInfo(LiteralExp
 
 #### Parameters
 
-literalExpression
+##### literalExpression
+
+
 
 
 
@@ -45,11 +47,15 @@ public static StringLiteralExpressionInfo StringLiteralExpressionInfo(SyntaxNode
 
 #### Parameters
 
-node
+##### node
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
+
+
 
 
 

@@ -21,15 +21,21 @@ public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-identifier
+
+
+##### identifier
 
 
 
-members
+
+
+##### members
+
+
 
 
 
@@ -45,15 +51,21 @@ public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-identifier
+
+
+##### identifier
 
 
 
-members
+
+
+##### members
+
+
 
 
 

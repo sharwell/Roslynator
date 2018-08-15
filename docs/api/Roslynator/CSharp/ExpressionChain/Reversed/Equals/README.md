@@ -21,7 +21,9 @@ public override bool Equals(object obj)
 
 #### Parameters
 
-obj
+##### obj
+
+
 
 
 
@@ -37,7 +39,9 @@ public bool Equals(ExpressionChain.Reversed other)
 
 #### Parameters
 
-other
+##### other
+
+
 
 
 

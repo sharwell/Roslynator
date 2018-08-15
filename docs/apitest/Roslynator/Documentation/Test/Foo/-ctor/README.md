@@ -25,7 +25,9 @@ public Foo(string s)
 
 #### Parameters
 
-s
+##### s
+
+
 
 qqq
 
@@ -51,11 +53,15 @@ public Foo(string s, string s2)
 
 #### Parameters
 
-s
+##### s
 
 
 
-s2
+
+
+##### s2
+
+
 
 
 

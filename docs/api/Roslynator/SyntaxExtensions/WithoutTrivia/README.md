@@ -16,7 +16,9 @@ public static SyntaxNodeOrToken WithoutTrivia(this SyntaxNodeOrToken nodeOrToken
 
 ### Parameters
 
-nodeOrToken
+#### nodeOrToken
+
+
 
 
 

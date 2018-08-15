@@ -16,11 +16,15 @@ public static SyntaxListSelection<TNode> Create(SyntaxList<TNode> list, TextSpan
 
 ### Parameters
 
-list
+#### list
 
 
 
-span
+
+
+#### span
+
+
 
 
 

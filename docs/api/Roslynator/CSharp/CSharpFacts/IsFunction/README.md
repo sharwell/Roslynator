@@ -16,7 +16,9 @@ public static bool IsFunction(SyntaxKind kind)
 
 ### Parameters
 
-kind
+#### kind
+
+
 
 
 

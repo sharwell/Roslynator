@@ -16,7 +16,9 @@ public static bool IsSwitchLabel(SyntaxKind kind)
 
 ### Parameters
 
-kind
+#### kind
+
+
 
 
 

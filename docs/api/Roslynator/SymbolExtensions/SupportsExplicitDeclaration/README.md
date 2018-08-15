@@ -16,7 +16,9 @@ public static bool SupportsExplicitDeclaration(this ITypeSymbol typeSymbol)
 
 ### Parameters
 
-typeSymbol
+#### typeSymbol
+
+
 
 
 

@@ -21,19 +21,27 @@ public static ConversionOperatorDeclarationSyntax ExplicitConversionOperatorDecl
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-type
+
+
+##### type
 
 
 
-parameterList
+
+
+##### parameterList
 
 
 
-expressionBody
+
+
+##### expressionBody
+
+
 
 
 
@@ -49,19 +57,27 @@ public static ConversionOperatorDeclarationSyntax ExplicitConversionOperatorDecl
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-type
+
+
+##### type
 
 
 
-parameterList
+
+
+##### parameterList
 
 
 
-body
+
+
+##### body
+
+
 
 
 

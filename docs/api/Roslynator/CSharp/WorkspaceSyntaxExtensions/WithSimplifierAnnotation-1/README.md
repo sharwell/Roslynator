@@ -26,7 +26,9 @@ public static SyntaxToken WithSimplifierAnnotation(this SyntaxToken token)
 
 #### Parameters
 
-token
+##### token
+
+
 
 
 
@@ -46,13 +48,17 @@ public static TNode WithSimplifierAnnotation<TNode>(this TNode node) where TNode
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-node
+##### node
+
+
 
 
 

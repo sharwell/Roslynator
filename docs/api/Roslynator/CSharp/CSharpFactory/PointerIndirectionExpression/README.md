@@ -21,7 +21,9 @@ public static PrefixUnaryExpressionSyntax PointerIndirectionExpression(Expressio
 
 #### Parameters
 
-operand
+##### operand
+
+
 
 
 
@@ -37,11 +39,15 @@ public static PrefixUnaryExpressionSyntax PointerIndirectionExpression(Expressio
 
 #### Parameters
 
-operand
+##### operand
 
 
 
-operatorToken
+
+
+##### operatorToken
+
+
 
 
 

@@ -25,15 +25,21 @@ public static SimpleIfStatementInfo SimpleIfStatementInfo(IfStatementSyntax ifSt
 
 #### Parameters
 
-ifStatement
+##### ifStatement
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
 
 
 
-allowMissing
+
+
+##### allowMissing
+
+
 
 
 
@@ -53,15 +59,21 @@ public static SimpleIfStatementInfo SimpleIfStatementInfo(SyntaxNode node, bool 
 
 #### Parameters
 
-node
+##### node
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
 
 
 
-allowMissing
+
+
+##### allowMissing
+
+
 
 
 

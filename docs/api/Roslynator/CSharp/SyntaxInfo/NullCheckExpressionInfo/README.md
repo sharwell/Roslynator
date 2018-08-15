@@ -25,19 +25,27 @@ public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, N
 
 #### Parameters
 
-node
+##### node
 
 
 
-allowedStyles
+
+
+##### allowedStyles
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
 
 
 
-allowMissing
+
+
+##### allowMissing
+
+
 
 
 
@@ -57,27 +65,39 @@ public static NullCheckExpressionInfo NullCheckExpressionInfo(SyntaxNode node, S
 
 #### Parameters
 
-node
+##### node
 
 
 
-semanticModel
+
+
+##### semanticModel
 
 
 
-allowedStyles
+
+
+##### allowedStyles
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
 
 
 
-allowMissing
+
+
+##### allowMissing
 
 
 
-cancellationToken
+
+
+##### cancellationToken
+
+
 
 
 

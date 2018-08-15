@@ -414,7 +414,7 @@ namespace Roslynator.Documentation
 
                 do
                 {
-                    WriteString(en.Current.Name);
+                    WriteHeading(4, en.Current.Name);
                     WriteLine();
                     WriteLine();
                     GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", en.Current.Name)?.WriteContentTo(this);
@@ -498,7 +498,7 @@ namespace Roslynator.Documentation
 
                     do
                     {
-                        WriteString(en.Current.Name);
+                        WriteHeading(4, en.Current.Name);
                         WriteLine();
                         WriteLine();
                         GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", en.Current.Name)?.WriteContentTo(this);

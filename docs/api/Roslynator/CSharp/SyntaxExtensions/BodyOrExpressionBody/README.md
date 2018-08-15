@@ -30,7 +30,9 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this AccessorDeclarationSynt
 
 #### Parameters
 
-accessorDeclaration
+##### accessorDeclaration
+
+
 
 
 
@@ -50,7 +52,9 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this ConstructorDeclarationS
 
 #### Parameters
 
-constructorDeclaration
+##### constructorDeclaration
+
+
 
 
 
@@ -70,7 +74,9 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this ConversionOperatorDecla
 
 #### Parameters
 
-conversionOperatorDeclaration
+##### conversionOperatorDeclaration
+
+
 
 
 
@@ -90,7 +96,9 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this DestructorDeclarationSy
 
 #### Parameters
 
-destructorDeclaration
+##### destructorDeclaration
+
+
 
 
 
@@ -110,7 +118,9 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this LocalFunctionStatementS
 
 #### Parameters
 
-localFunctionStatement
+##### localFunctionStatement
+
+
 
 
 
@@ -130,7 +140,9 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this MethodDeclarationSyntax
 
 #### Parameters
 
-methodDeclaration
+##### methodDeclaration
+
+
 
 
 
@@ -150,7 +162,9 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this OperatorDeclarationSynt
 
 #### Parameters
 
-operatorDeclaration
+##### operatorDeclaration
+
+
 
 
 

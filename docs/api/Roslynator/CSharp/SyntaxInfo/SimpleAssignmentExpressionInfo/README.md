@@ -25,15 +25,21 @@ public static SimpleAssignmentExpressionInfo SimpleAssignmentExpressionInfo(Assi
 
 #### Parameters
 
-assignmentExpression
+##### assignmentExpression
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
 
 
 
-allowMissing
+
+
+##### allowMissing
+
+
 
 
 
@@ -53,15 +59,21 @@ public static SimpleAssignmentExpressionInfo SimpleAssignmentExpressionInfo(Synt
 
 #### Parameters
 
-node
+##### node
 
 
 
-walkDownParentheses
+
+
+##### walkDownParentheses
 
 
 
-allowMissing
+
+
+##### allowMissing
+
+
 
 
 

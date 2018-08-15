@@ -16,7 +16,9 @@ public static bool CanBeEmbeddedStatement(SyntaxKind kind)
 
 ### Parameters
 
-kind
+#### kind
+
+
 
 
 

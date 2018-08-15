@@ -25,19 +25,27 @@ public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxTok
 
 #### Parameters
 
-document
+##### document
 
 
 
-oldToken
+
+
+##### oldToken
 
 
 
-newTokens
+
+
+##### newTokens
 
 
 
-cancellationToken
+
+
+##### cancellationToken
+
+
 
 
 
@@ -57,19 +65,27 @@ public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxTok
 
 #### Parameters
 
-document
+##### document
 
 
 
-oldToken
+
+
+##### oldToken
 
 
 
-newToken
+
+
+##### newToken
 
 
 
-cancellationToken
+
+
+##### cancellationToken
+
+
 
 
 

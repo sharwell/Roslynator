@@ -25,7 +25,9 @@ public int IndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 
 #### Parameters
 
-predicate
+##### predicate
+
+
 
 
 
@@ -45,7 +47,9 @@ public int IndexOf(UsingDirectiveSyntax usingDirective)
 
 #### Parameters
 
-usingDirective
+##### usingDirective
+
+
 
 
 

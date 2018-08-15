@@ -21,19 +21,27 @@ public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifi
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-type
+
+
+##### type
 
 
 
-parameterList
+
+
+##### parameterList
 
 
 
-accessorList
+
+
+##### accessorList
+
+
 
 
 
@@ -49,19 +57,27 @@ public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifi
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-type
+
+
+##### type
 
 
 
-parameterList
+
+
+##### parameterList
 
 
 
-expressionBody
+
+
+##### expressionBody
+
+
 
 
 

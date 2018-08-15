@@ -16,15 +16,21 @@ public static SimpleIfElseInfo SimpleIfElseInfo(IfStatementSyntax ifStatement, b
 
 ### Parameters
 
-ifStatement
+#### ifStatement
 
 
 
-walkDownParentheses
+
+
+#### walkDownParentheses
 
 
 
-allowMissing
+
+
+#### allowMissing
+
+
 
 
 

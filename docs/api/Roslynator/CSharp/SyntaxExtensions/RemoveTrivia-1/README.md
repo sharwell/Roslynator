@@ -16,17 +16,23 @@ public static TNode RemoveTrivia<TNode>(this TNode node, TextSpan? span = null) 
 
 ### Type Parameters
 
-TNode
+#### TNode
+
+
 
 
 
 ### Parameters
 
-node
+#### node
 
 
 
-span
+
+
+#### span
+
+
 
 
 

@@ -21,7 +21,9 @@ public static CheckedExpressionSyntax CheckedExpression(ExpressionSyntax express
 
 #### Parameters
 
-expression
+##### expression
+
+
 
 
 
@@ -37,15 +39,21 @@ public static CheckedExpressionSyntax CheckedExpression(SyntaxToken openParenTok
 
 #### Parameters
 
-openParenToken
+##### openParenToken
 
 
 
-expression
+
+
+##### expression
 
 
 
-closeParenToken
+
+
+##### closeParenToken
+
+
 
 
 

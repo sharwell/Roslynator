@@ -13,91 +13,135 @@ public FooAttribute(object object1, string s1, bool bool1, bool bool2, byte byte
 
 ### Parameters
 
-object1
+#### object1
 
 
 
-s1
+
+
+#### s1
 
 
 
-bool1
+
+
+#### bool1
 
 
 
-bool2
+
+
+#### bool2
 
 
 
-byte1
+
+
+#### byte1
 
 
 
-ch1
+
+
+#### ch1
 
 
 
-double1
+
+
+#### double1
 
 
 
-float1
+
+
+#### float1
 
 
 
-int1
+
+
+#### int1
 
 
 
-long1
+
+
+#### long1
 
 
 
-sbyte1
+
+
+#### sbyte1
 
 
 
-short1
+
+
+#### short1
 
 
 
-uint1
+
+
+#### uint1
 
 
 
-ulong1
+
+
+#### ulong1
 
 
 
-ushort1
+
+
+#### ushort1
 
 
 
-type
+
+
+#### type
 
 
 
-f1
+
+
+#### f1
 
 
 
-f2
+
+
+#### f2
 
 
 
-f3
+
+
+#### f3
 
 
 
-f4
+
+
+#### f4
 
 
 
-f5
+
+
+#### f5
 
 
 
-f6
+
+
+#### f6
+
+
 
 
 

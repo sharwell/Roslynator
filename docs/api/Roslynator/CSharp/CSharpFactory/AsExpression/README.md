@@ -21,11 +21,15 @@ public static BinaryExpressionSyntax AsExpression(ExpressionSyntax left, Express
 
 #### Parameters
 
-left
+##### left
 
 
 
-right
+
+
+##### right
+
+
 
 
 
@@ -41,15 +45,21 @@ public static BinaryExpressionSyntax AsExpression(ExpressionSyntax left, SyntaxT
 
 #### Parameters
 
-left
+##### left
 
 
 
-operatorToken
+
+
+##### operatorToken
 
 
 
-right
+
+
+##### right
+
+
 
 
 

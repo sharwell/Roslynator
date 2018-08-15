@@ -20,7 +20,9 @@ public class SyntaxListSelection<TNode> : ISelection<TNode>,
 
 ### Type Parameters
 
-TNode
+#### TNode
+
+
 
 
 

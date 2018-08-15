@@ -27,7 +27,9 @@ public static SyntaxToken TrimTrivia(this SyntaxToken token)
 
 #### Parameters
 
-token
+##### token
+
+
 
 
 
@@ -49,13 +51,17 @@ public static TNode TrimTrivia<TNode>(this TNode node) where TNode : Microsoft.C
 
 #### Type Parameters
 
-TNode
+##### TNode
+
+
 
 
 
 #### Parameters
 
-node
+##### node
+
+
 
 
 

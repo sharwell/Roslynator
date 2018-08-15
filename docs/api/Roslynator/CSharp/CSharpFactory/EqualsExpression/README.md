@@ -21,11 +21,15 @@ public static BinaryExpressionSyntax EqualsExpression(ExpressionSyntax left, Exp
 
 #### Parameters
 
-left
+##### left
 
 
 
-right
+
+
+##### right
+
+
 
 
 
@@ -41,15 +45,21 @@ public static BinaryExpressionSyntax EqualsExpression(ExpressionSyntax left, Syn
 
 #### Parameters
 
-left
+##### left
 
 
 
-operatorToken
+
+
+##### operatorToken
 
 
 
-right
+
+
+##### right
+
+
 
 
 

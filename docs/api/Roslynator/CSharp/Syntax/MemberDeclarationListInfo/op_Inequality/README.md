@@ -12,11 +12,15 @@ public static bool operator !=(in MemberDeclarationListInfo info1, in MemberDecl
 
 ### Parameters
 
-info1
+#### info1
 
 
 
-info2
+
+
+#### info2
+
+
 
 
 

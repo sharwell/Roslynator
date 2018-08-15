@@ -16,11 +16,15 @@ public static SeparatedSyntaxListSelection<TNode> Create(SeparatedSyntaxList<TNo
 
 ### Parameters
 
-list
+#### list
 
 
 
-span
+
+
+#### span
+
+
 
 
 

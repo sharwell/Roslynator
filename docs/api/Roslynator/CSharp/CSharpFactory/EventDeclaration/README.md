@@ -21,19 +21,27 @@ public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-type
+
+
+##### type
 
 
 
-identifier
+
+
+##### identifier
 
 
 
-accessorList
+
+
+##### accessorList
+
+
 
 
 
@@ -49,19 +57,27 @@ public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers,
 
 #### Parameters
 
-modifiers
+##### modifiers
 
 
 
-type
+
+
+##### type
 
 
 
-identifier
+
+
+##### identifier
 
 
 
-accessorList
+
+
+##### accessorList
+
+
 
 
 

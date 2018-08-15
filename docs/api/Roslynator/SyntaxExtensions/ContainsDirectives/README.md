@@ -16,11 +16,15 @@ public static bool ContainsDirectives(this SyntaxNode node, TextSpan span)
 
 ### Parameters
 
-node
+#### node
 
 
 
-span
+
+
+#### span
+
+
 
 
 

@@ -16,11 +16,15 @@ public MemberDeclarationListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newN
 
 ### Parameters
 
-oldNode
+#### oldNode
 
 
 
-newNode
+
+
+#### newNode
+
+
 
 
 

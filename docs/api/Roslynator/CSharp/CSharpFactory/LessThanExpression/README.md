@@ -21,11 +21,15 @@ public static BinaryExpressionSyntax LessThanExpression(ExpressionSyntax left, E
 
 #### Parameters
 
-left
+##### left
 
 
 
-right
+
+
+##### right
+
+
 
 
 
@@ -41,15 +45,21 @@ public static BinaryExpressionSyntax LessThanExpression(ExpressionSyntax left, S
 
 #### Parameters
 
-left
+##### left
 
 
 
-operatorToken
+
+
+##### operatorToken
 
 
 
-right
+
+
+##### right
+
+
 
 
 

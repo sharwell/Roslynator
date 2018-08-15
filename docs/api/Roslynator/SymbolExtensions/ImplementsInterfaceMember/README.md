@@ -27,11 +27,15 @@ public static bool ImplementsInterfaceMember(this ISymbol symbol, bool allInterf
 
 #### Parameters
 
-symbol
+##### symbol
 
 
 
-allInterfaces
+
+
+##### allInterfaces
+
+
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
@@ -51,15 +55,21 @@ public static bool ImplementsInterfaceMember(this ISymbol symbol, INamedTypeSymb
 
 #### Parameters
 
-symbol
+##### symbol
 
 
 
-interfaceSymbol
+
+
+##### interfaceSymbol
 
 
 
-allInterfaces
+
+
+##### allInterfaces
+
+
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
@@ -79,17 +89,23 @@ public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, bool 
 
 #### Type Parameters
 
-TSymbol
+##### TSymbol
+
+
 
 
 
 #### Parameters
 
-symbol
+##### symbol
 
 
 
-allInterfaces
+
+
+##### allInterfaces
+
+
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
@@ -109,21 +125,29 @@ public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, IName
 
 #### Type Parameters
 
-TSymbol
+##### TSymbol
+
+
 
 
 
 #### Parameters
 
-symbol
+##### symbol
 
 
 
-interfaceSymbol
+
+
+##### interfaceSymbol
 
 
 
-allInterfaces
+
+
+##### allInterfaces
+
+
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 

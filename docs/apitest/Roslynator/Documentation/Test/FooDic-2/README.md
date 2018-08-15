@@ -21,11 +21,15 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
 
 ### Type Parameters
 
-TKey
+#### TKey
 
 
 
-TValue
+
+
+#### TValue
+
+
 
 
 

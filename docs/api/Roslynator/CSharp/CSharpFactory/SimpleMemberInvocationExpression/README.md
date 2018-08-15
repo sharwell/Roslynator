@@ -22,11 +22,15 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 #### Parameters
 
-expression
+##### expression
 
 
 
-name
+
+
+##### name
+
+
 
 
 
@@ -42,15 +46,21 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 #### Parameters
 
-expression
+##### expression
 
 
 
-name
+
+
+##### name
 
 
 
-argumentList
+
+
+##### argumentList
+
+
 
 
 
@@ -66,15 +76,21 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 #### Parameters
 
-expression
+##### expression
 
 
 
-name
+
+
+##### name
 
 
 
-argument
+
+
+##### argument
+
+
 
 
 

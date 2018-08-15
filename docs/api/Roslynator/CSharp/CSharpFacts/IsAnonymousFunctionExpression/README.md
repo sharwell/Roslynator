@@ -16,7 +16,9 @@ public static bool IsAnonymousFunctionExpression(SyntaxKind kind)
 
 ### Parameters
 
-kind
+#### kind
+
+
 
 
 

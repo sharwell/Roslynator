@@ -16,21 +16,29 @@ public static TSymbol GetEnclosingSymbol<TSymbol>(this SemanticModel semanticMod
 
 ### Type Parameters
 
-TSymbol
+#### TSymbol
+
+
 
 
 
 ### Parameters
 
-semanticModel
+#### semanticModel
 
 
 
-position
+
+
+#### position
 
 
 
-cancellationToken
+
+
+#### cancellationToken
+
+
 
 
 
