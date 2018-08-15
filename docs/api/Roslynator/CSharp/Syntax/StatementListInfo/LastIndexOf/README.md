@@ -23,9 +23,9 @@ Searches for a statement that matches the predicate and returns returns zero\-ba
 public int LastIndexOf(Func<StatementSyntax, bool> predicate)
 ```
 
-## Parameters
+### Parameters
 
-### predicate
+#### predicate
 
 
 
@@ -45,9 +45,9 @@ Searches for a statement and returns zero\-based index of the last occurrence in
 public int LastIndexOf(StatementSyntax statement)
 ```
 
-## Parameters
+### Parameters
 
-### statement
+#### statement
 
 
 

@@ -14,9 +14,9 @@ Creates a new [GenericInfo](../README.md) with the specified type parameter remo
 public GenericInfo RemoveTypeParameter(TypeParameterSyntax typeParameter)
 ```
 
-## Parameters
+### Parameters
 
-### typeParameter
+#### typeParameter
 
 
 

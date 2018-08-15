@@ -14,9 +14,9 @@ Creates a list of syntax tokens from a sequence of tokens\.
 public static SyntaxTokenList ToSyntaxTokenList(this IEnumerable<SyntaxToken> tokens)
 ```
 
-## Parameters
+### Parameters
 
-### tokens
+#### tokens
 
 
 

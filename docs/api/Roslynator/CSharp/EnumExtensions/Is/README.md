@@ -26,21 +26,21 @@ Returns true if the kind is one of the specified kinds\.
 public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2)
 ```
 
-## Parameters
+### Parameters
 
-### kind
-
-
-
-
-
-### kind1
+#### kind
 
 
 
 
 
-### kind2
+#### kind1
+
+
+
+
+
+#### kind2
 
 
 
@@ -60,27 +60,27 @@ Returns true if the kind is one of the specified kinds\.
 public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3)
 ```
 
-## Parameters
+### Parameters
 
-### kind
-
-
-
-
-
-### kind1
+#### kind
 
 
 
 
 
-### kind2
+#### kind1
 
 
 
 
 
-### kind3
+#### kind2
+
+
+
+
+
+#### kind3
 
 
 
@@ -100,33 +100,33 @@ Returns true if the kind is one of the specified kinds\.
 public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4)
 ```
 
-## Parameters
+### Parameters
 
-### kind
-
-
-
-
-
-### kind1
+#### kind
 
 
 
 
 
-### kind2
+#### kind1
 
 
 
 
 
-### kind3
+#### kind2
 
 
 
 
 
-### kind4
+#### kind3
+
+
+
+
+
+#### kind4
 
 
 
@@ -146,39 +146,39 @@ Returns true if the kind is one of the specified kinds\.
 public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5)
 ```
 
-## Parameters
+### Parameters
 
-### kind
-
-
-
-
-
-### kind1
+#### kind
 
 
 
 
 
-### kind2
+#### kind1
 
 
 
 
 
-### kind3
+#### kind2
 
 
 
 
 
-### kind4
+#### kind3
 
 
 
 
 
-### kind5
+#### kind4
+
+
+
+
+
+#### kind5
 
 
 
@@ -198,45 +198,45 @@ Returns true if the kind is one of the specified kinds\.
 public static bool Is(this SyntaxKind kind, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5, SyntaxKind kind6)
 ```
 
-## Parameters
+### Parameters
 
-### kind
-
-
-
-
-
-### kind1
+#### kind
 
 
 
 
 
-### kind2
+#### kind1
 
 
 
 
 
-### kind3
+#### kind2
 
 
 
 
 
-### kind4
+#### kind3
 
 
 
 
 
-### kind5
+#### kind4
 
 
 
 
 
-### kind6
+#### kind5
+
+
+
+
+
+#### kind6
 
 
 

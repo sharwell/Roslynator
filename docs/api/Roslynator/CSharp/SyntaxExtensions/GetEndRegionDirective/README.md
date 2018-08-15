@@ -14,9 +14,9 @@ Returns endregion directive that is related to the specified region directive\. 
 public static EndRegionDirectiveTriviaSyntax GetEndRegionDirective(this RegionDirectiveTriviaSyntax regionDirective)
 ```
 
-## Parameters
+### Parameters
 
-### regionDirective
+#### regionDirective
 
 
 

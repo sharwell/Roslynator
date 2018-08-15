@@ -14,15 +14,15 @@ Creates a new [StatementListInfo](../README.md) with the specified statement rep
 public StatementListInfo ReplaceRange(StatementSyntax statementInList, IEnumerable<StatementSyntax> newStatements)
 ```
 
-## Parameters
+### Parameters
 
-### statementInList
-
-
+#### statementInList
 
 
 
-### newStatements
+
+
+#### newStatements
 
 
 

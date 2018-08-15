@@ -14,21 +14,21 @@ Creates a new [SyntaxListSelection\<TNode>](../README.md) based on the specified
 public static bool TryCreate(SyntaxList<TNode> list, TextSpan span, out SyntaxListSelection<TNode> selection)
 ```
 
-## Parameters
+### Parameters
 
-### list
-
-
-
-
-
-### span
+#### list
 
 
 
 
 
-### selection
+#### span
+
+
+
+
+
+#### selection
 
 
 

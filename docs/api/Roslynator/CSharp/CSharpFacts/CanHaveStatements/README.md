@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind can have statements\. It can be e
 public static bool CanHaveStatements(SyntaxKind kind)
 ```
 
-## Parameters
+### Parameters
 
-### kind
+#### kind
 
 
 

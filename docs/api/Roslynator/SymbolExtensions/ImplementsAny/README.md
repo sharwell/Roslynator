@@ -23,27 +23,27 @@ Returns true if the type implements any of specified interfaces\.
 public static bool ImplementsAny(this ITypeSymbol typeSymbol, SpecialType interfaceType1, SpecialType interfaceType2, bool allInterfaces = false)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
-
-
-
-
-
-### interfaceType1
+#### typeSymbol
 
 
 
 
 
-### interfaceType2
+#### interfaceType1
 
 
 
 
 
-### allInterfaces
+#### interfaceType2
+
+
+
+
+
+#### allInterfaces
 
 
 
@@ -63,33 +63,33 @@ Returns true if the type implements any of specified interfaces\.
 public static bool ImplementsAny(this ITypeSymbol typeSymbol, SpecialType interfaceType1, SpecialType interfaceType2, SpecialType interfaceType3, bool allInterfaces = false)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
-
-
-
-
-
-### interfaceType1
+#### typeSymbol
 
 
 
 
 
-### interfaceType2
+#### interfaceType1
 
 
 
 
 
-### interfaceType3
+#### interfaceType2
 
 
 
 
 
-### allInterfaces
+#### interfaceType3
+
+
+
+
+
+#### allInterfaces
 
 
 

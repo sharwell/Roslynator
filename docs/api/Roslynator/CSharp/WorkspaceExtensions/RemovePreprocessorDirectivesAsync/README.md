@@ -23,21 +23,21 @@ Creates a new document with preprocessor directives of the specified kind remove
 public static Task<Document> RemovePreprocessorDirectivesAsync(this Document document, PreprocessorDirectiveKinds directiveKinds, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### document
-
-
-
-
-
-### directiveKinds
+#### document
 
 
 
 
 
-### cancellationToken
+#### directiveKinds
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -57,27 +57,27 @@ Creates a new document with preprocessor directives of the specified kind remove
 public static Task<Document> RemovePreprocessorDirectivesAsync(this Document document, TextSpan span, PreprocessorDirectiveKinds directiveKinds, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### document
-
-
-
-
-
-### span
+#### document
 
 
 
 
 
-### directiveKinds
+#### span
 
 
 
 
 
-### cancellationToken
+#### directiveKinds
+
+
+
+
+
+#### cancellationToken
 
 
 

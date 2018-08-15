@@ -10,15 +10,15 @@
 public static bool operator ==(in RegionInfo info1, in RegionInfo info2)
 ```
 
-## Parameters
+### Parameters
 
-### info1
-
-
+#### info1
 
 
 
-### info2
+
+
+#### info2
 
 
 

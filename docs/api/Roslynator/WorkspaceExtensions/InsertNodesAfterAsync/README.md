@@ -14,27 +14,27 @@ Creates a new document with new nodes inserted after the specified node\.
 public static Task<Document> InsertNodesAfterAsync(this Document document, SyntaxNode nodeInList, IEnumerable<SyntaxNode> newNodes, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### document
-
-
-
-
-
-### nodeInList
+#### document
 
 
 
 
 
-### newNodes
+#### nodeInList
 
 
 
 
 
-### cancellationToken
+#### newNodes
+
+
+
+
+
+#### cancellationToken
 
 
 

@@ -23,9 +23,9 @@ Searches for a member that matches the predicate and returns returns zero\-based
 public int LastIndexOf(Func<MemberDeclarationSyntax, bool> predicate)
 ```
 
-## Parameters
+### Parameters
 
-### predicate
+#### predicate
 
 
 
@@ -45,9 +45,9 @@ Searches for a member and returns zero\-based index of the last occurrence in th
 public int LastIndexOf(MemberDeclarationSyntax member)
 ```
 
-## Parameters
+### Parameters
 
-### member
+#### member
 
 
 

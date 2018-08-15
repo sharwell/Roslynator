@@ -23,15 +23,15 @@ Creates a new [LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationState
 public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(ExpressionSyntax value, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### value
-
-
+#### value
 
 
 
-### allowMissing
+
+
+#### allowMissing
 
 
 
@@ -51,15 +51,15 @@ Creates a new [LocalDeclarationStatementInfo](../../Syntax/LocalDeclarationState
 public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(LocalDeclarationStatementSyntax localDeclarationStatement, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### localDeclarationStatement
-
-
+#### localDeclarationStatement
 
 
 
-### allowMissing
+
+
+#### allowMissing
 
 
 

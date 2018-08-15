@@ -25,21 +25,21 @@ Returns true if the symbol is one of the specified kinds\.
 public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind2)
 ```
 
-## Parameters
+### Parameters
 
-### symbol
-
-
-
-
-
-### kind1
+#### symbol
 
 
 
 
 
-### kind2
+#### kind1
+
+
+
+
+
+#### kind2
 
 
 
@@ -59,27 +59,27 @@ Returns true if the symbol is one of the specified kinds\.
 public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind2, SymbolKind kind3)
 ```
 
-## Parameters
+### Parameters
 
-### symbol
-
-
-
-
-
-### kind1
+#### symbol
 
 
 
 
 
-### kind2
+#### kind1
 
 
 
 
 
-### kind3
+#### kind2
+
+
+
+
+
+#### kind3
 
 
 
@@ -99,33 +99,33 @@ Returns true if the symbol is one of the specified kinds\.
 public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind2, SymbolKind kind3, SymbolKind kind4)
 ```
 
-## Parameters
+### Parameters
 
-### symbol
-
-
-
-
-
-### kind1
+#### symbol
 
 
 
 
 
-### kind2
+#### kind1
 
 
 
 
 
-### kind3
+#### kind2
 
 
 
 
 
-### kind4
+#### kind3
+
+
+
+
+
+#### kind4
 
 
 
@@ -145,39 +145,39 @@ Returns true if the symbol is one of the specified kinds\.
 public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind2, SymbolKind kind3, SymbolKind kind4, SymbolKind kind5)
 ```
 
-## Parameters
+### Parameters
 
-### symbol
-
-
-
-
-
-### kind1
+#### symbol
 
 
 
 
 
-### kind2
+#### kind1
 
 
 
 
 
-### kind3
+#### kind2
 
 
 
 
 
-### kind4
+#### kind3
 
 
 
 
 
-### kind5
+#### kind4
+
+
+
+
+
+#### kind5
 
 
 

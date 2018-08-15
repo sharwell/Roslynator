@@ -400,7 +400,7 @@ namespace Roslynator.Documentation
             WriteCodeBlock(parts.ToDisplayString(), symbol.Language);
         }
 
-        public virtual void WriteTypeParameters(ISymbol symbol, int headingLevelBase = 0)
+        public virtual void WriteTypeParameters(ISymbol symbol)
         {
             ImmutableArray<ITypeParameterSymbol> typeParameters = symbol.GetTypeParameters();
 
@@ -408,11 +408,11 @@ namespace Roslynator.Documentation
 
             if (en.MoveNext())
             {
-                WriteHeading(2 + headingLevelBase, Resources.TypeParametersTitle);
+                WriteHeading(3, Resources.TypeParametersTitle);
 
                 do
                 {
-                    WriteHeading(3 + headingLevelBase, en.Current.Name);
+                    WriteHeading(4, en.Current.Name);
                     WriteLine();
                     WriteLine();
                     GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", en.Current.Name)?.WriteContentTo(this);
@@ -423,7 +423,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteParameters(ISymbol symbol, int headingLevelBase = 0)
+        public virtual void WriteParameters(ISymbol symbol)
         {
             switch (symbol.Kind)
             {
@@ -462,11 +462,11 @@ namespace Roslynator.Documentation
 
                 if (en.MoveNext())
                 {
-                    WriteHeading(2 + headingLevelBase, Resources.ParametersTitle);
+                    WriteHeading(3, Resources.ParametersTitle);
 
                     do
                     {
-                        WriteHeading(3 + headingLevelBase, en.Current.Name);
+                        WriteHeading(4, en.Current.Name);
                         WriteLine();
                         WriteLine();
                         GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", en.Current.Name)?.WriteContentTo(this);
@@ -495,7 +495,7 @@ namespace Roslynator.Documentation
                             if (returnType.SpecialType == SpecialType.System_Void)
                                 return;
 
-                            WriteHeading(2, Resources.ReturnValueTitle);
+                            WriteHeading(3, Resources.ReturnValueTitle);
                             WriteTypeLink(returnType);
                             WriteLine();
 
@@ -520,7 +520,7 @@ namespace Roslynator.Documentation
                 return;
             }
 
-            WriteHeading(2, Resources.InheritanceTitle);
+            WriteHeading(3, Resources.InheritanceTitle);
 
             using (IEnumerator<ITypeSymbol> en = typeSymbol.BaseTypesAndSelf().Reverse().GetEnumerator())
             {
@@ -589,7 +589,7 @@ namespace Roslynator.Documentation
             {
                 if (en.MoveNext())
                 {
-                    WriteHeading(2 + headingLevelBase, Resources.AttributesTitle);
+                    WriteHeading(3 + headingLevelBase, Resources.AttributesTitle);
 
                     do
                     {
@@ -615,7 +615,7 @@ namespace Roslynator.Documentation
             WriteList(
                 derivedTypes,
                 heading: Resources.DerivedTitle,
-                headingLevel: 2,
+                headingLevel: 3,
                 format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                 maxItems: Options.MaxDerivedItems,
                 addNamespace: true);
@@ -626,7 +626,7 @@ namespace Roslynator.Documentation
             WriteList(
                 implementedInterfaces,
                 heading: Resources.ImplementsTitle,
-                headingLevel: 2,
+                headingLevel: 3,
                 format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                 addLinkForTypeParameters: true,
                 addNamespace: true);
@@ -638,7 +638,7 @@ namespace Roslynator.Documentation
             {
                 if (en.MoveNext())
                 {
-                    WriteHeading(2 + headingLevelBase, Resources.ExceptionsTitle);
+                    WriteHeading(3 + headingLevelBase, Resources.ExceptionsTitle);
 
                     do
                     {

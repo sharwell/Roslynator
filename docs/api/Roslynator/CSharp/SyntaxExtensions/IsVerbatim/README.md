@@ -14,9 +14,9 @@ Returns true if the specified interpolated string is a verbatim\.
 public static bool IsVerbatim(this InterpolatedStringExpressionSyntax interpolatedString)
 ```
 
-## Parameters
+### Parameters
 
-### interpolatedString
+#### interpolatedString
 
 
 

@@ -14,21 +14,21 @@ Returns true if the node can have specified accessibility\.
 public static bool IsValidAccessibility(SyntaxNode node, Accessibility accessibility, bool ignoreOverride = false)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
-
-
-
-### accessibility
+#### node
 
 
 
 
 
-### ignoreOverride
+#### accessibility
+
+
+
+
+
+#### ignoreOverride
 
 
 

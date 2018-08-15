@@ -19,9 +19,9 @@
 public static SwitchSectionSyntax DefaultSwitchSection(StatementSyntax statement)
 ```
 
-## Parameters
+### Parameters
 
-### statement
+#### statement
 
 
 
@@ -37,9 +37,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.micr
 public static SwitchSectionSyntax DefaultSwitchSection(SyntaxList<StatementSyntax> statements)
 ```
 
-## Parameters
+### Parameters
 
-### statements
+#### statements
 
 
 

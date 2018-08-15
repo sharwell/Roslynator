@@ -14,17 +14,17 @@ Creates a list of syntax nodes from a sequence of nodes\.
 public static SyntaxList<TNode> ToSyntaxList<TNode>(this IEnumerable<TNode> nodes) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TNode
-
-
+#### TNode
 
 
 
-## Parameters
 
-### nodes
+
+### Parameters
+
+#### nodes
 
 
 

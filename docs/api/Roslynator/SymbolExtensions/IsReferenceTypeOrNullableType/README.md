@@ -14,9 +14,9 @@ Returns true if the type is a reference type or a nullable type\.
 public static bool IsReferenceTypeOrNullableType(this ITypeSymbol typeSymbol)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
+#### typeSymbol
 
 
 

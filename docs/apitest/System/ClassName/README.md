@@ -15,11 +15,11 @@
 public class ClassName
 ```
 
-## Inheritance
+### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; ClassName
 
-## Attributes
+### Attributes
 
 * System\.[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute)
 * System\.[ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)

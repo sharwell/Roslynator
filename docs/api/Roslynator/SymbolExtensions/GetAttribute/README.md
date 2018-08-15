@@ -14,15 +14,15 @@ Returns the attribute for the symbol that matches the specified attribute class,
 public static AttributeData GetAttribute(this ISymbol symbol, INamedTypeSymbol attributeClass)
 ```
 
-## Parameters
+### Parameters
 
-### symbol
-
-
+#### symbol
 
 
 
-### attributeClass
+
+
+#### attributeClass
 
 
 

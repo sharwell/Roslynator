@@ -14,15 +14,15 @@ Creates a new [StatementListInfo](../README.md) with the specified old node repl
 public StatementListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newNode)
 ```
 
-## Parameters
+### Parameters
 
-### oldNode
-
-
+#### oldNode
 
 
 
-### newNode
+
+
+#### newNode
 
 
 

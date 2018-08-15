@@ -23,15 +23,15 @@ aaa
 public Foo(string s)
 ```
 
-## Parameters
+### Parameters
 
-### s
+#### s
 
 
 
 qqq
 
-## Exceptions
+### Exceptions
 
 [ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)
 
@@ -51,15 +51,15 @@ b
 public Foo(string s, string s2)
 ```
 
-## Parameters
+### Parameters
 
-### s
-
-
+#### s
 
 
 
-### s2
+
+
+#### s2
 
 
 

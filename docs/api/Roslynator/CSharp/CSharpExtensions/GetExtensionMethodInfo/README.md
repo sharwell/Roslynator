@@ -14,21 +14,21 @@ Returns what extension method symbol, if any, the specified expression syntax bo
 public static ExtensionMethodSymbolInfo GetExtensionMethodInfo(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### semanticModel
-
-
-
-
-
-### expression
+#### semanticModel
 
 
 
 
 
-### cancellationToken
+#### expression
+
+
+
+
+
+#### cancellationToken
 
 
 

@@ -23,15 +23,15 @@ Creates a new node with a modifier of the specified kind removed\.
 public TNode Remove(TNode node, SyntaxKind kind)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
+#### node
 
 
 
-### kind
+
+
+#### kind
 
 
 
@@ -51,15 +51,15 @@ Creates a new node with the specified modifier removed\.
 public TNode Remove(TNode node, SyntaxToken modifier)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
+#### node
 
 
 
-### modifier
+
+
+#### modifier
 
 
 

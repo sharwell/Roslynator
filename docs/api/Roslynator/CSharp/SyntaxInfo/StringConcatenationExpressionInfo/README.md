@@ -24,21 +24,21 @@ Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenati
 public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(BinaryExpressionSyntax binaryExpression, SemanticModel semanticModel, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### binaryExpression
-
-
-
-
-
-### semanticModel
+#### binaryExpression
 
 
 
 
 
-### cancellationToken
+#### semanticModel
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -58,21 +58,21 @@ Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenati
 public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(in ExpressionChain expressionChain, SemanticModel semanticModel, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### expressionChain
-
-
-
-
-
-### semanticModel
+#### expressionChain
 
 
 
 
 
-### cancellationToken
+#### semanticModel
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -92,27 +92,27 @@ Creates a new [StringConcatenationExpressionInfo](../../Syntax/StringConcatenati
 public static StringConcatenationExpressionInfo StringConcatenationExpressionInfo(SyntaxNode node, SemanticModel semanticModel, bool walkDownParentheses = true, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
-
-
-
-### semanticModel
+#### node
 
 
 
 
 
-### walkDownParentheses
+#### semanticModel
 
 
 
 
 
-### cancellationToken
+#### walkDownParentheses
+
+
+
+
+
+#### cancellationToken
 
 
 

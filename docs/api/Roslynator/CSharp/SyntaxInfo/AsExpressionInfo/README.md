@@ -23,21 +23,21 @@ Creates a new [AsExpressionInfo](../../Syntax/AsExpressionInfo/README.md) from t
 public static AsExpressionInfo AsExpressionInfo(BinaryExpressionSyntax binaryExpression, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### binaryExpression
-
-
-
-
-
-### walkDownParentheses
+#### binaryExpression
 
 
 
 
 
-### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 
@@ -57,21 +57,21 @@ Creates a new [AsExpressionInfo](../../Syntax/AsExpressionInfo/README.md) from t
 public static AsExpressionInfo AsExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
-
-
-
-### walkDownParentheses
+#### node
 
 
 
 
 
-### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 

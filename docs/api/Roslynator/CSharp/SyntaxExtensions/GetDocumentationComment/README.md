@@ -14,9 +14,9 @@ Returns documentation comment syntax that is part of the specified declaration\.
 public static DocumentationCommentTriviaSyntax GetDocumentationComment(this MemberDeclarationSyntax member)
 ```
 
-## Parameters
+### Parameters
 
-### member
+#### member
 
 
 

@@ -14,15 +14,15 @@ Creates a syntax identifier from the specified type symbol\.
 public static string CreateName(ITypeSymbol typeSymbol, bool firstCharToLower = false)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
-
-
+#### typeSymbol
 
 
 
-### firstCharToLower
+
+
+#### firstCharToLower
 
 
 

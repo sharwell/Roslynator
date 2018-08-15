@@ -23,9 +23,9 @@ Determines whether this instance and a specified object are equal\.
 public override bool Equals(object obj)
 ```
 
-## Parameters
+### Parameters
 
-### obj
+#### obj
 
 
 
@@ -47,9 +47,9 @@ Determines whether this instance is equal to another object of the same type\.
 public bool Equals(SimpleMemberInvocationStatementInfo other)
 ```
 
-## Parameters
+### Parameters
 
-### other
+#### other
 
 
 

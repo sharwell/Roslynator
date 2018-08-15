@@ -10,9 +10,9 @@
 public bool Remove(Foo item)
 ```
 
-## Parameters
+### Parameters
 
-### item
+#### item
 
 
 

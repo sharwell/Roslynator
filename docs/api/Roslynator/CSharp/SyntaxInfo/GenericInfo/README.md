@@ -30,9 +30,9 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(DelegateDeclarationSyntax delegateDeclaration)
 ```
 
-## Parameters
+### Parameters
 
-### delegateDeclaration
+#### delegateDeclaration
 
 
 
@@ -52,9 +52,9 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(LocalFunctionStatementSyntax localFunctionStatement)
 ```
 
-## Parameters
+### Parameters
 
-### localFunctionStatement
+#### localFunctionStatement
 
 
 
@@ -74,9 +74,9 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(MethodDeclarationSyntax methodDeclaration)
 ```
 
-## Parameters
+### Parameters
 
-### methodDeclaration
+#### methodDeclaration
 
 
 
@@ -96,9 +96,9 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(SyntaxNode node)
 ```
 
-## Parameters
+### Parameters
 
-### node
+#### node
 
 
 
@@ -118,9 +118,9 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeDeclarationSyntax typeDeclaration)
 ```
 
-## Parameters
+### Parameters
 
-### typeDeclaration
+#### typeDeclaration
 
 
 
@@ -140,9 +140,9 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeParameterConstraintClauseSyntax constraintClause)
 ```
 
-## Parameters
+### Parameters
 
-### constraintClause
+#### constraintClause
 
 
 
@@ -162,9 +162,9 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeParameterConstraintSyntax typeParameterConstraint)
 ```
 
-## Parameters
+### Parameters
 
-### typeParameterConstraint
+#### typeParameterConstraint
 
 
 
@@ -184,9 +184,9 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeParameterListSyntax typeParameterList)
 ```
 
-## Parameters
+### Parameters
 
-### typeParameterList
+#### typeParameterList
 
 
 
@@ -206,9 +206,9 @@ Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specifi
 public static GenericInfo GenericInfo(TypeParameterSyntax typeParameter)
 ```
 
-## Parameters
+### Parameters
 
-### typeParameter
+#### typeParameter
 
 
 

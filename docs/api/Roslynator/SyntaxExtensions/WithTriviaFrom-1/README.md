@@ -25,15 +25,15 @@ Creates a new token from this token with both the leading and trailing trivia of
 public static SyntaxToken WithTriviaFrom(this SyntaxToken token, SyntaxNode node)
 ```
 
-## Parameters
+### Parameters
 
-### token
-
-
+#### token
 
 
 
-### node
+
+
+#### node
 
 
 
@@ -54,23 +54,23 @@ If the list contains more than one item, first item is updated with leading triv
 public static SeparatedSyntaxList<TNode> WithTriviaFrom<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TNode
-
-
-
-
-
-## Parameters
-
-### list
+#### TNode
 
 
 
 
 
-### node
+### Parameters
+
+#### list
+
+
+
+
+
+#### node
 
 
 
@@ -91,23 +91,23 @@ If the list contains more than one item, first item is updated with leading triv
 public static SyntaxList<TNode> WithTriviaFrom<TNode>(this SyntaxList<TNode> list, SyntaxNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TNode
-
-
-
-
-
-## Parameters
-
-### list
+#### TNode
 
 
 
 
 
-### node
+### Parameters
+
+#### list
+
+
+
+
+
+#### node
 
 
 
@@ -127,23 +127,23 @@ Creates a new node from this node with both the leading and trailing trivia of t
 public static TNode WithTriviaFrom<TNode>(this TNode node, SyntaxToken token) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TNode
-
-
-
-
-
-## Parameters
-
-### node
+#### TNode
 
 
 
 
 
-### token
+### Parameters
+
+#### node
+
+
+
+
+
+#### token
 
 
 

@@ -14,9 +14,9 @@ Returns true if the specified [FileLinePositionSpan](https://docs.microsoft.com/
 public static bool IsMultiLine(this FileLinePositionSpan fileLinePositionSpan)
 ```
 
-## Parameters
+### Parameters
 
-### fileLinePositionSpan
+#### fileLinePositionSpan
 
 
 

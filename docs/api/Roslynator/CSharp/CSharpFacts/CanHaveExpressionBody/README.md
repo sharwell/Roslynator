@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind can have expression body\.
 public static bool CanHaveExpressionBody(SyntaxKind kind)
 ```
 
-## Parameters
+### Parameters
 
-### kind
+#### kind
 
 
 

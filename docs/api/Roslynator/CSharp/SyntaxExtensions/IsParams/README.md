@@ -14,9 +14,9 @@ Returns true if the specified parameter has "params" modifier\.
 public static bool IsParams(this ParameterSyntax parameter)
 ```
 
-## Parameters
+### Parameters
 
-### parameter
+#### parameter
 
 
 

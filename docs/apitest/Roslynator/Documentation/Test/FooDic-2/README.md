@@ -19,29 +19,29 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
     where TValue : Foo
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TKey
-
-
-
-
-
-### TValue
+#### TKey
 
 
 
 
 
-## Inheritance
+#### TValue
+
+
+
+
+
+### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; FooDic\<TKey, TValue>
 
-## Attributes
+### Attributes
 
 * System\.[ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
 
-## Implements
+### Implements
 
 * System\.Collections\.Generic\.[IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\<[KeyValuePair\<TKey, TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.keyvaluepair-2)>
 * System\.Collections\.Generic\.[IEnumerable\<TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)

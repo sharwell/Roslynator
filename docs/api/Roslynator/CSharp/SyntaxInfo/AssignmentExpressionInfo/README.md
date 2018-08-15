@@ -23,21 +23,21 @@ Creates a new [AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/R
 public static AssignmentExpressionInfo AssignmentExpressionInfo(AssignmentExpressionSyntax assignmentExpression, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### assignmentExpression
-
-
-
-
-
-### walkDownParentheses
+#### assignmentExpression
 
 
 
 
 
-### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 
@@ -57,21 +57,21 @@ Creates a new [AssignmentExpressionInfo](../../Syntax/AssignmentExpressionInfo/R
 public static AssignmentExpressionInfo AssignmentExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
-
-
-
-### walkDownParentheses
+#### node
 
 
 
 
 
-### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 

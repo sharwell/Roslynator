@@ -14,9 +14,9 @@ Returns true if the type is a nullable type\.
 public static bool IsNullableType(this ITypeSymbol typeSymbol)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
+#### typeSymbol
 
 
 

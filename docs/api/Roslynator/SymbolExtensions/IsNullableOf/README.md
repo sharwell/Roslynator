@@ -25,15 +25,15 @@ Returns true if the type is [Nullable\<T>](https://docs.microsoft.com/en-us/dotn
 public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, ITypeSymbol typeArgument)
 ```
 
-## Parameters
+### Parameters
 
-### namedTypeSymbol
-
-
+#### namedTypeSymbol
 
 
 
-### typeArgument
+
+
+#### typeArgument
 
 
 
@@ -53,15 +53,15 @@ Returns true if the type is [Nullable\<T>](https://docs.microsoft.com/en-us/dotn
 public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, SpecialType specialType)
 ```
 
-## Parameters
+### Parameters
 
-### namedTypeSymbol
-
-
+#### namedTypeSymbol
 
 
 
-### specialType
+
+
+#### specialType
 
 
 
@@ -81,15 +81,15 @@ Returns true if the type is [Nullable\<T>](https://docs.microsoft.com/en-us/dotn
 public static bool IsNullableOf(this ITypeSymbol typeSymbol, ITypeSymbol typeArgument)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
-
-
+#### typeSymbol
 
 
 
-### typeArgument
+
+
+#### typeArgument
 
 
 
@@ -109,15 +109,15 @@ Returns true if the type is [Nullable\<T>](https://docs.microsoft.com/en-us/dotn
 public static bool IsNullableOf(this ITypeSymbol typeSymbol, SpecialType specialType)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
-
-
+#### typeSymbol
 
 
 
-### specialType
+
+
+#### specialType
 
 
 

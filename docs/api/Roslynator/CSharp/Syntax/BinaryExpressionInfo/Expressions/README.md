@@ -19,9 +19,9 @@ Returns expressions of this binary expression, including expressions of nested b
 public IEnumerable<ExpressionSyntax> Expressions(bool leftToRight = false)
 ```
 
-## Parameters
+### Parameters
 
-### leftToRight
+#### leftToRight
 
 
 
@@ -31,7 +31,7 @@ If true expressions are enumerated as they are displayed in the source code\.
 
 System\.Collections\.Generic\.[IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\<Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionsyntax)>
 
-## Attributes
+### Attributes
 
 * System\.[ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
 

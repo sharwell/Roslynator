@@ -27,9 +27,9 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(ClassDeclarationSyntax declaration)
 ```
 
-## Parameters
+### Parameters
 
-### declaration
+#### declaration
 
 
 
@@ -49,9 +49,9 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(CompilationUnitSyntax compilationUnit)
 ```
 
-## Parameters
+### Parameters
 
-### compilationUnit
+#### compilationUnit
 
 
 
@@ -71,9 +71,9 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(InterfaceDeclarationSyntax declaration)
 ```
 
-## Parameters
+### Parameters
 
-### declaration
+#### declaration
 
 
 
@@ -93,9 +93,9 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(NamespaceDeclarationSyntax declaration)
 ```
 
-## Parameters
+### Parameters
 
-### declaration
+#### declaration
 
 
 
@@ -115,9 +115,9 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(StructDeclarationSyntax declaration)
 ```
 
-## Parameters
+### Parameters
 
-### declaration
+#### declaration
 
 
 
@@ -137,9 +137,9 @@ Creates a new [MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo
 public static MemberDeclarationListInfo MemberDeclarationListInfo(SyntaxNode node)
 ```
 
-## Parameters
+### Parameters
 
-### node
+#### node
 
 
 

@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is an anonymous method or lambda 
 public static bool IsAnonymousFunctionExpression(SyntaxKind kind)
 ```
 
-## Parameters
+### Parameters
 
-### kind
+#### kind
 
 
 

@@ -23,15 +23,15 @@ Searches for a token that matches the predicate and returns the zero\-based inde
 public static int IndexOf(this SyntaxTokenList tokens, Func<SyntaxToken, bool> predicate)
 ```
 
-## Parameters
+### Parameters
 
-### tokens
-
-
+#### tokens
 
 
 
-### predicate
+
+
+#### predicate
 
 
 
@@ -51,15 +51,15 @@ Searches for a trivia that matches the predicate and returns the zero\-based ind
 public static int IndexOf(this SyntaxTriviaList triviaList, Func<SyntaxTrivia, bool> predicate)
 ```
 
-## Parameters
+### Parameters
 
-### triviaList
-
-
+#### triviaList
 
 
 
-### predicate
+
+
+#### predicate
 
 
 

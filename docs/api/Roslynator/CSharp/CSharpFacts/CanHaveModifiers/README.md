@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind can have modifiers\.
 public static bool CanHaveModifiers(SyntaxKind kind)
 ```
 
-## Parameters
+### Parameters
 
-### kind
+#### kind
 
 
 

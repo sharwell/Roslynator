@@ -14,9 +14,9 @@ Returns leading and trailing trivia of the specified node in a single list\.
 public static SyntaxTriviaList GetLeadingAndTrailingTrivia(this SyntaxNode node)
 ```
 
-## Parameters
+### Parameters
 
-### node
+#### node
 
 
 

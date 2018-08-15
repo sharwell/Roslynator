@@ -26,9 +26,9 @@ The absolute span of the braces, not including its leading and trailing trivia\.
 public static TextSpan BracesSpan(this ClassDeclarationSyntax classDeclaration)
 ```
 
-## Parameters
+### Parameters
 
-### classDeclaration
+#### classDeclaration
 
 
 
@@ -48,9 +48,9 @@ The absolute span of the braces, not including its leading and trailing trivia\.
 public static TextSpan BracesSpan(this EnumDeclarationSyntax enumDeclaration)
 ```
 
-## Parameters
+### Parameters
 
-### enumDeclaration
+#### enumDeclaration
 
 
 
@@ -70,9 +70,9 @@ The absolute span of the braces, not including it leading and trailing trivia\.
 public static TextSpan BracesSpan(this InterfaceDeclarationSyntax interfaceDeclaration)
 ```
 
-## Parameters
+### Parameters
 
-### interfaceDeclaration
+#### interfaceDeclaration
 
 
 
@@ -92,9 +92,9 @@ The absolute span of the braces, not including leading and trailing trivia\.
 public static TextSpan BracesSpan(this NamespaceDeclarationSyntax namespaceDeclaration)
 ```
 
-## Parameters
+### Parameters
 
-### namespaceDeclaration
+#### namespaceDeclaration
 
 
 
@@ -114,9 +114,9 @@ The absolute span of the braces, not including its leading and trailing trivia\.
 public static TextSpan BracesSpan(this StructDeclarationSyntax structDeclaration)
 ```
 
-## Parameters
+### Parameters
 
-### structDeclaration
+#### structDeclaration
 
 
 

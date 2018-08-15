@@ -23,27 +23,27 @@ Creates a new [ExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/mic
 public static ExpressionSyntax GetDefaultValueSyntax(this ITypeSymbol typeSymbol, SemanticModel semanticModel, int position, SymbolDisplayFormat format = null)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
-
-
-
-
-
-### semanticModel
+#### typeSymbol
 
 
 
 
 
-### position
+#### semanticModel
 
 
 
 
 
-### format
+#### position
+
+
+
+
+
+#### format
 
 
 
@@ -63,15 +63,15 @@ Creates a new [ExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/mic
 public static ExpressionSyntax GetDefaultValueSyntax(this ITypeSymbol typeSymbol, TypeSyntax type)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
-
-
+#### typeSymbol
 
 
 
-### type
+
+
+#### type
 
 
 

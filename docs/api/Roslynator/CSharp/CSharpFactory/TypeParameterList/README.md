@@ -19,9 +19,9 @@
 public static TypeParameterListSyntax TypeParameterList(TypeParameterSyntax parameter)
 ```
 
-## Parameters
+### Parameters
 
-### parameter
+#### parameter
 
 
 
@@ -37,9 +37,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterListSyntax](https://docs.
 public static TypeParameterListSyntax TypeParameterList(params TypeParameterSyntax[] parameters)
 ```
 
-## Parameters
+### Parameters
 
-### parameters
+#### parameters
 
 
 

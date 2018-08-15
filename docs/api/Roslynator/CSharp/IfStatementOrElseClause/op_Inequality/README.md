@@ -10,15 +10,15 @@
 public static bool operator !=(in IfStatementOrElseClause left, in IfStatementOrElseClause right)
 ```
 
-## Parameters
+### Parameters
 
-### left
-
-
+#### left
 
 
 
-### right
+
+
+#### right
 
 
 

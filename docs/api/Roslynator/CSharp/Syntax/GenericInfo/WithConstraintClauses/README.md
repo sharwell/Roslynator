@@ -14,9 +14,9 @@ Creates a new [GenericInfo](../README.md) with the constraint clauses updated\.
 public GenericInfo WithConstraintClauses(SyntaxList<TypeParameterConstraintClauseSyntax> constraintClauses)
 ```
 
-## Parameters
+### Parameters
 
-### constraintClauses
+#### constraintClauses
 
 
 

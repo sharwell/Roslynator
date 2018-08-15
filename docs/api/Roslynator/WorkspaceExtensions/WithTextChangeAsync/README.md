@@ -14,21 +14,21 @@ Creates a new document updated with the specified text change\.
 public static Task<Document> WithTextChangeAsync(this Document document, TextChange textChange, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### document
-
-
-
-
-
-### textChange
+#### document
 
 
 
 
 
-### cancellationToken
+#### textChange
+
+
+
+
+
+#### cancellationToken
 
 
 

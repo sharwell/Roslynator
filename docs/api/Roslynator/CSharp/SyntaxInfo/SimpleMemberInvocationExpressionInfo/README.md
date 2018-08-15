@@ -23,15 +23,15 @@ Creates a new [SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberIn
 public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpressionInfo(InvocationExpressionSyntax invocationExpression, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### invocationExpression
-
-
+#### invocationExpression
 
 
 
-### allowMissing
+
+
+#### allowMissing
 
 
 
@@ -51,21 +51,21 @@ Creates a new [SimpleMemberInvocationExpressionInfo](../../Syntax/SimpleMemberIn
 public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
-
-
-
-### walkDownParentheses
+#### node
 
 
 
 
 
-### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 

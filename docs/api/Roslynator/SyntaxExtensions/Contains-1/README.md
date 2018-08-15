@@ -24,15 +24,15 @@ Returns true if the specified token is in the [SyntaxTokenList](https://docs.mic
 public static bool Contains(this SyntaxTokenList tokens, SyntaxToken token)
 ```
 
-## Parameters
+### Parameters
 
-### tokens
-
-
+#### tokens
 
 
 
-### token
+
+
+#### token
 
 
 
@@ -52,23 +52,23 @@ Returns true if the specified node is in the [SeparatedSyntaxList\<TNode>](https
 public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TNode
-
-
-
-
-
-## Parameters
-
-### list
+#### TNode
 
 
 
 
 
-### node
+### Parameters
+
+#### list
+
+
+
+
+
+#### node
 
 
 
@@ -88,23 +88,23 @@ Returns true if the specified node is in the [SyntaxList\<TNode>](https://docs.m
 public static bool Contains<TNode>(this SyntaxList<TNode> list, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TNode
-
-
-
-
-
-## Parameters
-
-### list
+#### TNode
 
 
 
 
 
-### node
+### Parameters
+
+#### list
+
+
+
+
+
+#### node
 
 
 

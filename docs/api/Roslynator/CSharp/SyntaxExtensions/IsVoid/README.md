@@ -14,9 +14,9 @@ Returns true if the type is [Void](https://docs.microsoft.com/en-us/dotnet/api/s
 public static bool IsVoid(this TypeSyntax type)
 ```
 
-## Parameters
+### Parameters
 
-### type
+#### type
 
 
 

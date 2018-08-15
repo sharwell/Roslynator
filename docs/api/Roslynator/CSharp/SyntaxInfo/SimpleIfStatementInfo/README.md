@@ -23,21 +23,21 @@ Creates a new [SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.
 public static SimpleIfStatementInfo SimpleIfStatementInfo(IfStatementSyntax ifStatement, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### ifStatement
-
-
-
-
-
-### walkDownParentheses
+#### ifStatement
 
 
 
 
 
-### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 
@@ -57,21 +57,21 @@ Creates a new [SimpleIfStatementInfo](../../Syntax/SimpleIfStatementInfo/README.
 public static SimpleIfStatementInfo SimpleIfStatementInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
-
-
-
-### walkDownParentheses
+#### node
 
 
 
 
 
-### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 

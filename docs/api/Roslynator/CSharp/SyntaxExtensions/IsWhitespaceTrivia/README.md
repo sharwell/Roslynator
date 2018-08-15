@@ -14,9 +14,9 @@ Returns true if the trivia is [SyntaxKind.WhitespaceTrivia](https://docs.microso
 public static bool IsWhitespaceTrivia(this SyntaxTrivia trivia)
 ```
 
-## Parameters
+### Parameters
 
-### trivia
+#### trivia
 
 
 

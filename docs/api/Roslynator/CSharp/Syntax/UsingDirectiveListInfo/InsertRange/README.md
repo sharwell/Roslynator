@@ -14,15 +14,15 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the specified usings i
 public UsingDirectiveListInfo InsertRange(int index, IEnumerable<UsingDirectiveSyntax> usings)
 ```
 
-## Parameters
+### Parameters
 
-### index
-
-
+#### index
 
 
 
-### usings
+
+
+#### usings
 
 
 

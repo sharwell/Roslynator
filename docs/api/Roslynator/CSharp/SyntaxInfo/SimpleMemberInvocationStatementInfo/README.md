@@ -24,15 +24,15 @@ Creates a new [SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInv
 public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatementInfo(ExpressionStatementSyntax expressionStatement, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### expressionStatement
-
-
+#### expressionStatement
 
 
 
-### allowMissing
+
+
+#### allowMissing
 
 
 
@@ -52,15 +52,15 @@ Creates a new [SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInv
 public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatementInfo(InvocationExpressionSyntax invocationExpression, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### invocationExpression
-
-
+#### invocationExpression
 
 
 
-### allowMissing
+
+
+#### allowMissing
 
 
 
@@ -80,15 +80,15 @@ Creates a new [SimpleMemberInvocationStatementInfo](../../Syntax/SimpleMemberInv
 public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatementInfo(SyntaxNode node, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
+#### node
 
 
 
-### allowMissing
+
+
+#### allowMissing
 
 
 

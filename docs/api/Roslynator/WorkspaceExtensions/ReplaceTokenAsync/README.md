@@ -23,27 +23,27 @@ Creates a new document with the specified old token replaced with new tokens\.
 public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxToken oldToken, IEnumerable<SyntaxToken> newTokens, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### document
-
-
-
-
-
-### oldToken
+#### document
 
 
 
 
 
-### newTokens
+#### oldToken
 
 
 
 
 
-### cancellationToken
+#### newTokens
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -63,27 +63,27 @@ Creates a new document with the specified old token replaced with a new token\.
 public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxToken oldToken, SyntaxToken newToken, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### document
-
-
-
-
-
-### oldToken
+#### document
 
 
 
 
 
-### newToken
+#### oldToken
 
 
 
 
 
-### cancellationToken
+#### newToken
+
+
+
+
+
+#### cancellationToken
 
 
 

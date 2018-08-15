@@ -14,9 +14,9 @@ If this method is a reduced extension method, returns the definition of extensio
 public static IMethodSymbol ReducedFromOrSelf(this IMethodSymbol methodSymbol)
 ```
 
-## Parameters
+### Parameters
 
-### methodSymbol
+#### methodSymbol
 
 
 

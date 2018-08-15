@@ -31,15 +31,15 @@ Creates a new [ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/a
 public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax classDeclaration, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-## Parameters
+### Parameters
 
-### classDeclaration
-
-
+#### classDeclaration
 
 
 
-### members
+
+
+#### members
 
 
 
@@ -59,15 +59,15 @@ Creates a new [ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/a
 public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax classDeclaration, MemberDeclarationSyntax member)
 ```
 
-## Parameters
+### Parameters
 
-### classDeclaration
-
-
+#### classDeclaration
 
 
 
-### member
+
+
+#### member
 
 
 
@@ -87,15 +87,15 @@ Creates a new [CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/ap
 public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compilationUnit, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-## Parameters
+### Parameters
 
-### compilationUnit
-
-
+#### compilationUnit
 
 
 
-### members
+
+
+#### members
 
 
 
@@ -115,15 +115,15 @@ Creates a new [CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/ap
 public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compilationUnit, MemberDeclarationSyntax member)
 ```
 
-## Parameters
+### Parameters
 
-### compilationUnit
-
-
+#### compilationUnit
 
 
 
-### member
+
+
+#### member
 
 
 
@@ -143,15 +143,15 @@ Creates a new [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotn
 public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSyntax interfaceDeclaration, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-## Parameters
+### Parameters
 
-### interfaceDeclaration
-
-
+#### interfaceDeclaration
 
 
 
-### members
+
+
+#### members
 
 
 
@@ -171,15 +171,15 @@ Creates a new [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotn
 public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSyntax interfaceDeclaration, MemberDeclarationSyntax member)
 ```
 
-## Parameters
+### Parameters
 
-### interfaceDeclaration
-
-
+#### interfaceDeclaration
 
 
 
-### member
+
+
+#### member
 
 
 
@@ -199,15 +199,15 @@ Creates a new [NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotn
 public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSyntax namespaceDeclaration, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-## Parameters
+### Parameters
 
-### namespaceDeclaration
-
-
+#### namespaceDeclaration
 
 
 
-### members
+
+
+#### members
 
 
 
@@ -227,15 +227,15 @@ Creates a new [NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotn
 public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSyntax namespaceDeclaration, MemberDeclarationSyntax member)
 ```
 
-## Parameters
+### Parameters
 
-### namespaceDeclaration
-
-
+#### namespaceDeclaration
 
 
 
-### member
+
+
+#### member
 
 
 
@@ -255,15 +255,15 @@ Creates a new [StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/
 public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax structDeclaration, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-## Parameters
+### Parameters
 
-### structDeclaration
-
-
+#### structDeclaration
 
 
 
-### members
+
+
+#### members
 
 
 
@@ -283,15 +283,15 @@ Creates a new [StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/
 public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax structDeclaration, MemberDeclarationSyntax member)
 ```
 
-## Parameters
+### Parameters
 
-### structDeclaration
-
-
+#### structDeclaration
 
 
 
-### member
+
+
+#### member
 
 
 

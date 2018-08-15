@@ -23,21 +23,21 @@ Returns an index a token with the specified kind should be inserted at\.
 public static int GetInsertIndex(SyntaxTokenList tokens, SyntaxKind kind, IComparer<SyntaxKind> comparer = null)
 ```
 
-## Parameters
+### Parameters
 
-### tokens
-
-
-
-
-
-### kind
+#### tokens
 
 
 
 
 
-### comparer
+#### kind
+
+
+
+
+
+#### comparer
 
 
 
@@ -57,21 +57,21 @@ Returns an index the specified token should be inserted at\.
 public static int GetInsertIndex(SyntaxTokenList tokens, SyntaxToken token, IComparer<SyntaxToken> comparer = null)
 ```
 
-## Parameters
+### Parameters
 
-### tokens
-
-
-
-
-
-### token
+#### tokens
 
 
 
 
 
-### comparer
+#### token
+
+
+
+
+
+#### comparer
 
 
 

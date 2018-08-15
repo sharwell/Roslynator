@@ -14,11 +14,11 @@ Provides information about invocation expression\.
 public readonly struct SimpleMemberInvocationExpressionInfo : System.IEquatable<SimpleMemberInvocationExpressionInfo>
 ```
 
-## Inheritance
+### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype) &#x2192; SimpleMemberInvocationExpressionInfo
 
-## Implements
+### Implements
 
 * System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[SimpleMemberInvocationExpressionInfo](./README.md)>
 

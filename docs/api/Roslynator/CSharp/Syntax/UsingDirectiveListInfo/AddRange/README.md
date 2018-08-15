@@ -14,9 +14,9 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the specified usings a
 public UsingDirectiveListInfo AddRange(IEnumerable<UsingDirectiveSyntax> usings)
 ```
 
-## Parameters
+### Parameters
 
-### usings
+#### usings
 
 
 

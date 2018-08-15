@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is comment trivia\.
 public static bool IsCommentTrivia(SyntaxKind kind)
 ```
 
-## Parameters
+### Parameters
 
-### kind
+#### kind
 
 
 

@@ -14,15 +14,15 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the specified membe
 public MemberDeclarationListInfo InsertRange(int index, IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-## Parameters
+### Parameters
 
-### index
-
-
+#### index
 
 
 
-### members
+
+
+#### members
 
 
 

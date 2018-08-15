@@ -14,9 +14,9 @@ Returns true if the type is [String](https://docs.microsoft.com/en-us/dotnet/api
 public static bool IsString(this ITypeSymbol typeSymbol)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
+#### typeSymbol
 
 
 

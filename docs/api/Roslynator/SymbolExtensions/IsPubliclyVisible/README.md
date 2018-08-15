@@ -14,9 +14,9 @@ Return true if the specified symbol is publicly visible\.
 public static bool IsPubliclyVisible(this ISymbol symbol)
 ```
 
-## Parameters
+### Parameters
 
-### symbol
+#### symbol
 
 
 

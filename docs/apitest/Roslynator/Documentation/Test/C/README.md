@@ -10,7 +10,7 @@
 public class C : B
 ```
 
-## Inheritance
+### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [B](../B/README.md) &#x2192; C
 

@@ -19,15 +19,15 @@
 public static VariableDeclaratorSyntax VariableDeclarator(string identifier, EqualsValueClauseSyntax initializer)
 ```
 
-## Parameters
+### Parameters
 
-### identifier
-
-
+#### identifier
 
 
 
-### initializer
+
+
+#### initializer
 
 
 
@@ -43,15 +43,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclaratorSyntax](https://docs
 public static VariableDeclaratorSyntax VariableDeclarator(SyntaxToken identifier, EqualsValueClauseSyntax initializer)
 ```
 
-## Parameters
+### Parameters
 
-### identifier
-
-
+#### identifier
 
 
 
-### initializer
+
+
+#### initializer
 
 
 

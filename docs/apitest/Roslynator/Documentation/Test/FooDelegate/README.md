@@ -14,18 +14,18 @@ del
 public delegate Foo FooDelegate(object p)
 ```
 
-## Parameters
+### Parameters
 
-### p
-
-
+#### p
 
 
 
-## Return Value
+
+
+### Return Value
 
 Roslynator\.Documentation\.Test\.[Foo](../Foo/README.md)
 
-## Inheritance
+### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [Delegate](https://docs.microsoft.com/en-us/dotnet/api/system.delegate) &#x2192; [MulticastDelegate](https://docs.microsoft.com/en-us/dotnet/api/system.multicastdelegate) &#x2192; FooDelegate

@@ -37,21 +37,21 @@ Returns true if the accessibility is one of the specified accessibilities\.
 public static bool Is(this Accessibility accessibility, Accessibility accessibility1, Accessibility accessibility2)
 ```
 
-## Parameters
+### Parameters
 
-### accessibility
-
-
-
-
-
-### accessibility1
+#### accessibility
 
 
 
 
 
-### accessibility2
+#### accessibility1
+
+
+
+
+
+#### accessibility2
 
 
 
@@ -71,27 +71,27 @@ Returns true if the accessibility is one of the specified accessibilities\.
 public static bool Is(this Accessibility accessibility, Accessibility accessibility1, Accessibility accessibility2, Accessibility accessibility3)
 ```
 
-## Parameters
+### Parameters
 
-### accessibility
-
-
-
-
-
-### accessibility1
+#### accessibility
 
 
 
 
 
-### accessibility2
+#### accessibility1
 
 
 
 
 
-### accessibility3
+#### accessibility2
+
+
+
+
+
+#### accessibility3
 
 
 
@@ -111,33 +111,33 @@ Returns true if the accessibility is one of the specified accessibilities\.
 public static bool Is(this Accessibility accessibility, Accessibility accessibility1, Accessibility accessibility2, Accessibility accessibility3, Accessibility accessibility4)
 ```
 
-## Parameters
+### Parameters
 
-### accessibility
-
-
-
-
-
-### accessibility1
+#### accessibility
 
 
 
 
 
-### accessibility2
+#### accessibility1
 
 
 
 
 
-### accessibility3
+#### accessibility2
 
 
 
 
 
-### accessibility4
+#### accessibility3
+
+
+
+
+
+#### accessibility4
 
 
 
@@ -157,39 +157,39 @@ Returns true if the accessibility is one of the specified accessibilities\.
 public static bool Is(this Accessibility accessibility, Accessibility accessibility1, Accessibility accessibility2, Accessibility accessibility3, Accessibility accessibility4, Accessibility accessibility5)
 ```
 
-## Parameters
+### Parameters
 
-### accessibility
-
-
-
-
-
-### accessibility1
+#### accessibility
 
 
 
 
 
-### accessibility2
+#### accessibility1
 
 
 
 
 
-### accessibility3
+#### accessibility2
 
 
 
 
 
-### accessibility4
+#### accessibility3
 
 
 
 
 
-### accessibility5
+#### accessibility4
+
+
+
+
+
+#### accessibility5
 
 
 
@@ -209,21 +209,21 @@ Returns true if the method kind is one of the specified method kinds\.
 public static bool Is(this MethodKind methodKind, MethodKind methodKind1, MethodKind methodKind2)
 ```
 
-## Parameters
+### Parameters
 
-### methodKind
-
-
-
-
-
-### methodKind1
+#### methodKind
 
 
 
 
 
-### methodKind2
+#### methodKind1
+
+
+
+
+
+#### methodKind2
 
 
 
@@ -243,27 +243,27 @@ Returns true if the method kind is one of the specified method kinds\.
 public static bool Is(this MethodKind methodKind, MethodKind methodKind1, MethodKind methodKind2, MethodKind methodKind3)
 ```
 
-## Parameters
+### Parameters
 
-### methodKind
-
-
-
-
-
-### methodKind1
+#### methodKind
 
 
 
 
 
-### methodKind2
+#### methodKind1
 
 
 
 
 
-### methodKind3
+#### methodKind2
+
+
+
+
+
+#### methodKind3
 
 
 
@@ -283,33 +283,33 @@ Returns true if the method kind is one of the specified method kinds\.
 public static bool Is(this MethodKind methodKind, MethodKind methodKind1, MethodKind methodKind2, MethodKind methodKind3, MethodKind methodKind4)
 ```
 
-## Parameters
+### Parameters
 
-### methodKind
-
-
-
-
-
-### methodKind1
+#### methodKind
 
 
 
 
 
-### methodKind2
+#### methodKind1
 
 
 
 
 
-### methodKind3
+#### methodKind2
 
 
 
 
 
-### methodKind4
+#### methodKind3
+
+
+
+
+
+#### methodKind4
 
 
 
@@ -329,39 +329,39 @@ Returns true if the method kind is one of the specified method kinds\.
 public static bool Is(this MethodKind methodKind, MethodKind methodKind1, MethodKind methodKind2, MethodKind methodKind3, MethodKind methodKind4, MethodKind methodKind5)
 ```
 
-## Parameters
+### Parameters
 
-### methodKind
-
-
-
-
-
-### methodKind1
+#### methodKind
 
 
 
 
 
-### methodKind2
+#### methodKind1
 
 
 
 
 
-### methodKind3
+#### methodKind2
 
 
 
 
 
-### methodKind4
+#### methodKind3
 
 
 
 
 
-### methodKind5
+#### methodKind4
+
+
+
+
+
+#### methodKind5
 
 
 
@@ -381,21 +381,21 @@ Returns true if the special type is one of the specified special types\.
 public static bool Is(this SpecialType specialType, SpecialType specialType1, SpecialType specialType2)
 ```
 
-## Parameters
+### Parameters
 
-### specialType
-
-
-
-
-
-### specialType1
+#### specialType
 
 
 
 
 
-### specialType2
+#### specialType1
+
+
+
+
+
+#### specialType2
 
 
 
@@ -415,27 +415,27 @@ Returns true if the special type is one of the specified special types\.
 public static bool Is(this SpecialType specialType, SpecialType specialType1, SpecialType specialType2, SpecialType specialType3)
 ```
 
-## Parameters
+### Parameters
 
-### specialType
-
-
-
-
-
-### specialType1
+#### specialType
 
 
 
 
 
-### specialType2
+#### specialType1
 
 
 
 
 
-### specialType3
+#### specialType2
+
+
+
+
+
+#### specialType3
 
 
 
@@ -455,33 +455,33 @@ Returns true if the special type is one of the specified special types\.
 public static bool Is(this SpecialType specialType, SpecialType specialType1, SpecialType specialType2, SpecialType specialType3, SpecialType specialType4)
 ```
 
-## Parameters
+### Parameters
 
-### specialType
-
-
-
-
-
-### specialType1
+#### specialType
 
 
 
 
 
-### specialType2
+#### specialType1
 
 
 
 
 
-### specialType3
+#### specialType2
 
 
 
 
 
-### specialType4
+#### specialType3
+
+
+
+
+
+#### specialType4
 
 
 
@@ -501,39 +501,39 @@ Returns true if the special type is one of the specified special types\.
 public static bool Is(this SpecialType specialType, SpecialType specialType1, SpecialType specialType2, SpecialType specialType3, SpecialType specialType4, SpecialType specialType5)
 ```
 
-## Parameters
+### Parameters
 
-### specialType
-
-
-
-
-
-### specialType1
+#### specialType
 
 
 
 
 
-### specialType2
+#### specialType1
 
 
 
 
 
-### specialType3
+#### specialType2
 
 
 
 
 
-### specialType4
+#### specialType3
 
 
 
 
 
-### specialType5
+#### specialType4
+
+
+
+
+
+#### specialType5
 
 
 
@@ -553,21 +553,21 @@ Returns true if the type kind is one of the specified type kinds\.
 public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeKind2)
 ```
 
-## Parameters
+### Parameters
 
-### typeKind
-
-
-
-
-
-### typeKind1
+#### typeKind
 
 
 
 
 
-### typeKind2
+#### typeKind1
+
+
+
+
+
+#### typeKind2
 
 
 
@@ -587,27 +587,27 @@ Returns true if the type kind is one of the specified type kinds\.
 public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeKind2, TypeKind typeKind3)
 ```
 
-## Parameters
+### Parameters
 
-### typeKind
-
-
-
-
-
-### typeKind1
+#### typeKind
 
 
 
 
 
-### typeKind2
+#### typeKind1
 
 
 
 
 
-### typeKind3
+#### typeKind2
+
+
+
+
+
+#### typeKind3
 
 
 
@@ -627,33 +627,33 @@ Returns true if the type kind is one of the specified type kinds\.
 public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeKind2, TypeKind typeKind3, TypeKind typeKind4)
 ```
 
-## Parameters
+### Parameters
 
-### typeKind
-
-
-
-
-
-### typeKind1
+#### typeKind
 
 
 
 
 
-### typeKind2
+#### typeKind1
 
 
 
 
 
-### typeKind3
+#### typeKind2
 
 
 
 
 
-### typeKind4
+#### typeKind3
+
+
+
+
+
+#### typeKind4
 
 
 
@@ -673,39 +673,39 @@ Returns true if the type kind is one of the specified type kinds\.
 public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeKind2, TypeKind typeKind3, TypeKind typeKind4, TypeKind typeKind5)
 ```
 
-## Parameters
+### Parameters
 
-### typeKind
-
-
-
-
-
-### typeKind1
+#### typeKind
 
 
 
 
 
-### typeKind2
+#### typeKind1
 
 
 
 
 
-### typeKind3
+#### typeKind2
 
 
 
 
 
-### typeKind4
+#### typeKind3
 
 
 
 
 
-### typeKind5
+#### typeKind4
+
+
+
+
+
+#### typeKind5
 
 
 

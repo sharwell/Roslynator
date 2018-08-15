@@ -14,9 +14,9 @@ Gets the selected line at the specified index\.
 public TextLine this[int index] { get; }
 ```
 
-## Parameters
+### Parameters
 
-### index
+#### index
 
 
 

@@ -19,33 +19,33 @@
 public static PropertyDeclarationSyntax PropertyDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier, AccessorListSyntax accessorList, ExpressionSyntax value = null)
 ```
 
-## Parameters
+### Parameters
 
-### modifiers
-
-
-
-
-
-### type
+#### modifiers
 
 
 
 
 
-### identifier
+#### type
 
 
 
 
 
-### accessorList
+#### identifier
 
 
 
 
 
-### value
+#### accessorList
+
+
+
+
+
+#### value
 
 
 
@@ -61,27 +61,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PropertyDeclarationSyntax](https://doc
 public static PropertyDeclarationSyntax PropertyDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-## Parameters
+### Parameters
 
-### modifiers
-
-
-
-
-
-### type
+#### modifiers
 
 
 
 
 
-### identifier
+#### type
 
 
 
 
 
-### expressionBody
+#### identifier
+
+
+
+
+
+#### expressionBody
 
 
 

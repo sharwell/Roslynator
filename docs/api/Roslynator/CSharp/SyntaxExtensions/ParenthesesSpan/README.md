@@ -24,9 +24,9 @@ The absolute span of the parentheses, not including its leading and trailing tri
 public static TextSpan ParenthesesSpan(this CastExpressionSyntax castExpression)
 ```
 
-## Parameters
+### Parameters
 
-### castExpression
+#### castExpression
 
 
 
@@ -46,9 +46,9 @@ The absolute span of the parentheses, not including its leading and trailing tri
 public static TextSpan ParenthesesSpan(this CommonForEachStatementSyntax forEachStatement)
 ```
 
-## Parameters
+### Parameters
 
-### forEachStatement
+#### forEachStatement
 
 
 
@@ -68,9 +68,9 @@ Absolute span of the parentheses, not including the leading and trailing trivia\
 public static TextSpan ParenthesesSpan(this ForStatementSyntax forStatement)
 ```
 
-## Parameters
+### Parameters
 
-### forStatement
+#### forStatement
 
 
 

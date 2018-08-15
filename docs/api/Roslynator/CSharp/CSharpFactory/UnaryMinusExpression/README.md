@@ -19,9 +19,9 @@
 public static PrefixUnaryExpressionSyntax UnaryMinusExpression(ExpressionSyntax operand)
 ```
 
-## Parameters
+### Parameters
 
-### operand
+#### operand
 
 
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PrefixUnaryExpressionSyntax](https://d
 public static PrefixUnaryExpressionSyntax UnaryMinusExpression(ExpressionSyntax operand, SyntaxToken operatorToken)
 ```
 
-## Parameters
+### Parameters
 
-### operand
-
-
+#### operand
 
 
 
-### operatorToken
+
+
+#### operatorToken
 
 
 

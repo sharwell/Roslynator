@@ -14,15 +14,15 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the specified node rem
 public UsingDirectiveListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions options)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
+#### node
 
 
 
-### options
+
+
+#### options
 
 
 

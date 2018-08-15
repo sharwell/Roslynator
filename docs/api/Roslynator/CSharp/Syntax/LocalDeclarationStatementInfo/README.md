@@ -14,11 +14,11 @@ Provides information about local declaration statement\.
 public readonly struct LocalDeclarationStatementInfo : System.IEquatable<LocalDeclarationStatementInfo>
 ```
 
-## Inheritance
+### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype) &#x2192; LocalDeclarationStatementInfo
 
-## Implements
+### Implements
 
 * System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[LocalDeclarationStatementInfo](./README.md)>
 

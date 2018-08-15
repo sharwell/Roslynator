@@ -21,15 +21,15 @@
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, EqualsValueClauseSyntax value)
 ```
 
-## Parameters
+### Parameters
 
-### name
-
-
+#### name
 
 
 
-### value
+
+
+#### value
 
 
 
@@ -45,15 +45,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://d
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, ExpressionSyntax value)
 ```
 
-## Parameters
+### Parameters
 
-### name
-
-
+#### name
 
 
 
-### value
+
+
+#### value
 
 
 
@@ -69,15 +69,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://d
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken identifier, EqualsValueClauseSyntax value)
 ```
 
-## Parameters
+### Parameters
 
-### identifier
-
-
+#### identifier
 
 
 
-### value
+
+
+#### value
 
 
 
@@ -93,15 +93,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EnumMemberDeclarationSyntax](https://d
 public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken identifier, ExpressionSyntax value)
 ```
 
-## Parameters
+### Parameters
 
-### identifier
-
-
+#### identifier
 
 
 
-### value
+
+
+#### value
 
 
 

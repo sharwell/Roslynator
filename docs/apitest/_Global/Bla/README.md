@@ -15,15 +15,15 @@ blac
 public class Bla
 ```
 
-## Inheritance
+### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; Bla
 
-## Attributes
+### Attributes
 
 * System\.[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute)
 
-## Derived
+### Derived
 
 * Roslynator\.Documentation\.Test\.[Foo](../../Roslynator/Documentation/Test/Foo/README.md)
 

@@ -122,7 +122,7 @@ namespace Roslynator.Documentation
             Writer.WriteEndHeading();
         }
 
-        public virtual void WriteImplements(ISymbol symbol, int headingLevelBase = 0)
+        public virtual void WriteImplements(ISymbol symbol)
         {
             using (IEnumerator<ISymbol> en = symbol.FindImplementedInterfaceMembers()
                 .OrderBy(f => f.ToDisplayString(SymbolDisplayFormats.MemberImplements, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName))
@@ -130,7 +130,7 @@ namespace Roslynator.Documentation
             {
                 if (en.MoveNext())
                 {
-                    Writer.WriteHeading(3 + headingLevelBase, Resources.ImplementsTitle);
+                    Writer.WriteHeading(3, Resources.ImplementsTitle);
 
                     Writer.WriteStartBulletList();
 
@@ -147,7 +147,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null, int headingLevelBase = 0)
+        public virtual void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
         {
         }
 
@@ -315,11 +315,11 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null, int headingLevelBase = 0)
+            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
             {
                 var fieldSymbol = (IFieldSymbol)symbol;
 
-                Writer.WriteHeading(3 + headingLevelBase, Resources.FieldValueTitle);
+                Writer.WriteHeading(3, Resources.FieldValueTitle);
                 Writer.WriteTypeLink(fieldSymbol.Type);
             }
         }
@@ -330,7 +330,7 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null, int headingLevelBase = 0)
+            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
             {
                 var methodSymbol = (IMethodSymbol)symbol;
 
@@ -339,7 +339,7 @@ namespace Roslynator.Documentation
                 if (returnType.SpecialType == SpecialType.System_Void)
                     return;
 
-                Writer.WriteHeading(3 + headingLevelBase, Resources.ReturnsTitle);
+                Writer.WriteHeading(3, Resources.ReturnsTitle);
                 Writer.WriteTypeLink(returnType);
                 Writer.WriteLine();
                 Writer.WriteLine();
@@ -354,11 +354,11 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null, int headingLevelBase = 0)
+            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
             {
                 var methodSymbol = (IMethodSymbol)symbol;
 
-                Writer.WriteHeading(3 + headingLevelBase, Resources.ReturnsTitle);
+                Writer.WriteHeading(3, Resources.ReturnsTitle);
                 Writer.WriteTypeLink(methodSymbol.ReturnType);
                 Writer.WriteLine();
                 Writer.WriteLine();
@@ -373,11 +373,11 @@ namespace Roslynator.Documentation
             {
             }
 
-            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null, int headingLevelBase = 0)
+            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
             {
                 var propertySymbol = (IPropertySymbol)symbol;
 
-                Writer.WriteHeading(3 + headingLevelBase, Resources.PropertyValueTitle);
+                Writer.WriteHeading(3, Resources.PropertyValueTitle);
                 Writer.WriteTypeLink(propertySymbol.Type);
                 Writer.WriteLine();
                 Writer.WriteLine();

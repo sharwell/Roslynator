@@ -19,15 +19,15 @@
 public static BinaryExpressionSyntax MultiplyExpression(ExpressionSyntax left, ExpressionSyntax right)
 ```
 
-## Parameters
+### Parameters
 
-### left
-
-
+#### left
 
 
 
-### right
+
+
+#### right
 
 
 
@@ -43,21 +43,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BinaryExpressionSyntax](https://docs.m
 public static BinaryExpressionSyntax MultiplyExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)
 ```
 
-## Parameters
+### Parameters
 
-### left
-
-
-
-
-
-### operatorToken
+#### left
 
 
 
 
 
-### right
+#### operatorToken
+
+
+
+
+
+#### right
 
 
 

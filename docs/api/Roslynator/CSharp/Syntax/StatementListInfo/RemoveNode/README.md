@@ -14,15 +14,15 @@ Creates a new [StatementListInfo](../README.md) with the specified node removed\
 public StatementListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions options)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
+#### node
 
 
 
-### options
+
+
+#### options
 
 
 

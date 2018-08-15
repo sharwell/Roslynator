@@ -23,9 +23,9 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the usings updated\.
 public UsingDirectiveListInfo WithUsings(IEnumerable<UsingDirectiveSyntax> usings)
 ```
 
-## Parameters
+### Parameters
 
-### usings
+#### usings
 
 
 
@@ -45,9 +45,9 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the usings updated\.
 public UsingDirectiveListInfo WithUsings(SyntaxList<UsingDirectiveSyntax> usings)
 ```
 
-## Parameters
+### Parameters
 
-### usings
+#### usings
 
 
 

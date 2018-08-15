@@ -14,27 +14,27 @@ Creates a new document with the specified nodes removed\.
 public static Task<Document> RemoveNodesAsync(this Document document, IEnumerable<SyntaxNode> nodes, SyntaxRemoveOptions options, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### document
-
-
-
-
-
-### nodes
+#### document
 
 
 
 
 
-### options
+#### nodes
 
 
 
 
 
-### cancellationToken
+#### options
+
+
+
+
+
+#### cancellationToken
 
 
 

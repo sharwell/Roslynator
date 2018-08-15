@@ -10,11 +10,11 @@
 public class B
 ```
 
-## Inheritance
+### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; B
 
-## Derived
+### Derived
 
 * Roslynator\.Documentation\.Test\.[C](../C/README.md)
 

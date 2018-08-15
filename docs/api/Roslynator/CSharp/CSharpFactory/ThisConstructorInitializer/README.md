@@ -19,9 +19,9 @@
 public static ConstructorInitializerSyntax ThisConstructorInitializer(ArgumentListSyntax argumentList = null)
 ```
 
-## Parameters
+### Parameters
 
-### argumentList
+#### argumentList
 
 
 
@@ -37,15 +37,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorInitializerSyntax](https://
 public static ConstructorInitializerSyntax ThisConstructorInitializer(SyntaxToken semicolonToken, ArgumentListSyntax argumentList)
 ```
 
-## Parameters
+### Parameters
 
-### semicolonToken
-
-
+#### semicolonToken
 
 
 
-### argumentList
+
+
+#### argumentList
 
 
 

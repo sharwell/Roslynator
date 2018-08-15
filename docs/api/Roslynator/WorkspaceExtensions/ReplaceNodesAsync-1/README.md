@@ -23,35 +23,35 @@ Creates a new document with the specified old nodes replaced with new nodes\.
 public static Task<Document> ReplaceNodesAsync<TNode>(this Document document, IEnumerable<TNode> nodes, Func<TNode, TNode, SyntaxNode> computeReplacementNode, CancellationToken cancellationToken = default(CancellationToken)) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TNode
-
-
-
-
-
-## Parameters
-
-### document
+#### TNode
 
 
 
 
 
-### nodes
+### Parameters
+
+#### document
 
 
 
 
 
-### computeReplacementNode
+#### nodes
 
 
 
 
 
-### cancellationToken
+#### computeReplacementNode
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -71,35 +71,35 @@ Creates a new solution with the specified old nodes replaced with new nodes\.
 public static Task<Solution> ReplaceNodesAsync<TNode>(this Solution solution, IEnumerable<TNode> nodes, Func<TNode, TNode, SyntaxNode> computeReplacementNodes, CancellationToken cancellationToken = default(CancellationToken)) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TNode
-
-
-
-
-
-## Parameters
-
-### solution
+#### TNode
 
 
 
 
 
-### nodes
+### Parameters
+
+#### solution
 
 
 
 
 
-### computeReplacementNodes
+#### nodes
 
 
 
 
 
-### cancellationToken
+#### computeReplacementNodes
+
+
+
+
+
+#### cancellationToken
 
 
 

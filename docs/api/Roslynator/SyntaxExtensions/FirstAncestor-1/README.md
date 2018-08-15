@@ -14,29 +14,29 @@ Returns the first node of type **TNode** that matches the predicate\.
 public static TNode FirstAncestor<TNode>(this SyntaxNode node, Func<TNode, bool> predicate = null, bool ascendOutOfTrivia = true) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-## Type Parameters
+### Type Parameters
 
-### TNode
-
-
-
-
-
-## Parameters
-
-### node
+#### TNode
 
 
 
 
 
-### predicate
+### Parameters
+
+#### node
 
 
 
 
 
-### ascendOutOfTrivia
+#### predicate
+
+
+
+
+
+#### ascendOutOfTrivia
 
 
 

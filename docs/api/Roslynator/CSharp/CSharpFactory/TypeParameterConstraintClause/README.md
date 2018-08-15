@@ -19,15 +19,15 @@
 public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(IdentifierNameSyntax identifierName, TypeParameterConstraintSyntax typeParameterConstraint)
 ```
 
-## Parameters
+### Parameters
 
-### identifierName
-
-
+#### identifierName
 
 
 
-### typeParameterConstraint
+
+
+#### typeParameterConstraint
 
 
 
@@ -43,15 +43,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterConstraintClauseSyntax](h
 public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(string name, TypeParameterConstraintSyntax typeParameterConstraint)
 ```
 
-## Parameters
+### Parameters
 
-### name
-
-
+#### name
 
 
 
-### typeParameterConstraint
+
+
+#### typeParameterConstraint
 
 
 

@@ -14,9 +14,9 @@ Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/mi
 public static SyntaxNodeOrToken WithoutTrivia(this SyntaxNodeOrToken nodeOrToken)
 ```
 
-## Parameters
+### Parameters
 
-### nodeOrToken
+#### nodeOrToken
 
 
 

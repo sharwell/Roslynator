@@ -14,9 +14,9 @@ Returns true if the symbol is an async method\.
 public static bool IsAsyncMethod(this ISymbol symbol)
 ```
 
-## Parameters
+### Parameters
 
-### symbol
+#### symbol
 
 
 

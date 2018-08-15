@@ -14,9 +14,9 @@ Searches for a type parameter with the specified name and returns the first occu
 public TypeParameterSyntax FindTypeParameter(string name)
 ```
 
-## Parameters
+### Parameters
 
-### name
+#### name
 
 
 

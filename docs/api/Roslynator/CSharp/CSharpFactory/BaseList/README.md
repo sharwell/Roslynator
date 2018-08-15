@@ -21,9 +21,9 @@
 public static BaseListSyntax BaseList(BaseTypeSyntax type)
 ```
 
-## Parameters
+### Parameters
 
-### type
+#### type
 
 
 
@@ -39,9 +39,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BaseListSyntax](https://docs.microsoft
 public static BaseListSyntax BaseList(params BaseTypeSyntax[] types)
 ```
 
-## Parameters
+### Parameters
 
-### types
+#### types
 
 
 
@@ -57,15 +57,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BaseListSyntax](https://docs.microsoft
 public static BaseListSyntax BaseList(SyntaxToken colonToken, BaseTypeSyntax baseType)
 ```
 
-## Parameters
+### Parameters
 
-### colonToken
-
-
+#### colonToken
 
 
 
-### baseType
+
+
+#### baseType
 
 
 
@@ -81,15 +81,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BaseListSyntax](https://docs.microsoft
 public static BaseListSyntax BaseList(SyntaxToken colonToken, params BaseTypeSyntax[] types)
 ```
 
-## Parameters
+### Parameters
 
-### colonToken
-
-
+#### colonToken
 
 
 
-### types
+
+
+#### types
 
 
 

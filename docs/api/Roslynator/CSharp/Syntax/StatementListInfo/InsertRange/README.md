@@ -14,15 +14,15 @@ Creates a new [StatementListInfo](../README.md) with the specified statements in
 public StatementListInfo InsertRange(int index, IEnumerable<StatementSyntax> statements)
 ```
 
-## Parameters
+### Parameters
 
-### index
-
-
+#### index
 
 
 
-### statements
+
+
+#### statements
 
 
 

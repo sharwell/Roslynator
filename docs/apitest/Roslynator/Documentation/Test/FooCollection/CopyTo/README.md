@@ -19,15 +19,15 @@
 public void CopyTo(Array array, int index)
 ```
 
-## Parameters
+### Parameters
 
-### array
-
-
+#### array
 
 
 
-### index
+
+
+#### index
 
 
 
@@ -43,15 +43,15 @@ public void CopyTo(Array array, int index)
 public void CopyTo(Foo[] array, int arrayIndex)
 ```
 
-## Parameters
+### Parameters
 
-### array
-
-
+#### array
 
 
 
-### arrayIndex
+
+
+#### arrayIndex
 
 
 

@@ -20,21 +20,21 @@
 public static ParameterSyntax Parameter(TypeSyntax type, string identifier, ExpressionSyntax @default = null)
 ```
 
-## Parameters
+### Parameters
 
-### type
-
-
-
-
-
-### identifier
+#### type
 
 
 
 
 
-### default
+#### identifier
+
+
+
+
+
+#### default
 
 
 
@@ -50,21 +50,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterSyntax](https://docs.microsof
 public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier, EqualsValueClauseSyntax @default)
 ```
 
-## Parameters
+### Parameters
 
-### type
-
-
-
-
-
-### identifier
+#### type
 
 
 
 
 
-### default
+#### identifier
+
+
+
+
+
+#### default
 
 
 
@@ -80,21 +80,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterSyntax](https://docs.microsof
 public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier, ExpressionSyntax @default = null)
 ```
 
-## Parameters
+### Parameters
 
-### type
-
-
-
-
-
-### identifier
+#### type
 
 
 
 
 
-### default
+#### identifier
+
+
+
+
+
+#### default
 
 
 

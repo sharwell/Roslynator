@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is a compound assignment expressi
 public static bool IsCompoundAssignmentExpression(SyntaxKind kind)
 ```
 
-## Parameters
+### Parameters
 
-### kind
+#### kind
 
 
 

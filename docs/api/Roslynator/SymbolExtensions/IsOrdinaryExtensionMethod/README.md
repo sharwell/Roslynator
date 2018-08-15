@@ -14,9 +14,9 @@ Returns true if this method is an ordinary extension method \(i\.e\. "this" para
 public static bool IsOrdinaryExtensionMethod(this IMethodSymbol methodSymbol)
 ```
 
-## Parameters
+### Parameters
 
-### methodSymbol
+#### methodSymbol
 
 
 

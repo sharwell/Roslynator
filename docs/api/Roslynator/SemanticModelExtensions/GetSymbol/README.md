@@ -14,21 +14,21 @@ Returns what symbol, if any, the specified node bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, SyntaxNode node, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### semanticModel
-
-
-
-
-
-### node
+#### semanticModel
 
 
 
 
 
-### cancellationToken
+#### node
+
+
+
+
+
+#### cancellationToken
 
 
 

@@ -19,15 +19,15 @@
 public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, MemberDeclarationSyntax member)
 ```
 
-## Parameters
+### Parameters
 
-### name
-
-
+#### name
 
 
 
-### member
+
+
+#### member
 
 
 
@@ -43,15 +43,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[NamespaceDeclarationSyntax](https://do
 public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, SyntaxList<MemberDeclarationSyntax> members)
 ```
 
-## Parameters
+### Parameters
 
-### name
-
-
+#### name
 
 
 
-### members
+
+
+#### members
 
 
 

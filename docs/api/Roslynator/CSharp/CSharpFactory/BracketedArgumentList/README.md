@@ -19,9 +19,9 @@
 public static BracketedArgumentListSyntax BracketedArgumentList(ArgumentSyntax argument)
 ```
 
-## Parameters
+### Parameters
 
-### argument
+#### argument
 
 
 
@@ -37,9 +37,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BracketedArgumentListSyntax](https://d
 public static BracketedArgumentListSyntax BracketedArgumentList(params ArgumentSyntax[] arguments)
 ```
 
-## Parameters
+### Parameters
 
-### arguments
+#### arguments
 
 
 

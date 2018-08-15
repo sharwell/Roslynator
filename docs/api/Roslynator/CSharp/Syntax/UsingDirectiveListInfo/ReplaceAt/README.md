@@ -14,15 +14,15 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the using directive at
 public UsingDirectiveListInfo ReplaceAt(int index, UsingDirectiveSyntax newUsingDirective)
 ```
 
-## Parameters
+### Parameters
 
-### index
-
-
+#### index
 
 
 
-### newUsingDirective
+
+
+#### newUsingDirective
 
 
 

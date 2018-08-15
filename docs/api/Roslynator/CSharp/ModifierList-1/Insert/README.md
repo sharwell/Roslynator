@@ -23,21 +23,21 @@ Creates a new node with a modifier of the specified kind inserted\.
 public TNode Insert(TNode node, SyntaxKind kind, IComparer<SyntaxKind> comparer = null)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
-
-
-
-### kind
+#### node
 
 
 
 
 
-### comparer
+#### kind
+
+
+
+
+
+#### comparer
 
 
 
@@ -57,21 +57,21 @@ Creates a new node with the specified modifier inserted\.
 public TNode Insert(TNode node, SyntaxToken modifier, IComparer<SyntaxToken> comparer = null)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
-
-
-
-### modifier
+#### node
 
 
 
 
 
-### comparer
+#### modifier
+
+
+
+
+
+#### comparer
 
 
 

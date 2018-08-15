@@ -24,15 +24,15 @@ Returns true if the parameter was declared as a parameter array that has a speci
 public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, SpecialType elementType)
 ```
 
-## Parameters
+### Parameters
 
-### parameterSymbol
-
-
+#### parameterSymbol
 
 
 
-### elementType
+
+
+#### elementType
 
 
 
@@ -52,21 +52,21 @@ Returns true if the parameter was declared as a parameter array that has one of 
 public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, SpecialType elementType1, SpecialType elementType2)
 ```
 
-## Parameters
+### Parameters
 
-### parameterSymbol
-
-
-
-
-
-### elementType1
+#### parameterSymbol
 
 
 
 
 
-### elementType2
+#### elementType1
+
+
+
+
+
+#### elementType2
 
 
 
@@ -86,27 +86,27 @@ Returns true if the parameter was declared as a parameter array that has one of 
 public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, SpecialType elementType1, SpecialType elementType2, SpecialType elementType3)
 ```
 
-## Parameters
+### Parameters
 
-### parameterSymbol
-
-
-
-
-
-### elementType1
+#### parameterSymbol
 
 
 
 
 
-### elementType2
+#### elementType1
 
 
 
 
 
-### elementType3
+#### elementType2
+
+
+
+
+
+#### elementType3
 
 
 

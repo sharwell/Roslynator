@@ -23,21 +23,21 @@ Returns true if the type implements specified interface\.
 public static bool Implements(this ITypeSymbol typeSymbol, INamedTypeSymbol interfaceSymbol, bool allInterfaces = false)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
-
-
-
-
-
-### interfaceSymbol
+#### typeSymbol
 
 
 
 
 
-### allInterfaces
+#### interfaceSymbol
+
+
+
+
+
+#### allInterfaces
 
 
 
@@ -57,21 +57,21 @@ Returns true if the type implements specified interface\.
 public static bool Implements(this ITypeSymbol typeSymbol, SpecialType interfaceType, bool allInterfaces = false)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
-
-
-
-
-
-### interfaceType
+#### typeSymbol
 
 
 
 
 
-### allInterfaces
+#### interfaceType
+
+
+
+
+
+#### allInterfaces
 
 
 

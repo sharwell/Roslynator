@@ -23,9 +23,9 @@ Returns topmost if statement of the if\-else cascade the specified else clause i
 public static IfStatementSyntax GetTopmostIf(this ElseClauseSyntax elseClause)
 ```
 
-## Parameters
+### Parameters
 
-### elseClause
+#### elseClause
 
 
 
@@ -45,9 +45,9 @@ Returns topmost if statement of the if\-else cascade the specified if statement 
 public static IfStatementSyntax GetTopmostIf(this IfStatementSyntax ifStatement)
 ```
 
-## Parameters
+### Parameters
 
-### ifStatement
+#### ifStatement
 
 
 

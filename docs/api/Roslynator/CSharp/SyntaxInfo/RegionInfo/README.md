@@ -23,9 +23,9 @@ Creates a new [RegionInfo](../../Syntax/RegionInfo/README.md) from the specified
 public static RegionInfo RegionInfo(EndRegionDirectiveTriviaSyntax endRegionDirective)
 ```
 
-## Parameters
+### Parameters
 
-### endRegionDirective
+#### endRegionDirective
 
 
 
@@ -45,9 +45,9 @@ Creates a new [RegionInfo](../../Syntax/RegionInfo/README.md) from the specified
 public static RegionInfo RegionInfo(RegionDirectiveTriviaSyntax regionDirective)
 ```
 
-## Parameters
+### Parameters
 
-### regionDirective
+#### regionDirective
 
 
 

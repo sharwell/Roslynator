@@ -14,21 +14,21 @@ Returns zero\-based index of the end line of the specified span\.
 public static int GetEndLine(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### syntaxTree
-
-
-
-
-
-### span
+#### syntaxTree
 
 
 
 
 
-### cancellationToken
+#### span
+
+
+
+
+
+#### cancellationToken
 
 
 

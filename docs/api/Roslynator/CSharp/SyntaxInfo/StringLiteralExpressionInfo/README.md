@@ -23,9 +23,9 @@ Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpression
 public static StringLiteralExpressionInfo StringLiteralExpressionInfo(LiteralExpressionSyntax literalExpression)
 ```
 
-## Parameters
+### Parameters
 
-### literalExpression
+#### literalExpression
 
 
 
@@ -45,15 +45,15 @@ Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpression
 public static StringLiteralExpressionInfo StringLiteralExpressionInfo(SyntaxNode node, bool walkDownParentheses = true)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
+#### node
 
 
 
-### walkDownParentheses
+
+
+#### walkDownParentheses
 
 
 

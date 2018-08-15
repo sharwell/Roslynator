@@ -14,9 +14,9 @@ Returns true if the specified statement is a yield return statement\.
 public static bool IsYieldReturn(this YieldStatementSyntax yieldStatement)
 ```
 
-## Parameters
+### Parameters
 
-### yieldStatement
+#### yieldStatement
 
 
 

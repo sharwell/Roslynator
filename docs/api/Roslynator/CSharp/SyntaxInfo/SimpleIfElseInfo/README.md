@@ -14,21 +14,21 @@ Creates a new [SimpleIfElseInfo](../../Syntax/SimpleIfElseInfo/README.md) from t
 public static SimpleIfElseInfo SimpleIfElseInfo(IfStatementSyntax ifStatement, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-## Parameters
+### Parameters
 
-### ifStatement
-
-
-
-
-
-### walkDownParentheses
+#### ifStatement
 
 
 
 
 
-### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 

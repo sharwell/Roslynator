@@ -14,15 +14,15 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the specified node 
 public MemberDeclarationListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions options)
 ```
 
-## Parameters
+### Parameters
 
-### node
-
-
+#### node
 
 
 
-### options
+
+
+#### options
 
 
 

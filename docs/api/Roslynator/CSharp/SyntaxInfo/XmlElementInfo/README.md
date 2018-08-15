@@ -14,9 +14,9 @@ Creates a new [XmlElementInfo](../../Syntax/XmlElementInfo/README.md) from the s
 public static XmlElementInfo XmlElementInfo(XmlNodeSyntax xmlNode)
 ```
 
-## Parameters
+### Parameters
 
-### xmlNode
+#### xmlNode
 
 
 

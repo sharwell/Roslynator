@@ -14,9 +14,9 @@ Creates a new [GenericInfo](../README.md) with the specified constraint clause r
 public GenericInfo RemoveConstraintClause(TypeParameterConstraintClauseSyntax constraintClause)
 ```
 
-## Parameters
+### Parameters
 
-### constraintClause
+#### constraintClause
 
 
 

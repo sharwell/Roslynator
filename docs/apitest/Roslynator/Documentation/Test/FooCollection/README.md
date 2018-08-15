@@ -12,11 +12,11 @@ public class FooCollection : System.Collections.ICollection,
     System.Collections.Generic.IEnumerable<Foo>
 ```
 
-## Inheritance
+### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; FooCollection
 
-## Implements
+### Implements
 
 * System\.Collections\.[ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)
 * System\.Collections\.Generic\.[ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\<[Foo](../Foo/README.md)>

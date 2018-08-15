@@ -19,15 +19,15 @@
 public static AssignmentExpressionSyntax OrAssignmentExpression(ExpressionSyntax left, ExpressionSyntax right)
 ```
 
-## Parameters
+### Parameters
 
-### left
-
-
+#### left
 
 
 
-### right
+
+
+#### right
 
 
 
@@ -43,21 +43,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AssignmentExpressionSyntax](https://do
 public static AssignmentExpressionSyntax OrAssignmentExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)
 ```
 
-## Parameters
+### Parameters
 
-### left
-
-
-
-
-
-### operatorToken
+#### left
 
 
 
 
 
-### right
+#### operatorToken
+
+
+
+
+
+#### right
 
 
 

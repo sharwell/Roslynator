@@ -14,9 +14,9 @@ Returns true if the specified type can be used to declare constant value\.
 public static bool SupportsConstantValue(this ITypeSymbol typeSymbol)
 ```
 
-## Parameters
+### Parameters
 
-### typeSymbol
+#### typeSymbol
 
 
 

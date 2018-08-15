@@ -14,9 +14,9 @@ Returns true if the list of either empty or contains only whitespace\.
 public static bool IsEmptyOrWhitespace(this SyntaxTriviaList triviaList)
 ```
 
-## Parameters
+### Parameters
 
-### triviaList
+#### triviaList
 
 
 

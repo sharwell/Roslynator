@@ -14,27 +14,27 @@ Returns true if the specified expression represents default value of the specifi
 public static bool IsDefaultValue(this SemanticModel semanticModel, ITypeSymbol typeSymbol, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### semanticModel
-
-
-
-
-
-### typeSymbol
+#### semanticModel
 
 
 
 
 
-### expression
+#### typeSymbol
 
 
 
 
 
-### cancellationToken
+#### expression
+
+
+
+
+
+#### cancellationToken
 
 
 

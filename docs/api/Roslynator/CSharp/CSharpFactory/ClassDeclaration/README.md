@@ -19,21 +19,21 @@
 public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>))
 ```
 
-## Parameters
+### Parameters
 
-### modifiers
-
-
-
-
-
-### identifier
+#### modifiers
 
 
 
 
 
-### members
+#### identifier
+
+
+
+
+
+#### members
 
 
 
@@ -49,21 +49,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ClassDeclarationSyntax](https://docs.m
 public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>))
 ```
 
-## Parameters
+### Parameters
 
-### modifiers
-
-
-
-
-
-### identifier
+#### modifiers
 
 
 
 
 
-### members
+#### identifier
+
+
+
+
+
+#### members
 
 
 

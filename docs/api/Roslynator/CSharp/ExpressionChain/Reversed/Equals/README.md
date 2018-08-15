@@ -19,9 +19,9 @@
 public override bool Equals(object obj)
 ```
 
-## Parameters
+### Parameters
 
-### obj
+#### obj
 
 
 
@@ -37,9 +37,9 @@ System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 public bool Equals(ExpressionChain.Reversed other)
 ```
 
-## Parameters
+### Parameters
 
-### other
+#### other
 
 
 

@@ -14,21 +14,21 @@ Returns type information about the specified node\.
 public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, SyntaxNode node, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-## Parameters
+### Parameters
 
-### semanticModel
-
-
-
-
-
-### node
+#### semanticModel
 
 
 
 
 
-### cancellationToken
+#### node
+
+
+
+
+
+#### cancellationToken
 
 
 
