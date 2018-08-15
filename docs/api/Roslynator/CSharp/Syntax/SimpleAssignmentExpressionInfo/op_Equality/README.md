@@ -10,15 +10,15 @@
 public static bool operator ==(in SimpleAssignmentExpressionInfo info1, in SimpleAssignmentExpressionInfo info2)
 ```
 
-### Parameters
+## Parameters
 
-#### info1
-
-
+### info1
 
 
 
-#### info2
+
+
+### info2
 
 
 

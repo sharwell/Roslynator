@@ -14,9 +14,9 @@ Returns true if the type can be declared explicitly in a source code\.
 public static bool SupportsExplicitDeclaration(this ITypeSymbol typeSymbol)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
+### typeSymbol
 
 
 

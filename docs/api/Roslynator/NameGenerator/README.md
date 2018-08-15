@@ -14,7 +14,7 @@ Provides methods to obtain an unique identifier\.
 public abstract class NameGenerator
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; NameGenerator
 

@@ -27,21 +27,21 @@ Returns what symbol, if any, the specified attribute syntax bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, AttributeSyntax attribute, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### attribute
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### attribute
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -61,21 +61,21 @@ Returns what symbol, if any, the specified constructor initializer syntax bound 
 public static ISymbol GetSymbol(this SemanticModel semanticModel, ConstructorInitializerSyntax constructorInitializer, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### constructorInitializer
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### constructorInitializer
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -95,21 +95,21 @@ Returns what symbol, if any, the specified cref syntax bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, CrefSyntax cref, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### cref
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### cref
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -129,21 +129,21 @@ Returns what symbol, if any, the specified expression syntax bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### expression
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### expression
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -163,21 +163,21 @@ Returns what symbol, if any, the specified ordering syntax bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, OrderingSyntax ordering, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### ordering
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### ordering
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -197,21 +197,21 @@ Returns what symbol, if any, the specified select or group clause bound to\.
 public static ISymbol GetSymbol(this SemanticModel semanticModel, SelectOrGroupClauseSyntax selectOrGroupClause, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### selectOrGroupClause
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### selectOrGroupClause
+
+
+
+
+
+#### cancellationToken
 
 
 

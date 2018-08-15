@@ -14,9 +14,9 @@ Returns true if the specified declaration has a single\-line documentation comme
 public static bool HasSingleLineDocumentationComment(this MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### member
+### member
 
 
 

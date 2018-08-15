@@ -23,9 +23,9 @@ Searches for an using directive that matches the predicate and returns returns z
 public int LastIndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 ```
 
-#### Parameters
+### Parameters
 
-##### predicate
+#### predicate
 
 
 
@@ -45,9 +45,9 @@ Searches for an using directive and returns zero\-based index of the last occurr
 public int LastIndexOf(UsingDirectiveSyntax usingDirective)
 ```
 
-#### Parameters
+### Parameters
 
-##### usingDirective
+#### usingDirective
 
 
 

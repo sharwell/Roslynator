@@ -14,9 +14,9 @@ Gets a list of base types of this type\.
 public static IEnumerable<INamedTypeSymbol> BaseTypes(this ITypeSymbol type)
 ```
 
-### Parameters
+## Parameters
 
-#### type
+### type
 
 
 

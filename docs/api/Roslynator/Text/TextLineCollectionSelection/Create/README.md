@@ -14,15 +14,15 @@ Creates a new [TextLineCollectionSelection](../README.md) based on the specified
 public static TextLineCollectionSelection Create(TextLineCollection lines, TextSpan span)
 ```
 
-### Parameters
+## Parameters
 
-#### lines
-
-
+### lines
 
 
 
-#### span
+
+
+### span
 
 
 

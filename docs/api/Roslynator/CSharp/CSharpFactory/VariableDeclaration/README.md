@@ -21,21 +21,21 @@
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, string identifier, ExpressionSyntax value = null)
 ```
 
-#### Parameters
+### Parameters
 
-##### type
-
-
-
-
-
-##### identifier
+#### type
 
 
 
 
 
-##### value
+#### identifier
+
+
+
+
+
+#### value
 
 
 
@@ -51,21 +51,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://doc
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, SyntaxToken identifier, EqualsValueClauseSyntax initializer)
 ```
 
-#### Parameters
+### Parameters
 
-##### type
-
-
-
-
-
-##### identifier
+#### type
 
 
 
 
 
-##### initializer
+#### identifier
+
+
+
+
+
+#### initializer
 
 
 
@@ -81,21 +81,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://doc
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, SyntaxToken identifier, ExpressionSyntax value = null)
 ```
 
-#### Parameters
+### Parameters
 
-##### type
-
-
-
-
-
-##### identifier
+#### type
 
 
 
 
 
-##### value
+#### identifier
+
+
+
+
+
+#### value
 
 
 
@@ -111,15 +111,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclarationSyntax](https://doc
 public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, VariableDeclaratorSyntax variable)
 ```
 
-#### Parameters
+### Parameters
 
-##### type
-
-
+#### type
 
 
 
-##### variable
+
+
+#### variable
 
 
 

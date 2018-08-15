@@ -14,9 +14,9 @@ Returns true if the parameter was declared as "ref" or "out" parameter\.
 public static bool IsRefOrOut(this IParameterSymbol parameterSymbol)
 ```
 
-### Parameters
+## Parameters
 
-#### parameterSymbol
+### parameterSymbol
 
 
 

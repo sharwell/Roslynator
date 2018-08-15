@@ -24,9 +24,9 @@ Returns a set accessor contained in the specified list\.
 public static AccessorDeclarationSyntax Setter(this AccessorListSyntax accessorList)
 ```
 
-#### Parameters
+### Parameters
 
-##### accessorList
+#### accessorList
 
 
 
@@ -46,9 +46,9 @@ Returns a set accessor that is contained in the specified indexer declaration\.
 public static AccessorDeclarationSyntax Setter(this IndexerDeclarationSyntax indexerDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### indexerDeclaration
+#### indexerDeclaration
 
 
 
@@ -68,9 +68,9 @@ Returns property set accessor, if any\.
 public static AccessorDeclarationSyntax Setter(this PropertyDeclarationSyntax propertyDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### propertyDeclaration
+#### propertyDeclaration
 
 
 

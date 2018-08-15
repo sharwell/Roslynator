@@ -33,15 +33,15 @@ Returns true if a node parent's kind is the specified kind\.
 public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind)
 ```
 
-#### Parameters
+### Parameters
 
-##### node
-
-
+#### node
 
 
 
-##### kind
+
+
+#### kind
 
 
 
@@ -61,21 +61,21 @@ Returns true if a node parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2)
 ```
 
-#### Parameters
+### Parameters
 
-##### node
-
-
-
-
-
-##### kind1
+#### node
 
 
 
 
 
-##### kind2
+#### kind1
+
+
+
+
+
+#### kind2
 
 
 
@@ -95,27 +95,27 @@ Returns true if a node parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3)
 ```
 
-#### Parameters
+### Parameters
 
-##### node
-
-
-
-
-
-##### kind1
+#### node
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
+
+
+
+
+
+#### kind3
 
 
 
@@ -135,33 +135,33 @@ Returns true if a node parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4)
 ```
 
-#### Parameters
+### Parameters
 
-##### node
-
-
-
-
-
-##### kind1
+#### node
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
 
 
 
 
 
-##### kind4
+#### kind3
+
+
+
+
+
+#### kind4
 
 
 
@@ -181,39 +181,39 @@ Returns true if a node parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5)
 ```
 
-#### Parameters
+### Parameters
 
-##### node
-
-
-
-
-
-##### kind1
+#### node
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
 
 
 
 
 
-##### kind4
+#### kind3
 
 
 
 
 
-##### kind5
+#### kind4
+
+
+
+
+
+#### kind5
 
 
 
@@ -233,45 +233,45 @@ Returns true if a node parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5, SyntaxKind kind6)
 ```
 
-#### Parameters
+### Parameters
 
-##### node
-
-
-
-
-
-##### kind1
+#### node
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
 
 
 
 
 
-##### kind4
+#### kind3
 
 
 
 
 
-##### kind5
+#### kind4
 
 
 
 
 
-##### kind6
+#### kind5
+
+
+
+
+
+#### kind6
 
 
 
@@ -291,15 +291,15 @@ Returns true if a token parent's kind is the specified kind\.
 public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
-
-
+#### token
 
 
 
-##### kind
+
+
+#### kind
 
 
 
@@ -319,21 +319,21 @@ Returns true if a token parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
-
-
-
-
-
-##### kind1
+#### token
 
 
 
 
 
-##### kind2
+#### kind1
+
+
+
+
+
+#### kind2
 
 
 
@@ -353,27 +353,27 @@ Returns true if a token parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
-
-
-
-
-
-##### kind1
+#### token
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
+
+
+
+
+
+#### kind3
 
 
 
@@ -393,33 +393,33 @@ Returns true if a token parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
-
-
-
-
-
-##### kind1
+#### token
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
 
 
 
 
 
-##### kind4
+#### kind3
+
+
+
+
+
+#### kind4
 
 
 
@@ -439,39 +439,39 @@ Returns true if a token parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
-
-
-
-
-
-##### kind1
+#### token
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
 
 
 
 
 
-##### kind4
+#### kind3
 
 
 
 
 
-##### kind5
+#### kind4
+
+
+
+
+
+#### kind5
 
 
 
@@ -491,45 +491,45 @@ Returns true if a token parent's kind is one of the specified kinds\.
 public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5, SyntaxKind kind6)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
-
-
-
-
-
-##### kind1
+#### token
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
 
 
 
 
 
-##### kind4
+#### kind3
 
 
 
 
 
-##### kind5
+#### kind4
 
 
 
 
 
-##### kind6
+#### kind5
+
+
+
+
+
+#### kind6
 
 
 

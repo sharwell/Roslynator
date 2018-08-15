@@ -19,9 +19,9 @@
 public static TypeArgumentListSyntax TypeArgumentList(TypeSyntax argument)
 ```
 
-#### Parameters
+### Parameters
 
-##### argument
+#### argument
 
 
 
@@ -37,9 +37,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeArgumentListSyntax](https://docs.m
 public static TypeArgumentListSyntax TypeArgumentList(params TypeSyntax[] arguments)
 ```
 
-#### Parameters
+### Parameters
 
-##### arguments
+#### arguments
 
 
 

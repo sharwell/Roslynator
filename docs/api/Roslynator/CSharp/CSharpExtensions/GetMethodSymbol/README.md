@@ -14,21 +14,21 @@ Returns method symbol, if any, the specified expression syntax bound to\.
 public static IMethodSymbol GetMethodSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
-
-
-
-#### expression
+### semanticModel
 
 
 
 
 
-#### cancellationToken
+### expression
+
+
+
+
+
+### cancellationToken
 
 
 

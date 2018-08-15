@@ -19,9 +19,9 @@
 public static AccessorListSyntax AccessorList(AccessorDeclarationSyntax accessor)
 ```
 
-#### Parameters
+### Parameters
 
-##### accessor
+#### accessor
 
 
 
@@ -37,9 +37,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorListSyntax](https://docs.micro
 public static AccessorListSyntax AccessorList(params AccessorDeclarationSyntax[] accessors)
 ```
 
-#### Parameters
+### Parameters
 
-##### accessors
+#### accessors
 
 
 

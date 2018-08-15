@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is true or false literal expressi
 public static bool IsBooleanLiteralExpression(SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### kind
+### kind
 
 
 

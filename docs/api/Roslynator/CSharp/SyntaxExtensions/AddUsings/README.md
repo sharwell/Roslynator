@@ -14,21 +14,21 @@ Creates a new [CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/ap
 public static CompilationUnitSyntax AddUsings(this CompilationUnitSyntax compilationUnit, bool keepSingleLineCommentsOnTop, params UsingDirectiveSyntax[] usings)
 ```
 
-### Parameters
+## Parameters
 
-#### compilationUnit
-
-
-
-
-
-#### keepSingleLineCommentsOnTop
+### compilationUnit
 
 
 
 
 
-#### usings
+### keepSingleLineCommentsOnTop
+
+
+
+
+
+### usings
 
 
 

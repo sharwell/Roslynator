@@ -14,9 +14,9 @@ Returns true if the trivia is [SyntaxKind.EndOfLineTrivia](https://docs.microsof
 public static bool IsEndOfLineTrivia(this SyntaxTrivia trivia)
 ```
 
-### Parameters
+## Parameters
 
-#### trivia
+### trivia
 
 
 

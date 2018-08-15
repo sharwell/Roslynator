@@ -14,21 +14,21 @@ Creates a new document with trivia inside the specified span removed\.
 public static Task<Document> RemoveTriviaAsync(this Document document, TextSpan span, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### span
+### document
 
 
 
 
 
-#### cancellationToken
+### span
+
+
+
+
+
+### cancellationToken
 
 
 

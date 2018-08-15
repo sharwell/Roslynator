@@ -10,15 +10,15 @@
 public static bool operator !=(in ExpressionChain.Reversed reversed1, in ExpressionChain.Reversed reversed2)
 ```
 
-### Parameters
+## Parameters
 
-#### reversed1
-
-
+### reversed1
 
 
 
-#### reversed2
+
+
+### reversed2
 
 
 

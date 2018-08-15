@@ -20,9 +20,9 @@
 public static CompilationUnitSyntax CompilationUnit(MemberDeclarationSyntax member)
 ```
 
-#### Parameters
+### Parameters
 
-##### member
+#### member
 
 
 
@@ -38,15 +38,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.mi
 public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyntax> usings, MemberDeclarationSyntax member)
 ```
 
-#### Parameters
+### Parameters
 
-##### usings
-
-
+#### usings
 
 
 
-##### member
+
+
+#### member
 
 
 
@@ -62,15 +62,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.mi
 public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyntax> usings, SyntaxList<MemberDeclarationSyntax> members)
 ```
 
-#### Parameters
+### Parameters
 
-##### usings
-
-
+#### usings
 
 
 
-##### members
+
+
+#### members
 
 
 

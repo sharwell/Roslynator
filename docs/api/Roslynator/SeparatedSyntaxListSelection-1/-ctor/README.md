@@ -14,27 +14,27 @@ Initializes a new instance of the [SeparatedSyntaxListSelection\<TNode>](../READ
 protected SeparatedSyntaxListSelection(SeparatedSyntaxList<TNode> list, TextSpan span, int firstIndex, int lastIndex)
 ```
 
-### Parameters
+## Parameters
 
-#### list
-
-
-
-
-
-#### span
+### list
 
 
 
 
 
-#### firstIndex
+### span
 
 
 
 
 
-#### lastIndex
+### firstIndex
+
+
+
+
+
+### lastIndex
 
 
 

@@ -14,9 +14,9 @@ Returns true if the symbol represents an error\.
 public static bool IsErrorType(this ISymbol symbol)
 ```
 
-### Parameters
+## Parameters
 
-#### symbol
+### symbol
 
 
 

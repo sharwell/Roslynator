@@ -19,9 +19,9 @@
 public static InitializerExpressionSyntax CollectionInitializerExpression(SeparatedSyntaxList<ExpressionSyntax> expressions = default(SeparatedSyntaxList<ExpressionSyntax>))
 ```
 
-#### Parameters
+### Parameters
 
-##### expressions
+#### expressions
 
 
 
@@ -37,21 +37,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InitializerExpressionSyntax](https://d
 public static InitializerExpressionSyntax CollectionInitializerExpression(SyntaxToken openBraceToken, SeparatedSyntaxList<ExpressionSyntax> expressions, SyntaxToken closeBraceToken)
 ```
 
-#### Parameters
+### Parameters
 
-##### openBraceToken
-
-
-
-
-
-##### expressions
+#### openBraceToken
 
 
 
 
 
-##### closeBraceToken
+#### expressions
+
+
+
+
+
+#### closeBraceToken
 
 
 

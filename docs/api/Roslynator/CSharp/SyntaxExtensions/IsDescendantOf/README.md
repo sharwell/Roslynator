@@ -14,21 +14,21 @@ Returns true if a node is a descendant of a node with the specified kind\.
 public static bool IsDescendantOf(this SyntaxNode node, SyntaxKind kind, bool ascendOutOfTrivia = true)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
-
-
-
-#### kind
+### node
 
 
 
 
 
-#### ascendOutOfTrivia
+### kind
+
+
+
+
+
+### ascendOutOfTrivia
 
 
 

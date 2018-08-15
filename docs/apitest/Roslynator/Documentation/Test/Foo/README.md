@@ -19,11 +19,11 @@ a → > b [Foo](./README.md)
 public class Foo : Bla
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [Bla](../../../../_Global/Bla/README.md) &#x2192; Foo
 
-### Attributes
+## Attributes
 
 * System\.[CLSCompliantAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.clscompliantattribute) \(Inherited from [Bla](../../../../_Global/Bla/README.md)\)
 * System\.[ObsoleteAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)

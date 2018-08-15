@@ -14,9 +14,9 @@ Returns true if the specified declaration has a documentation comment\.
 public static bool HasDocumentationComment(this MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### member
+### member
 
 
 

@@ -39,9 +39,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(AccessorDeclarationSyntax accessorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### accessorDeclaration
+#### accessorDeclaration
 
 
 
@@ -61,9 +61,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(ClassDeclarationSyntax classDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### classDeclaration
+#### classDeclaration
 
 
 
@@ -83,9 +83,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(ConstructorDeclarationSyntax constructorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### constructorDeclaration
+#### constructorDeclaration
 
 
 
@@ -105,9 +105,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(ConversionOperatorDeclarationSyntax conversionOperatorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### conversionOperatorDeclaration
+#### conversionOperatorDeclaration
 
 
 
@@ -127,9 +127,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(DelegateDeclarationSyntax delegateDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### delegateDeclaration
+#### delegateDeclaration
 
 
 
@@ -149,9 +149,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(DestructorDeclarationSyntax destructorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### destructorDeclaration
+#### destructorDeclaration
 
 
 
@@ -171,9 +171,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(EnumDeclarationSyntax enumDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### enumDeclaration
+#### enumDeclaration
 
 
 
@@ -193,9 +193,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(EventDeclarationSyntax eventDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### eventDeclaration
+#### eventDeclaration
 
 
 
@@ -215,9 +215,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(EventFieldDeclarationSyntax eventFieldDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### eventFieldDeclaration
+#### eventFieldDeclaration
 
 
 
@@ -237,9 +237,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(FieldDeclarationSyntax fieldDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### fieldDeclaration
+#### fieldDeclaration
 
 
 
@@ -259,9 +259,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(IncompleteMemberSyntax incompleteMember)
 ```
 
-#### Parameters
+### Parameters
 
-##### incompleteMember
+#### incompleteMember
 
 
 
@@ -281,9 +281,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(IndexerDeclarationSyntax indexerDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### indexerDeclaration
+#### indexerDeclaration
 
 
 
@@ -303,9 +303,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(InterfaceDeclarationSyntax interfaceDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### interfaceDeclaration
+#### interfaceDeclaration
 
 
 
@@ -325,9 +325,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(MethodDeclarationSyntax methodDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### methodDeclaration
+#### methodDeclaration
 
 
 
@@ -347,9 +347,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(OperatorDeclarationSyntax operatorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### operatorDeclaration
+#### operatorDeclaration
 
 
 
@@ -369,9 +369,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(PropertyDeclarationSyntax propertyDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### propertyDeclaration
+#### propertyDeclaration
 
 
 
@@ -391,9 +391,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(StructDeclarationSyntax structDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### structDeclaration
+#### structDeclaration
 
 
 
@@ -413,9 +413,9 @@ Returns an explicit accessibility of the specified declaration\.
 public static Accessibility GetExplicitAccessibility(SyntaxNode declaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### declaration
+#### declaration
 
 
 

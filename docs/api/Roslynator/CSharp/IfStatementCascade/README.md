@@ -15,11 +15,11 @@ public readonly struct IfStatementCascade : System.IEquatable<IfStatementCascade
     System.Collections.Generic.IEnumerable<IfStatementOrElseClause>
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype) &#x2192; IfStatementCascade
 
-### Implements
+## Implements
 
 * System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IfStatementCascade](./README.md)>
 * System\.Collections\.Generic\.[IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\<[IfStatementOrElseClause](../IfStatementOrElseClause/README.md)>

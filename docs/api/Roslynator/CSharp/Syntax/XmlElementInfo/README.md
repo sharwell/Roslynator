@@ -14,11 +14,11 @@ Provides information about a [XmlElementSyntax](https://docs.microsoft.com/en-us
 public readonly struct XmlElementInfo : System.IEquatable<XmlElementInfo>
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype) &#x2192; XmlElementInfo
 
-### Implements
+## Implements
 
 * System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[XmlElementInfo](./README.md)>
 

@@ -28,9 +28,9 @@ Returns accessor body or an expression body if the body is null\.
 public static CSharpSyntaxNode BodyOrExpressionBody(this AccessorDeclarationSyntax accessorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### accessorDeclaration
+#### accessorDeclaration
 
 
 
@@ -50,9 +50,9 @@ Returns constructor body or an expression body if the body is null\.
 public static CSharpSyntaxNode BodyOrExpressionBody(this ConstructorDeclarationSyntax constructorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### constructorDeclaration
+#### constructorDeclaration
 
 
 
@@ -72,9 +72,9 @@ Returns conversion operator body or an expression body if the body is null\.
 public static CSharpSyntaxNode BodyOrExpressionBody(this ConversionOperatorDeclarationSyntax conversionOperatorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### conversionOperatorDeclaration
+#### conversionOperatorDeclaration
 
 
 
@@ -94,9 +94,9 @@ Returns destructor body or an expression body if the body is null\.
 public static CSharpSyntaxNode BodyOrExpressionBody(this DestructorDeclarationSyntax destructorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### destructorDeclaration
+#### destructorDeclaration
 
 
 
@@ -116,9 +116,9 @@ Returns local function body or an expression body if the body is null\.
 public static CSharpSyntaxNode BodyOrExpressionBody(this LocalFunctionStatementSyntax localFunctionStatement)
 ```
 
-#### Parameters
+### Parameters
 
-##### localFunctionStatement
+#### localFunctionStatement
 
 
 
@@ -138,9 +138,9 @@ Returns method body or an expression body if the body is null\.
 public static CSharpSyntaxNode BodyOrExpressionBody(this MethodDeclarationSyntax methodDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### methodDeclaration
+#### methodDeclaration
 
 
 
@@ -160,9 +160,9 @@ Returns operator body or an expression body if the body is null\.
 public static CSharpSyntaxNode BodyOrExpressionBody(this OperatorDeclarationSyntax operatorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### operatorDeclaration
+#### operatorDeclaration
 
 
 

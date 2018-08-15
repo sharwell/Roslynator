@@ -19,9 +19,9 @@
 public static ParameterListSyntax ParameterList(ParameterSyntax parameter)
 ```
 
-#### Parameters
+### Parameters
 
-##### parameter
+#### parameter
 
 
 
@@ -37,9 +37,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterListSyntax](https://docs.micr
 public static ParameterListSyntax ParameterList(params ParameterSyntax[] parameters)
 ```
 
-#### Parameters
+### Parameters
 
-##### parameters
+#### parameters
 
 
 

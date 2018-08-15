@@ -14,9 +14,9 @@ Returns single\-line documentation comment that is part of the specified declara
 public static SyntaxTrivia GetSingleLineDocumentationCommentTrivia(this MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### member
+### member
 
 
 

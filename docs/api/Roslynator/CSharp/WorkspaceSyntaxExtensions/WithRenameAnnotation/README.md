@@ -15,9 +15,9 @@ Adds "rename" annotation to the specified token, creating a new token of the sam
 public static SyntaxToken WithRenameAnnotation(this SyntaxToken token)
 ```
 
-### Parameters
+## Parameters
 
-#### token
+### token
 
 
 

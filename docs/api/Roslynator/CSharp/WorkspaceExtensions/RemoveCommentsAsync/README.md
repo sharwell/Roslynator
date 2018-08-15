@@ -23,21 +23,21 @@ Creates a new document with comments of the specified kind removed\.
 public static Task<Document> RemoveCommentsAsync(this Document document, CommentKinds kinds, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### document
-
-
-
-
-
-##### kinds
+#### document
 
 
 
 
 
-##### cancellationToken
+#### kinds
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -57,27 +57,27 @@ Creates a new document with comments of the specified kind removed\.
 public static Task<Document> RemoveCommentsAsync(this Document document, TextSpan span, CommentKinds kinds, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### document
-
-
-
-
-
-##### span
+#### document
 
 
 
 
 
-##### kinds
+#### span
 
 
 
 
 
-##### cancellationToken
+#### kinds
+
+
+
+
+
+#### cancellationToken
 
 
 

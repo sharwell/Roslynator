@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is a predefined type\.
 public static bool IsPredefinedType(SpecialType specialType)
 ```
 
-### Parameters
+## Parameters
 
-#### specialType
+### specialType
 
 
 

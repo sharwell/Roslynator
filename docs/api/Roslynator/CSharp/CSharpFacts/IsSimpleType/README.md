@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is a simple type\.
 public static bool IsSimpleType(SpecialType specialType)
 ```
 
-### Parameters
+## Parameters
 
-#### specialType
+### specialType
 
 
 

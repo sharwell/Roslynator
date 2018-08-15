@@ -15,15 +15,15 @@ This method succeeds if the statement is in a block's statements or a switch sec
 public static bool TryGetContainingList(this StatementSyntax statement, out SyntaxList<StatementSyntax> statements)
 ```
 
-### Parameters
+## Parameters
 
-#### statement
-
-
+### statement
 
 
 
-#### statements
+
+
+### statements
 
 
 

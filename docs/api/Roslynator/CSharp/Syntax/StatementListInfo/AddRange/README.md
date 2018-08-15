@@ -14,9 +14,9 @@ Creates a new [StatementListInfo](../README.md) with the specified statements ad
 public StatementListInfo AddRange(IEnumerable<StatementSyntax> statements)
 ```
 
-### Parameters
+## Parameters
 
-#### statements
+### statements
 
 
 

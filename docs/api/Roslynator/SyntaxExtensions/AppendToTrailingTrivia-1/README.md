@@ -25,15 +25,15 @@ Creates a new token from this token with the trailing trivia replaced with a new
 public static SyntaxToken AppendToTrailingTrivia(this SyntaxToken token, IEnumerable<SyntaxTrivia> trivia)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
-
-
+#### token
 
 
 
-##### trivia
+
+
+#### trivia
 
 
 
@@ -53,15 +53,15 @@ Creates a new token from this token with the trailing trivia replaced with a new
 public static SyntaxToken AppendToTrailingTrivia(this SyntaxToken token, SyntaxTrivia trivia)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
-
-
+#### token
 
 
 
-##### trivia
+
+
+#### trivia
 
 
 
@@ -81,23 +81,23 @@ Creates a new node from this node with the trailing trivia replaced with a new t
 public static TNode AppendToTrailingTrivia<TNode>(this TNode node, IEnumerable<SyntaxTrivia> trivia) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### node
+#### TNode
 
 
 
 
 
-##### trivia
+### Parameters
+
+#### node
+
+
+
+
+
+#### trivia
 
 
 
@@ -117,23 +117,23 @@ Creates a new node from this node with the trailing trivia replaced with a new t
 public static TNode AppendToTrailingTrivia<TNode>(this TNode node, SyntaxTrivia trivia) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### node
+#### TNode
 
 
 
 
 
-##### trivia
+### Parameters
+
+#### node
+
+
+
+
+
+#### trivia
 
 
 

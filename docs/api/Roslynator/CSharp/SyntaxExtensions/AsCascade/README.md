@@ -14,9 +14,9 @@ Returns [IfStatementCascade](../../IfStatementCascade/README.md) that enables to
 public static IfStatementCascade AsCascade(this IfStatementSyntax ifStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### ifStatement
+### ifStatement
 
 
 

@@ -14,21 +14,21 @@ Creates a new list with the specified node added or inserted\.
 public static SyntaxList<StatementSyntax> Add(this SyntaxList<StatementSyntax> statements, StatementSyntax statement, bool ignoreLocalFunctions)
 ```
 
-### Parameters
+## Parameters
 
-#### statements
-
-
-
-
-
-#### statement
+### statements
 
 
 
 
 
-#### ignoreLocalFunctions
+### statement
+
+
+
+
+
+### ignoreLocalFunctions
 
 
 

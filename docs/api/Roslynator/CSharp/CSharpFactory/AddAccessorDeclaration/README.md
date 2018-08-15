@@ -21,9 +21,9 @@
 public static AccessorDeclarationSyntax AddAccessorDeclaration(ArrowExpressionClauseSyntax expressionBody)
 ```
 
-#### Parameters
+### Parameters
 
-##### expressionBody
+#### expressionBody
 
 
 
@@ -39,9 +39,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://doc
 public static AccessorDeclarationSyntax AddAccessorDeclaration(BlockSyntax body)
 ```
 
-#### Parameters
+### Parameters
 
-##### body
+#### body
 
 
 
@@ -57,15 +57,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://doc
 public static AccessorDeclarationSyntax AddAccessorDeclaration(SyntaxTokenList modifiers, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
+#### modifiers
 
 
 
-##### expressionBody
+
+
+#### expressionBody
 
 
 
@@ -81,15 +81,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://doc
 public static AccessorDeclarationSyntax AddAccessorDeclaration(SyntaxTokenList modifiers, BlockSyntax body)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
+#### modifiers
 
 
 
-##### body
+
+
+#### body
 
 
 

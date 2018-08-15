@@ -19,9 +19,9 @@
 public static BracketedParameterListSyntax BracketedParameterList(ParameterSyntax parameter)
 ```
 
-#### Parameters
+### Parameters
 
-##### parameter
+#### parameter
 
 
 
@@ -37,9 +37,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BracketedParameterListSyntax](https://
 public static BracketedParameterListSyntax BracketedParameterList(params ParameterSyntax[] parameters)
 ```
 
-#### Parameters
+### Parameters
 
-##### parameters
+#### parameters
 
 
 

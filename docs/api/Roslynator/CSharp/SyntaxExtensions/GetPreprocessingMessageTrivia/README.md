@@ -23,9 +23,9 @@ Gets preprocessing message for the specified endregion directive if such message
 public static SyntaxTrivia GetPreprocessingMessageTrivia(this EndRegionDirectiveTriviaSyntax endRegionDirective)
 ```
 
-#### Parameters
+### Parameters
 
-##### endRegionDirective
+#### endRegionDirective
 
 
 
@@ -45,9 +45,9 @@ Gets preprocessing message for the specified region directive if such message ex
 public static SyntaxTrivia GetPreprocessingMessageTrivia(this RegionDirectiveTriviaSyntax regionDirective)
 ```
 
-#### Parameters
+### Parameters
 
-##### regionDirective
+#### regionDirective
 
 
 

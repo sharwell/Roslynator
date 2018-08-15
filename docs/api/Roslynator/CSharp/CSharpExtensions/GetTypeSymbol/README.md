@@ -25,21 +25,21 @@ Returns type information about an attribute syntax\.
 public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, AttributeSyntax attribute, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### attribute
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### attribute
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -59,21 +59,21 @@ Returns type information about a constructor initializer syntax\.
 public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, ConstructorInitializerSyntax constructorInitializer, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### constructorInitializer
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### constructorInitializer
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -93,21 +93,21 @@ Returns type information about an expression syntax\.
 public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### expression
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### expression
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -127,21 +127,21 @@ Returns type information about a select or group clause\.
 public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, SelectOrGroupClauseSyntax selectOrGroupClause, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### selectOrGroupClause
+#### semanticModel
 
 
 
 
 
-##### cancellationToken
+#### selectOrGroupClause
+
+
+
+
+
+#### cancellationToken
 
 
 

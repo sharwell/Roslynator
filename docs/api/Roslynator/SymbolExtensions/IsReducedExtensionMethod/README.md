@@ -14,9 +14,9 @@ Returns true if this method is a reduced extension method\.
 public static bool IsReducedExtensionMethod(this IMethodSymbol methodSymbol)
 ```
 
-### Parameters
+## Parameters
 
-#### methodSymbol
+### methodSymbol
 
 
 

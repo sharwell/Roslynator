@@ -14,9 +14,9 @@ Returns documentation comment that is part of the specified declaration\.
 public static SyntaxTrivia GetDocumentationCommentTrivia(this MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### member
+### member
 
 
 

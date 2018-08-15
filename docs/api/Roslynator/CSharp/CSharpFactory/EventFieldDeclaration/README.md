@@ -19,21 +19,21 @@
 public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, string identifier)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### identifier
+#### type
+
+
+
+
+
+#### identifier
 
 
 
@@ -49,21 +49,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EventFieldDeclarationSyntax](https://d
 public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### identifier
+#### type
+
+
+
+
+
+#### identifier
 
 
 

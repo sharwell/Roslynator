@@ -14,15 +14,15 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the specified membe
 public MemberDeclarationListInfo Insert(int index, MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### index
-
-
+### index
 
 
 
-#### member
+
+
+### member
 
 
 

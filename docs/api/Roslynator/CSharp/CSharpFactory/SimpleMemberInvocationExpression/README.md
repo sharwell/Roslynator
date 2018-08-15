@@ -20,15 +20,15 @@
 public static InvocationExpressionSyntax SimpleMemberInvocationExpression(ExpressionSyntax expression, SimpleNameSyntax name)
 ```
 
-#### Parameters
+### Parameters
 
-##### expression
-
-
+#### expression
 
 
 
-##### name
+
+
+#### name
 
 
 
@@ -44,21 +44,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://do
 public static InvocationExpressionSyntax SimpleMemberInvocationExpression(ExpressionSyntax expression, SimpleNameSyntax name, ArgumentListSyntax argumentList)
 ```
 
-#### Parameters
+### Parameters
 
-##### expression
-
-
-
-
-
-##### name
+#### expression
 
 
 
 
 
-##### argumentList
+#### name
+
+
+
+
+
+#### argumentList
 
 
 
@@ -74,21 +74,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://do
 public static InvocationExpressionSyntax SimpleMemberInvocationExpression(ExpressionSyntax expression, SimpleNameSyntax name, ArgumentSyntax argument)
 ```
 
-#### Parameters
+### Parameters
 
-##### expression
-
-
-
-
-
-##### name
+#### expression
 
 
 
 
 
-##### argument
+#### name
+
+
+
+
+
+#### argument
 
 
 

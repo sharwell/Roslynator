@@ -14,9 +14,9 @@ Returns true is the specified accessor is auto\-implemented accessor\.
 public static bool IsAutoImplemented(this AccessorDeclarationSyntax accessorDeclaration)
 ```
 
-### Parameters
+## Parameters
 
-#### accessorDeclaration
+### accessorDeclaration
 
 
 

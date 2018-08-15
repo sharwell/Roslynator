@@ -23,9 +23,9 @@ Searches for a statement that matches the predicate and returns returns zero\-ba
 public int IndexOf(Func<StatementSyntax, bool> predicate)
 ```
 
-#### Parameters
+### Parameters
 
-##### predicate
+#### predicate
 
 
 
@@ -45,9 +45,9 @@ The index of the statement in the list\.
 public int IndexOf(StatementSyntax statement)
 ```
 
-#### Parameters
+### Parameters
 
-##### statement
+#### statement
 
 
 

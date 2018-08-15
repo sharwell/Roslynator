@@ -19,9 +19,9 @@
 public bool Equals(ExtensionMethodSymbolInfo other)
 ```
 
-#### Parameters
+### Parameters
 
-##### other
+#### other
 
 
 
@@ -41,9 +41,9 @@ System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 public override bool Equals(object obj)
 ```
 
-#### Parameters
+### Parameters
 
-##### obj
+#### obj
 
 
 

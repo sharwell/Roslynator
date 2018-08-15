@@ -14,21 +14,21 @@ Returns true if the type inherits from a specified base type\.
 public static bool InheritsFrom(this ITypeSymbol type, ITypeSymbol baseType, bool includeInterfaces = false)
 ```
 
-### Parameters
+## Parameters
 
-#### type
-
-
-
-
-
-#### baseType
+### type
 
 
 
 
 
-#### includeInterfaces
+### baseType
+
+
+
+
+
+### includeInterfaces
 
 
 

@@ -24,9 +24,9 @@ Returns a get accessor contained in the specified list\.
 public static AccessorDeclarationSyntax Getter(this AccessorListSyntax accessorList)
 ```
 
-#### Parameters
+### Parameters
 
-##### accessorList
+#### accessorList
 
 
 
@@ -46,9 +46,9 @@ Returns a get accessor that is contained in the specified indexer declaration\.
 public static AccessorDeclarationSyntax Getter(this IndexerDeclarationSyntax indexerDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### indexerDeclaration
+#### indexerDeclaration
 
 
 
@@ -68,9 +68,9 @@ Returns property get accessor, if any\.
 public static AccessorDeclarationSyntax Getter(this PropertyDeclarationSyntax propertyDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### propertyDeclaration
+#### propertyDeclaration
 
 
 

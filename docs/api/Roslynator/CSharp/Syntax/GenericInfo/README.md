@@ -14,11 +14,11 @@ Provides information about generic syntax \(class, struct, interface, delegate, 
 public readonly struct GenericInfo : System.IEquatable<GenericInfo>
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype) &#x2192; GenericInfo
 
-### Implements
+## Implements
 
 * System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[GenericInfo](./README.md)>
 

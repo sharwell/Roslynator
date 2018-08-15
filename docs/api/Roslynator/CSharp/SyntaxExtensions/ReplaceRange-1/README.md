@@ -25,27 +25,27 @@ Creates a new list with the tokens in the specified range replaced with new toke
 public static SyntaxTokenList ReplaceRange(this SyntaxTokenList list, int index, int count, IEnumerable<SyntaxToken> newTokens)
 ```
 
-#### Parameters
+### Parameters
 
-##### list
-
-
-
-
-
-##### index
+#### list
 
 
 
 
 
-##### count
+#### index
 
 
 
 
 
-##### newTokens
+#### count
+
+
+
+
+
+#### newTokens
 
 
 
@@ -65,27 +65,27 @@ Creates a new list with the trivia in the specified range replaced with new triv
 public static SyntaxTriviaList ReplaceRange(this SyntaxTriviaList list, int index, int count, IEnumerable<SyntaxTrivia> newTrivia)
 ```
 
-#### Parameters
+### Parameters
 
-##### list
-
-
-
-
-
-##### index
+#### list
 
 
 
 
 
-##### count
+#### index
 
 
 
 
 
-##### newTrivia
+#### count
+
+
+
+
+
+#### newTrivia
 
 
 
@@ -105,35 +105,35 @@ Creates a new list with the elements in the specified range replaced with new no
 public static SeparatedSyntaxList<TNode> ReplaceRange<TNode>(this SeparatedSyntaxList<TNode> list, int index, int count, IEnumerable<TNode> newNodes) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### list
+#### TNode
 
 
 
 
 
-##### index
+### Parameters
+
+#### list
 
 
 
 
 
-##### count
+#### index
 
 
 
 
 
-##### newNodes
+#### count
+
+
+
+
+
+#### newNodes
 
 
 
@@ -153,35 +153,35 @@ Creates a new list with the elements in the specified range replaced with new no
 public static SyntaxList<TNode> ReplaceRange<TNode>(this SyntaxList<TNode> list, int index, int count, IEnumerable<TNode> newNodes) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### list
+#### TNode
 
 
 
 
 
-##### index
+### Parameters
+
+#### list
 
 
 
 
 
-##### count
+#### index
 
 
 
 
 
-##### newNodes
+#### count
+
+
+
+
+
+#### newNodes
 
 
 

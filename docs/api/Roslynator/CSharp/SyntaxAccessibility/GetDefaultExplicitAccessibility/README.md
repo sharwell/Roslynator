@@ -40,9 +40,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(BaseTypeDeclarationSyntax baseTypeDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### baseTypeDeclaration
+#### baseTypeDeclaration
 
 
 
@@ -62,9 +62,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(ClassDeclarationSyntax classDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### classDeclaration
+#### classDeclaration
 
 
 
@@ -84,9 +84,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(ConstructorDeclarationSyntax constructorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### constructorDeclaration
+#### constructorDeclaration
 
 
 
@@ -106,9 +106,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(ConversionOperatorDeclarationSyntax conversionOperatorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### conversionOperatorDeclaration
+#### conversionOperatorDeclaration
 
 
 
@@ -128,9 +128,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(DelegateDeclarationSyntax delegateDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### delegateDeclaration
+#### delegateDeclaration
 
 
 
@@ -150,9 +150,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(DestructorDeclarationSyntax destructorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### destructorDeclaration
+#### destructorDeclaration
 
 
 
@@ -172,9 +172,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(EnumDeclarationSyntax enumDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### enumDeclaration
+#### enumDeclaration
 
 
 
@@ -194,9 +194,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(EnumMemberDeclarationSyntax enumMemberDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### enumMemberDeclaration
+#### enumMemberDeclaration
 
 
 
@@ -216,9 +216,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(EventDeclarationSyntax eventDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### eventDeclaration
+#### eventDeclaration
 
 
 
@@ -238,9 +238,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(EventFieldDeclarationSyntax eventFieldDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### eventFieldDeclaration
+#### eventFieldDeclaration
 
 
 
@@ -260,9 +260,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(FieldDeclarationSyntax fieldDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### fieldDeclaration
+#### fieldDeclaration
 
 
 
@@ -282,9 +282,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(IndexerDeclarationSyntax indexerDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### indexerDeclaration
+#### indexerDeclaration
 
 
 
@@ -304,9 +304,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(InterfaceDeclarationSyntax interfaceDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### interfaceDeclaration
+#### interfaceDeclaration
 
 
 
@@ -326,9 +326,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(MemberDeclarationSyntax declaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### declaration
+#### declaration
 
 
 
@@ -348,9 +348,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(MethodDeclarationSyntax methodDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### methodDeclaration
+#### methodDeclaration
 
 
 
@@ -370,9 +370,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(NamespaceDeclarationSyntax namespaceDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### namespaceDeclaration
+#### namespaceDeclaration
 
 
 
@@ -392,9 +392,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(OperatorDeclarationSyntax operatorDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### operatorDeclaration
+#### operatorDeclaration
 
 
 
@@ -414,9 +414,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(PropertyDeclarationSyntax propertyDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### propertyDeclaration
+#### propertyDeclaration
 
 
 
@@ -436,9 +436,9 @@ Returns a default explicit accessibility of the specified declaration\.
 public static Accessibility GetDefaultExplicitAccessibility(StructDeclarationSyntax structDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### structDeclaration
+#### structDeclaration
 
 
 

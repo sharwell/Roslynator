@@ -19,9 +19,9 @@
 public static UsingDirectiveSyntax UsingStaticDirective(NameSyntax name)
 ```
 
-#### Parameters
+### Parameters
 
-##### name
+#### name
 
 
 
@@ -37,27 +37,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[UsingDirectiveSyntax](https://docs.mic
 public static UsingDirectiveSyntax UsingStaticDirective(SyntaxToken usingKeyword, SyntaxToken staticKeyword, NameSyntax name, SyntaxToken semicolonToken)
 ```
 
-#### Parameters
+### Parameters
 
-##### usingKeyword
-
-
-
-
-
-##### staticKeyword
+#### usingKeyword
 
 
 
 
 
-##### name
+#### staticKeyword
 
 
 
 
 
-##### semicolonToken
+#### name
+
+
+
+
+
+#### semicolonToken
 
 
 

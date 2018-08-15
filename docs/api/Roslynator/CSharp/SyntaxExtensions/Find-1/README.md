@@ -25,15 +25,15 @@ Searches for a token of the specified kind and returns the first occurrence with
 public static SyntaxToken Find(this SyntaxTokenList tokenList, SyntaxKind kind)
 ```
 
-#### Parameters
+### Parameters
 
-##### tokenList
-
-
+#### tokenList
 
 
 
-##### kind
+
+
+#### kind
 
 
 
@@ -53,15 +53,15 @@ Searches for a trivia of the specified kind and returns the first occurrence wit
 public static SyntaxTrivia Find(this SyntaxTriviaList triviaList, SyntaxKind kind)
 ```
 
-#### Parameters
+### Parameters
 
-##### triviaList
-
-
+#### triviaList
 
 
 
-##### kind
+
+
+#### kind
 
 
 
@@ -81,23 +81,23 @@ Searches for a node of the specified kind and returns the first occurrence withi
 public static TNode Find<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### list
+#### TNode
 
 
 
 
 
-##### kind
+### Parameters
+
+#### list
+
+
+
+
+
+#### kind
 
 
 
@@ -117,23 +117,23 @@ Searches for a node of the specified kind and returns the first occurrence withi
 public static TNode Find<TNode>(this SyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### list
+#### TNode
 
 
 
 
 
-##### kind
+### Parameters
+
+#### list
+
+
+
+
+
+#### kind
 
 
 

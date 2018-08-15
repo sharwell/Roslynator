@@ -19,15 +19,15 @@
 public static GenericNameSyntax GenericName(string identifier, TypeSyntax typeArgument)
 ```
 
-#### Parameters
+### Parameters
 
-##### identifier
-
-
+#### identifier
 
 
 
-##### typeArgument
+
+
+#### typeArgument
 
 
 
@@ -43,15 +43,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[GenericNameSyntax](https://docs.micros
 public static GenericNameSyntax GenericName(SyntaxToken identifier, TypeSyntax typeArgument)
 ```
 
-#### Parameters
+### Parameters
 
-##### identifier
-
-
+#### identifier
 
 
 
-##### typeArgument
+
+
+#### typeArgument
 
 
 

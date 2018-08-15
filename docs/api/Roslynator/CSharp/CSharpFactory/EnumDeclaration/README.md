@@ -10,21 +10,21 @@
 public static EnumDeclarationSyntax EnumDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SeparatedSyntaxList<EnumMemberDeclarationSyntax> members)
 ```
 
-### Parameters
+## Parameters
 
-#### modifiers
-
-
-
-
-
-#### identifier
+### modifiers
 
 
 
 
 
-#### members
+### identifier
+
+
+
+
+
+### members
 
 
 

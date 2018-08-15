@@ -14,15 +14,15 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the specified membe
 public MemberDeclarationListInfo Replace(MemberDeclarationSyntax memberInList, MemberDeclarationSyntax newMember)
 ```
 
-### Parameters
+## Parameters
 
-#### memberInList
-
-
+### memberInList
 
 
 
-#### newMember
+
+
+### newMember
 
 
 

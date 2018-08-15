@@ -25,21 +25,21 @@ Returns true if a token of the specified kinds is in the [SyntaxTokenList](https
 public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1, SyntaxKind kind2)
 ```
 
-#### Parameters
+### Parameters
 
-##### tokenList
-
-
-
-
-
-##### kind1
+#### tokenList
 
 
 
 
 
-##### kind2
+#### kind1
+
+
+
+
+
+#### kind2
 
 
 
@@ -59,27 +59,27 @@ Returns true if a token of the specified kinds is in the [SyntaxTokenList](https
 public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3)
 ```
 
-#### Parameters
+### Parameters
 
-##### tokenList
-
-
-
-
-
-##### kind1
+#### tokenList
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
+
+
+
+
+
+#### kind3
 
 
 
@@ -99,33 +99,33 @@ Returns true if a token of the specified kinds is in the [SyntaxTokenList](https
 public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4)
 ```
 
-#### Parameters
+### Parameters
 
-##### tokenList
-
-
-
-
-
-##### kind1
+#### tokenList
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
 
 
 
 
 
-##### kind4
+#### kind3
+
+
+
+
+
+#### kind4
 
 
 
@@ -145,39 +145,39 @@ Returns true if a token of the specified kinds is in the [SyntaxTokenList](https
 public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1, SyntaxKind kind2, SyntaxKind kind3, SyntaxKind kind4, SyntaxKind kind5)
 ```
 
-#### Parameters
+### Parameters
 
-##### tokenList
-
-
-
-
-
-##### kind1
+#### tokenList
 
 
 
 
 
-##### kind2
+#### kind1
 
 
 
 
 
-##### kind3
+#### kind2
 
 
 
 
 
-##### kind4
+#### kind3
 
 
 
 
 
-##### kind5
+#### kind4
+
+
+
+
+
+#### kind5
 
 
 

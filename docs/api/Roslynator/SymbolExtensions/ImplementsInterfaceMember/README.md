@@ -25,15 +25,15 @@ Returns true if the the symbol implements any interface member\.
 public static bool ImplementsInterfaceMember(this ISymbol symbol, bool allInterfaces = false)
 ```
 
-#### Parameters
+### Parameters
 
-##### symbol
-
-
+#### symbol
 
 
 
-##### allInterfaces
+
+
+#### allInterfaces
 
 
 
@@ -53,21 +53,21 @@ Returns true if the symbol implements any member of the specified interface\.
 public static bool ImplementsInterfaceMember(this ISymbol symbol, INamedTypeSymbol interfaceSymbol, bool allInterfaces = false)
 ```
 
-#### Parameters
+### Parameters
 
-##### symbol
-
-
-
-
-
-##### interfaceSymbol
+#### symbol
 
 
 
 
 
-##### allInterfaces
+#### interfaceSymbol
+
+
+
+
+
+#### allInterfaces
 
 
 
@@ -87,23 +87,23 @@ Returns true if the symbol implements any interface member\.
 public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, bool allInterfaces = false) where TSymbol : Microsoft.CodeAnalysis.ISymbol
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TSymbol
-
-
-
-
-
-#### Parameters
-
-##### symbol
+#### TSymbol
 
 
 
 
 
-##### allInterfaces
+### Parameters
+
+#### symbol
+
+
+
+
+
+#### allInterfaces
 
 
 
@@ -123,29 +123,29 @@ Returns true if the symbol implements any member of the specified interface\.
 public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, INamedTypeSymbol interfaceSymbol, bool allInterfaces = false) where TSymbol : Microsoft.CodeAnalysis.ISymbol
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TSymbol
-
-
-
-
-
-#### Parameters
-
-##### symbol
+#### TSymbol
 
 
 
 
 
-##### interfaceSymbol
+### Parameters
+
+#### symbol
 
 
 
 
 
-##### allInterfaces
+#### interfaceSymbol
+
+
+
+
+
+#### allInterfaces
 
 
 

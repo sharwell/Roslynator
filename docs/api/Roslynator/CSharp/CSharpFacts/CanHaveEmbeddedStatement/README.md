@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind can have an embedded statement\.
 public static bool CanHaveEmbeddedStatement(SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### kind
+### kind
 
 
 

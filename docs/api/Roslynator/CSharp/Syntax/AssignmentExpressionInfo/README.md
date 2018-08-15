@@ -14,11 +14,11 @@ Provides information about simple assignment expression\.
 public readonly struct AssignmentExpressionInfo : System.IEquatable<AssignmentExpressionInfo>
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype) &#x2192; AssignmentExpressionInfo
 
-### Implements
+## Implements
 
 * System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[AssignmentExpressionInfo](./README.md)>
 

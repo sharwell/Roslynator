@@ -14,21 +14,21 @@ Creates a new [TextLineCollectionSelection](../README.md) based on the specified
 public static bool TryCreate(TextLineCollection lines, TextSpan span, out TextLineCollectionSelection selectedLines)
 ```
 
-### Parameters
+## Parameters
 
-#### lines
-
-
-
-
-
-#### span
+### lines
 
 
 
 
 
-#### selectedLines
+### span
+
+
+
+
+
+### selectedLines
 
 
 

@@ -14,11 +14,11 @@ Provides information about string concatenation, i\.e\. a binary expression that
 public readonly struct StringConcatenationExpressionInfo : System.IEquatable<StringConcatenationExpressionInfo>
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype) &#x2192; StringConcatenationExpressionInfo
 
-### Implements
+## Implements
 
 * System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[StringConcatenationExpressionInfo](./README.md)>
 

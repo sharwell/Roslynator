@@ -19,21 +19,21 @@
 public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList modifiers, string identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>))
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### identifier
+#### modifiers
 
 
 
 
 
-##### members
+#### identifier
+
+
+
+
+
+#### members
 
 
 
@@ -49,21 +49,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InterfaceDeclarationSyntax](https://do
 public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList modifiers, SyntaxToken identifier, SyntaxList<MemberDeclarationSyntax> members = default(SyntaxList<MemberDeclarationSyntax>))
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### identifier
+#### modifiers
 
 
 
 
 
-##### members
+#### identifier
+
+
+
+
+
+#### members
 
 
 

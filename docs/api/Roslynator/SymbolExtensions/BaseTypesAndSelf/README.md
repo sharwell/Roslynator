@@ -14,9 +14,9 @@ Gets a list of base types of this type \(including this type\)\.
 public static IEnumerable<ITypeSymbol> BaseTypesAndSelf(this ITypeSymbol typeSymbol)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
+### typeSymbol
 
 
 

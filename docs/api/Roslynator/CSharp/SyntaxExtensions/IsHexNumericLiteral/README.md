@@ -14,9 +14,9 @@ Returns true if the specified literal expression is a hexadecimal numeric litera
 public static bool IsHexNumericLiteral(this LiteralExpressionSyntax literalExpression)
 ```
 
-### Parameters
+## Parameters
 
-#### literalExpression
+### literalExpression
 
 
 

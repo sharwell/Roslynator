@@ -14,9 +14,9 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the specified membe
 public MemberDeclarationListInfo Add(MemberDeclarationSyntax member)
 ```
 
-### Parameters
+## Parameters
 
-#### member
+### member
 
 
 

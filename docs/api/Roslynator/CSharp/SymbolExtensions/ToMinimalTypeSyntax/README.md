@@ -24,27 +24,27 @@ Creates a new [TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft
 public static TypeSyntax ToMinimalTypeSyntax(this INamespaceOrTypeSymbol namespaceOrTypeSymbol, SemanticModel semanticModel, int position, SymbolDisplayFormat format = null)
 ```
 
-#### Parameters
+### Parameters
 
-##### namespaceOrTypeSymbol
-
-
-
-
-
-##### semanticModel
+#### namespaceOrTypeSymbol
 
 
 
 
 
-##### position
+#### semanticModel
 
 
 
 
 
-##### format
+#### position
+
+
+
+
+
+#### format
 
 
 
@@ -64,27 +64,27 @@ Creates a new [TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft
 public static TypeSyntax ToMinimalTypeSyntax(this INamespaceSymbol namespaceSymbol, SemanticModel semanticModel, int position, SymbolDisplayFormat format = null)
 ```
 
-#### Parameters
+### Parameters
 
-##### namespaceSymbol
-
-
-
-
-
-##### semanticModel
+#### namespaceSymbol
 
 
 
 
 
-##### position
+#### semanticModel
 
 
 
 
 
-##### format
+#### position
+
+
+
+
+
+#### format
 
 
 
@@ -104,27 +104,27 @@ Creates a new [TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft
 public static TypeSyntax ToMinimalTypeSyntax(this ITypeSymbol typeSymbol, SemanticModel semanticModel, int position, SymbolDisplayFormat format = null)
 ```
 
-#### Parameters
+### Parameters
 
-##### typeSymbol
-
-
-
-
-
-##### semanticModel
+#### typeSymbol
 
 
 
 
 
-##### position
+#### semanticModel
 
 
 
 
 
-##### format
+#### position
+
+
+
+
+
+#### format
 
 
 

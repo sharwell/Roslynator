@@ -24,9 +24,9 @@ Returns true the specified delegate return type is [Void](https://docs.microsoft
 public static bool ReturnsVoid(this DelegateDeclarationSyntax delegateDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### delegateDeclaration
+#### delegateDeclaration
 
 
 
@@ -46,9 +46,9 @@ Returns true if the specified local function' return type is [Void](https://docs
 public static bool ReturnsVoid(this LocalFunctionStatementSyntax localFunctionStatement)
 ```
 
-#### Parameters
+### Parameters
 
-##### localFunctionStatement
+#### localFunctionStatement
 
 
 
@@ -68,9 +68,9 @@ Returns true if the specified method return type is [Void](https://docs.microsof
 public static bool ReturnsVoid(this MethodDeclarationSyntax methodDeclaration)
 ```
 
-#### Parameters
+### Parameters
 
-##### methodDeclaration
+#### methodDeclaration
 
 
 

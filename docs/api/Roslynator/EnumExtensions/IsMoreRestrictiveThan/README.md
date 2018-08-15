@@ -14,15 +14,15 @@ Returns true if the accessibility if more restrictrive than the other accessibil
 public static bool IsMoreRestrictiveThan(this Accessibility accessibility, Accessibility other)
 ```
 
-### Parameters
+## Parameters
 
-#### accessibility
-
-
+### accessibility
 
 
 
-#### other
+
+
+### other
 
 
 

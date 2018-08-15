@@ -14,9 +14,9 @@ Returns true if the trivia is either [SyntaxKind.WhitespaceTrivia](https://docs.
 public static bool IsWhitespaceOrEndOfLineTrivia(this SyntaxTrivia trivia)
 ```
 
-### Parameters
+## Parameters
 
-#### trivia
+### trivia
 
 
 

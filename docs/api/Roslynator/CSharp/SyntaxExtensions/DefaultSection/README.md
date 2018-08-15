@@ -14,9 +14,9 @@ Returns a section that contains default label, or null if the specified swtich s
 public static SwitchSectionSyntax DefaultSection(this SwitchStatementSyntax switchStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### switchStatement
+### switchStatement
 
 
 

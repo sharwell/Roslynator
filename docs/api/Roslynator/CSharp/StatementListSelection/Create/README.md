@@ -24,15 +24,15 @@ Creates a new [StatementListSelection](../README.md) based on the specified bloc
 public static StatementListSelection Create(BlockSyntax block, TextSpan span)
 ```
 
-#### Parameters
+### Parameters
 
-##### block
-
-
+#### block
 
 
 
-##### span
+
+
+#### span
 
 
 
@@ -52,15 +52,15 @@ Creates a new [StatementListSelection](../README.md) based on the specified [Sta
 public static StatementListSelection Create(in StatementListInfo statementsInfo, TextSpan span)
 ```
 
-#### Parameters
+### Parameters
 
-##### statementsInfo
-
-
+#### statementsInfo
 
 
 
-##### span
+
+
+#### span
 
 
 
@@ -80,15 +80,15 @@ Creates a new [StatementListSelection](../README.md) based on the specified swit
 public static StatementListSelection Create(SwitchSectionSyntax switchSection, TextSpan span)
 ```
 
-#### Parameters
+### Parameters
 
-##### switchSection
-
-
+#### switchSection
 
 
 
-##### span
+
+
+#### span
 
 
 

@@ -14,21 +14,21 @@ Returns true if the specified statement is a last statement in the list\.
 public static bool IsLast(this SyntaxList<StatementSyntax> statements, StatementSyntax statement, bool ignoreLocalFunctions)
 ```
 
-### Parameters
+## Parameters
 
-#### statements
-
-
-
-
-
-#### statement
+### statements
 
 
 
 
 
-#### ignoreLocalFunctions
+### statement
+
+
+
+
+
+### ignoreLocalFunctions
 
 
 

@@ -18,19 +18,19 @@ public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>,
     where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
+### TNode
 
 
 
-### Inheritance
+
+
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; SeparatedSyntaxListSelection\<TNode>
 
-### Implements
+## Implements
 
 * System\.Collections\.Generic\.[IEnumerable\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
 * System\.Collections\.Generic\.[IReadOnlyCollection\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)

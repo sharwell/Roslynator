@@ -14,9 +14,9 @@ Returns using statement's declaration or an expression if the declaration is nul
 public static CSharpSyntaxNode DeclarationOrExpression(this UsingStatementSyntax usingStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### usingStatement
+### usingStatement
 
 
 

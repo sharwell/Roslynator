@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is a switch label\.
 public static bool IsSwitchLabel(SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### kind
+### kind
 
 
 

@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind can have members\.
 public static bool CanHaveMembers(SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### kind
+### kind
 
 
 

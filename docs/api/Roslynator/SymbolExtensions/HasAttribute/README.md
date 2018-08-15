@@ -23,15 +23,15 @@ Returns true if the symbol has the specified attribute\.
 public static bool HasAttribute(this ISymbol symbol, INamedTypeSymbol attributeClass)
 ```
 
-#### Parameters
+### Parameters
 
-##### symbol
-
-
+#### symbol
 
 
 
-##### attributeClass
+
+
+#### attributeClass
 
 
 
@@ -51,21 +51,21 @@ Returns true if the type symbol has the specified attribute\.
 public static bool HasAttribute(this ITypeSymbol typeSymbol, INamedTypeSymbol attributeClass, bool includeBaseTypes)
 ```
 
-#### Parameters
+### Parameters
 
-##### typeSymbol
-
-
-
-
-
-##### attributeClass
+#### typeSymbol
 
 
 
 
 
-##### includeBaseTypes
+#### attributeClass
+
+
+
+
+
+#### includeBaseTypes
 
 
 

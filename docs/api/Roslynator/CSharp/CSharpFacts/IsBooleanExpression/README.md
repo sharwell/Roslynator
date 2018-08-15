@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is a boolean expression\.
 public static bool IsBooleanExpression(SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### kind
+### kind
 
 
 

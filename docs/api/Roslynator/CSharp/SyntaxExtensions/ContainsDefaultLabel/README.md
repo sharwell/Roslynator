@@ -14,9 +14,9 @@ Returns true if the specified switch section contains default switch label\.
 public static bool ContainsDefaultLabel(this SwitchSectionSyntax switchSection)
 ```
 
-### Parameters
+## Parameters
 
-#### switchSection
+### switchSection
 
 
 

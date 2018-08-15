@@ -10,15 +10,15 @@
 public static ExpressionChain AsChain(this BinaryExpressionSyntax binaryExpression, TextSpan? span = null)
 ```
 
-### Parameters
+## Parameters
 
-#### binaryExpression
-
-
+### binaryExpression
 
 
 
-#### span
+
+
+### span
 
 
 

@@ -14,9 +14,9 @@ Returns true if the type is [IEnumerable](https://docs.microsoft.com/en-us/dotne
 public static bool IsIEnumerableOrIEnumerableOfT(this ITypeSymbol typeSymbol)
 ```
 
-### Parameters
+## Parameters
 
-#### typeSymbol
+### typeSymbol
 
 
 

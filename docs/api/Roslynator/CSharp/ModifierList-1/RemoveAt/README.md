@@ -14,15 +14,15 @@ Creates a new node with a modifier at the specified index removed\.
 public TNode RemoveAt(TNode node, int index)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
+### node
 
 
 
-#### index
+
+
+### index
 
 
 

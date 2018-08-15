@@ -23,9 +23,9 @@ Searches for an using directive that matches the predicate and returns returns z
 public int IndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 ```
 
-#### Parameters
+### Parameters
 
-##### predicate
+#### predicate
 
 
 
@@ -45,9 +45,9 @@ The index of the using directive in the list\.
 public int IndexOf(UsingDirectiveSyntax usingDirective)
 ```
 
-#### Parameters
+### Parameters
 
-##### usingDirective
+#### usingDirective
 
 
 

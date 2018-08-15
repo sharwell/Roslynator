@@ -14,15 +14,15 @@ Creates a new [ModifierListInfo](../README.md) with accessibility modifiers upda
 public ModifierListInfo WithExplicitAccessibility(Accessibility newAccessibility, IComparer<SyntaxKind> comparer = null)
 ```
 
-### Parameters
+## Parameters
 
-#### newAccessibility
-
-
+### newAccessibility
 
 
 
-#### comparer
+
+
+### comparer
 
 
 

@@ -14,15 +14,15 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the specified using di
 public UsingDirectiveListInfo Replace(UsingDirectiveSyntax usingInLine, UsingDirectiveSyntax newUsingDirective)
 ```
 
-### Parameters
+## Parameters
 
-#### usingInLine
-
-
+### usingInLine
 
 
 
-#### newUsingDirective
+
+
+### newUsingDirective
 
 
 

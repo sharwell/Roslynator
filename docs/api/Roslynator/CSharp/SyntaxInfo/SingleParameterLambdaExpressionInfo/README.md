@@ -23,15 +23,15 @@ Creates a new [SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameter
 public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressionInfo(LambdaExpressionSyntax lambdaExpression, bool allowMissing = false)
 ```
 
-#### Parameters
+### Parameters
 
-##### lambdaExpression
-
-
+#### lambdaExpression
 
 
 
-##### allowMissing
+
+
+#### allowMissing
 
 
 
@@ -51,21 +51,21 @@ Creates a new [SingleParameterLambdaExpressionInfo](../../Syntax/SingleParameter
 public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-#### Parameters
+### Parameters
 
-##### node
-
-
-
-
-
-##### walkDownParentheses
+#### node
 
 
 
 
 
-##### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 

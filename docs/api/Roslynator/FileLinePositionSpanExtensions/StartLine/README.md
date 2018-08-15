@@ -14,9 +14,9 @@ Returns zero\-based index of the start line of the specified span\.
 public static int StartLine(this FileLinePositionSpan fileLinePositionSpan)
 ```
 
-### Parameters
+## Parameters
 
-#### fileLinePositionSpan
+### fileLinePositionSpan
 
 
 

@@ -14,15 +14,15 @@ Creates a new [SeparatedSyntaxListSelection\<TNode>](../README.md) based on the 
 public static SeparatedSyntaxListSelection<TNode> Create(SeparatedSyntaxList<TNode> list, TextSpan span)
 ```
 
-### Parameters
+## Parameters
 
-#### list
-
-
+### list
 
 
 
-#### span
+
+
+### span
 
 
 

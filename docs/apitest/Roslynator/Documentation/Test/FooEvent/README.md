@@ -10,11 +10,11 @@
 public class FooEvent : IFoo
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; FooEvent
 
-### Implements
+## Implements
 
 * Roslynator\.Documentation\.Test\.[IFoo](../IFoo/README.md)
 

@@ -14,23 +14,23 @@ Creates a new node with the trivia removed\.
 public static TNode RemoveTrivia<TNode>(this TNode node, TextSpan? span = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
-
-
-
-### Parameters
-
-#### node
+### TNode
 
 
 
 
 
-#### span
+## Parameters
+
+### node
+
+
+
+
+
+### span
 
 
 

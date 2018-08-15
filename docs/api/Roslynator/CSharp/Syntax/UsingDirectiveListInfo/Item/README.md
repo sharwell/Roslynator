@@ -14,9 +14,9 @@ Gets the using directive at the specified index in the list\.
 public UsingDirectiveSyntax this[int index] { get; }
 ```
 
-### Parameters
+## Parameters
 
-#### index
+### index
 
 
 

@@ -14,15 +14,15 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the specified old node
 public UsingDirectiveListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newNode)
 ```
 
-### Parameters
+## Parameters
 
-#### oldNode
-
-
+### oldNode
 
 
 
-#### newNode
+
+
+### newNode
 
 
 

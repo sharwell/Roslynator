@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind if local function or anonymous fu
 public static bool IsFunction(SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### kind
+### kind
 
 
 

@@ -19,9 +19,9 @@
 public static CheckedExpressionSyntax CheckedExpression(ExpressionSyntax expression)
 ```
 
-#### Parameters
+### Parameters
 
-##### expression
+#### expression
 
 
 
@@ -37,21 +37,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CheckedExpressionSyntax](https://docs.
 public static CheckedExpressionSyntax CheckedExpression(SyntaxToken openParenToken, ExpressionSyntax expression, SyntaxToken closeParenToken)
 ```
 
-#### Parameters
+### Parameters
 
-##### openParenToken
-
-
-
-
-
-##### expression
+#### openParenToken
 
 
 
 
 
-##### closeParenToken
+#### expression
+
+
+
+
+
+#### closeParenToken
 
 
 

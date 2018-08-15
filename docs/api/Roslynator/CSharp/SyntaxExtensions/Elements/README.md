@@ -14,15 +14,15 @@ Gets a list of xml elements with the specified local name\.
 public static IEnumerable<XmlElementSyntax> Elements(this DocumentationCommentTriviaSyntax documentationComment, string localName)
 ```
 
-### Parameters
+## Parameters
 
-#### documentationComment
-
-
+### documentationComment
 
 
 
-#### localName
+
+
+### localName
 
 
 

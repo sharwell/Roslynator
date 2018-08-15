@@ -24,33 +24,33 @@ Returns null if no matching parameter is found\.
 public static IParameterSymbol DetermineParameter(this SemanticModel semanticModel, ArgumentSyntax argument, bool allowParams = false, bool allowCandidate = false, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### argument
+#### semanticModel
 
 
 
 
 
-##### allowParams
+#### argument
 
 
 
 
 
-##### allowCandidate
+#### allowParams
 
 
 
 
 
-##### cancellationToken
+#### allowCandidate
+
+
+
+
+
+#### cancellationToken
 
 
 
@@ -71,33 +71,33 @@ Returns null if not matching parameter is found\.
 public static IParameterSymbol DetermineParameter(this SemanticModel semanticModel, AttributeArgumentSyntax attributeArgument, bool allowParams = false, bool allowCandidate = false, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-#### Parameters
+### Parameters
 
-##### semanticModel
-
-
-
-
-
-##### attributeArgument
+#### semanticModel
 
 
 
 
 
-##### allowParams
+#### attributeArgument
 
 
 
 
 
-##### allowCandidate
+#### allowParams
 
 
 
 
 
-##### cancellationToken
+#### allowCandidate
+
+
+
+
+
+#### cancellationToken
 
 
 

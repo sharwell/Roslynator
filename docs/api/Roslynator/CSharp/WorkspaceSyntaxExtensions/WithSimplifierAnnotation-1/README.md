@@ -24,9 +24,9 @@ Adds [Simplifier.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microso
 public static SyntaxToken WithSimplifierAnnotation(this SyntaxToken token)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
+#### token
 
 
 
@@ -46,17 +46,17 @@ Creates a new node with the [Simplifier.Annotation](https://docs.microsoft.com/e
 public static TNode WithSimplifierAnnotation<TNode>(this TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
+#### TNode
 
 
 
-#### Parameters
 
-##### node
+
+### Parameters
+
+#### node
 
 
 

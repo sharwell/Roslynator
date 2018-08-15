@@ -10,27 +10,27 @@
 protected TextLineCollectionSelection(TextLineCollection lines, TextSpan span, int firstIndex, int lastIndex)
 ```
 
-### Parameters
+## Parameters
 
-#### lines
-
-
-
-
-
-#### span
+### lines
 
 
 
 
 
-#### firstIndex
+### span
 
 
 
 
 
-#### lastIndex
+### firstIndex
+
+
+
+
+
+### lastIndex
 
 
 

@@ -15,9 +15,9 @@ Simple if statement is defined as follows: it is not a child of an else clause a
 public static bool IsSimpleIf(this IfStatementSyntax ifStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### ifStatement
+### ifStatement
 
 
 

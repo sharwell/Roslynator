@@ -19,27 +19,27 @@
 public static ConversionOperatorDeclarationSyntax ImplicitConversionOperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax type, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### parameterList
+#### type
 
 
 
 
 
-##### expressionBody
+#### parameterList
+
+
+
+
+
+#### expressionBody
 
 
 
@@ -55,27 +55,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConversionOperatorDeclarationSyntax](h
 public static ConversionOperatorDeclarationSyntax ImplicitConversionOperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax type, ParameterListSyntax parameterList, BlockSyntax body)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### parameterList
+#### type
 
 
 
 
 
-##### body
+#### parameterList
+
+
+
+
+
+#### body
 
 
 

@@ -19,9 +19,9 @@
 public static ArgumentListSyntax ArgumentList(ArgumentSyntax argument)
 ```
 
-#### Parameters
+### Parameters
 
-##### argument
+#### argument
 
 
 
@@ -37,9 +37,9 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ArgumentListSyntax](https://docs.micro
 public static ArgumentListSyntax ArgumentList(params ArgumentSyntax[] arguments)
 ```
 
-#### Parameters
+### Parameters
 
-##### arguments
+#### arguments
 
 
 

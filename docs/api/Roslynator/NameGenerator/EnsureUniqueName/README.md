@@ -23,21 +23,21 @@ Returns an unique name using the specified list of reserved names\.
 public abstract string EnsureUniqueName(string baseName, IEnumerable<string> reservedNames, bool isCaseSensitive = true)
 ```
 
-#### Parameters
+### Parameters
 
-##### baseName
-
-
-
-
-
-##### reservedNames
+#### baseName
 
 
 
 
 
-##### isCaseSensitive
+#### reservedNames
+
+
+
+
+
+#### isCaseSensitive
 
 
 
@@ -57,21 +57,21 @@ Returns an unique name using the specified list of symbols\.
 public abstract string EnsureUniqueName(string baseName, ImmutableArray<ISymbol> symbols, bool isCaseSensitive = true)
 ```
 
-#### Parameters
+### Parameters
 
-##### baseName
-
-
-
-
-
-##### symbols
+#### baseName
 
 
 
 
 
-##### isCaseSensitive
+#### symbols
+
+
+
+
+
+#### isCaseSensitive
 
 
 

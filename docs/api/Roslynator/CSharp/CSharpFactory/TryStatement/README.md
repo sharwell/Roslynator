@@ -10,21 +10,21 @@
 public static TryStatementSyntax TryStatement(BlockSyntax block, CatchClauseSyntax @catch, FinallyClauseSyntax @finally = null)
 ```
 
-### Parameters
+## Parameters
 
-#### block
-
-
-
-
-
-#### catch
+### block
 
 
 
 
 
-#### finally
+### catch
+
+
+
+
+
+### finally
 
 
 

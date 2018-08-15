@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is pre/post increment/decrement e
 public static bool IsIncrementOrDecrementExpression(SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### kind
+### kind
 
 
 

@@ -14,21 +14,21 @@ Creates parenthesized expression that is parenthesizing the specified expression
 public static ParenthesizedExpressionSyntax Parenthesize(this ExpressionSyntax expression, bool includeElasticTrivia = true, bool simplifiable = true)
 ```
 
-### Parameters
+## Parameters
 
-#### expression
-
-
+### expression
 
 
 
-#### includeElasticTrivia
+
+
+### includeElasticTrivia
 
 
 
 If true, add elastic trivia\.
 
-#### simplifiable
+### simplifiable
 
 
 

@@ -23,29 +23,29 @@ Searches a list of descendant nodes \(including this node\) in prefix document o
 public static TNode FirstDescendantOrSelf<TNode>(this SyntaxNode node, Func<SyntaxNode, bool> descendIntoChildren = null, bool descendIntoTrivia = false) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### node
+#### TNode
 
 
 
 
 
-##### descendIntoChildren
+### Parameters
+
+#### node
 
 
 
 
 
-##### descendIntoTrivia
+#### descendIntoChildren
+
+
+
+
+
+#### descendIntoTrivia
 
 
 
@@ -65,35 +65,35 @@ Searches a list of descendant nodes \(including this node\) in prefix document o
 public static TNode FirstDescendantOrSelf<TNode>(this SyntaxNode node, TextSpan span, Func<SyntaxNode, bool> descendIntoChildren = null, bool descendIntoTrivia = false) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### node
+#### TNode
 
 
 
 
 
-##### span
+### Parameters
+
+#### node
 
 
 
 
 
-##### descendIntoChildren
+#### span
 
 
 
 
 
-##### descendIntoTrivia
+#### descendIntoChildren
+
+
+
+
+
+#### descendIntoTrivia
 
 
 

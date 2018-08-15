@@ -14,21 +14,21 @@ Returns true if the specified [TextSpan](https://docs.microsoft.com/en-us/dotnet
 public static bool IsMultiLineSpan(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### syntaxTree
-
-
-
-
-
-#### span
+### syntaxTree
 
 
 
 
 
-#### cancellationToken
+### span
+
+
+
+
+
+### cancellationToken
 
 
 

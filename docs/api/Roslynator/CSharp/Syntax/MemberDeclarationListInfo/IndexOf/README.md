@@ -23,9 +23,9 @@ Searches for a member that matches the predicate and returns returns zero\-based
 public int IndexOf(Func<MemberDeclarationSyntax, bool> predicate)
 ```
 
-#### Parameters
+### Parameters
 
-##### predicate
+#### predicate
 
 
 
@@ -45,9 +45,9 @@ The index of the member in the list\.
 public int IndexOf(MemberDeclarationSyntax member)
 ```
 
-#### Parameters
+### Parameters
 
-##### member
+#### member
 
 
 

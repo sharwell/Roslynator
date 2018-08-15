@@ -14,15 +14,15 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the specified using di
 public UsingDirectiveListInfo ReplaceRange(UsingDirectiveSyntax usingInLine, IEnumerable<UsingDirectiveSyntax> newUsingDirectives)
 ```
 
-### Parameters
+## Parameters
 
-#### usingInLine
-
-
+### usingInLine
 
 
 
-#### newUsingDirectives
+
+
+### newUsingDirectives
 
 
 

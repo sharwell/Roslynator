@@ -14,15 +14,15 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the member at the s
 public MemberDeclarationListInfo ReplaceAt(int index, MemberDeclarationSyntax newMember)
 ```
 
-### Parameters
+## Parameters
 
-#### index
-
-
+### index
 
 
 
-#### newMember
+
+
+### newMember
 
 
 

@@ -14,21 +14,21 @@ Returns true if the specified node has a constant value\.
 public static bool HasConstantValue(this SemanticModel semanticModel, ExpressionSyntax expression, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
-
-
-
-#### expression
+### semanticModel
 
 
 
 
 
-#### cancellationToken
+### expression
+
+
+
+
+
+### cancellationToken
 
 
 

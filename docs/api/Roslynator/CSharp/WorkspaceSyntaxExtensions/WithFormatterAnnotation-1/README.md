@@ -23,9 +23,9 @@ Adds [Formatter.Annotation](https://docs.microsoft.com/en-us/dotnet/api/microsof
 public static SyntaxToken WithFormatterAnnotation(this SyntaxToken token)
 ```
 
-#### Parameters
+### Parameters
 
-##### token
+#### token
 
 
 
@@ -45,17 +45,17 @@ Creates a new node with the [Formatter.Annotation](https://docs.microsoft.com/en
 public static TNode WithFormatterAnnotation<TNode>(this TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
+#### TNode
 
 
 
-#### Parameters
 
-##### node
+
+### Parameters
+
+#### node
 
 
 

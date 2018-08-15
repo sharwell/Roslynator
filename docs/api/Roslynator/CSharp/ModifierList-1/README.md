@@ -14,15 +14,15 @@ Represents a list of modifiers\.
 public abstract class ModifierList<TNode> where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### TNode
-
-
+### TNode
 
 
 
-### Inheritance
+
+
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; ModifierList\<TNode>
 

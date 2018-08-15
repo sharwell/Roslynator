@@ -14,11 +14,11 @@ A wrapper for either an [IfStatementSyntax](https://docs.microsoft.com/en-us/dot
 public readonly struct IfStatementOrElseClause : System.IEquatable<IfStatementOrElseClause>
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype) &#x2192; IfStatementOrElseClause
 
-### Implements
+## Implements
 
 * System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IfStatementOrElseClause](./README.md)>
 

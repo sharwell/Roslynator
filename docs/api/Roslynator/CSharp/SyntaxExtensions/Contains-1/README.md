@@ -25,15 +25,15 @@ Returns true if a token of the specified kind is in the [SyntaxTokenList](https:
 public static bool Contains(this SyntaxTokenList tokenList, SyntaxKind kind)
 ```
 
-#### Parameters
+### Parameters
 
-##### tokenList
-
-
+#### tokenList
 
 
 
-##### kind
+
+
+#### kind
 
 
 
@@ -53,15 +53,15 @@ Returns true if a trivia of the specified kind is in the [SyntaxTriviaList](http
 public static bool Contains(this SyntaxTriviaList triviaList, SyntaxKind kind)
 ```
 
-#### Parameters
+### Parameters
 
-##### triviaList
-
-
+#### triviaList
 
 
 
-##### kind
+
+
+#### kind
 
 
 
@@ -81,23 +81,23 @@ Searches for a node of the specified kind and returns the zero\-based index of t
 public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### list
+#### TNode
 
 
 
 
 
-##### kind
+### Parameters
+
+#### list
+
+
+
+
+
+#### kind
 
 
 
@@ -117,23 +117,23 @@ Returns true if a node of the specified kind is in the [SyntaxList\<TNode>](http
 public static bool Contains<TNode>(this SyntaxList<TNode> list, SyntaxKind kind) where TNode : Microsoft.CodeAnalysis.SyntaxNode
 ```
 
-#### Type Parameters
+### Type Parameters
 
-##### TNode
-
-
-
-
-
-#### Parameters
-
-##### list
+#### TNode
 
 
 
 
 
-##### kind
+### Parameters
+
+#### list
+
+
+
+
+
+#### kind
 
 
 

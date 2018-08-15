@@ -19,9 +19,9 @@
 public static BlockSyntax Block(StatementSyntax statement)
 ```
 
-#### Parameters
+### Parameters
 
-##### statement
+#### statement
 
 
 
@@ -37,21 +37,21 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BlockSyntax](https://docs.microsoft.co
 public static BlockSyntax Block(SyntaxToken openBrace, StatementSyntax statement, SyntaxToken closeBrace)
 ```
 
-#### Parameters
+### Parameters
 
-##### openBrace
-
-
-
-
-
-##### statement
+#### openBrace
 
 
 
 
 
-##### closeBrace
+#### statement
+
+
+
+
+
+#### closeBrace
 
 
 

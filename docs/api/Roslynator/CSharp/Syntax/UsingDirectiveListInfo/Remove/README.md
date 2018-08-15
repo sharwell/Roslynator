@@ -14,9 +14,9 @@ Creates a new [UsingDirectiveListInfo](../README.md) with the specified using di
 public UsingDirectiveListInfo Remove(UsingDirectiveSyntax usingDirective)
 ```
 
-### Parameters
+## Parameters
 
-#### usingDirective
+### usingDirective
 
 
 

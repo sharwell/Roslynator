@@ -14,9 +14,9 @@ Returns true if the specified if statement is not a child of an else clause\.
 public static bool IsTopmostIf(this IfStatementSyntax ifStatement)
 ```
 
-### Parameters
+## Parameters
 
-#### ifStatement
+### ifStatement
 
 
 

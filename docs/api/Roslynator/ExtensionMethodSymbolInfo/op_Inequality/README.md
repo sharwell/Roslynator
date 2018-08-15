@@ -10,15 +10,15 @@
 public static bool operator !=(in ExtensionMethodSymbolInfo info1, in ExtensionMethodSymbolInfo info2)
 ```
 
-### Parameters
+## Parameters
 
-#### info1
-
-
+### info1
 
 
 
-#### info2
+
+
+### info2
 
 
 

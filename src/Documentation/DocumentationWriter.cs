@@ -410,11 +410,11 @@ namespace Roslynator.Documentation
 
             if (en.MoveNext())
             {
-                WriteHeading(3, Resources.TypeParametersTitle);
+                WriteHeading(2, Resources.TypeParametersTitle);
 
                 do
                 {
-                    WriteHeading(4, en.Current.Name);
+                    WriteHeading(3, en.Current.Name);
                     WriteLine();
                     WriteLine();
                     GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", en.Current.Name)?.WriteContentTo(this);
@@ -494,11 +494,11 @@ namespace Roslynator.Documentation
 
                 if (en.MoveNext())
                 {
-                    WriteHeading(3, Resources.ParametersTitle);
+                    WriteHeading(2, Resources.ParametersTitle);
 
                     do
                     {
-                        WriteHeading(4, en.Current.Name);
+                        WriteHeading(3, en.Current.Name);
                         WriteLine();
                         WriteLine();
                         GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", en.Current.Name)?.WriteContentTo(this);
@@ -527,7 +527,7 @@ namespace Roslynator.Documentation
                             if (returnType.SpecialType == SpecialType.System_Void)
                                 return;
 
-                            WriteHeading(3, Resources.ReturnValueTitle);
+                            WriteHeading(2, Resources.ReturnValueTitle);
                             WriteTypeLink(returnType);
                             WriteLine();
 
@@ -552,7 +552,7 @@ namespace Roslynator.Documentation
                 return;
             }
 
-            WriteHeading(3, Resources.InheritanceTitle);
+            WriteHeading(2, Resources.InheritanceTitle);
 
             using (IEnumerator<ITypeSymbol> en = typeSymbol.BaseTypesAndSelf().Reverse().GetEnumerator())
             {
@@ -621,7 +621,7 @@ namespace Roslynator.Documentation
             {
                 if (en.MoveNext())
                 {
-                    WriteHeading(3, Resources.AttributesTitle);
+                    WriteHeading(2, Resources.AttributesTitle);
 
                     do
                     {
@@ -647,7 +647,7 @@ namespace Roslynator.Documentation
             WriteList(
                 derivedTypes,
                 heading: Resources.DerivedTitle,
-                headingLevel: 3,
+                headingLevel: 2,
                 format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                 maxItems: Options.MaxDerivedItems,
                 addNamespace: true);
@@ -658,7 +658,7 @@ namespace Roslynator.Documentation
             WriteList(
                 implementedInterfaces,
                 heading: Resources.ImplementsTitle,
-                headingLevel: 3,
+                headingLevel: 2,
                 format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                 addLinkForTypeParameters: true,
                 addNamespace: true);
@@ -670,7 +670,7 @@ namespace Roslynator.Documentation
             {
                 if (en.MoveNext())
                 {
-                    WriteHeading(3, Resources.ExceptionsTitle);
+                    WriteHeading(2, Resources.ExceptionsTitle);
 
                     do
                     {

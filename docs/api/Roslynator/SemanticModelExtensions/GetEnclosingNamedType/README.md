@@ -14,21 +14,21 @@ Returns the innermost named type symbol that the specified position is considere
 public static INamedTypeSymbol GetEnclosingNamedType(this SemanticModel semanticModel, int position, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
-
-
-
-#### position
+### semanticModel
 
 
 
 
 
-#### cancellationToken
+### position
+
+
+
+
+
+### cancellationToken
 
 
 

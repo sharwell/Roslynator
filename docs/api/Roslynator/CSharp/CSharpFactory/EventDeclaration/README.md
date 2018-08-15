@@ -19,27 +19,27 @@
 public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers, TypeSyntax type, string identifier, AccessorListSyntax accessorList)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### identifier
+#### type
 
 
 
 
 
-##### accessorList
+#### identifier
+
+
+
+
+
+#### accessorList
 
 
 
@@ -55,27 +55,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EventDeclarationSyntax](https://docs.m
 public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier, AccessorListSyntax accessorList)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### identifier
+#### type
 
 
 
 
 
-##### accessorList
+#### identifier
+
+
+
+
+
+#### accessorList
 
 
 

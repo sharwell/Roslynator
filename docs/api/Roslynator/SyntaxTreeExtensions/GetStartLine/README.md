@@ -14,21 +14,21 @@ Returns zero\-based index of the start line of the specified span\.
 public static int GetStartLine(this SyntaxTree syntaxTree, TextSpan span, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### syntaxTree
-
-
-
-
-
-#### span
+### syntaxTree
 
 
 
 
 
-#### cancellationToken
+### span
+
+
+
+
+
+### cancellationToken
 
 
 

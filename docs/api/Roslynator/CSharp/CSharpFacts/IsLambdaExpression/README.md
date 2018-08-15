@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is a lambda expression\.
 public static bool IsLambdaExpression(SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### kind
+### kind
 
 
 

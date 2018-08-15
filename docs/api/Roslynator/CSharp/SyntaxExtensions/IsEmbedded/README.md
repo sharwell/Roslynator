@@ -14,27 +14,27 @@ Returns true if the specified statement is an embedded statement\.
 public static bool IsEmbedded(this StatementSyntax statement, bool canBeBlock = false, bool canBeIfInsideElse = true, bool canBeUsingInsideUsing = true)
 ```
 
-### Parameters
+## Parameters
 
-#### statement
-
-
+### statement
 
 
 
-#### canBeBlock
+
+
+### canBeBlock
 
 
 
 Block can be considered as embedded statement
 
-#### canBeIfInsideElse
+### canBeIfInsideElse
 
 
 
 If statement that is a child of an else statement can be considered as an embedded statement\.
 
-#### canBeUsingInsideUsing
+### canBeUsingInsideUsing
 
 
 

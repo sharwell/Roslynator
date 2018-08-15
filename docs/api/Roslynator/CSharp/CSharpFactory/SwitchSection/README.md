@@ -20,15 +20,15 @@
 public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, StatementSyntax statement)
 ```
 
-#### Parameters
+### Parameters
 
-##### switchLabel
-
-
+#### switchLabel
 
 
 
-##### statement
+
+
+#### statement
 
 
 
@@ -44,15 +44,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.micr
 public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, SyntaxList<StatementSyntax> statements)
 ```
 
-#### Parameters
+### Parameters
 
-##### switchLabel
-
-
+#### switchLabel
 
 
 
-##### statements
+
+
+#### statements
 
 
 
@@ -68,15 +68,15 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.micr
 public static SwitchSectionSyntax SwitchSection(SyntaxList<SwitchLabelSyntax> switchLabels, StatementSyntax statement)
 ```
 
-#### Parameters
+### Parameters
 
-##### switchLabels
-
-
+#### switchLabels
 
 
 
-##### statement
+
+
+#### statement
 
 
 

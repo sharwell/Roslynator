@@ -14,9 +14,9 @@ Returns true if a syntax of the specified kind is a constraint\.
 public static bool IsConstraint(SyntaxKind kind)
 ```
 
-### Parameters
+## Parameters
 
-#### kind
+### kind
 
 
 

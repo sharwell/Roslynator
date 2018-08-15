@@ -24,15 +24,15 @@ Creates a new [MemberDeclarationListSelection](../README.md) based on the specif
 public static MemberDeclarationListSelection Create(CompilationUnitSyntax compilationUnit, TextSpan span)
 ```
 
-#### Parameters
+### Parameters
 
-##### compilationUnit
-
-
+#### compilationUnit
 
 
 
-##### span
+
+
+#### span
 
 
 
@@ -52,15 +52,15 @@ Creates a new [MemberDeclarationListSelection](../README.md) based on the specif
 public static MemberDeclarationListSelection Create(NamespaceDeclarationSyntax namespaceDeclaration, TextSpan span)
 ```
 
-#### Parameters
+### Parameters
 
-##### namespaceDeclaration
-
-
+#### namespaceDeclaration
 
 
 
-##### span
+
+
+#### span
 
 
 
@@ -80,15 +80,15 @@ Creates a new [MemberDeclarationListSelection](../README.md) based on the specif
 public static MemberDeclarationListSelection Create(TypeDeclarationSyntax typeDeclaration, TextSpan span)
 ```
 
-#### Parameters
+### Parameters
 
-##### typeDeclaration
-
-
+#### typeDeclaration
 
 
 
-##### span
+
+
+#### span
 
 
 

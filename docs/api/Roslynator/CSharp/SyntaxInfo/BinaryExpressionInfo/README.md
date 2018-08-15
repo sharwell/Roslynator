@@ -23,21 +23,21 @@ Creates a new [BinaryExpressionInfo](../../Syntax/BinaryExpressionInfo/README.md
 public static BinaryExpressionInfo BinaryExpressionInfo(BinaryExpressionSyntax binaryExpression, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-#### Parameters
+### Parameters
 
-##### binaryExpression
-
-
-
-
-
-##### walkDownParentheses
+#### binaryExpression
 
 
 
 
 
-##### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 
@@ -57,21 +57,21 @@ Creates a new [BinaryExpressionInfo](../../Syntax/BinaryExpressionInfo/README.md
 public static BinaryExpressionInfo BinaryExpressionInfo(SyntaxNode node, bool walkDownParentheses = true, bool allowMissing = false)
 ```
 
-#### Parameters
+### Parameters
 
-##### node
-
-
-
-
-
-##### walkDownParentheses
+#### node
 
 
 
 
 
-##### allowMissing
+#### walkDownParentheses
+
+
+
+
+
+#### allowMissing
 
 
 

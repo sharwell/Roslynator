@@ -16,15 +16,15 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
     System.Collections.Generic.IReadOnlyList<T>
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### T
-
-
+### T
 
 
 
-### Derived
+
+
+## Derived
 
 * Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../SeparatedSyntaxListSelection-1/README.md)
 * Roslynator\.[SyntaxListSelection\<TNode>](../SyntaxListSelection-1/README.md)
@@ -32,7 +32,7 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 * Roslynator\.CSharp\.[StatementListSelection](../CSharp/StatementListSelection/README.md)
 * Roslynator\.Text\.[TextLineCollectionSelection](../Text/TextLineCollectionSelection/README.md)
 
-### Implements
+## Implements
 
 * System\.Collections\.Generic\.[IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
 * System\.Collections\.Generic\.[IReadOnlyCollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)

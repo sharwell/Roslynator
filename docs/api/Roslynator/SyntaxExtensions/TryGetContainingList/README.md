@@ -14,27 +14,27 @@ Gets a [SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.
 public static bool TryGetContainingList(this SyntaxTrivia trivia, out SyntaxTriviaList triviaList, bool allowLeading = true, bool allowTrailing = true)
 ```
 
-### Parameters
+## Parameters
 
-#### trivia
-
-
-
-
-
-#### triviaList
+### trivia
 
 
 
 
 
-#### allowLeading
+### triviaList
+
+
+
+
+
+### allowLeading
 
 
 
 If true, trivia can be part of leading trivia\.
 
-#### allowTrailing
+### allowTrailing
 
 
 

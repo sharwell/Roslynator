@@ -14,9 +14,9 @@ Creates a new [GenericInfo](../README.md) with the type parameter list updated\.
 public GenericInfo WithTypeParameterList(TypeParameterListSyntax typeParameterList)
 ```
 
-### Parameters
+## Parameters
 
-#### typeParameterList
+### typeParameterList
 
 
 

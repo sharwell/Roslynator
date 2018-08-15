@@ -11,11 +11,11 @@
 public sealed class FooAttribute : System.Attribute
 ```
 
-### Inheritance
+## Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute) &#x2192; FooAttribute
 
-### Attributes
+## Attributes
 
 * System\.[AttributeUsageAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.attributeusageattribute)
 

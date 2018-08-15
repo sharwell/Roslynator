@@ -14,9 +14,9 @@ Return true if the specified declaration is publicly visible\.
 public static bool IsPubliclyVisible(MemberDeclarationSyntax declaration)
 ```
 
-### Parameters
+## Parameters
 
-#### declaration
+### declaration
 
 
 

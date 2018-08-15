@@ -19,27 +19,27 @@
 public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifiers, TypeSyntax type, BracketedParameterListSyntax parameterList, AccessorListSyntax accessorList)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### parameterList
+#### type
 
 
 
 
 
-##### accessorList
+#### parameterList
+
+
+
+
+
+#### accessorList
 
 
 
@@ -55,27 +55,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[IndexerDeclarationSyntax](https://docs
 public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifiers, TypeSyntax type, BracketedParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### parameterList
+#### type
 
 
 
 
 
-##### expressionBody
+#### parameterList
+
+
+
+
+
+#### expressionBody
 
 
 

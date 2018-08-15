@@ -14,15 +14,15 @@ Returns true if the node contains any preprocessor directives inside the specifi
 public static bool ContainsDirectives(this SyntaxNode node, TextSpan span)
 ```
 
-### Parameters
+## Parameters
 
-#### node
-
-
+### node
 
 
 
-#### span
+
+
+### span
 
 
 

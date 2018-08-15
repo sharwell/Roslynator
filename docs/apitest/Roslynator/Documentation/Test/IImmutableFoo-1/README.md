@@ -20,15 +20,15 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
     System.Collections.Immutable.IImmutableList<T>
 ```
 
-### Type Parameters
+## Type Parameters
 
-#### T
-
-
+### T
 
 
 
-### Implements
+
+
+## Implements
 
 * System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IImmutableFoo\<T>](./README.md)>
 * System\.Collections\.[ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)

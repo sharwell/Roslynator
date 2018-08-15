@@ -23,9 +23,9 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the members updated
 public MemberDeclarationListInfo WithMembers(IEnumerable<MemberDeclarationSyntax> members)
 ```
 
-#### Parameters
+### Parameters
 
-##### members
+#### members
 
 
 
@@ -45,9 +45,9 @@ Creates a new [MemberDeclarationListInfo](../README.md) with the members updated
 public MemberDeclarationListInfo WithMembers(SyntaxList<MemberDeclarationSyntax> members)
 ```
 
-#### Parameters
+### Parameters
 
-##### members
+#### members
 
 
 

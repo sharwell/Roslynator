@@ -14,15 +14,15 @@ Returns the type within the compilation's assembly using its canonical CLR metad
 public static INamedTypeSymbol GetTypeByMetadataName(this SemanticModel semanticModel, string fullyQualifiedMetadataName)
 ```
 
-### Parameters
+## Parameters
 
-#### semanticModel
-
-
+### semanticModel
 
 
 
-#### fullyQualifiedMetadataName
+
+
+### fullyQualifiedMetadataName
 
 
 

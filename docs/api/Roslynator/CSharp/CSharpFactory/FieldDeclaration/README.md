@@ -21,27 +21,27 @@
 public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, string identifier, EqualsValueClauseSyntax initializer)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### identifier
+#### type
 
 
 
 
 
-##### initializer
+#### identifier
+
+
+
+
+
+#### initializer
 
 
 
@@ -57,27 +57,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[FieldDeclarationSyntax](https://docs.m
 public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, string identifier, ExpressionSyntax value = null)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### identifier
+#### type
 
 
 
 
 
-##### value
+#### identifier
+
+
+
+
+
+#### value
 
 
 
@@ -93,27 +93,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[FieldDeclarationSyntax](https://docs.m
 public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier, EqualsValueClauseSyntax initializer)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### identifier
+#### type
 
 
 
 
 
-##### initializer
+#### identifier
+
+
+
+
+
+#### initializer
 
 
 
@@ -129,27 +129,27 @@ Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[FieldDeclarationSyntax](https://docs.m
 public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier, ExpressionSyntax value = null)
 ```
 
-#### Parameters
+### Parameters
 
-##### modifiers
-
-
-
-
-
-##### type
+#### modifiers
 
 
 
 
 
-##### identifier
+#### type
 
 
 
 
 
-##### value
+#### identifier
+
+
+
+
+
+#### value
 
 
 

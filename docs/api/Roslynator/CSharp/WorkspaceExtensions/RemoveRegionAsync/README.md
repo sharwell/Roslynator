@@ -14,21 +14,21 @@ Creates a new document with the specified region removed\.
 public static Task<Document> RemoveRegionAsync(this Document document, RegionInfo region, CancellationToken cancellationToken = default(CancellationToken))
 ```
 
-### Parameters
+## Parameters
 
-#### document
-
-
-
-
-
-#### region
+### document
 
 
 
 
 
-#### cancellationToken
+### region
+
+
+
+
+
+### cancellationToken
 
 
 
