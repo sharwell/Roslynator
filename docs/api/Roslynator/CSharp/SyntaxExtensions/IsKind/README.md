@@ -40,21 +40,9 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### node
 
-
-
-
-
 #### kind1
 
-
-
-
-
 #### kind2
-
-
-
-
 
 ### Returns
 
@@ -74,27 +62,11 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### node
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 ### Returns
 
@@ -114,33 +86,13 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### node
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
 
-
-
-
-
 #### kind4
-
-
-
-
 
 ### Returns
 
@@ -160,39 +112,15 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### node
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
-
-
-
-
 
 ### Returns
 
@@ -212,45 +140,17 @@ public static bool IsKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKind kin
 
 #### node
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
 
-
-
-
-
 #### kind6
-
-
-
-
 
 ### Returns
 
@@ -270,21 +170,9 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### token
 
-
-
-
-
 #### kind1
 
-
-
-
-
 #### kind2
-
-
-
-
 
 ### Returns
 
@@ -304,27 +192,11 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### token
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 ### Returns
 
@@ -344,33 +216,13 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### token
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
 
-
-
-
-
 #### kind4
-
-
-
-
 
 ### Returns
 
@@ -390,39 +242,15 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### token
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
-
-
-
-
 
 ### Returns
 
@@ -442,45 +270,17 @@ public static bool IsKind(this SyntaxToken token, SyntaxKind kind1, SyntaxKind k
 
 #### token
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
 
-
-
-
-
 #### kind6
-
-
-
-
 
 ### Returns
 
@@ -500,21 +300,9 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### trivia
 
-
-
-
-
 #### kind1
 
-
-
-
-
 #### kind2
-
-
-
-
 
 ### Returns
 
@@ -534,27 +322,11 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### trivia
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 ### Returns
 
@@ -574,33 +346,13 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### trivia
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
 
-
-
-
-
 #### kind4
-
-
-
-
 
 ### Returns
 
@@ -620,39 +372,15 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### trivia
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
-
-
-
-
 
 ### Returns
 
@@ -672,45 +400,17 @@ public static bool IsKind(this SyntaxTrivia trivia, SyntaxKind kind1, SyntaxKind
 
 #### trivia
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
 
-
-
-
-
 #### kind6
-
-
-
-
 
 ### Returns
 

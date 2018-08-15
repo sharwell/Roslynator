@@ -23,15 +23,7 @@ public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, M
 
 #### name
 
-
-
-
-
 #### member
-
-
-
-
 
 ### Returns
 
@@ -47,15 +39,7 @@ public static NamespaceDeclarationSyntax NamespaceDeclaration(NameSyntax name, S
 
 #### name
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 

@@ -19,10 +19,6 @@ public static StatementSyntax NextStatement(this StatementSyntax statement)
 
 #### statement
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[StatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.statementsyntax)

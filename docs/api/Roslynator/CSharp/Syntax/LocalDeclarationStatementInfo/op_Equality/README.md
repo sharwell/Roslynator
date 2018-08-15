@@ -14,15 +14,7 @@ public static bool operator ==(in LocalDeclarationStatementInfo info1, in LocalD
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

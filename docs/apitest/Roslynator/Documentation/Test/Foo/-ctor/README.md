@@ -27,8 +27,6 @@ public Foo(string s)
 
 #### s
 
-
-
 qqq
 
 ### Exceptions
@@ -55,13 +53,5 @@ public Foo(string s, string s2)
 
 #### s
 
-
-
-
-
 #### s2
-
-
-
-
 

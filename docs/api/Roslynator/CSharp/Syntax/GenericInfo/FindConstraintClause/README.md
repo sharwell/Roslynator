@@ -18,10 +18,6 @@ public TypeParameterConstraintClauseSyntax FindConstraintClause(string typeParam
 
 #### typeParameterName
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterConstraintClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeparameterconstraintclausesyntax)

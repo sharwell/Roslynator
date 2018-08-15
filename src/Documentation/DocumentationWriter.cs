@@ -413,11 +413,7 @@ namespace Roslynator.Documentation
                 do
                 {
                     WriteHeading(4, en.Current.Name);
-                    WriteLine();
-                    WriteLine();
                     GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", en.Current.Name)?.WriteContentTo(this);
-                    WriteLine();
-                    WriteLine();
                 }
                 while (en.MoveNext());
             }
@@ -467,11 +463,7 @@ namespace Roslynator.Documentation
                     do
                     {
                         WriteHeading(4, en.Current.Name);
-                        WriteLine();
-                        WriteLine();
                         GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", en.Current.Name)?.WriteContentTo(this);
-                        WriteLine();
-                        WriteLine();
                     }
                     while (en.MoveNext());
                 }

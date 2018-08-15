@@ -23,15 +23,7 @@ public void CopyTo(Array array, int index)
 
 #### array
 
-
-
-
-
 #### index
-
-
-
-
 
 ### Implements
 
@@ -47,15 +39,7 @@ public void CopyTo(Foo[] array, int arrayIndex)
 
 #### array
 
-
-
-
-
 #### arrayIndex
-
-
-
-
 
 ### Implements
 

@@ -29,15 +29,7 @@ public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, ITypeSymb
 
 #### namedTypeSymbol
 
-
-
-
-
 #### typeArgument
-
-
-
-
 
 ### Returns
 
@@ -57,15 +49,7 @@ public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, SpecialTy
 
 #### namedTypeSymbol
 
-
-
-
-
 #### specialType
-
-
-
-
 
 ### Returns
 
@@ -85,15 +69,7 @@ public static bool IsNullableOf(this ITypeSymbol typeSymbol, ITypeSymbol typeArg
 
 #### typeSymbol
 
-
-
-
-
 #### typeArgument
-
-
-
-
 
 ### Returns
 
@@ -113,15 +89,7 @@ public static bool IsNullableOf(this ITypeSymbol typeSymbol, SpecialType special
 
 #### typeSymbol
 
-
-
-
-
 #### specialType
-
-
-
-
 
 ### Returns
 

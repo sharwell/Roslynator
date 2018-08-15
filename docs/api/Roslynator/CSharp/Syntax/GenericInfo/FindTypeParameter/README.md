@@ -18,10 +18,6 @@ public TypeParameterSyntax FindTypeParameter(string name)
 
 #### name
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeParameterSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeparametersyntax)

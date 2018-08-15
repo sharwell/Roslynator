@@ -27,10 +27,6 @@ public static SyntaxNodeOrToken WithoutTrailingTrivia(this SyntaxNodeOrToken nod
 
 #### nodeOrToken
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken)
@@ -48,10 +44,6 @@ public static SyntaxToken WithoutTrailingTrivia(this SyntaxToken token)
 ### Parameters
 
 #### token
-
-
-
-
 
 ### Returns
 

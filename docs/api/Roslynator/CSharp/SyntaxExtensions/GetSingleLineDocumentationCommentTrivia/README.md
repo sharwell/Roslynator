@@ -18,10 +18,6 @@ public static SyntaxTrivia GetSingleLineDocumentationCommentTrivia(this MemberDe
 
 #### member
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivia)

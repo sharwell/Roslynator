@@ -18,15 +18,7 @@ public MemberDeclarationListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newN
 
 #### oldNode
 
-
-
-
-
 #### newNode
-
-
-
-
 
 ### Returns
 

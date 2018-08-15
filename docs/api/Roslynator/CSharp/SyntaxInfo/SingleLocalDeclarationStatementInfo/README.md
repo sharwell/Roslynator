@@ -28,10 +28,6 @@ public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatemen
 
 #### value
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[SingleLocalDeclarationStatementInfo](../../Syntax/SingleLocalDeclarationStatementInfo/README.md)
@@ -50,15 +46,7 @@ public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatemen
 
 #### localDeclarationStatement
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -78,15 +66,7 @@ public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatemen
 
 #### variableDeclaration
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 

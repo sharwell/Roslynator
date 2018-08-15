@@ -23,10 +23,6 @@ public override bool Equals(object obj)
 
 #### obj
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
@@ -40,10 +36,6 @@ public bool Equals(ExpressionChain.Reversed other)
 ### Parameters
 
 #### other
-
-
-
-
 
 ### Returns
 

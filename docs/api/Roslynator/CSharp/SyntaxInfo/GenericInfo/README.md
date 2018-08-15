@@ -34,10 +34,6 @@ public static GenericInfo GenericInfo(DelegateDeclarationSyntax delegateDeclarat
 
 #### delegateDeclaration
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
@@ -55,10 +51,6 @@ public static GenericInfo GenericInfo(LocalFunctionStatementSyntax localFunction
 ### Parameters
 
 #### localFunctionStatement
-
-
-
-
 
 ### Returns
 
@@ -78,10 +70,6 @@ public static GenericInfo GenericInfo(MethodDeclarationSyntax methodDeclaration)
 
 #### methodDeclaration
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
@@ -99,10 +87,6 @@ public static GenericInfo GenericInfo(SyntaxNode node)
 ### Parameters
 
 #### node
-
-
-
-
 
 ### Returns
 
@@ -122,10 +106,6 @@ public static GenericInfo GenericInfo(TypeDeclarationSyntax typeDeclaration)
 
 #### typeDeclaration
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
@@ -143,10 +123,6 @@ public static GenericInfo GenericInfo(TypeParameterConstraintClauseSyntax constr
 ### Parameters
 
 #### constraintClause
-
-
-
-
 
 ### Returns
 
@@ -166,10 +142,6 @@ public static GenericInfo GenericInfo(TypeParameterConstraintSyntax typeParamete
 
 #### typeParameterConstraint
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
@@ -188,10 +160,6 @@ public static GenericInfo GenericInfo(TypeParameterListSyntax typeParameterList)
 
 #### typeParameterList
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../../Syntax/GenericInfo/README.md)
@@ -209,10 +177,6 @@ public static GenericInfo GenericInfo(TypeParameterSyntax typeParameter)
 ### Parameters
 
 #### typeParameter
-
-
-
-
 
 ### Returns
 

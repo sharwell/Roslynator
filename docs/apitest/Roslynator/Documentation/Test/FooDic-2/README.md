@@ -23,15 +23,7 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
 
 #### TKey
 
-
-
-
-
 #### TValue
-
-
-
-
 
 ### Inheritance
 

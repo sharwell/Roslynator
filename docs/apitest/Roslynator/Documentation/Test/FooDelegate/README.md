@@ -18,10 +18,6 @@ public delegate Foo FooDelegate(object p)
 
 #### p
 
-
-
-
-
 ### Return Value
 
 Roslynator\.Documentation\.Test\.[Foo](../Foo/README.md)

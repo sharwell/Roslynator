@@ -23,10 +23,6 @@ public static AccessorListSyntax AccessorList(AccessorDeclarationSyntax accessor
 
 #### accessor
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessorlistsyntax)
@@ -40,10 +36,6 @@ public static AccessorListSyntax AccessorList(params AccessorDeclarationSyntax[]
 ### Parameters
 
 #### accessors
-
-
-
-
 
 ### Returns
 

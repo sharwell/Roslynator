@@ -29,21 +29,9 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 #### symbol
 
-
-
-
-
 #### kind1
 
-
-
-
-
 #### kind2
-
-
-
-
 
 ### Returns
 
@@ -63,27 +51,11 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 #### symbol
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 ### Returns
 
@@ -103,33 +75,13 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 #### symbol
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
 
-
-
-
-
 #### kind4
-
-
-
-
 
 ### Returns
 
@@ -149,39 +101,15 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 #### symbol
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
-
-
-
-
 
 ### Returns
 

@@ -23,27 +23,11 @@ public static ConversionOperatorDeclarationSyntax ImplicitConversionOperatorDecl
 
 #### modifiers
 
-
-
-
-
 #### type
-
-
-
-
 
 #### parameterList
 
-
-
-
-
 #### expressionBody
-
-
-
-
 
 ### Returns
 
@@ -59,27 +43,11 @@ public static ConversionOperatorDeclarationSyntax ImplicitConversionOperatorDecl
 
 #### modifiers
 
-
-
-
-
 #### type
-
-
-
-
 
 #### parameterList
 
-
-
-
-
 #### body
-
-
-
-
 
 ### Returns
 

@@ -14,15 +14,7 @@ public static bool operator !=(in XmlElementInfo info1, in XmlElementInfo info2)
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

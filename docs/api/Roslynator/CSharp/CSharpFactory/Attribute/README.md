@@ -14,15 +14,7 @@ public static AttributeSyntax Attribute(NameSyntax name, AttributeArgumentSyntax
 
 #### name
 
-
-
-
-
 #### argument
-
-
-
-
 
 ### Returns
 

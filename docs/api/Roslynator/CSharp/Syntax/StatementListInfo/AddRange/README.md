@@ -18,10 +18,6 @@ public StatementListInfo AddRange(IEnumerable<StatementSyntax> statements)
 
 #### statements
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)

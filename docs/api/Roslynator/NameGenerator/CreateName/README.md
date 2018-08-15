@@ -18,15 +18,7 @@ public static string CreateName(ITypeSymbol typeSymbol, bool firstCharToLower = 
 
 #### typeSymbol
 
-
-
-
-
 #### firstCharToLower
-
-
-
-
 
 ### Returns
 

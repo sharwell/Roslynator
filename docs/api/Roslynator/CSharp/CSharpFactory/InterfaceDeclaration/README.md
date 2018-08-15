@@ -23,21 +23,9 @@ public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList mo
 
 #### modifiers
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 
@@ -53,21 +41,9 @@ public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList mo
 
 #### modifiers
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 

@@ -18,21 +18,9 @@ public static bool TryCreate(TextLineCollection lines, TextSpan span, out TextLi
 
 #### lines
 
-
-
-
-
 #### span
 
-
-
-
-
 #### selectedLines
-
-
-
-
 
 ### Returns
 

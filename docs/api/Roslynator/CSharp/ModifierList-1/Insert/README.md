@@ -27,21 +27,9 @@ public TNode Insert(TNode node, SyntaxKind kind, IComparer<SyntaxKind> comparer 
 
 #### node
 
-
-
-
-
 #### kind
 
-
-
-
-
 #### comparer
-
-
-
-
 
 ### Returns
 
@@ -61,21 +49,9 @@ public TNode Insert(TNode node, SyntaxToken modifier, IComparer<SyntaxToken> com
 
 #### node
 
-
-
-
-
 #### modifier
 
-
-
-
-
 #### comparer
-
-
-
-
 
 ### Returns
 

@@ -23,15 +23,7 @@ public static BinaryExpressionSyntax IsExpression(ExpressionSyntax left, Express
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static BinaryExpressionSyntax IsExpression(ExpressionSyntax left, SyntaxT
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

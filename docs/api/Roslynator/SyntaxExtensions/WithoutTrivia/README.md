@@ -18,10 +18,6 @@ public static SyntaxNodeOrToken WithoutTrivia(this SyntaxNodeOrToken nodeOrToken
 
 #### nodeOrToken
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken)

@@ -23,15 +23,7 @@ public static BinaryExpressionSyntax LessThanOrEqualExpression(ExpressionSyntax 
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static BinaryExpressionSyntax LessThanOrEqualExpression(ExpressionSyntax 
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

@@ -18,27 +18,11 @@ public static bool IsDefaultValue(this SemanticModel semanticModel, ITypeSymbol 
 
 #### semanticModel
 
-
-
-
-
 #### typeSymbol
-
-
-
-
 
 #### expression
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

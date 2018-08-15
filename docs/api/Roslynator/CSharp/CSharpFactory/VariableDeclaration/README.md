@@ -25,21 +25,9 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, str
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### value
-
-
-
-
 
 ### Returns
 
@@ -55,21 +43,9 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Syn
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### initializer
-
-
-
-
 
 ### Returns
 
@@ -85,21 +61,9 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Syn
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### value
-
-
-
-
 
 ### Returns
 
@@ -115,15 +79,7 @@ public static VariableDeclarationSyntax VariableDeclaration(TypeSyntax type, Var
 
 #### type
 
-
-
-
-
 #### variable
-
-
-
-
 
 ### Returns
 

@@ -14,15 +14,7 @@ public static bool operator ==(in IfStatementOrElseClause left, in IfStatementOr
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

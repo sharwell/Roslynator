@@ -18,10 +18,6 @@ public static bool IsRefOrOut(this IParameterSymbol parameterSymbol)
 
 #### parameterSymbol
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

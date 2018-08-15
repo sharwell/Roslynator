@@ -18,15 +18,7 @@ public static SeparatedSyntaxListSelection<TNode> Create(SeparatedSyntaxList<TNo
 
 #### list
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 

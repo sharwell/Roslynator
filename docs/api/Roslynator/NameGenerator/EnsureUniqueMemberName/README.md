@@ -23,21 +23,9 @@ public string EnsureUniqueMemberName(string baseName, INamedTypeSymbol typeSymbo
 
 #### baseName
 
-
-
-
-
 #### typeSymbol
 
-
-
-
-
 #### isCaseSensitive
-
-
-
-
 
 ### Returns
 
@@ -57,33 +45,13 @@ public string EnsureUniqueMemberName(string baseName, SemanticModel semanticMode
 
 #### baseName
 
-
-
-
-
 #### semanticModel
-
-
-
-
 
 #### position
 
-
-
-
-
 #### isCaseSensitive
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

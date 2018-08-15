@@ -14,10 +14,6 @@ T this[int index] { get; set; }
 
 #### index
 
-
-
-
-
 ### Property Value
 
 T

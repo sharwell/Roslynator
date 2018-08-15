@@ -30,10 +30,6 @@ public static TextSpan BracesSpan(this ClassDeclarationSyntax classDeclaration)
 
 #### classDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
@@ -51,10 +47,6 @@ public static TextSpan BracesSpan(this EnumDeclarationSyntax enumDeclaration)
 ### Parameters
 
 #### enumDeclaration
-
-
-
-
 
 ### Returns
 
@@ -74,10 +66,6 @@ public static TextSpan BracesSpan(this InterfaceDeclarationSyntax interfaceDecla
 
 #### interfaceDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
@@ -96,10 +84,6 @@ public static TextSpan BracesSpan(this NamespaceDeclarationSyntax namespaceDecla
 
 #### namespaceDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
@@ -117,10 +101,6 @@ public static TextSpan BracesSpan(this StructDeclarationSyntax structDeclaration
 ### Parameters
 
 #### structDeclaration
-
-
-
-
 
 ### Returns
 

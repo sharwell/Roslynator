@@ -28,15 +28,7 @@ public static bool Contains(this SyntaxTokenList tokens, SyntaxToken token)
 
 #### tokens
 
-
-
-
-
 #### token
-
-
-
-
 
 ### Returns
 
@@ -56,23 +48,11 @@ public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, TNode n
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### list
 
-
-
-
-
 #### node
-
-
-
-
 
 ### Returns
 
@@ -92,23 +72,11 @@ public static bool Contains<TNode>(this SyntaxList<TNode> list, TNode node) wher
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### list
 
-
-
-
-
 #### node
-
-
-
-
 
 ### Returns
 

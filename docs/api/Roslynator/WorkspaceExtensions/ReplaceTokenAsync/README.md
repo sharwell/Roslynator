@@ -27,27 +27,11 @@ public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxTok
 
 #### document
 
-
-
-
-
 #### oldToken
-
-
-
-
 
 #### newTokens
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -67,27 +51,11 @@ public static Task<Document> ReplaceTokenAsync(this Document document, SyntaxTok
 
 #### document
 
-
-
-
-
 #### oldToken
-
-
-
-
 
 #### newToken
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

@@ -18,21 +18,9 @@ public static SimpleIfElseInfo SimpleIfElseInfo(IfStatementSyntax ifStatement, b
 
 #### ifStatement
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 

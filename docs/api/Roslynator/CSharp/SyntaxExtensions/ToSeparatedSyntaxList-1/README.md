@@ -27,17 +27,9 @@ public static SeparatedSyntaxList<TNode> ToSeparatedSyntaxList<TNode>(this IEnum
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### nodesAndTokens
-
-
-
-
 
 ### Returns
 
@@ -57,17 +49,9 @@ public static SeparatedSyntaxList<TNode> ToSeparatedSyntaxList<TNode>(this IEnum
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### nodes
-
-
-
-
 
 ### Returns
 

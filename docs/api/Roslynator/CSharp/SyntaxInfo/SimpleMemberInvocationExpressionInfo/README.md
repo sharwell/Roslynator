@@ -27,15 +27,7 @@ public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpress
 
 #### invocationExpression
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -55,21 +47,9 @@ public static SimpleMemberInvocationExpressionInfo SimpleMemberInvocationExpress
 
 #### node
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 

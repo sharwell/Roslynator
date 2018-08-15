@@ -32,10 +32,6 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this AccessorDeclarationSynt
 
 #### accessorDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.[CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
@@ -53,10 +49,6 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this ConstructorDeclarationS
 ### Parameters
 
 #### constructorDeclaration
-
-
-
-
 
 ### Returns
 
@@ -76,10 +68,6 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this ConversionOperatorDecla
 
 #### conversionOperatorDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.[CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
@@ -97,10 +85,6 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this DestructorDeclarationSy
 ### Parameters
 
 #### destructorDeclaration
-
-
-
-
 
 ### Returns
 
@@ -120,10 +104,6 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this LocalFunctionStatementS
 
 #### localFunctionStatement
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.[CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
@@ -142,10 +122,6 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this MethodDeclarationSyntax
 
 #### methodDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.[CSharpSyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxnode)
@@ -163,10 +139,6 @@ public static CSharpSyntaxNode BodyOrExpressionBody(this OperatorDeclarationSynt
 ### Parameters
 
 #### operatorDeclaration
-
-
-
-
 
 ### Returns
 

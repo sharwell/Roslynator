@@ -23,21 +23,9 @@ public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifier
 
 #### modifiers
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 
@@ -53,21 +41,9 @@ public static StructDeclarationSyntax StructDeclaration(SyntaxTokenList modifier
 
 #### modifiers
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 

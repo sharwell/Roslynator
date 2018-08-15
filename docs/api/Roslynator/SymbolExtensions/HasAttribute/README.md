@@ -27,15 +27,7 @@ public static bool HasAttribute(this ISymbol symbol, INamedTypeSymbol attributeC
 
 #### symbol
 
-
-
-
-
 #### attributeClass
-
-
-
-
 
 ### Returns
 
@@ -55,21 +47,9 @@ public static bool HasAttribute(this ITypeSymbol typeSymbol, INamedTypeSymbol at
 
 #### typeSymbol
 
-
-
-
-
 #### attributeClass
 
-
-
-
-
 #### includeBaseTypes
-
-
-
-
 
 ### Returns
 

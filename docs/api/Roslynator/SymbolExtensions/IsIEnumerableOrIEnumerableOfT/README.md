@@ -18,10 +18,6 @@ public static bool IsIEnumerableOrIEnumerableOfT(this ITypeSymbol typeSymbol)
 
 #### typeSymbol
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

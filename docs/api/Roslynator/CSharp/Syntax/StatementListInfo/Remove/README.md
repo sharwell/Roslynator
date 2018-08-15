@@ -18,10 +18,6 @@ public StatementListInfo Remove(StatementSyntax statement)
 
 #### statement
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)

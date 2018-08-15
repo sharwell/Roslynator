@@ -18,10 +18,6 @@ public GenericInfo RemoveTypeParameter(TypeParameterSyntax typeParameter)
 
 #### typeParameter
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md)

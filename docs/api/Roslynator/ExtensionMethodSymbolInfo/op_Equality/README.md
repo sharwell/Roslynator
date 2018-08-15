@@ -14,15 +14,7 @@ public static bool operator ==(in ExtensionMethodSymbolInfo info1, in ExtensionM
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

@@ -18,10 +18,6 @@ public static SyntaxTriviaList LeadingAndTrailingTrivia(this SyntaxToken token)
 
 #### token
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)

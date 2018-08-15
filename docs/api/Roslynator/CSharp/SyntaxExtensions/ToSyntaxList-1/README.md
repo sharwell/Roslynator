@@ -18,17 +18,9 @@ public static SyntaxList<TNode> ToSyntaxList<TNode>(this IEnumerable<TNode> node
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### nodes
-
-
-
-
 
 ### Returns
 

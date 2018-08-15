@@ -14,21 +14,9 @@ public static EnumDeclarationSyntax EnumDeclaration(SyntaxTokenList modifiers, S
 
 #### modifiers
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 

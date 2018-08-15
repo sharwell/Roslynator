@@ -18,10 +18,6 @@ public static bool IsVerbatim(this InterpolatedStringExpressionSyntax interpolat
 
 #### interpolatedString
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

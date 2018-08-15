@@ -18,21 +18,9 @@ public static bool InheritsFrom(this ITypeSymbol type, ITypeSymbol baseType, boo
 
 #### type
 
-
-
-
-
 #### baseType
 
-
-
-
-
 #### includeInterfaces
-
-
-
-
 
 ### Returns
 

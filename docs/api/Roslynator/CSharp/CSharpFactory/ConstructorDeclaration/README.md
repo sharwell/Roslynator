@@ -23,27 +23,11 @@ public static ConstructorDeclarationSyntax ConstructorDeclaration(SyntaxTokenLis
 
 #### modifiers
 
-
-
-
-
 #### identifier
-
-
-
-
 
 #### parameterList
 
-
-
-
-
 #### expressionBody
-
-
-
-
 
 ### Returns
 
@@ -59,27 +43,11 @@ public static ConstructorDeclarationSyntax ConstructorDeclaration(SyntaxTokenLis
 
 #### modifiers
 
-
-
-
-
 #### identifier
-
-
-
-
 
 #### parameterList
 
-
-
-
-
 #### body
-
-
-
-
 
 ### Returns
 

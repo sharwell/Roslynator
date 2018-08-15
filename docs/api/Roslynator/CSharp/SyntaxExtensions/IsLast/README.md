@@ -18,19 +18,9 @@ public static bool IsLast(this SyntaxList<StatementSyntax> statements, Statement
 
 #### statements
 
-
-
-
-
 #### statement
 
-
-
-
-
 #### ignoreLocalFunctions
-
-
 
 Ignore local function statements at the end of the list\.
 

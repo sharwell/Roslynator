@@ -18,10 +18,6 @@ public UsingDirectiveListInfo Remove(UsingDirectiveSyntax usingDirective)
 
 #### usingDirective
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)

@@ -18,21 +18,9 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Syntax
 
 #### semanticModel
 
-
-
-
-
 #### node
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

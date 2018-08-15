@@ -18,10 +18,6 @@ public static SyntaxTokenList ToSyntaxTokenList(this IEnumerable<SyntaxToken> to
 
 #### tokens
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)

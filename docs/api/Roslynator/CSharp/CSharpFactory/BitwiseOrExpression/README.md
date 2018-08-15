@@ -23,15 +23,7 @@ public static BinaryExpressionSyntax BitwiseOrExpression(ExpressionSyntax left, 
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static BinaryExpressionSyntax BitwiseOrExpression(ExpressionSyntax left, 
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

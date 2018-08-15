@@ -27,27 +27,11 @@ public static Task<Document> ReplaceTriviaAsync(this Document document, SyntaxTr
 
 #### document
 
-
-
-
-
 #### oldTrivia
-
-
-
-
 
 #### newTrivia
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -67,27 +51,11 @@ public static Task<Document> ReplaceTriviaAsync(this Document document, SyntaxTr
 
 #### document
 
-
-
-
-
 #### oldTrivia
-
-
-
-
 
 #### newTrivia
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

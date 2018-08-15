@@ -29,13 +29,7 @@ public static bool ImplementsInterfaceMember(this ISymbol symbol, bool allInterf
 
 #### symbol
 
-
-
-
-
 #### allInterfaces
-
-
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
@@ -57,19 +51,9 @@ public static bool ImplementsInterfaceMember(this ISymbol symbol, INamedTypeSymb
 
 #### symbol
 
-
-
-
-
 #### interfaceSymbol
 
-
-
-
-
 #### allInterfaces
-
-
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
@@ -91,21 +75,11 @@ public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, bool 
 
 #### TSymbol
 
-
-
-
-
 ### Parameters
 
 #### symbol
 
-
-
-
-
 #### allInterfaces
-
-
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 
@@ -127,27 +101,13 @@ public static bool ImplementsInterfaceMember<TSymbol>(this ISymbol symbol, IName
 
 #### TSymbol
 
-
-
-
-
 ### Parameters
 
 #### symbol
 
-
-
-
-
 #### interfaceSymbol
 
-
-
-
-
 #### allInterfaces
-
-
 
 If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces), otherwise use [ITypeSymbol.Interfaces](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol.interfaces)\.
 

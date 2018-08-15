@@ -18,10 +18,6 @@ public static bool ContainsDefaultLabel(this SwitchSectionSyntax switchSection)
 
 #### switchSection
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

@@ -27,10 +27,6 @@ public static StringLiteralExpressionInfo StringLiteralExpressionInfo(LiteralExp
 
 #### literalExpression
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md)
@@ -49,15 +45,7 @@ public static StringLiteralExpressionInfo StringLiteralExpressionInfo(SyntaxNode
 
 #### node
 
-
-
-
-
 #### walkDownParentheses
-
-
-
-
 
 ### Returns
 

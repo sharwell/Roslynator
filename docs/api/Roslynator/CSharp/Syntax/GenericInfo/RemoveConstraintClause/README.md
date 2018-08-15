@@ -18,10 +18,6 @@ public GenericInfo RemoveConstraintClause(TypeParameterConstraintClauseSyntax co
 
 #### constraintClause
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md)

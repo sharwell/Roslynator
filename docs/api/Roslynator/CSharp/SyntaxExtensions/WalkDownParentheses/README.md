@@ -18,10 +18,6 @@ public static ExpressionSyntax WalkDownParentheses(this ExpressionSyntax express
 
 #### expression
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionsyntax)

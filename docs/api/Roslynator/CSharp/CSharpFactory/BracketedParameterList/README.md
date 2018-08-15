@@ -23,10 +23,6 @@ public static BracketedParameterListSyntax BracketedParameterList(ParameterSynta
 
 #### parameter
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BracketedParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.bracketedparameterlistsyntax)
@@ -40,10 +36,6 @@ public static BracketedParameterListSyntax BracketedParameterList(params Paramet
 ### Parameters
 
 #### parameters
-
-
-
-
 
 ### Returns
 

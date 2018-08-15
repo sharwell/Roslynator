@@ -23,15 +23,7 @@ public static VariableDeclaratorSyntax VariableDeclarator(string identifier, Equ
 
 #### identifier
 
-
-
-
-
 #### initializer
-
-
-
-
 
 ### Returns
 
@@ -47,15 +39,7 @@ public static VariableDeclaratorSyntax VariableDeclarator(SyntaxToken identifier
 
 #### identifier
 
-
-
-
-
 #### initializer
-
-
-
-
 
 ### Returns
 

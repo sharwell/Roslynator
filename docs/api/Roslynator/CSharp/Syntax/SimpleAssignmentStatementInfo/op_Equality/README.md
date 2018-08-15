@@ -14,15 +14,7 @@ public static bool operator ==(in SimpleAssignmentStatementInfo info1, in Simple
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

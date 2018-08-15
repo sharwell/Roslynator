@@ -27,29 +27,13 @@ public static TNode FirstDescendantOrSelf<TNode>(this SyntaxNode node, Func<Synt
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### node
 
-
-
-
-
 #### descendIntoChildren
 
-
-
-
-
 #### descendIntoTrivia
-
-
-
-
 
 ### Returns
 
@@ -69,35 +53,15 @@ public static TNode FirstDescendantOrSelf<TNode>(this SyntaxNode node, TextSpan 
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### node
 
-
-
-
-
 #### span
-
-
-
-
 
 #### descendIntoChildren
 
-
-
-
-
 #### descendIntoTrivia
-
-
-
-
 
 ### Returns
 

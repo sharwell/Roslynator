@@ -14,21 +14,9 @@ public static TryStatementSyntax TryStatement(BlockSyntax block, CatchClauseSynt
 
 #### block
 
-
-
-
-
 #### catch
 
-
-
-
-
 #### finally
-
-
-
-
 
 ### Returns
 

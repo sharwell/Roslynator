@@ -14,10 +14,6 @@ public bool Remove(Foo item)
 
 #### item
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

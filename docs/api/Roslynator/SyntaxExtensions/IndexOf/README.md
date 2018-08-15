@@ -27,15 +27,7 @@ public static int IndexOf(this SyntaxTokenList tokens, Func<SyntaxToken, bool> p
 
 #### tokens
 
-
-
-
-
 #### predicate
-
-
-
-
 
 ### Returns
 
@@ -55,15 +47,7 @@ public static int IndexOf(this SyntaxTriviaList triviaList, Func<SyntaxTrivia, b
 
 #### triviaList
 
-
-
-
-
 #### predicate
-
-
-
-
 
 ### Returns
 

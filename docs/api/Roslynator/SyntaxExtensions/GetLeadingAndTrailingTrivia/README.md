@@ -18,10 +18,6 @@ public static SyntaxTriviaList GetLeadingAndTrailingTrivia(this SyntaxNode node)
 
 #### node
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)

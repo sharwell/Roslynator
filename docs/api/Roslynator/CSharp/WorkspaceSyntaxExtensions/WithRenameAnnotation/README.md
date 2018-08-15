@@ -19,10 +19,6 @@ public static SyntaxToken WithRenameAnnotation(this SyntaxToken token)
 
 #### token
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)

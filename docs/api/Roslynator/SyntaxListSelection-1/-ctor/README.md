@@ -18,25 +18,9 @@ protected SyntaxListSelection(SyntaxList<TNode> list, TextSpan span, int firstIn
 
 #### list
 
-
-
-
-
 #### span
-
-
-
-
 
 #### firstIndex
 
-
-
-
-
 #### lastIndex
-
-
-
-
 

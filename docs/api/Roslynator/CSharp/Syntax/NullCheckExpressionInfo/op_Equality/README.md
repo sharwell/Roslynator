@@ -14,15 +14,7 @@ public static bool operator ==(in NullCheckExpressionInfo info1, in NullCheckExp
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

@@ -18,15 +18,7 @@ public static SyntaxListSelection<TNode> Create(SyntaxList<TNode> list, TextSpan
 
 #### list
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 

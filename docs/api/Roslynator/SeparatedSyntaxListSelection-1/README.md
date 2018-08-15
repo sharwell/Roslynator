@@ -22,10 +22,6 @@ public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>,
 
 #### TNode
 
-
-
-
-
 ### Inheritance
 
 [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; SeparatedSyntaxListSelection\<TNode>

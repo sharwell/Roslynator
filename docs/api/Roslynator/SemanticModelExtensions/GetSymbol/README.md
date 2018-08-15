@@ -18,21 +18,9 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, SyntaxNode nod
 
 #### semanticModel
 
-
-
-
-
 #### node
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

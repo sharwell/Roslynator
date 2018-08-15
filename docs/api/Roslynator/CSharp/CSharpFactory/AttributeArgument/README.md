@@ -23,15 +23,7 @@ public static AttributeArgumentSyntax AttributeArgument(NameColonSyntax nameColo
 
 #### nameColon
 
-
-
-
-
 #### expression
-
-
-
-
 
 ### Returns
 
@@ -47,15 +39,7 @@ public static AttributeArgumentSyntax AttributeArgument(NameEqualsSyntax nameEqu
 
 #### nameEquals
 
-
-
-
-
 #### expression
-
-
-
-
 
 ### Returns
 

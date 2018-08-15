@@ -14,10 +14,6 @@ public int this[int index] { get; }
 
 #### index
 
-
-
-
-
 ### Property Value
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)

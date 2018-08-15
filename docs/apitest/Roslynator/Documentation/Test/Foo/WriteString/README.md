@@ -14,13 +14,5 @@ public void WriteString(char* pSrcStart, char* pSrcEnd)
 
 #### pSrcStart
 
-
-
-
-
 #### pSrcEnd
-
-
-
-
 

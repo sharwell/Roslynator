@@ -25,15 +25,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Equ
 
 #### name
 
-
-
-
-
 #### value
-
-
-
-
 
 ### Returns
 
@@ -49,15 +41,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Exp
 
 #### name
 
-
-
-
-
 #### value
-
-
-
-
 
 ### Returns
 
@@ -73,15 +57,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 #### identifier
 
-
-
-
-
 #### value
-
-
-
-
 
 ### Returns
 
@@ -97,15 +73,7 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 #### identifier
 
-
-
-
-
 #### value
-
-
-
-
 
 ### Returns
 

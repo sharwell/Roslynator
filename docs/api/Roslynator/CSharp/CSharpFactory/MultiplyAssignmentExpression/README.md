@@ -23,15 +23,7 @@ public static AssignmentExpressionSyntax MultiplyAssignmentExpression(Expression
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static AssignmentExpressionSyntax MultiplyAssignmentExpression(Expression
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

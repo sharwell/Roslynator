@@ -25,10 +25,6 @@ public static BaseListSyntax BaseList(BaseTypeSyntax type)
 
 #### type
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BaseListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.baselistsyntax)
@@ -42,10 +38,6 @@ public static BaseListSyntax BaseList(params BaseTypeSyntax[] types)
 ### Parameters
 
 #### types
-
-
-
-
 
 ### Returns
 
@@ -61,15 +53,7 @@ public static BaseListSyntax BaseList(SyntaxToken colonToken, BaseTypeSyntax bas
 
 #### colonToken
 
-
-
-
-
 #### baseType
-
-
-
-
 
 ### Returns
 
@@ -85,15 +69,7 @@ public static BaseListSyntax BaseList(SyntaxToken colonToken, params BaseTypeSyn
 
 #### colonToken
 
-
-
-
-
 #### types
-
-
-
-
 
 ### Returns
 

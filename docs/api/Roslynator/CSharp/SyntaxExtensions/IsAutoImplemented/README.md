@@ -18,10 +18,6 @@ public static bool IsAutoImplemented(this AccessorDeclarationSyntax accessorDecl
 
 #### accessorDeclaration
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

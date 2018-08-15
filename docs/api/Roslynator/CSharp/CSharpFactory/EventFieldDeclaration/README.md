@@ -23,21 +23,9 @@ public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList 
 
 #### modifiers
 
-
-
-
-
 #### type
 
-
-
-
-
 #### identifier
-
-
-
-
 
 ### Returns
 
@@ -53,21 +41,9 @@ public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList 
 
 #### modifiers
 
-
-
-
-
 #### type
 
-
-
-
-
 #### identifier
-
-
-
-
 
 ### Returns
 

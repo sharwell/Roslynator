@@ -14,15 +14,7 @@ public static bool operator ==(in StringConcatenationExpressionInfo info1, in St
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

@@ -18,10 +18,6 @@ public static EndRegionDirectiveTriviaSyntax GetEndRegionDirective(this RegionDi
 
 #### regionDirective
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[EndRegionDirectiveTriviaSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.endregiondirectivetriviasyntax)

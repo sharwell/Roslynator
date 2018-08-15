@@ -23,33 +23,13 @@ public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modi
 
 #### modifiers
 
-
-
-
-
 #### returnType
-
-
-
-
 
 #### operatorToken
 
-
-
-
-
 #### parameterList
 
-
-
-
-
 #### expressionBody
-
-
-
-
 
 ### Returns
 
@@ -65,33 +45,13 @@ public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modi
 
 #### modifiers
 
-
-
-
-
 #### returnType
-
-
-
-
 
 #### operatorToken
 
-
-
-
-
 #### parameterList
 
-
-
-
-
 #### body
-
-
-
-
 
 ### Returns
 

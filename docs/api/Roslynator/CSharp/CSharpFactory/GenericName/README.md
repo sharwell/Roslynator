@@ -23,15 +23,7 @@ public static GenericNameSyntax GenericName(string identifier, TypeSyntax typeAr
 
 #### identifier
 
-
-
-
-
 #### typeArgument
-
-
-
-
 
 ### Returns
 
@@ -47,15 +39,7 @@ public static GenericNameSyntax GenericName(SyntaxToken identifier, TypeSyntax t
 
 #### identifier
 
-
-
-
-
 #### typeArgument
-
-
-
-
 
 ### Returns
 

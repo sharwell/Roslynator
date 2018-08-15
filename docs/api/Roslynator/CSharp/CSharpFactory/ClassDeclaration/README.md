@@ -23,21 +23,9 @@ public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers,
 
 #### modifiers
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 
@@ -53,21 +41,9 @@ public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers,
 
 #### modifiers
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 

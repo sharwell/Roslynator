@@ -23,15 +23,7 @@ public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(
 
 #### identifierName
 
-
-
-
-
 #### typeParameterConstraint
-
-
-
-
 
 ### Returns
 
@@ -47,15 +39,7 @@ public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(
 
 #### name
 
-
-
-
-
 #### typeParameterConstraint
-
-
-
-
 
 ### Returns
 

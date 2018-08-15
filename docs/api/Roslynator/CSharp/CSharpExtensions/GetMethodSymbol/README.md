@@ -18,21 +18,9 @@ public static IMethodSymbol GetMethodSymbol(this SemanticModel semanticModel, Ex
 
 #### semanticModel
 
-
-
-
-
 #### expression
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

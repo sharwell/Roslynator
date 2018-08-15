@@ -28,15 +28,7 @@ public static StatementListSelection Create(BlockSyntax block, TextSpan span)
 
 #### block
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 
@@ -56,15 +48,7 @@ public static StatementListSelection Create(in StatementListInfo statementsInfo,
 
 #### statementsInfo
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 
@@ -84,15 +68,7 @@ public static StatementListSelection Create(SwitchSectionSyntax switchSection, T
 
 #### switchSection
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 

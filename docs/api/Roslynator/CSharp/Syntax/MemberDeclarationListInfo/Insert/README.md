@@ -18,15 +18,7 @@ public MemberDeclarationListInfo Insert(int index, MemberDeclarationSyntax membe
 
 #### index
 
-
-
-
-
 #### member
-
-
-
-
 
 ### Returns
 

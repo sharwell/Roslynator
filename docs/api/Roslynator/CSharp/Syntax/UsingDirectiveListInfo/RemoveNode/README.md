@@ -18,15 +18,7 @@ public UsingDirectiveListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions op
 
 #### node
 
-
-
-
-
 #### options
-
-
-
-
 
 ### Returns
 

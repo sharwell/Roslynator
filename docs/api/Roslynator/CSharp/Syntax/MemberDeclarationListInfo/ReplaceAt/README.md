@@ -18,15 +18,7 @@ public MemberDeclarationListInfo ReplaceAt(int index, MemberDeclarationSyntax ne
 
 #### index
 
-
-
-
-
 #### newMember
-
-
-
-
 
 ### Returns
 

@@ -14,15 +14,7 @@ public static ObjectCreationExpressionSyntax ObjectCreationExpression(TypeSyntax
 
 #### type
 
-
-
-
-
 #### argumentList
-
-
-
-
 
 ### Returns
 

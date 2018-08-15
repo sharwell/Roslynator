@@ -28,15 +28,7 @@ public static TypeSyntax ToTypeSyntax(this INamespaceOrTypeSymbol namespaceOrTyp
 
 #### namespaceOrTypeSymbol
 
-
-
-
-
 #### format
-
-
-
-
 
 ### Returns
 
@@ -56,15 +48,7 @@ public static TypeSyntax ToTypeSyntax(this INamespaceSymbol namespaceSymbol, Sym
 
 #### namespaceSymbol
 
-
-
-
-
 #### format
-
-
-
-
 
 ### Returns
 
@@ -84,15 +68,7 @@ public static TypeSyntax ToTypeSyntax(this ITypeSymbol typeSymbol, SymbolDisplay
 
 #### typeSymbol
 
-
-
-
-
 #### format
-
-
-
-
 
 ### Returns
 

@@ -18,15 +18,7 @@ public TNode RemoveAt(TNode node, int index)
 
 #### node
 
-
-
-
-
 #### index
-
-
-
-
 
 ### Returns
 

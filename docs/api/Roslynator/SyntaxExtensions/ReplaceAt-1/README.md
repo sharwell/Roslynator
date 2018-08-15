@@ -29,21 +29,9 @@ public static SyntaxTokenList ReplaceAt(this SyntaxTokenList tokenList, int inde
 
 #### tokenList
 
-
-
-
-
 #### index
 
-
-
-
-
 #### newToken
-
-
-
-
 
 ### Returns
 
@@ -63,21 +51,9 @@ public static SyntaxTriviaList ReplaceAt(this SyntaxTriviaList triviaList, int i
 
 #### triviaList
 
-
-
-
-
 #### index
 
-
-
-
-
 #### newTrivia
-
-
-
-
 
 ### Returns
 
@@ -97,29 +73,13 @@ public static SeparatedSyntaxList<TNode> ReplaceAt<TNode>(this SeparatedSyntaxLi
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### list
 
-
-
-
-
 #### index
 
-
-
-
-
 #### newNode
-
-
-
-
 
 ### Returns
 
@@ -139,29 +99,13 @@ public static SyntaxList<TNode> ReplaceAt<TNode>(this SyntaxList<TNode> list, in
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### list
 
-
-
-
-
 #### index
 
-
-
-
-
 #### newNode
-
-
-
-
 
 ### Returns
 

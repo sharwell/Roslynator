@@ -18,27 +18,11 @@ public static Task<Document> RemoveNodeAsync(this Document document, SyntaxNode 
 
 #### document
 
-
-
-
-
 #### node
-
-
-
-
 
 #### options
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

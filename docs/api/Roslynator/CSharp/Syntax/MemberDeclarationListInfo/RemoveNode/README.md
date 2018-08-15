@@ -18,15 +18,7 @@ public MemberDeclarationListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions
 
 #### node
 
-
-
-
-
 #### options
-
-
-
-
 
 ### Returns
 

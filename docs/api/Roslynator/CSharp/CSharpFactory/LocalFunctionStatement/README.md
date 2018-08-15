@@ -23,33 +23,13 @@ public static LocalFunctionStatementSyntax LocalFunctionStatement(SyntaxTokenLis
 
 #### modifiers
 
-
-
-
-
 #### returnType
-
-
-
-
 
 #### identifier
 
-
-
-
-
 #### parameterList
 
-
-
-
-
 #### expressionBody
-
-
-
-
 
 ### Returns
 
@@ -65,33 +45,13 @@ public static LocalFunctionStatementSyntax LocalFunctionStatement(SyntaxTokenLis
 
 #### modifiers
 
-
-
-
-
 #### returnType
-
-
-
-
 
 #### identifier
 
-
-
-
-
 #### parameterList
 
-
-
-
-
 #### body
-
-
-
-
 
 ### Returns
 

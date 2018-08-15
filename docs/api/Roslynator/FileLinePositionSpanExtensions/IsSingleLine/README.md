@@ -18,10 +18,6 @@ public static bool IsSingleLine(this FileLinePositionSpan fileLinePositionSpan)
 
 #### fileLinePositionSpan
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

@@ -37,15 +37,7 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind)
 
 #### node
 
-
-
-
-
 #### kind
-
-
-
-
 
 ### Returns
 
@@ -65,21 +57,9 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### node
 
-
-
-
-
 #### kind1
 
-
-
-
-
 #### kind2
-
-
-
-
 
 ### Returns
 
@@ -99,27 +79,11 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### node
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 ### Returns
 
@@ -139,33 +103,13 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### node
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
 
-
-
-
-
 #### kind4
-
-
-
-
 
 ### Returns
 
@@ -185,39 +129,15 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### node
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
-
-
-
-
 
 ### Returns
 
@@ -237,45 +157,17 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 #### node
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
 
-
-
-
-
 #### kind6
-
-
-
-
 
 ### Returns
 
@@ -295,15 +187,7 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind)
 
 #### token
 
-
-
-
-
 #### kind
-
-
-
-
 
 ### Returns
 
@@ -323,21 +207,9 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### token
 
-
-
-
-
 #### kind1
 
-
-
-
-
 #### kind2
-
-
-
-
 
 ### Returns
 
@@ -357,27 +229,11 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### token
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 ### Returns
 
@@ -397,33 +253,13 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### token
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
 
-
-
-
-
 #### kind4
-
-
-
-
 
 ### Returns
 
@@ -443,39 +279,15 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### token
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
-
-
-
-
 
 ### Returns
 
@@ -495,45 +307,17 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 #### token
 
-
-
-
-
 #### kind1
-
-
-
-
 
 #### kind2
 
-
-
-
-
 #### kind3
-
-
-
-
 
 #### kind4
 
-
-
-
-
 #### kind5
 
-
-
-
-
 #### kind6
-
-
-
-
 
 ### Returns
 

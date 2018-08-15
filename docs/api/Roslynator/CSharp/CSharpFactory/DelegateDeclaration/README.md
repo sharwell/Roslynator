@@ -23,27 +23,11 @@ public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modi
 
 #### modifiers
 
-
-
-
-
 #### returnType
-
-
-
-
 
 #### identifier
 
-
-
-
-
 #### parameterList
-
-
-
-
 
 ### Returns
 
@@ -59,27 +43,11 @@ public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modi
 
 #### modifiers
 
-
-
-
-
 #### returnType
-
-
-
-
 
 #### identifier
 
-
-
-
-
 #### parameterList
-
-
-
-
 
 ### Returns
 

@@ -29,21 +29,9 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Attrib
 
 #### semanticModel
 
-
-
-
-
 #### attribute
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -63,21 +51,9 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Constr
 
 #### semanticModel
 
-
-
-
-
 #### constructorInitializer
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -97,21 +73,9 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Expres
 
 #### semanticModel
 
-
-
-
-
 #### expression
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -131,21 +95,9 @@ public static ITypeSymbol GetTypeSymbol(this SemanticModel semanticModel, Select
 
 #### semanticModel
 
-
-
-
-
 #### selectOrGroupClause
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

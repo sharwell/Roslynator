@@ -27,10 +27,6 @@ public UsingDirectiveListInfo WithUsings(IEnumerable<UsingDirectiveSyntax> using
 
 #### usings
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
@@ -48,10 +44,6 @@ public UsingDirectiveListInfo WithUsings(SyntaxList<UsingDirectiveSyntax> usings
 ### Parameters
 
 #### usings
-
-
-
-
 
 ### Returns
 

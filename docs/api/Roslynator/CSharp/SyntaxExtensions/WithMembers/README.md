@@ -35,15 +35,7 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 #### classDeclaration
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 
@@ -63,15 +55,7 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 #### classDeclaration
 
-
-
-
-
 #### member
-
-
-
-
 
 ### Returns
 
@@ -91,15 +75,7 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 #### compilationUnit
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 
@@ -119,15 +95,7 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 #### compilationUnit
 
-
-
-
-
 #### member
-
-
-
-
 
 ### Returns
 
@@ -147,15 +115,7 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 #### interfaceDeclaration
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 
@@ -175,15 +135,7 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 #### interfaceDeclaration
 
-
-
-
-
 #### member
-
-
-
-
 
 ### Returns
 
@@ -203,15 +155,7 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 #### namespaceDeclaration
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 
@@ -231,15 +175,7 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 #### namespaceDeclaration
 
-
-
-
-
 #### member
-
-
-
-
 
 ### Returns
 
@@ -259,15 +195,7 @@ public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax s
 
 #### structDeclaration
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 
@@ -287,15 +215,7 @@ public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax s
 
 #### structDeclaration
 
-
-
-
-
 #### member
-
-
-
-
 
 ### Returns
 

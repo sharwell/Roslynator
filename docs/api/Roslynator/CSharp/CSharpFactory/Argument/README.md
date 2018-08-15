@@ -14,15 +14,7 @@ public static ArgumentSyntax Argument(NameColonSyntax nameColon, ExpressionSynta
 
 #### nameColon
 
-
-
-
-
 #### expression
-
-
-
-
 
 ### Returns
 

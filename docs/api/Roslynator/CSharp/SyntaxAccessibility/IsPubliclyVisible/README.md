@@ -18,10 +18,6 @@ public static bool IsPubliclyVisible(MemberDeclarationSyntax declaration)
 
 #### declaration
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

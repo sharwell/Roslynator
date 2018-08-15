@@ -23,10 +23,6 @@ public static PrefixUnaryExpressionSyntax LogicalNotExpression(ExpressionSyntax 
 
 #### operand
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PrefixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.prefixunaryexpressionsyntax)
@@ -41,15 +37,7 @@ public static PrefixUnaryExpressionSyntax LogicalNotExpression(ExpressionSyntax 
 
 #### operand
 
-
-
-
-
 #### operatorToken
-
-
-
-
 
 ### Returns
 

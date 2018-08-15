@@ -27,10 +27,6 @@ public static SyntaxTrivia GetPreprocessingMessageTrivia(this EndRegionDirective
 
 #### endRegionDirective
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[SyntaxTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivia)
@@ -48,10 +44,6 @@ public static SyntaxTrivia GetPreprocessingMessageTrivia(this RegionDirectiveTri
 ### Parameters
 
 #### regionDirective
-
-
-
-
 
 ### Returns
 

@@ -28,27 +28,11 @@ public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode
 
 #### document
 
-
-
-
-
 #### oldNode
-
-
-
-
 
 #### newNodes
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -68,27 +52,11 @@ public static Task<Document> ReplaceNodeAsync(this Document document, SyntaxNode
 
 #### document
 
-
-
-
-
 #### oldNode
-
-
-
-
 
 #### newNode
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -108,35 +76,15 @@ public static Task<Solution> ReplaceNodeAsync<TNode>(this Solution solution, TNo
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### solution
 
-
-
-
-
 #### oldNode
-
-
-
-
 
 #### newNode
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

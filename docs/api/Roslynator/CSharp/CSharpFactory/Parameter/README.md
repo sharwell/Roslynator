@@ -24,21 +24,9 @@ public static ParameterSyntax Parameter(TypeSyntax type, string identifier, Expr
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### default
-
-
-
-
 
 ### Returns
 
@@ -54,21 +42,9 @@ public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier,
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### default
-
-
-
-
 
 ### Returns
 
@@ -84,21 +60,9 @@ public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier,
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### default
-
-
-
-
 
 ### Returns
 

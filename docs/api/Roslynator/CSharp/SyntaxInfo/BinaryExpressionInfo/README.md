@@ -27,21 +27,9 @@ public static BinaryExpressionInfo BinaryExpressionInfo(BinaryExpressionSyntax b
 
 #### binaryExpression
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -61,21 +49,9 @@ public static BinaryExpressionInfo BinaryExpressionInfo(SyntaxNode node, bool wa
 
 #### node
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 

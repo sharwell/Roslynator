@@ -18,15 +18,7 @@ public static bool IsMoreRestrictiveThan(this Accessibility accessibility, Acces
 
 #### accessibility
 
-
-
-
-
 #### other
-
-
-
-
 
 ### Returns
 

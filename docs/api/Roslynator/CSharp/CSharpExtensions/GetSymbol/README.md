@@ -31,21 +31,9 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, AttributeSynta
 
 #### semanticModel
 
-
-
-
-
 #### attribute
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -65,21 +53,9 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, ConstructorIni
 
 #### semanticModel
 
-
-
-
-
 #### constructorInitializer
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -99,21 +75,9 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, CrefSyntax cre
 
 #### semanticModel
 
-
-
-
-
 #### cref
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -133,21 +97,9 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, ExpressionSynt
 
 #### semanticModel
 
-
-
-
-
 #### expression
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -167,21 +119,9 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, OrderingSyntax
 
 #### semanticModel
 
-
-
-
-
 #### ordering
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -201,21 +141,9 @@ public static ISymbol GetSymbol(this SemanticModel semanticModel, SelectOrGroupC
 
 #### semanticModel
 
-
-
-
-
 #### selectOrGroupClause
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

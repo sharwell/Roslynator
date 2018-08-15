@@ -18,21 +18,9 @@ public static bool IsSingleLineSpan(this SyntaxTree syntaxTree, TextSpan span, C
 
 #### syntaxTree
 
-
-
-
-
 #### span
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

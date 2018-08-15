@@ -27,10 +27,6 @@ public int LastIndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 
 #### predicate
 
-
-
-
-
 ### Returns
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
@@ -48,10 +44,6 @@ public int LastIndexOf(UsingDirectiveSyntax usingDirective)
 ### Parameters
 
 #### usingDirective
-
-
-
-
 
 ### Returns
 

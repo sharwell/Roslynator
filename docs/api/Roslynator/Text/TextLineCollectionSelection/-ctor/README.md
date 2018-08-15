@@ -14,25 +14,9 @@ protected TextLineCollectionSelection(TextLineCollection lines, TextSpan span, i
 
 #### lines
 
-
-
-
-
 #### span
-
-
-
-
 
 #### firstIndex
 
-
-
-
-
 #### lastIndex
-
-
-
-
 

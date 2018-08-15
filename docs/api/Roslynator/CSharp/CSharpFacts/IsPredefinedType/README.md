@@ -18,10 +18,6 @@ public static bool IsPredefinedType(SpecialType specialType)
 
 #### specialType
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

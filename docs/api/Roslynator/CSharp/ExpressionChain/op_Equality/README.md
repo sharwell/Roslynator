@@ -14,15 +14,7 @@ public static bool operator ==(in ExpressionChain info1, in ExpressionChain info
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

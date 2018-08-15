@@ -37,13 +37,9 @@ public void Bar<T, T2>(string value, string value2)
 
 #### T
 
-
-
 doc for T1
 
 #### T2
-
-
 
 doc for T2
 
@@ -51,13 +47,9 @@ doc for T2
 
 #### value
 
-
-
 doc for value
 
 #### value2
-
-
 
 doc for value2
 

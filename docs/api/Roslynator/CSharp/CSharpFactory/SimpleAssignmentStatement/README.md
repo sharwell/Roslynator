@@ -23,15 +23,7 @@ public static ExpressionStatementSyntax SimpleAssignmentStatement(ExpressionSynt
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static ExpressionStatementSyntax SimpleAssignmentStatement(ExpressionSynt
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

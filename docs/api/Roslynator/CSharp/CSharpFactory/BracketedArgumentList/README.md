@@ -23,10 +23,6 @@ public static BracketedArgumentListSyntax BracketedArgumentList(ArgumentSyntax a
 
 #### argument
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BracketedArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.bracketedargumentlistsyntax)
@@ -40,10 +36,6 @@ public static BracketedArgumentListSyntax BracketedArgumentList(params ArgumentS
 ### Parameters
 
 #### arguments
-
-
-
-
 
 ### Returns
 

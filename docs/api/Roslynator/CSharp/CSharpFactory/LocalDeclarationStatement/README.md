@@ -25,21 +25,9 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### initializer
-
-
-
-
 
 ### Returns
 
@@ -55,21 +43,9 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### value
-
-
-
-
 
 ### Returns
 
@@ -85,21 +61,9 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### initializer
-
-
-
-
 
 ### Returns
 
@@ -115,21 +79,9 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 #### type
 
-
-
-
-
 #### identifier
 
-
-
-
-
 #### value
-
-
-
-
 
 ### Returns
 

@@ -23,10 +23,6 @@ public static ArgumentListSyntax ArgumentList(ArgumentSyntax argument)
 
 #### argument
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.argumentlistsyntax)
@@ -40,10 +36,6 @@ public static ArgumentListSyntax ArgumentList(params ArgumentSyntax[] arguments)
 ### Parameters
 
 #### arguments
-
-
-
-
 
 ### Returns
 

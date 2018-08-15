@@ -25,10 +25,6 @@ public static AccessorDeclarationSyntax SetAccessorDeclaration(ArrowExpressionCl
 
 #### expressionBody
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
@@ -42,10 +38,6 @@ public static AccessorDeclarationSyntax SetAccessorDeclaration(BlockSyntax body)
 ### Parameters
 
 #### body
-
-
-
-
 
 ### Returns
 
@@ -61,15 +53,7 @@ public static AccessorDeclarationSyntax SetAccessorDeclaration(SyntaxTokenList m
 
 #### modifiers
 
-
-
-
-
 #### expressionBody
-
-
-
-
 
 ### Returns
 
@@ -85,15 +69,7 @@ public static AccessorDeclarationSyntax SetAccessorDeclaration(SyntaxTokenList m
 
 #### modifiers
 
-
-
-
-
 #### body
-
-
-
-
 
 ### Returns
 

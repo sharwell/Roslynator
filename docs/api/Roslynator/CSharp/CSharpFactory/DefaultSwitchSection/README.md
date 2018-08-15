@@ -23,10 +23,6 @@ public static SwitchSectionSyntax DefaultSwitchSection(StatementSyntax statement
 
 #### statement
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)
@@ -40,10 +36,6 @@ public static SwitchSectionSyntax DefaultSwitchSection(SyntaxList<StatementSynta
 ### Parameters
 
 #### statements
-
-
-
-
 
 ### Returns
 

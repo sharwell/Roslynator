@@ -18,8 +18,6 @@ public TNode this[int index] { get; }
 
 #### index
 
-
-
 The zero\-based index of the node to get\. 
 
 ### Property Value

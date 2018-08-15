@@ -23,10 +23,6 @@ public static ConstructorInitializerSyntax BaseConstructorInitializer(ArgumentLi
 
 #### argumentList
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorInitializerSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructorinitializersyntax)
@@ -41,15 +37,7 @@ public static ConstructorInitializerSyntax BaseConstructorInitializer(SyntaxToke
 
 #### semicolonToken
 
-
-
-
-
 #### argumentList
-
-
-
-
 
 ### Returns
 

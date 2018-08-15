@@ -27,10 +27,6 @@ public StatementListInfo WithStatements(IEnumerable<StatementSyntax> statements)
 
 #### statements
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
@@ -48,10 +44,6 @@ public StatementListInfo WithStatements(SyntaxList<StatementSyntax> statements)
 ### Parameters
 
 #### statements
-
-
-
-
 
 ### Returns
 

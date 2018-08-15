@@ -18,10 +18,6 @@ public static bool SpanContainsDirectives(this SyntaxNode node)
 
 #### node
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

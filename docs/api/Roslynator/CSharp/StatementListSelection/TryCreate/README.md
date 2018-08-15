@@ -27,21 +27,9 @@ public static bool TryCreate(BlockSyntax block, TextSpan span, out StatementList
 
 #### block
 
-
-
-
-
 #### span
 
-
-
-
-
 #### selectedStatements
-
-
-
-
 
 ### Returns
 
@@ -63,21 +51,9 @@ public static bool TryCreate(SwitchSectionSyntax switchSection, TextSpan span, o
 
 #### switchSection
 
-
-
-
-
 #### span
 
-
-
-
-
 #### selectedStatements
-
-
-
-
 
 ### Returns
 

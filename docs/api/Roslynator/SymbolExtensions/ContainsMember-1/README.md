@@ -27,23 +27,11 @@ public static bool ContainsMember<TSymbol>(this ITypeSymbol typeSymbol, Func<TSy
 
 #### TSymbol
 
-
-
-
-
 ### Parameters
 
 #### typeSymbol
 
-
-
-
-
 #### predicate
-
-
-
-
 
 ### Returns
 
@@ -63,29 +51,13 @@ public static bool ContainsMember<TSymbol>(this ITypeSymbol typeSymbol, string n
 
 #### TSymbol
 
-
-
-
-
 ### Parameters
 
 #### typeSymbol
 
-
-
-
-
 #### name
 
-
-
-
-
 #### predicate
-
-
-
-
 
 ### Returns
 

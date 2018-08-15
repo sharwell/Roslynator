@@ -44,10 +44,6 @@ public static Accessibility GetAccessibility(AccessorDeclarationSyntax accessorD
 
 #### accessorDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -65,10 +61,6 @@ public static Accessibility GetAccessibility(ClassDeclarationSyntax classDeclara
 ### Parameters
 
 #### classDeclaration
-
-
-
-
 
 ### Returns
 
@@ -88,10 +80,6 @@ public static Accessibility GetAccessibility(ConstructorDeclarationSyntax constr
 
 #### constructorDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -109,10 +97,6 @@ public static Accessibility GetAccessibility(ConversionOperatorDeclarationSyntax
 ### Parameters
 
 #### conversionOperatorDeclaration
-
-
-
-
 
 ### Returns
 
@@ -132,10 +116,6 @@ public static Accessibility GetAccessibility(DelegateDeclarationSyntax delegateD
 
 #### delegateDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -153,10 +133,6 @@ public static Accessibility GetAccessibility(DestructorDeclarationSyntax destruc
 ### Parameters
 
 #### destructorDeclaration
-
-
-
-
 
 ### Returns
 
@@ -176,10 +152,6 @@ public static Accessibility GetAccessibility(EnumDeclarationSyntax enumDeclarati
 
 #### enumDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -197,10 +169,6 @@ public static Accessibility GetAccessibility(EnumMemberDeclarationSyntax enumMem
 ### Parameters
 
 #### enumMemberDeclaration
-
-
-
-
 
 ### Returns
 
@@ -220,10 +188,6 @@ public static Accessibility GetAccessibility(EventDeclarationSyntax eventDeclara
 
 #### eventDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -241,10 +205,6 @@ public static Accessibility GetAccessibility(EventFieldDeclarationSyntax eventFi
 ### Parameters
 
 #### eventFieldDeclaration
-
-
-
-
 
 ### Returns
 
@@ -264,10 +224,6 @@ public static Accessibility GetAccessibility(FieldDeclarationSyntax fieldDeclara
 
 #### fieldDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -285,10 +241,6 @@ public static Accessibility GetAccessibility(IndexerDeclarationSyntax indexerDec
 ### Parameters
 
 #### indexerDeclaration
-
-
-
-
 
 ### Returns
 
@@ -308,10 +260,6 @@ public static Accessibility GetAccessibility(InterfaceDeclarationSyntax interfac
 
 #### interfaceDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -329,10 +277,6 @@ public static Accessibility GetAccessibility(MemberDeclarationSyntax declaration
 ### Parameters
 
 #### declaration
-
-
-
-
 
 ### Returns
 
@@ -352,10 +296,6 @@ public static Accessibility GetAccessibility(MethodDeclarationSyntax methodDecla
 
 #### methodDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -373,10 +313,6 @@ public static Accessibility GetAccessibility(NamespaceDeclarationSyntax namespac
 ### Parameters
 
 #### namespaceDeclaration
-
-
-
-
 
 ### Returns
 
@@ -396,10 +332,6 @@ public static Accessibility GetAccessibility(OperatorDeclarationSyntax operatorD
 
 #### operatorDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -418,10 +350,6 @@ public static Accessibility GetAccessibility(PropertyDeclarationSyntax propertyD
 
 #### propertyDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[Accessibility](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.accessibility)
@@ -439,10 +367,6 @@ public static Accessibility GetAccessibility(StructDeclarationSyntax structDecla
 ### Parameters
 
 #### structDeclaration
-
-
-
-
 
 ### Returns
 

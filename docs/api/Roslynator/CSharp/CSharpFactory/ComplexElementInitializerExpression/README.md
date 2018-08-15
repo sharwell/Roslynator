@@ -23,10 +23,6 @@ public static InitializerExpressionSyntax ComplexElementInitializerExpression(Se
 
 #### expressions
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InitializerExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.initializerexpressionsyntax)
@@ -41,21 +37,9 @@ public static InitializerExpressionSyntax ComplexElementInitializerExpression(Sy
 
 #### openBraceToken
 
-
-
-
-
 #### expressions
 
-
-
-
-
 #### closeBraceToken
-
-
-
-
 
 ### Returns
 

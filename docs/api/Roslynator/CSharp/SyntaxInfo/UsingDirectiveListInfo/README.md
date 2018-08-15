@@ -28,10 +28,6 @@ public static UsingDirectiveListInfo UsingDirectiveListInfo(CompilationUnitSynta
 
 #### compilationUnit
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
@@ -50,10 +46,6 @@ public static UsingDirectiveListInfo UsingDirectiveListInfo(NamespaceDeclaration
 
 #### declaration
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md)
@@ -71,10 +63,6 @@ public static UsingDirectiveListInfo UsingDirectiveListInfo(SyntaxNode node)
 ### Parameters
 
 #### node
-
-
-
-
 
 ### Returns
 

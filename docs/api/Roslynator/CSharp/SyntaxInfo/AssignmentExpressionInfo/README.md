@@ -27,21 +27,9 @@ public static AssignmentExpressionInfo AssignmentExpressionInfo(AssignmentExpres
 
 #### assignmentExpression
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -61,21 +49,9 @@ public static AssignmentExpressionInfo AssignmentExpressionInfo(SyntaxNode node,
 
 #### node
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 

@@ -18,27 +18,11 @@ public static Task<Document> RemoveNodesAsync(this Document document, IEnumerabl
 
 #### document
 
-
-
-
-
 #### nodes
-
-
-
-
 
 #### options
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

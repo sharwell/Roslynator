@@ -27,21 +27,9 @@ public static ConditionalExpressionInfo ConditionalExpressionInfo(ConditionalExp
 
 #### conditionalExpression
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -61,21 +49,9 @@ public static ConditionalExpressionInfo ConditionalExpressionInfo(SyntaxNode nod
 
 #### node
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 

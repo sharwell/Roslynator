@@ -23,10 +23,6 @@ public static InvocationExpressionSyntax NameOfExpression(ExpressionSyntax expre
 
 #### expression
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InvocationExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax)
@@ -40,10 +36,6 @@ public static InvocationExpressionSyntax NameOfExpression(string identifier)
 ### Parameters
 
 #### identifier
-
-
-
-
 
 ### Returns
 

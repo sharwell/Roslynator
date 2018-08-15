@@ -27,10 +27,6 @@ public TNode RemoveAll(TNode node)
 
 #### node
 
-
-
-
-
 ### Returns
 
 TNode
@@ -49,15 +45,7 @@ public TNode RemoveAll(TNode node, Func<SyntaxToken, bool> predicate)
 
 #### node
 
-
-
-
-
 #### predicate
-
-
-
-
 
 ### Returns
 

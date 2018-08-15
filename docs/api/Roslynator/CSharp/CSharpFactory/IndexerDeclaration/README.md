@@ -23,27 +23,11 @@ public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifi
 
 #### modifiers
 
-
-
-
-
 #### type
-
-
-
-
 
 #### parameterList
 
-
-
-
-
 #### accessorList
-
-
-
-
 
 ### Returns
 
@@ -59,27 +43,11 @@ public static IndexerDeclarationSyntax IndexerDeclaration(SyntaxTokenList modifi
 
 #### modifiers
 
-
-
-
-
 #### type
-
-
-
-
 
 #### parameterList
 
-
-
-
-
 #### expressionBody
-
-
-
-
 
 ### Returns
 

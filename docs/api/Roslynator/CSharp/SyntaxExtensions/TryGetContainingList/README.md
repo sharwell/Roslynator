@@ -19,15 +19,7 @@ public static bool TryGetContainingList(this StatementSyntax statement, out Synt
 
 #### statement
 
-
-
-
-
 #### statements
-
-
-
-
 
 ### Returns
 

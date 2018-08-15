@@ -14,10 +14,6 @@ public static YieldStatementSyntax YieldReturnStatement(ExpressionSyntax express
 
 #### expression
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[YieldStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.yieldstatementsyntax)

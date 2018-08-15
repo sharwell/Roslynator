@@ -18,10 +18,6 @@ public static IMethodSymbol ReducedFromOrSelf(this IMethodSymbol methodSymbol)
 
 #### methodSymbol
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.[IMethodSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.imethodsymbol)

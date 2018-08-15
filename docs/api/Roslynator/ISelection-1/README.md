@@ -20,10 +20,6 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 
 #### T
 
-
-
-
-
 ### Derived
 
 * Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../SeparatedSyntaxListSelection-1/README.md)

@@ -23,15 +23,7 @@ public static AssignmentExpressionSyntax AndAssignmentExpression(ExpressionSynta
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static AssignmentExpressionSyntax AndAssignmentExpression(ExpressionSynta
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

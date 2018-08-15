@@ -31,10 +31,6 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(ClassDeclarati
 
 #### declaration
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
@@ -52,10 +48,6 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(CompilationUni
 ### Parameters
 
 #### compilationUnit
-
-
-
-
 
 ### Returns
 
@@ -75,10 +67,6 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(InterfaceDecla
 
 #### declaration
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
@@ -96,10 +84,6 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(NamespaceDecla
 ### Parameters
 
 #### declaration
-
-
-
-
 
 ### Returns
 
@@ -119,10 +103,6 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(StructDeclarat
 
 #### declaration
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../../Syntax/MemberDeclarationListInfo/README.md)
@@ -140,10 +120,6 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(SyntaxNode nod
 ### Parameters
 
 #### node
-
-
-
-
 
 ### Returns
 

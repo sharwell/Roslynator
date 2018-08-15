@@ -29,15 +29,7 @@ public static bool Contains(this SyntaxTokenList tokenList, SyntaxKind kind)
 
 #### tokenList
 
-
-
-
-
 #### kind
-
-
-
-
 
 ### Returns
 
@@ -57,15 +49,7 @@ public static bool Contains(this SyntaxTriviaList triviaList, SyntaxKind kind)
 
 #### triviaList
 
-
-
-
-
 #### kind
-
-
-
-
 
 ### Returns
 
@@ -85,23 +69,11 @@ public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxK
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### list
 
-
-
-
-
 #### kind
-
-
-
-
 
 ### Returns
 
@@ -121,23 +93,11 @@ public static bool Contains<TNode>(this SyntaxList<TNode> list, SyntaxKind kind)
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### list
 
-
-
-
-
 #### kind
-
-
-
-
 
 ### Returns
 

@@ -18,10 +18,6 @@ public static SwitchSectionSyntax DefaultSection(this SwitchStatementSyntax swit
 
 #### switchStatement
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)

@@ -28,10 +28,6 @@ public static AccessorDeclarationSyntax Setter(this AccessorListSyntax accessorL
 
 #### accessorList
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
@@ -50,10 +46,6 @@ public static AccessorDeclarationSyntax Setter(this IndexerDeclarationSyntax ind
 
 #### indexerDeclaration
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)
@@ -71,10 +63,6 @@ public static AccessorDeclarationSyntax Setter(this PropertyDeclarationSyntax pr
 ### Parameters
 
 #### propertyDeclaration
-
-
-
-
 
 ### Returns
 

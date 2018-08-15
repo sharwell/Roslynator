@@ -18,15 +18,7 @@ public static TextLineCollectionSelection Create(TextLineCollection lines, TextS
 
 #### lines
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 

@@ -27,10 +27,6 @@ public static IfStatementSyntax GetTopmostIf(this ElseClauseSyntax elseClause)
 
 #### elseClause
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[IfStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.ifstatementsyntax)
@@ -48,10 +44,6 @@ public static IfStatementSyntax GetTopmostIf(this IfStatementSyntax ifStatement)
 ### Parameters
 
 #### ifStatement
-
-
-
-
 
 ### Returns
 

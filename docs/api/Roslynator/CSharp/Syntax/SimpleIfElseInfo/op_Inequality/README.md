@@ -14,15 +14,7 @@ public static bool operator !=(in SimpleIfElseInfo info1, in SimpleIfElseInfo in
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

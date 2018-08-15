@@ -23,15 +23,7 @@ public static AssignmentExpressionSyntax LeftShiftAssignmentExpression(Expressio
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static AssignmentExpressionSyntax LeftShiftAssignmentExpression(Expressio
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

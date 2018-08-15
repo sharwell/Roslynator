@@ -27,21 +27,9 @@ public static SimpleIfStatementInfo SimpleIfStatementInfo(IfStatementSyntax ifSt
 
 #### ifStatement
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -61,21 +49,9 @@ public static SimpleIfStatementInfo SimpleIfStatementInfo(SyntaxNode node, bool 
 
 #### node
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 

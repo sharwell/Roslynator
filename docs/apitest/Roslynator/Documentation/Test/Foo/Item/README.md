@@ -27,13 +27,9 @@ public Foo this[int index, int index2] { get; set; }
 
 #### index
 
-
-
 p
 
 #### index2
-
-
 
 p
 
@@ -56,8 +52,6 @@ public Foo this[int index] { get; set; }
 ### Parameters
 
 #### index
-
-
 
 p
 

@@ -27,10 +27,6 @@ public static RegionInfo RegionInfo(EndRegionDirectiveTriviaSyntax endRegionDire
 
 #### endRegionDirective
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[RegionInfo](../../Syntax/RegionInfo/README.md)
@@ -48,10 +44,6 @@ public static RegionInfo RegionInfo(RegionDirectiveTriviaSyntax regionDirective)
 ### Parameters
 
 #### regionDirective
-
-
-
-
 
 ### Returns
 

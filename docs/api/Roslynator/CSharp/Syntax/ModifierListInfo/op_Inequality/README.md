@@ -14,15 +14,7 @@ public static bool operator !=(in ModifierListInfo info1, in ModifierListInfo in
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

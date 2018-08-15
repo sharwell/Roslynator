@@ -28,15 +28,7 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 #### parameterSymbol
 
-
-
-
-
 #### elementType
-
-
-
-
 
 ### Returns
 
@@ -56,21 +48,9 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 #### parameterSymbol
 
-
-
-
-
 #### elementType1
 
-
-
-
-
 #### elementType2
-
-
-
-
 
 ### Returns
 
@@ -90,27 +70,11 @@ public static bool IsParameterArrayOf(this IParameterSymbol parameterSymbol, Spe
 
 #### parameterSymbol
 
-
-
-
-
 #### elementType1
-
-
-
-
 
 #### elementType2
 
-
-
-
-
 #### elementType3
-
-
-
-
 
 ### Returns
 

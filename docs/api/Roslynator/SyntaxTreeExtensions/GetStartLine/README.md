@@ -18,21 +18,9 @@ public static int GetStartLine(this SyntaxTree syntaxTree, TextSpan span, Cancel
 
 #### syntaxTree
 
-
-
-
-
 #### span
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

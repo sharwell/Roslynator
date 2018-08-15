@@ -23,15 +23,7 @@ public static AssignmentExpressionSyntax OrAssignmentExpression(ExpressionSyntax
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static AssignmentExpressionSyntax OrAssignmentExpression(ExpressionSyntax
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

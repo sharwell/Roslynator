@@ -14,15 +14,7 @@ public static bool operator ==(in IsExpressionInfo info1, in IsExpressionInfo in
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

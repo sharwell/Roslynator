@@ -18,10 +18,6 @@ public static XmlElementInfo XmlElementInfo(XmlNodeSyntax xmlNode)
 
 #### xmlNode
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[XmlElementInfo](../../Syntax/XmlElementInfo/README.md)

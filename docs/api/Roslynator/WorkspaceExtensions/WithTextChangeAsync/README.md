@@ -18,21 +18,9 @@ public static Task<Document> WithTextChangeAsync(this Document document, TextCha
 
 #### document
 
-
-
-
-
 #### textChange
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

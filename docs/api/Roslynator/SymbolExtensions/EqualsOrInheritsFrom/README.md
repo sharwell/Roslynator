@@ -18,21 +18,9 @@ public static bool EqualsOrInheritsFrom(this ITypeSymbol type, ITypeSymbol baseT
 
 #### type
 
-
-
-
-
 #### baseType
 
-
-
-
-
 #### includeInterfaces
-
-
-
-
 
 ### Returns
 

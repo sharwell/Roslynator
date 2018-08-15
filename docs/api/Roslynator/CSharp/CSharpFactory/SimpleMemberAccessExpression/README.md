@@ -23,15 +23,7 @@ public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(Expressi
 
 #### expression
 
-
-
-
-
 #### name
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static MemberAccessExpressionSyntax SimpleMemberAccessExpression(Expressi
 
 #### expression
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### name
-
-
-
-
 
 ### Returns
 

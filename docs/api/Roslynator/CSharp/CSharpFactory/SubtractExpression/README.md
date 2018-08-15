@@ -23,15 +23,7 @@ public static BinaryExpressionSyntax SubtractExpression(ExpressionSyntax left, E
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static BinaryExpressionSyntax SubtractExpression(ExpressionSyntax left, S
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

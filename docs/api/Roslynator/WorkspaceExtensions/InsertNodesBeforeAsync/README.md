@@ -18,27 +18,11 @@ public static Task<Document> InsertNodesBeforeAsync(this Document document, Synt
 
 #### document
 
-
-
-
-
 #### nodeInList
-
-
-
-
 
 #### newNodes
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

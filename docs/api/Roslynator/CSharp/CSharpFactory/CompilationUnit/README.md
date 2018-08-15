@@ -24,10 +24,6 @@ public static CompilationUnitSyntax CompilationUnit(MemberDeclarationSyntax memb
 
 #### member
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[CompilationUnitSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.compilationunitsyntax)
@@ -42,15 +38,7 @@ public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyn
 
 #### usings
 
-
-
-
-
 #### member
-
-
-
-
 
 ### Returns
 
@@ -66,15 +54,7 @@ public static CompilationUnitSyntax CompilationUnit(SyntaxList<UsingDirectiveSyn
 
 #### usings
 
-
-
-
-
 #### members
-
-
-
-
 
 ### Returns
 

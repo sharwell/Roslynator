@@ -29,21 +29,9 @@ public static SyntaxTokenList Insert(SyntaxTokenList modifiers, SyntaxKind kind,
 
 #### modifiers
 
-
-
-
-
 #### kind
 
-
-
-
-
 #### comparer
-
-
-
-
 
 ### Returns
 
@@ -63,21 +51,9 @@ public static SyntaxTokenList Insert(SyntaxTokenList modifiers, SyntaxToken modi
 
 #### modifiers
 
-
-
-
-
 #### modifier
 
-
-
-
-
 #### comparer
-
-
-
-
 
 ### Returns
 
@@ -97,29 +73,13 @@ public static TNode Insert<TNode>(TNode node, SyntaxKind kind, IComparer<SyntaxK
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### node
 
-
-
-
-
 #### kind
 
-
-
-
-
 #### comparer
-
-
-
-
 
 ### Returns
 
@@ -139,29 +99,13 @@ public static TNode Insert<TNode>(TNode node, SyntaxToken modifier, IComparer<Sy
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### node
 
-
-
-
-
 #### modifier
 
-
-
-
-
 #### comparer
-
-
-
-
 
 ### Returns
 

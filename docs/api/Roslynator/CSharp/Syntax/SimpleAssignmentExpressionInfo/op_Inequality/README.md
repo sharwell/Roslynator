@@ -14,15 +14,7 @@ public static bool operator !=(in SimpleAssignmentExpressionInfo info1, in Simpl
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

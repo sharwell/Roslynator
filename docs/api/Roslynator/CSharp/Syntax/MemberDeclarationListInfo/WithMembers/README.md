@@ -27,10 +27,6 @@ public MemberDeclarationListInfo WithMembers(IEnumerable<MemberDeclarationSyntax
 
 #### members
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
@@ -48,10 +44,6 @@ public MemberDeclarationListInfo WithMembers(SyntaxList<MemberDeclarationSyntax>
 ### Parameters
 
 #### members
-
-
-
-
 
 ### Returns
 

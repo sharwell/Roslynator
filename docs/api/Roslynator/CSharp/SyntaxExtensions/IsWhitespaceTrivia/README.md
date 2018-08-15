@@ -18,10 +18,6 @@ public static bool IsWhitespaceTrivia(this SyntaxTrivia trivia)
 
 #### trivia
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

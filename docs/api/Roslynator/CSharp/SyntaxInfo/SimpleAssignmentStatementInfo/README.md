@@ -28,21 +28,9 @@ public static SimpleAssignmentStatementInfo SimpleAssignmentStatementInfo(Assign
 
 #### assignmentExpression
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -62,21 +50,9 @@ public static SimpleAssignmentStatementInfo SimpleAssignmentStatementInfo(Expres
 
 #### expressionStatement
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -96,21 +72,9 @@ public static SimpleAssignmentStatementInfo SimpleAssignmentStatementInfo(Statem
 
 #### statement
 
-
-
-
-
 #### walkDownParentheses
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 

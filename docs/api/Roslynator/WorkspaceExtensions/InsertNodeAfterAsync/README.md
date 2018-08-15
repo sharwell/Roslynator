@@ -18,27 +18,11 @@ public static Task<Document> InsertNodeAfterAsync(this Document document, Syntax
 
 #### document
 
-
-
-
-
 #### nodeInList
-
-
-
-
 
 #### newNode
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

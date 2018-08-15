@@ -18,29 +18,13 @@ public static TNode ReplaceWhitespace<TNode>(this TNode node, SyntaxTrivia repla
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### node
 
-
-
-
-
 #### replacement
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 

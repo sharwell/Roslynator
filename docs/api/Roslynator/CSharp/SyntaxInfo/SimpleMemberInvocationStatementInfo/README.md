@@ -28,15 +28,7 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### expressionStatement
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -56,15 +48,7 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### invocationExpression
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 
@@ -84,15 +68,7 @@ public static SimpleMemberInvocationStatementInfo SimpleMemberInvocationStatemen
 
 #### node
 
-
-
-
-
 #### allowMissing
-
-
-
-
 
 ### Returns
 

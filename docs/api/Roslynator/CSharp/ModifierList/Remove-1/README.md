@@ -27,23 +27,11 @@ public static TNode Remove<TNode>(TNode node, SyntaxKind kind) where TNode : Mic
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### node
 
-
-
-
-
 #### kind
-
-
-
-
 
 ### Returns
 
@@ -63,23 +51,11 @@ public static TNode Remove<TNode>(TNode node, SyntaxToken modifier) where TNode 
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### node
 
-
-
-
-
 #### modifier
-
-
-
-
 
 ### Returns
 

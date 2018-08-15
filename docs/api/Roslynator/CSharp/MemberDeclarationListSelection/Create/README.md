@@ -28,15 +28,7 @@ public static MemberDeclarationListSelection Create(CompilationUnitSyntax compil
 
 #### compilationUnit
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 
@@ -56,15 +48,7 @@ public static MemberDeclarationListSelection Create(NamespaceDeclarationSyntax n
 
 #### namespaceDeclaration
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 
@@ -84,15 +68,7 @@ public static MemberDeclarationListSelection Create(TypeDeclarationSyntax typeDe
 
 #### typeDeclaration
 
-
-
-
-
 #### span
-
-
-
-
 
 ### Returns
 

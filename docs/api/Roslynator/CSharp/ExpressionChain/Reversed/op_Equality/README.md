@@ -14,15 +14,7 @@ public static bool operator ==(in ExpressionChain.Reversed reversed1, in Express
 
 #### reversed1
 
-
-
-
-
 #### reversed2
-
-
-
-
 
 ### Returns
 

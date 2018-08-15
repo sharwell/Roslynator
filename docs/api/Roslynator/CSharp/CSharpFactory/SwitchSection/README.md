@@ -24,15 +24,7 @@ public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, S
 
 #### switchLabel
 
-
-
-
-
 #### statement
-
-
-
-
 
 ### Returns
 
@@ -48,15 +40,7 @@ public static SwitchSectionSyntax SwitchSection(SwitchLabelSyntax switchLabel, S
 
 #### switchLabel
 
-
-
-
-
 #### statements
-
-
-
-
 
 ### Returns
 
@@ -72,15 +56,7 @@ public static SwitchSectionSyntax SwitchSection(SyntaxList<SwitchLabelSyntax> sw
 
 #### switchLabels
 
-
-
-
-
 #### statement
-
-
-
-
 
 ### Returns
 

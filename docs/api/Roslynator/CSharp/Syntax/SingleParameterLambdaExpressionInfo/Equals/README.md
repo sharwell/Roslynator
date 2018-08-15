@@ -27,8 +27,6 @@ public override bool Equals(object obj)
 
 #### obj
 
-
-
 The object to compare with the current instance\. 
 
 ### Returns
@@ -50,8 +48,6 @@ public bool Equals(SingleParameterLambdaExpressionInfo other)
 ### Parameters
 
 #### other
-
-
 
 An object to compare with this object\.
 

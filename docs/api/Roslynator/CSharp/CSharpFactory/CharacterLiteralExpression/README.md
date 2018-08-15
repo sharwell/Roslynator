@@ -14,10 +14,6 @@ public static LiteralExpressionSyntax CharacterLiteralExpression(char value)
 
 #### value
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[LiteralExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.literalexpressionsyntax)

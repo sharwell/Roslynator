@@ -14,15 +14,7 @@ public static bool operator !=(in SimpleMemberInvocationStatementInfo info1, in 
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

@@ -18,21 +18,9 @@ public static bool HasConstantValue(this SemanticModel semanticModel, Expression
 
 #### semanticModel
 
-
-
-
-
 #### expression
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

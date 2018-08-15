@@ -18,10 +18,6 @@ public GenericInfo WithTypeParameterList(TypeParameterListSyntax typeParameterLi
 
 #### typeParameterList
 
-
-
-
-
 ### Returns
 
 Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md)

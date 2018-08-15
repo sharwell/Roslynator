@@ -28,21 +28,11 @@ public static ClassDeclarationSyntax AddAttributeLists(this ClassDeclarationSynt
 
 #### classDeclaration
 
-
-
-
-
 #### keepDocumentationCommentOnTop
-
-
 
 If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment\.
 
 #### attributeLists
-
-
-
-
 
 ### Returns
 
@@ -62,21 +52,11 @@ public static InterfaceDeclarationSyntax AddAttributeLists(this InterfaceDeclara
 
 #### interfaceDeclaration
 
-
-
-
-
 #### keepDocumentationCommentOnTop
-
-
 
 If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment\.
 
 #### attributeLists
-
-
-
-
 
 ### Returns
 
@@ -96,21 +76,11 @@ public static StructDeclarationSyntax AddAttributeLists(this StructDeclarationSy
 
 #### structDeclaration
 
-
-
-
-
 #### keepDocumentationCommentOnTop
-
-
 
 If the declaration has no attribute lists and has a documentation comment the specified attribute lists will be inserted after the documentation comment\.
 
 #### attributeLists
-
-
-
-
 
 ### Returns
 

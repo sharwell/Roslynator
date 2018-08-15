@@ -18,10 +18,6 @@ public static bool IsParams(this ParameterSyntax parameter)
 
 #### parameter
 
-
-
-
-
 ### Returns
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)

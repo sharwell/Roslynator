@@ -23,27 +23,11 @@ public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers,
 
 #### modifiers
 
-
-
-
-
 #### type
-
-
-
-
 
 #### identifier
 
-
-
-
-
 #### accessorList
-
-
-
-
 
 ### Returns
 
@@ -59,27 +43,11 @@ public static EventDeclarationSyntax EventDeclaration(SyntaxTokenList modifiers,
 
 #### modifiers
 
-
-
-
-
 #### type
-
-
-
-
 
 #### identifier
 
-
-
-
-
 #### accessorList
-
-
-
-
 
 ### Returns
 

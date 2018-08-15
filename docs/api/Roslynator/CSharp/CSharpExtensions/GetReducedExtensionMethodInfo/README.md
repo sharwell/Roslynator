@@ -18,21 +18,9 @@ public static ExtensionMethodSymbolInfo GetReducedExtensionMethodInfo(this Seman
 
 #### semanticModel
 
-
-
-
-
 #### expression
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

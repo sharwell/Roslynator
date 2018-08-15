@@ -18,25 +18,9 @@ protected SeparatedSyntaxListSelection(SeparatedSyntaxList<TNode> list, TextSpan
 
 #### list
 
-
-
-
-
 #### span
-
-
-
-
 
 #### firstIndex
 
-
-
-
-
 #### lastIndex
-
-
-
-
 

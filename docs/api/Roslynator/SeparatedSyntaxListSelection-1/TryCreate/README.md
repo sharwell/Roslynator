@@ -18,21 +18,9 @@ public static bool TryCreate(SeparatedSyntaxList<TNode> list, TextSpan span, out
 
 #### list
 
-
-
-
-
 #### span
 
-
-
-
-
 #### selection
-
-
-
-
 
 ### Returns
 

@@ -23,10 +23,6 @@ public static ParameterListSyntax ParameterList(ParameterSyntax parameter)
 
 #### parameter
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ParameterListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parameterlistsyntax)
@@ -40,10 +36,6 @@ public static ParameterListSyntax ParameterList(params ParameterSyntax[] paramet
 ### Parameters
 
 #### parameters
-
-
-
-
 
 ### Returns
 

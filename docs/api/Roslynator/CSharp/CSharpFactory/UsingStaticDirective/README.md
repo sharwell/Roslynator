@@ -23,10 +23,6 @@ public static UsingDirectiveSyntax UsingStaticDirective(NameSyntax name)
 
 #### name
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[UsingDirectiveSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.usingdirectivesyntax)
@@ -41,27 +37,11 @@ public static UsingDirectiveSyntax UsingStaticDirective(SyntaxToken usingKeyword
 
 #### usingKeyword
 
-
-
-
-
 #### staticKeyword
-
-
-
-
 
 #### name
 
-
-
-
-
 #### semicolonToken
-
-
-
-
 
 ### Returns
 

@@ -14,15 +14,7 @@ public static bool operator ==(in SimpleMemberInvocationExpressionInfo info1, in
 
 #### info1
 
-
-
-
-
 #### info2
-
-
-
-
 
 ### Returns
 

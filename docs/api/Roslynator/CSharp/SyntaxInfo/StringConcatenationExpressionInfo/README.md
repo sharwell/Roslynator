@@ -28,21 +28,9 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### binaryExpression
 
-
-
-
-
 #### semanticModel
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -62,21 +50,9 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### expressionChain
 
-
-
-
-
 #### semanticModel
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 
@@ -96,27 +72,11 @@ public static StringConcatenationExpressionInfo StringConcatenationExpressionInf
 
 #### node
 
-
-
-
-
 #### semanticModel
-
-
-
-
 
 #### walkDownParentheses
 
-
-
-
-
 #### cancellationToken
-
-
-
-
 
 ### Returns
 

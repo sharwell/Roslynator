@@ -27,23 +27,11 @@ public static bool IsFirst<TNode>(this SeparatedSyntaxList<TNode> list, TNode no
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### list
 
-
-
-
-
 #### node
-
-
-
-
 
 ### Returns
 
@@ -63,23 +51,11 @@ public static bool IsFirst<TNode>(this SyntaxList<TNode> list, TNode node) where
 
 #### TNode
 
-
-
-
-
 ### Parameters
 
 #### list
 
-
-
-
-
 #### node
-
-
-
-
 
 ### Returns
 

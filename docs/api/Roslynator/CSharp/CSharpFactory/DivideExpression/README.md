@@ -23,15 +23,7 @@ public static BinaryExpressionSyntax DivideExpression(ExpressionSyntax left, Exp
 
 #### left
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 
@@ -47,21 +39,9 @@ public static BinaryExpressionSyntax DivideExpression(ExpressionSyntax left, Syn
 
 #### left
 
-
-
-
-
 #### operatorToken
 
-
-
-
-
 #### right
-
-
-
-
 
 ### Returns
 

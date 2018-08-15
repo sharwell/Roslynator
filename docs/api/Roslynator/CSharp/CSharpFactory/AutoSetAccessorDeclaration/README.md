@@ -14,10 +14,6 @@ public static AccessorDeclarationSyntax AutoSetAccessorDeclaration(SyntaxTokenLi
 
 #### modifiers
 
-
-
-
-
 ### Returns
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax)

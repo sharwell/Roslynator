@@ -18,15 +18,7 @@ public MemberDeclarationListInfo Replace(MemberDeclarationSyntax memberInList, M
 
 #### memberInList
 
-
-
-
-
 #### newMember
-
-
-
-
 
 ### Returns
 
