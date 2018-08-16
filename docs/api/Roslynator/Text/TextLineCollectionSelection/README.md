@@ -51,13 +51,13 @@ public class TextLineCollectionSelection : Roslynator.ISelection<Microsoft.CodeA
 | ------ | ------- |
 | [**Create**(TextLineCollection, TextSpan)](Create/README.md) | Creates a new [TextLineCollectionSelection](./README.md) based on the specified list and span\. |
 | [**Equals**(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**First**()](First/README.md) | Gets the first selected line\. \(Implements [ISelection\<TextLine>.First](../../ISelection-1/First/README.md)\) |
-| [**GetEnumerator**()](GetEnumerator/README.md) | Returns an enumerator that iterates through selected lines\. |
-| [**GetHashCode**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**GetType**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**Last**()](Last/README.md) | Gets the last selected line\. \(Implements [ISelection\<TextLine>.Last](../../ISelection-1/Last/README.md)\) |
-| [**MemberwiseClone**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**ToString**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [First()](First/README.md) | Gets the first selected line\. \(Implements [ISelection\<TextLine>.First](../../ISelection-1/First/README.md)\) |
+| [GetEnumerator()](GetEnumerator/README.md) | Returns an enumerator that iterates through selected lines\. |
+| [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [Last()](Last/README.md) | Gets the last selected line\. \(Implements [ISelection\<TextLine>.Last](../../ISelection-1/Last/README.md)\) |
+| [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [**TryCreate**(TextLineCollection, TextSpan, TextLineCollectionSelection)](TryCreate/README.md) | Creates a new [TextLineCollectionSelection](./README.md) based on the specified list and span\. |
 
 ## Explicit Interface Implementations

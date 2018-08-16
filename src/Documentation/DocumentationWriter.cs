@@ -1169,8 +1169,8 @@ namespace Roslynator.Documentation
 
                 if (emphasizeName
                     && url != null
-                    && ((symbol.Kind == SymbolKind.Method && ((IMethodSymbol)symbol).MethodKind.Is(MethodKind.Ordinary, MethodKind.Constructor, MethodKind.UserDefinedOperator, MethodKind.Conversion))
-                    || (symbol.Kind == SymbolKind.Property && ((IPropertySymbol)symbol).IsIndexer)))
+                    && (format.MemberOptions & SymbolDisplayMemberOptions.IncludeParameters) != 0
+                    && CanEmphasizeName())
                 {
                     ImmutableArray<SymbolDisplayPart> parts = symbol.ToDisplayParts(format, additionalOptions);
 
@@ -1182,7 +1182,9 @@ namespace Roslynator.Documentation
                         {
                             string s = parts[i].ToString();
 
-                            if (s == "(" || s == "[")
+                            if (s == "("
+                                || s == "["
+                                || s == "<")
                             {
                                 index = i;
                                 break;
@@ -1206,6 +1208,33 @@ namespace Roslynator.Documentation
                 {
                     WriteLinkOrText(symbol.ToDisplayString(format, additionalOptions), url);
                 }
+            }
+
+            bool CanEmphasizeName()
+            {
+                switch (symbol.Kind)
+                {
+                    case SymbolKind.Method:
+                        {
+                            var methodSymbol = (IMethodSymbol)symbol;
+
+                            return methodSymbol.Parameters.Any()
+                                && methodSymbol.MethodKind.Is(
+                                    MethodKind.Ordinary,
+                                    MethodKind.Constructor,
+                                    MethodKind.UserDefinedOperator,
+                                    MethodKind.Conversion);
+                        }
+                    case SymbolKind.Property:
+                        {
+                            var propertySymbol = (IPropertySymbol)symbol;
+
+                            return propertySymbol.IsIndexer
+                                && propertySymbol.Parameters.Any();
+                        }
+                }
+
+                return false;
             }
         }
 
