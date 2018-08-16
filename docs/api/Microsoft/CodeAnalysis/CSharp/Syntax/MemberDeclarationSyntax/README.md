@@ -1,5 +1,7 @@
 # [MemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberdeclarationsyntax) Class Extensions
 
+[Home](../../../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**GetDocumentationComment**(MemberDeclarationSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/GetDocumentationComment/README.md) | Returns documentation comment syntax that is part of the specified declaration\. |

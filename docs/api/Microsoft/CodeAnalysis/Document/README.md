@@ -1,5 +1,7 @@
 # [Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document) Class Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**InsertNodeAfterAsync**(Document, SyntaxNode, SyntaxNode, CancellationToken)](../../../Roslynator/WorkspaceExtensions/InsertNodeAfterAsync/README.md) | Creates a new document with a new node inserted after the specified node\. |

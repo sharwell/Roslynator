@@ -1,5 +1,7 @@
 # [IMethodSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.imethodsymbol) Interface Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**IsOrdinaryExtensionMethod**(IMethodSymbol)](../../../Roslynator/SymbolExtensions/IsOrdinaryExtensionMethod/README.md) | Returns true if this method is an ordinary extension method \(i\.e\. "this" parameter has not been removed\)\. |

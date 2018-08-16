@@ -1,5 +1,7 @@
 # [SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken) Struct Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**AppendToLeadingTrivia**(SyntaxToken, IEnumerable\<SyntaxTrivia>)](../../../Roslynator/SyntaxExtensions/AppendToLeadingTrivia/README.md#Roslynator_SyntaxExtensions_AppendToLeadingTrivia_Microsoft_CodeAnalysis_SyntaxToken_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__) | Creates a new token from this token with the leading trivia replaced with a new trivia where the specified trivia is added at the end of the leading trivia\. |

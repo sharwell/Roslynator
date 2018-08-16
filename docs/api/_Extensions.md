@@ -1,5 +1,7 @@
 # Extensions of External Types
 
+[Home](README.md)
+
 ## Namespaces
 
 * [Microsoft.CodeAnalysis](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis)

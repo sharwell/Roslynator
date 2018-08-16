@@ -1,5 +1,7 @@
 # [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1) Struct Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**Add**(SyntaxList\<StatementSyntax>, StatementSyntax, Boolean)](../../../Roslynator/CSharp/SyntaxExtensions/Add/README.md) | Creates a new list with the specified node added or inserted\. |

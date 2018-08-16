@@ -1,5 +1,7 @@
 # [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1) Struct Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**All**\<TNode>(SeparatedSyntaxList\<TNode>, Func\<TNode, Boolean>)](../../../Roslynator/SyntaxExtensions/All-1/README.md#Roslynator_SyntaxExtensions_All__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Func___0_System_Boolean__) | Returns true if all nodes in a list matches the predicate\. |

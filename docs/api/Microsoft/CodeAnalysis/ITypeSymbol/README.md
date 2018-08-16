@@ -1,5 +1,7 @@
 # [ITypeSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.itypesymbol) Interface Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**BaseTypes**(ITypeSymbol)](../../../Roslynator/SymbolExtensions/BaseTypes/README.md) | Gets a list of base types of this type\. |

@@ -1,5 +1,7 @@
 # [StatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.statementsyntax) Class Extensions
 
+[Home](../../../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**IsEmbedded**(StatementSyntax, Boolean, Boolean, Boolean)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsEmbedded/README.md) | Returns true if the specified statement is an embedded statement\. |

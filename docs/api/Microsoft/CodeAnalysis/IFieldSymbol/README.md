@@ -1,5 +1,7 @@
 # [IFieldSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.ifieldsymbol) Interface Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**HasConstantValue**(IFieldSymbol, Boolean)](../../../Roslynator/SymbolExtensions/HasConstantValue/README.md#Roslynator_SymbolExtensions_HasConstantValue_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean_) | Get a value indicating whether the field symbol has specified constant value\. |

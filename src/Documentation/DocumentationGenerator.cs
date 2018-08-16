@@ -390,6 +390,9 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
                 writer.WriteHeading1(Resources.ExtensionsOfExternalTypesTitle);
+                writer.WriteLink(Resources.HomeTitle, UrlProvider.GetUrlToRoot(0, '/'));
+                writer.WriteLine();
+                writer.WriteLine();
                 writer.WriteList(namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
                 foreach (IGrouping<TypeKind, INamedTypeSymbol> typesByKind in extendedExternalTypes
@@ -443,6 +446,7 @@ namespace Roslynator.Documentation
                 writer.WriteSpace();
                 writer.WriteString(Resources.ExtensionsTitle);
                 writer.WriteEndHeading();
+                writer.WriteContent(Array.Empty<string>(), addLinkToRoot: true);
 
                 writer.WriteTable(
                     DocumentationModel.GetExtensionMethods(typeSymbol),

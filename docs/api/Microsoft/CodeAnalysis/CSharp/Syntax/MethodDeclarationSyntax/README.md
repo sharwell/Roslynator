@@ -1,5 +1,7 @@
 # [MethodDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.methoddeclarationsyntax) Class Extensions
 
+[Home](../../../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**BodyOrExpressionBody**(MethodDeclarationSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/BodyOrExpressionBody/README.md#Roslynator_CSharp_SyntaxExtensions_BodyOrExpressionBody_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_) | Returns method body or an expression body if the body is null\. |

@@ -1,5 +1,7 @@
 # [ExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionsyntax) Class Extensions
 
+[Home](../../../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**Parenthesize**(ExpressionSyntax, Boolean, Boolean)](../../../../../Roslynator/CSharp/WorkspaceSyntaxExtensions/Parenthesize/README.md) | Creates parenthesized expression that is parenthesizing the specified expression\. |

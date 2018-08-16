@@ -1,5 +1,7 @@
 # [Solution](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.solution) Class Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**ReplaceNodeAsync**\<TNode>(Solution, TNode, TNode, CancellationToken)](../../../Roslynator/WorkspaceExtensions/ReplaceNodeAsync-1/README.md#Roslynator_WorkspaceExtensions_ReplaceNodeAsync__1_Microsoft_CodeAnalysis_Solution___0___0_System_Threading_CancellationToken_) | Creates a new solution with the specified old node replaced with a new node\. |

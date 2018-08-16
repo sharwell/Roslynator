@@ -1,5 +1,7 @@
 # [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax) Class Extensions
 
+[Home](../../../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**AddAttributeLists**(InterfaceDeclarationSyntax, Boolean, AttributeListSyntax\[\])](../../../../../Roslynator/CSharp/SyntaxExtensions/AddAttributeLists/README.md#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new interface declaration with the specified attribute lists added\. |

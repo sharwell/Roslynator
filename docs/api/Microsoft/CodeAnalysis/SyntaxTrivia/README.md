@@ -1,5 +1,7 @@
 # [SyntaxTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivia) Struct Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**IsEndOfLineTrivia**(SyntaxTrivia)](../../../Roslynator/CSharp/SyntaxExtensions/IsEndOfLineTrivia/README.md) | Returns true if the trivia is [SyntaxKind.EndOfLineTrivia](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind.endoflinetrivia)\. |

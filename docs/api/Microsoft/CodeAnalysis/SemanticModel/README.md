@@ -1,5 +1,7 @@
 # [SemanticModel](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.semanticmodel) Class Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**DetermineParameter**(SemanticModel, ArgumentSyntax, Boolean, Boolean, CancellationToken)](../../../Roslynator/CSharp/CSharpExtensions/DetermineParameter/README.md#Roslynator_CSharp_CSharpExtensions_DetermineParameter_Microsoft_CodeAnalysis_SemanticModel_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax_System_Boolean_System_Boolean_System_Threading_CancellationToken_) | Determines a parameter symbol that matches to the specified argument\. Returns null if no matching parameter is found\. |

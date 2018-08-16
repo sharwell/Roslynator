@@ -1,5 +1,7 @@
 # [ISymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol) Interface Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**GetAttribute**(ISymbol, INamedTypeSymbol)](../../../Roslynator/SymbolExtensions/GetAttribute/README.md) | Returns the attribute for the symbol that matches the specified attribute class, or null if the symbol does not have the specified attribute\. |

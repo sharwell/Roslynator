@@ -1,5 +1,7 @@
 # [SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode) Class Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**AppendToLeadingTrivia**\<TNode>(TNode, IEnumerable\<SyntaxTrivia>)](../../../Roslynator/SyntaxExtensions/AppendToLeadingTrivia-1/README.md#Roslynator_SyntaxExtensions_AppendToLeadingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__) | Creates a new node from this node with the leading trivia replaced with a new trivia where the specified trivia is added at the end of the leading trivia\. |

@@ -1,5 +1,7 @@
 # [FileLinePositionSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.filelinepositionspan) Struct Extensions
 
+[Home](../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**EndLine**(FileLinePositionSpan)](../../../Roslynator/FileLinePositionSpanExtensions/EndLine/README.md) | Returns zero\-based index of the end line of the specified span\. |

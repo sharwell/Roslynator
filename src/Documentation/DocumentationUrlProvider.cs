@@ -157,17 +157,20 @@ namespace Roslynator.Documentation
             return StringBuilderCache.GetStringAndFree(sb);
         }
 
-        internal string GetUrlToRoot(int levels, char separator)
+        internal string GetUrlToRoot(int depth, char separator)
         {
             string fileName = GetFileName(DocumentationKind.Root);
 
-            int capacity = (levels * 3) + fileName.Length;
+            if (depth == 0)
+                return fileName;
+
+            int capacity = (depth * 3) + fileName.Length;
 
             StringBuilder sb = StringBuilderCache.GetInstance(capacity);
 
             sb.Append("..");
 
-            for (int i = 1; i < levels; i++)
+            for (int i = 1; i < depth; i++)
             {
                 sb.Append(separator);
                 sb.Append("..");

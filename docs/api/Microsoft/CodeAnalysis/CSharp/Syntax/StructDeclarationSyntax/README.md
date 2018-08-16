@@ -1,5 +1,7 @@
 # [StructDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.structdeclarationsyntax) Class Extensions
 
+[Home](../../../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**AddAttributeLists**(StructDeclarationSyntax, Boolean, AttributeListSyntax\[\])](../../../../../Roslynator/CSharp/SyntaxExtensions/AddAttributeLists/README.md#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new struct declaration with the specified attribute lists added\. |

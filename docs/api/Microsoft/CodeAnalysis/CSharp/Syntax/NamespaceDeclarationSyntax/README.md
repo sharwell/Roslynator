@@ -1,5 +1,7 @@
 # [NamespaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.namespacedeclarationsyntax) Class Extensions
 
+[Home](../../../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**BracesSpan**(NamespaceDeclarationSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/BracesSpan/README.md#Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_) | The absolute span of the braces, not including leading and trailing trivia\. |

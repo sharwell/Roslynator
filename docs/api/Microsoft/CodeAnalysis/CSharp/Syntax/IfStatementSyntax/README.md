@@ -1,5 +1,7 @@
 # [IfStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.ifstatementsyntax) Class Extensions
 
+[Home](../../../../../README.md)
+
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [**AsCascade**(IfStatementSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/AsCascade/README.md) | Returns [IfStatementCascade](../../../../../Roslynator/CSharp/IfStatementCascade/README.md) that enables to enumerate if\-else cascade\. |
