@@ -18,7 +18,7 @@ public class C : B
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [C()](-ctor/README.md) | |
+| [**C**()](-ctor/README.md) | |
 
 ## Fields
 
@@ -30,7 +30,7 @@ public class C : B
 
 | Property | Summary |
 | -------- | ------- |
-| [**Item**\[Int32\]](Item/README.md) | |
+| [Item\[Int32\]](Item/README.md) | |
 | [Property](Property/README.md) | |
 
 ## Methods
@@ -38,11 +38,11 @@ public class C : B
 | Method | Summary |
 | ------ | ------- |
 | [**Equals**(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [Method()](Method/README.md) | |
-| [ToString()](ToString/README.md) | |
+| [**GetHashCode**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [**GetType**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [**MemberwiseClone**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [**Method**()](Method/README.md) | |
+| [**ToString**()](ToString/README.md) | |
 
 ## Events
 

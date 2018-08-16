@@ -46,7 +46,7 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 | [IsFixedSize](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.isfixedsize) |  \(Inherited from [IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)\) |
 | [IsReadOnly](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.isreadonly) |  \(Inherited from [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\) |
 | [IsSynchronized](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.issynchronized) |  \(Inherited from [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)\) |
-| [**Item**\[Int32\]](Item/README.md) | |
+| [Item\[Int32\]](Item/README.md) | |
 | [SyncRoot](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.syncroot) |  \(Inherited from [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)\) |
 
 ## Methods
@@ -56,7 +56,7 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 | [**Add**(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.add) |  \(Inherited from [IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)\) |
 | [**Add**(T)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.add) |  \(Inherited from [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\) |
 | [**AddRange**(IEnumerable\<T>)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.immutable.iimmutablelist-1.addrange) |  \(Inherited from [IImmutableList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.immutable.iimmutablelist-1)\) |
-| [Clear()](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear) |  \(Inherited from [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\) |
+| [**Clear**()](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear) |  \(Inherited from [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\) |
 | [**CompareTo**(Object, IComparer)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralcomparable.compareto) |  \(Inherited from [IStructuralComparable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralcomparable)\) |
 | [**Contains**(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.contains) |  \(Inherited from [IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)\) |
 | [**Contains**(T)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.contains) |  \(Inherited from [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\) |
@@ -64,7 +64,7 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 | [**CopyTo**(T\[\], Int32)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.copyto) |  \(Inherited from [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\) |
 | [**Equals**(IImmutableFoo\<T>)](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals) |  \(Inherited from [IEquatable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\) |
 | [**Equals**(Object, IEqualityComparer)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralequatable.equals) |  \(Inherited from [IStructuralEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralequatable)\) |
-| [GetEnumerator()](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator) |  \(Inherited from [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\) |
+| [**GetEnumerator**()](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator) |  \(Inherited from [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\) |
 | [**GetHashCode**(IEqualityComparer)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralequatable.gethashcode) |  \(Inherited from [IStructuralEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralequatable)\) |
 | [**IndexOf**(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.indexof) |  \(Inherited from [IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)\) |
 | [**IndexOf**(T)](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1.indexof) |  \(Inherited from [IList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)\) |
