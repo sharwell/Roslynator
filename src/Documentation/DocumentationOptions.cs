@@ -18,6 +18,7 @@ namespace Roslynator.Documentation
             bool attributeArguments = DefaultValues.AttributeArguments,
             bool inheritedInterfaceMembers = DefaultValues.InheritedInterfaceMembers,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
+            bool emphasizeMemberName = DefaultValues.EmphasizeMemberName,
             DocumentationDepth depth = DefaultValues.Depth,
             RootDocumentationParts rootParts = RootDocumentationParts.All,
             NamespaceDocumentationParts namespaceParts = NamespaceDocumentationParts.All,
@@ -37,6 +38,7 @@ namespace Roslynator.Documentation
             AttributeArguments = attributeArguments;
             InheritedInterfaceMembers = inheritedInterfaceMembers;
             OmitIEnumerable = omitIEnumerable;
+            EmphasizeMemberName = emphasizeMemberName;
             Depth = depth;
             RootParts = rootParts;
             NamespaceParts = namespaceParts;
@@ -71,6 +73,8 @@ namespace Roslynator.Documentation
         public bool InheritedInterfaceMembers { get; }
 
         public bool OmitIEnumerable { get; }
+
+        public bool EmphasizeMemberName { get; }
 
         public DocumentationDepth Depth { get; }
 
@@ -115,6 +119,7 @@ namespace Roslynator.Documentation
             public const bool AttributeArguments = true;
             public const bool InheritedInterfaceMembers = true; //TODO: InheritedInterfaceMembers default value
             public const bool OmitIEnumerable = true;
+            public const bool EmphasizeMemberName = true;
             public const DocumentationDepth Depth =  DocumentationDepth.Member;
         }
     }

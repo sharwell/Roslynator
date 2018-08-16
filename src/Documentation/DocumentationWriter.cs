@@ -908,7 +908,7 @@ namespace Roslynator.Documentation
                         }
                         else if (addLink)
                         {
-                            WriteLink(symbol, format, additionalOptions, emphasizeName: true);
+                            WriteLink(symbol, format, additionalOptions, emphasizeName: Options.EmphasizeMemberName);
                         }
                         else
                         {
@@ -1147,7 +1147,7 @@ namespace Roslynator.Documentation
             WriteEndBulletItem();
         }
 
-        protected internal void WriteLink(
+        internal void WriteLink(
             ISymbol symbol,
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
