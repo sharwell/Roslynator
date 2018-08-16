@@ -2,5 +2,5 @@
 
 | Extension Method | Summary |
 | ---------------- | ------- |
-| [Elements(DocumentationCommentTriviaSyntax, String)](../../../../../Roslynator/CSharp/SyntaxExtensions/Elements/README.md) | Gets a list of xml elements with the specified local name\. |
+| [**Elements**(DocumentationCommentTriviaSyntax, String)](../../../../../Roslynator/CSharp/SyntaxExtensions/Elements/README.md) | Gets a list of xml elements with the specified local name\. |
 

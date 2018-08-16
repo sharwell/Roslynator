@@ -10,10 +10,10 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [IsKind(ISymbol, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
-| [IsKind(ISymbol, SymbolKind, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
-| [IsKind(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
-| [IsKind(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
+| [**IsKind**(ISymbol, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
+| [**IsKind**(ISymbol, SymbolKind, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
+| [**IsKind**(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
+| [**IsKind**(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
 
 ## IsKind\(ISymbol, SymbolKind, SymbolKind\)<a name="Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_"></a>
 

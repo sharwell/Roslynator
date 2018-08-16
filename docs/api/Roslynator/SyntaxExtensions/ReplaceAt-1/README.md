@@ -10,10 +10,10 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [ReplaceAt(SyntaxTokenList, Int32, SyntaxToken)](../ReplaceAt/README.md#Roslynator_SyntaxExtensions_ReplaceAt_Microsoft_CodeAnalysis_SyntaxTokenList_System_Int32_Microsoft_CodeAnalysis_SyntaxToken_) | Creates a new [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist) with a token at the specified index replaced with a new token\. |
-| [ReplaceAt(SyntaxTriviaList, Int32, SyntaxTrivia)](../ReplaceAt/README.md#Roslynator_SyntaxExtensions_ReplaceAt_Microsoft_CodeAnalysis_SyntaxTriviaList_System_Int32_Microsoft_CodeAnalysis_SyntaxTrivia_) | Creates a new [SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist) with a trivia at the specified index replaced with new trivia\. |
-| [ReplaceAt\<TNode>(SeparatedSyntaxList\<TNode>, Int32, TNode)](#Roslynator_SyntaxExtensions_ReplaceAt__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32___0_) | Creates a new list with a node at the specified index replaced with a new node\. |
-| [ReplaceAt\<TNode>(SyntaxList\<TNode>, Int32, TNode)](#Roslynator_SyntaxExtensions_ReplaceAt__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Int32___0_) | Creates a new list with the node at the specified index replaced with a new node\. |
+| [**ReplaceAt**(SyntaxTokenList, Int32, SyntaxToken)](../ReplaceAt/README.md#Roslynator_SyntaxExtensions_ReplaceAt_Microsoft_CodeAnalysis_SyntaxTokenList_System_Int32_Microsoft_CodeAnalysis_SyntaxToken_) | Creates a new [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist) with a token at the specified index replaced with a new token\. |
+| [**ReplaceAt**(SyntaxTriviaList, Int32, SyntaxTrivia)](../ReplaceAt/README.md#Roslynator_SyntaxExtensions_ReplaceAt_Microsoft_CodeAnalysis_SyntaxTriviaList_System_Int32_Microsoft_CodeAnalysis_SyntaxTrivia_) | Creates a new [SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist) with a trivia at the specified index replaced with new trivia\. |
+| [**ReplaceAt\<TNode>**(SeparatedSyntaxList\<TNode>, Int32, TNode)](#Roslynator_SyntaxExtensions_ReplaceAt__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32___0_) | Creates a new list with a node at the specified index replaced with a new node\. |
+| [**ReplaceAt\<TNode>**(SyntaxList\<TNode>, Int32, TNode)](#Roslynator_SyntaxExtensions_ReplaceAt__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Int32___0_) | Creates a new list with the node at the specified index replaced with a new node\. |
 
 ## ReplaceAt\(SyntaxTokenList, Int32, SyntaxToken\)<a name="Roslynator_SyntaxExtensions_ReplaceAt_Microsoft_CodeAnalysis_SyntaxTokenList_System_Int32_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 

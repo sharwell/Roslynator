@@ -73,8 +73,8 @@ namespace Roslynator.Documentation
                     return (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(reference);
                 }));
 
-            if (!TryGetDocumentationParts(options.DocumentationParts, out DocumentationParts documentationParts))
-                return;
+            if (!Enum.TryParse(options.Depth, ignoreCase: true, out DocumentationDepth depth))
+                depth = DocumentationOptions.DefaultValues.Depth;
 
             if (!TryGetNamespaceDocumentationParts(options.NamespaceParts, out NamespaceDocumentationParts namespaceParts))
                 return;
@@ -88,7 +88,7 @@ namespace Roslynator.Documentation
             var documentationOptions = new DocumentationOptions(
                 preferredCultureName: options.PreferredCulture,
                 baseLocalUrl: options.BaseLocalUrl,
-                documentationParts: documentationParts,
+                depth: depth,
                 namespaceParts: namespaceParts,
                 typeParts: typeParts,
                 memberParts: memberParts,
@@ -163,32 +163,6 @@ namespace Roslynator.Documentation
             }
         }
 
-        private static bool TryGetDocumentationParts(IEnumerable<string> values, out DocumentationParts parts)
-        {
-            if (!values.Any())
-            {
-                parts = DocumentationOptions.Default.DocumentationParts;
-                return true;
-            }
-
-            parts = DocumentationParts.None;
-
-            foreach (string value in values)
-            {
-                if (Enum.TryParse< DocumentationParts>(value, ignoreCase: true, out DocumentationParts result))
-                {
-                    parts |= ((DocumentationParts)result);
-                }
-                else
-                {
-                    Console.WriteLine($"Unknown documentation part '{value}'.");
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
         private static bool TryGetNamespaceDocumentationParts(IEnumerable<string> values, out NamespaceDocumentationParts parts)
         {
             if (!values.Any())
@@ -201,9 +175,9 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse< NamespaceDocumentationParts>(value, ignoreCase: true, out NamespaceDocumentationParts result))
+                if (Enum.TryParse(value, ignoreCase: true, out NamespaceDocumentationParts result))
                 {
-                    parts |= ((NamespaceDocumentationParts)result);
+                    parts |= result;
                 }
                 else
                 {
@@ -227,9 +201,9 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse< TypeDocumentationParts>(value, ignoreCase: true, out TypeDocumentationParts result))
+                if (Enum.TryParse(value, ignoreCase: true, out TypeDocumentationParts result))
                 {
-                    parts |= ((TypeDocumentationParts)result);
+                    parts |= result;
                 }
                 else
                 {
@@ -253,9 +227,9 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse< MemberDocumentationParts>(value, ignoreCase: true, out MemberDocumentationParts result))
+                if (Enum.TryParse(value, ignoreCase: true, out MemberDocumentationParts result))
                 {
-                    parts |= ((MemberDocumentationParts)result);
+                    parts |= result;
                 }
                 else
                 {

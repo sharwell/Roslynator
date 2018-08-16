@@ -10,9 +10,9 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [Getter(AccessorListSyntax)](#Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_) | Returns a get accessor contained in the specified list\. |
-| [Getter(IndexerDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_IndexerDeclarationSyntax_) | Returns a get accessor that is contained in the specified indexer declaration\. |
-| [Getter(PropertyDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_PropertyDeclarationSyntax_) | Returns property get accessor, if any\. |
+| [**Getter**(AccessorListSyntax)](#Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_) | Returns a get accessor contained in the specified list\. |
+| [**Getter**(IndexerDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_IndexerDeclarationSyntax_) | Returns a get accessor that is contained in the specified indexer declaration\. |
+| [**Getter**(PropertyDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_PropertyDeclarationSyntax_) | Returns property get accessor, if any\. |
 
 ## Getter\(AccessorListSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_Getter_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_"></a>
 

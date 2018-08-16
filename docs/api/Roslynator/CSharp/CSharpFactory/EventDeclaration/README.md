@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [EventDeclaration(SyntaxTokenList, TypeSyntax, String, AccessorListSyntax)](#Roslynator_CSharp_CSharpFactory_EventDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_) | |
-| [EventDeclaration(SyntaxTokenList, TypeSyntax, SyntaxToken, AccessorListSyntax)](#Roslynator_CSharp_CSharpFactory_EventDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_) | |
+| [**EventDeclaration**(SyntaxTokenList, TypeSyntax, String, AccessorListSyntax)](#Roslynator_CSharp_CSharpFactory_EventDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_) | |
+| [**EventDeclaration**(SyntaxTokenList, TypeSyntax, SyntaxToken, AccessorListSyntax)](#Roslynator_CSharp_CSharpFactory_EventDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_) | |
 
 ## EventDeclaration\(SyntaxTokenList, TypeSyntax, String, AccessorListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_EventDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_"></a>
 

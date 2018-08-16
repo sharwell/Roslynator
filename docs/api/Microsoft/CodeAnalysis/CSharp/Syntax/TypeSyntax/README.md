@@ -2,5 +2,5 @@
 
 | Extension Method | Summary |
 | ---------------- | ------- |
-| [IsVoid(TypeSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsVoid/README.md) | Returns true if the type is [Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)\. |
+| [**IsVoid**(TypeSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsVoid/README.md) | Returns true if the type is [Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)\. |
 

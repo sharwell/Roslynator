@@ -1,0 +1,7 @@
+﻿<Project>
+  <Target Name="PreRoslynatorDocumention" BeforeTargets="RoslynatorDocumentation" Condition=" '$(Configuration)' == 'Release'">
+    <PropertyGroup>
+      <RoslynatorDocumentationParameters> -a &quot;$(TargetPath)&quot; -o &quot;$(SolutionDir)docs\api&quot; -h &quot;API Reference&quot; -m github </RoslynatorDocumentationParameters>
+    </PropertyGroup>
+  </Target>
+</Project>

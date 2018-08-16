@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [StructDeclaration(SyntaxTokenList, String, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_StructDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_System_String_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
-| [StructDeclaration(SyntaxTokenList, SyntaxToken, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_StructDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
+| [**StructDeclaration**(SyntaxTokenList, String, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_StructDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_System_String_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
+| [**StructDeclaration**(SyntaxTokenList, SyntaxToken, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_StructDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
 
 ## StructDeclaration\(SyntaxTokenList, String, SyntaxList\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_CSharpFactory_StructDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_System_String_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__"></a>
 

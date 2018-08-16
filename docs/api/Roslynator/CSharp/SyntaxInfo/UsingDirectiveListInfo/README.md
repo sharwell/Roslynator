@@ -10,9 +10,9 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [UsingDirectiveListInfo(CompilationUnitSyntax)](#Roslynator_CSharp_SyntaxInfo_UsingDirectiveListInfo_Microsoft_CodeAnalysis_CSharp_Syntax_CompilationUnitSyntax_) | Creates a new [UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md) from the specified compilation unit\. |
-| [UsingDirectiveListInfo(NamespaceDeclarationSyntax)](#Roslynator_CSharp_SyntaxInfo_UsingDirectiveListInfo_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_) | Creates a new [UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md) from the specified declaration\. |
-| [UsingDirectiveListInfo(SyntaxNode)](#Roslynator_CSharp_SyntaxInfo_UsingDirectiveListInfo_Microsoft_CodeAnalysis_SyntaxNode_) | Creates a new [UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md) from the specified node\. |
+| [**UsingDirectiveListInfo**(CompilationUnitSyntax)](#Roslynator_CSharp_SyntaxInfo_UsingDirectiveListInfo_Microsoft_CodeAnalysis_CSharp_Syntax_CompilationUnitSyntax_) | Creates a new [UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md) from the specified compilation unit\. |
+| [**UsingDirectiveListInfo**(NamespaceDeclarationSyntax)](#Roslynator_CSharp_SyntaxInfo_UsingDirectiveListInfo_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_) | Creates a new [UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md) from the specified declaration\. |
+| [**UsingDirectiveListInfo**(SyntaxNode)](#Roslynator_CSharp_SyntaxInfo_UsingDirectiveListInfo_Microsoft_CodeAnalysis_SyntaxNode_) | Creates a new [UsingDirectiveListInfo](../../Syntax/UsingDirectiveListInfo/README.md) from the specified node\. |
 
 ## UsingDirectiveListInfo\(CompilationUnitSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_UsingDirectiveListInfo_Microsoft_CodeAnalysis_CSharp_Syntax_CompilationUnitSyntax_"></a>
 

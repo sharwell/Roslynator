@@ -10,10 +10,10 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [RemoveAccessorDeclaration(ArrowExpressionClauseSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_) | |
-| [RemoveAccessorDeclaration(BlockSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_) | |
-| [RemoveAccessorDeclaration(SyntaxTokenList, ArrowExpressionClauseSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_) | |
-| [RemoveAccessorDeclaration(SyntaxTokenList, BlockSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_) | |
+| [**RemoveAccessorDeclaration**(ArrowExpressionClauseSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_) | |
+| [**RemoveAccessorDeclaration**(BlockSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_) | |
+| [**RemoveAccessorDeclaration**(SyntaxTokenList, ArrowExpressionClauseSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_) | |
+| [**RemoveAccessorDeclaration**(SyntaxTokenList, BlockSyntax)](#Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_) | |
 
 ## RemoveAccessorDeclaration\(ArrowExpressionClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_RemoveAccessorDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_"></a>
 

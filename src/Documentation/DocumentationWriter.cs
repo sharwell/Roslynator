@@ -162,6 +162,10 @@ namespace Roslynator.Documentation
 
         public abstract void WriteImage(string text, string url, string title = null);
 
+        public abstract void WriteStartLink();
+
+        public abstract void WriteEndLink(string url, string title = null);
+
         public abstract void WriteLink(string text, string url, string title = null);
 
         public void WriteLinkOrText(string text, string url = null, string title = null)
@@ -904,7 +908,7 @@ namespace Roslynator.Documentation
                         }
                         else if (addLink)
                         {
-                            WriteLink(symbol, format, additionalOptions);
+                            WriteLink(symbol, format, additionalOptions, emphasizeName: true);
                         }
                         else
                         {
@@ -1148,7 +1152,8 @@ namespace Roslynator.Documentation
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             bool addLinkForTypeParameters = false,
-            bool canCreateExternalUrl = true)
+            bool canCreateExternalUrl = true,
+            bool emphasizeName = false)
         {
             if (addLinkForTypeParameters
                 && symbol is INamedTypeSymbol namedType)
@@ -1162,7 +1167,45 @@ namespace Roslynator.Documentation
             {
                 string url = GetUrl(symbol, canCreateExternalUrl);
 
-                WriteLinkOrText(symbol.ToDisplayString(format, additionalOptions), url);
+                if (emphasizeName
+                    && url != null
+                    && ((symbol.Kind == SymbolKind.Method && ((IMethodSymbol)symbol).MethodKind.Is(MethodKind.Ordinary, MethodKind.Constructor, MethodKind.UserDefinedOperator, MethodKind.Conversion))
+                    || (symbol.Kind == SymbolKind.Property && ((IPropertySymbol)symbol).IsIndexer)))
+                {
+                    ImmutableArray<SymbolDisplayPart> parts = symbol.ToDisplayParts(format, additionalOptions);
+
+                    int index = -1;
+
+                    for (int i = 0; i < parts.Length; i++)
+                    {
+                        if (parts[i].Kind == SymbolDisplayPartKind.Punctuation)
+                        {
+                            string s = parts[i].ToString();
+
+                            if (s == "(" || s == "[")
+                            {
+                                index = i;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (index >= 0)
+                    {
+                        WriteStartLink();
+                        WriteBold(ImmutableArray.Create(parts, 0, index).ToDisplayString());
+                        WriteString(ImmutableArray.Create(parts, index, parts.Length - index).ToDisplayString());
+                        WriteEndLink(url);
+                    }
+                    else
+                    {
+                        WriteLink(parts.ToDisplayString(), url);
+                    }
+                }
+                else
+                {
+                    WriteLinkOrText(symbol.ToDisplayString(format, additionalOptions), url);
+                }
             }
         }
 

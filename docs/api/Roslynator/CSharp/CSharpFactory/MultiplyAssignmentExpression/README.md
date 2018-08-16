@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [MultiplyAssignmentExpression(ExpressionSyntax, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_MultiplyAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
-| [MultiplyAssignmentExpression(ExpressionSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_MultiplyAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [**MultiplyAssignmentExpression**(ExpressionSyntax, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_MultiplyAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [**MultiplyAssignmentExpression**(ExpressionSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_MultiplyAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 
 ## MultiplyAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_MultiplyAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

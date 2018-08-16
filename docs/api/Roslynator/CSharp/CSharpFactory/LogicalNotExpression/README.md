@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [LogicalNotExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_LogicalNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
-| [LogicalNotExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_LogicalNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
+| [**LogicalNotExpression**(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_LogicalNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [**LogicalNotExpression**(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_LogicalNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## LogicalNotExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_LogicalNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

@@ -10,10 +10,10 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [BaseList(BaseTypeSyntax)](#Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_) | |
-| [BaseList(BaseTypeSyntax\[\])](#Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax___) | |
-| [BaseList(SyntaxToken, BaseTypeSyntax)](#Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_) | |
-| [BaseList(SyntaxToken, BaseTypeSyntax\[\])](#Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax___) | |
+| [**BaseList**(BaseTypeSyntax)](#Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_) | |
+| [**BaseList**(BaseTypeSyntax\[\])](#Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax___) | |
+| [**BaseList**(SyntaxToken, BaseTypeSyntax)](#Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_) | |
+| [**BaseList**(SyntaxToken, BaseTypeSyntax\[\])](#Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax___) | |
 
 ## BaseList\(BaseTypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BaseList_Microsoft_CodeAnalysis_CSharp_Syntax_BaseTypeSyntax_"></a>
 

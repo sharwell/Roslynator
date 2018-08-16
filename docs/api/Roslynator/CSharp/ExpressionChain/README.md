@@ -35,21 +35,21 @@ public readonly struct ExpressionChain : System.IEquatable<ExpressionChain>,
 
 | Method | Summary |
 | ------ | ------- |
-| [Equals(ExpressionChain)](Equals/README.md#Roslynator_CSharp_ExpressionChain_Equals_Roslynator_CSharp_ExpressionChain_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<ExpressionChain>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
-| [Equals(Object)](Equals/README.md#Roslynator_CSharp_ExpressionChain_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
-| [GetEnumerator()](GetEnumerator/README.md) | Gets the enumerator for the expressions\. |
-| [GetHashCode()](GetHashCode/README.md) | Returns the hash code for this instance\. \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
-| [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [Reverse()](Reverse/README.md) | Returns a chain which contains all expressions of [ExpressionChain](./README.md) in reversed order\. |
-| [ToString()](ToString/README.md) | Returns the string representation of the expressions, not including its leading and trailing trivia\. \(Overrides [ValueType.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring)\) |
+| [**Equals**(ExpressionChain)](Equals/README.md#Roslynator_CSharp_ExpressionChain_Equals_Roslynator_CSharp_ExpressionChain_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<ExpressionChain>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
+| [**Equals**(Object)](Equals/README.md#Roslynator_CSharp_ExpressionChain_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| [**GetEnumerator**()](GetEnumerator/README.md) | Gets the enumerator for the expressions\. |
+| [**GetHashCode**()](GetHashCode/README.md) | Returns the hash code for this instance\. \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
+| [**GetType**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [**MemberwiseClone**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [**Reverse**()](Reverse/README.md) | Returns a chain which contains all expressions of [ExpressionChain](./README.md) in reversed order\. |
+| [**ToString**()](ToString/README.md) | Returns the string representation of the expressions, not including its leading and trailing trivia\. \(Overrides [ValueType.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring)\) |
 
 ## Operators
 
 | Operator | Summary |
 | -------- | ------- |
-| [Equality(ExpressionChain, ExpressionChain)](op_Equality/README.md) | |
-| [Inequality(ExpressionChain, ExpressionChain)](op_Inequality/README.md) | |
+| [**Equality**(ExpressionChain, ExpressionChain)](op_Equality/README.md) | |
+| [**Inequality**(ExpressionChain, ExpressionChain)](op_Inequality/README.md) | |
 
 ## Explicit Interface Implementations
 

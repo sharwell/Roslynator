@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [ClassDeclaration(SyntaxTokenList, String, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_ClassDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_System_String_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
-| [ClassDeclaration(SyntaxTokenList, SyntaxToken, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_ClassDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
+| [**ClassDeclaration**(SyntaxTokenList, String, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_ClassDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_System_String_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
+| [**ClassDeclaration**(SyntaxTokenList, SyntaxToken, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_ClassDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
 
 ## ClassDeclaration\(SyntaxTokenList, String, SyntaxList\<MemberDeclarationSyntax>\)<a name="Roslynator_CSharp_CSharpFactory_ClassDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_System_String_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__"></a>
 

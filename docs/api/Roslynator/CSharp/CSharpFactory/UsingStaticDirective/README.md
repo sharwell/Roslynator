@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [UsingStaticDirective(NameSyntax)](#Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_) | |
-| [UsingStaticDirective(SyntaxToken, SyntaxToken, NameSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
+| [**UsingStaticDirective**(NameSyntax)](#Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_) | |
+| [**UsingStaticDirective**(SyntaxToken, SyntaxToken, NameSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## UsingStaticDirective\(NameSyntax\)<a name="Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_"></a>
 

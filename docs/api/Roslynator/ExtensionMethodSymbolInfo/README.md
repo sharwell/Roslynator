@@ -35,17 +35,17 @@ public readonly struct ExtensionMethodSymbolInfo : System.IEquatable<ExtensionMe
 
 | Method | Summary |
 | ------ | ------- |
-| [Equals(ExtensionMethodSymbolInfo)](Equals/README.md#Roslynator_ExtensionMethodSymbolInfo_Equals_Roslynator_ExtensionMethodSymbolInfo_) |  \(Implements [IEquatable\<ExtensionMethodSymbolInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
-| [Equals(Object)](Equals/README.md#Roslynator_ExtensionMethodSymbolInfo_Equals_System_Object_) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
-| [GetHashCode()](GetHashCode/README.md) |  \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
-| [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring) |  \(Inherited from [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype)\) |
+| [**Equals**(ExtensionMethodSymbolInfo)](Equals/README.md#Roslynator_ExtensionMethodSymbolInfo_Equals_Roslynator_ExtensionMethodSymbolInfo_) |  \(Implements [IEquatable\<ExtensionMethodSymbolInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
+| [**Equals**(Object)](Equals/README.md#Roslynator_ExtensionMethodSymbolInfo_Equals_System_Object_) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| [**GetHashCode**()](GetHashCode/README.md) |  \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
+| [**GetType**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [**MemberwiseClone**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [**ToString**()](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring) |  \(Inherited from [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype)\) |
 
 ## Operators
 
 | Operator | Summary |
 | -------- | ------- |
-| [Equality(ExtensionMethodSymbolInfo, ExtensionMethodSymbolInfo)](op_Equality/README.md) | |
-| [Inequality(ExtensionMethodSymbolInfo, ExtensionMethodSymbolInfo)](op_Inequality/README.md) | |
+| [**Equality**(ExtensionMethodSymbolInfo, ExtensionMethodSymbolInfo)](op_Equality/README.md) | |
+| [**Inequality**(ExtensionMethodSymbolInfo, ExtensionMethodSymbolInfo)](op_Inequality/README.md) | |
 

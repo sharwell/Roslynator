@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [BracketedParameterList(ParameterSyntax)](#Roslynator_CSharp_CSharpFactory_BracketedParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax_) | |
-| [BracketedParameterList(ParameterSyntax\[\])](#Roslynator_CSharp_CSharpFactory_BracketedParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax___) | |
+| [**BracketedParameterList**(ParameterSyntax)](#Roslynator_CSharp_CSharpFactory_BracketedParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax_) | |
+| [**BracketedParameterList**(ParameterSyntax\[\])](#Roslynator_CSharp_CSharpFactory_BracketedParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax___) | |
 
 ## BracketedParameterList\(ParameterSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BracketedParameterList_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterSyntax_"></a>
 

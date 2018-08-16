@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [TypeParameterConstraintClause(IdentifierNameSyntax, TypeParameterConstraintSyntax)](#Roslynator_CSharp_CSharpFactory_TypeParameterConstraintClause_Microsoft_CodeAnalysis_CSharp_Syntax_IdentifierNameSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_) | |
-| [TypeParameterConstraintClause(String, TypeParameterConstraintSyntax)](#Roslynator_CSharp_CSharpFactory_TypeParameterConstraintClause_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_) | |
+| [**TypeParameterConstraintClause**(IdentifierNameSyntax, TypeParameterConstraintSyntax)](#Roslynator_CSharp_CSharpFactory_TypeParameterConstraintClause_Microsoft_CodeAnalysis_CSharp_Syntax_IdentifierNameSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_) | |
+| [**TypeParameterConstraintClause**(String, TypeParameterConstraintSyntax)](#Roslynator_CSharp_CSharpFactory_TypeParameterConstraintClause_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_) | |
 
 ## TypeParameterConstraintClause\(IdentifierNameSyntax, TypeParameterConstraintSyntax\)<a name="Roslynator_CSharp_CSharpFactory_TypeParameterConstraintClause_Microsoft_CodeAnalysis_CSharp_Syntax_IdentifierNameSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_"></a>
 

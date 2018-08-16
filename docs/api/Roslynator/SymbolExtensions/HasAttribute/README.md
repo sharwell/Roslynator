@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [HasAttribute(ISymbol, INamedTypeSymbol)](#Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_) | Returns true if the symbol has the specified attribute\. |
-| [HasAttribute(ITypeSymbol, INamedTypeSymbol, Boolean)](#Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Boolean_) | Returns true if the type symbol has the specified attribute\. |
+| [**HasAttribute**(ISymbol, INamedTypeSymbol)](#Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_) | Returns true if the symbol has the specified attribute\. |
+| [**HasAttribute**(ITypeSymbol, INamedTypeSymbol, Boolean)](#Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Boolean_) | Returns true if the type symbol has the specified attribute\. |
 
 ## HasAttribute\(ISymbol, INamedTypeSymbol\)<a name="Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_"></a>
 

@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [IsExpression(ExpressionSyntax, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_IsExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
-| [IsExpression(ExpressionSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_IsExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [**IsExpression**(ExpressionSyntax, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_IsExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [**IsExpression**(ExpressionSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_IsExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 
 ## IsExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_IsExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

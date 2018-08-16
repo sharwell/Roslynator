@@ -32,9 +32,9 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="_._" target="lib/net45/" />
+    <file src="_._" target="lib/net40/" />
     <file src="_._" target="lib/netstandard1.0/" />
-    <file src="Documentation.CommandLine.targets" target="build/net45/Roslynator.Documentation.CommandLine.targets" />
+    <file src="Documentation.CommandLine.targets" target="build/net40/Roslynator.Documentation.CommandLine.targets" />
     <file src="Documentation.CommandLine.targets" target="build/netstandard1.0/Roslynator.Documentation.CommandLine.targets" />
     <file src="GenerateDocumentation.targets" target="tools/" />
     <file src="bin\$configuration$\net46\**\*" target="tools/net46/" />

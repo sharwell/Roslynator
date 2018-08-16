@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [NamespaceDeclaration(NameSyntax, MemberDeclarationSyntax)](#Roslynator_CSharp_CSharpFactory_NamespaceDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_) | |
-| [NamespaceDeclaration(NameSyntax, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_NamespaceDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
+| [**NamespaceDeclaration**(NameSyntax, MemberDeclarationSyntax)](#Roslynator_CSharp_CSharpFactory_NamespaceDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_) | |
+| [**NamespaceDeclaration**(NameSyntax, SyntaxList\<MemberDeclarationSyntax>)](#Roslynator_CSharp_CSharpFactory_NamespaceDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax__) | |
 
 ## NamespaceDeclaration\(NameSyntax, MemberDeclarationSyntax\)<a name="Roslynator_CSharp_CSharpFactory_NamespaceDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 

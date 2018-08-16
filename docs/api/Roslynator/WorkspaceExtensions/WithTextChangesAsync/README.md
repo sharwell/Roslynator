@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [WithTextChangesAsync(Document, IEnumerable\<TextChange>, CancellationToken)](#Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Text_TextChange__System_Threading_CancellationToken_) | Creates a new document updated with the specified text changes\. |
-| [WithTextChangesAsync(Document, TextChange\[\], CancellationToken)](#Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextChange___System_Threading_CancellationToken_) | Creates a new document updated with the specified text changes\. |
+| [**WithTextChangesAsync**(Document, IEnumerable\<TextChange>, CancellationToken)](#Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Text_TextChange__System_Threading_CancellationToken_) | Creates a new document updated with the specified text changes\. |
+| [**WithTextChangesAsync**(Document, TextChange\[\], CancellationToken)](#Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextChange___System_Threading_CancellationToken_) | Creates a new document updated with the specified text changes\. |
 
 ## WithTextChangesAsync\(Document, IEnumerable\<TextChange>, CancellationToken\)<a name="Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Text_TextChange__System_Threading_CancellationToken_"></a>
 

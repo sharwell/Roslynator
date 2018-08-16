@@ -10,9 +10,9 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [SwitchSection(SwitchLabelSyntax, StatementSyntax)](#Roslynator_CSharp_CSharpFactory_SwitchSection_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchLabelSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_) | |
-| [SwitchSection(SwitchLabelSyntax, SyntaxList\<StatementSyntax>)](#Roslynator_CSharp_CSharpFactory_SwitchSection_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchLabelSyntax_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax__) | |
-| [SwitchSection(SyntaxList\<SwitchLabelSyntax>, StatementSyntax)](#Roslynator_CSharp_CSharpFactory_SwitchSection_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchLabelSyntax__Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_) | |
+| [**SwitchSection**(SwitchLabelSyntax, StatementSyntax)](#Roslynator_CSharp_CSharpFactory_SwitchSection_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchLabelSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_) | |
+| [**SwitchSection**(SwitchLabelSyntax, SyntaxList\<StatementSyntax>)](#Roslynator_CSharp_CSharpFactory_SwitchSection_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchLabelSyntax_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax__) | |
+| [**SwitchSection**(SyntaxList\<SwitchLabelSyntax>, StatementSyntax)](#Roslynator_CSharp_CSharpFactory_SwitchSection_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchLabelSyntax__Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_) | |
 
 ## SwitchSection\(SwitchLabelSyntax, StatementSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SwitchSection_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchLabelSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_"></a>
 

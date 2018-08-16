@@ -6,7 +6,7 @@
       <RoslynatorDocumentationAssemblyReferencesPath>$(TargetDir)Roslynator.Documentation.CommandLine.assemblyreferences</RoslynatorDocumentationAssemblyReferencesPath>
     </PropertyGroup>
     <WriteLinesToFile File="$(RoslynatorDocumentationAssemblyReferencesPath)" Lines="@(_ResolveAssemblyReferenceResolvedFiles)" Overwrite="true" Encoding="Unicode" Condition="'$(RoslynatorDocumentationParameters)' != ''" />  
-    <Exec Command="$(RoslynatorDocumentationCommand) --assemblyReferences &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationParameters)" LogStandardErrorAsError="true" ConsoleToMSBuild="true" Condition="'$(RoslynatorDocumentationParameters)' != ''">
+    <Exec Command="$(RoslynatorDocumentationCommand) -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationParameters)" LogStandardErrorAsError="true" ConsoleToMSBuild="true" Condition="'$(RoslynatorDocumentationParameters)' != ''">
       <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
     </Exec>
     <Delete Files="$(RoslynatorDocumentationAssemblyReferencesPath)"  Condition="'$(RoslynatorDocumentationParameters)' != ''" />

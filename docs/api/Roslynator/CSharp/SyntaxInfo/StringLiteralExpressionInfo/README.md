@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [StringLiteralExpressionInfo(LiteralExpressionSyntax)](#Roslynator_CSharp_SyntaxInfo_StringLiteralExpressionInfo_Microsoft_CodeAnalysis_CSharp_Syntax_LiteralExpressionSyntax_) | Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md) from the specified literal expression\. |
-| [StringLiteralExpressionInfo(SyntaxNode, Boolean)](#Roslynator_CSharp_SyntaxInfo_StringLiteralExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_) | Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md) from the specified node\. |
+| [**StringLiteralExpressionInfo**(LiteralExpressionSyntax)](#Roslynator_CSharp_SyntaxInfo_StringLiteralExpressionInfo_Microsoft_CodeAnalysis_CSharp_Syntax_LiteralExpressionSyntax_) | Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md) from the specified literal expression\. |
+| [**StringLiteralExpressionInfo**(SyntaxNode, Boolean)](#Roslynator_CSharp_SyntaxInfo_StringLiteralExpressionInfo_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean_) | Creates a new [StringLiteralExpressionInfo](../../Syntax/StringLiteralExpressionInfo/README.md) from the specified node\. |
 
 ## StringLiteralExpressionInfo\(LiteralExpressionSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_StringLiteralExpressionInfo_Microsoft_CodeAnalysis_CSharp_Syntax_LiteralExpressionSyntax_"></a>
 

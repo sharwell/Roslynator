@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [BitwiseNotExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_BitwiseNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
-| [BitwiseNotExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_BitwiseNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
+| [**BitwiseNotExpression**(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_BitwiseNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [**BitwiseNotExpression**(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_BitwiseNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## BitwiseNotExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_BitwiseNotExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

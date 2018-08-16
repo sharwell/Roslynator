@@ -2,5 +2,5 @@
 
 | Extension Method | Summary |
 | ---------------- | ------- |
-| [IsParams(ParameterSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsParams/README.md) | Returns true if the specified parameter has "params" modifier\. |
+| [**IsParams**(ParameterSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsParams/README.md) | Returns true if the specified parameter has "params" modifier\. |
 

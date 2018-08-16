@@ -2,7 +2,6 @@
 
 namespace Roslynator.Documentation
 {
-    //TODO: AddFootNote
     public class DocumentationOptions
     {
         public DocumentationOptions(
@@ -19,7 +18,7 @@ namespace Roslynator.Documentation
             bool attributeArguments = DefaultValues.AttributeArguments,
             bool inheritedInterfaceMembers = DefaultValues.InheritedInterfaceMembers,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
-            DocumentationParts documentationParts = DocumentationParts.All,
+            DocumentationDepth depth = DefaultValues.Depth,
             RootDocumentationParts rootParts = RootDocumentationParts.All,
             NamespaceDocumentationParts namespaceParts = NamespaceDocumentationParts.All,
             TypeDocumentationParts typeParts = TypeDocumentationParts.All,
@@ -38,7 +37,7 @@ namespace Roslynator.Documentation
             AttributeArguments = attributeArguments;
             InheritedInterfaceMembers = inheritedInterfaceMembers;
             OmitIEnumerable = omitIEnumerable;
-            DocumentationParts = documentationParts;
+            Depth = depth;
             RootParts = rootParts;
             NamespaceParts = namespaceParts;
             TypeParts = typeParts;
@@ -73,7 +72,7 @@ namespace Roslynator.Documentation
 
         public bool OmitIEnumerable { get; }
 
-        public DocumentationParts DocumentationParts { get; }
+        public DocumentationDepth Depth { get; }
 
         public RootDocumentationParts RootParts { get; }
 
@@ -82,11 +81,6 @@ namespace Roslynator.Documentation
         public TypeDocumentationParts TypeParts { get; }
 
         public MemberDocumentationParts MemberParts { get; }
-
-        internal bool IsPartEnabled(DocumentationParts parts)
-        {
-            return (DocumentationParts & parts) != 0;
-        }
 
         internal bool IsPartEnabled(RootDocumentationParts parts)
         {
@@ -121,6 +115,7 @@ namespace Roslynator.Documentation
             public const bool AttributeArguments = true;
             public const bool InheritedInterfaceMembers = true; //TODO: InheritedInterfaceMembers default value
             public const bool OmitIEnumerable = true;
+            public const DocumentationDepth Depth =  DocumentationDepth.Member;
         }
     }
 }

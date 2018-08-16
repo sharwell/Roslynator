@@ -71,6 +71,10 @@ namespace Roslynator.Documentation.Markdown
 
         public override void WriteImage(string text, string url, string title = null) => _writer.WriteImage(text, url, title);
 
+        public override void WriteStartLink() => _writer.WriteStartLink();
+
+        public override void WriteEndLink(string url, string title = null) => _writer.WriteEndLink(url, title);
+
         public override void WriteLink(string text, string url, string title = null) => _writer.WriteLink(text, url, title);
 
         public override void WriteCodeBlock(string text, string language = null)

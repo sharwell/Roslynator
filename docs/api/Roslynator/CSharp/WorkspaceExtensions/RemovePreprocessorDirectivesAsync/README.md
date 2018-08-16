@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [RemovePreprocessorDirectivesAsync(Document, PreprocessorDirectiveKinds, CancellationToken)](#Roslynator_CSharp_WorkspaceExtensions_RemovePreprocessorDirectivesAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_PreprocessorDirectiveKinds_System_Threading_CancellationToken_) | Creates a new document with preprocessor directives of the specified kind removed\. |
-| [RemovePreprocessorDirectivesAsync(Document, TextSpan, PreprocessorDirectiveKinds, CancellationToken)](#Roslynator_CSharp_WorkspaceExtensions_RemovePreprocessorDirectivesAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_PreprocessorDirectiveKinds_System_Threading_CancellationToken_) | Creates a new document with preprocessor directives of the specified kind removed\. |
+| [**RemovePreprocessorDirectivesAsync**(Document, PreprocessorDirectiveKinds, CancellationToken)](#Roslynator_CSharp_WorkspaceExtensions_RemovePreprocessorDirectivesAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_PreprocessorDirectiveKinds_System_Threading_CancellationToken_) | Creates a new document with preprocessor directives of the specified kind removed\. |
+| [**RemovePreprocessorDirectivesAsync**(Document, TextSpan, PreprocessorDirectiveKinds, CancellationToken)](#Roslynator_CSharp_WorkspaceExtensions_RemovePreprocessorDirectivesAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_PreprocessorDirectiveKinds_System_Threading_CancellationToken_) | Creates a new document with preprocessor directives of the specified kind removed\. |
 
 ## RemovePreprocessorDirectivesAsync\(Document, PreprocessorDirectiveKinds, CancellationToken\)<a name="Roslynator_CSharp_WorkspaceExtensions_RemovePreprocessorDirectivesAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_PreprocessorDirectiveKinds_System_Threading_CancellationToken_"></a>
 

@@ -2,5 +2,5 @@
 
 | Extension Method | Summary |
 | ---------------- | ------- |
-| [IsVerbatim(InterpolatedStringExpressionSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsVerbatim/README.md) | Returns true if the specified interpolated string is a verbatim\. |
+| [**IsVerbatim**(InterpolatedStringExpressionSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsVerbatim/README.md) | Returns true if the specified interpolated string is a verbatim\. |
 

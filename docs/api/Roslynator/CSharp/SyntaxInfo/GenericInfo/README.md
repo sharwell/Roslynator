@@ -10,15 +10,15 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [GenericInfo(DelegateDeclarationSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified delegate declaration\. |
-| [GenericInfo(LocalFunctionStatementSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified local function\. |
-| [GenericInfo(MethodDeclarationSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified method declaration\. |
-| [GenericInfo(SyntaxNode)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified node\. |
-| [GenericInfo(TypeDeclarationSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type declaration\. |
-| [GenericInfo(TypeParameterConstraintClauseSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintClauseSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified constraint clause\. |
-| [GenericInfo(TypeParameterConstraintSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type parameter constraint\. |
-| [GenericInfo(TypeParameterListSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterListSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type parameter list\. |
-| [GenericInfo(TypeParameterSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type parameter\. |
+| [**GenericInfo**(DelegateDeclarationSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified delegate declaration\. |
+| [**GenericInfo**(LocalFunctionStatementSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified local function\. |
+| [**GenericInfo**(MethodDeclarationSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified method declaration\. |
+| [**GenericInfo**(SyntaxNode)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_SyntaxNode_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified node\. |
+| [**GenericInfo**(TypeDeclarationSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type declaration\. |
+| [**GenericInfo**(TypeParameterConstraintClauseSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintClauseSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified constraint clause\. |
+| [**GenericInfo**(TypeParameterConstraintSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterConstraintSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type parameter constraint\. |
+| [**GenericInfo**(TypeParameterListSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterListSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type parameter list\. |
+| [**GenericInfo**(TypeParameterSyntax)](#Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_TypeParameterSyntax_) | Creates a new [GenericInfo](../../Syntax/GenericInfo/README.md) from the specified type parameter\. |
 
 ## GenericInfo\(DelegateDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxInfo_GenericInfo_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_"></a>
 

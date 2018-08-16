@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [UnaryPlusExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
-| [UnaryPlusExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
+| [**UnaryPlusExpression**(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [**UnaryPlusExpression**(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## UnaryPlusExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

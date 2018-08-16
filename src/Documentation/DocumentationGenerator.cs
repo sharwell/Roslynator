@@ -121,8 +121,8 @@ namespace Roslynator.Documentation
             DocumentationWriter writer = CreateWriterCore();
 
             writer.CurrentSymbol = currentSymbol;
-            writer.CanCreateMemberLocalUrl = Options.IsPartEnabled(DocumentationParts.Member);
-            writer.CanCreateTypeLocalUrl = Options.IsPartEnabled(DocumentationParts.Type);
+            writer.CanCreateMemberLocalUrl = Options.Depth == DocumentationDepth.Member;
+            writer.CanCreateTypeLocalUrl = Options.Depth <= DocumentationDepth.Type;
 
             return writer;
         }
@@ -131,27 +131,17 @@ namespace Roslynator.Documentation
 
         public IEnumerable<DocumentationGeneratorResult> Generate(string heading = null)
         {
-            DocumentationParts parts = Options.DocumentationParts;
+            DocumentationDepth depth = Options.Depth;
 
             DocumentationGeneratorResult objectModel = default;
-            DocumentationGeneratorResult extensions = default;
-
-            if ((parts & DocumentationParts.Extensions) != 0)
-            {
-                extensions = GenerateExternalTypesExtensions();
-
-                if (!extensions.HasContent)
-                    parts &= ~DocumentationParts.Extensions;
-            }
+            DocumentationGeneratorResult externalTypesExtensions = GenerateExternalTypesExtensions();
 
             using (DocumentationWriter writer = CreateWriter())
             {
-                yield return GenerateRoot(writer, heading, addExtensionsLink: (parts & DocumentationParts.Extensions) != 0);
+                yield return GenerateRoot(writer, heading, addExtensionsLink: externalTypesExtensions.HasContent);
             }
 
-            bool generateTypes = (parts & DocumentationParts.Type) != 0;
-
-            if ((parts & DocumentationParts.Namespace) != 0)
+            if (depth <= DocumentationDepth.Namespace)
             {
                 foreach (INamespaceSymbol namespaceSymbol in DocumentationModel.NamespaceSymbols)
                 {
@@ -161,17 +151,15 @@ namespace Roslynator.Documentation
                 }
             }
 
-            if (generateTypes)
+            if (depth <= DocumentationDepth.Type)
             {
-                bool generateMembers = (parts & DocumentationParts.Member) != 0;
-
                 foreach (INamedTypeSymbol typeSymbol in DocumentationModel.TypeSymbols)
                 {
                     TypeDocumentationModel typeModel = DocumentationModel.GetTypeModel(typeSymbol);
 
                     yield return GenerateType(typeModel);
 
-                    if (generateMembers)
+                    if (depth == DocumentationDepth.Member)
                     {
                         foreach (DocumentationGeneratorResult result in GenerateMembers(typeModel))
                             yield return result;
@@ -182,9 +170,9 @@ namespace Roslynator.Documentation
             if (objectModel.HasContent)
                 yield return objectModel;
 
-            if (extensions.HasContent)
+            if (externalTypesExtensions.HasContent)
             {
-                yield return extensions;
+                yield return externalTypesExtensions;
 
                 foreach (INamedTypeSymbol typeSymbol in DocumentationModel.GetExtendedExternalTypes())
                     yield return GenerateExtendedExternalType(typeSymbol);
@@ -323,7 +311,7 @@ namespace Roslynator.Documentation
                     Resources.GetName(typeKind),
                     Resources.SummaryTitle,
                     SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
-                    addLink: Options.IsPartEnabled(DocumentationParts.Type));
+                    addLink: Options.Depth <= DocumentationDepth.Type);
             }
 
             IEnumerable<NamespaceDocumentationParts> GetAvailableParts()

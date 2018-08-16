@@ -10,9 +10,9 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [Setter(AccessorListSyntax)](#Roslynator_CSharp_SyntaxExtensions_Setter_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_) | Returns a set accessor contained in the specified list\. |
-| [Setter(IndexerDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_Setter_Microsoft_CodeAnalysis_CSharp_Syntax_IndexerDeclarationSyntax_) | Returns a set accessor that is contained in the specified indexer declaration\. |
-| [Setter(PropertyDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_Setter_Microsoft_CodeAnalysis_CSharp_Syntax_PropertyDeclarationSyntax_) | Returns property set accessor, if any\. |
+| [**Setter**(AccessorListSyntax)](#Roslynator_CSharp_SyntaxExtensions_Setter_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_) | Returns a set accessor contained in the specified list\. |
+| [**Setter**(IndexerDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_Setter_Microsoft_CodeAnalysis_CSharp_Syntax_IndexerDeclarationSyntax_) | Returns a set accessor that is contained in the specified indexer declaration\. |
+| [**Setter**(PropertyDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_Setter_Microsoft_CodeAnalysis_CSharp_Syntax_PropertyDeclarationSyntax_) | Returns property set accessor, if any\. |
 
 ## Setter\(AccessorListSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_Setter_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorListSyntax_"></a>
 

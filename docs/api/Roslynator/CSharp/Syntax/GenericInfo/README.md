@@ -37,24 +37,24 @@ public readonly struct GenericInfo : System.IEquatable<GenericInfo>
 
 | Method | Summary |
 | ------ | ------- |
-| [Equals(GenericInfo)](Equals/README.md#Roslynator_CSharp_Syntax_GenericInfo_Equals_Roslynator_CSharp_Syntax_GenericInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<GenericInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
-| [Equals(Object)](Equals/README.md#Roslynator_CSharp_Syntax_GenericInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
-| [FindConstraintClause(String)](FindConstraintClause/README.md) | Searches for a constraint clause with the specified type parameter name and returns the first occurrence within the constraint clauses\. |
-| [FindTypeParameter(String)](FindTypeParameter/README.md) | Searches for a type parameter with the specified name and returns the first occurrence within the type parameters\. |
-| [GetHashCode()](GetHashCode/README.md) | Returns the hash code for this instance\. \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
-| [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [RemoveAllConstraintClauses()](RemoveAllConstraintClauses/README.md) | Creates a new [GenericInfo](./README.md) with all constraint clauses removed\. |
-| [RemoveConstraintClause(TypeParameterConstraintClauseSyntax)](RemoveConstraintClause/README.md) | Creates a new [GenericInfo](./README.md) with the specified constraint clause removed\. |
-| [RemoveTypeParameter(TypeParameterSyntax)](RemoveTypeParameter/README.md) | Creates a new [GenericInfo](./README.md) with the specified type parameter removed\. |
-| [ToString()](ToString/README.md) | Returns the string representation of the underlying syntax, not including its leading and trailing trivia\. \(Overrides [ValueType.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring)\) |
-| [WithConstraintClauses(SyntaxList\<TypeParameterConstraintClauseSyntax>)](WithConstraintClauses/README.md) | Creates a new [GenericInfo](./README.md) with the constraint clauses updated\. |
-| [WithTypeParameterList(TypeParameterListSyntax)](WithTypeParameterList/README.md) | Creates a new [GenericInfo](./README.md) with the type parameter list updated\. |
+| [**Equals**(GenericInfo)](Equals/README.md#Roslynator_CSharp_Syntax_GenericInfo_Equals_Roslynator_CSharp_Syntax_GenericInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<GenericInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
+| [**Equals**(Object)](Equals/README.md#Roslynator_CSharp_Syntax_GenericInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| [**FindConstraintClause**(String)](FindConstraintClause/README.md) | Searches for a constraint clause with the specified type parameter name and returns the first occurrence within the constraint clauses\. |
+| [**FindTypeParameter**(String)](FindTypeParameter/README.md) | Searches for a type parameter with the specified name and returns the first occurrence within the type parameters\. |
+| [**GetHashCode**()](GetHashCode/README.md) | Returns the hash code for this instance\. \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
+| [**GetType**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [**MemberwiseClone**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [**RemoveAllConstraintClauses**()](RemoveAllConstraintClauses/README.md) | Creates a new [GenericInfo](./README.md) with all constraint clauses removed\. |
+| [**RemoveConstraintClause**(TypeParameterConstraintClauseSyntax)](RemoveConstraintClause/README.md) | Creates a new [GenericInfo](./README.md) with the specified constraint clause removed\. |
+| [**RemoveTypeParameter**(TypeParameterSyntax)](RemoveTypeParameter/README.md) | Creates a new [GenericInfo](./README.md) with the specified type parameter removed\. |
+| [**ToString**()](ToString/README.md) | Returns the string representation of the underlying syntax, not including its leading and trailing trivia\. \(Overrides [ValueType.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring)\) |
+| [**WithConstraintClauses**(SyntaxList\<TypeParameterConstraintClauseSyntax>)](WithConstraintClauses/README.md) | Creates a new [GenericInfo](./README.md) with the constraint clauses updated\. |
+| [**WithTypeParameterList**(TypeParameterListSyntax)](WithTypeParameterList/README.md) | Creates a new [GenericInfo](./README.md) with the type parameter list updated\. |
 
 ## Operators
 
 | Operator | Summary |
 | -------- | ------- |
-| [Equality(GenericInfo, GenericInfo)](op_Equality/README.md) | |
-| [Inequality(GenericInfo, GenericInfo)](op_Inequality/README.md) | |
+| [**Equality**(GenericInfo, GenericInfo)](op_Equality/README.md) | |
+| [**Inequality**(GenericInfo, GenericInfo)](op_Inequality/README.md) | |
 

@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [WithUsings(IEnumerable\<UsingDirectiveSyntax>)](#Roslynator_CSharp_Syntax_UsingDirectiveListInfo_WithUsings_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__) | Creates a new [UsingDirectiveListInfo](../README.md) with the usings updated\. |
-| [WithUsings(SyntaxList\<UsingDirectiveSyntax>)](#Roslynator_CSharp_Syntax_UsingDirectiveListInfo_WithUsings_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__) | Creates a new [UsingDirectiveListInfo](../README.md) with the usings updated\. |
+| [**WithUsings**(IEnumerable\<UsingDirectiveSyntax>)](#Roslynator_CSharp_Syntax_UsingDirectiveListInfo_WithUsings_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__) | Creates a new [UsingDirectiveListInfo](../README.md) with the usings updated\. |
+| [**WithUsings**(SyntaxList\<UsingDirectiveSyntax>)](#Roslynator_CSharp_Syntax_UsingDirectiveListInfo_WithUsings_Microsoft_CodeAnalysis_SyntaxList_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__) | Creates a new [UsingDirectiveListInfo](../README.md) with the usings updated\. |
 
 ## WithUsings\(IEnumerable\<UsingDirectiveSyntax>\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_WithUsings_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax__"></a>
 

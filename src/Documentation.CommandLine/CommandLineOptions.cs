@@ -23,8 +23,8 @@ namespace Roslynator.Documentation
         [Option(longName: "mode", shortName: 'm', Required = true)]
         public string Mode { get; set; }
 
-        [Option(longName: "documentationParts")]
-        public IEnumerable<string> DocumentationParts { get; set; }
+        [Option(longName: "depth" Default = DefaultValues.Depth)]
+        public string Depth { get; set; }
 
         [Option(longName: "namespaceParts")]
         public IEnumerable<string> NamespaceParts { get; set; }
