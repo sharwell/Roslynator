@@ -275,17 +275,24 @@ namespace Roslynator.Documentation
             WriteEndTableCell();
         }
 
-        public void WriteContent(IEnumerable<string> names, bool addLinkToRoot = false)
+        public void WriteContent(IEnumerable<string> names, bool addLinkToRoot = false, bool addSeparatorBeforeFirstItem = true)
         {
             IEnumerator<string> en = names.GetEnumerator();
 
             if (addLinkToRoot)
+            {
+                if (!addSeparatorBeforeFirstItem)
+                    WriteContentSeparator();
+
                 WriteLink(Resources.HomeTitle, UrlProvider.GetUrlToRoot(UrlProvider.GetFolders(CurrentSymbol).Length, '/'));
+            }
 
             if (en.MoveNext())
             {
-                if (addLinkToRoot)
+                if (addLinkToRoot || !addSeparatorBeforeFirstItem)
+                {
                     WriteContentSeparator();
+                }
 
                 while (true)
                 {
@@ -309,13 +316,13 @@ namespace Roslynator.Documentation
                 WriteLine();
                 WriteLine();
             }
+        }
 
-            void WriteContentSeparator()
-            {
-                WriteSpace();
-                WriteCharEntity(Resources.InlineSeparatorChar);
-                WriteSpace();
-            }
+        internal void WriteContentSeparator()
+        {
+            WriteSpace();
+            WriteCharEntity(Resources.InlineSeparatorChar);
+            WriteSpace();
         }
 
         public virtual void WriteTitle(ISymbol symbol)

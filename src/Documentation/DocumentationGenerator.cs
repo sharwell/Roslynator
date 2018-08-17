@@ -390,9 +390,18 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
                 writer.WriteHeading1(Resources.ExtensionsOfExternalTypesTitle);
+
                 writer.WriteLink(Resources.HomeTitle, UrlProvider.GetUrlToRoot(0, '/'));
-                writer.WriteLine();
-                writer.WriteLine();
+                writer.WriteContentSeparator();
+                writer.WriteLink(Resources.NamespacesTitle, UrlProvider.GetFragment(Resources.NamespacesTitle));
+                writer.WriteContent(extendedExternalTypes
+                    .Select(f => f.TypeKind)
+                    .Where(f => IsNamespacePartEnabled(f))
+                    .Distinct()
+                    .Select(f => f.ToNamespaceDocumentationPart())
+                    .OrderBy(f => f, NamespacePartComparer)
+                    .Select(f => Resources.GetHeading(f)), addSeparatorBeforeFirstItem: false);
+
                 writer.WriteList(namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
                 foreach (IGrouping<TypeKind, INamedTypeSymbol> typesByKind in extendedExternalTypes
