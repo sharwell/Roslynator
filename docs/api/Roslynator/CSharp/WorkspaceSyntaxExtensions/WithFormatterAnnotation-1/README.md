@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # WorkspaceSyntaxExtensions\.WithFormatterAnnotation Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[WorkspaceSyntaxExtensions](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[WorkspaceSyntaxExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 

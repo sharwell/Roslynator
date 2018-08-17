@@ -223,6 +223,9 @@ namespace Roslynator.Documentation
 
         public abstract void WriteLine();
 
+        //TODO: rename WriteLinkDefinition
+        public abstract void WriteLinkDestination(string name);
+
         public virtual void WriteValue(bool value)
         {
             WriteString((value) ? Resources.TrueValue : Resources.FalseValue);
@@ -256,12 +259,6 @@ namespace Roslynator.Documentation
         internal void WriteSpace()
         {
             WriteString(" ");
-        }
-
-        //TODO: <a name="id"></a>
-        internal void WriteLinkDefinition(string name)
-        {
-            WriteRaw($@"<a name=""{name}""></a>");
         }
 
         internal void WriteSymbol(ISymbol symbol, SymbolDisplayFormat format = null, SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None)
@@ -1139,10 +1136,9 @@ namespace Roslynator.Documentation
         {
             if (!string.IsNullOrEmpty(linkDefinition))
             {
-                WriteLinkDefinition(linkDefinition);
+                WriteLinkDestination(linkDefinition);
                 WriteLine();
             }
-
 
             WriteStartHeading(level);
 
@@ -1412,7 +1408,7 @@ namespace Roslynator.Documentation
                     }
                 }
 
-                return "_Top";
+                return "_top";
             }
 
             IEnumerable<ISymbol> GetMembers(TypeDocumentationModel model)

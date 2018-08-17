@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # SyntaxListSelection\<TNode>\.Last\(\) Method
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxListSelection\<TNode>](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[SyntaxListSelection\<TNode>](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -22,4 +22,4 @@ TNode
 
 ### Implements
 
-* [ISelection\<TNode>.Last](../../ISelection-1/Last/README.md#_Top)
+* [ISelection\<TNode>.Last](../../ISelection-1/Last/README.md#_top)

@@ -1,4 +1,4 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # Roslynator\.CSharp\.Workspaces
 
@@ -6,11 +6,11 @@
 
 ## Namespaces
 
-* [Roslynator](../../docs/api/Roslynator/README.md#_Top)
-* [Roslynator.CSharp](../../docs/api/Roslynator/CSharp/README.md#_Top)
+* [Roslynator](../../docs/api/Roslynator/README.md#_top)
+* [Roslynator.CSharp](../../docs/api/Roslynator/CSharp/README.md#_top)
 
 ## Static Classes
 
-* Roslynator\.[WorkspaceExtensions](../../docs/api/Roslynator/WorkspaceExtensions/README.md#_Top)
-* Roslynator\.CSharp\.[WorkspaceExtensions](../../docs/api/Roslynator/CSharp/WorkspaceExtensions/README.md#_Top)
-* Roslynator\.CSharp\.[WorkspaceSyntaxExtensions](../../docs/api/Roslynator/CSharp/WorkspaceSyntaxExtensions/README.md#_Top)
+* Roslynator\.[WorkspaceExtensions](../../docs/api/Roslynator/WorkspaceExtensions/README.md#_top)
+* Roslynator\.CSharp\.[WorkspaceExtensions](../../docs/api/Roslynator/CSharp/WorkspaceExtensions/README.md#_top)
+* Roslynator\.CSharp\.[WorkspaceSyntaxExtensions](../../docs/api/Roslynator/CSharp/WorkspaceSyntaxExtensions/README.md#_top)

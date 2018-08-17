@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # CSharpFacts\.IsLambdaExpression\(SyntaxKind\) Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFacts](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[CSharpFacts](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

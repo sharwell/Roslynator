@@ -99,7 +99,7 @@ namespace Roslynator.Documentation
                     Writer.WriteStartHeading(2);
                     Writer.WriteString(overloadSymbol.ToDisplayString(format, additionalOptions));
                     Writer.WriteSpace();
-                    Writer.WriteLinkDefinition(id);
+                    Writer.WriteLinkDestination(id);
                     Writer.WriteEndHeading();
                     WriteContent(overloadSymbol, headingLevelBase: 1);
                 }
@@ -108,7 +108,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteTitle(ISymbol symbol, bool isOverloaded)
         {
-            Writer.WriteLinkDefinition("_Top");
+            Writer.WriteLinkDestination("_top");
             Writer.WriteLine();
 
             Writer.WriteStartHeading(1);

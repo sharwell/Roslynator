@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # FooDic\<TKey, TValue>\.IEnumerable\<TValue>\.GetEnumerator\(\) Method
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooDic\<TKey, TValue>](../README.md#_Top)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_top)\.[FooDic\<TKey, TValue>](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

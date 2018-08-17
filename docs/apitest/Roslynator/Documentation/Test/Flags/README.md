@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # Flags Enum
 
-[Home](../../../../README.md#_Top) &#x2022; [Fields](#fields)
+[Home](../../../../README.md#_top) &#x2022; [Fields](#fields)
 
-**Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
+**Namespace**: [Roslynator.Documentation.Test](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

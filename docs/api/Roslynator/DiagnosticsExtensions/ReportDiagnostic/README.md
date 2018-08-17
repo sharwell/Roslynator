@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # DiagnosticsExtensions\.ReportDiagnostic Method
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[DiagnosticsExtensions](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[DiagnosticsExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

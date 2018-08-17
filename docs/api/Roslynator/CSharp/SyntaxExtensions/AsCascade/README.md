@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # SyntaxExtensions\.AsCascade\(IfStatementSyntax\) Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[SyntaxExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Returns [IfStatementCascade](../../IfStatementCascade/README.md#_Top) that enables to enumerate if\-else cascade\.
+Returns [IfStatementCascade](../../IfStatementCascade/README.md#_top) that enables to enumerate if\-else cascade\.
 
 ```csharp
 public static IfStatementCascade AsCascade(this IfStatementSyntax ifStatement)
@@ -22,5 +22,5 @@ public static IfStatementCascade AsCascade(this IfStatementSyntax ifStatement)
 
 ### Returns
 
-Roslynator\.CSharp\.[IfStatementCascade](../../IfStatementCascade/README.md#_Top)
+Roslynator\.CSharp\.[IfStatementCascade](../../IfStatementCascade/README.md#_top)
 

@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # SeparatedSyntaxListSelection\<TNode>\.FirstIndex Property
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -22,4 +22,4 @@ System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
 ### Implements
 
-* [ISelection\<TNode>.FirstIndex](../../ISelection-1/FirstIndex/README.md#_Top)
+* [ISelection\<TNode>.FirstIndex](../../ISelection-1/FirstIndex/README.md#_top)

@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # SimpleIfStatementInfo\.Equality\(SimpleIfStatementInfo, SimpleIfStatementInfo\) Operator
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[SimpleIfStatementInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_top)\.[SimpleIfStatementInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

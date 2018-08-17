@@ -1,8 +1,8 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # Roslynator\.Documentation\.Test Namespace
 
-[Home](../../../README.md#_Top) &#x2022; [Examples](#examples) &#x2022; [Remarks](#remarks) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums) &#x2022; [Delegates](#delegates) &#x2022; [See Also](#see-also)
+[Home](../../../README.md#_top) &#x2022; [Examples](#examples) &#x2022; [Remarks](#remarks) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums) &#x2022; [Delegates](#delegates) &#x2022; [See Also](#see-also)
 
 test summary
 
@@ -18,39 +18,39 @@ test remarks
 
 | Class | Summary |
 | ----- | ------- |
-| [B](B/README.md#_Top) | |
-| [C](C/README.md#_Top) | |
-| [Foo](Foo/README.md#_Top) | \[deprecated\] a → > b [Foo](Foo/README.md#_Top) |
-| [FooAttribute](FooAttribute/README.md#_Top) | |
-| [FooCollection](FooCollection/README.md#_Top) | |
-| [FooDic\<TKey, TValue>](FooDic-2/README.md#_Top) | \[deprecated\]  |
-| [FooEvent](FooEvent/README.md#_Top) | |
-| [FooExtensions](FooExtensions/README.md#_Top) | fx |
+| [B](B/README.md#_top) | |
+| [C](C/README.md#_top) | |
+| [Foo](Foo/README.md#_top) | \[deprecated\] a → > b [Foo](Foo/README.md#_top) |
+| [FooAttribute](FooAttribute/README.md#_top) | |
+| [FooCollection](FooCollection/README.md#_top) | |
+| [FooDic\<TKey, TValue>](FooDic-2/README.md#_top) | \[deprecated\]  |
+| [FooEvent](FooEvent/README.md#_top) | |
+| [FooExtensions](FooExtensions/README.md#_top) | fx |
 
 ## Structs
 
 | Struct | Summary |
 | ------ | ------- |
-| [FooStruct](FooStruct/README.md#_Top) | |
+| [FooStruct](FooStruct/README.md#_top) | |
 
 ## Interfaces
 
 | Interface | Summary |
 | --------- | ------- |
-| [IFoo](IFoo/README.md#_Top) | |
-| [IImmutableFoo\<T>](IImmutableFoo-1/README.md#_Top) | |
+| [IFoo](IFoo/README.md#_top) | |
+| [IImmutableFoo\<T>](IImmutableFoo-1/README.md#_top) | |
 
 ## Enums
 
 | Enum | Summary |
 | ---- | ------- |
-| [Flags](Flags/README.md#_Top) | |
+| [Flags](Flags/README.md#_top) | |
 
 ## Delegates
 
 | Delegate | Summary |
 | -------- | ------- |
-| [FooDelegate](FooDelegate/README.md#_Top) | del |
+| [FooDelegate](FooDelegate/README.md#_top) | del |
 
 ## See Also
 

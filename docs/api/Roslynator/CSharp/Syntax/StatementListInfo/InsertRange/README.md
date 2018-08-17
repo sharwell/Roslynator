@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # StatementListInfo\.InsertRange\(Int32, IEnumerable\<StatementSyntax>\) Method
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[StatementListInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_top)\.[StatementListInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [StatementListInfo](../README.md#_Top) with the specified statements inserted at the index\.
+Creates a new [StatementListInfo](../README.md#_top) with the specified statements inserted at the index\.
 
 ```csharp
 public StatementListInfo InsertRange(int index, IEnumerable<StatementSyntax> statements)
@@ -24,5 +24,5 @@ public StatementListInfo InsertRange(int index, IEnumerable<StatementSyntax> sta
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md#_Top)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md#_top)
 

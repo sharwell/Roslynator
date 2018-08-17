@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # C Class
 
-[Home](../../../../README.md#_Top) &#x2022; [Constructors](#constructors) &#x2022; [Fields](#fields) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Events](#events)
+[Home](../../../../README.md#_top) &#x2022; [Constructors](#constructors) &#x2022; [Fields](#fields) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Events](#events)
 
-**Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
+**Namespace**: [Roslynator.Documentation.Test](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -14,26 +14,26 @@ public class C : B
 
 ### Inheritance
 
-[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [B](../B/README.md#_Top) &#x2192; C
+[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) &#x2192; [B](../B/README.md#_top) &#x2192; C
 
 ## Constructors
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [C()](-ctor/README.md#_Top) | |
+| [C()](-ctor/README.md#_top) | |
 
 ## Fields
 
 | Field | Summary |
 | ----- | ------- |
-| [Field](Field/README.md#_Top) | |
+| [Field](Field/README.md#_top) | |
 
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
-| [Item\[Int32\]](Item/README.md#_Top) | |
-| [Property](Property/README.md#_Top) | |
+| [Item\[Int32\]](Item/README.md#_top) | |
+| [Property](Property/README.md#_top) | |
 
 ## Methods
 
@@ -43,12 +43,12 @@ public class C : B
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [Method()](Method/README.md#_Top) | |
-| [ToString()](ToString/README.md#_Top) | |
+| [Method()](Method/README.md#_top) | |
+| [ToString()](ToString/README.md#_top) | |
 
 ## Events
 
 | Event | Summary |
 | ----- | ------- |
-| [Event](Event/README.md#_Top) | |
+| [Event](Event/README.md#_top) | |
 

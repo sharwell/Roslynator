@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # EnumExtensions Class
 
-[Home](../../../README.md#_Top) &#x2022; [Methods](#methods)
+[Home](../../../README.md#_top) &#x2022; [Methods](#methods)
 
-**Namespace**: [Roslynator.CSharp](../README.md#_Top)
+**Namespace**: [Roslynator.CSharp](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

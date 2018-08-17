@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # MemberDeclarationListInfo\.Insert\(Int32, MemberDeclarationSyntax\) Method
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[MemberDeclarationListInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_top)\.[MemberDeclarationListInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [MemberDeclarationListInfo](../README.md#_Top) with the specified member inserted at the index\.
+Creates a new [MemberDeclarationListInfo](../README.md#_top) with the specified member inserted at the index\.
 
 ```csharp
 public MemberDeclarationListInfo Insert(int index, MemberDeclarationSyntax member)
@@ -24,5 +24,5 @@ public MemberDeclarationListInfo Insert(int index, MemberDeclarationSyntax membe
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md#_Top)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md#_top)
 

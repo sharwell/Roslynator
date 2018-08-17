@@ -1,11 +1,11 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # [AccessorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessordeclarationsyntax) Class Extensions
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |
 | [BodyOrExpressionBody(AccessorDeclarationSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/BodyOrExpressionBody/README.md#Roslynator_CSharp_SyntaxExtensions_BodyOrExpressionBody_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_) | Returns accessor body or an expression body if the body is null\. |
-| [IsAutoImplemented(AccessorDeclarationSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsAutoImplemented/README.md#_Top) | Returns true is the specified accessor is auto\-implemented accessor\. |
+| [IsAutoImplemented(AccessorDeclarationSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsAutoImplemented/README.md#_top) | Returns true is the specified accessor is auto\-implemented accessor\. |
 

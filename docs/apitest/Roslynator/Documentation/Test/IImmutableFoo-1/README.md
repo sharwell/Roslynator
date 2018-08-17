@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # IImmutableFoo\<T> Interface
 
-[Home](../../../../README.md#_Top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
+[Home](../../../../README.md#_top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
 
-**Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
+**Namespace**: [Roslynator.Documentation.Test](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -28,7 +28,7 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 
 ### Implements
 
-* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IImmutableFoo\<T>](#_Top)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[IImmutableFoo\<T>](#_top)>
 * System\.Collections\.[ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)
 * System\.Collections\.[IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)
 * System\.Collections\.[IStructuralComparable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.istructuralcomparable)
@@ -48,7 +48,7 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 | [IsFixedSize](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.isfixedsize) |  \(Inherited from [IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)\) |
 | [IsReadOnly](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.isreadonly) |  \(Inherited from [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\) |
 | [IsSynchronized](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.issynchronized) |  \(Inherited from [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)\) |
-| [Item\[Int32\]](Item/README.md#_Top) | |
+| [Item\[Int32\]](Item/README.md#_top) | |
 | [SyncRoot](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.syncroot) |  \(Inherited from [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)\) |
 
 ## Methods

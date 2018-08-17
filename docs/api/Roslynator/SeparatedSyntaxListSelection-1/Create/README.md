@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # SeparatedSyntaxListSelection\<TNode>\.Create\(SeparatedSyntaxList\<TNode>, TextSpan\) Method
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [SeparatedSyntaxListSelection\<TNode>](../README.md#_Top) based on the specified list and span\.
+Creates a new [SeparatedSyntaxListSelection\<TNode>](../README.md#_top) based on the specified list and span\.
 
 ```csharp
 public static SeparatedSyntaxListSelection<TNode> Create(SeparatedSyntaxList<TNode> list, TextSpan span)
@@ -24,5 +24,5 @@ public static SeparatedSyntaxListSelection<TNode> Create(SeparatedSyntaxList<TNo
 
 ### Returns
 
-Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
+Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_top)
 

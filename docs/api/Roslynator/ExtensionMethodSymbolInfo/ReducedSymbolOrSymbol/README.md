@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # ExtensionMethodSymbolInfo\.ReducedSymbolOrSymbol Property
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[ExtensionMethodSymbolInfo](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[ExtensionMethodSymbolInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

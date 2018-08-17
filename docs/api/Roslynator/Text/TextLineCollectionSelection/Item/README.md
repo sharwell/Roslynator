@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # TextLineCollectionSelection\.Item\[Int32\] Property
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.Text](../../README.md#_Top)\.[TextLineCollectionSelection](../README.md#_Top)
+**Containing Type**: [Roslynator.Text](../../README.md#_top)\.[TextLineCollectionSelection](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

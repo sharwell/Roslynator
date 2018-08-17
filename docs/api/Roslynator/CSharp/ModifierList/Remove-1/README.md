@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # ModifierList\.Remove Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[ModifierList](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[ModifierList](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

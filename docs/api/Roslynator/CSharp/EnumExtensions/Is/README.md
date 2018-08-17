@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # EnumExtensions\.Is Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[EnumExtensions](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[EnumExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

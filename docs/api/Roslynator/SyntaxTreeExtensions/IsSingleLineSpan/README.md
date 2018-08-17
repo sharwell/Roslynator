@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # SyntaxTreeExtensions\.IsSingleLineSpan\(SyntaxTree, TextSpan, CancellationToken\) Method
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxTreeExtensions](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[SyntaxTreeExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # Bla\.M\(\) Method
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Bla](../README.md#_Top)
+**Containing Type**: [Bla](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

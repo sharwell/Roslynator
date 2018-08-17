@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # FooDic\<TKey, TValue> Class
 
-[Home](../../../../README.md#_Top) &#x2022; [Constructors](#constructors) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+[Home](../../../../README.md#_top) &#x2022; [Constructors](#constructors) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
-**Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
+**Namespace**: [Roslynator.Documentation.Test](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -46,7 +46,7 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [FooDic()](-ctor/README.md#_Top) | |
+| [FooDic()](-ctor/README.md#_top) | |
 
 ## Methods
 
@@ -62,9 +62,9 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md#_Top) | |
-| [IEnumerable\<KeyValuePair\<TKey, TValue>>.GetEnumerator()](System-Collections-Generic-IEnumerable-System-Collections-Generic-KeyValuePair-TKey-TValue---GetEnumerator/README.md#_Top) | |
-| [IEnumerable\<TValue>.GetEnumerator()](System-Collections-Generic-IEnumerable-TValue--GetEnumerator/README.md#_Top) | |
-| [IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>.Count](System-Collections-Generic-IReadOnlyCollection-System-Collections-Generic-KeyValuePair-TKey-TValue---Count/README.md#_Top) | |
-| [IReadOnlyList\<KeyValuePair\<TKey, TValue>>.Item\[Int32\]](System-Collections-Generic-IReadOnlyList-System-Collections-Generic-KeyValuePair-TKey-TValue---Item/README.md#_Top) | |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md#_top) | |
+| [IEnumerable\<KeyValuePair\<TKey, TValue>>.GetEnumerator()](System-Collections-Generic-IEnumerable-System-Collections-Generic-KeyValuePair-TKey-TValue---GetEnumerator/README.md#_top) | |
+| [IEnumerable\<TValue>.GetEnumerator()](System-Collections-Generic-IEnumerable-TValue--GetEnumerator/README.md#_top) | |
+| [IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>.Count](System-Collections-Generic-IReadOnlyCollection-System-Collections-Generic-KeyValuePair-TKey-TValue---Count/README.md#_top) | |
+| [IReadOnlyList\<KeyValuePair\<TKey, TValue>>.Item\[Int32\]](System-Collections-Generic-IReadOnlyList-System-Collections-Generic-KeyValuePair-TKey-TValue---Item/README.md#_top) | |
 

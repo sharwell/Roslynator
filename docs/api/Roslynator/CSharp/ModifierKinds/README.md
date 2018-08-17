@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # ModifierKinds Enum
 
-[Home](../../../README.md#_Top) &#x2022; [Fields](#fields)
+[Home](../../../README.md#_top) &#x2022; [Fields](#fields)
 
-**Namespace**: [Roslynator.CSharp](../README.md#_Top)
+**Namespace**: [Roslynator.CSharp](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

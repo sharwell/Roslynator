@@ -1,8 +1,8 @@
 # Foo Constructors
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[Foo](../README.md#_Top)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_top)\.[Foo](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

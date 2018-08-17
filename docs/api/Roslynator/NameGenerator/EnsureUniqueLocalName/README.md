@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # NameGenerator\.EnsureUniqueLocalName\(String, SemanticModel, Int32, Boolean, CancellationToken\) Method
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[NameGenerator](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[NameGenerator](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

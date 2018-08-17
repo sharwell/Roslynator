@@ -1,4 +1,4 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # Foo API
 
@@ -6,41 +6,41 @@
 
 ## Namespaces
 
-* [\<global namespace>](_Global/README.md#_Top)
-* [Roslynator.Documentation.Test](Roslynator/Documentation/Test/README.md#_Top)
-* [System](System/README.md#_Top)
+* [\<global namespace>](_Global/README.md#_top)
+* [Roslynator.Documentation.Test](Roslynator/Documentation/Test/README.md#_top)
+* [System](System/README.md#_top)
 
 ## Classes
 
 *  System\.Object
 * &emsp; System\.Attribute
-* &emsp; \| &emsp; Roslynator\.Documentation\.Test\.[FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md#_Top)
-* &emsp; System\.[ClassName](System/ClassName/README.md#_Top)
-* &emsp; Roslynator\.Documentation\.Test\.[B](Roslynator/Documentation/Test/B/README.md#_Top)
-* &emsp; \| &emsp; Roslynator\.Documentation\.Test\.[C](Roslynator/Documentation/Test/C/README.md#_Top)
-* &emsp; Roslynator\.Documentation\.Test\.[FooCollection](Roslynator/Documentation/Test/FooCollection/README.md#_Top)
-* &emsp; Roslynator\.Documentation\.Test\.[FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md#_Top)
-* &emsp; Roslynator\.Documentation\.Test\.[FooEvent](Roslynator/Documentation/Test/FooEvent/README.md#_Top)
-* &emsp; [Bla](_Global/Bla/README.md#_Top)
-* &emsp; \| &emsp; Roslynator\.Documentation\.Test\.[Foo](Roslynator/Documentation/Test/Foo/README.md#_Top)
+* &emsp; \| &emsp; Roslynator\.Documentation\.Test\.[FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md#_top)
+* &emsp; System\.[ClassName](System/ClassName/README.md#_top)
+* &emsp; Roslynator\.Documentation\.Test\.[B](Roslynator/Documentation/Test/B/README.md#_top)
+* &emsp; \| &emsp; Roslynator\.Documentation\.Test\.[C](Roslynator/Documentation/Test/C/README.md#_top)
+* &emsp; Roslynator\.Documentation\.Test\.[FooCollection](Roslynator/Documentation/Test/FooCollection/README.md#_top)
+* &emsp; Roslynator\.Documentation\.Test\.[FooDic\<TKey, TValue>](Roslynator/Documentation/Test/FooDic-2/README.md#_top)
+* &emsp; Roslynator\.Documentation\.Test\.[FooEvent](Roslynator/Documentation/Test/FooEvent/README.md#_top)
+* &emsp; [Bla](_Global/Bla/README.md#_top)
+* &emsp; \| &emsp; Roslynator\.Documentation\.Test\.[Foo](Roslynator/Documentation/Test/Foo/README.md#_top)
 
 ## Static Classes
 
-* Roslynator\.Documentation\.Test\.[FooExtensions](Roslynator/Documentation/Test/FooExtensions/README.md#_Top)
+* Roslynator\.Documentation\.Test\.[FooExtensions](Roslynator/Documentation/Test/FooExtensions/README.md#_top)
 
 ## Structs
 
-* Roslynator\.Documentation\.Test\.[FooStruct](Roslynator/Documentation/Test/FooStruct/README.md#_Top)
+* Roslynator\.Documentation\.Test\.[FooStruct](Roslynator/Documentation/Test/FooStruct/README.md#_top)
 
 ## Interfaces
 
-* Roslynator\.Documentation\.Test\.[IFoo](Roslynator/Documentation/Test/IFoo/README.md#_Top)
-* Roslynator\.Documentation\.Test\.[IImmutableFoo\<T>](Roslynator/Documentation/Test/IImmutableFoo-1/README.md#_Top)
+* Roslynator\.Documentation\.Test\.[IFoo](Roslynator/Documentation/Test/IFoo/README.md#_top)
+* Roslynator\.Documentation\.Test\.[IImmutableFoo\<T>](Roslynator/Documentation/Test/IImmutableFoo-1/README.md#_top)
 
 ## Enums
 
-* Roslynator\.Documentation\.Test\.[Flags](Roslynator/Documentation/Test/Flags/README.md#_Top)
+* Roslynator\.Documentation\.Test\.[Flags](Roslynator/Documentation/Test/Flags/README.md#_top)
 
 ## Delegates
 
-* Roslynator\.Documentation\.Test\.[FooDelegate](Roslynator/Documentation/Test/FooDelegate/README.md#_Top)
+* Roslynator\.Documentation\.Test\.[FooDelegate](Roslynator/Documentation/Test/FooDelegate/README.md#_top)

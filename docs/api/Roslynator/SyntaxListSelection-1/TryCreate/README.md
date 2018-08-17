@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # SyntaxListSelection\<TNode>\.TryCreate\(SyntaxList\<TNode>, TextSpan, SyntaxListSelection\<TNode>\) Method
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxListSelection\<TNode>](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[SyntaxListSelection\<TNode>](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [SyntaxListSelection\<TNode>](../README.md#_Top) based on the specified list and span\.
+Creates a new [SyntaxListSelection\<TNode>](../README.md#_top) based on the specified list and span\.
 
 ```csharp
 public static bool TryCreate(SyntaxList<TNode> list, TextSpan span, out SyntaxListSelection<TNode> selection)

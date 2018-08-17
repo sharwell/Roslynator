@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # IfStatementOrElseClause\.Inequality\(IfStatementOrElseClause, IfStatementOrElseClause\) Operator
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[IfStatementOrElseClause](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[IfStatementOrElseClause](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

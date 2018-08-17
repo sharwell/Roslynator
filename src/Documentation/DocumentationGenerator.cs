@@ -196,7 +196,7 @@ namespace Roslynator.Documentation
         {
             writer.WriteStartDocument();
 
-            writer.WriteLinkDefinition("_Top");
+            writer.WriteLinkDestination("_top");
             writer.WriteStartHeading(1);
             writer.WriteString(heading);
             writer.WriteEndHeading();
@@ -231,7 +231,7 @@ namespace Roslynator.Documentation
         {
             SymbolXmlDocumentation xmlDocumentation = DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName);
 
-            writer.WriteHeading(1 + headingLevelBase, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: addLink, linkDefinition: "_Top");
+            writer.WriteHeading(1 + headingLevelBase, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: addLink, linkDefinition: "_top");
 
             foreach (NamespaceDocumentationParts part in EnabledAndSortedNamespaceParts)
             {
@@ -393,7 +393,7 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
-                writer.WriteLinkDefinition("_Top");
+                writer.WriteLinkDestination("_top");
                 writer.WriteLine();
                 writer.WriteStartHeading(1);
                 writer.WriteString(Resources.ExtensionsOfExternalTypesTitle);
@@ -456,7 +456,7 @@ namespace Roslynator.Documentation
             using (DocumentationWriter writer = CreateWriter(typeSymbol))
             {
                 writer.WriteStartDocument();
-                writer.WriteLinkDefinition("_Top");
+                writer.WriteLinkDestination("_top");
                 writer.WriteLine();
                 writer.WriteStartHeading(1);
                 writer.WriteLink(typeSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
@@ -499,7 +499,7 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
-                writer.WriteHeading(1, typeSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName, addLink: false, linkDefinition: "_Top");
+                writer.WriteHeading(1, typeSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName, addLink: false, linkDefinition: "_top");
 
                 foreach (TypeDocumentationParts part in EnabledAndSortedTypeParts)
                 {

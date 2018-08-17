@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # TextLineCollectionSelection\.LastIndex Property
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.Text](../../README.md#_Top)\.[TextLineCollectionSelection](../README.md#_Top)
+**Containing Type**: [Roslynator.Text](../../README.md#_top)\.[TextLineCollectionSelection](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -22,4 +22,4 @@ System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
 ### Implements
 
-* [ISelection\<TextLine>.LastIndex](../../../ISelection-1/LastIndex/README.md#_Top)
+* [ISelection\<TextLine>.LastIndex](../../../ISelection-1/LastIndex/README.md#_top)

@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # IfStatementCascade\.Enumerator Struct
 
-[Home](../../../../README.md#_Top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
+[Home](../../../../README.md#_top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
 
-**Namespace**: [Roslynator.CSharp](../../README.md#_Top)
+**Namespace**: [Roslynator.CSharp](../../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -20,17 +20,17 @@ public struct IfStatementCascade.Enumerator
 
 | Property | Summary |
 | -------- | ------- |
-| [Current](Current/README.md#_Top) | |
+| [Current](Current/README.md#_top) | |
 
 ## Methods
 
 | Method | Summary |
 | ------ | ------- |
-| [Equals(Object)](Equals/README.md#_Top) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
-| [GetHashCode()](GetHashCode/README.md#_Top) |  \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
+| [Equals(Object)](Equals/README.md#_top) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| [GetHashCode()](GetHashCode/README.md#_top) |  \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [MoveNext()](MoveNext/README.md#_Top) | |
-| [Reset()](Reset/README.md#_Top) | |
+| [MoveNext()](MoveNext/README.md#_top) | |
+| [Reset()](Reset/README.md#_top) | |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring) |  \(Inherited from [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype)\) |
 

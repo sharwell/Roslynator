@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # ExpressionChain\.GetEnumerator\(\) Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[ExpressionChain](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[ExpressionChain](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -18,5 +18,5 @@ public ExpressionChain.Enumerator GetEnumerator()
 
 ### Returns
 
-Roslynator\.CSharp\.[ExpressionChain.Enumerator](../Enumerator/README.md#_Top)
+Roslynator\.CSharp\.[ExpressionChain.Enumerator](../Enumerator/README.md#_top)
 

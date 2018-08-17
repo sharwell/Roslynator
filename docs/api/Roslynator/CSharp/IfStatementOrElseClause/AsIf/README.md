@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # IfStatementOrElseClause\.AsIf\(\) Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[IfStatementOrElseClause](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[IfStatementOrElseClause](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Returns the underlying if statement if this [IfStatementOrElseClause](../README.md#_Top) is wrapping if statement\.
+Returns the underlying if statement if this [IfStatementOrElseClause](../README.md#_top) is wrapping if statement\.
 
 ```csharp
 public IfStatementSyntax AsIf()

@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # TextLineCollectionSelection\.Last\(\) Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.Text](../../README.md#_Top)\.[TextLineCollectionSelection](../README.md#_Top)
+**Containing Type**: [Roslynator.Text](../../README.md#_top)\.[TextLineCollectionSelection](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -22,4 +22,4 @@ Microsoft\.CodeAnalysis\.Text\.[TextLine](https://docs.microsoft.com/en-us/dotne
 
 ### Implements
 
-* [ISelection\<TextLine>.Last](../../../ISelection-1/Last/README.md#_Top)
+* [ISelection\<TextLine>.Last](../../../ISelection-1/Last/README.md#_top)

@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # MemberDeclarationListInfo\.ReplaceNode\(SyntaxNode, SyntaxNode\) Method
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[MemberDeclarationListInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_top)\.[MemberDeclarationListInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [MemberDeclarationListInfo](../README.md#_Top) with the specified old node replaced with a new node\.
+Creates a new [MemberDeclarationListInfo](../README.md#_top) with the specified old node replaced with a new node\.
 
 ```csharp
 public MemberDeclarationListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newNode)
@@ -24,5 +24,5 @@ public MemberDeclarationListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newN
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md#_Top)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md#_top)
 

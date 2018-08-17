@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # GenericInfo\.RemoveTypeParameter\(TypeParameterSyntax\) Method
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[GenericInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_top)\.[GenericInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [GenericInfo](../README.md#_Top) with the specified type parameter removed\.
+Creates a new [GenericInfo](../README.md#_top) with the specified type parameter removed\.
 
 ```csharp
 public GenericInfo RemoveTypeParameter(TypeParameterSyntax typeParameter)
@@ -22,5 +22,5 @@ public GenericInfo RemoveTypeParameter(TypeParameterSyntax typeParameter)
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md#_Top)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md#_top)
 

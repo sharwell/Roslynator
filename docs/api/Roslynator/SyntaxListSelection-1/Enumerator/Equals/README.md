@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # Enumerator\.Equals\(Object\) Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../../README.md#_Top)\.[SyntaxListSelection\<TNode>.Enumerator](../README.md#_Top)
+**Containing Type**: [Roslynator](../../../README.md#_top)\.[SyntaxListSelection\<TNode>.Enumerator](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # FooEvent Class
 
-[Home](../../../../README.md#_Top) &#x2022; [Constructors](#constructors) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+[Home](../../../../README.md#_top) &#x2022; [Constructors](#constructors) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
-**Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
+**Namespace**: [Roslynator.Documentation.Test](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -18,13 +18,13 @@ public class FooEvent : IFoo
 
 ### Implements
 
-* Roslynator\.Documentation\.Test\.[IFoo](../IFoo/README.md#_Top)
+* Roslynator\.Documentation\.Test\.[IFoo](../IFoo/README.md#_top)
 
 ## Constructors
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [FooEvent()](-ctor/README.md#_Top) | |
+| [FooEvent()](-ctor/README.md#_top) | |
 
 ## Methods
 
@@ -40,5 +40,5 @@ public class FooEvent : IFoo
 
 | Member | Summary |
 | ------ | ------- |
-| [IFoo.Changed](Roslynator-Documentation-Test-IFoo-Changed/README.md#_Top) | |
+| [IFoo.Changed](Roslynator-Documentation-Test-IFoo-Changed/README.md#_top) | |
 

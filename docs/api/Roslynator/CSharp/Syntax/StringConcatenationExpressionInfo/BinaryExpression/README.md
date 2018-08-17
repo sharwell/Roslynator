@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # StringConcatenationExpressionInfo\.BinaryExpression Property
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[StringConcatenationExpressionInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_top)\.[StringConcatenationExpressionInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

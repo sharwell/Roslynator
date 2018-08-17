@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # DiagnosticsExtensions Class
 
-[Home](../../README.md#_Top) &#x2022; [Methods](#methods)
+[Home](../../README.md#_top) &#x2022; [Methods](#methods)
 
-**Namespace**: [Roslynator](../README.md#_Top)
+**Namespace**: [Roslynator](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

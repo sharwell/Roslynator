@@ -1,14 +1,14 @@
 # SeparatedSyntaxListSelection\(SeparatedSyntaxList\<TNode>, TextSpan, Int32, Int32\) Constructor
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Initializes a new instance of the [SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)\.
+Initializes a new instance of the [SeparatedSyntaxListSelection\<TNode>](../README.md#_top)\.
 
 ```csharp
 protected SeparatedSyntaxListSelection(SeparatedSyntaxList<TNode> list, TextSpan span, int firstIndex, int lastIndex)

@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # SyntaxInfo\.SimpleIfElseInfo\(IfStatementSyntax, Boolean, Boolean\) Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[SyntaxInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [SimpleIfElseInfo](../../Syntax/SimpleIfElseInfo/README.md#_Top) from the specified if statement\.
+Creates a new [SimpleIfElseInfo](../../Syntax/SimpleIfElseInfo/README.md#_top) from the specified if statement\.
 
 ```csharp
 public static SimpleIfElseInfo SimpleIfElseInfo(IfStatementSyntax ifStatement, bool walkDownParentheses = true, bool allowMissing = false)
@@ -26,5 +26,5 @@ public static SimpleIfElseInfo SimpleIfElseInfo(IfStatementSyntax ifStatement, b
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[SimpleIfElseInfo](../../Syntax/SimpleIfElseInfo/README.md#_Top)
+Roslynator\.CSharp\.Syntax\.[SimpleIfElseInfo](../../Syntax/SimpleIfElseInfo/README.md#_top)
 

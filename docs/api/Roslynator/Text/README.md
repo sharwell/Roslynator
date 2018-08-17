@@ -1,18 +1,18 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # Roslynator\.Text Namespace
 
-[Home](../../README.md#_Top) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs)
+[Home](../../README.md#_top) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs)
 
 ## Classes
 
 | Class | Summary |
 | ----- | ------- |
-| [TextLineCollectionSelection](TextLineCollectionSelection/README.md#_Top) | Represents selected lines in a [TextLineCollection](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textlinecollection)\. |
+| [TextLineCollectionSelection](TextLineCollectionSelection/README.md#_top) | Represents selected lines in a [TextLineCollection](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textlinecollection)\. |
 
 ## Structs
 
 | Struct | Summary |
 | ------ | ------- |
-| [TextLineCollectionSelection.Enumerator](TextLineCollectionSelection/Enumerator/README.md#_Top) | |
+| [TextLineCollectionSelection.Enumerator](TextLineCollectionSelection/Enumerator/README.md#_top) | |
 

@@ -1,8 +1,8 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # [DelegateDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.delegatedeclarationsyntax) Class Extensions
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

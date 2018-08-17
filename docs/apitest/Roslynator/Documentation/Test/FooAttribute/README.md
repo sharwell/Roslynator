@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # FooAttribute Class
 
-[Home](../../../../README.md#_Top) &#x2022; [Constructors](#constructors) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
+[Home](../../../../README.md#_top) &#x2022; [Constructors](#constructors) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
 
-**Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
+**Namespace**: [Roslynator.Documentation.Test](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -25,7 +25,7 @@ public sealed class FooAttribute : System.Attribute
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [FooAttribute(Object, String, Boolean, Boolean, Byte, Char, Double, Single, Int32, Int64, SByte, Int16, UInt32, UInt64, UInt16, Type, Flags, Flags, Flags, Flags, Flags, Flags)](-ctor/README.md#_Top) | |
+| [FooAttribute(Object, String, Boolean, Boolean, Byte, Char, Double, Single, Int32, Int64, SByte, Int16, UInt32, UInt64, UInt16, Type, Flags, Flags, Flags, Flags, Flags, Flags)](-ctor/README.md#_top) | |
 
 ## Properties
 

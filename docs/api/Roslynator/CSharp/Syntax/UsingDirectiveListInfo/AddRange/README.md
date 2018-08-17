@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # UsingDirectiveListInfo\.AddRange\(IEnumerable\<UsingDirectiveSyntax>\) Method
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[UsingDirectiveListInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_top)\.[UsingDirectiveListInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [UsingDirectiveListInfo](../README.md#_Top) with the specified usings added at the end\.
+Creates a new [UsingDirectiveListInfo](../README.md#_top) with the specified usings added at the end\.
 
 ```csharp
 public UsingDirectiveListInfo AddRange(IEnumerable<UsingDirectiveSyntax> usings)
@@ -22,5 +22,5 @@ public UsingDirectiveListInfo AddRange(IEnumerable<UsingDirectiveSyntax> usings)
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md#_Top)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md#_top)
 

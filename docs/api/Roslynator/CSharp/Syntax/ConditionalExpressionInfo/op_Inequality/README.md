@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # ConditionalExpressionInfo\.Inequality\(ConditionalExpressionInfo, ConditionalExpressionInfo\) Operator
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[ConditionalExpressionInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_top)\.[ConditionalExpressionInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

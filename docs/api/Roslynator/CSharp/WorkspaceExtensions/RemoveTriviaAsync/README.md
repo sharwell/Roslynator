@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # WorkspaceExtensions\.RemoveTriviaAsync\(Document, TextSpan, CancellationToken\) Method
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[WorkspaceExtensions](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[WorkspaceExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 

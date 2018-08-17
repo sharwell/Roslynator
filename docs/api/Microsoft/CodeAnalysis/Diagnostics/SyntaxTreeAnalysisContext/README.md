@@ -1,8 +1,8 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # [SyntaxTreeAnalysisContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnostics.syntaxtreeanalysiscontext) Struct Extensions
 
-[Home](../../../../README.md#_Top)
+[Home](../../../../README.md#_top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

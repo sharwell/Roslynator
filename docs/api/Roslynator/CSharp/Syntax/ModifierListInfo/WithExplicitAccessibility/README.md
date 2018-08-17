@@ -1,16 +1,16 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # ModifierListInfo\.WithExplicitAccessibility\(Accessibility, IComparer\<SyntaxKind>\) Method
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[ModifierListInfo](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_top)\.[ModifierListInfo](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [ModifierListInfo](../README.md#_Top) with accessibility modifiers updated\.
+Creates a new [ModifierListInfo](../README.md#_top) with accessibility modifiers updated\.
 
 ```csharp
 public ModifierListInfo WithExplicitAccessibility(Accessibility newAccessibility, IComparer<SyntaxKind> comparer = null)
@@ -24,5 +24,5 @@ public ModifierListInfo WithExplicitAccessibility(Accessibility newAccessibility
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../README.md#_Top)
+Roslynator\.CSharp\.Syntax\.[ModifierListInfo](../README.md#_top)
 

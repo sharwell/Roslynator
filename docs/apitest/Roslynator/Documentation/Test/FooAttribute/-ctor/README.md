@@ -1,8 +1,8 @@
 # FooAttribute\(Object, String, Boolean, Boolean, Byte, Char, Double, Single, Int32, Int64, SByte, Int16, UInt32, UInt64, UInt16, Type, Flags, Flags, Flags, Flags, Flags, Flags\) Constructor
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooAttribute](../README.md#_Top)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_top)\.[FooAttribute](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -59,5 +59,5 @@ public FooAttribute(object object1, string s1, bool bool1, bool bool2, byte byte
 
 ### Attributes
 
-* Roslynator\.Documentation\.Test\.[FooAttribute](../README.md#_Top)
+* Roslynator\.Documentation\.Test\.[FooAttribute](../README.md#_top)
 

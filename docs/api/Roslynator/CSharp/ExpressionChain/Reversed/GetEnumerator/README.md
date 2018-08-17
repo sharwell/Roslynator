@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # Reversed\.GetEnumerator\(\) Method
 
-[Home](../../../../../README.md#_Top)
+[Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../../README.md#_Top)\.[ExpressionChain.Reversed](../README.md#_Top)
+**Containing Type**: [Roslynator.CSharp](../../../README.md#_top)\.[ExpressionChain.Reversed](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -14,5 +14,5 @@ public ExpressionChain.Reversed.Enumerator GetEnumerator()
 
 ### Returns
 
-Roslynator\.CSharp\.[ExpressionChain.Reversed.Enumerator](../Enumerator/README.md#_Top)
+Roslynator\.CSharp\.[ExpressionChain.Reversed.Enumerator](../Enumerator/README.md#_top)
 

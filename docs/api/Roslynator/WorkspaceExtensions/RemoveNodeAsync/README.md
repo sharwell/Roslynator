@@ -1,10 +1,10 @@
-<a name="_Top"></a>
+<a name="_top"></a>
 
 # WorkspaceExtensions\.RemoveNodeAsync\(Document, SyntaxNode, SyntaxRemoveOptions, CancellationToken\) Method
 
-[Home](../../../README.md#_Top)
+[Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_Top)\.[WorkspaceExtensions](../README.md#_Top)
+**Containing Type**: [Roslynator](../../README.md#_top)\.[WorkspaceExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 
