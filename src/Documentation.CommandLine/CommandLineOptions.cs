@@ -73,8 +73,5 @@ namespace Roslynator.Documentation
 
         [Option(longName: "omitIEnumerable", Default = DefaultValues.OmitIEnumerable)]
         public bool OmitIEnumerable { get; set; }
-
-        [Option(longName: "emphasizeMemberName", Default = DefaultValues.EmphasizeMemberName)]
-        public bool EmphasizeMemberName { get; set; }
     }
 }

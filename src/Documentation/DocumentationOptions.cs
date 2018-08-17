@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 namespace Roslynator.Documentation
 {
     public class DocumentationOptions
@@ -18,13 +19,15 @@ namespace Roslynator.Documentation
             bool attributeArguments = DefaultValues.AttributeArguments,
             bool inheritedInterfaceMembers = DefaultValues.InheritedInterfaceMembers,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
-            bool emphasizeMemberName = DefaultValues.EmphasizeMemberName,
             DocumentationDepth depth = DefaultValues.Depth,
             RootDocumentationParts rootParts = RootDocumentationParts.All,
             NamespaceDocumentationParts namespaceParts = NamespaceDocumentationParts.All,
             TypeDocumentationParts typeParts = TypeDocumentationParts.All,
             MemberDocumentationParts memberParts = MemberDocumentationParts.All)
         {
+            if (maxDerivedItems < 0)
+                throw new ArgumentOutOfRangeException(nameof(maxDerivedItems), maxDerivedItems, "Maximum number of derived items must be greater than or equal to 0.");
+
             PreferredCultureName = preferredCultureName;
             BaseLocalUrl = baseLocalUrl;
             MaxDerivedItems = maxDerivedItems;
@@ -38,7 +41,6 @@ namespace Roslynator.Documentation
             AttributeArguments = attributeArguments;
             InheritedInterfaceMembers = inheritedInterfaceMembers;
             OmitIEnumerable = omitIEnumerable;
-            EmphasizeMemberName = emphasizeMemberName;
             Depth = depth;
             RootParts = rootParts;
             NamespaceParts = namespaceParts;
@@ -73,8 +75,6 @@ namespace Roslynator.Documentation
         public bool InheritedInterfaceMembers { get; }
 
         public bool OmitIEnumerable { get; }
-
-        public bool EmphasizeMemberName { get; }
 
         public DocumentationDepth Depth { get; }
 
@@ -119,7 +119,6 @@ namespace Roslynator.Documentation
             public const bool AttributeArguments = true;
             public const bool InheritedInterfaceMembers = true; //TODO: InheritedInterfaceMembers default value
             public const bool OmitIEnumerable = true;
-            public const bool EmphasizeMemberName = false;
             public const DocumentationDepth Depth =  DocumentationDepth.Member;
         }
     }

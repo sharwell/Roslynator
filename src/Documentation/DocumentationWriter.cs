@@ -853,7 +853,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        private void WriteSection(string heading, SymbolXmlDocumentation xmlDocumentation, string elementName, int headingLevelBase = 0)
+        internal void WriteSection(string heading, SymbolXmlDocumentation xmlDocumentation, string elementName, int headingLevelBase = 0)
         {
             XElement element = xmlDocumentation.Element(elementName);
 
@@ -915,7 +915,7 @@ namespace Roslynator.Documentation
                         }
                         else if (addLink)
                         {
-                            WriteLink(symbol, format, additionalOptions, emphasizeName: Options.EmphasizeMemberName);
+                            WriteLink(symbol, format, additionalOptions);
                         }
                         else
                         {
@@ -1043,6 +1043,7 @@ namespace Roslynator.Documentation
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             int maxItems = -1,
+            string ellipsisLink = null,
             bool addLink = true,
             bool addLinkForTypeParameters = false,
             bool addNamespace = false,
@@ -1103,7 +1104,18 @@ namespace Roslynator.Documentation
                         if (count == maxItems)
                         {
                             if (en.MoveNext())
-                                WriteBulletItem(Resources.Ellipsis);
+                            {
+                                if (!string.IsNullOrEmpty(ellipsisLink))
+                                {
+                                    WriteStartBulletItem();
+                                    WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle));
+                                    WriteEndBulletItem();
+                                }
+                                else
+                                {
+                                    WriteBulletItem(Resources.Ellipsis);
+                                }
+                            }
 
                             break;
                         }
@@ -1174,8 +1186,8 @@ namespace Roslynator.Documentation
             {
                 string url = GetUrl(symbol, canCreateExternalUrl);
 
-                if (emphasizeName
-                    && url != null
+                if (url != null
+                    && emphasizeName
                     && (format.MemberOptions & SymbolDisplayMemberOptions.IncludeParameters) != 0
                     && symbol.Kind == SymbolKind.Method
                     && ((IMethodSymbol)symbol).MethodKind.Is(MethodKind.Ordinary, MethodKind.Constructor, MethodKind.UserDefinedOperator, MethodKind.Conversion))

@@ -477,6 +477,10 @@ namespace Roslynator.Documentation
 
             ImmutableArray<INamedTypeSymbol> nestedTypes = default;
 
+            ImmutableArray<INamedTypeSymbol> derivedTypes = (EnabledAndSortedTypeParts.Contains(TypeDocumentationParts.Derived))
+                ? typeModel.GetDerivedTypes().ToImmutableArray()
+                : ImmutableArray<INamedTypeSymbol>.Empty;
+
             bool includeInherited = typeSymbol.TypeKind != TypeKind.Interface || Options.InheritedInterfaceMembers;
 
             SymbolXmlDocumentation xmlDocumentation = DocumentationModel.GetXmlDocumentation(typeModel.Symbol, Options.PreferredCultureName);
@@ -554,7 +558,7 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.Derived:
                             {
-                                writer.WriteDerivedTypes(typeModel.GetDerivedTypes());
+                                writer.WriteDerivedTypes(derivedTypes);
                                 break;
                             }
                         case TypeDocumentationParts.Implements:
@@ -672,6 +676,17 @@ namespace Roslynator.Documentation
                                 break;
                             }
                     }
+                }
+
+                if (derivedTypes.Any()
+                    && derivedTypes.Length > Options.MaxDerivedItems)
+                {
+                    writer.WriteList(
+                        derivedTypes,
+                        heading: Resources.AllDerivedTypesTitle,
+                        headingLevel: 2,
+                        format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
+                        addNamespace: true);
                 }
 
                 writer.WriteEndDocument();

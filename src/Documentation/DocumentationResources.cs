@@ -23,6 +23,7 @@ namespace Roslynator.Documentation
         public virtual string FalseValue { get; } = "false";
         public virtual string TrueValue { get; } = "true";
 
+        public abstract string AllDerivedTypesTitle { get; }
         public abstract string AssemblyTitle { get; }
         public abstract string AttributesTitle { get; }
         public abstract string ClassTitle { get; }
@@ -290,6 +291,7 @@ namespace Roslynator.Documentation
 
         private class DefaultDocumentationResources : DocumentationResources
         {
+            public override string AllDerivedTypesTitle { get; } = "All Derived Types";
             public override string AssemblyTitle { get; } = "Assembly";
             public override string AttributesTitle { get; } = "Attributes";
             public override string ClassTitle { get; } = "Class";
