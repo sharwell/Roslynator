@@ -24,7 +24,8 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 
 * Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../SeparatedSyntaxListSelection-1/README.md)
 * Roslynator\.[SyntaxListSelection\<TNode>](../SyntaxListSelection-1/README.md)
-* \.\.\.
+
+[...](#all-derived-types)
 
 ### Implements
 

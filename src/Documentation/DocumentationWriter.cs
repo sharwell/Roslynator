@@ -621,6 +621,7 @@ namespace Roslynator.Documentation
                 headingLevel: 3,
                 format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                 maxItems: Options.MaxDerivedItems,
+                allItemsHeading: Resources.AllDerivedTypesTitle,
                 addNamespace: true);
         }
 
@@ -1043,7 +1044,7 @@ namespace Roslynator.Documentation
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             int maxItems = -1,
-            string ellipsisLink = null,
+            string allItemsHeading = null,
             bool addLink = true,
             bool addLinkForTypeParameters = false,
             bool addNamespace = false,
@@ -1105,16 +1106,19 @@ namespace Roslynator.Documentation
                         {
                             if (en.MoveNext())
                             {
-                                if (!string.IsNullOrEmpty(ellipsisLink))
+                                WriteLine();
+
+                                if (!string.IsNullOrEmpty(allItemsHeading))
                                 {
-                                    WriteStartBulletItem();
                                     WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle));
-                                    WriteEndBulletItem();
                                 }
                                 else
                                 {
-                                    WriteBulletItem(Resources.Ellipsis);
+                                    WriteString(Resources.Ellipsis);
                                 }
+
+                                WriteLine();
+                                WriteLine();
                             }
 
                             break;

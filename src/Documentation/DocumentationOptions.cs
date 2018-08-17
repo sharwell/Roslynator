@@ -108,7 +108,7 @@ namespace Roslynator.Documentation
 
         internal static class DefaultValues
         {
-            public const int MaxDerivedItems = 10; //TODO: MaxDerivedItems default value
+            public const int MaxDerivedItems = 10;
             public const bool SystemNamespaceFirst = true;
             public const bool FormatDefinitionBaseList = true;
             public const bool FormatDefinitionConstraints = true;
