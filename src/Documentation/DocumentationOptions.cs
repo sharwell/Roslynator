@@ -119,7 +119,7 @@ namespace Roslynator.Documentation
             public const bool AttributeArguments = true;
             public const bool InheritedInterfaceMembers = true; //TODO: InheritedInterfaceMembers default value
             public const bool OmitIEnumerable = true;
-            public const bool EmphasizeMemberName = true;
+            public const bool EmphasizeMemberName = false;
             public const DocumentationDepth Depth =  DocumentationDepth.Member;
         }
     }

@@ -400,7 +400,7 @@ namespace Roslynator.Documentation
                     .Distinct()
                     .Select(f => f.ToNamespaceDocumentationPart())
                     .OrderBy(f => f, NamespacePartComparer)
-                    .Select(f => Resources.GetHeading(f)), addSeparatorBeforeFirstItem: false);
+                    .Select(f => Resources.GetHeading(f)), beginWithSeparator: true);
 
                 writer.WriteList(namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 

@@ -10,9 +10,9 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**AddAttributeLists**(ClassDeclarationSyntax, Boolean, AttributeListSyntax\[\])](#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new class declaration with the specified attribute lists added\. |
-| [**AddAttributeLists**(InterfaceDeclarationSyntax, Boolean, AttributeListSyntax\[\])](#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new interface declaration with the specified attribute lists added\. |
-| [**AddAttributeLists**(StructDeclarationSyntax, Boolean, AttributeListSyntax\[\])](#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new struct declaration with the specified attribute lists added\. |
+| [AddAttributeLists(ClassDeclarationSyntax, Boolean, AttributeListSyntax\[\])](#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new class declaration with the specified attribute lists added\. |
+| [AddAttributeLists(InterfaceDeclarationSyntax, Boolean, AttributeListSyntax\[\])](#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new interface declaration with the specified attribute lists added\. |
+| [AddAttributeLists(StructDeclarationSyntax, Boolean, AttributeListSyntax\[\])](#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new struct declaration with the specified attribute lists added\. |
 
 ## AddAttributeLists\(ClassDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)<a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
 

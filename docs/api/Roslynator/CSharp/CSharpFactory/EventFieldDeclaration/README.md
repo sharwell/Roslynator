@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**EventFieldDeclaration**(SyntaxTokenList, TypeSyntax, String)](#Roslynator_CSharp_CSharpFactory_EventFieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_) | |
-| [**EventFieldDeclaration**(SyntaxTokenList, TypeSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_EventFieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
+| [EventFieldDeclaration(SyntaxTokenList, TypeSyntax, String)](#Roslynator_CSharp_CSharpFactory_EventFieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_) | |
+| [EventFieldDeclaration(SyntaxTokenList, TypeSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_EventFieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## EventFieldDeclaration\(SyntaxTokenList, TypeSyntax, String\)<a name="Roslynator_CSharp_CSharpFactory_EventFieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_"></a>
 

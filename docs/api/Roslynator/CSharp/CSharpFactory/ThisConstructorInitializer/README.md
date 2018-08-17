@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**ThisConstructorInitializer**(ArgumentListSyntax)](#Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_) | |
-| [**ThisConstructorInitializer**(SyntaxToken, ArgumentListSyntax)](#Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_) | |
+| [ThisConstructorInitializer(ArgumentListSyntax)](#Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_) | |
+| [ThisConstructorInitializer(SyntaxToken, ArgumentListSyntax)](#Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_) | |
 
 ## ThisConstructorInitializer\(ArgumentListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_"></a>
 

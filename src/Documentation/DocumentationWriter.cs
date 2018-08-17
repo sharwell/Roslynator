@@ -275,13 +275,13 @@ namespace Roslynator.Documentation
             WriteEndTableCell();
         }
 
-        public void WriteContent(IEnumerable<string> names, bool addLinkToRoot = false, bool addSeparatorBeforeFirstItem = true)
+        public void WriteContent(IEnumerable<string> names, bool addLinkToRoot = false, bool beginWithSeparator = false)
         {
             IEnumerator<string> en = names.GetEnumerator();
 
             if (addLinkToRoot)
             {
-                if (!addSeparatorBeforeFirstItem)
+                if (beginWithSeparator)
                     WriteContentSeparator();
 
                 WriteLink(Resources.HomeTitle, UrlProvider.GetUrlToRoot(UrlProvider.GetFolders(CurrentSymbol).Length, '/'));
@@ -289,7 +289,7 @@ namespace Roslynator.Documentation
 
             if (en.MoveNext())
             {
-                if (addLinkToRoot || !addSeparatorBeforeFirstItem)
+                if (addLinkToRoot || beginWithSeparator)
                 {
                     WriteContentSeparator();
                 }

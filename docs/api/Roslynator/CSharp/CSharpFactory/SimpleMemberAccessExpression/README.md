@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**SimpleMemberAccessExpression**(ExpressionSyntax, SimpleNameSyntax)](#Roslynator_CSharp_CSharpFactory_SimpleMemberAccessExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_SimpleNameSyntax_) | |
-| [**SimpleMemberAccessExpression**(ExpressionSyntax, SyntaxToken, SimpleNameSyntax)](#Roslynator_CSharp_CSharpFactory_SimpleMemberAccessExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_SimpleNameSyntax_) | |
+| [SimpleMemberAccessExpression(ExpressionSyntax, SimpleNameSyntax)](#Roslynator_CSharp_CSharpFactory_SimpleMemberAccessExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_SimpleNameSyntax_) | |
+| [SimpleMemberAccessExpression(ExpressionSyntax, SyntaxToken, SimpleNameSyntax)](#Roslynator_CSharp_CSharpFactory_SimpleMemberAccessExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_SimpleNameSyntax_) | |
 
 ## SimpleMemberAccessExpression\(ExpressionSyntax, SimpleNameSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SimpleMemberAccessExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_SimpleNameSyntax_"></a>
 

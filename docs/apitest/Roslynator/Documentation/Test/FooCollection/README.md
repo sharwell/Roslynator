@@ -26,7 +26,7 @@ public class FooCollection : System.Collections.ICollection,
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [**FooCollection**()](-ctor/README.md) | |
+| [FooCollection()](-ctor/README.md) | |
 
 ## Properties
 
@@ -41,18 +41,18 @@ public class FooCollection : System.Collections.ICollection,
 
 | Method | Summary |
 | ------ | ------- |
-| [**Add**(Foo)](Add/README.md) |  \(Implements [ICollection\<Foo>.Add](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.add)\) |
-| [**Clear**()](Clear/README.md) |  \(Implements [ICollection\<Foo>.Clear](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear)\) |
-| [**Contains**(Foo)](Contains/README.md) |  \(Implements [ICollection\<Foo>.Contains](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.contains)\) |
-| [**CopyTo**(Array, Int32)](CopyTo/README.md#Roslynator_Documentation_Test_FooCollection_CopyTo_System_Array_System_Int32_) |  \(Implements [ICollection.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.copyto)\) |
-| [**CopyTo**(Foo\[\], Int32)](CopyTo/README.md#Roslynator_Documentation_Test_FooCollection_CopyTo_Roslynator_Documentation_Test_Foo___System_Int32_) |  \(Implements [ICollection\<Foo>.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.copyto)\) |
-| [**Equals**(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**GetEnumerator**()](GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
-| [**GetHashCode**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**GetType**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**MemberwiseClone**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**Remove**(Foo)](Remove/README.md) |  \(Implements [ICollection\<Foo>.Remove](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.remove)\) |
-| [**ToString**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [Add(Foo)](Add/README.md) |  \(Implements [ICollection\<Foo>.Add](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.add)\) |
+| [Clear()](Clear/README.md) |  \(Implements [ICollection\<Foo>.Clear](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear)\) |
+| [Contains(Foo)](Contains/README.md) |  \(Implements [ICollection\<Foo>.Contains](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.contains)\) |
+| [CopyTo(Array, Int32)](CopyTo/README.md#Roslynator_Documentation_Test_FooCollection_CopyTo_System_Array_System_Int32_) |  \(Implements [ICollection.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.copyto)\) |
+| [CopyTo(Foo\[\], Int32)](CopyTo/README.md#Roslynator_Documentation_Test_FooCollection_CopyTo_Roslynator_Documentation_Test_Foo___System_Int32_) |  \(Implements [ICollection\<Foo>.CopyTo](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.copyto)\) |
+| [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [GetEnumerator()](GetEnumerator/README.md) |  \(Implements [IEnumerable.GetEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable.getenumerator)\) |
+| [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [Remove(Foo)](Remove/README.md) |  \(Implements [ICollection\<Foo>.Remove](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.remove)\) |
+| [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 
 ## Explicit Interface Implementations
 

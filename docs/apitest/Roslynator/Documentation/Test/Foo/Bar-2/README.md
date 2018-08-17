@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**Bar**()](../Bar/README.md#Roslynator_Documentation_Test_Foo_Bar) | abc |
-| [**Bar**\<T, T2>(String, String)](#Roslynator_Documentation_Test_Foo_Bar__2_System_String_System_String_) | s **value** **T** |
+| [Bar()](../Bar/README.md#Roslynator_Documentation_Test_Foo_Bar) | abc |
+| [Bar\<T, T2>(String, String)](#Roslynator_Documentation_Test_Foo_Bar__2_System_String_System_String_) | s **value** **T** |
 
 ## Bar\(\)<a name="Roslynator_Documentation_Test_Foo_Bar"></a>
 

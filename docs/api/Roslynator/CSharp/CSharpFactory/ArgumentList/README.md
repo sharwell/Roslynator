@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**ArgumentList**(ArgumentSyntax)](#Roslynator_CSharp_CSharpFactory_ArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax_) | |
-| [**ArgumentList**(ArgumentSyntax\[\])](#Roslynator_CSharp_CSharpFactory_ArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax___) | |
+| [ArgumentList(ArgumentSyntax)](#Roslynator_CSharp_CSharpFactory_ArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax_) | |
+| [ArgumentList(ArgumentSyntax\[\])](#Roslynator_CSharp_CSharpFactory_ArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax___) | |
 
 ## ArgumentList\(ArgumentSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentSyntax_"></a>
 

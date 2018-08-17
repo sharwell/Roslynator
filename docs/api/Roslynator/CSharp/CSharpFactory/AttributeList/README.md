@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**AttributeList**(AttributeSyntax)](#Roslynator_CSharp_CSharpFactory_AttributeList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax_) | |
-| [**AttributeList**(AttributeSyntax\[\])](#Roslynator_CSharp_CSharpFactory_AttributeList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax___) | |
+| [AttributeList(AttributeSyntax)](#Roslynator_CSharp_CSharpFactory_AttributeList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax_) | |
+| [AttributeList(AttributeSyntax\[\])](#Roslynator_CSharp_CSharpFactory_AttributeList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax___) | |
 
 ## AttributeList\(AttributeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AttributeList_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeSyntax_"></a>
 

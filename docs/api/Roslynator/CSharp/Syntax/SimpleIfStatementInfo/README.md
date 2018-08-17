@@ -36,17 +36,17 @@ public readonly struct SimpleIfStatementInfo : System.IEquatable<SimpleIfStateme
 
 | Method | Summary |
 | ------ | ------- |
-| [**Equals**(Object)](Equals/README.md#Roslynator_CSharp_Syntax_SimpleIfStatementInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
-| [**Equals**(SimpleIfStatementInfo)](Equals/README.md#Roslynator_CSharp_Syntax_SimpleIfStatementInfo_Equals_Roslynator_CSharp_Syntax_SimpleIfStatementInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<SimpleIfStatementInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
-| [**GetHashCode**()](GetHashCode/README.md) | Returns the hash code for this instance\. \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
-| [**GetType**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**MemberwiseClone**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**ToString**()](ToString/README.md) | Returns the string representation of the underlying syntax, not including its leading and trailing trivia\. \(Overrides [ValueType.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring)\) |
+| [Equals(Object)](Equals/README.md#Roslynator_CSharp_Syntax_SimpleIfStatementInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
+| [Equals(SimpleIfStatementInfo)](Equals/README.md#Roslynator_CSharp_Syntax_SimpleIfStatementInfo_Equals_Roslynator_CSharp_Syntax_SimpleIfStatementInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<SimpleIfStatementInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
+| [GetHashCode()](GetHashCode/README.md) | Returns the hash code for this instance\. \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
+| [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [ToString()](ToString/README.md) | Returns the string representation of the underlying syntax, not including its leading and trailing trivia\. \(Overrides [ValueType.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring)\) |
 
 ## Operators
 
 | Operator | Summary |
 | -------- | ------- |
-| [**Equality**(SimpleIfStatementInfo, SimpleIfStatementInfo)](op_Equality/README.md) | |
-| [**Inequality**(SimpleIfStatementInfo, SimpleIfStatementInfo)](op_Inequality/README.md) | |
+| [Equality(SimpleIfStatementInfo, SimpleIfStatementInfo)](op_Equality/README.md) | |
+| [Inequality(SimpleIfStatementInfo, SimpleIfStatementInfo)](op_Inequality/README.md) | |
 

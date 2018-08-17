@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**AccessorList**(AccessorDeclarationSyntax)](#Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_) | |
-| [**AccessorList**(AccessorDeclarationSyntax\[\])](#Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax___) | |
+| [AccessorList(AccessorDeclarationSyntax)](#Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_) | |
+| [AccessorList(AccessorDeclarationSyntax\[\])](#Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax___) | |
 
 ## AccessorList\(AccessorDeclarationSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
 

@@ -4,5 +4,5 @@
 
 | Extension Method | Summary |
 | ---------------- | ------- |
-| [**AsChain**(BinaryExpressionSyntax, TextSpan?)](../../../../../Roslynator/CSharp/SyntaxExtensions/AsChain/README.md) | |
+| [AsChain(BinaryExpressionSyntax, TextSpan?)](../../../../../Roslynator/CSharp/SyntaxExtensions/AsChain/README.md) | |
 

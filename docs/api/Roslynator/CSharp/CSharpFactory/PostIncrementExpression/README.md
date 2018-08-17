@@ -10,8 +10,8 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**PostIncrementExpression**(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_PostIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
-| [**PostIncrementExpression**(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_PostIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
+| [PostIncrementExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_PostIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
+| [PostIncrementExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_PostIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
 ## PostIncrementExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_PostIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 

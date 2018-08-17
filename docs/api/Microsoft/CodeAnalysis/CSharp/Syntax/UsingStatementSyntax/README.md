@@ -4,5 +4,5 @@
 
 | Extension Method | Summary |
 | ---------------- | ------- |
-| [**DeclarationOrExpression**(UsingStatementSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/DeclarationOrExpression/README.md) | Returns using statement's declaration or an expression if the declaration is null\. |
+| [DeclarationOrExpression(UsingStatementSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/DeclarationOrExpression/README.md) | Returns using statement's declaration or an expression if the declaration is null\. |
 

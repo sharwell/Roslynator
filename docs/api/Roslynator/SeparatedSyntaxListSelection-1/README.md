@@ -37,7 +37,7 @@ public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>,
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [**SeparatedSyntaxListSelection**(SeparatedSyntaxList\<TNode>, TextSpan, Int32, Int32)](-ctor/README.md) | Initializes a new instance of the [SeparatedSyntaxListSelection\<TNode>](./README.md)\. |
+| [SeparatedSyntaxListSelection(SeparatedSyntaxList\<TNode>, TextSpan, Int32, Int32)](-ctor/README.md) | Initializes a new instance of the [SeparatedSyntaxListSelection\<TNode>](./README.md)\. |
 
 ## Properties
 
@@ -54,16 +54,16 @@ public class SeparatedSyntaxListSelection<TNode> : ISelection<TNode>,
 
 | Method | Summary |
 | ------ | ------- |
-| [**Create**(SeparatedSyntaxList\<TNode>, TextSpan)](Create/README.md) | Creates a new [SeparatedSyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
-| [**Equals**(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**First**()](First/README.md) | Gets the first selected node\. \(Implements [ISelection\<TNode>.First](../ISelection-1/First/README.md)\) |
-| [**GetEnumerator**()](GetEnumerator/README.md) | Returns an enumerator that iterates through selected nodes\. |
-| [**GetHashCode**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**GetType**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**Last**()](Last/README.md) | Gets the last selected node\. \(Implements [ISelection\<TNode>.Last](../ISelection-1/Last/README.md)\) |
-| [**MemberwiseClone**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**ToString**()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [**TryCreate**(SeparatedSyntaxList\<TNode>, TextSpan, SeparatedSyntaxListSelection\<TNode>)](TryCreate/README.md) | Creates a new [SeparatedSyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
+| [Create(SeparatedSyntaxList\<TNode>, TextSpan)](Create/README.md) | Creates a new [SeparatedSyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
+| [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [First()](First/README.md) | Gets the first selected node\. \(Implements [ISelection\<TNode>.First](../ISelection-1/First/README.md)\) |
+| [GetEnumerator()](GetEnumerator/README.md) | Returns an enumerator that iterates through selected nodes\. |
+| [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [Last()](Last/README.md) | Gets the last selected node\. \(Implements [ISelection\<TNode>.Last](../ISelection-1/Last/README.md)\) |
+| [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
+| [TryCreate(SeparatedSyntaxList\<TNode>, TextSpan, SeparatedSyntaxListSelection\<TNode>)](TryCreate/README.md) | Creates a new [SeparatedSyntaxListSelection\<TNode>](./README.md) based on the specified list and span\. |
 
 ## Explicit Interface Implementations
 

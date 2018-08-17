@@ -47,7 +47,7 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 
 | Method | Summary |
 | ------ | ------- |
-| [**First**()](First/README.md) | Gets the first selected item\. |
-| [**GetEnumerator**()](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator) |  \(Inherited from [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\) |
-| [**Last**()](Last/README.md) | Gets the last selected item\. |
+| [First()](First/README.md) | Gets the first selected item\. |
+| [GetEnumerator()](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator) |  \(Inherited from [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\) |
+| [Last()](Last/README.md) | Gets the last selected item\. |
 

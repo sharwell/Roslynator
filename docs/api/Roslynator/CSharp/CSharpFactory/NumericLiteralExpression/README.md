@@ -10,14 +10,14 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [**NumericLiteralExpression**(Decimal)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Decimal_) | |
-| [**NumericLiteralExpression**(Double)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Double_) | |
-| [**NumericLiteralExpression**(Int32)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Int32_) | |
-| [**NumericLiteralExpression**(Int64)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Int64_) | |
-| [**NumericLiteralExpression**(SByte)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_SByte_) | |
-| [**NumericLiteralExpression**(Single)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Single_) | |
-| [**NumericLiteralExpression**(UInt32)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_UInt32_) | |
-| [**NumericLiteralExpression**(UInt64)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_UInt64_) | |
+| [NumericLiteralExpression(Decimal)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Decimal_) | |
+| [NumericLiteralExpression(Double)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Double_) | |
+| [NumericLiteralExpression(Int32)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Int32_) | |
+| [NumericLiteralExpression(Int64)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Int64_) | |
+| [NumericLiteralExpression(SByte)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_SByte_) | |
+| [NumericLiteralExpression(Single)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Single_) | |
+| [NumericLiteralExpression(UInt32)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_UInt32_) | |
+| [NumericLiteralExpression(UInt64)](#Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_UInt64_) | |
 
 ## NumericLiteralExpression\(Decimal\)<a name="Roslynator_CSharp_CSharpFactory_NumericLiteralExpression_System_Decimal_"></a>
 

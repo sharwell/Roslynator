@@ -4,5 +4,5 @@
 
 | Extension Method | Summary |
 | ---------------- | ------- |
-| [**IsHexNumericLiteral**(LiteralExpressionSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsHexNumericLiteral/README.md) | Returns true if the specified literal expression is a hexadecimal numeric literal expression\. |
+| [IsHexNumericLiteral(LiteralExpressionSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsHexNumericLiteral/README.md) | Returns true if the specified literal expression is a hexadecimal numeric literal expression\. |
 

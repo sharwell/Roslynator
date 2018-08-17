@@ -10,8 +10,8 @@
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [**Foo**(String)](#Roslynator_Documentation_Test_Foo__ctor_System_String_) | aaa |
-| [**Foo**(String, String)](#Roslynator_Documentation_Test_Foo__ctor_System_String_System_String_) | |
+| [Foo(String)](#Roslynator_Documentation_Test_Foo__ctor_System_String_) | aaa |
+| [Foo(String, String)](#Roslynator_Documentation_Test_Foo__ctor_System_String_System_String_) | |
 
 ## Foo\(String\)<a name="Roslynator_Documentation_Test_Foo__ctor_System_String_"></a>
 
