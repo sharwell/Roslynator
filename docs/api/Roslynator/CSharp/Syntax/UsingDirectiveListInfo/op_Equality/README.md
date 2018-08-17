@@ -1,6 +1,8 @@
-# UsingDirectiveListInfo\.Equality\(UsingDirectiveListInfo, UsingDirectiveListInfo\) Operator <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# UsingDirectiveListInfo\.Equality\(UsingDirectiveListInfo, UsingDirectiveListInfo\) Operator
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[UsingDirectiveListInfo](../README.md#_Top)
 

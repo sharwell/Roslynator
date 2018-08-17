@@ -1,6 +1,8 @@
-# [IMethodSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.imethodsymbol) Interface Extensions <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# [IMethodSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.imethodsymbol) Interface Extensions
+
+[Home](../../../README.md#_Top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

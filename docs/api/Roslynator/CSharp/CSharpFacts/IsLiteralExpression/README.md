@@ -1,6 +1,8 @@
-# CSharpFacts\.IsLiteralExpression\(SyntaxKind\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# CSharpFacts\.IsLiteralExpression\(SyntaxKind\) Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFacts](../README.md#_Top)
 

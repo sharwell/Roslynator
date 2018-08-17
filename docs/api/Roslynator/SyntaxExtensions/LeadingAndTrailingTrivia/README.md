@@ -1,6 +1,8 @@
-# SyntaxExtensions\.LeadingAndTrailingTrivia\(SyntaxToken\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SyntaxExtensions\.LeadingAndTrailingTrivia\(SyntaxToken\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 

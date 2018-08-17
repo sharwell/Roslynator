@@ -1,6 +1,8 @@
-# FooExtensions Class <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# FooExtensions Class
+
+[Home](../../../../README.md#_Top)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
 

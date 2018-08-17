@@ -1,6 +1,8 @@
-# IfStatementOrElseClause\.Implicit Operator <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# IfStatementOrElseClause\.Implicit Operator
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[IfStatementOrElseClause](../README.md#_Top)
 

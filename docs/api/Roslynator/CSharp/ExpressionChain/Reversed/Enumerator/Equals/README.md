@@ -1,6 +1,8 @@
-# Enumerator\.Equals\(Object\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../../README.md)
+# Enumerator\.Equals\(Object\) Method
+
+[Home](../../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../../../README.md#_Top)\.[ExpressionChain.Reversed.Enumerator](../README.md#_Top)
 

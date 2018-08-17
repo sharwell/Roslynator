@@ -1,6 +1,8 @@
-# ExtensionMethodSymbolInfo\.GetHashCode\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# ExtensionMethodSymbolInfo\.GetHashCode\(\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[ExtensionMethodSymbolInfo](../README.md#_Top)
 

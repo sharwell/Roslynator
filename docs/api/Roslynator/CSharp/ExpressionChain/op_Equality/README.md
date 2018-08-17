@@ -1,6 +1,8 @@
-# ExpressionChain\.Equality\(ExpressionChain, ExpressionChain\) Operator <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# ExpressionChain\.Equality\(ExpressionChain, ExpressionChain\) Operator
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[ExpressionChain](../README.md#_Top)
 

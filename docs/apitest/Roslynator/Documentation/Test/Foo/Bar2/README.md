@@ -1,6 +1,8 @@
-# Foo\.Bar2\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# Foo\.Bar2\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[Foo](../README.md#_Top)
 

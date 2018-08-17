@@ -1,6 +1,8 @@
-# LocalDeclarationStatementInfo\.GetHashCode\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# LocalDeclarationStatementInfo\.GetHashCode\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[LocalDeclarationStatementInfo](../README.md#_Top)
 

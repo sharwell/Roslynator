@@ -1,6 +1,8 @@
-# Modifiers\.PublicVirtual\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# Modifiers\.PublicVirtual\(\) Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[Modifiers](../README.md#_Top)
 

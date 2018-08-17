@@ -1,6 +1,8 @@
-# Reversed\.IEnumerable\<ExpressionSyntax>\.GetEnumerator\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# Reversed\.IEnumerable\<ExpressionSyntax>\.GetEnumerator\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../../README.md#_Top)\.[ExpressionChain.Reversed](../README.md#_Top)
 

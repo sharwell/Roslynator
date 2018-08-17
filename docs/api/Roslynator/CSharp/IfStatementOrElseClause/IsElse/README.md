@@ -1,6 +1,8 @@
-# IfStatementOrElseClause\.IsElse Property <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# IfStatementOrElseClause\.IsElse Property
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[IfStatementOrElseClause](../README.md#_Top)
 

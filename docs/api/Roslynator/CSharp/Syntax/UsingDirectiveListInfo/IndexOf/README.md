@@ -1,6 +1,8 @@
-# UsingDirectiveListInfo\.IndexOf Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# UsingDirectiveListInfo\.IndexOf Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[UsingDirectiveListInfo](../README.md#_Top)
 

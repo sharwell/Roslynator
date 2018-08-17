@@ -1,6 +1,8 @@
-# CSharpFactory\.GreaterThanEqualsToken\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# CSharpFactory\.GreaterThanEqualsToken\(\) Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 

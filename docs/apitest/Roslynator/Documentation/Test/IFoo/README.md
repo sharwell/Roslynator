@@ -1,6 +1,8 @@
-# IFoo Interface <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md) &#x2022; [Events](#events)
+# IFoo Interface
+
+[Home](../../../../README.md#_Top) &#x2022; [Events](#events)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
 

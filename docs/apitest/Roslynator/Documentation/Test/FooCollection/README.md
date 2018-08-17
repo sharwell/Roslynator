@@ -1,6 +1,8 @@
-# FooCollection Class <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md) &#x2022; [Constructors](#constructors) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+# FooCollection Class
+
+[Home](../../../../README.md#_Top) &#x2022; [Constructors](#constructors) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
 

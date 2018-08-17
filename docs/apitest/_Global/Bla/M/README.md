@@ -1,6 +1,8 @@
-# Bla\.M\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# Bla\.M\(\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Bla](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1) Interface Extensions <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1) Interface Extensions
+
+[Home](../../../../README.md#_Top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

@@ -1,6 +1,8 @@
-# ExpressionChain\.Equals Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# ExpressionChain\.Equals Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[ExpressionChain](../README.md#_Top)
 

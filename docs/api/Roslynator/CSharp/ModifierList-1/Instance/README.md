@@ -1,6 +1,8 @@
-# ModifierList\<TNode>\.Instance Property <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# ModifierList\<TNode>\.Instance Property
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[ModifierList\<TNode>](../README.md#_Top)
 

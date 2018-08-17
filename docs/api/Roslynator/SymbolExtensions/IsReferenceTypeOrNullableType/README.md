@@ -1,6 +1,8 @@
-# SymbolExtensions\.IsReferenceTypeOrNullableType\(ITypeSymbol\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SymbolExtensions\.IsReferenceTypeOrNullableType\(ITypeSymbol\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SymbolExtensions](../README.md#_Top)
 

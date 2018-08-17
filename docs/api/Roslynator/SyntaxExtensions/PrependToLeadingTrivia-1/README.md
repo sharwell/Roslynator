@@ -1,6 +1,8 @@
-# SyntaxExtensions\.PrependToLeadingTrivia Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SyntaxExtensions\.PrependToLeadingTrivia Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 

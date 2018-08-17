@@ -1,6 +1,8 @@
-# [YieldStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.yieldstatementsyntax) Class Extensions <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# [YieldStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.yieldstatementsyntax) Class Extensions
+
+[Home](../../../../../README.md#_Top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

@@ -1,6 +1,8 @@
-# SyntaxExtensions\.WithoutTrivia\(SyntaxNodeOrToken\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SyntaxExtensions\.WithoutTrivia\(SyntaxNodeOrToken\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 

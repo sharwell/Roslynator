@@ -1,6 +1,8 @@
-# SyntaxAccessibility Class <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md) &#x2022; [Methods](#methods)
+# SyntaxAccessibility Class
+
+[Home](../../../README.md#_Top) &#x2022; [Methods](#methods)
 
 **Namespace**: [Roslynator.CSharp](../README.md#_Top)
 

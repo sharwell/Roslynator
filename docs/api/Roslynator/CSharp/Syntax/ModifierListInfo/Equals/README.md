@@ -1,6 +1,8 @@
-# ModifierListInfo\.Equals Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# ModifierListInfo\.Equals Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[ModifierListInfo](../README.md#_Top)
 

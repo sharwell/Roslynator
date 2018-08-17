@@ -1,6 +1,8 @@
-# Enumerator\.Current Property <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# Enumerator\.Current Property
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../../README.md#_Top)\.[SyntaxListSelection\<TNode>.Enumerator](../README.md#_Top)
 

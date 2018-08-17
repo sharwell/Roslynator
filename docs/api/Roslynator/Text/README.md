@@ -1,6 +1,8 @@
-# Roslynator\.Text Namespace <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../README.md) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs)
+# Roslynator\.Text Namespace
+
+[Home](../../README.md#_Top) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs)
 
 ## Classes
 

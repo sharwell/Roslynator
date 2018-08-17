@@ -1,6 +1,8 @@
-# ExtensionMethodSymbolInfo\.ReducedSymbol Property <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# ExtensionMethodSymbolInfo\.ReducedSymbol Property
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[ExtensionMethodSymbolInfo](../README.md#_Top)
 

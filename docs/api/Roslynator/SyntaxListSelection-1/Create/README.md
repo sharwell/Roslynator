@@ -1,6 +1,8 @@
-# SyntaxListSelection\<TNode>\.Create\(SyntaxList\<TNode>, TextSpan\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SyntaxListSelection\<TNode>\.Create\(SyntaxList\<TNode>, TextSpan\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxListSelection\<TNode>](../README.md#_Top)
 

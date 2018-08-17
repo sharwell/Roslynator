@@ -1,6 +1,8 @@
-# BinaryExpressionInfo\.Equals Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# BinaryExpressionInfo\.Equals Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[BinaryExpressionInfo](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# GenericInfo\.Inequality\(GenericInfo, GenericInfo\) Operator <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# GenericInfo\.Inequality\(GenericInfo, GenericInfo\) Operator
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[GenericInfo](../README.md#_Top)
 

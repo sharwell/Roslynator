@@ -1,6 +1,8 @@
-# IsExpressionInfo\.GetHashCode\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# IsExpressionInfo\.GetHashCode\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[IsExpressionInfo](../README.md#_Top)
 

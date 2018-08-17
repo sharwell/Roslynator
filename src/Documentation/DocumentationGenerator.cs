@@ -196,10 +196,9 @@ namespace Roslynator.Documentation
         {
             writer.WriteStartDocument();
 
+            writer.WriteLinkDefinition("_Top");
             writer.WriteStartHeading(1);
             writer.WriteString(heading);
-            writer.WriteSpace();
-            writer.WriteLinkDefinition("_Top");
             writer.WriteEndHeading();
 
             GenerateRoot(writer, addExtensionsLink: addExtensionsLink);
@@ -394,10 +393,10 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
+                writer.WriteLinkDefinition("_Top");
+                writer.WriteLine();
                 writer.WriteStartHeading(1);
                 writer.WriteString(Resources.ExtensionsOfExternalTypesTitle);
-                writer.WriteSpace();
-                writer.WriteLinkDefinition("_Top");
                 writer.WriteEndHeading();
 
                 writer.WriteLink(Resources.HomeTitle, UrlProvider.GetUrlToRoot(0, '/'));
@@ -457,14 +456,14 @@ namespace Roslynator.Documentation
             using (DocumentationWriter writer = CreateWriter(typeSymbol))
             {
                 writer.WriteStartDocument();
+                writer.WriteLinkDefinition("_Top");
+                writer.WriteLine();
                 writer.WriteStartHeading(1);
                 writer.WriteLink(typeSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters);
                 writer.WriteSpace();
                 writer.WriteString(Resources.GetName(typeSymbol.TypeKind));
                 writer.WriteSpace();
                 writer.WriteString(Resources.ExtensionsTitle);
-                writer.WriteSpace();
-                writer.WriteLinkDefinition("_Top");
                 writer.WriteEndHeading();
                 writer.WriteContent(Array.Empty<string>(), addLinkToRoot: true);
 

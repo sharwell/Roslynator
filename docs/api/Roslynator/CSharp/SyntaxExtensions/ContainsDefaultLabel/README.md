@@ -1,6 +1,8 @@
-# SyntaxExtensions\.ContainsDefaultLabel\(SwitchSectionSyntax\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# SyntaxExtensions\.ContainsDefaultLabel\(SwitchSectionSyntax\) Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 

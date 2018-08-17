@@ -1,6 +1,8 @@
-# NameGenerator\.EnsureUniqueName Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# NameGenerator\.EnsureUniqueName Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[NameGenerator](../README.md#_Top)
 

@@ -1,4 +1,6 @@
-# Roslynator\.CSharp <a name="_Top"></a>
+<a name="_Top"></a>
+
+# Roslynator\.CSharp
 
 [Namespaces](#namespaces) &#x2022; [Classes](#classes) &#x2022; [Static Classes](#static-classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums)
 

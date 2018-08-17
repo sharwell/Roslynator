@@ -1,6 +1,8 @@
-# Reversed\.Equals Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# Reversed\.Equals Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../../README.md#_Top)\.[ExpressionChain.Reversed](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# [ElseClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.elseclausesyntax) Class Extensions <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# [ElseClauseSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.elseclausesyntax) Class Extensions
+
+[Home](../../../../../README.md#_Top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

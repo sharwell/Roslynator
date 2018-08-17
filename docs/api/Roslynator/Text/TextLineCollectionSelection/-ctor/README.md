@@ -1,6 +1,6 @@
 # TextLineCollectionSelection\(TextLineCollection, TextSpan, Int32, Int32\) Constructor
 
-[Home](../../../../README.md)
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Text](../../README.md#_Top)\.[TextLineCollectionSelection](../README.md#_Top)
 

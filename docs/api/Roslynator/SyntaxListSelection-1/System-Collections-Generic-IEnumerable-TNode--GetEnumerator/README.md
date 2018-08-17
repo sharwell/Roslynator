@@ -1,6 +1,8 @@
-# SyntaxListSelection\<TNode>\.IEnumerable\<TNode>\.GetEnumerator\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SyntaxListSelection\<TNode>\.IEnumerable\<TNode>\.GetEnumerator\(\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxListSelection\<TNode>](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# IsExpressionInfo\.OperatorToken Property <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# IsExpressionInfo\.OperatorToken Property
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[IsExpressionInfo](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# StatementListInfo\.WithStatements Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# StatementListInfo\.WithStatements Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[StatementListInfo](../README.md#_Top)
 

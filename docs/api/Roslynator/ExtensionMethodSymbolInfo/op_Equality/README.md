@@ -1,6 +1,8 @@
-# ExtensionMethodSymbolInfo\.Equality\(ExtensionMethodSymbolInfo, ExtensionMethodSymbolInfo\) Operator <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# ExtensionMethodSymbolInfo\.Equality\(ExtensionMethodSymbolInfo, ExtensionMethodSymbolInfo\) Operator
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[ExtensionMethodSymbolInfo](../README.md#_Top)
 

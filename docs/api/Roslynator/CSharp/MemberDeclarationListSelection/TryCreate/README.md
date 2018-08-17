@@ -1,6 +1,8 @@
-# MemberDeclarationListSelection\.TryCreate Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# MemberDeclarationListSelection\.TryCreate Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[MemberDeclarationListSelection](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# [DocumentationCommentTriviaSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.documentationcommenttriviasyntax) Class Extensions <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# [DocumentationCommentTriviaSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.documentationcommenttriviasyntax) Class Extensions
+
+[Home](../../../../../README.md#_Top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

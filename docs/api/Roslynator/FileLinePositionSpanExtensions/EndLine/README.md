@@ -1,6 +1,8 @@
-# FileLinePositionSpanExtensions\.EndLine\(FileLinePositionSpan\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# FileLinePositionSpanExtensions\.EndLine\(FileLinePositionSpan\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[FileLinePositionSpanExtensions](../README.md#_Top)
 

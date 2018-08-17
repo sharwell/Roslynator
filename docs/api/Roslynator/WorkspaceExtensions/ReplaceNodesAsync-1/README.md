@@ -1,6 +1,8 @@
-# WorkspaceExtensions\.ReplaceNodesAsync Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# WorkspaceExtensions\.ReplaceNodesAsync Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[WorkspaceExtensions](../README.md#_Top)
 

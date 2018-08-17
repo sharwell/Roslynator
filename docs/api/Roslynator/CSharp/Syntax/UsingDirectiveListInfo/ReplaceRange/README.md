@@ -1,6 +1,8 @@
-# UsingDirectiveListInfo\.ReplaceRange\(UsingDirectiveSyntax, IEnumerable\<UsingDirectiveSyntax>\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# UsingDirectiveListInfo\.ReplaceRange\(UsingDirectiveSyntax, IEnumerable\<UsingDirectiveSyntax>\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[UsingDirectiveListInfo](../README.md#_Top)
 

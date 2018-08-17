@@ -1,6 +1,8 @@
-# RegionInfo\.Inequality\(RegionInfo, RegionInfo\) Operator <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# RegionInfo\.Inequality\(RegionInfo, RegionInfo\) Operator
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[RegionInfo](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# SyntaxListSelection\<TNode>\.Enumerator Struct <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
+# SyntaxListSelection\<TNode>\.Enumerator Struct
+
+[Home](../../../README.md#_Top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
 
 **Namespace**: [Roslynator](../../README.md#_Top)
 

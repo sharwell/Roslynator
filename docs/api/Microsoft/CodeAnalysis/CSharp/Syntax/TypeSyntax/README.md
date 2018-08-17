@@ -1,6 +1,8 @@
-# [TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typesyntax) Class Extensions <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# [TypeSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typesyntax) Class Extensions
+
+[Home](../../../../../README.md#_Top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

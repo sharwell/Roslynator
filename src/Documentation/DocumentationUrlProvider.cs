@@ -162,7 +162,7 @@ namespace Roslynator.Documentation
             string fileName = GetFileName(DocumentationKind.Root);
 
             if (depth == 0)
-                return fileName;
+                return fileName + "#_Top";
 
             int capacity = (depth * 3) + fileName.Length;
 
@@ -178,6 +178,7 @@ namespace Roslynator.Documentation
 
             sb.Append(separator);
             sb.Append(fileName);
+            sb.Append("#_Top");
 
             return StringBuilderCache.GetStringAndFree(sb);
         }

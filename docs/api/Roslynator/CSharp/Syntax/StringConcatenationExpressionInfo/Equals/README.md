@@ -1,6 +1,8 @@
-# StringConcatenationExpressionInfo\.Equals Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# StringConcatenationExpressionInfo\.Equals Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[StringConcatenationExpressionInfo](../README.md#_Top)
 

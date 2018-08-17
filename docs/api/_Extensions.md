@@ -1,6 +1,8 @@
-# Extensions of External Types <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](README.md) &#x2022; [Namespaces](#namespaces) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums)
+# Extensions of External Types
+
+[Home](README.md#_Top) &#x2022; [Namespaces](#namespaces) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs) &#x2022; [Interfaces](#interfaces) &#x2022; [Enums](#enums)
 
 ## Namespaces
 

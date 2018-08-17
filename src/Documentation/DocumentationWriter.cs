@@ -1137,6 +1137,13 @@ namespace Roslynator.Documentation
             bool addLink = true,
             string linkDefinition = null)
         {
+            if (!string.IsNullOrEmpty(linkDefinition))
+            {
+                WriteLinkDefinition(linkDefinition);
+                WriteLine();
+            }
+
+
             WriteStartHeading(level);
 
             if (addLink)
@@ -1153,12 +1160,6 @@ namespace Roslynator.Documentation
             {
                 WriteSpace();
                 WriteString(Resources.GetName(symbol));
-            }
-
-            if (!string.IsNullOrEmpty(linkDefinition))
-            {
-                WriteSpace();
-                WriteLinkDefinition(linkDefinition);
             }
 
             WriteEndHeading();

@@ -1,6 +1,8 @@
-# [FileLinePositionSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.filelinepositionspan) Struct Extensions <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# [FileLinePositionSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.filelinepositionspan) Struct Extensions
+
+[Home](../../../README.md#_Top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

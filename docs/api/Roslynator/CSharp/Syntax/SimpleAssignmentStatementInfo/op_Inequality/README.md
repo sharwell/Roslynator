@@ -1,6 +1,8 @@
-# SimpleAssignmentStatementInfo\.Inequality\(SimpleAssignmentStatementInfo, SimpleAssignmentStatementInfo\) Operator <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# SimpleAssignmentStatementInfo\.Inequality\(SimpleAssignmentStatementInfo, SimpleAssignmentStatementInfo\) Operator
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[SimpleAssignmentStatementInfo](../README.md#_Top)
 

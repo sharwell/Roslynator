@@ -1,6 +1,8 @@
-# FooCollection\.IEnumerable\<Foo>\.GetEnumerator\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# FooCollection\.IEnumerable\<Foo>\.GetEnumerator\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooCollection](../README.md#_Top)
 

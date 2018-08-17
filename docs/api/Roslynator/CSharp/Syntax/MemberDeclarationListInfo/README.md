@@ -1,6 +1,8 @@
-# MemberDeclarationListInfo Struct <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+# MemberDeclarationListInfo Struct
+
+[Home](../../../../README.md#_Top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
 **Namespace**: [Roslynator.CSharp.Syntax](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# BinaryExpressionInfo\.Expressions\(Boolean\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# BinaryExpressionInfo\.Expressions\(Boolean\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[BinaryExpressionInfo](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# StatementListSelection\.TryCreate Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# StatementListSelection\.TryCreate Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[StatementListSelection](../README.md#_Top)
 

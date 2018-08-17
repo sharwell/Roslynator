@@ -1,6 +1,8 @@
-# SymbolExtensions\.IsPubliclyVisible\(ISymbol\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SymbolExtensions\.IsPubliclyVisible\(ISymbol\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SymbolExtensions](../README.md#_Top)
 

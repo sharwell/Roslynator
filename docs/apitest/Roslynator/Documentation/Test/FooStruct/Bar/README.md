@@ -1,6 +1,8 @@
-# FooStruct\.Bar\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# FooStruct\.Bar\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooStruct](../README.md#_Top)
 

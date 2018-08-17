@@ -1,6 +1,6 @@
 # ClassName\(\) Constructor
 
-[Home](../../../README.md)
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [System](../../README.md#_Top)\.[ClassName](../README.md#_Top)
 

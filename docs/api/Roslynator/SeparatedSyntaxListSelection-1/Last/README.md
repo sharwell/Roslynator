@@ -1,6 +1,8 @@
-# SeparatedSyntaxListSelection\<TNode>\.Last\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SeparatedSyntaxListSelection\<TNode>\.Last\(\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
 

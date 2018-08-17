@@ -1,6 +1,8 @@
-# SimpleIfElseInfo\.ToString\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# SimpleIfElseInfo\.ToString\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[SimpleIfElseInfo](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# [Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document) Class Extensions <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# [Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document) Class Extensions
+
+[Home](../../../README.md#_Top)
 
 | Extension Method | Summary |
 | ---------------- | ------- |

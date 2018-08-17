@@ -1,6 +1,8 @@
-# SyntaxInfo\.SimpleIfStatementInfo Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# SyntaxInfo\.SimpleIfStatementInfo Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxInfo](../README.md#_Top)
 

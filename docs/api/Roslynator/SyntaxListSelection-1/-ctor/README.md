@@ -1,6 +1,6 @@
 # SyntaxListSelection\(SyntaxList\<TNode>, TextSpan, Int32, Int32\) Constructor
 
-[Home](../../../README.md)
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxListSelection\<TNode>](../README.md#_Top)
 

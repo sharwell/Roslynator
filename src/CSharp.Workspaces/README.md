@@ -1,4 +1,6 @@
-# Roslynator\.CSharp\.Workspaces <a name="_Top"></a>
+<a name="_Top"></a>
+
+# Roslynator\.CSharp\.Workspaces
 
 [Namespaces](#namespaces) &#x2022; [Static Classes](#static-classes)
 

@@ -1,6 +1,8 @@
-# FooDelegate Delegate <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# FooDelegate Delegate
+
+[Home](../../../../README.md#_Top)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# System Namespace <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../README.md) &#x2022; [Classes](#classes)
+# System Namespace
+
+[Home](../README.md#_Top) &#x2022; [Classes](#classes)
 
 ## Classes
 

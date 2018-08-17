@@ -1,6 +1,8 @@
-# FooStruct Struct <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md) &#x2022; [Methods](#methods)
+# FooStruct Struct
+
+[Home](../../../../README.md#_Top) &#x2022; [Methods](#methods)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
 

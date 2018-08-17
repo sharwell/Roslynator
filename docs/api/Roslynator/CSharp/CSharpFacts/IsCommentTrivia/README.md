@@ -1,6 +1,8 @@
-# CSharpFacts\.IsCommentTrivia\(SyntaxKind\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# CSharpFacts\.IsCommentTrivia\(SyntaxKind\) Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFacts](../README.md#_Top)
 

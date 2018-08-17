@@ -1,6 +1,8 @@
-# Foo\.WriteString\(Char\*, Char\*\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# Foo\.WriteString\(Char\*, Char\*\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[Foo](../README.md#_Top)
 

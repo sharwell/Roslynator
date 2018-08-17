@@ -1,6 +1,8 @@
-# MemberDeclarationListInfo\.Replace\(MemberDeclarationSyntax, MemberDeclarationSyntax\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# MemberDeclarationListInfo\.Replace\(MemberDeclarationSyntax, MemberDeclarationSyntax\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[MemberDeclarationListInfo](../README.md#_Top)
 

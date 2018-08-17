@@ -1,6 +1,8 @@
-# Enumerator\.Reset\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../../README.md)
+# Enumerator\.Reset\(\) Method
+
+[Home](../../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../../../README.md#_Top)\.[ExpressionChain.Reversed.Enumerator](../README.md#_Top)
 

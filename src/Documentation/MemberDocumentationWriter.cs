@@ -108,6 +108,9 @@ namespace Roslynator.Documentation
 
         public virtual void WriteTitle(ISymbol symbol, bool isOverloaded)
         {
+            Writer.WriteLinkDefinition("_Top");
+            Writer.WriteLine();
+
             Writer.WriteStartHeading(1);
 
             SymbolDisplayFormat format = (isOverloaded)
@@ -117,8 +120,6 @@ namespace Roslynator.Documentation
             Writer.WriteString(symbol.ToDisplayString(format, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
             Writer.WriteSpace();
             Writer.WriteString(Resources.GetName(symbol));
-            Writer.WriteSpace();
-            Writer.WriteLinkDefinition("_Top");
             Writer.WriteEndHeading();
         }
 

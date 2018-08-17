@@ -1,6 +1,8 @@
-# SymbolExtensions\.EqualsOrInheritsFrom\(ITypeSymbol, ITypeSymbol, Boolean\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SymbolExtensions\.EqualsOrInheritsFrom\(ITypeSymbol, ITypeSymbol, Boolean\) Method
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SymbolExtensions](../README.md#_Top)
 

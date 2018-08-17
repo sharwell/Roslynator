@@ -1,6 +1,8 @@
-# SyntaxExtensions\.ReplaceWhitespace\<TNode>\(TNode, SyntaxTrivia, TextSpan?\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# SyntaxExtensions\.ReplaceWhitespace\<TNode>\(TNode, SyntaxTrivia, TextSpan?\) Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# XmlElementInfo\.GetHashCode\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# XmlElementInfo\.GetHashCode\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[XmlElementInfo](../README.md#_Top)
 

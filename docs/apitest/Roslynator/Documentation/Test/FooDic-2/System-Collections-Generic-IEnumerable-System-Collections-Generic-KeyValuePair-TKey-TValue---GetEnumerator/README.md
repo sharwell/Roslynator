@@ -1,6 +1,8 @@
-# FooDic\<TKey, TValue>\.IEnumerable\<KeyValuePair\<TKey, TValue>>\.GetEnumerator\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# FooDic\<TKey, TValue>\.IEnumerable\<KeyValuePair\<TKey, TValue>>\.GetEnumerator\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooDic\<TKey, TValue>](../README.md#_Top)
 

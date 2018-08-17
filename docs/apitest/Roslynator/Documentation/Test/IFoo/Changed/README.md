@@ -1,6 +1,8 @@
-# IFoo\.Changed Event <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# IFoo\.Changed Event
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[IFoo](../README.md#_Top)
 

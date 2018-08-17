@@ -1,6 +1,8 @@
-# Enumerator\.GetHashCode\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# Enumerator\.GetHashCode\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Text](../../../README.md#_Top)\.[TextLineCollectionSelection.Enumerator](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# AssignmentExpressionInfo\.Right Property <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# AssignmentExpressionInfo\.Right Property
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[AssignmentExpressionInfo](../README.md#_Top)
 

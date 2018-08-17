@@ -1,6 +1,8 @@
-# Roslynator\.CSharp\.Syntax Namespace <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md) &#x2022; [Structs](#structs)
+# Roslynator\.CSharp\.Syntax Namespace
+
+[Home](../../../README.md#_Top) &#x2022; [Structs](#structs)
 
 ## Structs
 

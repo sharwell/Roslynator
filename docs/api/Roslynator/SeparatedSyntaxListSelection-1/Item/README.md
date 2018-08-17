@@ -1,6 +1,8 @@
-# SeparatedSyntaxListSelection\<TNode>\.Item\[Int32\] Property <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md)
+# SeparatedSyntaxListSelection\<TNode>\.Item\[Int32\] Property
+
+[Home](../../../README.md#_Top)
 
 **Containing Type**: [Roslynator](../../README.md#_Top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# TextLineCollectionSelection\.Count Property <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# TextLineCollectionSelection\.Count Property
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Text](../../README.md#_Top)\.[TextLineCollectionSelection](../README.md#_Top)
 

@@ -1,6 +1,8 @@
-# SyntaxExtensions\.IsYieldReturn\(YieldStatementSyntax\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../README.md)
+# SyntaxExtensions\.IsYieldReturn\(YieldStatementSyntax\) Method
+
+[Home](../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 

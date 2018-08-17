@@ -1,6 +1,8 @@
-# TextLineCollectionSelection Class <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../README.md) &#x2022; [Constructors](#constructors) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations) &#x2022; [Structs](#structs)
+# TextLineCollectionSelection Class
+
+[Home](../../../README.md#_Top) &#x2022; [Constructors](#constructors) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations) &#x2022; [Structs](#structs)
 
 **Namespace**: [Roslynator.Text](../README.md#_Top)
 

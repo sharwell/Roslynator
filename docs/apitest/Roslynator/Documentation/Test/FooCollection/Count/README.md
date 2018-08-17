@@ -1,6 +1,8 @@
-# FooCollection\.Count Property <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# FooCollection\.Count Property
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooCollection](../README.md#_Top)
 

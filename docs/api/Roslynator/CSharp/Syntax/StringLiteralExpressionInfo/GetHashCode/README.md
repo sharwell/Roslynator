@@ -1,6 +1,8 @@
-# StringLiteralExpressionInfo\.GetHashCode\(\) Method <a name="_Top"></a>
+<a name="_Top"></a>
 
-[Home](../../../../../README.md)
+# StringLiteralExpressionInfo\.GetHashCode\(\) Method
+
+[Home](../../../../../README.md#_Top)
 
 **Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[StringLiteralExpressionInfo](../README.md#_Top)
 
