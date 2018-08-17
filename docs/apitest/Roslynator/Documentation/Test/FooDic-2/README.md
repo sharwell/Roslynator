@@ -1,8 +1,8 @@
-# FooDic\<TKey, TValue> Class
+# FooDic\<TKey, TValue> Class <a name="_Top"></a>
 
 [Home](../../../../README.md) &#x2022; [Constructors](#constructors) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
-**Namespace**: [Roslynator.Documentation.Test](../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -44,7 +44,7 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [FooDic()](-ctor/README.md) | |
+| [FooDic()](-ctor/README.md#_Top) | |
 
 ## Methods
 
@@ -60,9 +60,9 @@ public class FooDic<TKey, TValue> : System.Collections.Generic.IEnumerable<Syste
 
 | Member | Summary |
 | ------ | ------- |
-| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md) | |
-| [IEnumerable\<KeyValuePair\<TKey, TValue>>.GetEnumerator()](System-Collections-Generic-IEnumerable-System-Collections-Generic-KeyValuePair-TKey-TValue---GetEnumerator/README.md) | |
-| [IEnumerable\<TValue>.GetEnumerator()](System-Collections-Generic-IEnumerable-TValue--GetEnumerator/README.md) | |
-| [IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>.Count](System-Collections-Generic-IReadOnlyCollection-System-Collections-Generic-KeyValuePair-TKey-TValue---Count/README.md) | |
-| [IReadOnlyList\<KeyValuePair\<TKey, TValue>>.Item\[Int32\]](System-Collections-Generic-IReadOnlyList-System-Collections-Generic-KeyValuePair-TKey-TValue---Item/README.md) | |
+| [IEnumerable.GetEnumerator()](System-Collections-IEnumerable-GetEnumerator/README.md#_Top) | |
+| [IEnumerable\<KeyValuePair\<TKey, TValue>>.GetEnumerator()](System-Collections-Generic-IEnumerable-System-Collections-Generic-KeyValuePair-TKey-TValue---GetEnumerator/README.md#_Top) | |
+| [IEnumerable\<TValue>.GetEnumerator()](System-Collections-Generic-IEnumerable-TValue--GetEnumerator/README.md#_Top) | |
+| [IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>.Count](System-Collections-Generic-IReadOnlyCollection-System-Collections-Generic-KeyValuePair-TKey-TValue---Count/README.md#_Top) | |
+| [IReadOnlyList\<KeyValuePair\<TKey, TValue>>.Item\[Int32\]](System-Collections-Generic-IReadOnlyList-System-Collections-Generic-KeyValuePair-TKey-TValue---Item/README.md#_Top) | |
 

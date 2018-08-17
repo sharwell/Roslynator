@@ -1,8 +1,8 @@
-# WorkspaceExtensions\.RemoveCommentsAsync Method
+# WorkspaceExtensions\.RemoveCommentsAsync Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[WorkspaceExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[WorkspaceExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 
@@ -13,7 +13,7 @@
 | [RemoveCommentsAsync(Document, CommentKinds, CancellationToken)](#Roslynator_CSharp_WorkspaceExtensions_RemoveCommentsAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_CommentKinds_System_Threading_CancellationToken_) | Creates a new document with comments of the specified kind removed\. |
 | [RemoveCommentsAsync(Document, TextSpan, CommentKinds, CancellationToken)](#Roslynator_CSharp_WorkspaceExtensions_RemoveCommentsAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_CommentKinds_System_Threading_CancellationToken_) | Creates a new document with comments of the specified kind removed\. |
 
-## RemoveCommentsAsync\(Document, CommentKinds, CancellationToken\)<a name="Roslynator_CSharp_WorkspaceExtensions_RemoveCommentsAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_CommentKinds_System_Threading_CancellationToken_"></a>
+## RemoveCommentsAsync\(Document, CommentKinds, CancellationToken\) <a name="Roslynator_CSharp_WorkspaceExtensions_RemoveCommentsAsync_Microsoft_CodeAnalysis_Document_Roslynator_CSharp_CommentKinds_System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static Task<Document> RemoveCommentsAsync(this Document document, Comment
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
-## RemoveCommentsAsync\(Document, TextSpan, CommentKinds, CancellationToken\)<a name="Roslynator_CSharp_WorkspaceExtensions_RemoveCommentsAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_CommentKinds_System_Threading_CancellationToken_"></a>
+## RemoveCommentsAsync\(Document, TextSpan, CommentKinds, CancellationToken\) <a name="Roslynator_CSharp_WorkspaceExtensions_RemoveCommentsAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_CommentKinds_System_Threading_CancellationToken_"></a>
 
 ### Summary
 

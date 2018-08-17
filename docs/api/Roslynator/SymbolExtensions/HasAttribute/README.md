@@ -1,8 +1,8 @@
-# SymbolExtensions\.HasAttribute Method
+# SymbolExtensions\.HasAttribute Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SymbolExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [HasAttribute(ISymbol, INamedTypeSymbol)](#Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_) | Returns true if the symbol has the specified attribute\. |
 | [HasAttribute(ITypeSymbol, INamedTypeSymbol, Boolean)](#Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Boolean_) | Returns true if the type symbol has the specified attribute\. |
 
-## HasAttribute\(ISymbol, INamedTypeSymbol\)<a name="Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_"></a>
+## HasAttribute\(ISymbol, INamedTypeSymbol\) <a name="Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_"></a>
 
 ### Summary
 
@@ -33,7 +33,7 @@ public static bool HasAttribute(this ISymbol symbol, INamedTypeSymbol attributeC
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## HasAttribute\(ITypeSymbol, INamedTypeSymbol, Boolean\)<a name="Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Boolean_"></a>
+## HasAttribute\(ITypeSymbol, INamedTypeSymbol, Boolean\) <a name="Roslynator_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Boolean_"></a>
 
 ### Summary
 

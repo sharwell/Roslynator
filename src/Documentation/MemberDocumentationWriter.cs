@@ -98,9 +98,8 @@ namespace Roslynator.Documentation
 
                     Writer.WriteStartHeading(2);
                     Writer.WriteString(overloadSymbol.ToDisplayString(format, additionalOptions));
-
-                    //TODO: <a name="id"></a>
-                    Writer.WriteRaw($@"<a name=""{id}""></a>");
+                    Writer.WriteSpace();
+                    Writer.WriteLinkDefinition(id);
                     Writer.WriteEndHeading();
                     WriteContent(overloadSymbol, headingLevelBase: 1);
                 }
@@ -118,6 +117,8 @@ namespace Roslynator.Documentation
             Writer.WriteString(symbol.ToDisplayString(format, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName));
             Writer.WriteSpace();
             Writer.WriteString(Resources.GetName(symbol));
+            Writer.WriteSpace();
+            Writer.WriteLinkDefinition("_Top");
             Writer.WriteEndHeading();
         }
 

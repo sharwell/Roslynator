@@ -1,8 +1,8 @@
-# SimpleIfStatementInfo\.GetHashCode\(\) Method
+# SimpleIfStatementInfo\.GetHashCode\(\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleIfStatementInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[SimpleIfStatementInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

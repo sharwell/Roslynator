@@ -1,8 +1,8 @@
-# SyntaxExtensions\.ReplaceRange Method
+# SyntaxExtensions\.ReplaceRange Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -15,7 +15,7 @@
 | [ReplaceRange\<TNode>(SeparatedSyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>)](#Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__) | Creates a new list with the elements in the specified range replaced with new nodes\. |
 | [ReplaceRange\<TNode>(SyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>)](#Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__) | Creates a new list with the elements in the specified range replaced with new nodes\. |
 
-## ReplaceRange\(SyntaxTokenList, Int32, Int32, IEnumerable\<SyntaxToken>\)<a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange_Microsoft_CodeAnalysis_SyntaxTokenList_System_Int32_System_Int32_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxToken__"></a>
+## ReplaceRange\(SyntaxTokenList, Int32, Int32, IEnumerable\<SyntaxToken>\) <a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange_Microsoft_CodeAnalysis_SyntaxTokenList_System_Int32_System_Int32_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxToken__"></a>
 
 ### Summary
 
@@ -39,7 +39,7 @@ public static SyntaxTokenList ReplaceRange(this SyntaxTokenList list, int index,
 
 Microsoft\.CodeAnalysis\.[SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)
 
-## ReplaceRange\(SyntaxTriviaList, Int32, Int32, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange_Microsoft_CodeAnalysis_SyntaxTriviaList_System_Int32_System_Int32_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
+## ReplaceRange\(SyntaxTriviaList, Int32, Int32, IEnumerable\<SyntaxTrivia>\) <a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange_Microsoft_CodeAnalysis_SyntaxTriviaList_System_Int32_System_Int32_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -63,7 +63,7 @@ public static SyntaxTriviaList ReplaceRange(this SyntaxTriviaList list, int inde
 
 Microsoft\.CodeAnalysis\.[SyntaxTriviaList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtrivialist)
 
-## ReplaceRange\<TNode>\(SeparatedSyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>\)<a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__"></a>
+## ReplaceRange\<TNode>\(SeparatedSyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>\) <a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__"></a>
 
 ### Summary
 
@@ -91,7 +91,7 @@ public static SeparatedSyntaxList<TNode> ReplaceRange<TNode>(this SeparatedSynta
 
 Microsoft\.CodeAnalysis\.[SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)
 
-## ReplaceRange\<TNode>\(SyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>\)<a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__"></a>
+## ReplaceRange\<TNode>\(SyntaxList\<TNode>, Int32, Int32, IEnumerable\<TNode>\) <a name="Roslynator_CSharp_SyntaxExtensions_ReplaceRange__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Int32_System_Int32_System_Collections_Generic_IEnumerable___0__"></a>
 
 ### Summary
 

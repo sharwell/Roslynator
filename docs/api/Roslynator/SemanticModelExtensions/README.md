@@ -1,8 +1,8 @@
-# SemanticModelExtensions Class
+# SemanticModelExtensions Class <a name="_Top"></a>
 
 [Home](../../README.md) &#x2022; [Methods](#methods)
 
-**Namespace**: [Roslynator](../README.md)
+**Namespace**: [Roslynator](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -18,9 +18,9 @@ public static class SemanticModelExtensions
 
 | Method | Summary |
 | ------ | ------- |
-| [GetEnclosingNamedType(SemanticModel, Int32, CancellationToken)](GetEnclosingNamedType/README.md) | Returns the innermost named type symbol that the specified position is considered inside of\. |
-| [GetEnclosingSymbol\<TSymbol>(SemanticModel, Int32, CancellationToken)](GetEnclosingSymbol-1/README.md) | Returns the innermost symbol of type **TSymbol** that the specified position is considered inside of\. |
-| [GetSymbol(SemanticModel, SyntaxNode, CancellationToken)](GetSymbol/README.md) | Returns what symbol, if any, the specified node bound to\. |
-| [GetTypeByMetadataName(SemanticModel, String)](GetTypeByMetadataName/README.md) | Returns the type within the compilation's assembly using its canonical CLR metadata name\. |
-| [GetTypeSymbol(SemanticModel, SyntaxNode, CancellationToken)](GetTypeSymbol/README.md) | Returns type information about the specified node\. |
+| [GetEnclosingNamedType(SemanticModel, Int32, CancellationToken)](GetEnclosingNamedType/README.md#_Top) | Returns the innermost named type symbol that the specified position is considered inside of\. |
+| [GetEnclosingSymbol\<TSymbol>(SemanticModel, Int32, CancellationToken)](GetEnclosingSymbol-1/README.md#_Top) | Returns the innermost symbol of type **TSymbol** that the specified position is considered inside of\. |
+| [GetSymbol(SemanticModel, SyntaxNode, CancellationToken)](GetSymbol/README.md#_Top) | Returns what symbol, if any, the specified node bound to\. |
+| [GetTypeByMetadataName(SemanticModel, String)](GetTypeByMetadataName/README.md#_Top) | Returns the type within the compilation's assembly using its canonical CLR metadata name\. |
+| [GetTypeSymbol(SemanticModel, SyntaxNode, CancellationToken)](GetTypeSymbol/README.md#_Top) | Returns type information about the specified node\. |
 

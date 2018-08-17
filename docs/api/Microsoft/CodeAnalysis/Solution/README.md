@@ -1,4 +1,4 @@
-# [Solution](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.solution) Class Extensions
+# [Solution](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.solution) Class Extensions <a name="_Top"></a>
 
 [Home](../../../README.md)
 

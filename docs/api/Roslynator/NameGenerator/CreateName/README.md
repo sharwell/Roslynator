@@ -1,8 +1,8 @@
-# NameGenerator\.CreateName\(ITypeSymbol, Boolean\) Method
+# NameGenerator\.CreateName\(ITypeSymbol, Boolean\) Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[NameGenerator](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[NameGenerator](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

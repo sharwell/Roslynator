@@ -1,8 +1,8 @@
-# SemanticModelExtensions\.GetTypeByMetadataName\(SemanticModel, String\) Method
+# SemanticModelExtensions\.GetTypeByMetadataName\(SemanticModel, String\) Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SemanticModelExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SemanticModelExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

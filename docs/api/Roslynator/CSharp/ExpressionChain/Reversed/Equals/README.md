@@ -1,8 +1,8 @@
-# Reversed\.Equals Method
+# Reversed\.Equals Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../../README.md)\.[ExpressionChain.Reversed](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../../README.md#_Top)\.[ExpressionChain.Reversed](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Equals(Object)](#Roslynator_CSharp_ExpressionChain_Reversed_Equals_System_Object_) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 | [Equals(Reversed)](#Roslynator_CSharp_ExpressionChain_Reversed_Equals_Roslynator_CSharp_ExpressionChain_Reversed_) |  \(Implements [IEquatable\<Reversed>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 
-## Equals\(Object\)<a name="Roslynator_CSharp_ExpressionChain_Reversed_Equals_System_Object_"></a>
+## Equals\(Object\) <a name="Roslynator_CSharp_ExpressionChain_Reversed_Equals_System_Object_"></a>
 
 ```csharp
 public override bool Equals(object obj)
@@ -27,7 +27,7 @@ public override bool Equals(object obj)
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Equals\(Reversed\)<a name="Roslynator_CSharp_ExpressionChain_Reversed_Equals_Roslynator_CSharp_ExpressionChain_Reversed_"></a>
+## Equals\(Reversed\) <a name="Roslynator_CSharp_ExpressionChain_Reversed_Equals_Roslynator_CSharp_ExpressionChain_Reversed_"></a>
 
 ```csharp
 public bool Equals(ExpressionChain.Reversed other)

@@ -1,8 +1,8 @@
-# ExtensionMethodSymbolInfo\.Equals Method
+# ExtensionMethodSymbolInfo\.Equals Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[ExtensionMethodSymbolInfo](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[ExtensionMethodSymbolInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Equals(ExtensionMethodSymbolInfo)](#Roslynator_ExtensionMethodSymbolInfo_Equals_Roslynator_ExtensionMethodSymbolInfo_) |  \(Implements [IEquatable\<ExtensionMethodSymbolInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | [Equals(Object)](#Roslynator_ExtensionMethodSymbolInfo_Equals_System_Object_) |  \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
-## Equals\(ExtensionMethodSymbolInfo\)<a name="Roslynator_ExtensionMethodSymbolInfo_Equals_Roslynator_ExtensionMethodSymbolInfo_"></a>
+## Equals\(ExtensionMethodSymbolInfo\) <a name="Roslynator_ExtensionMethodSymbolInfo_Equals_Roslynator_ExtensionMethodSymbolInfo_"></a>
 
 ```csharp
 public bool Equals(ExtensionMethodSymbolInfo other)
@@ -31,7 +31,7 @@ System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 * [IEquatable\<ExtensionMethodSymbolInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)
 
-## Equals\(Object\)<a name="Roslynator_ExtensionMethodSymbolInfo_Equals_System_Object_"></a>
+## Equals\(Object\) <a name="Roslynator_ExtensionMethodSymbolInfo_Equals_System_Object_"></a>
 
 ```csharp
 public override bool Equals(object obj)

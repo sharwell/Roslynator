@@ -1,14 +1,14 @@
-# StatementListInfo\.RemoveNode\(SyntaxNode, SyntaxRemoveOptions\) Method
+# StatementListInfo\.RemoveNode\(SyntaxNode, SyntaxRemoveOptions\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[StatementListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[StatementListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [StatementListInfo](../README.md) with the specified node removed\.
+Creates a new [StatementListInfo](../README.md#_Top) with the specified node removed\.
 
 ```csharp
 public StatementListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions options)
@@ -22,5 +22,5 @@ public StatementListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions options
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md#_Top)
 

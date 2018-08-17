@@ -1,8 +1,8 @@
-# SeparatedSyntaxListSelection\<TNode>\.GetEnumerator\(\) Method
+# SeparatedSyntaxListSelection\<TNode>\.GetEnumerator\(\) Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SeparatedSyntaxListSelection\<TNode>](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -16,5 +16,5 @@ public SeparatedSyntaxListSelection<TNode>.Enumerator GetEnumerator()
 
 ### Returns
 
-Roslynator\.[SeparatedSyntaxListSelection\<TNode>.Enumerator](../Enumerator/README.md)
+Roslynator\.[SeparatedSyntaxListSelection\<TNode>.Enumerator](../Enumerator/README.md#_Top)
 

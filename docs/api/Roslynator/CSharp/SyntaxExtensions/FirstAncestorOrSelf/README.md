@@ -1,8 +1,8 @@
-# SyntaxExtensions\.FirstAncestorOrSelf Method
+# SyntaxExtensions\.FirstAncestorOrSelf Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -15,7 +15,7 @@
 | [FirstAncestorOrSelf(SyntaxNode, SyntaxKind, SyntaxKind, Boolean)](#Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_) | Gets the first ancestor of the specified kinds\. |
 | [FirstAncestorOrSelf(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, Boolean)](#Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_) | Gets the first ancestor of the specified kinds\. |
 
-## FirstAncestorOrSelf\(SyntaxNode, Func\<SyntaxNode, Boolean>, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_System_Func_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean__System_Boolean_"></a>
+## FirstAncestorOrSelf\(SyntaxNode, Func\<SyntaxNode, Boolean>, Boolean\) <a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_System_Func_Microsoft_CodeAnalysis_SyntaxNode_System_Boolean__System_Boolean_"></a>
 
 ### Summary
 
@@ -37,7 +37,7 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, Func<SyntaxNo
 
 Microsoft\.CodeAnalysis\.[SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
-## FirstAncestorOrSelf\(SyntaxNode, SyntaxKind, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
+## FirstAncestorOrSelf\(SyntaxNode, SyntaxKind, Boolean\) <a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
 
 ### Summary
 
@@ -59,7 +59,7 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind ki
 
 Microsoft\.CodeAnalysis\.[SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
-## FirstAncestorOrSelf\(SyntaxNode, SyntaxKind, SyntaxKind, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
+## FirstAncestorOrSelf\(SyntaxNode, SyntaxKind, SyntaxKind, Boolean\) <a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
 
 ### Summary
 
@@ -83,7 +83,7 @@ public static SyntaxNode FirstAncestorOrSelf(this SyntaxNode node, SyntaxKind ki
 
 Microsoft\.CodeAnalysis\.[SyntaxNode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode)
 
-## FirstAncestorOrSelf\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, Boolean\)<a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
+## FirstAncestorOrSelf\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, Boolean\) <a name="Roslynator_CSharp_SyntaxExtensions_FirstAncestorOrSelf_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_System_Boolean_"></a>
 
 ### Summary
 

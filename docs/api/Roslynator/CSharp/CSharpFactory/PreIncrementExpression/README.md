@@ -1,8 +1,8 @@
-# CSharpFactory\.PreIncrementExpression Method
+# CSharpFactory\.PreIncrementExpression Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [PreIncrementExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_PreIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 | [PreIncrementExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_PreIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
-## PreIncrementExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_PreIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## PreIncrementExpression\(ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_PreIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax PreIncrementExpression(ExpressionSyntax operand)
@@ -27,7 +27,7 @@ public static PrefixUnaryExpressionSyntax PreIncrementExpression(ExpressionSynta
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PrefixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.prefixunaryexpressionsyntax)
 
-## PreIncrementExpression\(ExpressionSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_PreIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
+## PreIncrementExpression\(ExpressionSyntax, SyntaxToken\) <a name="Roslynator_CSharp_CSharpFactory_PreIncrementExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax PreIncrementExpression(ExpressionSyntax operand, SyntaxToken operatorToken)

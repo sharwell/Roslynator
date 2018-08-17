@@ -1,8 +1,8 @@
-# CSharpFactory\.AddressOfExpression Method
+# CSharpFactory\.AddressOfExpression Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [AddressOfExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_AddressOfExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 | [AddressOfExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_AddressOfExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
-## AddressOfExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AddressOfExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## AddressOfExpression\(ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_AddressOfExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax AddressOfExpression(ExpressionSyntax operand)
@@ -27,7 +27,7 @@ public static PrefixUnaryExpressionSyntax AddressOfExpression(ExpressionSyntax o
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PrefixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.prefixunaryexpressionsyntax)
 
-## AddressOfExpression\(ExpressionSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_AddressOfExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
+## AddressOfExpression\(ExpressionSyntax, SyntaxToken\) <a name="Roslynator_CSharp_CSharpFactory_AddressOfExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax AddressOfExpression(ExpressionSyntax operand, SyntaxToken operatorToken)

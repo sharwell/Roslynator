@@ -1,8 +1,8 @@
-# CSharpFactory\.RightShiftAssignmentExpression Method
+# CSharpFactory\.RightShiftAssignmentExpression Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [RightShiftAssignmentExpression(ExpressionSyntax, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_RightShiftAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 | [RightShiftAssignmentExpression(ExpressionSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_RightShiftAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 
-## RightShiftAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_RightShiftAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## RightShiftAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_RightShiftAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static AssignmentExpressionSyntax RightShiftAssignmentExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -29,7 +29,7 @@ public static AssignmentExpressionSyntax RightShiftAssignmentExpression(Expressi
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AssignmentExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.assignmentexpressionsyntax)
 
-## RightShiftAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_RightShiftAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## RightShiftAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_RightShiftAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static AssignmentExpressionSyntax RightShiftAssignmentExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

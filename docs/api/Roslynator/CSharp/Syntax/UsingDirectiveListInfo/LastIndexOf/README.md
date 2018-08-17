@@ -1,8 +1,8 @@
-# UsingDirectiveListInfo\.LastIndexOf Method
+# UsingDirectiveListInfo\.LastIndexOf Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[UsingDirectiveListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[UsingDirectiveListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [LastIndexOf(Func\<UsingDirectiveSyntax, Boolean>)](#Roslynator_CSharp_Syntax_UsingDirectiveListInfo_LastIndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax_System_Boolean__) | Searches for an using directive that matches the predicate and returns returns zero\-based index of the last occurrence in the list\. |
 | [LastIndexOf(UsingDirectiveSyntax)](#Roslynator_CSharp_Syntax_UsingDirectiveListInfo_LastIndexOf_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax_) | Searches for an using directive and returns zero\-based index of the last occurrence in the list\. |
 
-## LastIndexOf\(Func\<UsingDirectiveSyntax, Boolean>\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_LastIndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax_System_Boolean__"></a>
+## LastIndexOf\(Func\<UsingDirectiveSyntax, Boolean>\) <a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_LastIndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax_System_Boolean__"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public int LastIndexOf(Func<UsingDirectiveSyntax, bool> predicate)
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-## LastIndexOf\(UsingDirectiveSyntax\)<a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_LastIndexOf_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax_"></a>
+## LastIndexOf\(UsingDirectiveSyntax\) <a name="Roslynator_CSharp_Syntax_UsingDirectiveListInfo_LastIndexOf_Microsoft_CodeAnalysis_CSharp_Syntax_UsingDirectiveSyntax_"></a>
 
 ### Summary
 

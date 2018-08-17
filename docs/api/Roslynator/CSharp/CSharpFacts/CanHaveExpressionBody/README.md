@@ -1,8 +1,8 @@
-# CSharpFacts\.CanHaveExpressionBody\(SyntaxKind\) Method
+# CSharpFacts\.CanHaveExpressionBody\(SyntaxKind\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFacts](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFacts](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

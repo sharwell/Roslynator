@@ -1,8 +1,8 @@
-# CSharpFacts\.IsCompoundAssignmentExpression\(SyntaxKind\) Method
+# CSharpFacts\.IsCompoundAssignmentExpression\(SyntaxKind\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFacts](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFacts](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,8 +1,8 @@
-# SymbolExtensions\.Implements Method
+# SymbolExtensions\.Implements Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SymbolExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Implements(ITypeSymbol, INamedTypeSymbol, Boolean)](#Roslynator_SymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Boolean_) | Returns true if the type implements specified interface\. |
 | [Implements(ITypeSymbol, SpecialType, Boolean)](#Roslynator_SymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_System_Boolean_) | Returns true if the type implements specified interface\. |
 
-## Implements\(ITypeSymbol, INamedTypeSymbol, Boolean\)<a name="Roslynator_SymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Boolean_"></a>
+## Implements\(ITypeSymbol, INamedTypeSymbol, Boolean\) <a name="Roslynator_SymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Boolean_"></a>
 
 ### Summary
 
@@ -37,7 +37,7 @@ If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Implements\(ITypeSymbol, SpecialType, Boolean\)<a name="Roslynator_SymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_System_Boolean_"></a>
+## Implements\(ITypeSymbol, SpecialType, Boolean\) <a name="Roslynator_SymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_System_Boolean_"></a>
 
 ### Summary
 

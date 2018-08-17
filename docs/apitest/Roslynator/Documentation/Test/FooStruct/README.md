@@ -1,8 +1,8 @@
-# FooStruct Struct
+# FooStruct Struct <a name="_Top"></a>
 
 [Home](../../../../README.md) &#x2022; [Methods](#methods)
 
-**Namespace**: [Roslynator.Documentation.Test](../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -18,7 +18,7 @@ public struct FooStruct
 
 | Method | Summary |
 | ------ | ------- |
-| [Bar()](Bar/README.md) | |
+| [Bar()](Bar/README.md#_Top) | |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals) |  \(Inherited from [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype)\) |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode) |  \(Inherited from [ValueType](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |

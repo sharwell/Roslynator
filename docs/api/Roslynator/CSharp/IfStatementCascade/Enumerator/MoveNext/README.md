@@ -1,8 +1,8 @@
-# Enumerator\.MoveNext\(\) Method
+# Enumerator\.MoveNext\(\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../../README.md)\.[IfStatementCascade.Enumerator](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../../README.md#_Top)\.[IfStatementCascade.Enumerator](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

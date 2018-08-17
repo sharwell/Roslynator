@@ -1,8 +1,8 @@
-# FooDic\<TKey, TValue>\.IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>\.Count Property
+# FooDic\<TKey, TValue>\.IReadOnlyCollection\<KeyValuePair\<TKey, TValue>>\.Count Property <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooDic\<TKey, TValue>](../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooDic\<TKey, TValue>](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

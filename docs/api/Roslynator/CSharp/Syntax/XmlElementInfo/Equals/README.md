@@ -1,8 +1,8 @@
-# XmlElementInfo\.Equals Method
+# XmlElementInfo\.Equals Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[XmlElementInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[XmlElementInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Equals(Object)](#Roslynator_CSharp_Syntax_XmlElementInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 | [Equals(XmlElementInfo)](#Roslynator_CSharp_Syntax_XmlElementInfo_Equals_Roslynator_CSharp_Syntax_XmlElementInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<XmlElementInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 
-## Equals\(Object\)<a name="Roslynator_CSharp_Syntax_XmlElementInfo_Equals_System_Object_"></a>
+## Equals\(Object\) <a name="Roslynator_CSharp_Syntax_XmlElementInfo_Equals_System_Object_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 true if **obj** and this instance are the same type and represent the same value; otherwise, false\. 
 
-## Equals\(XmlElementInfo\)<a name="Roslynator_CSharp_Syntax_XmlElementInfo_Equals_Roslynator_CSharp_Syntax_XmlElementInfo_"></a>
+## Equals\(XmlElementInfo\) <a name="Roslynator_CSharp_Syntax_XmlElementInfo_Equals_Roslynator_CSharp_Syntax_XmlElementInfo_"></a>
 
 ### Summary
 

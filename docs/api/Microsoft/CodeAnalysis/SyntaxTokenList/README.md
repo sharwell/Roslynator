@@ -1,4 +1,4 @@
-# [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist) Struct Extensions
+# [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist) Struct Extensions <a name="_Top"></a>
 
 [Home](../../../README.md)
 

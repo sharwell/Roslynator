@@ -1,8 +1,8 @@
-# SimpleAssignmentExpressionInfo\.Inequality\(SimpleAssignmentExpressionInfo, SimpleAssignmentExpressionInfo\) Operator
+# SimpleAssignmentExpressionInfo\.Inequality\(SimpleAssignmentExpressionInfo, SimpleAssignmentExpressionInfo\) Operator <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleAssignmentExpressionInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[SimpleAssignmentExpressionInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

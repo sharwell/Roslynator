@@ -1,8 +1,8 @@
-# SyntaxExtensions\.ContainsAny Method
+# SyntaxExtensions\.ContainsAny Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -15,7 +15,7 @@
 | [ContainsAny(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind)](#Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Returns true if a token of the specified kinds is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\. |
 | [ContainsAny(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind)](#Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Returns true if a token of the specified kinds is in the [SyntaxTokenList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtokenlist)\. |
 
-## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -37,7 +37,7 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -61,7 +61,7 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -87,7 +87,7 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## ContainsAny\(SyntaxTokenList, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_ContainsAny_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 

@@ -1,8 +1,8 @@
-# IfStatementCascade\.IEnumerable\<IfStatementOrElseClause>\.GetEnumerator\(\) Method
+# IfStatementCascade\.IEnumerable\<IfStatementOrElseClause>\.GetEnumerator\(\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementCascade](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[IfStatementCascade](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -12,7 +12,7 @@ private IEnumerator<IfStatementOrElseClause> IEnumerable<IfStatementOrElseClause
 
 ### Returns
 
-System\.Collections\.Generic\.[IEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1)\<Roslynator\.CSharp\.[IfStatementOrElseClause](../../IfStatementOrElseClause/README.md)>
+System\.Collections\.Generic\.[IEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1)\<Roslynator\.CSharp\.[IfStatementOrElseClause](../../IfStatementOrElseClause/README.md#_Top)>
 
 ### Implements
 

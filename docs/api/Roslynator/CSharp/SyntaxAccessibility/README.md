@@ -1,8 +1,8 @@
-# SyntaxAccessibility Class
+# SyntaxAccessibility Class <a name="_Top"></a>
 
 [Home](../../../README.md) &#x2022; [Methods](#methods)
 
-**Namespace**: [Roslynator.CSharp](../README.md)
+**Namespace**: [Roslynator.CSharp](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -94,8 +94,8 @@ public static class SyntaxAccessibility
 | [GetExplicitAccessibility(PropertyDeclarationSyntax)](GetExplicitAccessibility/README.md#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_PropertyDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
 | [GetExplicitAccessibility(StructDeclarationSyntax)](GetExplicitAccessibility/README.md#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_) | Returns an explicit accessibility of the specified declaration\. |
 | [GetExplicitAccessibility(SyntaxNode)](GetExplicitAccessibility/README.md#Roslynator_CSharp_SyntaxAccessibility_GetExplicitAccessibility_Microsoft_CodeAnalysis_SyntaxNode_) | Returns an explicit accessibility of the specified declaration\. |
-| [IsPubliclyVisible(MemberDeclarationSyntax)](IsPubliclyVisible/README.md) | Return true if the specified declaration is publicly visible\. |
-| [IsValidAccessibility(SyntaxNode, Accessibility, Boolean)](IsValidAccessibility/README.md) | Returns true if the node can have specified accessibility\. |
-| [WithExplicitAccessibility\<TNode>(TNode, Accessibility, IComparer\<SyntaxKind>)](WithExplicitAccessibility-1/README.md) | Creates a new node with the specified explicit accessibility updated\. |
-| [WithoutExplicitAccessibility\<TNode>(TNode)](WithoutExplicitAccessibility-1/README.md) | Creates a new node with the explicit accessibility removed\. |
+| [IsPubliclyVisible(MemberDeclarationSyntax)](IsPubliclyVisible/README.md#_Top) | Return true if the specified declaration is publicly visible\. |
+| [IsValidAccessibility(SyntaxNode, Accessibility, Boolean)](IsValidAccessibility/README.md#_Top) | Returns true if the node can have specified accessibility\. |
+| [WithExplicitAccessibility\<TNode>(TNode, Accessibility, IComparer\<SyntaxKind>)](WithExplicitAccessibility-1/README.md#_Top) | Creates a new node with the specified explicit accessibility updated\. |
+| [WithoutExplicitAccessibility\<TNode>(TNode)](WithoutExplicitAccessibility-1/README.md#_Top) | Creates a new node with the explicit accessibility removed\. |
 

@@ -1,8 +1,8 @@
-# SemanticModelExtensions\.GetSymbol\(SemanticModel, SyntaxNode, CancellationToken\) Method
+# SemanticModelExtensions\.GetSymbol\(SemanticModel, SyntaxNode, CancellationToken\) Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SemanticModelExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SemanticModelExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

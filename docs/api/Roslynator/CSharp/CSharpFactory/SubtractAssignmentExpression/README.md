@@ -1,8 +1,8 @@
-# CSharpFactory\.SubtractAssignmentExpression Method
+# CSharpFactory\.SubtractAssignmentExpression Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [SubtractAssignmentExpression(ExpressionSyntax, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_SubtractAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 | [SubtractAssignmentExpression(ExpressionSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_SubtractAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 
-## SubtractAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SubtractAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## SubtractAssignmentExpression\(ExpressionSyntax, ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_SubtractAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static AssignmentExpressionSyntax SubtractAssignmentExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -29,7 +29,7 @@ public static AssignmentExpressionSyntax SubtractAssignmentExpression(Expression
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AssignmentExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.assignmentexpressionsyntax)
 
-## SubtractAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_SubtractAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## SubtractAssignmentExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_SubtractAssignmentExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static AssignmentExpressionSyntax SubtractAssignmentExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

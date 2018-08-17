@@ -1,14 +1,14 @@
-# UsingDirectiveListInfo\.RemoveAt\(Int32\) Method
+# UsingDirectiveListInfo\.RemoveAt\(Int32\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[UsingDirectiveListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[UsingDirectiveListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [UsingDirectiveListInfo](../README.md) with the using directive at the specified index removed\.
+Creates a new [UsingDirectiveListInfo](../README.md#_Top) with the using directive at the specified index removed\.
 
 ```csharp
 public UsingDirectiveListInfo RemoveAt(int index)
@@ -20,5 +20,5 @@ public UsingDirectiveListInfo RemoveAt(int index)
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[UsingDirectiveListInfo](../README.md#_Top)
 

@@ -1,14 +1,14 @@
-# GenericInfo\.RemoveConstraintClause\(TypeParameterConstraintClauseSyntax\) Method
+# GenericInfo\.RemoveConstraintClause\(TypeParameterConstraintClauseSyntax\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[GenericInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[GenericInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [GenericInfo](../README.md) with the specified constraint clause removed\.
+Creates a new [GenericInfo](../README.md#_Top) with the specified constraint clause removed\.
 
 ```csharp
 public GenericInfo RemoveConstraintClause(TypeParameterConstraintClauseSyntax constraintClause)
@@ -20,5 +20,5 @@ public GenericInfo RemoveConstraintClause(TypeParameterConstraintClauseSyntax co
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md#_Top)
 

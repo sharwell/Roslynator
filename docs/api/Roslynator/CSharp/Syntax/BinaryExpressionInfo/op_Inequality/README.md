@@ -1,8 +1,8 @@
-# BinaryExpressionInfo\.Inequality\(BinaryExpressionInfo, BinaryExpressionInfo\) Operator
+# BinaryExpressionInfo\.Inequality\(BinaryExpressionInfo, BinaryExpressionInfo\) Operator <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[BinaryExpressionInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[BinaryExpressionInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

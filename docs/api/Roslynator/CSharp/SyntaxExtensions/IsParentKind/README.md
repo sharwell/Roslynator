@@ -1,8 +1,8 @@
-# SyntaxExtensions\.IsParentKind Method
+# SyntaxExtensions\.IsParentKind Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -23,7 +23,7 @@
 | [IsParentKind(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind)](#Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Returns true if a token parent's kind is one of the specified kinds\. |
 | [IsParentKind(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind)](#Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Returns true if a token parent's kind is one of the specified kinds\. |
 
-## IsParentKind\(SyntaxNode, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxNode, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -43,7 +43,7 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind)
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -65,7 +65,7 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -89,7 +89,7 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -115,7 +115,7 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -143,7 +143,7 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxNode, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxNode_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -173,7 +173,7 @@ public static bool IsParentKind(this SyntaxNode node, SyntaxKind kind1, SyntaxKi
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxToken, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxToken, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -193,7 +193,7 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind)
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -215,7 +215,7 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -239,7 +239,7 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -265,7 +265,7 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -293,7 +293,7 @@ public static bool IsParentKind(this SyntaxToken token, SyntaxKind kind1, Syntax
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## IsParentKind\(SyntaxToken, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_IsParentKind_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 

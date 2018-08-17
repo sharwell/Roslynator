@@ -1,8 +1,8 @@
-# IfStatementCascade\.IEnumerable\.GetEnumerator\(\) Method
+# IfStatementCascade\.IEnumerable\.GetEnumerator\(\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementCascade](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[IfStatementCascade](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

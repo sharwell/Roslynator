@@ -1,8 +1,8 @@
-# WorkspaceSyntaxExtensions\.WithRenameAnnotation\(SyntaxToken\) Method
+# WorkspaceSyntaxExtensions\.WithRenameAnnotation\(SyntaxToken\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[WorkspaceSyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[WorkspaceSyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 

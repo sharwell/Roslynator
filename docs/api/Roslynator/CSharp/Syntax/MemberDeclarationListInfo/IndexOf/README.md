@@ -1,8 +1,8 @@
-# MemberDeclarationListInfo\.IndexOf Method
+# MemberDeclarationListInfo\.IndexOf Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[MemberDeclarationListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[MemberDeclarationListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [IndexOf(Func\<MemberDeclarationSyntax, Boolean>)](#Roslynator_CSharp_Syntax_MemberDeclarationListInfo_IndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_System_Boolean__) | Searches for a member that matches the predicate and returns returns zero\-based index of the first occurrence in the list\. |
 | [IndexOf(MemberDeclarationSyntax)](#Roslynator_CSharp_Syntax_MemberDeclarationListInfo_IndexOf_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_) | The index of the member in the list\. |
 
-## IndexOf\(Func\<MemberDeclarationSyntax, Boolean>\)<a name="Roslynator_CSharp_Syntax_MemberDeclarationListInfo_IndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_System_Boolean__"></a>
+## IndexOf\(Func\<MemberDeclarationSyntax, Boolean>\) <a name="Roslynator_CSharp_Syntax_MemberDeclarationListInfo_IndexOf_System_Func_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_System_Boolean__"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public int IndexOf(Func<MemberDeclarationSyntax, bool> predicate)
 
 System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-## IndexOf\(MemberDeclarationSyntax\)<a name="Roslynator_CSharp_Syntax_MemberDeclarationListInfo_IndexOf_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
+## IndexOf\(MemberDeclarationSyntax\) <a name="Roslynator_CSharp_Syntax_MemberDeclarationListInfo_IndexOf_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_"></a>
 
 ### Summary
 

@@ -1,8 +1,8 @@
-# StatementListSelection\.TryCreate Method
+# StatementListSelection\.TryCreate Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[StatementListSelection](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[StatementListSelection](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -10,14 +10,14 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [TryCreate(BlockSyntax, TextSpan, StatementListSelection)](#Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__) | Creates a new [StatementListSelection](../README.md) based on the specified block and span\. |
-| [TryCreate(SwitchSectionSyntax, TextSpan, StatementListSelection)](#Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchSectionSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__) | Creates a new [StatementListSelection](../README.md) based on the specified switch section and span\. |
+| [TryCreate(BlockSyntax, TextSpan, StatementListSelection)](#Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__) | Creates a new [StatementListSelection](../README.md#_Top) based on the specified block and span\. |
+| [TryCreate(SwitchSectionSyntax, TextSpan, StatementListSelection)](#Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchSectionSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__) | Creates a new [StatementListSelection](../README.md#_Top) based on the specified switch section and span\. |
 
-## TryCreate\(BlockSyntax, TextSpan, StatementListSelection\)<a name="Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__"></a>
+## TryCreate\(BlockSyntax, TextSpan, StatementListSelection\) <a name="Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__"></a>
 
 ### Summary
 
-Creates a new [StatementListSelection](../README.md) based on the specified block and span\.
+Creates a new [StatementListSelection](../README.md#_Top) based on the specified block and span\.
 
 ```csharp
 public static bool TryCreate(BlockSyntax block, TextSpan span, out StatementListSelection selectedStatements)
@@ -37,11 +37,11 @@ System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 True if the specified span contains at least one statement; otherwise, false\.
 
-## TryCreate\(SwitchSectionSyntax, TextSpan, StatementListSelection\)<a name="Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchSectionSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__"></a>
+## TryCreate\(SwitchSectionSyntax, TextSpan, StatementListSelection\) <a name="Roslynator_CSharp_StatementListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_SwitchSectionSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_StatementListSelection__"></a>
 
 ### Summary
 
-Creates a new [StatementListSelection](../README.md) based on the specified switch section and span\.
+Creates a new [StatementListSelection](../README.md#_Top) based on the specified switch section and span\.
 
 ```csharp
 public static bool TryCreate(SwitchSectionSyntax switchSection, TextSpan span, out StatementListSelection selectedStatements)

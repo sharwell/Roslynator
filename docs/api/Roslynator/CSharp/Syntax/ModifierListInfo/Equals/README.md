@@ -1,8 +1,8 @@
-# ModifierListInfo\.Equals Method
+# ModifierListInfo\.Equals Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[ModifierListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[ModifierListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Equals(ModifierListInfo)](#Roslynator_CSharp_Syntax_ModifierListInfo_Equals_Roslynator_CSharp_Syntax_ModifierListInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<ModifierListInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | [Equals(Object)](#Roslynator_CSharp_Syntax_ModifierListInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
-## Equals\(ModifierListInfo\)<a name="Roslynator_CSharp_Syntax_ModifierListInfo_Equals_Roslynator_CSharp_Syntax_ModifierListInfo_"></a>
+## Equals\(ModifierListInfo\) <a name="Roslynator_CSharp_Syntax_ModifierListInfo_Equals_Roslynator_CSharp_Syntax_ModifierListInfo_"></a>
 
 ### Summary
 
@@ -39,7 +39,7 @@ true if the current object is equal to the **other** parameter; otherwise, false
 
 * [IEquatable\<ModifierListInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)
 
-## Equals\(Object\)<a name="Roslynator_CSharp_Syntax_ModifierListInfo_Equals_System_Object_"></a>
+## Equals\(Object\) <a name="Roslynator_CSharp_Syntax_ModifierListInfo_Equals_System_Object_"></a>
 
 ### Summary
 

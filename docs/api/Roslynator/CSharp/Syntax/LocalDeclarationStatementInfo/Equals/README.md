@@ -1,8 +1,8 @@
-# LocalDeclarationStatementInfo\.Equals Method
+# LocalDeclarationStatementInfo\.Equals Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[LocalDeclarationStatementInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[LocalDeclarationStatementInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Equals(LocalDeclarationStatementInfo)](#Roslynator_CSharp_Syntax_LocalDeclarationStatementInfo_Equals_Roslynator_CSharp_Syntax_LocalDeclarationStatementInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<LocalDeclarationStatementInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | [Equals(Object)](#Roslynator_CSharp_Syntax_LocalDeclarationStatementInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
-## Equals\(LocalDeclarationStatementInfo\)<a name="Roslynator_CSharp_Syntax_LocalDeclarationStatementInfo_Equals_Roslynator_CSharp_Syntax_LocalDeclarationStatementInfo_"></a>
+## Equals\(LocalDeclarationStatementInfo\) <a name="Roslynator_CSharp_Syntax_LocalDeclarationStatementInfo_Equals_Roslynator_CSharp_Syntax_LocalDeclarationStatementInfo_"></a>
 
 ### Summary
 
@@ -39,7 +39,7 @@ true if the current object is equal to the **other** parameter; otherwise, false
 
 * [IEquatable\<LocalDeclarationStatementInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)
 
-## Equals\(Object\)<a name="Roslynator_CSharp_Syntax_LocalDeclarationStatementInfo_Equals_System_Object_"></a>
+## Equals\(Object\) <a name="Roslynator_CSharp_Syntax_LocalDeclarationStatementInfo_Equals_System_Object_"></a>
 
 ### Summary
 

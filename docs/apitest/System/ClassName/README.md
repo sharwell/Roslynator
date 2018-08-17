@@ -1,8 +1,8 @@
-# ClassName Class
+# ClassName Class <a name="_Top"></a>
 
 [Home](../../README.md) &#x2022; [Constructors](#constructors) &#x2022; [Methods](#methods)
 
-**Namespace**: [System](../README.md)
+**Namespace**: [System](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -28,7 +28,7 @@ public class ClassName
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [ClassName()](-ctor/README.md) | |
+| [ClassName()](-ctor/README.md#_Top) | |
 
 ## Methods
 

@@ -1,4 +1,4 @@
-# [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax) Class Extensions
+# [InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax) Class Extensions <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 

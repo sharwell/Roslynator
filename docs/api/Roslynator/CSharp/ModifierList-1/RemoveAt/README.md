@@ -1,8 +1,8 @@
-# ModifierList\<TNode>\.RemoveAt\(TNode, Int32\) Method
+# ModifierList\<TNode>\.RemoveAt\(TNode, Int32\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[ModifierList\<TNode>](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[ModifierList\<TNode>](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

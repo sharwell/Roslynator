@@ -1,8 +1,8 @@
-# ModifierListInfo\.GetKinds\(\) Method
+# ModifierListInfo\.GetKinds\(\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[ModifierListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[ModifierListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -16,5 +16,5 @@ public ModifierKinds GetKinds()
 
 ### Returns
 
-Roslynator\.CSharp\.[ModifierKinds](../../../ModifierKinds/README.md)
+Roslynator\.CSharp\.[ModifierKinds](../../../ModifierKinds/README.md#_Top)
 

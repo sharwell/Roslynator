@@ -1,14 +1,14 @@
-# TextLineCollectionSelection\.Create\(TextLineCollection, TextSpan\) Method
+# TextLineCollectionSelection\.Create\(TextLineCollection, TextSpan\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.Text](../../README.md)\.[TextLineCollectionSelection](../README.md)
+**Containing Type**: [Roslynator.Text](../../README.md#_Top)\.[TextLineCollectionSelection](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [TextLineCollectionSelection](../README.md) based on the specified list and span\.
+Creates a new [TextLineCollectionSelection](../README.md#_Top) based on the specified list and span\.
 
 ```csharp
 public static TextLineCollectionSelection Create(TextLineCollection lines, TextSpan span)
@@ -22,5 +22,5 @@ public static TextLineCollectionSelection Create(TextLineCollection lines, TextS
 
 ### Returns
 
-Roslynator\.Text\.[TextLineCollectionSelection](../README.md)
+Roslynator\.Text\.[TextLineCollectionSelection](../README.md#_Top)
 

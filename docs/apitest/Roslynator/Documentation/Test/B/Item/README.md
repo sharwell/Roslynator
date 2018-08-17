@@ -1,8 +1,8 @@
-# B\.Item\[Int32\] Property
+# B\.Item\[Int32\] Property <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[B](../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[B](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

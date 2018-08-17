@@ -1,8 +1,8 @@
-# SymbolExtensions\.ImplementsAny Method
+# SymbolExtensions\.ImplementsAny Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SymbolExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [ImplementsAny(ITypeSymbol, SpecialType, SpecialType, Boolean)](#Roslynator_SymbolExtensions_ImplementsAny_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_System_Boolean_) | Returns true if the type implements any of specified interfaces\. |
 | [ImplementsAny(ITypeSymbol, SpecialType, SpecialType, SpecialType, Boolean)](#Roslynator_SymbolExtensions_ImplementsAny_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_System_Boolean_) | Returns true if the type implements any of specified interfaces\. |
 
-## ImplementsAny\(ITypeSymbol, SpecialType, SpecialType, Boolean\)<a name="Roslynator_SymbolExtensions_ImplementsAny_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_System_Boolean_"></a>
+## ImplementsAny\(ITypeSymbol, SpecialType, SpecialType, Boolean\) <a name="Roslynator_SymbolExtensions_ImplementsAny_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_System_Boolean_"></a>
 
 ### Summary
 
@@ -39,7 +39,7 @@ If true, use [ITypeSymbol.AllInterfaces](https://docs.microsoft.com/en-us/dotnet
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ImplementsAny\(ITypeSymbol, SpecialType, SpecialType, SpecialType, Boolean\)<a name="Roslynator_SymbolExtensions_ImplementsAny_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_System_Boolean_"></a>
+## ImplementsAny\(ITypeSymbol, SpecialType, SpecialType, SpecialType, Boolean\) <a name="Roslynator_SymbolExtensions_ImplementsAny_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_System_Boolean_"></a>
 
 ### Summary
 

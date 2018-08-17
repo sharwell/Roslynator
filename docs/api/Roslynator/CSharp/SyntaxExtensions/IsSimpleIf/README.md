@@ -1,8 +1,8 @@
-# SyntaxExtensions\.IsSimpleIf\(IfStatementSyntax\) Method
+# SyntaxExtensions\.IsSimpleIf\(IfStatementSyntax\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

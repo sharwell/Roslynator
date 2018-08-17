@@ -1,8 +1,8 @@
-# NameGenerator\.IsUniqueName Method
+# NameGenerator\.IsUniqueName Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[NameGenerator](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[NameGenerator](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [IsUniqueName(String, IEnumerable\<String>, Boolean)](#Roslynator_NameGenerator_IsUniqueName_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_) | Returns true if the name is not contained in the specified list\. |
 | [IsUniqueName(String, ImmutableArray\<ISymbol>, Boolean)](#Roslynator_NameGenerator_IsUniqueName_System_String_System_Collections_Immutable_ImmutableArray_Microsoft_CodeAnalysis_ISymbol__System_Boolean_) | Returns true if the name is not contained in the specified list\. [ISymbol.Name](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isymbol.name) is used to compare names\. |
 
-## IsUniqueName\(String, IEnumerable\<String>, Boolean\)<a name="Roslynator_NameGenerator_IsUniqueName_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_"></a>
+## IsUniqueName\(String, IEnumerable\<String>, Boolean\) <a name="Roslynator_NameGenerator_IsUniqueName_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static bool IsUniqueName(string name, IEnumerable<string> reservedNames, 
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsUniqueName\(String, ImmutableArray\<ISymbol>, Boolean\)<a name="Roslynator_NameGenerator_IsUniqueName_System_String_System_Collections_Immutable_ImmutableArray_Microsoft_CodeAnalysis_ISymbol__System_Boolean_"></a>
+## IsUniqueName\(String, ImmutableArray\<ISymbol>, Boolean\) <a name="Roslynator_NameGenerator_IsUniqueName_System_String_System_Collections_Immutable_ImmutableArray_Microsoft_CodeAnalysis_ISymbol__System_Boolean_"></a>
 
 ### Summary
 

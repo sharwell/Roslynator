@@ -1,8 +1,8 @@
-# NameGenerator\.EnsureUniqueName Method
+# NameGenerator\.EnsureUniqueName Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[NameGenerator](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[NameGenerator](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [EnsureUniqueName(String, IEnumerable\<String>, Boolean)](#Roslynator_NameGenerator_EnsureUniqueName_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_) | Returns an unique name using the specified list of reserved names\. |
 | [EnsureUniqueName(String, ImmutableArray\<ISymbol>, Boolean)](#Roslynator_NameGenerator_EnsureUniqueName_System_String_System_Collections_Immutable_ImmutableArray_Microsoft_CodeAnalysis_ISymbol__System_Boolean_) | Returns an unique name using the specified list of symbols\. |
 
-## EnsureUniqueName\(String, IEnumerable\<String>, Boolean\)<a name="Roslynator_NameGenerator_EnsureUniqueName_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_"></a>
+## EnsureUniqueName\(String, IEnumerable\<String>, Boolean\) <a name="Roslynator_NameGenerator_EnsureUniqueName_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public abstract string EnsureUniqueName(string baseName, IEnumerable<string> res
 
 System\.[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 
-## EnsureUniqueName\(String, ImmutableArray\<ISymbol>, Boolean\)<a name="Roslynator_NameGenerator_EnsureUniqueName_System_String_System_Collections_Immutable_ImmutableArray_Microsoft_CodeAnalysis_ISymbol__System_Boolean_"></a>
+## EnsureUniqueName\(String, ImmutableArray\<ISymbol>, Boolean\) <a name="Roslynator_NameGenerator_EnsureUniqueName_System_String_System_Collections_Immutable_ImmutableArray_Microsoft_CodeAnalysis_ISymbol__System_Boolean_"></a>
 
 ### Summary
 

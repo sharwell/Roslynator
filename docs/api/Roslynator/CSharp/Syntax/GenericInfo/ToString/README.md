@@ -1,8 +1,8 @@
-# GenericInfo\.ToString\(\) Method
+# GenericInfo\.ToString\(\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[GenericInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[GenericInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

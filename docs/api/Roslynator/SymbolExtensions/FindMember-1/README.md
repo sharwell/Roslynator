@@ -1,8 +1,8 @@
-# SymbolExtensions\.FindMember Method
+# SymbolExtensions\.FindMember Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SymbolExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [FindMember\<TSymbol>(ITypeSymbol, Func\<TSymbol, Boolean>)](#Roslynator_SymbolExtensions_FindMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_Func___0_System_Boolean__) | Searches for a member that matches the conditions defined by the specified predicate, if any, and returns the first occurrence within the type's members\. |
 | [FindMember\<TSymbol>(ITypeSymbol, String, Func\<TSymbol, Boolean>)](#Roslynator_SymbolExtensions_FindMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_String_System_Func___0_System_Boolean__) | Searches for a member that has the specified name and matches the conditions defined by the specified predicate, if any, and returns the first occurrence within the type's members\. |
 
-## FindMember\<TSymbol>\(ITypeSymbol, Func\<TSymbol, Boolean>\)<a name="Roslynator_SymbolExtensions_FindMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_Func___0_System_Boolean__"></a>
+## FindMember\<TSymbol>\(ITypeSymbol, Func\<TSymbol, Boolean>\) <a name="Roslynator_SymbolExtensions_FindMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_Func___0_System_Boolean__"></a>
 
 ### Summary
 
@@ -37,7 +37,7 @@ public static TSymbol FindMember<TSymbol>(this ITypeSymbol typeSymbol, Func<TSym
 
 TSymbol
 
-## FindMember\<TSymbol>\(ITypeSymbol, String, Func\<TSymbol, Boolean>\)<a name="Roslynator_SymbolExtensions_FindMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_String_System_Func___0_System_Boolean__"></a>
+## FindMember\<TSymbol>\(ITypeSymbol, String, Func\<TSymbol, Boolean>\) <a name="Roslynator_SymbolExtensions_FindMember__1_Microsoft_CodeAnalysis_ITypeSymbol_System_String_System_Func___0_System_Boolean__"></a>
 
 ### Summary
 

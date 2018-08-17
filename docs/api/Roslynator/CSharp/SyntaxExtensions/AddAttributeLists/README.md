@@ -1,8 +1,8 @@
-# SyntaxExtensions\.AddAttributeLists Method
+# SyntaxExtensions\.AddAttributeLists Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -14,7 +14,7 @@
 | [AddAttributeLists(InterfaceDeclarationSyntax, Boolean, AttributeListSyntax\[\])](#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new interface declaration with the specified attribute lists added\. |
 | [AddAttributeLists(StructDeclarationSyntax, Boolean, AttributeListSyntax\[\])](#Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___) | Creates a new struct declaration with the specified attribute lists added\. |
 
-## AddAttributeLists\(ClassDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)<a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
+## AddAttributeLists\(ClassDeclarationSyntax, Boolean, AttributeListSyntax\[\]\) <a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
 
 ### Summary
 
@@ -38,7 +38,7 @@ If the declaration has no attribute lists and has a documentation comment the sp
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ClassDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax)
 
-## AddAttributeLists\(InterfaceDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)<a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
+## AddAttributeLists\(InterfaceDeclarationSyntax, Boolean, AttributeListSyntax\[\]\) <a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
 
 ### Summary
 
@@ -62,7 +62,7 @@ If the declaration has no attribute lists and has a documentation comment the sp
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[InterfaceDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.interfacedeclarationsyntax)
 
-## AddAttributeLists\(StructDeclarationSyntax, Boolean, AttributeListSyntax\[\]\)<a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
+## AddAttributeLists\(StructDeclarationSyntax, Boolean, AttributeListSyntax\[\]\) <a name="Roslynator_CSharp_SyntaxExtensions_AddAttributeLists_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_System_Boolean_Microsoft_CodeAnalysis_CSharp_Syntax_AttributeListSyntax___"></a>
 
 ### Summary
 

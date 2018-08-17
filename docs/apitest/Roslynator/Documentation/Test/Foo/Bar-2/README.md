@@ -1,8 +1,8 @@
-# Foo\.Bar Method
+# Foo\.Bar Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[Foo](../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[Foo](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -13,7 +13,7 @@
 | [Bar()](../Bar/README.md#Roslynator_Documentation_Test_Foo_Bar) | abc |
 | [Bar\<T, T2>(String, String)](#Roslynator_Documentation_Test_Foo_Bar__2_System_String_System_String_) | s **value** **T** |
 
-## Bar\(\)<a name="Roslynator_Documentation_Test_Foo_Bar"></a>
+## Bar\(\) <a name="Roslynator_Documentation_Test_Foo_Bar"></a>
 
 ### Summary
 
@@ -23,7 +23,7 @@ abc
 public void Bar()
 ```
 
-## Bar\<T, T2>\(String, String\)<a name="Roslynator_Documentation_Test_Foo_Bar__2_System_String_System_String_"></a>
+## Bar\<T, T2>\(String, String\) <a name="Roslynator_Documentation_Test_Foo_Bar__2_System_String_System_String_"></a>
 
 ### Summary
 

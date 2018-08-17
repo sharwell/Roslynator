@@ -1,4 +1,4 @@
-# [OperatorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.operatordeclarationsyntax) Class Extensions
+# [OperatorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.operatordeclarationsyntax) Class Extensions <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 

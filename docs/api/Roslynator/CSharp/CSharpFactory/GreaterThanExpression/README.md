@@ -1,8 +1,8 @@
-# CSharpFactory\.GreaterThanExpression Method
+# CSharpFactory\.GreaterThanExpression Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [GreaterThanExpression(ExpressionSyntax, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_GreaterThanExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 | [GreaterThanExpression(ExpressionSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_GreaterThanExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 
-## GreaterThanExpression\(ExpressionSyntax, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_GreaterThanExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## GreaterThanExpression\(ExpressionSyntax, ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_GreaterThanExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax GreaterThanExpression(ExpressionSyntax left, ExpressionSyntax right)
@@ -29,7 +29,7 @@ public static BinaryExpressionSyntax GreaterThanExpression(ExpressionSyntax left
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BinaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.binaryexpressionsyntax)
 
-## GreaterThanExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_GreaterThanExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## GreaterThanExpression\(ExpressionSyntax, SyntaxToken, ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_GreaterThanExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static BinaryExpressionSyntax GreaterThanExpression(ExpressionSyntax left, SyntaxToken operatorToken, ExpressionSyntax right)

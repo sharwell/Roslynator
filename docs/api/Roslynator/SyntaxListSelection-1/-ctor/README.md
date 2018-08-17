@@ -2,13 +2,13 @@
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxListSelection\<TNode>](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxListSelection\<TNode>](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Initializes a new instance of the [SyntaxListSelection\<TNode>](../README.md)\.
+Initializes a new instance of the [SyntaxListSelection\<TNode>](../README.md#_Top)\.
 
 ```csharp
 protected SyntaxListSelection(SyntaxList<TNode> list, TextSpan span, int firstIndex, int lastIndex)

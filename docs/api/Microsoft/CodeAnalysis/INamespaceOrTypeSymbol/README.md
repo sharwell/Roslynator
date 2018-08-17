@@ -1,4 +1,4 @@
-# [INamespaceOrTypeSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.inamespaceortypesymbol) Interface Extensions
+# [INamespaceOrTypeSymbol](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.inamespaceortypesymbol) Interface Extensions <a name="_Top"></a>
 
 [Home](../../../README.md)
 

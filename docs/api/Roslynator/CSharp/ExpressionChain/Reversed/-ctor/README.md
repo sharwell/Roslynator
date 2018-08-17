@@ -2,7 +2,7 @@
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../../README.md)\.[ExpressionChain.Reversed](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../../README.md#_Top)\.[ExpressionChain.Reversed](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

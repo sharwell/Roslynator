@@ -1,4 +1,4 @@
-# [CastExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.castexpressionsyntax) Class Extensions
+# [CastExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.castexpressionsyntax) Class Extensions <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 

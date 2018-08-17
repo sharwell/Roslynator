@@ -1,8 +1,8 @@
-# SyntaxExtensions\.ToSeparatedSyntaxList Method
+# SyntaxExtensions\.ToSeparatedSyntaxList Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [ToSeparatedSyntaxList\<TNode>(IEnumerable\<SyntaxNodeOrToken>)](#Roslynator_CSharp_SyntaxExtensions_ToSeparatedSyntaxList__1_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxNodeOrToken__) | Creates a separated list of syntax nodes from a sequence of nodes and tokens\. |
 | [ToSeparatedSyntaxList\<TNode>(IEnumerable\<TNode>)](#Roslynator_CSharp_SyntaxExtensions_ToSeparatedSyntaxList__1_System_Collections_Generic_IEnumerable___0__) | Creates a separated list of syntax nodes from a sequence of nodes\. |
 
-## ToSeparatedSyntaxList\<TNode>\(IEnumerable\<SyntaxNodeOrToken>\)<a name="Roslynator_CSharp_SyntaxExtensions_ToSeparatedSyntaxList__1_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxNodeOrToken__"></a>
+## ToSeparatedSyntaxList\<TNode>\(IEnumerable\<SyntaxNodeOrToken>\) <a name="Roslynator_CSharp_SyntaxExtensions_ToSeparatedSyntaxList__1_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxNodeOrToken__"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static SeparatedSyntaxList<TNode> ToSeparatedSyntaxList<TNode>(this IEnum
 
 Microsoft\.CodeAnalysis\.[SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)
 
-## ToSeparatedSyntaxList\<TNode>\(IEnumerable\<TNode>\)<a name="Roslynator_CSharp_SyntaxExtensions_ToSeparatedSyntaxList__1_System_Collections_Generic_IEnumerable___0__"></a>
+## ToSeparatedSyntaxList\<TNode>\(IEnumerable\<TNode>\) <a name="Roslynator_CSharp_SyntaxExtensions_ToSeparatedSyntaxList__1_System_Collections_Generic_IEnumerable___0__"></a>
 
 ### Summary
 

@@ -1,8 +1,8 @@
-# SimpleAssignmentStatementInfo\.ToString\(\) Method
+# SimpleAssignmentStatementInfo\.ToString\(\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleAssignmentStatementInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[SimpleAssignmentStatementInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

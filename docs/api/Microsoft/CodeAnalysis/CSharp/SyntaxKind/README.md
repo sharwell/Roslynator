@@ -1,4 +1,4 @@
-# [SyntaxKind](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind) Enum Extensions
+# [SyntaxKind](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind) Enum Extensions <a name="_Top"></a>
 
 [Home](../../../../README.md)
 

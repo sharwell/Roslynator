@@ -1,8 +1,8 @@
-# SymbolExtensions\.SupportsConstantValue\(ITypeSymbol\) Method
+# SymbolExtensions\.SupportsConstantValue\(ITypeSymbol\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SymbolExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SymbolExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

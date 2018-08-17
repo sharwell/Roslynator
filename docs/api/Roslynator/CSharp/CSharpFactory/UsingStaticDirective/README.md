@@ -1,8 +1,8 @@
-# CSharpFactory\.UsingStaticDirective Method
+# CSharpFactory\.UsingStaticDirective Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [UsingStaticDirective(NameSyntax)](#Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_) | |
 | [UsingStaticDirective(SyntaxToken, SyntaxToken, NameSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
-## UsingStaticDirective\(NameSyntax\)<a name="Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_"></a>
+## UsingStaticDirective\(NameSyntax\) <a name="Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_"></a>
 
 ```csharp
 public static UsingDirectiveSyntax UsingStaticDirective(NameSyntax name)
@@ -27,7 +27,7 @@ public static UsingDirectiveSyntax UsingStaticDirective(NameSyntax name)
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[UsingDirectiveSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.usingdirectivesyntax)
 
-## UsingStaticDirective\(SyntaxToken, SyntaxToken, NameSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
+## UsingStaticDirective\(SyntaxToken, SyntaxToken, NameSyntax, SyntaxToken\) <a name="Roslynator_CSharp_CSharpFactory_UsingStaticDirective_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_NameSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ```csharp
 public static UsingDirectiveSyntax UsingStaticDirective(SyntaxToken usingKeyword, SyntaxToken staticKeyword, NameSyntax name, SyntaxToken semicolonToken)

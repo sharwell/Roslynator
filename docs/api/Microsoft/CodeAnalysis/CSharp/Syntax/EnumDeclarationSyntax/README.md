@@ -1,4 +1,4 @@
-# [EnumDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enumdeclarationsyntax) Class Extensions
+# [EnumDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.enumdeclarationsyntax) Class Extensions <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 

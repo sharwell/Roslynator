@@ -1,8 +1,8 @@
-# SeparatedSyntaxListSelection\<TNode>\.Count Property
+# SeparatedSyntaxListSelection\<TNode>\.Count Property <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SeparatedSyntaxListSelection\<TNode>](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

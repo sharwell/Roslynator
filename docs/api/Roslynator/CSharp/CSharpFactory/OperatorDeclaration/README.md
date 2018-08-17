@@ -1,8 +1,8 @@
-# CSharpFactory\.OperatorDeclaration Method
+# CSharpFactory\.OperatorDeclaration Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [OperatorDeclaration(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, ArrowExpressionClauseSyntax)](#Roslynator_CSharp_CSharpFactory_OperatorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_) | |
 | [OperatorDeclaration(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, BlockSyntax)](#Roslynator_CSharp_CSharpFactory_OperatorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_) | |
 
-## OperatorDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, ArrowExpressionClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_OperatorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_"></a>
+## OperatorDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, ArrowExpressionClauseSyntax\) <a name="Roslynator_CSharp_CSharpFactory_OperatorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_ArrowExpressionClauseSyntax_"></a>
 
 ```csharp
 public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken operatorToken, ParameterListSyntax parameterList, ArrowExpressionClauseSyntax expressionBody)
@@ -35,7 +35,7 @@ public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modi
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[OperatorDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.operatordeclarationsyntax)
 
-## OperatorDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, BlockSyntax\)<a name="Roslynator_CSharp_CSharpFactory_OperatorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
+## OperatorDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, ParameterListSyntax, BlockSyntax\) <a name="Roslynator_CSharp_CSharpFactory_OperatorDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ParameterListSyntax_Microsoft_CodeAnalysis_CSharp_Syntax_BlockSyntax_"></a>
 
 ```csharp
 public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modifiers, TypeSyntax returnType, SyntaxToken operatorToken, ParameterListSyntax parameterList, BlockSyntax body)

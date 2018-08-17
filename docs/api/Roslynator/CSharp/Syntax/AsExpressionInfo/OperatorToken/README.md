@@ -1,8 +1,8 @@
-# AsExpressionInfo\.OperatorToken Property
+# AsExpressionInfo\.OperatorToken Property <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[AsExpressionInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[AsExpressionInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,8 +1,8 @@
-# CSharpFactory\.GenericName Method
+# CSharpFactory\.GenericName Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [GenericName(String, TypeSyntax)](#Roslynator_CSharp_CSharpFactory_GenericName_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_) | |
 | [GenericName(SyntaxToken, TypeSyntax)](#Roslynator_CSharp_CSharpFactory_GenericName_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_) | |
 
-## GenericName\(String, TypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_GenericName_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
+## GenericName\(String, TypeSyntax\) <a name="Roslynator_CSharp_CSharpFactory_GenericName_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
 
 ```csharp
 public static GenericNameSyntax GenericName(string identifier, TypeSyntax typeArgument)
@@ -29,7 +29,7 @@ public static GenericNameSyntax GenericName(string identifier, TypeSyntax typeAr
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[GenericNameSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.genericnamesyntax)
 
-## GenericName\(SyntaxToken, TypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_GenericName_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
+## GenericName\(SyntaxToken, TypeSyntax\) <a name="Roslynator_CSharp_CSharpFactory_GenericName_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
 
 ```csharp
 public static GenericNameSyntax GenericName(SyntaxToken identifier, TypeSyntax typeArgument)

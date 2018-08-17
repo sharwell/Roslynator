@@ -1,4 +1,4 @@
-# [SpecialType](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.specialtype) Enum Extensions
+# [SpecialType](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.specialtype) Enum Extensions <a name="_Top"></a>
 
 [Home](../../../README.md)
 

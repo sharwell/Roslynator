@@ -1,8 +1,8 @@
-# ISelection\<T>\.LastIndex Property
+# ISelection\<T>\.LastIndex Property <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[ISelection\<T>](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[ISelection\<T>](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

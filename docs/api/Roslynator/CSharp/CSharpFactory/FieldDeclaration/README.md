@@ -1,8 +1,8 @@
-# CSharpFactory\.FieldDeclaration Method
+# CSharpFactory\.FieldDeclaration Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -15,7 +15,7 @@
 | [FieldDeclaration(SyntaxTokenList, TypeSyntax, SyntaxToken, EqualsValueClauseSyntax)](#Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_) | |
 | [FieldDeclaration(SyntaxTokenList, TypeSyntax, SyntaxToken, ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 
-## FieldDeclaration\(SyntaxTokenList, TypeSyntax, String, EqualsValueClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_"></a>
+## FieldDeclaration\(SyntaxTokenList, TypeSyntax, String, EqualsValueClauseSyntax\) <a name="Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_"></a>
 
 ```csharp
 public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, string identifier, EqualsValueClauseSyntax initializer)
@@ -35,7 +35,7 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[FieldDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.fielddeclarationsyntax)
 
-## FieldDeclaration\(SyntaxTokenList, TypeSyntax, String, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## FieldDeclaration\(SyntaxTokenList, TypeSyntax, String, ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, string identifier, ExpressionSyntax value = null)
@@ -55,7 +55,7 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[FieldDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.fielddeclarationsyntax)
 
-## FieldDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, EqualsValueClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_"></a>
+## FieldDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, EqualsValueClauseSyntax\) <a name="Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_"></a>
 
 ```csharp
 public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier, EqualsValueClauseSyntax initializer)
@@ -75,7 +75,7 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[FieldDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.fielddeclarationsyntax)
 
-## FieldDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## FieldDeclaration\(SyntaxTokenList, TypeSyntax, SyntaxToken, ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_FieldDeclaration_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers, TypeSyntax type, SyntaxToken identifier, ExpressionSyntax value = null)

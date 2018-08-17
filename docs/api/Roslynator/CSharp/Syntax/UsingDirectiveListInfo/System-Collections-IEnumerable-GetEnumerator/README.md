@@ -1,8 +1,8 @@
-# UsingDirectiveListInfo\.IEnumerable\.GetEnumerator\(\) Method
+# UsingDirectiveListInfo\.IEnumerable\.GetEnumerator\(\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[UsingDirectiveListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[UsingDirectiveListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

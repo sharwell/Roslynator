@@ -1,8 +1,8 @@
-# ConditionalExpressionInfo\.Equality\(ConditionalExpressionInfo, ConditionalExpressionInfo\) Operator
+# ConditionalExpressionInfo\.Equality\(ConditionalExpressionInfo, ConditionalExpressionInfo\) Operator <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[ConditionalExpressionInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[ConditionalExpressionInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,14 +1,14 @@
-# StatementListInfo\.ReplaceNode\(SyntaxNode, SyntaxNode\) Method
+# StatementListInfo\.ReplaceNode\(SyntaxNode, SyntaxNode\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[StatementListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[StatementListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [StatementListInfo](../README.md) with the specified old node replaced with a new node\.
+Creates a new [StatementListInfo](../README.md#_Top) with the specified old node replaced with a new node\.
 
 ```csharp
 public StatementListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newNode)
@@ -22,5 +22,5 @@ public StatementListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newNode)
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[StatementListInfo](../README.md#_Top)
 

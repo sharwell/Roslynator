@@ -1,8 +1,8 @@
-# SyntaxExtensions\.ParenthesesSpan Method
+# SyntaxExtensions\.ParenthesesSpan Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -14,7 +14,7 @@
 | [ParenthesesSpan(CommonForEachStatementSyntax)](#Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CommonForEachStatementSyntax_) | The absolute span of the parentheses, not including its leading and trailing trivia\. |
 | [ParenthesesSpan(ForStatementSyntax)](#Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ForStatementSyntax_) | Absolute span of the parentheses, not including the leading and trailing trivia\. |
 
-## ParenthesesSpan\(CastExpressionSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CastExpressionSyntax_"></a>
+## ParenthesesSpan\(CastExpressionSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CastExpressionSyntax_"></a>
 
 ### Summary
 
@@ -32,7 +32,7 @@ public static TextSpan ParenthesesSpan(this CastExpressionSyntax castExpression)
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## ParenthesesSpan\(CommonForEachStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CommonForEachStatementSyntax_"></a>
+## ParenthesesSpan\(CommonForEachStatementSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_CommonForEachStatementSyntax_"></a>
 
 ### Summary
 
@@ -50,7 +50,7 @@ public static TextSpan ParenthesesSpan(this CommonForEachStatementSyntax forEach
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## ParenthesesSpan\(ForStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ForStatementSyntax_"></a>
+## ParenthesesSpan\(ForStatementSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_ParenthesesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ForStatementSyntax_"></a>
 
 ### Summary
 

@@ -1,8 +1,8 @@
-# EnumExtensions\.Is Method
+# EnumExtensions\.Is Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[EnumExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[EnumExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -27,7 +27,7 @@
 | [Is(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind)](#Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_) | Returns true if the type kind is one of the specified type kinds\. |
 | [Is(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind, TypeKind)](#Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_) | Returns true if the type kind is one of the specified type kinds\. |
 
-## Is\(Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
+## Is\(Accessibility, Accessibility, Accessibility\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -49,7 +49,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(Accessibility, Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
+## Is\(Accessibility, Accessibility, Accessibility, Accessibility\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -73,7 +73,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
+## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -99,7 +99,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
+## Is\(Accessibility, Accessibility, Accessibility, Accessibility, Accessibility, Accessibility\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_Microsoft_CodeAnalysis_Accessibility_"></a>
 
 ### Summary
 
@@ -127,7 +127,7 @@ public static bool Is(this Accessibility accessibility, Accessibility accessibil
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
+## Is\(MethodKind, MethodKind, MethodKind\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
 
 ### Summary
 
@@ -149,7 +149,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(MethodKind, MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
+## Is\(MethodKind, MethodKind, MethodKind, MethodKind\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
 
 ### Summary
 
@@ -173,7 +173,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
+## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
 
 ### Summary
 
@@ -199,7 +199,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
+## Is\(MethodKind, MethodKind, MethodKind, MethodKind, MethodKind, MethodKind\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_Microsoft_CodeAnalysis_MethodKind_"></a>
 
 ### Summary
 
@@ -227,7 +227,7 @@ public static bool Is(this MethodKind methodKind, MethodKind methodKind1, Method
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
+## Is\(SpecialType, SpecialType, SpecialType\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
 ### Summary
 
@@ -249,7 +249,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SpecialType, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
+## Is\(SpecialType, SpecialType, SpecialType, SpecialType\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
 ### Summary
 
@@ -273,7 +273,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
+## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
 ### Summary
 
@@ -299,7 +299,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
+## Is\(SpecialType, SpecialType, SpecialType, SpecialType, SpecialType, SpecialType\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_Microsoft_CodeAnalysis_SpecialType_"></a>
 
 ### Summary
 
@@ -327,7 +327,7 @@ public static bool Is(this SpecialType specialType, SpecialType specialType1, Sp
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
+## Is\(TypeKind, TypeKind, TypeKind\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
 
 ### Summary
 
@@ -349,7 +349,7 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(TypeKind, TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
+## Is\(TypeKind, TypeKind, TypeKind, TypeKind\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
 
 ### Summary
 
@@ -373,7 +373,7 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
+## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
 
 ### Summary
 
@@ -399,7 +399,7 @@ public static bool Is(this TypeKind typeKind, TypeKind typeKind1, TypeKind typeK
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\)<a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
+## Is\(TypeKind, TypeKind, TypeKind, TypeKind, TypeKind, TypeKind\) <a name="Roslynator_EnumExtensions_Is_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_Microsoft_CodeAnalysis_TypeKind_"></a>
 
 ### Summary
 

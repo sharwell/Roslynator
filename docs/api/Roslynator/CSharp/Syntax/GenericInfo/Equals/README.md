@@ -1,8 +1,8 @@
-# GenericInfo\.Equals Method
+# GenericInfo\.Equals Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[GenericInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[GenericInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Equals(GenericInfo)](#Roslynator_CSharp_Syntax_GenericInfo_Equals_Roslynator_CSharp_Syntax_GenericInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<GenericInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | [Equals(Object)](#Roslynator_CSharp_Syntax_GenericInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
-## Equals\(GenericInfo\)<a name="Roslynator_CSharp_Syntax_GenericInfo_Equals_Roslynator_CSharp_Syntax_GenericInfo_"></a>
+## Equals\(GenericInfo\) <a name="Roslynator_CSharp_Syntax_GenericInfo_Equals_Roslynator_CSharp_Syntax_GenericInfo_"></a>
 
 ### Summary
 
@@ -39,7 +39,7 @@ true if the current object is equal to the **other** parameter; otherwise, false
 
 * [IEquatable\<GenericInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)
 
-## Equals\(Object\)<a name="Roslynator_CSharp_Syntax_GenericInfo_Equals_System_Object_"></a>
+## Equals\(Object\) <a name="Roslynator_CSharp_Syntax_GenericInfo_Equals_System_Object_"></a>
 
 ### Summary
 

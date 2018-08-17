@@ -1,4 +1,4 @@
-# [MethodDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.methoddeclarationsyntax) Class Extensions
+# [MethodDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.methoddeclarationsyntax) Class Extensions <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 

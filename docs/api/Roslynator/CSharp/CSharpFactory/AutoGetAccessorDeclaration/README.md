@@ -1,8 +1,8 @@
-# CSharpFactory\.AutoGetAccessorDeclaration\(SyntaxTokenList\) Method
+# CSharpFactory\.AutoGetAccessorDeclaration\(SyntaxTokenList\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

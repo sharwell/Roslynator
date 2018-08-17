@@ -1,8 +1,8 @@
-# CSharpFactory\.AccessorList Method
+# CSharpFactory\.AccessorList Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [AccessorList(AccessorDeclarationSyntax)](#Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_) | |
 | [AccessorList(AccessorDeclarationSyntax\[\])](#Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax___) | |
 
-## AccessorList\(AccessorDeclarationSyntax\)<a name="Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
+## AccessorList\(AccessorDeclarationSyntax\) <a name="Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax_"></a>
 
 ```csharp
 public static AccessorListSyntax AccessorList(AccessorDeclarationSyntax accessor)
@@ -27,7 +27,7 @@ public static AccessorListSyntax AccessorList(AccessorDeclarationSyntax accessor
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[AccessorListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.accessorlistsyntax)
 
-## AccessorList\(AccessorDeclarationSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax___"></a>
+## AccessorList\(AccessorDeclarationSyntax\[\]\) <a name="Roslynator_CSharp_CSharpFactory_AccessorList_Microsoft_CodeAnalysis_CSharp_Syntax_AccessorDeclarationSyntax___"></a>
 
 ```csharp
 public static AccessorListSyntax AccessorList(params AccessorDeclarationSyntax[] accessors)

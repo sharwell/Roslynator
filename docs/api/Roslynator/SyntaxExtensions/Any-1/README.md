@@ -1,8 +1,8 @@
-# SyntaxExtensions\.Any Method
+# SyntaxExtensions\.Any Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -15,7 +15,7 @@
 | [Any\<TNode>(SeparatedSyntaxList\<TNode>, Func\<TNode, Boolean>)](#Roslynator_SyntaxExtensions_Any__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Func___0_System_Boolean__) | Returns true if any node in a list matches the predicate\. |
 | [Any\<TNode>(SyntaxList\<TNode>, Func\<TNode, Boolean>)](#Roslynator_SyntaxExtensions_Any__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Func___0_System_Boolean__) | Returns true if any node in a list matches the predicate\. |
 
-## Any\(SyntaxTokenList, Func\<SyntaxToken, Boolean>\)<a name="Roslynator_SyntaxExtensions_Any_Microsoft_CodeAnalysis_SyntaxTokenList_System_Func_Microsoft_CodeAnalysis_SyntaxToken_System_Boolean__"></a>
+## Any\(SyntaxTokenList, Func\<SyntaxToken, Boolean>\) <a name="Roslynator_SyntaxExtensions_Any_Microsoft_CodeAnalysis_SyntaxTokenList_System_Func_Microsoft_CodeAnalysis_SyntaxToken_System_Boolean__"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static bool Any(this SyntaxTokenList list, Func<SyntaxToken, bool> predic
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Any\(SyntaxTriviaList, Func\<SyntaxTrivia, Boolean>\)<a name="Roslynator_SyntaxExtensions_Any_Microsoft_CodeAnalysis_SyntaxTriviaList_System_Func_Microsoft_CodeAnalysis_SyntaxTrivia_System_Boolean__"></a>
+## Any\(SyntaxTriviaList, Func\<SyntaxTrivia, Boolean>\) <a name="Roslynator_SyntaxExtensions_Any_Microsoft_CodeAnalysis_SyntaxTriviaList_System_Func_Microsoft_CodeAnalysis_SyntaxTrivia_System_Boolean__"></a>
 
 ### Summary
 
@@ -55,7 +55,7 @@ public static bool Any(this SyntaxTriviaList list, Func<SyntaxTrivia, bool> pred
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Any\<TNode>\(SeparatedSyntaxList\<TNode>, Func\<TNode, Boolean>\)<a name="Roslynator_SyntaxExtensions_Any__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Func___0_System_Boolean__"></a>
+## Any\<TNode>\(SeparatedSyntaxList\<TNode>, Func\<TNode, Boolean>\) <a name="Roslynator_SyntaxExtensions_Any__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__System_Func___0_System_Boolean__"></a>
 
 ### Summary
 
@@ -79,7 +79,7 @@ public static bool Any<TNode>(this SeparatedSyntaxList<TNode> list, Func<TNode, 
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Any\<TNode>\(SyntaxList\<TNode>, Func\<TNode, Boolean>\)<a name="Roslynator_SyntaxExtensions_Any__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Func___0_System_Boolean__"></a>
+## Any\<TNode>\(SyntaxList\<TNode>, Func\<TNode, Boolean>\) <a name="Roslynator_SyntaxExtensions_Any__1_Microsoft_CodeAnalysis_SyntaxList___0__System_Func___0_System_Boolean__"></a>
 
 ### Summary
 

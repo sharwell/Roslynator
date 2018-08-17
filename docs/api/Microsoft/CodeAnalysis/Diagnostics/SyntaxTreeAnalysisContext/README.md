@@ -1,4 +1,4 @@
-# [SyntaxTreeAnalysisContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnostics.syntaxtreeanalysiscontext) Struct Extensions
+# [SyntaxTreeAnalysisContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnostics.syntaxtreeanalysiscontext) Struct Extensions <a name="_Top"></a>
 
 [Home](../../../../README.md)
 

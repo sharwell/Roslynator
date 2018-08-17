@@ -1,14 +1,14 @@
-# MemberDeclarationListInfo\.Replace\(MemberDeclarationSyntax, MemberDeclarationSyntax\) Method
+# MemberDeclarationListInfo\.Replace\(MemberDeclarationSyntax, MemberDeclarationSyntax\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[MemberDeclarationListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[MemberDeclarationListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [MemberDeclarationListInfo](../README.md) with the specified member replaced with the new member\.
+Creates a new [MemberDeclarationListInfo](../README.md#_Top) with the specified member replaced with the new member\.
 
 ```csharp
 public MemberDeclarationListInfo Replace(MemberDeclarationSyntax memberInList, MemberDeclarationSyntax newMember)
@@ -22,5 +22,5 @@ public MemberDeclarationListInfo Replace(MemberDeclarationSyntax memberInList, M
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[MemberDeclarationListInfo](../README.md#_Top)
 

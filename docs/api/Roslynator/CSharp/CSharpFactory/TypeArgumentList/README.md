@@ -1,8 +1,8 @@
-# CSharpFactory\.TypeArgumentList Method
+# CSharpFactory\.TypeArgumentList Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [TypeArgumentList(TypeSyntax)](#Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_) | |
 | [TypeArgumentList(TypeSyntax\[\])](#Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax___) | |
 
-## TypeArgumentList\(TypeSyntax\)<a name="Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
+## TypeArgumentList\(TypeSyntax\) <a name="Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax_"></a>
 
 ```csharp
 public static TypeArgumentListSyntax TypeArgumentList(TypeSyntax argument)
@@ -27,7 +27,7 @@ public static TypeArgumentListSyntax TypeArgumentList(TypeSyntax argument)
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[TypeArgumentListSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.typeargumentlistsyntax)
 
-## TypeArgumentList\(TypeSyntax\[\]\)<a name="Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax___"></a>
+## TypeArgumentList\(TypeSyntax\[\]\) <a name="Roslynator_CSharp_CSharpFactory_TypeArgumentList_Microsoft_CodeAnalysis_CSharp_Syntax_TypeSyntax___"></a>
 
 ```csharp
 public static TypeArgumentListSyntax TypeArgumentList(params TypeSyntax[] arguments)

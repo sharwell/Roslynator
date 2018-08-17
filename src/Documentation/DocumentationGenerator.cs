@@ -196,7 +196,11 @@ namespace Roslynator.Documentation
         {
             writer.WriteStartDocument();
 
-            writer.WriteHeading1(heading);
+            writer.WriteStartHeading(1);
+            writer.WriteString(heading);
+            writer.WriteSpace();
+            writer.WriteLinkDefinition("_Top");
+            writer.WriteEndHeading();
 
             GenerateRoot(writer, addExtensionsLink: addExtensionsLink);
 
@@ -228,7 +232,7 @@ namespace Roslynator.Documentation
         {
             SymbolXmlDocumentation xmlDocumentation = DocumentationModel.GetXmlDocumentation(namespaceModel.Symbol, Options.PreferredCultureName);
 
-            writer.WriteHeading(1 + headingLevelBase, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: addLink);
+            writer.WriteHeading(1 + headingLevelBase, namespaceModel.Symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces, addLink: addLink, linkDefinition: "_Top");
 
             foreach (NamespaceDocumentationParts part in EnabledAndSortedNamespaceParts)
             {
@@ -389,7 +393,12 @@ namespace Roslynator.Documentation
             using (DocumentationWriter writer = CreateWriter())
             {
                 writer.WriteStartDocument();
-                writer.WriteHeading1(Resources.ExtensionsOfExternalTypesTitle);
+
+                writer.WriteStartHeading(1);
+                writer.WriteString(Resources.ExtensionsOfExternalTypesTitle);
+                writer.WriteSpace();
+                writer.WriteLinkDefinition("_Top");
+                writer.WriteEndHeading();
 
                 writer.WriteLink(Resources.HomeTitle, UrlProvider.GetUrlToRoot(0, '/'));
                 writer.WriteContentSeparator();
@@ -454,6 +463,8 @@ namespace Roslynator.Documentation
                 writer.WriteString(Resources.GetName(typeSymbol.TypeKind));
                 writer.WriteSpace();
                 writer.WriteString(Resources.ExtensionsTitle);
+                writer.WriteSpace();
+                writer.WriteLinkDefinition("_Top");
                 writer.WriteEndHeading();
                 writer.WriteContent(Array.Empty<string>(), addLinkToRoot: true);
 
@@ -489,7 +500,7 @@ namespace Roslynator.Documentation
             {
                 writer.WriteStartDocument();
 
-                writer.WriteTitle(typeSymbol);
+                writer.WriteHeading(1, typeSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName, addLink: false, linkDefinition: "_Top");
 
                 foreach (TypeDocumentationParts part in EnabledAndSortedTypeParts)
                 {

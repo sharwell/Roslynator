@@ -1,4 +1,4 @@
-# [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) Struct Extensions
+# [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) Struct Extensions <a name="_Top"></a>
 
 [Home](../../../README.md)
 
@@ -6,5 +6,5 @@
 | ---------------- | ------- |
 | [WithoutLeadingTrivia(SyntaxNodeOrToken)](../../../Roslynator/SyntaxExtensions/WithoutLeadingTrivia/README.md#Roslynator_SyntaxExtensions_WithoutLeadingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_) | Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) with the leading trivia removed\. |
 | [WithoutTrailingTrivia(SyntaxNodeOrToken)](../../../Roslynator/SyntaxExtensions/WithoutTrailingTrivia/README.md#Roslynator_SyntaxExtensions_WithoutTrailingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_) | Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) with the trailing trivia removed\. |
-| [WithoutTrivia(SyntaxNodeOrToken)](../../../Roslynator/SyntaxExtensions/WithoutTrivia/README.md) | Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) from this node without leading and trailing trivia\. |
+| [WithoutTrivia(SyntaxNodeOrToken)](../../../Roslynator/SyntaxExtensions/WithoutTrivia/README.md#_Top) | Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) from this node without leading and trailing trivia\. |
 

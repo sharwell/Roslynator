@@ -1,8 +1,8 @@
-# MemberDeclarationListSelection\.TryCreate Method
+# MemberDeclarationListSelection\.TryCreate Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[MemberDeclarationListSelection](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[MemberDeclarationListSelection](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -10,14 +10,14 @@
 
 | Method | Summary |
 | ------ | ------- |
-| [TryCreate(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](#Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__) | Creates a new [MemberDeclarationListSelection](../README.md) based on the specified namespace declaration and span\. |
-| [TryCreate(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](#Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__) | Creates a new [MemberDeclarationListSelection](../README.md) based on the specified type declaration and span\. |
+| [TryCreate(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](#Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__) | Creates a new [MemberDeclarationListSelection](../README.md#_Top) based on the specified namespace declaration and span\. |
+| [TryCreate(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection)](#Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__) | Creates a new [MemberDeclarationListSelection](../README.md#_Top) based on the specified type declaration and span\. |
 
-## TryCreate\(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection\)<a name="Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__"></a>
+## TryCreate\(NamespaceDeclarationSyntax, TextSpan, MemberDeclarationListSelection\) <a name="Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__"></a>
 
 ### Summary
 
-Creates a new [MemberDeclarationListSelection](../README.md) based on the specified namespace declaration and span\.
+Creates a new [MemberDeclarationListSelection](../README.md#_Top) based on the specified namespace declaration and span\.
 
 ```csharp
 public static bool TryCreate(NamespaceDeclarationSyntax namespaceDeclaration, TextSpan span, out MemberDeclarationListSelection selectedMembers)
@@ -37,11 +37,11 @@ System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 True if the specified span contains at least one member; otherwise, false\.
 
-## TryCreate\(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection\)<a name="Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__"></a>
+## TryCreate\(TypeDeclarationSyntax, TextSpan, MemberDeclarationListSelection\) <a name="Roslynator_CSharp_MemberDeclarationListSelection_TryCreate_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_Microsoft_CodeAnalysis_Text_TextSpan_Roslynator_CSharp_MemberDeclarationListSelection__"></a>
 
 ### Summary
 
-Creates a new [MemberDeclarationListSelection](../README.md) based on the specified type declaration and span\.
+Creates a new [MemberDeclarationListSelection](../README.md#_Top) based on the specified type declaration and span\.
 
 ```csharp
 public static bool TryCreate(TypeDeclarationSyntax typeDeclaration, TextSpan span, out MemberDeclarationListSelection selectedMembers)

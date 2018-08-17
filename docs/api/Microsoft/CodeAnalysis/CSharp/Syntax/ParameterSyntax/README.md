@@ -1,8 +1,8 @@
-# [ParameterSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parametersyntax) Class Extensions
+# [ParameterSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.parametersyntax) Class Extensions <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
 | Extension Method | Summary |
 | ---------------- | ------- |
-| [IsParams(ParameterSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsParams/README.md) | Returns true if the specified parameter has "params" modifier\. |
+| [IsParams(ParameterSyntax)](../../../../../Roslynator/CSharp/SyntaxExtensions/IsParams/README.md#_Top) | Returns true if the specified parameter has "params" modifier\. |
 

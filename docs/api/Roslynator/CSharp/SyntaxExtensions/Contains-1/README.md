@@ -1,8 +1,8 @@
-# SyntaxExtensions\.Contains Method
+# SyntaxExtensions\.Contains Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -15,7 +15,7 @@
 | [Contains\<TNode>(SeparatedSyntaxList\<TNode>, SyntaxKind)](#Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Searches for a node of the specified kind and returns the zero\-based index of the first occurrence within the entire [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1)\. |
 | [Contains\<TNode>(SyntaxList\<TNode>, SyntaxKind)](#Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_) | Returns true if a node of the specified kind is in the [SyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxlist-1)\. |
 
-## Contains\(SyntaxTokenList, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## Contains\(SyntaxTokenList, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_Contains_Microsoft_CodeAnalysis_SyntaxTokenList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static bool Contains(this SyntaxTokenList tokenList, SyntaxKind kind)
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Contains\(SyntaxTriviaList, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains_Microsoft_CodeAnalysis_SyntaxTriviaList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## Contains\(SyntaxTriviaList, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_Contains_Microsoft_CodeAnalysis_SyntaxTriviaList_Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -55,7 +55,7 @@ public static bool Contains(this SyntaxTriviaList triviaList, SyntaxKind kind)
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Contains\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## Contains\<TNode>\(SeparatedSyntaxList\<TNode>, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SeparatedSyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 
@@ -79,7 +79,7 @@ public static bool Contains<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxK
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## Contains\<TNode>\(SyntaxList\<TNode>, SyntaxKind\)<a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
+## Contains\<TNode>\(SyntaxList\<TNode>, SyntaxKind\) <a name="Roslynator_CSharp_SyntaxExtensions_Contains__1_Microsoft_CodeAnalysis_SyntaxList___0__Microsoft_CodeAnalysis_CSharp_SyntaxKind_"></a>
 
 ### Summary
 

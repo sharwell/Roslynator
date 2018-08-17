@@ -2,7 +2,7 @@
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooAttribute](../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooAttribute](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -59,5 +59,5 @@ public FooAttribute(object object1, string s1, bool bool1, bool bool2, byte byte
 
 ### Attributes
 
-* Roslynator\.Documentation\.Test\.[FooAttribute](../README.md)
+* Roslynator\.Documentation\.Test\.[FooAttribute](../README.md#_Top)
 

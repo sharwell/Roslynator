@@ -1,14 +1,14 @@
-# GenericInfo\.WithTypeParameterList\(TypeParameterListSyntax\) Method
+# GenericInfo\.WithTypeParameterList\(TypeParameterListSyntax\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[GenericInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[GenericInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [GenericInfo](../README.md) with the type parameter list updated\.
+Creates a new [GenericInfo](../README.md#_Top) with the type parameter list updated\.
 
 ```csharp
 public GenericInfo WithTypeParameterList(TypeParameterListSyntax typeParameterList)
@@ -20,5 +20,5 @@ public GenericInfo WithTypeParameterList(TypeParameterListSyntax typeParameterLi
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md#_Top)
 

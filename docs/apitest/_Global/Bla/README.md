@@ -1,8 +1,8 @@
-# Bla Class
+# Bla Class <a name="_Top"></a>
 
 [Home](../../README.md) &#x2022; [Constructors](#constructors) &#x2022; [Methods](#methods)
 
-**Namespace**: [\<global namespace>](../README.md)
+**Namespace**: [\<global namespace>](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -25,13 +25,13 @@ public class Bla
 
 ### Derived
 
-* Roslynator\.Documentation\.Test\.[Foo](../../Roslynator/Documentation/Test/Foo/README.md)
+* Roslynator\.Documentation\.Test\.[Foo](../../Roslynator/Documentation/Test/Foo/README.md#_Top)
 
 ## Constructors
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [Bla()](-ctor/README.md) | |
+| [Bla()](-ctor/README.md#_Top) | |
 
 ## Methods
 
@@ -40,7 +40,7 @@ public class Bla
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [M()](M/README.md) | bla m |
+| [M()](M/README.md#_Top) | bla m |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 

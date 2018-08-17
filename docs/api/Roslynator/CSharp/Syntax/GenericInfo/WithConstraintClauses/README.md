@@ -1,14 +1,14 @@
-# GenericInfo\.WithConstraintClauses\(SyntaxList\<TypeParameterConstraintClauseSyntax>\) Method
+# GenericInfo\.WithConstraintClauses\(SyntaxList\<TypeParameterConstraintClauseSyntax>\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[GenericInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[GenericInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Creates a new [GenericInfo](../README.md) with the constraint clauses updated\.
+Creates a new [GenericInfo](../README.md#_Top) with the constraint clauses updated\.
 
 ```csharp
 public GenericInfo WithConstraintClauses(SyntaxList<TypeParameterConstraintClauseSyntax> constraintClauses)
@@ -20,5 +20,5 @@ public GenericInfo WithConstraintClauses(SyntaxList<TypeParameterConstraintClaus
 
 ### Returns
 
-Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md)
+Roslynator\.CSharp\.Syntax\.[GenericInfo](../README.md#_Top)
 

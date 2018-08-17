@@ -1,8 +1,8 @@
-# CSharpFactory\.Block Method
+# CSharpFactory\.Block Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Block(StatementSyntax)](#Roslynator_CSharp_CSharpFactory_Block_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_) | |
 | [Block(SyntaxToken, StatementSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_Block_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
-## Block\(StatementSyntax\)<a name="Roslynator_CSharp_CSharpFactory_Block_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_"></a>
+## Block\(StatementSyntax\) <a name="Roslynator_CSharp_CSharpFactory_Block_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_"></a>
 
 ```csharp
 public static BlockSyntax Block(StatementSyntax statement)
@@ -27,7 +27,7 @@ public static BlockSyntax Block(StatementSyntax statement)
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[BlockSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.blocksyntax)
 
-## Block\(SyntaxToken, StatementSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_Block_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
+## Block\(SyntaxToken, StatementSyntax, SyntaxToken\) <a name="Roslynator_CSharp_CSharpFactory_Block_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_StatementSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ```csharp
 public static BlockSyntax Block(SyntaxToken openBrace, StatementSyntax statement, SyntaxToken closeBrace)

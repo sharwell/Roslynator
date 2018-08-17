@@ -2,7 +2,7 @@
 
 [Home](../../../README.md)
 
-**Containing Type**: [Bla](../README.md)
+**Containing Type**: [Bla](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

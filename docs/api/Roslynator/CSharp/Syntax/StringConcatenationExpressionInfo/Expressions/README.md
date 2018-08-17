@@ -1,8 +1,8 @@
-# StringConcatenationExpressionInfo\.Expressions\(Boolean\) Method
+# StringConcatenationExpressionInfo\.Expressions\(Boolean\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[StringConcatenationExpressionInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[StringConcatenationExpressionInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

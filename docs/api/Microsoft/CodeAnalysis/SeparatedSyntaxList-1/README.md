@@ -1,4 +1,4 @@
-# [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1) Struct Extensions
+# [SeparatedSyntaxList\<TNode>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.separatedsyntaxlist-1) Struct Extensions <a name="_Top"></a>
 
 [Home](../../../README.md)
 

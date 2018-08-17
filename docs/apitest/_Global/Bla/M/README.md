@@ -1,8 +1,8 @@
-# Bla\.M\(\) Method
+# Bla\.M\(\) Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Bla](../README.md)
+**Containing Type**: [Bla](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

@@ -258,6 +258,12 @@ namespace Roslynator.Documentation
             WriteString(" ");
         }
 
+        //TODO: <a name="id"></a>
+        internal void WriteLinkDefinition(string name)
+        {
+            WriteRaw($@"<a name=""{name}""></a>");
+        }
+
         internal void WriteSymbol(ISymbol symbol, SymbolDisplayFormat format = null, SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None)
         {
             WriteString(symbol.ToDisplayString(format, additionalOptions));
@@ -323,11 +329,6 @@ namespace Roslynator.Documentation
             WriteSpace();
             WriteCharEntity(Resources.InlineSeparatorChar);
             WriteSpace();
-        }
-
-        public virtual void WriteTitle(ISymbol symbol)
-        {
-            WriteHeading(1, symbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName, addLink: false);
         }
 
         public virtual void WriteContainingNamespace(ISymbol symbol)
@@ -1133,7 +1134,8 @@ namespace Roslynator.Documentation
             ISymbol symbol,
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
-            bool addLink = true)
+            bool addLink = true,
+            string linkDefinition = null)
         {
             WriteStartHeading(level);
 
@@ -1151,6 +1153,12 @@ namespace Roslynator.Documentation
             {
                 WriteSpace();
                 WriteString(Resources.GetName(symbol));
+            }
+
+            if (!string.IsNullOrEmpty(linkDefinition))
+            {
+                WriteSpace();
+                WriteLinkDefinition(linkDefinition);
             }
 
             WriteEndHeading();
@@ -1375,15 +1383,13 @@ namespace Roslynator.Documentation
                 ? UrlProvider.GetFolders(CurrentSymbol)
                 : default;
 
-            string id = GetId();
-
-            string fragment = (id != null) ? "#" + id : null;
+            string fragment = "#" + GetFragment();
 
             string url = UrlProvider.GetLocalUrl(folders, containingFolders, fragment).Url;
 
             return Options.BaseLocalUrl + url;
 
-            string GetId()
+            string GetFragment()
             {
                 if (symbol.Kind == SymbolKind.Method
                     || (symbol.Kind == SymbolKind.Property && ((IPropertySymbol)symbol).IsIndexer))
@@ -1405,7 +1411,7 @@ namespace Roslynator.Documentation
                     }
                 }
 
-                return null;
+                return "_Top";
             }
 
             IEnumerable<ISymbol> GetMembers(TypeDocumentationModel model)

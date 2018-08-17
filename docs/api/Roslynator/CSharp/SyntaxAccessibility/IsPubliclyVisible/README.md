@@ -1,8 +1,8 @@
-# SyntaxAccessibility\.IsPubliclyVisible\(MemberDeclarationSyntax\) Method
+# SyntaxAccessibility\.IsPubliclyVisible\(MemberDeclarationSyntax\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxAccessibility](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxAccessibility](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

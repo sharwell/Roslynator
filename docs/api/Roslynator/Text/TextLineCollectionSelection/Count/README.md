@@ -1,8 +1,8 @@
-# TextLineCollectionSelection\.Count Property
+# TextLineCollectionSelection\.Count Property <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.Text](../../README.md)\.[TextLineCollectionSelection](../README.md)
+**Containing Type**: [Roslynator.Text](../../README.md#_Top)\.[TextLineCollectionSelection](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,8 +1,8 @@
-# FooEvent\.IFoo\.Changed Event
+# FooEvent\.IFoo\.Changed Event <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooEvent](../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooEvent](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -12,4 +12,4 @@ private event EventHandler IFoo.Changed
 
 ### Implements
 
-* [IFoo.Changed](../../IFoo/Changed/README.md)
+* [IFoo.Changed](../../IFoo/Changed/README.md#_Top)

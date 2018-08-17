@@ -1,8 +1,8 @@
-# SyntaxExtensions\.WithoutLeadingTrivia Method
+# SyntaxExtensions\.WithoutLeadingTrivia Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [WithoutLeadingTrivia(SyntaxNodeOrToken)](#Roslynator_SyntaxExtensions_WithoutLeadingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_) | Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) with the leading trivia removed\. |
 | [WithoutLeadingTrivia(SyntaxToken)](#Roslynator_SyntaxExtensions_WithoutLeadingTrivia_Microsoft_CodeAnalysis_SyntaxToken_) | Creates a new token from this token with the leading trivia removed\. |
 
-## WithoutLeadingTrivia\(SyntaxNodeOrToken\)<a name="Roslynator_SyntaxExtensions_WithoutLeadingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_"></a>
+## WithoutLeadingTrivia\(SyntaxNodeOrToken\) <a name="Roslynator_SyntaxExtensions_WithoutLeadingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public static SyntaxNodeOrToken WithoutLeadingTrivia(this SyntaxNodeOrToken node
 
 Microsoft\.CodeAnalysis\.[SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken)
 
-## WithoutLeadingTrivia\(SyntaxToken\)<a name="Roslynator_SyntaxExtensions_WithoutLeadingTrivia_Microsoft_CodeAnalysis_SyntaxToken_"></a>
+## WithoutLeadingTrivia\(SyntaxToken\) <a name="Roslynator_SyntaxExtensions_WithoutLeadingTrivia_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ### Summary
 

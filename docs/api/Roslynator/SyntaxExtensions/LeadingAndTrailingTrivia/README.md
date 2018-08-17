@@ -1,8 +1,8 @@
-# SyntaxExtensions\.LeadingAndTrailingTrivia\(SyntaxToken\) Method
+# SyntaxExtensions\.LeadingAndTrailingTrivia\(SyntaxToken\) Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

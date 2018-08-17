@@ -1,4 +1,4 @@
-# [LocalFunctionStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.localfunctionstatementsyntax) Class Extensions
+# [LocalFunctionStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.localfunctionstatementsyntax) Class Extensions <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 

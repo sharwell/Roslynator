@@ -1,8 +1,8 @@
-# IfStatementOrElseClause\.Inequality\(IfStatementOrElseClause, IfStatementOrElseClause\) Operator
+# IfStatementOrElseClause\.Inequality\(IfStatementOrElseClause, IfStatementOrElseClause\) Operator <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementOrElseClause](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[IfStatementOrElseClause](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

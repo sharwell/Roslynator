@@ -1,8 +1,8 @@
-# WorkspaceExtensions\.RemoveRegionAsync\(Document, RegionInfo, CancellationToken\) Method
+# WorkspaceExtensions\.RemoveRegionAsync\(Document, RegionInfo, CancellationToken\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[WorkspaceExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[WorkspaceExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 

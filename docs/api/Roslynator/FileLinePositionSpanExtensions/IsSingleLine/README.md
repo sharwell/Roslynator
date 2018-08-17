@@ -1,8 +1,8 @@
-# FileLinePositionSpanExtensions\.IsSingleLine\(FileLinePositionSpan\) Method
+# FileLinePositionSpanExtensions\.IsSingleLine\(FileLinePositionSpan\) Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[FileLinePositionSpanExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[FileLinePositionSpanExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

@@ -1,8 +1,8 @@
-# CSharpFactory\.VariableDeclarator Method
+# CSharpFactory\.VariableDeclarator Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [VariableDeclarator(String, EqualsValueClauseSyntax)](#Roslynator_CSharp_CSharpFactory_VariableDeclarator_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_) | |
 | [VariableDeclarator(SyntaxToken, EqualsValueClauseSyntax)](#Roslynator_CSharp_CSharpFactory_VariableDeclarator_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_) | |
 
-## VariableDeclarator\(String, EqualsValueClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_VariableDeclarator_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_"></a>
+## VariableDeclarator\(String, EqualsValueClauseSyntax\) <a name="Roslynator_CSharp_CSharpFactory_VariableDeclarator_System_String_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_"></a>
 
 ```csharp
 public static VariableDeclaratorSyntax VariableDeclarator(string identifier, EqualsValueClauseSyntax initializer)
@@ -29,7 +29,7 @@ public static VariableDeclaratorSyntax VariableDeclarator(string identifier, Equ
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[VariableDeclaratorSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclaratorsyntax)
 
-## VariableDeclarator\(SyntaxToken, EqualsValueClauseSyntax\)<a name="Roslynator_CSharp_CSharpFactory_VariableDeclarator_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_"></a>
+## VariableDeclarator\(SyntaxToken, EqualsValueClauseSyntax\) <a name="Roslynator_CSharp_CSharpFactory_VariableDeclarator_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_EqualsValueClauseSyntax_"></a>
 
 ```csharp
 public static VariableDeclaratorSyntax VariableDeclarator(SyntaxToken identifier, EqualsValueClauseSyntax initializer)

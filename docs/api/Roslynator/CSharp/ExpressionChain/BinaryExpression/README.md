@@ -1,8 +1,8 @@
-# ExpressionChain\.BinaryExpression Property
+# ExpressionChain\.BinaryExpression Property <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[ExpressionChain](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[ExpressionChain](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

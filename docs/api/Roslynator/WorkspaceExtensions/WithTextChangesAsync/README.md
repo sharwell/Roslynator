@@ -1,8 +1,8 @@
-# WorkspaceExtensions\.WithTextChangesAsync Method
+# WorkspaceExtensions\.WithTextChangesAsync Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[WorkspaceExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[WorkspaceExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.Workspaces\.dll
 
@@ -13,7 +13,7 @@
 | [WithTextChangesAsync(Document, IEnumerable\<TextChange>, CancellationToken)](#Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Text_TextChange__System_Threading_CancellationToken_) | Creates a new document updated with the specified text changes\. |
 | [WithTextChangesAsync(Document, TextChange\[\], CancellationToken)](#Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextChange___System_Threading_CancellationToken_) | Creates a new document updated with the specified text changes\. |
 
-## WithTextChangesAsync\(Document, IEnumerable\<TextChange>, CancellationToken\)<a name="Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Text_TextChange__System_Threading_CancellationToken_"></a>
+## WithTextChangesAsync\(Document, IEnumerable\<TextChange>, CancellationToken\) <a name="Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Text_TextChange__System_Threading_CancellationToken_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static Task<Document> WithTextChangesAsync(this Document document, IEnume
 
 System\.Threading\.Tasks\.[Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1)\<Microsoft\.CodeAnalysis\.[Document](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.document)>
 
-## WithTextChangesAsync\(Document, TextChange\[\], CancellationToken\)<a name="Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextChange___System_Threading_CancellationToken_"></a>
+## WithTextChangesAsync\(Document, TextChange\[\], CancellationToken\) <a name="Roslynator_WorkspaceExtensions_WithTextChangesAsync_Microsoft_CodeAnalysis_Document_Microsoft_CodeAnalysis_Text_TextChange___System_Threading_CancellationToken_"></a>
 
 ### Summary
 

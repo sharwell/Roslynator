@@ -1,8 +1,8 @@
-# SyntaxExtensions\.IsDescendantOf\(SyntaxNode, SyntaxKind, Boolean\) Method
+# SyntaxExtensions\.IsDescendantOf\(SyntaxNode, SyntaxKind, Boolean\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

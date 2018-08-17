@@ -1,8 +1,8 @@
-# SyntaxExtensions\.ReturnsVoid Method
+# SyntaxExtensions\.ReturnsVoid Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -14,7 +14,7 @@
 | [ReturnsVoid(LocalFunctionStatementSyntax)](#Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_) | Returns true if the specified local function' return type is [Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)\. |
 | [ReturnsVoid(MethodDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_) | Returns true if the specified method return type is [Void](https://docs.microsoft.com/en-us/dotnet/api/system.void)\. |
 
-## ReturnsVoid\(DelegateDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_"></a>
+## ReturnsVoid\(DelegateDeclarationSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_DelegateDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -32,7 +32,7 @@ public static bool ReturnsVoid(this DelegateDeclarationSyntax delegateDeclaratio
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ReturnsVoid\(LocalFunctionStatementSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_"></a>
+## ReturnsVoid\(LocalFunctionStatementSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_LocalFunctionStatementSyntax_"></a>
 
 ### Summary
 
@@ -50,7 +50,7 @@ public static bool ReturnsVoid(this LocalFunctionStatementSyntax localFunctionSt
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## ReturnsVoid\(MethodDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_"></a>
+## ReturnsVoid\(MethodDeclarationSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_ReturnsVoid_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_"></a>
 
 ### Summary
 

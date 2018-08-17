@@ -1,8 +1,8 @@
-# CSharpExtensions\.GetExtensionMethodInfo\(SemanticModel, ExpressionSyntax, CancellationToken\) Method
+# CSharpExtensions\.GetExtensionMethodInfo\(SemanticModel, ExpressionSyntax, CancellationToken\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -24,5 +24,5 @@ public static ExtensionMethodSymbolInfo GetExtensionMethodInfo(this SemanticMode
 
 ### Returns
 
-Roslynator\.[ExtensionMethodSymbolInfo](../../../ExtensionMethodSymbolInfo/README.md)
+Roslynator\.[ExtensionMethodSymbolInfo](../../../ExtensionMethodSymbolInfo/README.md#_Top)
 

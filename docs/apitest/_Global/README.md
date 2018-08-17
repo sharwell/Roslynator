@@ -1,4 +1,4 @@
-# \<global namespace>
+# \<global namespace> <a name="_Top"></a>
 
 [Home](../README.md) &#x2022; [Classes](#classes)
 
@@ -6,5 +6,5 @@
 
 | Class | Summary |
 | ----- | ------- |
-| [Bla](Bla/README.md) | blac |
+| [Bla](Bla/README.md#_Top) | blac |
 

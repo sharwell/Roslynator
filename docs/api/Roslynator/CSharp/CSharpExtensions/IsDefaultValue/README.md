@@ -1,8 +1,8 @@
-# CSharpExtensions\.IsDefaultValue\(SemanticModel, ITypeSymbol, ExpressionSyntax, CancellationToken\) Method
+# CSharpExtensions\.IsDefaultValue\(SemanticModel, ITypeSymbol, ExpressionSyntax, CancellationToken\) Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

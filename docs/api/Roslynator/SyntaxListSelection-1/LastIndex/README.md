@@ -1,8 +1,8 @@
-# SyntaxListSelection\<TNode>\.LastIndex Property
+# SyntaxListSelection\<TNode>\.LastIndex Property <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxListSelection\<TNode>](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxListSelection\<TNode>](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -20,4 +20,4 @@ System\.[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
 ### Implements
 
-* [ISelection\<TNode>.LastIndex](../../ISelection-1/LastIndex/README.md)
+* [ISelection\<TNode>.LastIndex](../../ISelection-1/LastIndex/README.md#_Top)

@@ -1,4 +1,4 @@
-# [SymbolAnalysisContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnostics.symbolanalysiscontext) Struct Extensions
+# [SymbolAnalysisContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnostics.symbolanalysiscontext) Struct Extensions <a name="_Top"></a>
 
 [Home](../../../../README.md)
 

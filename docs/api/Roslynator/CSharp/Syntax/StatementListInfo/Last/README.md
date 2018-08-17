@@ -1,8 +1,8 @@
-# StatementListInfo\.Last\(\) Method
+# StatementListInfo\.Last\(\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[StatementListInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[StatementListInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

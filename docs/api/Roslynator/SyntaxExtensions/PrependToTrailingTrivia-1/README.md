@@ -1,8 +1,8 @@
-# SyntaxExtensions\.PrependToTrailingTrivia Method
+# SyntaxExtensions\.PrependToTrailingTrivia Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -15,7 +15,7 @@
 | [PrependToTrailingTrivia\<TNode>(TNode, IEnumerable\<SyntaxTrivia>)](#Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__) | Creates a new node from this node with the trailing trivia replaced with a new trivia where the specified trivia is inserted at the begining of the trailing trivia\. |
 | [PrependToTrailingTrivia\<TNode>(TNode, SyntaxTrivia)](#Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_Microsoft_CodeAnalysis_SyntaxTrivia_) | Creates a new node from this node with the trailing trivia replaced with a new trivia where the specified trivia is inserted at the begining of the trailing trivia\. |
 
-## PrependToTrailingTrivia\(SyntaxToken, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia_Microsoft_CodeAnalysis_SyntaxToken_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
+## PrependToTrailingTrivia\(SyntaxToken, IEnumerable\<SyntaxTrivia>\) <a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia_Microsoft_CodeAnalysis_SyntaxToken_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ public static SyntaxToken PrependToTrailingTrivia(this SyntaxToken token, IEnume
 
 Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
-## PrependToTrailingTrivia\(SyntaxToken, SyntaxTrivia\)<a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxTrivia_"></a>
+## PrependToTrailingTrivia\(SyntaxToken, SyntaxTrivia\) <a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_SyntaxTrivia_"></a>
 
 ### Summary
 
@@ -55,7 +55,7 @@ public static SyntaxToken PrependToTrailingTrivia(this SyntaxToken token, Syntax
 
 Microsoft\.CodeAnalysis\.[SyntaxToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxtoken)
 
-## PrependToTrailingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\)<a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
+## PrependToTrailingTrivia\<TNode>\(TNode, IEnumerable\<SyntaxTrivia>\) <a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_SyntaxTrivia__"></a>
 
 ### Summary
 
@@ -79,7 +79,7 @@ public static TNode PrependToTrailingTrivia<TNode>(this TNode node, IEnumerable<
 
 TNode
 
-## PrependToTrailingTrivia\<TNode>\(TNode, SyntaxTrivia\)<a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_Microsoft_CodeAnalysis_SyntaxTrivia_"></a>
+## PrependToTrailingTrivia\<TNode>\(TNode, SyntaxTrivia\) <a name="Roslynator_SyntaxExtensions_PrependToTrailingTrivia__1___0_Microsoft_CodeAnalysis_SyntaxTrivia_"></a>
 
 ### Summary
 

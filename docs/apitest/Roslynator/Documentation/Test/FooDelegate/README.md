@@ -1,8 +1,8 @@
-# FooDelegate Delegate
+# FooDelegate Delegate <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Namespace**: [Roslynator.Documentation.Test](../README.md)
+**Namespace**: [Roslynator.Documentation.Test](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -20,7 +20,7 @@ public delegate Foo FooDelegate(object p)
 
 ### Return Value
 
-Roslynator\.Documentation\.Test\.[Foo](../Foo/README.md)
+Roslynator\.Documentation\.Test\.[Foo](../Foo/README.md#_Top)
 
 ### Inheritance
 

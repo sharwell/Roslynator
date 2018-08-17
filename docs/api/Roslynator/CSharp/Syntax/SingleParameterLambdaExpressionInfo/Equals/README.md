@@ -1,8 +1,8 @@
-# SingleParameterLambdaExpressionInfo\.Equals Method
+# SingleParameterLambdaExpressionInfo\.Equals Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SingleParameterLambdaExpressionInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[SingleParameterLambdaExpressionInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Equals(Object)](#Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 | [Equals(SingleParameterLambdaExpressionInfo)](#Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_Equals_Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<SingleParameterLambdaExpressionInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 
-## Equals\(Object\)<a name="Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_Equals_System_Object_"></a>
+## Equals\(Object\) <a name="Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_Equals_System_Object_"></a>
 
 ### Summary
 
@@ -35,7 +35,7 @@ System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
 true if **obj** and this instance are the same type and represent the same value; otherwise, false\. 
 
-## Equals\(SingleParameterLambdaExpressionInfo\)<a name="Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_Equals_Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_"></a>
+## Equals\(SingleParameterLambdaExpressionInfo\) <a name="Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_Equals_Roslynator_CSharp_Syntax_SingleParameterLambdaExpressionInfo_"></a>
 
 ### Summary
 

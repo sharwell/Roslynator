@@ -1,8 +1,8 @@
-# SymbolExtensions\.IsKind Method
+# SymbolExtensions\.IsKind Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SymbolExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SymbolExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -15,7 +15,7 @@
 | [IsKind(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
 | [IsKind(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind, SymbolKind)](#Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_) | Returns true if the symbol is one of the specified kinds\. |
 
-## IsKind\(ISymbol, SymbolKind, SymbolKind\)<a name="Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_"></a>
+## IsKind\(ISymbol, SymbolKind, SymbolKind\) <a name="Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_"></a>
 
 ### Summary
 
@@ -37,7 +37,7 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsKind\(ISymbol, SymbolKind, SymbolKind, SymbolKind\)<a name="Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_"></a>
+## IsKind\(ISymbol, SymbolKind, SymbolKind, SymbolKind\) <a name="Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_"></a>
 
 ### Summary
 
@@ -61,7 +61,7 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsKind\(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind\)<a name="Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_"></a>
+## IsKind\(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind\) <a name="Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_"></a>
 
 ### Summary
 
@@ -87,7 +87,7 @@ public static bool IsKind(this ISymbol symbol, SymbolKind kind1, SymbolKind kind
 
 System\.[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)
 
-## IsKind\(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind, SymbolKind\)<a name="Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_"></a>
+## IsKind\(ISymbol, SymbolKind, SymbolKind, SymbolKind, SymbolKind, SymbolKind\) <a name="Roslynator_SymbolExtensions_IsKind_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_Microsoft_CodeAnalysis_SymbolKind_"></a>
 
 ### Summary
 

@@ -1,4 +1,4 @@
-# [MethodKind](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.methodkind) Enum Extensions
+# [MethodKind](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.methodkind) Enum Extensions <a name="_Top"></a>
 
 [Home](../../../README.md)
 

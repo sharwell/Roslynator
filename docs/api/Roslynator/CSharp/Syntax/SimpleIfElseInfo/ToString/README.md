@@ -1,8 +1,8 @@
-# SimpleIfElseInfo\.ToString\(\) Method
+# SimpleIfElseInfo\.ToString\(\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md)\.[SimpleIfElseInfo](../README.md)
+**Containing Type**: [Roslynator.CSharp.Syntax](../../README.md#_Top)\.[SimpleIfElseInfo](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

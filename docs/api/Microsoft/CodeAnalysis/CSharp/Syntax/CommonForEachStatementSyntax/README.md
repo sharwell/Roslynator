@@ -1,4 +1,4 @@
-# [CommonForEachStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.commonforeachstatementsyntax) Class Extensions
+# [CommonForEachStatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.commonforeachstatementsyntax) Class Extensions <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 

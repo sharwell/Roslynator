@@ -1,8 +1,8 @@
-# IfStatementOrElseClause\.Equals Method
+# IfStatementOrElseClause\.Equals Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[IfStatementOrElseClause](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[IfStatementOrElseClause](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [Equals(IfStatementOrElseClause)](#Roslynator_CSharp_IfStatementOrElseClause_Equals_Roslynator_CSharp_IfStatementOrElseClause_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<IfStatementOrElseClause>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
 | [Equals(Object)](#Roslynator_CSharp_IfStatementOrElseClause_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 
-## Equals\(IfStatementOrElseClause\)<a name="Roslynator_CSharp_IfStatementOrElseClause_Equals_Roslynator_CSharp_IfStatementOrElseClause_"></a>
+## Equals\(IfStatementOrElseClause\) <a name="Roslynator_CSharp_IfStatementOrElseClause_Equals_Roslynator_CSharp_IfStatementOrElseClause_"></a>
 
 ### Summary
 
@@ -39,7 +39,7 @@ true if the current object is equal to the **other** parameter; otherwise, false
 
 * [IEquatable\<IfStatementOrElseClause>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)
 
-## Equals\(Object\)<a name="Roslynator_CSharp_IfStatementOrElseClause_Equals_System_Object_"></a>
+## Equals\(Object\) <a name="Roslynator_CSharp_IfStatementOrElseClause_Equals_System_Object_"></a>
 
 ### Summary
 

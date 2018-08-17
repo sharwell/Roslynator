@@ -1,8 +1,8 @@
-# SyntaxExtensions\.WithoutTrailingTrivia Method
+# SyntaxExtensions\.WithoutTrailingTrivia Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [WithoutTrailingTrivia(SyntaxNodeOrToken)](#Roslynator_SyntaxExtensions_WithoutTrailingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_) | Creates a new [SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken) with the trailing trivia removed\. |
 | [WithoutTrailingTrivia(SyntaxToken)](#Roslynator_SyntaxExtensions_WithoutTrailingTrivia_Microsoft_CodeAnalysis_SyntaxToken_) | Creates a new token from this token with the trailing trivia removed\. |
 
-## WithoutTrailingTrivia\(SyntaxNodeOrToken\)<a name="Roslynator_SyntaxExtensions_WithoutTrailingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_"></a>
+## WithoutTrailingTrivia\(SyntaxNodeOrToken\) <a name="Roslynator_SyntaxExtensions_WithoutTrailingTrivia_Microsoft_CodeAnalysis_SyntaxNodeOrToken_"></a>
 
 ### Summary
 
@@ -31,7 +31,7 @@ public static SyntaxNodeOrToken WithoutTrailingTrivia(this SyntaxNodeOrToken nod
 
 Microsoft\.CodeAnalysis\.[SyntaxNodeOrToken](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeortoken)
 
-## WithoutTrailingTrivia\(SyntaxToken\)<a name="Roslynator_SyntaxExtensions_WithoutTrailingTrivia_Microsoft_CodeAnalysis_SyntaxToken_"></a>
+## WithoutTrailingTrivia\(SyntaxToken\) <a name="Roslynator_SyntaxExtensions_WithoutTrailingTrivia_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ### Summary
 

@@ -1,8 +1,8 @@
-# FooCollection\.IEnumerable\<Foo>\.GetEnumerator\(\) Method
+# FooCollection\.IEnumerable\<Foo>\.GetEnumerator\(\) Method <a name="_Top"></a>
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[FooCollection](../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[FooCollection](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -12,7 +12,7 @@ private IEnumerator<Foo> IEnumerable<Foo>.GetEnumerator()
 
 ### Returns
 
-System\.Collections\.Generic\.[IEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1)\<Roslynator\.Documentation\.Test\.[Foo](../../Foo/README.md)>
+System\.Collections\.Generic\.[IEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1)\<Roslynator\.Documentation\.Test\.[Foo](../../Foo/README.md#_Top)>
 
 ### Implements
 

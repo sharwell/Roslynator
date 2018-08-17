@@ -1,8 +1,8 @@
-# NameGenerator Class
+# NameGenerator Class <a name="_Top"></a>
 
 [Home](../../README.md) &#x2022; [Constructors](#constructors) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
 
-**Namespace**: [Roslynator](../README.md)
+**Namespace**: [Roslynator](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -22,20 +22,20 @@ public abstract class NameGenerator
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [NameGenerator()](-ctor/README.md) | |
+| [NameGenerator()](-ctor/README.md#_Top) | |
 
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
-| [Default](Default/README.md) | Default implementation of [NameGenerator](./README.md) that adds number suffix to ensure uniqueness\. |
+| [Default](Default/README.md#_Top) | Default implementation of [NameGenerator](#_Top) that adds number suffix to ensure uniqueness\. |
 
 ## Methods
 
 | Method | Summary |
 | ------ | ------- |
-| [CreateName(ITypeSymbol, Boolean)](CreateName/README.md) | Creates a syntax identifier from the specified type symbol\. |
-| [EnsureUniqueLocalName(String, SemanticModel, Int32, Boolean, CancellationToken)](EnsureUniqueLocalName/README.md) | Return a local name that will be unique at the specified position\. |
+| [CreateName(ITypeSymbol, Boolean)](CreateName/README.md#_Top) | Creates a syntax identifier from the specified type symbol\. |
+| [EnsureUniqueLocalName(String, SemanticModel, Int32, Boolean, CancellationToken)](EnsureUniqueLocalName/README.md#_Top) | Return a local name that will be unique at the specified position\. |
 | [EnsureUniqueMemberName(String, INamedTypeSymbol, Boolean)](EnsureUniqueMemberName/README.md#Roslynator_NameGenerator_EnsureUniqueMemberName_System_String_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Boolean_) | |
 | [EnsureUniqueMemberName(String, SemanticModel, Int32, Boolean, CancellationToken)](EnsureUniqueMemberName/README.md#Roslynator_NameGenerator_EnsureUniqueMemberName_System_String_Microsoft_CodeAnalysis_SemanticModel_System_Int32_System_Boolean_System_Threading_CancellationToken_) | Returns a member name that will be unique at the specified position\. |
 | [EnsureUniqueName(String, IEnumerable\<String>, Boolean)](EnsureUniqueName/README.md#Roslynator_NameGenerator_EnsureUniqueName_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_) | Returns an unique name using the specified list of reserved names\. |

@@ -2,13 +2,13 @@
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SeparatedSyntaxListSelection\<TNode>](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
 ## Summary
 
-Initializes a new instance of the [SeparatedSyntaxListSelection\<TNode>](../README.md)\.
+Initializes a new instance of the [SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)\.
 
 ```csharp
 protected SeparatedSyntaxListSelection(SeparatedSyntaxList<TNode> list, TextSpan span, int firstIndex, int lastIndex)

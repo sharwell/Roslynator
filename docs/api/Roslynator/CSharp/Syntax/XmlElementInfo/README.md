@@ -1,8 +1,8 @@
-# XmlElementInfo Struct
+# XmlElementInfo Struct <a name="_Top"></a>
 
 [Home](../../../../README.md) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators)
 
-**Namespace**: [Roslynator.CSharp.Syntax](../README.md)
+**Namespace**: [Roslynator.CSharp.Syntax](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -20,17 +20,17 @@ public readonly struct XmlElementInfo : System.IEquatable<XmlElementInfo>
 
 ### Implements
 
-* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[XmlElementInfo](./README.md)>
+* System\.[IEquatable](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\<[XmlElementInfo](#_Top)>
 
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
-| [Element](Element/README.md) | The xml element\. |
-| [IsEmptyElement](IsEmptyElement/README.md) | Determines whether the element is [SyntaxKind.XmlEmptyElement](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind.xmlemptyelement)\. |
-| [Kind](Kind/README.md) | Element kind\. |
-| [LocalName](LocalName/README.md) | Local name of the element\. |
-| [Success](Success/README.md) | Determines whether this struct was initialized with an actual syntax\. |
+| [Element](Element/README.md#_Top) | The xml element\. |
+| [IsEmptyElement](IsEmptyElement/README.md#_Top) | Determines whether the element is [SyntaxKind.XmlEmptyElement](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind.xmlemptyelement)\. |
+| [Kind](Kind/README.md#_Top) | Element kind\. |
+| [LocalName](LocalName/README.md#_Top) | Local name of the element\. |
+| [Success](Success/README.md#_Top) | Determines whether this struct was initialized with an actual syntax\. |
 
 ## Methods
 
@@ -38,15 +38,15 @@ public readonly struct XmlElementInfo : System.IEquatable<XmlElementInfo>
 | ------ | ------- |
 | [Equals(Object)](Equals/README.md#Roslynator_CSharp_Syntax_XmlElementInfo_Equals_System_Object_) | Determines whether this instance and a specified object are equal\. \(Overrides [ValueType.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.equals)\) |
 | [Equals(XmlElementInfo)](Equals/README.md#Roslynator_CSharp_Syntax_XmlElementInfo_Equals_Roslynator_CSharp_Syntax_XmlElementInfo_) | Determines whether this instance is equal to another object of the same type\. \(Implements [IEquatable\<XmlElementInfo>.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1.equals)\) |
-| [GetHashCode()](GetHashCode/README.md) | Returns the hash code for this instance\. \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
+| [GetHashCode()](GetHashCode/README.md#_Top) | Returns the hash code for this instance\. \(Overrides [ValueType.GetHashCode](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.gethashcode)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [ToString()](ToString/README.md) | Returns the string representation of the underlying syntax, not including its leading and trailing trivia\. \(Overrides [ValueType.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring)\) |
+| [ToString()](ToString/README.md#_Top) | Returns the string representation of the underlying syntax, not including its leading and trailing trivia\. \(Overrides [ValueType.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.valuetype.tostring)\) |
 
 ## Operators
 
 | Operator | Summary |
 | -------- | ------- |
-| [Equality(XmlElementInfo, XmlElementInfo)](op_Equality/README.md) | |
-| [Inequality(XmlElementInfo, XmlElementInfo)](op_Inequality/README.md) | |
+| [Equality(XmlElementInfo, XmlElementInfo)](op_Equality/README.md#_Top) | |
+| [Inequality(XmlElementInfo, XmlElementInfo)](op_Inequality/README.md#_Top) | |
 

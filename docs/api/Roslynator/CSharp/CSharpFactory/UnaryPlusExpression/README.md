@@ -1,8 +1,8 @@
-# CSharpFactory\.UnaryPlusExpression Method
+# CSharpFactory\.UnaryPlusExpression Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [UnaryPlusExpression(ExpressionSyntax)](#Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_) | |
 | [UnaryPlusExpression(ExpressionSyntax, SyntaxToken)](#Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_) | |
 
-## UnaryPlusExpression\(ExpressionSyntax\)<a name="Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
+## UnaryPlusExpression\(ExpressionSyntax\) <a name="Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax UnaryPlusExpression(ExpressionSyntax operand)
@@ -27,7 +27,7 @@ public static PrefixUnaryExpressionSyntax UnaryPlusExpression(ExpressionSyntax o
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[PrefixUnaryExpressionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.prefixunaryexpressionsyntax)
 
-## UnaryPlusExpression\(ExpressionSyntax, SyntaxToken\)<a name="Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
+## UnaryPlusExpression\(ExpressionSyntax, SyntaxToken\) <a name="Roslynator_CSharp_CSharpFactory_UnaryPlusExpression_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_Microsoft_CodeAnalysis_SyntaxToken_"></a>
 
 ```csharp
 public static PrefixUnaryExpressionSyntax UnaryPlusExpression(ExpressionSyntax operand, SyntaxToken operatorToken)

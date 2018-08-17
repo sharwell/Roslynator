@@ -1,8 +1,8 @@
-# CSharpFactory\.ThisConstructorInitializer Method
+# CSharpFactory\.ThisConstructorInitializer Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[CSharpFactory](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[CSharpFactory](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -13,7 +13,7 @@
 | [ThisConstructorInitializer(ArgumentListSyntax)](#Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_) | |
 | [ThisConstructorInitializer(SyntaxToken, ArgumentListSyntax)](#Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_) | |
 
-## ThisConstructorInitializer\(ArgumentListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_"></a>
+## ThisConstructorInitializer\(ArgumentListSyntax\) <a name="Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_"></a>
 
 ```csharp
 public static ConstructorInitializerSyntax ThisConstructorInitializer(ArgumentListSyntax argumentList = null)
@@ -27,7 +27,7 @@ public static ConstructorInitializerSyntax ThisConstructorInitializer(ArgumentLi
 
 Microsoft\.CodeAnalysis\.CSharp\.Syntax\.[ConstructorInitializerSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.constructorinitializersyntax)
 
-## ThisConstructorInitializer\(SyntaxToken, ArgumentListSyntax\)<a name="Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_"></a>
+## ThisConstructorInitializer\(SyntaxToken, ArgumentListSyntax\) <a name="Roslynator_CSharp_CSharpFactory_ThisConstructorInitializer_Microsoft_CodeAnalysis_SyntaxToken_Microsoft_CodeAnalysis_CSharp_Syntax_ArgumentListSyntax_"></a>
 
 ```csharp
 public static ConstructorInitializerSyntax ThisConstructorInitializer(SyntaxToken semicolonToken, ArgumentListSyntax argumentList)

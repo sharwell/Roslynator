@@ -2,7 +2,7 @@
 
 [Home](../../../../../README.md)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md)\.[Foo](../README.md)
+**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_Top)\.[Foo](../README.md#_Top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 
@@ -13,7 +13,7 @@
 | [Foo(String)](#Roslynator_Documentation_Test_Foo__ctor_System_String_) | aaa |
 | [Foo(String, String)](#Roslynator_Documentation_Test_Foo__ctor_System_String_System_String_) | |
 
-## Foo\(String\)<a name="Roslynator_Documentation_Test_Foo__ctor_System_String_"></a>
+## Foo\(String\) <a name="Roslynator_Documentation_Test_Foo__ctor_System_String_"></a>
 
 ### Summary
 
@@ -43,7 +43,7 @@ b
 
 * [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)
 
-## Foo\(String, String\)<a name="Roslynator_Documentation_Test_Foo__ctor_System_String_System_String_"></a>
+## Foo\(String, String\) <a name="Roslynator_Documentation_Test_Foo__ctor_System_String_System_String_"></a>
 
 ```csharp
 public Foo(string s, string s2)

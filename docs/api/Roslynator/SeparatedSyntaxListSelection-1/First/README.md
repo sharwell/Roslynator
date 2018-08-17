@@ -1,8 +1,8 @@
-# SeparatedSyntaxListSelection\<TNode>\.First\(\) Method
+# SeparatedSyntaxListSelection\<TNode>\.First\(\) Method <a name="_Top"></a>
 
 [Home](../../../README.md)
 
-**Containing Type**: [Roslynator](../../README.md)\.[SeparatedSyntaxListSelection\<TNode>](../README.md)
+**Containing Type**: [Roslynator](../../README.md#_Top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -20,4 +20,4 @@ TNode
 
 ### Implements
 
-* [ISelection\<TNode>.First](../../ISelection-1/First/README.md)
+* [ISelection\<TNode>.First](../../ISelection-1/First/README.md#_Top)

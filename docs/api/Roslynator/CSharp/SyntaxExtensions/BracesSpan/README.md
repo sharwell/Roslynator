@@ -1,8 +1,8 @@
-# SyntaxExtensions\.BracesSpan Method
+# SyntaxExtensions\.BracesSpan Method <a name="_Top"></a>
 
 [Home](../../../../README.md)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md)\.[SyntaxExtensions](../README.md)
+**Containing Type**: [Roslynator.CSharp](../../README.md#_Top)\.[SyntaxExtensions](../README.md#_Top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 
@@ -16,7 +16,7 @@
 | [BracesSpan(NamespaceDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_) | The absolute span of the braces, not including leading and trailing trivia\. |
 | [BracesSpan(StructDeclarationSyntax)](#Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_) | The absolute span of the braces, not including its leading and trailing trivia\. |
 
-## BracesSpan\(ClassDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_"></a>
+## BracesSpan\(ClassDeclarationSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -34,7 +34,7 @@ public static TextSpan BracesSpan(this ClassDeclarationSyntax classDeclaration)
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## BracesSpan\(EnumDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_EnumDeclarationSyntax_"></a>
+## BracesSpan\(EnumDeclarationSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_EnumDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -52,7 +52,7 @@ public static TextSpan BracesSpan(this EnumDeclarationSyntax enumDeclaration)
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## BracesSpan\(InterfaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_"></a>
+## BracesSpan\(InterfaceDeclarationSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_InterfaceDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -70,7 +70,7 @@ public static TextSpan BracesSpan(this InterfaceDeclarationSyntax interfaceDecla
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## BracesSpan\(NamespaceDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_"></a>
+## BracesSpan\(NamespaceDeclarationSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_NamespaceDeclarationSyntax_"></a>
 
 ### Summary
 
@@ -88,7 +88,7 @@ public static TextSpan BracesSpan(this NamespaceDeclarationSyntax namespaceDecla
 
 Microsoft\.CodeAnalysis\.Text\.[TextSpan](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.text.textspan)
 
-## BracesSpan\(StructDeclarationSyntax\)<a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_"></a>
+## BracesSpan\(StructDeclarationSyntax\) <a name="Roslynator_CSharp_SyntaxExtensions_BracesSpan_Microsoft_CodeAnalysis_CSharp_Syntax_StructDeclarationSyntax_"></a>
 
 ### Summary
 
