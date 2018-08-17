@@ -33,7 +33,6 @@ namespace Roslynator.Documentation
             DocumentationModel documentationModel = CreateFromTrustedPlatformAssemblies(assemblyNames);
 
             var options = new DocumentationOptions(
-                maxDerivedItems: 2,
                 depth: DocumentationDepth.Member,
                 typeParts: TypeDocumentationParts.All,
                 formatDefinitionBaseList: true,

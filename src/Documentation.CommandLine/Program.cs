@@ -16,79 +16,44 @@ namespace Roslynator.Documentation
     {
         private static void Main(string[] args)
         {
-            ParserResult<CommandLineOptions> result = Parser.Default.ParseArguments<CommandLineOptions>(args);
+            Parser.Default.ParseArguments<CommandLineOptions, DefinitionListCommandLineOptions>(args)
+                .MapResult(
+                  (CommandLineOptions options) => RunDefault(options),
+                  (DefinitionListCommandLineOptions options) => RunDefinitionList(options),
+                  _ => 1);
+        }
 
-            if (!(result is Parsed<CommandLineOptions> parsed))
-                return;
-
-            CommandLineOptions options = parsed.Value;
-
+        private static int RunDefault(CommandLineOptions options)
+        {
             Encoding encoding = GetEncoding();
 
             if (encoding == null)
-                return;
+                return 1;
 
             if (options.MaxDerivedItems < 0)
             {
                 Console.WriteLine("Maximum number of derived items must be equal or greater than 0.");
-                return;
+                return 1;
             }
-
-            IEnumerable<string> assemblyReferences = GetAssemblyReferences(options.AssemblyReferences);
-
-            if (assemblyReferences == null)
-                return;
-
-            List<PortableExecutableReference> references = assemblyReferences
-                .Select(f => MetadataReference.CreateFromFile(f))
-                .ToList();
-
-            foreach (string assemblyPath in options.Assemblies)
-            {
-                if (!TryGetReference(references, assemblyPath, out PortableExecutableReference reference))
-                {
-                    if (File.Exists(assemblyPath))
-                    {
-                        reference = MetadataReference.CreateFromFile(assemblyPath);
-                        references.Add(reference);
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Assembly '{assemblyPath}' not found.");
-                    }
-                }
-            }
-
-            CSharpCompilation compilation = CSharpCompilation.Create(
-                "",
-                syntaxTrees: default(IEnumerable<SyntaxTree>),
-                references: references,
-                options: default(CSharpCompilationOptions));
-
-            var documentationModel = new DocumentationModel(
-                compilation,
-                options.Assemblies.Select(assemblyPath =>
-                {
-                    TryGetReference(references, assemblyPath, out PortableExecutableReference reference);
-                    return (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(reference);
-                }));
-
-            if (!Enum.TryParse(options.Depth, ignoreCase: true, out DocumentationDepth depth))
-                depth = DocumentationOptions.DefaultValues.Depth;
 
             if (!TryGetNamespaceDocumentationParts(options.NamespaceParts, out NamespaceDocumentationParts namespaceParts))
-                return;
+                return 1;
 
             if (!TryGetTypeDocumentationParts(options.TypeParts, out TypeDocumentationParts typeParts))
-                return;
+                return 1;
 
             if (!TryGetMemberDocumentationParts(options.MemberParts, out MemberDocumentationParts memberParts))
-                return;
+                return 1;
+
+            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies);
+
+            if (documentationModel == null)
+                return 1;
 
             var documentationOptions = new DocumentationOptions(
                 preferredCultureName: options.PreferredCulture,
                 baseLocalUrl: options.BaseLocalUrl,
-                depth: depth,
+                depth: options.Depth,
                 namespaceParts: namespaceParts,
                 typeParts: typeParts,
                 memberParts: memberParts,
@@ -132,6 +97,83 @@ namespace Roslynator.Documentation
                 Console.WriteLine($"Unknown mode '{options.Mode}'.");
                 return null;
             }
+
+            return 0;
+        }
+
+        private static int RunDefinitionList(DefinitionListCommandLineOptions options)
+        {
+            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies);
+
+            if (documentationModel == null)
+                return 1;
+
+            var definitionListOptions = new DefinitionListOptions(
+                indent: options.Indent,
+                indentChars: options.IndentChars,
+                openBraceOnNewLine: options.OpenBraceOnNewLine,
+                emptyLineBetweenMembers: options.EmptyLineBetweenMembers,
+                newLineOnAttributes: options.NewLineOnAttributes,
+                attributeArguments: options.AttributeArguments,
+                omitIEnumerable: options.OmitIEnumerable,
+                useDefaultLiteral: options.UseDefaultLiteral);
+
+            string content = DefinitionListGenerator.GenerateAsync(documentationModel, definitionListOptions).Result;
+
+            string path = options.OutputPath;
+
+#if DEBUG
+            Console.WriteLine($"saving '{path}'");
+#else
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
+            File.WriteAllText(path, content, Encoding.UTF8);
+#endif
+
+            Console.WriteLine($"Definition list successfully generated to '{options.OutputPath}'.");
+
+            return 0;
+        }
+
+        private static DocumentationModel CreateDocumentationModel(string assemblyReferencesValue, IEnumerable<string> assemblies)
+        {
+            IEnumerable<string> assemblyReferences = GetAssemblyReferences(assemblyReferencesValue);
+
+            if (assemblyReferences == null)
+                return null;
+
+            List<PortableExecutableReference> references = assemblyReferences
+                .Select(f => MetadataReference.CreateFromFile(f))
+                .ToList();
+
+            foreach (string assemblyPath in assemblies)
+            {
+                if (!TryGetReference(references, assemblyPath, out PortableExecutableReference reference))
+                {
+                    if (File.Exists(assemblyPath))
+                    {
+                        reference = MetadataReference.CreateFromFile(assemblyPath);
+                        references.Add(reference);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Assembly '{assemblyPath}' not found.");
+                    }
+                }
+            }
+
+            CSharpCompilation compilation = CSharpCompilation.Create(
+                "",
+                syntaxTrees: default(IEnumerable<SyntaxTree>),
+                references: references,
+                options: default(CSharpCompilationOptions));
+
+            return new DocumentationModel(
+                compilation,
+                assemblies.Select(assemblyPath =>
+                {
+                    TryGetReference(references, assemblyPath, out PortableExecutableReference reference);
+                    return (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(reference);
+                }));
         }
 
         private static IEnumerable<string> GetAssemblyReferences(string assemblyReferences)

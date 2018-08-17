@@ -1106,19 +1106,16 @@ namespace Roslynator.Documentation
                         {
                             if (en.MoveNext())
                             {
-                                WriteLine();
-
                                 if (!string.IsNullOrEmpty(allItemsHeading))
                                 {
+                                    WriteStartBulletItem();
                                     WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle));
+                                    WriteEndBulletItem();
                                 }
                                 else
                                 {
-                                    WriteString(Resources.Ellipsis);
+                                    WriteBulletItem(Resources.Ellipsis);
                                 }
-
-                                WriteLine();
-                                WriteLine();
                             }
 
                             break;

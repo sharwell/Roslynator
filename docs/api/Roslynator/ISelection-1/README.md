@@ -24,8 +24,9 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 
 * Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../SeparatedSyntaxListSelection-1/README.md)
 * Roslynator\.[SyntaxListSelection\<TNode>](../SyntaxListSelection-1/README.md)
-
-[...](#all-derived-types)
+* Roslynator\.CSharp\.[MemberDeclarationListSelection](../CSharp/MemberDeclarationListSelection/README.md)
+* Roslynator\.CSharp\.[StatementListSelection](../CSharp/StatementListSelection/README.md)
+* Roslynator\.Text\.[TextLineCollectionSelection](../Text/TextLineCollectionSelection/README.md)
 
 ### Implements
 
@@ -50,10 +51,3 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 | [GetEnumerator()](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator) |  \(Inherited from [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\) |
 | [Last()](Last/README.md) | Gets the last selected item\. |
 
-## All Derived Types
-
-* Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../SeparatedSyntaxListSelection-1/README.md)
-* Roslynator\.[SyntaxListSelection\<TNode>](../SyntaxListSelection-1/README.md)
-* Roslynator\.CSharp\.[MemberDeclarationListSelection](../CSharp/MemberDeclarationListSelection/README.md)
-* Roslynator\.CSharp\.[StatementListSelection](../CSharp/StatementListSelection/README.md)
-* Roslynator\.Text\.[TextLineCollectionSelection](../Text/TextLineCollectionSelection/README.md)

@@ -1,14 +1,28 @@
 ﻿<Project>
   <Target Name="RoslynatorDocumentation" AfterTargets="Build">
-    <PropertyGroup Condition="'$(RoslynatorDocumentationParameters)' != ''">
+    <PropertyGroup Condition=" '$(RoslynatorDocumentationParameters)' != '' OR '$(RoslynatorDocumentationDefinitionListParameters)' != ''">
       <RoslynatorDocumentationCommand Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">"$(MSBuildThisFileDirectory)net46\Roslynator.Documentation.CommandLine.exe"</RoslynatorDocumentationCommand>
       <RoslynatorDocumentationCommand Condition="'$(TargetFrameworkIdentifier)' == '.NETCoreApp' Or '$(TargetFrameworkIdentifier)' == '.NETStandard'">dotnet "$(MSBuildThisFileDirectory)netcoreapp1.0\Roslynator.Documentation.CommandLine.dll"</RoslynatorDocumentationCommand>
       <RoslynatorDocumentationAssemblyReferencesPath>$(TargetDir)Roslynator.Documentation.CommandLine.assemblyreferences</RoslynatorDocumentationAssemblyReferencesPath>
     </PropertyGroup>
-    <WriteLinesToFile File="$(RoslynatorDocumentationAssemblyReferencesPath)" Lines="@(_ResolveAssemblyReferenceResolvedFiles)" Overwrite="true" Encoding="Unicode" Condition="'$(RoslynatorDocumentationParameters)' != ''" />  
-    <Exec Command="$(RoslynatorDocumentationCommand) -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationParameters)" LogStandardErrorAsError="true" ConsoleToMSBuild="true" Condition="'$(RoslynatorDocumentationParameters)' != ''">
+    <WriteLinesToFile File="$(RoslynatorDocumentationAssemblyReferencesPath)"
+                      Lines="@(_ResolveAssemblyReferenceResolvedFiles)"
+                      Overwrite="true"
+                      Encoding="Unicode"
+                      Condition=" '$(RoslynatorDocumentationParameters)' != '' OR '$(RoslynatorDocumentationDefinitionListParameters)' != ''" />
+    <Exec Command="$(RoslynatorDocumentationCommand) doc -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationParameters)"
+          LogStandardErrorAsError="true"
+          ConsoleToMSBuild="true"
+          Condition="'$(RoslynatorDocumentationParameters)' != ''">
       <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
     </Exec>
-    <Delete Files="$(RoslynatorDocumentationAssemblyReferencesPath)"  Condition="'$(RoslynatorDocumentationParameters)' != ''" />
+    <Exec Command="$(RoslynatorDocumentationCommand) definition-list -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationDefinitionListParameters)"
+          LogStandardErrorAsError="true"
+          ConsoleToMSBuild="true"
+          Condition="'$(RoslynatorDocumentationDefinitionListParameters)' != ''">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+    <Delete Files="$(RoslynatorDocumentationAssemblyReferencesPath)"
+            Condition=" '$(RoslynatorDocumentationParameters)' != '' OR '$(RoslynatorDocumentationDefinitionListParameters)' != ''" />
   </Target>
 </Project>
