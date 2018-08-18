@@ -402,6 +402,7 @@ namespace Roslynator.Documentation
                 writer.WriteLink(Resources.HomeTitle, UrlProvider.GetUrlToRoot(0, '/'));
                 writer.WriteContentSeparator();
                 writer.WriteLink(Resources.NamespacesTitle, UrlProvider.GetFragment(Resources.NamespacesTitle));
+
                 writer.WriteContent(extendedExternalTypes
                     .Select(f => f.TypeKind)
                     .Where(f => IsNamespacePartEnabled(f))

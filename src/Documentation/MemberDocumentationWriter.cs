@@ -321,7 +321,7 @@ namespace Roslynator.Documentation
                 var fieldSymbol = (IFieldSymbol)symbol;
 
                 Writer.WriteHeading(3, Resources.FieldValueTitle);
-                Writer.WriteTypeLink(fieldSymbol.Type);
+                Writer.WriteTypeLink(fieldSymbol.Type, containingNamespace: Options.AddContainingNamespace);
             }
         }
 
@@ -341,7 +341,7 @@ namespace Roslynator.Documentation
                     return;
 
                 Writer.WriteHeading(3, Resources.ReturnsTitle);
-                Writer.WriteTypeLink(returnType);
+                Writer.WriteTypeLink(returnType, containingNamespace: Options.AddContainingNamespace);
                 Writer.WriteLine();
                 Writer.WriteLine();
 
@@ -360,7 +360,7 @@ namespace Roslynator.Documentation
                 var methodSymbol = (IMethodSymbol)symbol;
 
                 Writer.WriteHeading(3, Resources.ReturnsTitle);
-                Writer.WriteTypeLink(methodSymbol.ReturnType);
+                Writer.WriteTypeLink(methodSymbol.ReturnType, containingNamespace: Options.AddContainingNamespace);
                 Writer.WriteLine();
                 Writer.WriteLine();
 
@@ -379,7 +379,7 @@ namespace Roslynator.Documentation
                 var propertySymbol = (IPropertySymbol)symbol;
 
                 Writer.WriteHeading(3, Resources.PropertyValueTitle);
-                Writer.WriteTypeLink(propertySymbol.Type);
+                Writer.WriteTypeLink(propertySymbol.Type, containingNamespace: Options.AddContainingNamespace);
                 Writer.WriteLine();
                 Writer.WriteLine();
 

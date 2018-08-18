@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
+
 namespace Roslynator.Documentation
 {
     public class DocumentationOptions
@@ -10,6 +11,7 @@ namespace Roslynator.Documentation
             string baseLocalUrl = null,
             int maxDerivedItems = DefaultValues.MaxDerivedItems,
             bool classHierarchy = DefaultValues.ClassHierarchy,
+            bool addContainingNamespace = DefaultValues.AddContainingNamespace,
             bool systemNamespaceFirst = DefaultValues.SystemNamespaceFirst,
             bool formatDefinitionBaseList = DefaultValues.FormatDefinitionBaseList,
             bool formatDefinitionConstraints = DefaultValues.FormatDefinitionConstraints,
@@ -33,6 +35,7 @@ namespace Roslynator.Documentation
             BaseLocalUrl = baseLocalUrl;
             MaxDerivedItems = maxDerivedItems;
             ClassHierarchy = classHierarchy;
+            AddContainingNamespace = addContainingNamespace;
             SystemNamespaceFirst = systemNamespaceFirst;
             FormatDefinitionBaseList = formatDefinitionBaseList;
             FormatDefinitionConstraints = formatDefinitionConstraints;
@@ -59,6 +62,8 @@ namespace Roslynator.Documentation
         public int MaxDerivedItems { get; }
 
         public bool ClassHierarchy { get; }
+
+        public bool AddContainingNamespace { get; }
 
         public bool SystemNamespaceFirst { get; }
 
@@ -114,6 +119,7 @@ namespace Roslynator.Documentation
         {
             public const int MaxDerivedItems = 10;
             public const bool ClassHierarchy = true;
+            public const bool AddContainingNamespace = true;
             public const bool SystemNamespaceFirst = true;
             public const bool FormatDefinitionBaseList = true;
             public const bool FormatDefinitionConstraints = true;

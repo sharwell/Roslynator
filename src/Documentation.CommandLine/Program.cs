@@ -59,6 +59,7 @@ namespace Roslynator.Documentation
                 memberParts: memberParts,
                 maxDerivedItems: options.MaxDerivedItems,
                 classHierarchy: options.ClassHierarchy,
+                addContainingNamespace: options.AddContainingNamespace,
                 systemNamespaceFirst: options.SystemNamespaceFirst,
                 formatDefinitionBaseList: options.FormatDefinitionBaseList,
                 formatDefinitionConstraints: options.FormatDefinitionConstraints,

@@ -45,6 +45,9 @@ namespace Roslynator.Documentation
         [Option(longName: "class-hierarchy", Default = DefaultValues.ClassHierarchy)]
         public bool ClassHierarchy { get; set; }
 
+        [Option(longName: "add-containing-namespace", Default = DefaultValues.AddContainingNamespace)]
+        public bool AddContainingNamespace { get; set; }
+
         [Option(longName: "system-namespace-first", Default = DefaultValues.SystemNamespaceFirst)]
         public bool SystemNamespaceFirst { get; set; }
 
