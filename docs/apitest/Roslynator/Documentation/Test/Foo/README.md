@@ -2,7 +2,7 @@
 
 # Foo Class
 
-[Home](../../../../README.md#_top) &#x2022; [Remarks](#remarks) &#x2022; [Constructors](#constructors) &#x2022; [Fields](#fields) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [See Also](#see-also)
+[Home](../../../../README.md#_top) &#x2022; [Remarks](#remarks) &#x2022; [Constructors](#constructors) &#x2022; [Fields](#fields) &#x2022; [Indexers](#indexers) &#x2022; [Methods](#methods) &#x2022; [See Also](#see-also)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md#_top)
 
@@ -72,10 +72,10 @@ paratext
 | [Field](Field/README.md#_top) | f |
 | [FooConst](FooConst/README.md#_top) |  \( = "abc"\) |
 
-## Properties
+## Indexers
 
-| Property | Summary |
-| -------- | ------- |
+| Indexer | Summary |
+| ------- | ------- |
 | [Item\[Int32, Int32\]](Item/README.md#Roslynator_Documentation_Test_Foo_Item_System_Int32_System_Int32_) | s |
 | [Item\[Int32\]](Item/README.md#Roslynator_Documentation_Test_Foo_Item_System_Int32_) | s |
 

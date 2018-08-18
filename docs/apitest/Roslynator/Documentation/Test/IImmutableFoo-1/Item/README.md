@@ -1,6 +1,6 @@
 <a name="_top"></a>
 
-# IImmutableFoo\<T>\.Item\[Int32\] Property
+# IImmutableFoo\<T>\.Item\[Int32\] Indexer
 
 [Home](../../../../../README.md#_top)
 

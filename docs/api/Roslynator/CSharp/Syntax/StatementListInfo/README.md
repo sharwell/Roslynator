@@ -2,7 +2,7 @@
 
 # StatementListInfo Struct
 
-[Home](../../../../README.md#_top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+[Home](../../../../README.md#_top) &#x2022; [Indexers](#indexers) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
 **Namespace**: [Roslynator.CSharp.Syntax](../README.md#_top)
 
@@ -30,6 +30,12 @@ public readonly struct StatementListInfo : System.IEquatable<StatementListInfo>,
 * System\.Collections\.Generic\.[IReadOnlyCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)\<[StatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.statementsyntax)>
 * System\.Collections\.Generic\.[IReadOnlyList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)\<[StatementSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.statementsyntax)>
 
+## Indexers
+
+| Indexer | Summary |
+| ------- | ------- |
+| [Item\[Int32\]](Item/README.md#_top) | Gets the statement at the specified index in the list\. \(Implements [IReadOnlyList\<StatementSyntax>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
+
 ## Properties
 
 | Property | Summary |
@@ -37,7 +43,6 @@ public readonly struct StatementListInfo : System.IEquatable<StatementListInfo>,
 | [Count](Count/README.md#_top) | The number of statement in the list\. \(Implements [IReadOnlyCollection\<StatementSyntax>.Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1.count)\) |
 | [IsParentBlock](IsParentBlock/README.md#_top) | Determines whether the statements are contained in a [BlockSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.blocksyntax)\. |
 | [IsParentSwitchSection](IsParentSwitchSection/README.md#_top) | Determines whether the statements are contained in a [SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)\. |
-| [Item\[Int32\]](Item/README.md#_top) | Gets the statement at the specified index in the list\. \(Implements [IReadOnlyList\<StatementSyntax>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
 | [Parent](Parent/README.md#_top) | The node that contains the statements\. It can be either a [BlockSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.blocksyntax) or a [SwitchSectionSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.switchsectionsyntax)\. |
 | [ParentAsBlock](ParentAsBlock/README.md#_top) | Gets a block that contains the statements\. Returns null if the statements are not contained in a block\. |
 | [ParentAsSwitchSection](ParentAsSwitchSection/README.md#_top) | Gets a switch section that contains the statements\. Returns null if the statements are not contained in a switch section\. |

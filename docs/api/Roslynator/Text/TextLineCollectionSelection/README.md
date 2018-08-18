@@ -2,7 +2,7 @@
 
 # TextLineCollectionSelection Class
 
-[Home](../../../README.md#_top) &#x2022; [Constructors](#constructors) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations) &#x2022; [Structs](#structs)
+[Home](../../../README.md#_top) &#x2022; [Constructors](#constructors) &#x2022; [Indexers](#indexers) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations) &#x2022; [Structs](#structs)
 
 **Namespace**: [Roslynator.Text](../README.md#_top)
 
@@ -36,13 +36,18 @@ public class TextLineCollectionSelection : Roslynator.ISelection<Microsoft.CodeA
 | ----------- | ------- |
 | [TextLineCollectionSelection(TextLineCollection, TextSpan, Int32, Int32)](-ctor/README.md#_top) | |
 
+## Indexers
+
+| Indexer | Summary |
+| ------- | ------- |
+| [Item\[Int32\]](Item/README.md#_top) | Gets the selected line at the specified index\. \(Implements [IReadOnlyList\<TextLine>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
+
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
 | [Count](Count/README.md#_top) | Gets a number of selected lines\. \(Implements [IReadOnlyCollection\<TextLine>.Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1.count)\) |
 | [FirstIndex](FirstIndex/README.md#_top) | Gets an index of the first selected line\. \(Implements [ISelection\<TextLine>.FirstIndex](../../ISelection-1/FirstIndex/README.md#_top)\) |
-| [Item\[Int32\]](Item/README.md#_top) | Gets the selected line at the specified index\. \(Implements [IReadOnlyList\<TextLine>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
 | [LastIndex](LastIndex/README.md#_top) | Gets an index of the last selected line\. \(Implements [ISelection\<TextLine>.LastIndex](../../ISelection-1/LastIndex/README.md#_top)\) |
 | [OriginalSpan](OriginalSpan/README.md#_top) | Gets the original span that was used to determine selected lines\. |
 | [UnderlyingLines](UnderlyingLines/README.md#_top) | Gets an underlying collection that contains selected lines\. |

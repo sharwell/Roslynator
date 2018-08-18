@@ -20,7 +20,7 @@ namespace Roslynator.Documentation.Test
         /// <summary>
         /// xt
         /// </summary>
-        /// <typeparam name="T"T></typeparam>
+        /// <typeparam name="T"></typeparam>
         /// <param name="foo">f</param>
         internal static void ExtensionMethod<T>(this T foo) where T : Foo
         {

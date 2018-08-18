@@ -56,30 +56,32 @@ namespace Roslynator.Documentation
                     return 16;
                 case TypeDocumentationParts.Fields:
                     return 17;
-                case TypeDocumentationParts.Properties:
+                case TypeDocumentationParts.Indexers:
                     return 18;
-                case TypeDocumentationParts.Methods:
+                case TypeDocumentationParts.Properties:
                     return 19;
-                case TypeDocumentationParts.Operators:
+                case TypeDocumentationParts.Methods:
                     return 20;
-                case TypeDocumentationParts.Events:
+                case TypeDocumentationParts.Operators:
                     return 21;
-                case TypeDocumentationParts.ExplicitInterfaceImplementations:
+                case TypeDocumentationParts.Events:
                     return 22;
-                case TypeDocumentationParts.ExtensionMethods:
+                case TypeDocumentationParts.ExplicitInterfaceImplementations:
                     return 23;
-                case TypeDocumentationParts.Classes:
+                case TypeDocumentationParts.ExtensionMethods:
                     return 24;
-                case TypeDocumentationParts.Structs:
+                case TypeDocumentationParts.Classes:
                     return 25;
-                case TypeDocumentationParts.Interfaces:
+                case TypeDocumentationParts.Structs:
                     return 26;
-                case TypeDocumentationParts.Enums:
+                case TypeDocumentationParts.Interfaces:
                     return 27;
-                case TypeDocumentationParts.Delegates:
+                case TypeDocumentationParts.Enums:
                     return 28;
-                case TypeDocumentationParts.SeeAlso:
+                case TypeDocumentationParts.Delegates:
                     return 29;
+                case TypeDocumentationParts.SeeAlso:
+                    return 30;
             }
 
             Debug.Fail(part.ToString());

@@ -2,7 +2,7 @@
 
 # UsingDirectiveListInfo Struct
 
-[Home](../../../../README.md#_top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+[Home](../../../../README.md#_top) &#x2022; [Indexers](#indexers) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
 **Namespace**: [Roslynator.CSharp.Syntax](../README.md#_top)
 
@@ -30,12 +30,17 @@ public readonly struct UsingDirectiveListInfo : System.IEquatable<UsingDirective
 * System\.Collections\.Generic\.[IReadOnlyCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)\<[UsingDirectiveSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.usingdirectivesyntax)>
 * System\.Collections\.Generic\.[IReadOnlyList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)\<[UsingDirectiveSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.usingdirectivesyntax)>
 
+## Indexers
+
+| Indexer | Summary |
+| ------- | ------- |
+| [Item\[Int32\]](Item/README.md#_top) | Gets the using directive at the specified index in the list\. \(Implements [IReadOnlyList\<UsingDirectiveSyntax>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
+
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
 | [Count](Count/README.md#_top) | A number of usings in the list\. \(Implements [IReadOnlyCollection\<UsingDirectiveSyntax>.Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1.count)\) |
-| [Item\[Int32\]](Item/README.md#_top) | Gets the using directive at the specified index in the list\. \(Implements [IReadOnlyList\<UsingDirectiveSyntax>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
 | [Parent](Parent/README.md#_top) | The declaration that contains the usings\. |
 | [Success](Success/README.md#_top) | Determines whether this struct was initialized with an actual syntax\. |
 | [Usings](Usings/README.md#_top) | A list of usings\. |

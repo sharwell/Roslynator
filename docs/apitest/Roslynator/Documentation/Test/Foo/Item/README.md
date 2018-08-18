@@ -1,6 +1,6 @@
 <a name="_top"></a>
 
-# Foo\.Item Property
+# Foo\.Item Indexer
 
 [Home](../../../../../README.md#_top)
 
@@ -10,8 +10,8 @@
 
 ## Overloads
 
-| Property | Summary |
-| -------- | ------- |
+| Indexer | Summary |
+| ------- | ------- |
 | [Item\[Int32, Int32\]](#Roslynator_Documentation_Test_Foo_Item_System_Int32_System_Int32_) | s |
 | [Item\[Int32\]](#Roslynator_Documentation_Test_Foo_Item_System_Int32_) | s |
 

@@ -102,14 +102,38 @@ namespace Roslynator.Documentation
             }
         }
 
-        public IEnumerable<IPropertySymbol> GetProperties(bool includeInherited = false)
+        public IEnumerable<IPropertySymbol> GetIndexers(bool includeInherited = false)
         {
             if (!TypeKind.Is(TypeKind.Delegate, TypeKind.Enum))
             {
                 foreach (ISymbol member in (GetMembers(includeInherited)))
                 {
                     if (member.Kind == SymbolKind.Property)
-                        yield return (IPropertySymbol)member;
+                    {
+                        var propertySymbol = (IPropertySymbol)member;
+
+                        if (propertySymbol.IsIndexer)
+                            yield return propertySymbol;
+                    }
+                }
+            }
+        }
+
+        public IEnumerable<IPropertySymbol> GetProperties(bool includeInherited = false, bool includeIndexers = false)
+        {
+            if (!TypeKind.Is(TypeKind.Delegate, TypeKind.Enum))
+            {
+                foreach (ISymbol member in (GetMembers(includeInherited)))
+                {
+                    if (member.Kind == SymbolKind.Property)
+                    {
+                        var propertySymbol = (IPropertySymbol)member;
+
+                        if (includeIndexers || !propertySymbol.IsIndexer)
+                        {
+                            yield return propertySymbol;
+                        }
+                    }
                 }
             }
         }
@@ -277,6 +301,12 @@ namespace Roslynator.Documentation
             if (IsEnabled(TypeDocumentationParts.Fields))
             {
                 foreach (MemberDocumentationModel model in GetMembers(GetFields()))
+                    yield return model;
+            }
+
+            if (IsEnabled(TypeDocumentationParts.Indexers))
+            {
+                foreach (MemberDocumentationModel model in GetMembers(GetIndexers()))
                     yield return model;
             }
 

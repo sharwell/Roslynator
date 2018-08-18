@@ -2,7 +2,7 @@
 
 # MemberDeclarationListInfo Struct
 
-[Home](../../../../README.md#_top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
+[Home](../../../../README.md#_top) &#x2022; [Indexers](#indexers) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Operators](#operators) &#x2022; [Explicit Interface Implementations](#explicit-interface-implementations)
 
 **Namespace**: [Roslynator.CSharp.Syntax](../README.md#_top)
 
@@ -30,12 +30,17 @@ public readonly struct MemberDeclarationListInfo : System.IEquatable<MemberDecla
 * System\.Collections\.Generic\.[IReadOnlyCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)\<[MemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberdeclarationsyntax)>
 * System\.Collections\.Generic\.[IReadOnlyList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)\<[MemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberdeclarationsyntax)>
 
+## Indexers
+
+| Indexer | Summary |
+| ------- | ------- |
+| [Item\[Int32\]](Item/README.md#_top) | Gets the member at the specified index in the list\. \(Implements [IReadOnlyList\<MemberDeclarationSyntax>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
+
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
 | [Count](Count/README.md#_top) | A number of members in the list\. \(Implements [IReadOnlyCollection\<MemberDeclarationSyntax>.Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1.count)\) |
-| [Item\[Int32\]](Item/README.md#_top) | Gets the member at the specified index in the list\. \(Implements [IReadOnlyList\<MemberDeclarationSyntax>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
 | [Members](Members/README.md#_top) | A list of members\. |
 | [Parent](Parent/README.md#_top) | The declaration that contains the members\. |
 | [Success](Success/README.md#_top) | Determines whether this struct was initialized with an actual syntax\. |

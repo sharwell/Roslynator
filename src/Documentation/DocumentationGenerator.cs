@@ -609,6 +609,11 @@ namespace Roslynator.Documentation
 
                                 break;
                             }
+                        case TypeDocumentationParts.Indexers:
+                            {
+                                writer.WriteIndexers(typeModel.GetIndexers(includeInherited: includeInherited), containingType: typeSymbol);
+                                break;
+                            }
                         case TypeDocumentationParts.Properties:
                             {
                                 writer.WriteProperties(typeModel.GetProperties(includeInherited: includeInherited), containingType: typeSymbol);
@@ -770,6 +775,10 @@ namespace Roslynator.Documentation
                             {
                                 return typeModel.GetFields(includeInherited: true).Any();
                             }
+                        }
+                    case TypeDocumentationParts.Indexers:
+                        {
+                            return typeModel.GetIndexers(includeInherited: includeInherited).Any();
                         }
                     case TypeDocumentationParts.Properties:
                         {

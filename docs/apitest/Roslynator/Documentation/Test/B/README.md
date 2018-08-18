@@ -2,7 +2,7 @@
 
 # B Class
 
-[Home](../../../../README.md#_top) &#x2022; [Constructors](#constructors) &#x2022; [Fields](#fields) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Events](#events)
+[Home](../../../../README.md#_top) &#x2022; [Constructors](#constructors) &#x2022; [Fields](#fields) &#x2022; [Indexers](#indexers) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods) &#x2022; [Events](#events)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md#_top)
 
@@ -32,11 +32,16 @@ public class B
 | ----- | ------- |
 | [Field](Field/README.md#_top) | |
 
+## Indexers
+
+| Indexer | Summary |
+| ------- | ------- |
+| [Item\[Int32\]](Item/README.md#_top) | |
+
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
-| [Item\[Int32\]](Item/README.md#_top) | |
 | [Property](Property/README.md#_top) | |
 
 ## Methods

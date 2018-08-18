@@ -1,6 +1,6 @@
 <a name="_top"></a>
 
-# C\.Item\[Int32\] Property
+# C\.Item\[Int32\] Indexer
 
 [Home](../../../../../README.md#_top)
 

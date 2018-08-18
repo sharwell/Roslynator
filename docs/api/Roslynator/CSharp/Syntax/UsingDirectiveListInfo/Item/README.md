@@ -1,6 +1,6 @@
 <a name="_top"></a>
 
-# UsingDirectiveListInfo\.Item\[Int32\] Property
+# UsingDirectiveListInfo\.Item\[Int32\] Indexer
 
 [Home](../../../../../README.md#_top)
 

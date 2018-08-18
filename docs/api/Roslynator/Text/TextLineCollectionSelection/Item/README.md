@@ -1,6 +1,6 @@
 <a name="_top"></a>
 
-# TextLineCollectionSelection\.Item\[Int32\] Property
+# TextLineCollectionSelection\.Item\[Int32\] Indexer
 
 [Home](../../../../README.md#_top)
 

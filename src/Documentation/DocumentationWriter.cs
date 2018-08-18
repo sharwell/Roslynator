@@ -791,6 +791,11 @@ namespace Roslynator.Documentation
             WriteTable(fields, Resources.FieldsTitle, 2, Resources.FieldTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, containingType: containingType);
         }
 
+        public virtual void WriteIndexers(IEnumerable<IPropertySymbol> indexers, INamedTypeSymbol containingType)
+        {
+            WriteTable(indexers, Resources.IndexersTitle, 2, Resources.IndexerTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, containingType: containingType);
+        }
+
         public virtual void WriteProperties(IEnumerable<IPropertySymbol> properties, INamedTypeSymbol containingType)
         {
             WriteTable(properties, Resources.PropertiesTitle, 2, Resources.PropertyTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, containingType: containingType);
@@ -1530,7 +1535,7 @@ namespace Roslynator.Documentation
                                 }
                                 else
                                 {
-                                    return model.GetProperties().Where(f => f.IsIndexer);
+                                    return model.GetIndexers();
                                 }
                             }
 

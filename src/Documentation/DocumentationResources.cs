@@ -54,6 +54,8 @@ namespace Roslynator.Documentation
         public abstract string FieldValueTitle { get; }
         public abstract string HomeTitle { get; }
         public abstract string ImplementsTitle { get; }
+        public abstract string IndexerTitle { get; }
+        public abstract string IndexersTitle { get; }
         public abstract string InheritanceTitle { get; }
         public abstract string InheritedFrom { get; }
         public abstract string InterfaceTitle { get; }
@@ -117,7 +119,9 @@ namespace Roslynator.Documentation
                 case SymbolKind.Namespace:
                     return NamespaceTitle;
                 case SymbolKind.Property:
-                    return PropertyTitle;
+                    {
+                        return (((IPropertySymbol)symbol).IsIndexer) ? IndexerTitle : PropertyTitle;
+                    }
                 case SymbolKind.NamedType:
                     return GetName(((ITypeSymbol)symbol).TypeKind);
             }
@@ -237,6 +241,8 @@ namespace Roslynator.Documentation
                     return ConstructorsTitle;
                 case TypeDocumentationParts.Fields:
                     return FieldsTitle;
+                case TypeDocumentationParts.Indexers:
+                    return IndexersTitle;
                 case TypeDocumentationParts.Properties:
                     return PropertiesTitle;
                 case TypeDocumentationParts.Methods:
@@ -323,6 +329,8 @@ namespace Roslynator.Documentation
             public override string FieldValueTitle { get; } = "Field Value";
             public override string HomeTitle { get; } = "Home";
             public override string ImplementsTitle { get; } = "Implements";
+            public override string IndexerTitle { get; } = "Indexer";
+            public override string IndexersTitle { get; } = "Indexers";
             public override string InheritanceTitle { get; } = "Inheritance";
             public override string InheritedFrom { get; } = "Inherited from";
             public override string InterfaceTitle { get; } = "Interface";

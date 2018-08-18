@@ -1,6 +1,6 @@
 <a name="_top"></a>
 
-# SyntaxListSelection\<TNode>\.Item\[Int32\] Property
+# SyntaxListSelection\<TNode>\.Item\[Int32\] Indexer
 
 [Home](../../../README.md#_top)
 

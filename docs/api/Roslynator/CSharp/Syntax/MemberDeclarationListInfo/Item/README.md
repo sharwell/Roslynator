@@ -1,6 +1,6 @@
 <a name="_top"></a>
 
-# MemberDeclarationListInfo\.Item\[Int32\] Property
+# MemberDeclarationListInfo\.Item\[Int32\] Indexer
 
 [Home](../../../../../README.md#_top)
 

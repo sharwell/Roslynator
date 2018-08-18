@@ -2,7 +2,7 @@
 
 # MemberDeclarationListSelection Class
 
-[Home](../../../README.md#_top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
+[Home](../../../README.md#_top) &#x2022; [Indexers](#indexers) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
 
 **Namespace**: [Roslynator.CSharp](../README.md#_top)
 
@@ -27,13 +27,18 @@ public sealed class MemberDeclarationListSelection : Roslynator.SyntaxListSelect
 * System\.Collections\.Generic\.[IReadOnlyList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)\<[MemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberdeclarationsyntax)>
 * Roslynator\.[ISelection](../../ISelection-1/README.md#_top)\<[MemberDeclarationSyntax](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberdeclarationsyntax)>
 
+## Indexers
+
+| Indexer | Summary |
+| ------- | ------- |
+| [Item\[Int32\]](../../SyntaxListSelection-1/Item/README.md#_top) | Gets the selected node at the specified index\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md#_top)\) |
+
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
 | [Count](../../SyntaxListSelection-1/Count/README.md#_top) | Gets a number of selected nodes\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md#_top)\) |
 | [FirstIndex](../../SyntaxListSelection-1/FirstIndex/README.md#_top) | Gets an index of the first selected node\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md#_top)\) |
-| [Item\[Int32\]](../../SyntaxListSelection-1/Item/README.md#_top) | Gets the selected node at the specified index\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md#_top)\) |
 | [LastIndex](../../SyntaxListSelection-1/LastIndex/README.md#_top) | Gets an index of the last selected node\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md#_top)\) |
 | [OriginalSpan](../../SyntaxListSelection-1/OriginalSpan/README.md#_top) | Gets the original span that was used to determine selected nodes\. \(Inherited from [SyntaxListSelection\<TNode>](../../SyntaxListSelection-1/README.md#_top)\) |
 | [Parent](Parent/README.md#_top) | Gets a node that contains selected members\. |

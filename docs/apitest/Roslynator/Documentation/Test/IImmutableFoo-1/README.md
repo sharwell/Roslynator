@@ -2,7 +2,7 @@
 
 # IImmutableFoo\<T> Interface
 
-[Home](../../../../README.md#_top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
+[Home](../../../../README.md#_top) &#x2022; [Indexers](#indexers) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
 
 **Namespace**: [Roslynator.Documentation.Test](../README.md#_top)
 
@@ -40,6 +40,12 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 * System\.Collections\.Generic\.[IReadOnlyList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)
 * System\.Collections\.Immutable\.[IImmutableList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.immutable.iimmutablelist-1)
 
+## Indexers
+
+| Indexer | Summary |
+| ------- | ------- |
+| [Item\[Int32\]](Item/README.md#_top) | |
+
 ## Properties
 
 | Property | Summary |
@@ -48,7 +54,6 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 | [IsFixedSize](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.isfixedsize) |  \(Inherited from [IList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)\) |
 | [IsReadOnly](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.isreadonly) |  \(Inherited from [ICollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1)\) |
 | [IsSynchronized](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.issynchronized) |  \(Inherited from [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)\) |
-| [Item\[Int32\]](Item/README.md#_top) | |
 | [SyncRoot](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection.syncroot) |  \(Inherited from [ICollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection)\) |
 
 ## Methods

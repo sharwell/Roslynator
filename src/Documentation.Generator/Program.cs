@@ -44,7 +44,7 @@ namespace Roslynator.Documentation
 
             string defintionList = DefinitionListGenerator.GenerateAsync(documentationModel).Result;
 
-            FileHelper.WriteAllText(directoryPath + "_api.cs", defintionList, Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
+            FileHelper.WriteAllText(directoryPath + "api.cs", defintionList, Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
 
             foreach (DocumentationGeneratorResult result in generator.Generate(heading))
             {
