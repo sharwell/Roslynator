@@ -42,6 +42,9 @@ namespace Roslynator.Documentation
         [Option(longName: "base-local-url")]
         public string BaseLocalUrl { get; set; }
 
+        [Option(longName: "class-hierarchy", Default = DefaultValues.ClassHierarchy)]
+        public bool ClassHierarchy { get; set; }
+
         [Option(longName: "system-namespace-first", Default = DefaultValues.SystemNamespaceFirst)]
         public bool SystemNamespaceFirst { get; set; }
 

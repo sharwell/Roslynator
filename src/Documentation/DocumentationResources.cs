@@ -17,6 +17,7 @@ namespace Roslynator.Documentation
         public virtual string Comma { get; } = ",";
         public virtual string Dot { get; } = ".";
         public virtual string OpenParenthesis { get; } = "(";
+        public virtual string EqualsSign { get; } = "=";
 
         public virtual string DllExtension { get; } = "dll";
         public virtual string Ellipsis { get; } = "...";

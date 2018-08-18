@@ -885,49 +885,60 @@ namespace Roslynator.Documentation
                         }
                     case RootDocumentationParts.Classes:
                         {
-                            if (typeSymbols.Any(f => !f.IsStatic && f.TypeKind == TypeKind.Class))
+                            if (Options.ClassHierarchy)
                             {
-                                INamedTypeSymbol objectType = DocumentationModel.Compilation.ObjectType;
-
-                                IEnumerable<INamedTypeSymbol> instanceClasses = typeSymbols.Where(f => !f.IsStatic && f.TypeKind == TypeKind.Class);
-
-                                var nodes = new HashSet<ITypeSymbol>(instanceClasses) { objectType };
-
-                                foreach (INamedTypeSymbol type in instanceClasses)
+                                if (typeSymbols.Any(f => !f.IsStatic && f.TypeKind == TypeKind.Class))
                                 {
-                                    INamedTypeSymbol baseType = type.BaseType;
+                                    INamedTypeSymbol objectType = DocumentationModel.Compilation.ObjectType;
 
-                                    while (baseType != null)
+                                    IEnumerable<INamedTypeSymbol> instanceClasses = typeSymbols.Where(f => !f.IsStatic && f.TypeKind == TypeKind.Class);
+
+                                    var nodes = new HashSet<ITypeSymbol>(instanceClasses) { objectType };
+
+                                    foreach (INamedTypeSymbol type in instanceClasses)
                                     {
-                                        nodes.Add(baseType.OriginalDefinition);
-                                        baseType = baseType.BaseType;
-                                    }
-                                }
+                                        INamedTypeSymbol baseType = type.BaseType;
 
-                                writer.WriteHeading2(Resources.GetPluralName(TypeKind.Class));
-                                WriteTypeHierarchy(objectType, nodes, level: 0);
-                                writer.WriteLine();
+                                        while (baseType != null)
+                                        {
+                                            nodes.Add(baseType.OriginalDefinition);
+                                            baseType = baseType.BaseType;
+                                        }
+                                    }
+
+                                    writer.WriteHeading2(Resources.GetPluralName(TypeKind.Class));
+                                    WriteTypeHierarchy(objectType, nodes, level: 0);
+                                    writer.WriteLine();
+                                }
+                            }
+                            else
+                            {
+                                writer.WriteList(typeSymbols.Where(f => f.TypeKind == TypeKind.Class), Resources.ClassesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypes, addNamespace: true);
+                                break;
                             }
 
                             break;
                         }
                     case RootDocumentationParts.StaticClasses:
                         {
-                            using (IEnumerator<INamedTypeSymbol> en = typeSymbols
-                                .Where(f => f.IsStatic && f.TypeKind == TypeKind.Class)
-                                .OrderBy(f => f.ContainingNamespace, NamespaceSymbolComparer.GetInstance(Options.SystemNamespaceFirst))
-                                .ThenBy(f => f.ToDisplayString(format))
-                                .GetEnumerator())
+                            if (Options.ClassHierarchy)
                             {
-                                if (en.MoveNext())
+                                using (IEnumerator<INamedTypeSymbol> en = typeSymbols
+                                    .Where(f => f.IsStatic && f.TypeKind == TypeKind.Class)
+                                    .OrderBy(f => f.ContainingNamespace, NamespaceSymbolComparer.GetInstance(Options.SystemNamespaceFirst))
+                                    .ThenBy(f => f.ToDisplayString(format))
+                                    .GetEnumerator())
                                 {
-                                    writer.WriteHeading2(Resources.StaticClassesTitle);
-
-                                    do
+                                    if (en.MoveNext())
                                     {
-                                        WriteBulletItemLink(en.Current);
+                                        writer.WriteHeading2(Resources.StaticClassesTitle);
+
+                                        do
+                                        {
+                                            WriteBulletItemLink(en.Current);
+                                        }
+                                        while (en.MoveNext());
                                     }
-                                    while (en.MoveNext());
                                 }
                             }
 

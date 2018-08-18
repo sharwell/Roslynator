@@ -1038,7 +1038,9 @@ namespace Roslynator.Documentation
             {
                 WriteSpace();
                 WriteString(Resources.OpenParenthesis);
-                WriteString(" = ");
+                WriteSpace();
+                WriteString(Resources.EqualsSign);
+                WriteSpace();
 
                 if (fieldSymbol.Type.TypeKind == TypeKind.Enum)
                 {

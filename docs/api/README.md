@@ -13,37 +13,33 @@
 
 ## Classes
 
-*  System\.Object
-* &emsp; Roslynator\.[NameGenerator](Roslynator/NameGenerator/README.md#_top)
-* &emsp; Roslynator\.[SeparatedSyntaxListSelection\<TNode>](Roslynator/SeparatedSyntaxListSelection-1/README.md#_top)
-* &emsp; Roslynator\.[SyntaxListSelection\<TNode>](Roslynator/SyntaxListSelection-1/README.md#_top)
-* &emsp; \| &emsp; Roslynator\.CSharp\.[MemberDeclarationListSelection](Roslynator/CSharp/MemberDeclarationListSelection/README.md#_top)
-* &emsp; \| &emsp; Roslynator\.CSharp\.[StatementListSelection](Roslynator/CSharp/StatementListSelection/README.md#_top)
-* &emsp; Roslynator\.CSharp\.[ModifierList\<TNode>](Roslynator/CSharp/ModifierList-1/README.md#_top)
-* &emsp; Roslynator\.Text\.[TextLineCollectionSelection](Roslynator/Text/TextLineCollectionSelection/README.md#_top)
-
-## Static Classes
-
 * Roslynator\.[DiagnosticsExtensions](Roslynator/DiagnosticsExtensions/README.md#_top)
 * Roslynator\.[EnumExtensions](Roslynator/EnumExtensions/README.md#_top)
 * Roslynator\.[FileLinePositionSpanExtensions](Roslynator/FileLinePositionSpanExtensions/README.md#_top)
+* Roslynator\.[NameGenerator](Roslynator/NameGenerator/README.md#_top)
 * Roslynator\.[SemanticModelExtensions](Roslynator/SemanticModelExtensions/README.md#_top)
+* Roslynator\.[SeparatedSyntaxListSelection](Roslynator/SeparatedSyntaxListSelection-1/README.md#_top)
 * Roslynator\.[SymbolExtensions](Roslynator/SymbolExtensions/README.md#_top)
 * Roslynator\.[SyntaxExtensions](Roslynator/SyntaxExtensions/README.md#_top)
+* Roslynator\.[SyntaxListSelection](Roslynator/SyntaxListSelection-1/README.md#_top)
 * Roslynator\.[SyntaxTreeExtensions](Roslynator/SyntaxTreeExtensions/README.md#_top)
 * Roslynator\.[WorkspaceExtensions](Roslynator/WorkspaceExtensions/README.md#_top)
 * Roslynator\.CSharp\.[CSharpExtensions](Roslynator/CSharp/CSharpExtensions/README.md#_top)
 * Roslynator\.CSharp\.[CSharpFactory](Roslynator/CSharp/CSharpFactory/README.md#_top)
 * Roslynator\.CSharp\.[CSharpFacts](Roslynator/CSharp/CSharpFacts/README.md#_top)
 * Roslynator\.CSharp\.[EnumExtensions](Roslynator/CSharp/EnumExtensions/README.md#_top)
+* Roslynator\.CSharp\.[MemberDeclarationListSelection](Roslynator/CSharp/MemberDeclarationListSelection/README.md#_top)
 * Roslynator\.CSharp\.[ModifierList](Roslynator/CSharp/ModifierList/README.md#_top)
+* Roslynator\.CSharp\.[ModifierList](Roslynator/CSharp/ModifierList-1/README.md#_top)
 * Roslynator\.CSharp\.[Modifiers](Roslynator/CSharp/Modifiers/README.md#_top)
+* Roslynator\.CSharp\.[StatementListSelection](Roslynator/CSharp/StatementListSelection/README.md#_top)
 * Roslynator\.CSharp\.[SymbolExtensions](Roslynator/CSharp/SymbolExtensions/README.md#_top)
 * Roslynator\.CSharp\.[SyntaxAccessibility](Roslynator/CSharp/SyntaxAccessibility/README.md#_top)
 * Roslynator\.CSharp\.[SyntaxExtensions](Roslynator/CSharp/SyntaxExtensions/README.md#_top)
 * Roslynator\.CSharp\.[SyntaxInfo](Roslynator/CSharp/SyntaxInfo/README.md#_top)
 * Roslynator\.CSharp\.[WorkspaceExtensions](Roslynator/CSharp/WorkspaceExtensions/README.md#_top)
 * Roslynator\.CSharp\.[WorkspaceSyntaxExtensions](Roslynator/CSharp/WorkspaceSyntaxExtensions/README.md#_top)
+* Roslynator\.Text\.[TextLineCollectionSelection](Roslynator/Text/TextLineCollectionSelection/README.md#_top)
 
 ## Structs
 

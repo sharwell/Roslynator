@@ -9,6 +9,7 @@ namespace Roslynator.Documentation
             string preferredCultureName = null,
             string baseLocalUrl = null,
             int maxDerivedItems = DefaultValues.MaxDerivedItems,
+            bool classHierarchy = DefaultValues.ClassHierarchy,
             bool systemNamespaceFirst = DefaultValues.SystemNamespaceFirst,
             bool formatDefinitionBaseList = DefaultValues.FormatDefinitionBaseList,
             bool formatDefinitionConstraints = DefaultValues.FormatDefinitionConstraints,
@@ -31,6 +32,7 @@ namespace Roslynator.Documentation
             PreferredCultureName = preferredCultureName;
             BaseLocalUrl = baseLocalUrl;
             MaxDerivedItems = maxDerivedItems;
+            ClassHierarchy = classHierarchy;
             SystemNamespaceFirst = systemNamespaceFirst;
             FormatDefinitionBaseList = formatDefinitionBaseList;
             FormatDefinitionConstraints = formatDefinitionConstraints;
@@ -55,6 +57,8 @@ namespace Roslynator.Documentation
         public string BaseLocalUrl { get; }
 
         public int MaxDerivedItems { get; }
+
+        public bool ClassHierarchy { get; }
 
         public bool SystemNamespaceFirst { get; }
 
@@ -109,6 +113,7 @@ namespace Roslynator.Documentation
         internal static class DefaultValues
         {
             public const int MaxDerivedItems = 10;
+            public const bool ClassHierarchy = true;
             public const bool SystemNamespaceFirst = true;
             public const bool FormatDefinitionBaseList = true;
             public const bool FormatDefinitionConstraints = true;
