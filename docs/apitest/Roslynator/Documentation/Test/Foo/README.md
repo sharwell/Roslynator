@@ -70,6 +70,7 @@ paratext
 | Field | Summary |
 | ----- | ------- |
 | [Field](Field/README.md#_top) | f |
+| [FooConst](FooConst/README.md#_top) |  \( = "abc"\) |
 
 ## Properties
 

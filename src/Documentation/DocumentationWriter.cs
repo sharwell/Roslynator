@@ -8,6 +8,7 @@ using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Roslynator.CSharp;
 
 namespace Roslynator.Documentation
@@ -966,6 +967,14 @@ namespace Roslynator.Documentation
                             {
                                 WriteImplements(symbol);
                             }
+
+                            if (symbol.Kind == SymbolKind.Field)
+                            {
+                                var fieldSymbol = (IFieldSymbol)symbol;
+
+                                if (fieldSymbol.HasConstantValue)
+                                    WriteConstantValue(fieldSymbol);
+                            }
                         }
 
                         WriteEndTableCell();
@@ -1023,6 +1032,45 @@ namespace Roslynator.Documentation
                         WriteString(Resources.CloseParenthesis);
                     }
                 }
+            }
+
+            void WriteConstantValue(IFieldSymbol fieldSymbol)
+            {
+                WriteSpace();
+                WriteString(Resources.OpenParenthesis);
+                WriteString(" = ");
+
+                if (fieldSymbol.Type.TypeKind == TypeKind.Enum)
+                {
+                    OneOrMany<EnumFieldInfo>.Enumerator en = EnumUtility.GetConstituentFields(fieldSymbol.ConstantValue, (INamedTypeSymbol)fieldSymbol.Type).GetEnumerator();
+
+                    if (en.MoveNext())
+                    {
+                        while (true)
+                        {
+                            WriteSymbol(en.Current.Symbol, SymbolDisplayFormats.TypeName);
+
+                            if (en.MoveNext())
+                            {
+                                WriteString(" | ");
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        WriteString(fieldSymbol.ConstantValue.ToString());
+                    }
+                }
+                else
+                {
+                    WriteString(SymbolDisplay.FormatPrimitive(fieldSymbol.ConstantValue, quoteStrings: true, useHexadecimalNumbers: false));
+                }
+
+                WriteString(Resources.CloseParenthesis);
             }
         }
 

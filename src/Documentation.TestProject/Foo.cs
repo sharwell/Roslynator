@@ -66,6 +66,8 @@ namespace Roslynator.Documentation.Test
         /// </summary>
         public readonly string Field = "";
 
+        public const string FooConst = "abc";
+
         /// <summary>
         /// aaa
         /// </summary>

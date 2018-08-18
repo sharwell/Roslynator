@@ -122,6 +122,9 @@ namespace Roslynator.Documentation
             delegateStyle: SymbolDisplayDelegateStyle.NameAndParameters,
             parameterOptions: SymbolDisplayParameterOptions.IncludeType);
 
+        public static SymbolDisplayFormat MemberConstantValue { get; } = Default.Update(
+            memberOptions: SymbolDisplayMemberOptions.IncludeConstantValue);
+
         public static SymbolDisplayFormat OverloadedMemberTitle { get; } = Default.Update(
             genericsOptions: SymbolDisplayGenericsOptions.None,
             memberOptions: SymbolDisplayMemberOptions.IncludeExplicitInterface

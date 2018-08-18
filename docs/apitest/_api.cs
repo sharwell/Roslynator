@@ -49,6 +49,8 @@ namespace Roslynator.Documentation.Test
     [Obsolete("Foo is obsolete.")]
     public class Foo : Bla
     {
+        public const string FooConst = "abc";
+
         public readonly string Field;
 
         public Foo(string s);
