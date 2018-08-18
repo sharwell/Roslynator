@@ -77,6 +77,7 @@ namespace Roslynator.Documentation
         public abstract string RemarksTitle { get; }
         public abstract string ReturnsTitle { get; }
         public abstract string ReturnValueTitle { get; }
+        public abstract string SeeAllDerivedTypes { get; }
         public abstract string SeeAlsoTitle { get; }
         public abstract string StaticClassesTitle { get; }
         public abstract string StructTitle { get; }
@@ -345,6 +346,7 @@ namespace Roslynator.Documentation
             public override string RemarksTitle { get; } = "Remarks";
             public override string ReturnsTitle { get; } = "Returns";
             public override string ReturnValueTitle { get; } = "Return Value";
+            public override string SeeAllDerivedTypes { get; } = "See all derived types";
             public override string SeeAlsoTitle { get; } = "See Also";
             public override string StaticClassesTitle { get; } = "Static Classes";
             public override string StructTitle { get; } = "Struct";

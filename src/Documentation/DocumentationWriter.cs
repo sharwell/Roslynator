@@ -223,7 +223,7 @@ namespace Roslynator.Documentation
 
         public abstract void WriteLine();
 
-        //TODO: rename WriteLinkDefinition
+        //TODO: rename WriteLinkDestination
         public abstract void WriteLinkDestination(string name);
 
         public virtual void WriteValue(bool value)
@@ -620,6 +620,7 @@ namespace Roslynator.Documentation
                 format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                 maxItems: Options.MaxDerivedItems,
                 allItemsHeading: Resources.AllDerivedTypesTitle,
+                allItemsLinkTitle: Resources.SeeAllDerivedTypes,
                 addNamespace: true);
         }
 
@@ -1043,6 +1044,7 @@ namespace Roslynator.Documentation
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             int maxItems = -1,
             string allItemsHeading = null,
+            string allItemsLinkTitle = null,
             bool addLink = true,
             bool addLinkForTypeParameters = false,
             bool addNamespace = false,
@@ -1107,7 +1109,7 @@ namespace Roslynator.Documentation
                                 if (!string.IsNullOrEmpty(allItemsHeading))
                                 {
                                     WriteStartBulletItem();
-                                    WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle));
+                                    WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle), title: allItemsLinkTitle);
                                     WriteEndBulletItem();
                                 }
                                 else
