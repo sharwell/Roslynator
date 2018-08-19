@@ -990,7 +990,6 @@ namespace Roslynator.Documentation
                         WriteLine();
                         WriteEntityRef("emsp");
                         WriteLine();
-                        WriteLine();
 
                         //WriteBulletItem("- - -");
                     }
