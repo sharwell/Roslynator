@@ -32,6 +32,7 @@ namespace Roslynator.Documentation
         public abstract string CombinationOfTitle { get; }
         public abstract string ConstructorTitle { get; }
         public abstract string ConstructorsTitle { get; }
+        public abstract string ContainingNamespaceTitle { get; }
         public abstract string ContainingTypeTitle { get; }
         public abstract string DelegateTitle { get; }
         public abstract string DelegatesTitle { get; }
@@ -307,6 +308,7 @@ namespace Roslynator.Documentation
             public override string CombinationOfTitle { get; } = "Combination of";
             public override string ConstructorTitle { get; } = "Constructor";
             public override string ConstructorsTitle { get; } = "Constructors";
+            public override string ContainingNamespaceTitle { get; } = "Containing Namespace";
             public override string ContainingTypeTitle { get; } = "Containing Type";
             public override string DelegateTitle { get; } = "Delegate";
             public override string DelegatesTitle { get; } = "Delegates";

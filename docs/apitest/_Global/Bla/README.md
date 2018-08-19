@@ -4,7 +4,7 @@
 
 [Home](../../README.md#_top) &#x2022; [Constructors](#constructors) &#x2022; [Methods](#methods)
 
-**Namespace**: [\<global namespace>](../README.md#_top)
+**Namespace**: \<global namespace>
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

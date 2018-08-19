@@ -4,6 +4,7 @@ using System;
 
 namespace Roslynator.Documentation
 {
+    //TODO: IndicateConstantValue
     public class DocumentationOptions
     {
         public DocumentationOptions(

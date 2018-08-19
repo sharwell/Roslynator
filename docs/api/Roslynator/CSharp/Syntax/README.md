@@ -4,6 +4,8 @@
 
 [Home](../../../README.md#_top) &#x2022; [Structs](#structs)
 
+**Containing Namespace**: [Roslynator.CSharp](../README.md#_top)
+
 ## Structs
 
 | Struct | Summary |

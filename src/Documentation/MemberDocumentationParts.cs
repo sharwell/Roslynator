@@ -10,8 +10,8 @@ namespace Roslynator.Documentation
     {
         None = 0,
         Overloads = 1,
-        Namespace = 2,
-        Assembly = 4,
+        ContainingType = 2,
+        ContainingAssembly = 4,
         Obsolete = 8,
         Summary = 16,
         Definition = 32,
@@ -24,5 +24,5 @@ namespace Roslynator.Documentation
         Examples = 4096,
         Remarks = 8192,
         SeeAlso = 16384,
-        All = Overloads | Namespace | Assembly | Obsolete | Summary | Definition | TypeParameters | Parameters | ReturnValue | Implements | Attributes | Exceptions | Examples | Remarks | SeeAlso    }
+        All = Overloads | ContainingType | ContainingAssembly | Obsolete | Summary | Definition | TypeParameters | Parameters | ReturnValue | Implements | Attributes | Exceptions | Examples | Remarks | SeeAlso    }
 }

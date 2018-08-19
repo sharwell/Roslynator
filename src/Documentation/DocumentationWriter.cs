@@ -329,12 +329,21 @@ namespace Roslynator.Documentation
             WriteSpace();
         }
 
-        public virtual void WriteContainingNamespace(ISymbol symbol)
+        public virtual void WriteContainingNamespace(INamespaceSymbol namespaceSymbol, string title)
         {
-            WriteBold(Resources.NamespaceTitle);
+            WriteBold(title);
             WriteString(Resources.Colon);
             WriteSpace();
-            WriteLink(symbol.ContainingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+
+            if (namespaceSymbol.IsGlobalNamespace)
+            {
+                WriteSymbol(namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+            }
+            else
+            {
+                WriteLink(namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+            }
+
             WriteLine();
             WriteLine();
         }
@@ -622,17 +631,21 @@ namespace Roslynator.Documentation
             WriteLine();
         }
 
-        public virtual void WriteDerivedTypes(IEnumerable<INamedTypeSymbol> derivedTypes)
+        public virtual void WriteDerivedTypes(INamedTypeSymbol baseType, IEnumerable<INamedTypeSymbol> derivedTypes)
         {
-            WriteList(
+            WriteHeading3(Resources.DerivedTitle);
+
+            WriteClassHierarchy(
+                baseType,
                 derivedTypes,
-                heading: Resources.DerivedTitle,
-                headingLevel: 3,
-                format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
+                SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
+                containingNamespace: Options.AddContainingNamespace,
+                addBaseType: false,
                 maxItems: Options.MaxDerivedItems,
                 allItemsHeading: Resources.AllDerivedTypesTitle,
-                allItemsLinkTitle: Resources.SeeAllDerivedTypes,
-                addNamespace: Options.AddContainingNamespace);
+                allItemsLinkTitle: Resources.SeeAllDerivedTypes);
+
+            WriteLine();
         }
 
         public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
@@ -888,6 +901,130 @@ namespace Roslynator.Documentation
             element.WriteContentTo(this);
         }
 
+        internal void WriteClassHierarchy(
+            INamedTypeSymbol baseType,
+            IEnumerable<INamedTypeSymbol> types,
+            SymbolDisplayFormat format,
+            bool containingNamespace = true,
+            bool addBaseType = true,
+            int maxItems = -1,
+            string allItemsHeading = null,
+            string allItemsLinkTitle = null)
+        {
+            var nodes = new HashSet<INamedTypeSymbol>(types) { baseType };
+
+            foreach (INamedTypeSymbol type in types)
+            {
+                INamedTypeSymbol t = type.BaseType;
+
+                while (t != null)
+                {
+                    nodes.Add(t.OriginalDefinition);
+                    t = t.BaseType;
+                }
+            }
+
+            int level = (addBaseType) ? 0 : -1;
+            int count = 0;
+
+            WriteClassHierarchy();
+
+            void WriteClassHierarchy()
+            {
+                if (level >= 0)
+                {
+                    WriteStartBulletItem();
+
+                    for (int i = 0; i < level; i++)
+                    {
+                        if (i > 0)
+                        {
+                            WriteSpace();
+                            WriteString("|");
+                            WriteSpace();
+                        }
+
+                        WriteEntityRef("emsp");
+                    }
+
+                    if (level >= 1)
+                        WriteSpace();
+
+                    WriteObsolete(baseType);
+
+                    if (DocumentationModel.IsExternal(baseType))
+                    {
+                        WriteSymbol(baseType, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
+                    }
+                    else
+                    {
+                        WriteTypeLink(baseType);
+                    }
+
+                    WriteEndBulletItem();
+                }
+
+                nodes.Remove(baseType);
+
+                level++;
+
+                IEnumerable<INamedTypeSymbol> directlyDerivedTypes = nodes.Where(f => f.BaseType?.OriginalDefinition == baseType.OriginalDefinition || f.Interfaces.Any(i => i.OriginalDefinition == baseType.OriginalDefinition));
+
+                List<INamedTypeSymbol> sortedDirectlyDerivedTypes = null;
+
+                if (containingNamespace)
+                {
+                    sortedDirectlyDerivedTypes = directlyDerivedTypes
+                        .OrderBy(f => f.ContainingNamespace, NamespaceSymbolComparer.GetInstance(Options.SystemNamespaceFirst))
+                        .ThenBy(f => f.ToDisplayString(format))
+                        .ToList();
+                }
+                else
+                {
+                    sortedDirectlyDerivedTypes = directlyDerivedTypes
+                        .Where(f => f.BaseType?.OriginalDefinition == baseType.OriginalDefinition || f.Interfaces.Any(i => i.OriginalDefinition == baseType.OriginalDefinition))
+                        .OrderBy(f => f.ToDisplayString(format))
+                        .ToList();
+                }
+
+                using (List<INamedTypeSymbol>.Enumerator en = sortedDirectlyDerivedTypes.GetEnumerator())
+                {
+                    if (en.MoveNext())
+                    {
+                        do
+                        {
+                            baseType = en.Current;
+                            WriteClassHierarchy();
+
+                            count++;
+
+                            if (count == maxItems)
+                            {
+                                if (en.MoveNext())
+                                {
+                                    if (!string.IsNullOrEmpty(allItemsHeading))
+                                    {
+                                        WriteStartBulletItem();
+                                        WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle), title: allItemsLinkTitle);
+                                        WriteEndBulletItem();
+                                    }
+                                    else
+                                    {
+                                        WriteBulletItem(Resources.Ellipsis);
+                                    }
+                                }
+
+                                break;
+                            }
+                        }
+                        while (en.MoveNext());
+                    }
+                }
+
+                level--;
+            }
+        }
+
         internal void WriteTable(
             IEnumerable<ISymbol> symbols,
             string heading,
@@ -1047,6 +1184,7 @@ namespace Roslynator.Documentation
             {
                 WriteSpace();
                 WriteString(Resources.OpenParenthesis);
+                WriteString(Resources.ValueTitle);
                 WriteSpace();
                 WriteString(Resources.EqualsSign);
                 WriteSpace();
@@ -1195,11 +1333,11 @@ namespace Roslynator.Documentation
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             bool addLink = true,
-            string linkDefinition = null)
+            string linkDestination = null)
         {
-            if (!string.IsNullOrEmpty(linkDefinition))
+            if (!string.IsNullOrEmpty(linkDestination))
             {
-                WriteLinkDestination(linkDefinition);
+                WriteLinkDestination(linkDestination);
                 WriteLine();
             }
 

@@ -24,9 +24,9 @@ namespace Roslynator.Documentation
             {
                 case TypeDocumentationParts.Content:
                     return 1;
-                case TypeDocumentationParts.Namespace:
+                case TypeDocumentationParts.ContainingNamespace:
                     return 2;
-                case TypeDocumentationParts.Assembly:
+                case TypeDocumentationParts.ContainingAssembly:
                     return 3;
                 case TypeDocumentationParts.Obsolete:
                     return 4;

@@ -61,12 +61,12 @@ namespace Roslynator.Documentation
             {
                 switch (part)
                 {
-                    case MemberDocumentationParts.Namespace:
+                    case MemberDocumentationParts.ContainingType:
                         {
                             Writer.WriteContainingType(symbol);
                             break;
                         }
-                    case MemberDocumentationParts.Assembly:
+                    case MemberDocumentationParts.ContainingAssembly:
                         {
                             Writer.WriteAssembly(symbol);
                             break;

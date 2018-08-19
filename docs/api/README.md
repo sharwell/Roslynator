@@ -13,7 +13,7 @@
 
 ## Classes
 
-*  System\.Object
+* System\.Object
 * &emsp; Roslynator\.[NameGenerator](Roslynator/NameGenerator/README.md#_top)
 * &emsp; Roslynator\.[SeparatedSyntaxListSelection\<TNode>](Roslynator/SeparatedSyntaxListSelection-1/README.md#_top)
 * &emsp; Roslynator\.[SyntaxListSelection\<TNode>](Roslynator/SyntaxListSelection-1/README.md#_top)

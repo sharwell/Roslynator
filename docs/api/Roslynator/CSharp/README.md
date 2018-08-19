@@ -4,6 +4,8 @@
 
 [Home](../../README.md#_top) &#x2022; [Classes](#classes) &#x2022; [Structs](#structs) &#x2022; [Enums](#enums)
 
+**Containing Namespace**: [Roslynator](../README.md#_top)
+
 ## Classes
 
 | Class | Summary |
