@@ -707,7 +707,7 @@ namespace Roslynator.Documentation
                             SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                             containingNamespace: Options.AddContainingNamespace,
                             addBaseType: false,
-                            maxItems: -1);
+                            addSeparatorAtIndex: Options.MaxDerivedItems);
 
                         writer.WriteLine();
                     }

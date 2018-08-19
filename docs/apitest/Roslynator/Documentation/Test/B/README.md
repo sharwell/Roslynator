@@ -31,6 +31,7 @@ public class B
 | Field | Summary |
 | ----- | ------- |
 | [Field](Field/README.md#_top) | |
+| [FooConst](FooConst/README.md#_top) |  \(Value = "abc"\) |
 
 ## Indexers
 

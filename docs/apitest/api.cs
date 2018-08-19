@@ -17,6 +17,8 @@ namespace Roslynator.Documentation.Test
 {
     public class B
     {
+        public const string FooConst = "abc";
+
         public string Field;
 
         public B();

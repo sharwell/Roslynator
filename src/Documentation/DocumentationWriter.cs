@@ -924,7 +924,8 @@ namespace Roslynator.Documentation
             bool addBaseType = true,
             int maxItems = -1,
             string allItemsHeading = null,
-            string allItemsLinkTitle = null)
+            string allItemsLinkTitle = null,
+            int addSeparatorAtIndex = -1)
         {
             if (maxItems == 0)
                 return;
@@ -983,6 +984,9 @@ namespace Roslynator.Documentation
                     WriteEndBulletItem();
 
                     count++;
+
+                    if (addSeparatorAtIndex == count)
+                        WriteBulletItem("- - -");
                 }
 
                 nodes.Remove(baseType);
