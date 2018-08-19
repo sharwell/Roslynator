@@ -987,11 +987,13 @@ namespace Roslynator.Documentation
 
                     if (addSeparatorAtIndex == count)
                     {
-                        WriteLine();
-                        WriteEntityRef("emsp");
-                        WriteLine();
-
-                        //WriteBulletItem("- - -");
+                        WriteStartBulletItem();
+                        WriteEntityRef("mdash");
+                        WriteSpace();
+                        WriteEntityRef("mdash");
+                        WriteSpace();
+                        WriteEntityRef("mdash");
+                        WriteEndBulletItem();
                     }
                 }
 

@@ -60,8 +60,7 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 
 * Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../SeparatedSyntaxListSelection-1/README.md#_top)
 * Roslynator\.[SyntaxListSelection\<TNode>](../SyntaxListSelection-1/README.md#_top)
-
-&emsp;
+* &mdash; &mdash; &mdash;
 * &emsp; Roslynator\.CSharp\.[MemberDeclarationListSelection](../CSharp/MemberDeclarationListSelection/README.md#_top)
 * &emsp; Roslynator\.CSharp\.[StatementListSelection](../CSharp/StatementListSelection/README.md#_top)
 * Roslynator\.Text\.[TextLineCollectionSelection](../Text/TextLineCollectionSelection/README.md#_top)
