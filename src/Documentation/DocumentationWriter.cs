@@ -989,9 +989,7 @@ namespace Roslynator.Documentation
                     {
                         WriteStartBulletItem();
                         WriteEntityRef("mdash");
-                        WriteSpace();
                         WriteEntityRef("mdash");
-                        WriteSpace();
                         WriteEntityRef("mdash");
                         WriteEndBulletItem();
                     }
