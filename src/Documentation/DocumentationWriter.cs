@@ -633,19 +633,34 @@ namespace Roslynator.Documentation
 
         public virtual void WriteDerivedTypes(INamedTypeSymbol baseType, IEnumerable<INamedTypeSymbol> derivedTypes)
         {
-            WriteHeading3(Resources.DerivedTitle);
+            if (Options.ClassHierarchy)
+            {
+                WriteHeading3(Resources.DerivedTitle);
 
-            WriteClassHierarchy(
-                baseType,
-                derivedTypes,
-                SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
-                containingNamespace: Options.AddContainingNamespace,
-                addBaseType: false,
-                maxItems: Options.MaxDerivedItems,
-                allItemsHeading: Resources.AllDerivedTypesTitle,
-                allItemsLinkTitle: Resources.SeeAllDerivedTypes);
+                WriteClassHierarchy(
+                    baseType,
+                    derivedTypes,
+                    SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
+                    containingNamespace: Options.AddContainingNamespace,
+                    addBaseType: false,
+                    maxItems: Options.MaxDerivedItems,
+                    allItemsHeading: Resources.AllDerivedTypesTitle,
+                    allItemsLinkTitle: Resources.SeeAllDerivedTypes);
 
-            WriteLine();
+                WriteLine();
+            }
+            else
+            {
+                WriteList(
+                    derivedTypes,
+                    heading: Resources.DerivedTitle,
+                    headingLevel: 3,
+                    format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
+                    maxItems: Options.MaxDerivedItems,
+                    allItemsHeading: Resources.AllDerivedTypesTitle,
+                    allItemsLinkTitle: Resources.SeeAllDerivedTypes,
+                    addNamespace: Options.AddContainingNamespace);
+            }
         }
 
         public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
@@ -911,6 +926,9 @@ namespace Roslynator.Documentation
             string allItemsHeading = null,
             string allItemsLinkTitle = null)
         {
+            if (maxItems == 0)
+                return;
+
             var nodes = new HashSet<INamedTypeSymbol>(types) { baseType };
 
             foreach (INamedTypeSymbol type in types)
@@ -926,6 +944,7 @@ namespace Roslynator.Documentation
 
             int level = (addBaseType) ? 0 : -1;
             int count = 0;
+            bool isMaxReached = false;
 
             WriteClassHierarchy();
 
@@ -950,8 +969,6 @@ namespace Roslynator.Documentation
                     if (level >= 1)
                         WriteSpace();
 
-                    WriteObsolete(baseType);
-
                     if (DocumentationModel.IsExternal(baseType))
                     {
                         WriteSymbol(baseType, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
@@ -961,7 +978,11 @@ namespace Roslynator.Documentation
                         WriteTypeLink(baseType);
                     }
 
+                    WriteObsolete(baseType, before: false);
+
                     WriteEndBulletItem();
+
+                    count++;
                 }
 
                 nodes.Remove(baseType);
@@ -991,27 +1012,30 @@ namespace Roslynator.Documentation
                 {
                     if (en.MoveNext())
                     {
+                        if (!isMaxReached
+                            && count == maxItems)
+                        {
+                            WriteEllipsis();
+                            isMaxReached = true;
+                            return;
+                        }
+
                         do
                         {
                             baseType = en.Current;
+
                             WriteClassHierarchy();
 
-                            count++;
+                            if (isMaxReached)
+                                return;
 
                             if (count == maxItems)
                             {
                                 if (en.MoveNext())
                                 {
-                                    if (!string.IsNullOrEmpty(allItemsHeading))
-                                    {
-                                        WriteStartBulletItem();
-                                        WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle), title: allItemsLinkTitle);
-                                        WriteEndBulletItem();
-                                    }
-                                    else
-                                    {
-                                        WriteBulletItem(Resources.Ellipsis);
-                                    }
+                                    WriteEllipsis();
+                                    isMaxReached = true;
+                                    return;
                                 }
 
                                 break;
@@ -1022,6 +1046,20 @@ namespace Roslynator.Documentation
                 }
 
                 level--;
+            }
+
+            void WriteEllipsis()
+            {
+                if (!string.IsNullOrEmpty(allItemsHeading))
+                {
+                    WriteStartBulletItem();
+                    WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle), title: allItemsLinkTitle);
+                    WriteEndBulletItem();
+                }
+                else
+                {
+                    WriteBulletItem(Resources.Ellipsis);
+                }
             }
         }
 
@@ -1536,14 +1574,20 @@ namespace Roslynator.Documentation
             }
         }
 
-        private void WriteObsolete(ISymbol symbol)
+        private void WriteObsolete(ISymbol symbol, bool before = true)
         {
             if (Options.IndicateObsolete
                 && symbol.HasAttribute(MetadataNames.System_ObsoleteAttribute))
             {
+                if (!before)
+                    WriteSpace();
+
                 WriteString("[");
                 WriteString(Resources.DeprecatedTitle);
-                WriteString("] ");
+                WriteString("]");
+
+                if (before)
+                    WriteSpace();
             }
         }
 
