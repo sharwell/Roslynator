@@ -991,6 +991,8 @@ namespace Roslynator.Documentation
                         WriteEntityRef("mdash");
                         WriteEntityRef("mdash");
                         WriteEntityRef("mdash");
+                        WriteEntityRef("mdash");
+                        WriteEntityRef("mdash");
                         WriteEndBulletItem();
                     }
                 }
