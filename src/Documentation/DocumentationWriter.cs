@@ -986,7 +986,14 @@ namespace Roslynator.Documentation
                     count++;
 
                     if (addSeparatorAtIndex == count)
-                        WriteBulletItem("- - -");
+                    {
+                        WriteLine();
+                        WriteEntityRef("emsp");
+                        WriteLine();
+                        WriteLine();
+
+                        //WriteBulletItem("- - -");
+                    }
                 }
 
                 nodes.Remove(baseType);
