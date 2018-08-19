@@ -1,10 +1,13 @@
 ﻿<Project>
   <Target Name="PreRoslynatorDocumention" BeforeTargets="RoslynatorDocumentation" Condition=" '$(Configuration)' == 'Release'">
-    <RemoveDir Directories="$(SolutionDir)docs\api" />
+    <PropertyGroup>
+      <RoslynatorDocumentationDirectory>$(SolutionDir)docs\api</RoslynatorDocumentationDirectory>
+    </PropertyGroup>
+    <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
     <PropertyGroup>
       <RoslynatorDocumentationAssemblies>$(TargetPath)</RoslynatorDocumentationAssemblies>
-      <RoslynatorDocumentationParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(SolutionDir)docs\api&quot; -h &quot;API Reference&quot; -m github</RoslynatorDocumentationParameters>
-      <RoslynatorDocumentationDefinitionListParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(SolutionDir)docs\api.cs&quot;</RoslynatorDocumentationDefinitionListParameters>
+      <RoslynatorDocumentationParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;API Reference&quot; -m github</RoslynatorDocumentationParameters>
+      <RoslynatorDocumentationDefinitionListParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDefinitionListParameters>
     </PropertyGroup>
   </Target>
 </Project>

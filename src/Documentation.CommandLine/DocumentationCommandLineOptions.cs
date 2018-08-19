@@ -7,7 +7,7 @@ using static Roslynator.Documentation.DocumentationOptions;
 namespace Roslynator.Documentation
 {
     [Verb("doc")]
-    public class CommandLineOptions
+    public class DocumentationCommandLineOptions
     {
         [Option(longName: "assembly-references", shortName: 'r', Required = true)]
         public string AssemblyReferences { get; set; }

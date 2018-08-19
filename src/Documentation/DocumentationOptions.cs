@@ -121,7 +121,7 @@ namespace Roslynator.Documentation
 
         internal static class DefaultValues
         {
-            public const int MaxDerivedItems = 10;
+            public const int MaxDerivedItems = 5;
             public const bool ClassHierarchy = true;
             public const bool AddContainingNamespace = true;
             public const bool SystemNamespaceFirst = true;

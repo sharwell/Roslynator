@@ -633,34 +633,15 @@ namespace Roslynator.Documentation
 
         public virtual void WriteDerivedTypes(INamedTypeSymbol baseType, IEnumerable<INamedTypeSymbol> derivedTypes)
         {
-            if (Options.ClassHierarchy)
-            {
-                WriteHeading3(Resources.DerivedTitle);
-
-                WriteClassHierarchy(
-                    baseType,
-                    derivedTypes,
-                    SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
-                    containingNamespace: Options.AddContainingNamespace,
-                    addBaseType: false,
-                    maxItems: Options.MaxDerivedItems,
-                    allItemsHeading: Resources.AllDerivedTypesTitle,
-                    allItemsLinkTitle: Resources.SeeAllDerivedTypes);
-
-                WriteLine();
-            }
-            else
-            {
-                WriteList(
-                    derivedTypes,
-                    heading: Resources.DerivedTitle,
-                    headingLevel: 3,
-                    format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
-                    maxItems: Options.MaxDerivedItems,
-                    allItemsHeading: Resources.AllDerivedTypesTitle,
-                    allItemsLinkTitle: Resources.SeeAllDerivedTypes,
-                    addNamespace: Options.AddContainingNamespace);
-            }
+            WriteList(
+                derivedTypes,
+                heading: Resources.DerivedTitle,
+                headingLevel: 3,
+                format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
+                maxItems: Options.MaxDerivedItems,
+                allItemsHeading: Resources.DerivedAllTitle,
+                allItemsLinkTitle: Resources.SeeAllDerivedTypes,
+                addNamespace: Options.AddContainingNamespace);
         }
 
         public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
@@ -1065,7 +1046,7 @@ namespace Roslynator.Documentation
                 if (!string.IsNullOrEmpty(allItemsHeading))
                 {
                     WriteStartBulletItem();
-                    WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle), title: allItemsLinkTitle);
+                    WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.DerivedAllTitle), title: allItemsLinkTitle);
                     WriteEndBulletItem();
                 }
                 else
@@ -1333,8 +1314,6 @@ namespace Roslynator.Documentation
                         {
                             WriteStartBulletItem();
 
-                            WriteObsolete(en.Current);
-
                             if (addNamespace
                                 && !en.Current.ContainingNamespace.IsGlobalNamespace)
                             {
@@ -1343,6 +1322,7 @@ namespace Roslynator.Documentation
                             }
 
                             WriteLink(en.Current, format, addLinkForTypeParameters: addLinkForTypeParameters, canCreateExternalUrl: canCreateExternalUrl);
+                            WriteObsolete(en.Current, before: false);
                             WriteEndBulletItem();
                         }
                         else
@@ -1359,7 +1339,7 @@ namespace Roslynator.Documentation
                                 if (!string.IsNullOrEmpty(allItemsHeading))
                                 {
                                     WriteStartBulletItem();
-                                    WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.AllDerivedTypesTitle), title: allItemsLinkTitle);
+                                    WriteLink(Resources.Ellipsis, UrlProvider.GetFragment(Resources.DerivedAllTitle), title: allItemsLinkTitle);
                                     WriteEndBulletItem();
                                 }
                                 else

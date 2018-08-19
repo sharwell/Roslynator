@@ -699,7 +699,7 @@ namespace Roslynator.Documentation
                 {
                     if (Options.ClassHierarchy)
                     {
-                        writer.WriteHeading(2, Resources.AllDerivedTypesTitle);
+                        writer.WriteHeading(2, Resources.DerivedAllTitle);
 
                         writer.WriteClassHierarchy(
                             typeSymbol,
@@ -715,7 +715,7 @@ namespace Roslynator.Documentation
                     {
                         writer.WriteList(
                             derivedTypes,
-                            heading: Resources.AllDerivedTypesTitle,
+                            heading: Resources.DerivedAllTitle,
                             headingLevel: 2,
                             format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
                             addNamespace: Options.AddContainingNamespace);

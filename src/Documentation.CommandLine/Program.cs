@@ -16,14 +16,14 @@ namespace Roslynator.Documentation
     {
         private static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<CommandLineOptions, DefinitionListCommandLineOptions>(args)
+            Parser.Default.ParseArguments<DocumentationCommandLineOptions, DefinitionListCommandLineOptions>(args)
                 .MapResult(
-                  (CommandLineOptions options) => RunDefault(options),
-                  (DefinitionListCommandLineOptions options) => RunDefinitionList(options),
+                  (DocumentationCommandLineOptions options) => GenerateDocumentation(options),
+                  (DefinitionListCommandLineOptions options) => GenerateDefinitionList(options),
                   _ => 1);
         }
 
-        private static int RunDefault(CommandLineOptions options)
+        private static int GenerateDocumentation(DocumentationCommandLineOptions options)
         {
             Encoding encoding = GetEncoding();
 
@@ -104,7 +104,7 @@ namespace Roslynator.Documentation
             return 0;
         }
 
-        private static int RunDefinitionList(DefinitionListCommandLineOptions options)
+        private static int GenerateDefinitionList(DefinitionListCommandLineOptions options)
         {
             DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies);
 

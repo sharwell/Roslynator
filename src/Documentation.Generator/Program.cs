@@ -34,7 +34,6 @@ namespace Roslynator.Documentation
 
             var options = new DocumentationOptions(
                 depth: DocumentationDepth.Member,
-                maxDerivedItems: 2,
                 typeParts: TypeDocumentationParts.All,
                 formatDefinitionBaseList: true,
                 formatDefinitionConstraints: true,

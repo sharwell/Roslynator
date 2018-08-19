@@ -257,6 +257,25 @@ namespace Roslynator.Documentation
             {
                 foreach (INamedTypeSymbol typeSymbol in DocumentationModel.TypeSymbols)
                 {
+                    if (typeSymbol.BaseType?.OriginalDefinition.Equals(Symbol) == true)
+                        yield return typeSymbol;
+
+                    foreach (INamedTypeSymbol interfaceSymbol in typeSymbol.Interfaces)
+                    {
+                        if (interfaceSymbol.OriginalDefinition.Equals(Symbol))
+                            yield return typeSymbol;
+                    }
+                }
+            }
+        }
+
+        public IEnumerable<INamedTypeSymbol> GetAllDerivedTypes()
+        {
+            if (TypeKind.Is(TypeKind.Class, TypeKind.Interface)
+                && !Symbol.IsStatic)
+            {
+                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.TypeSymbols)
+                {
                     if (typeSymbol.InheritsFrom(Symbol, includeInterfaces: true))
                         yield return typeSymbol;
                 }

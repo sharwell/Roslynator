@@ -24,7 +24,7 @@ namespace Roslynator.Documentation
         public virtual string FalseValue { get; } = "false";
         public virtual string TrueValue { get; } = "true";
 
-        public abstract string AllDerivedTypesTitle { get; }
+        public abstract string DerivedAllTitle { get; }
         public abstract string AssemblyTitle { get; }
         public abstract string AttributesTitle { get; }
         public abstract string ClassTitle { get; }
@@ -300,7 +300,6 @@ namespace Roslynator.Documentation
 
         private class DefaultDocumentationResources : DocumentationResources
         {
-            public override string AllDerivedTypesTitle { get; } = "All Derived Types";
             public override string AssemblyTitle { get; } = "Assembly";
             public override string AttributesTitle { get; } = "Attributes";
             public override string ClassTitle { get; } = "Class";
@@ -313,6 +312,7 @@ namespace Roslynator.Documentation
             public override string DelegateTitle { get; } = "Delegate";
             public override string DelegatesTitle { get; } = "Delegates";
             public override string DeprecatedTitle { get; } = "deprecated";
+            public override string DerivedAllTitle { get; } = "Derived (All)";
             public override string DerivedTitle { get; } = "Derived";
             public override string EnumTitle { get; } = "Enum";
             public override string EnumsTitle { get; } = "Enums";
