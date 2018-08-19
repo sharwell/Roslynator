@@ -72,6 +72,9 @@ namespace Roslynator.Documentation
         [Option(longName: "indicate-interface-implementation", Default = DefaultValues.IndicateInterfaceImplementation)]
         public bool IndicateInterfaceImplementation { get; set; }
 
+        [Option(longName: "add-constant-value", Default = DefaultValues.AddConstantValue)]
+        public bool AddConstantValue { get; set; }
+
         [Option(longName: "attribute-arguments", Default = DefaultValues.AttributeArguments)]
         public bool AttributeArguments { get; set; }
 

@@ -4,7 +4,6 @@ using System;
 
 namespace Roslynator.Documentation
 {
-    //TODO: IndicateConstantValue
     public class DocumentationOptions
     {
         public DocumentationOptions(
@@ -20,6 +19,7 @@ namespace Roslynator.Documentation
             bool indicateInheritedMember = DefaultValues.IndicateInheritedMember,
             bool indicateOverriddenMember = DefaultValues.IndicateOverriddenMember,
             bool indicateInterfaceImplementation = DefaultValues.IndicateInterfaceImplementation,
+            bool addConstantValue = DefaultValues.AddConstantValue,
             bool attributeArguments = DefaultValues.AttributeArguments,
             bool inheritedInterfaceMembers = DefaultValues.InheritedInterfaceMembers,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
@@ -44,6 +44,7 @@ namespace Roslynator.Documentation
             IndicateInheritedMember = indicateInheritedMember;
             IndicateOverriddenMember = indicateOverriddenMember;
             IndicateInterfaceImplementation = indicateInterfaceImplementation;
+            AddConstantValue = addConstantValue;
             AttributeArguments = attributeArguments;
             InheritedInterfaceMembers = inheritedInterfaceMembers;
             OmitIEnumerable = omitIEnumerable;
@@ -79,6 +80,8 @@ namespace Roslynator.Documentation
         public bool IndicateOverriddenMember { get; }
 
         public bool IndicateInterfaceImplementation { get; }
+
+        public bool AddConstantValue { get; }
 
         public bool AttributeArguments { get; }
 
@@ -128,6 +131,7 @@ namespace Roslynator.Documentation
             public const bool IndicateInheritedMember = true;
             public const bool IndicateOverriddenMember = true;
             public const bool IndicateInterfaceImplementation = true;
+            public const bool AddConstantValue = true;
             public const bool AttributeArguments = true;
             public const bool InheritedInterfaceMembers = true; //TODO: InheritedInterfaceMembers default value
             public const bool OmitIEnumerable = true;

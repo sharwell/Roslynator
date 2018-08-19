@@ -67,6 +67,7 @@ namespace Roslynator.Documentation
                 indicateInheritedMember: options.IndicateInheritedMember,
                 indicateOverriddenMember: options.IndicateOverriddenMember,
                 indicateInterfaceImplementation: options.IndicateInterfaceImplementation,
+                addConstantValue: options.AddConstantValue,
                 attributeArguments: options.AttributeArguments,
                 inheritedInterfaceMembers: options.InheritedInterfaceMembers,
                 omitIEnumerable: options.OmitIEnumerable);

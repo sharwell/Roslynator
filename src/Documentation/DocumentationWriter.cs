@@ -1164,7 +1164,8 @@ namespace Roslynator.Documentation
                                 WriteImplements(symbol);
                             }
 
-                            if (symbol.Kind == SymbolKind.Field)
+                            if (Options.AddConstantValue
+                                && symbol.Kind == SymbolKind.Field)
                             {
                                 var fieldSymbol = (IFieldSymbol)symbol;
 
