@@ -224,6 +224,7 @@ namespace Roslynator.Documentation
 
         public abstract void WriteLine();
 
+        //TODO: rename WriteLinkDestination
         public abstract void WriteLinkDestination(string name);
 
         public virtual void WriteValue(bool value)
@@ -796,22 +797,22 @@ namespace Roslynator.Documentation
 
         public virtual void WriteFields(IEnumerable<IFieldSymbol> fields, INamedTypeSymbol containingType)
         {
-            WriteTable(fields, Resources.FieldsTitle, 2, Resources.FieldTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, canEmphasizeNonInheritedMember: true, containingType: containingType);
+            WriteTable(fields, Resources.FieldsTitle, 2, Resources.FieldTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, containingType: containingType);
         }
 
         public virtual void WriteIndexers(IEnumerable<IPropertySymbol> indexers, INamedTypeSymbol containingType)
         {
-            WriteTable(indexers, Resources.IndexersTitle, 2, Resources.IndexerTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, canEmphasizeNonInheritedMember: true, containingType: containingType);
+            WriteTable(indexers, Resources.IndexersTitle, 2, Resources.IndexerTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, containingType: containingType);
         }
 
         public virtual void WriteProperties(IEnumerable<IPropertySymbol> properties, INamedTypeSymbol containingType)
         {
-            WriteTable(properties, Resources.PropertiesTitle, 2, Resources.PropertyTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, canEmphasizeNonInheritedMember: true, containingType: containingType);
+            WriteTable(properties, Resources.PropertiesTitle, 2, Resources.PropertyTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, containingType: containingType);
         }
 
         public virtual void WriteMethods(IEnumerable<IMethodSymbol> methods, INamedTypeSymbol containingType)
         {
-            WriteTable(methods, Resources.MethodsTitle, 2, Resources.MethodTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, canEmphasizeNonInheritedMember: true, containingType: containingType);
+            WriteTable(methods, Resources.MethodsTitle, 2, Resources.MethodTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, containingType: containingType);
         }
 
         public virtual void WriteOperators(IEnumerable<IMethodSymbol> operators, INamedTypeSymbol containingType)
@@ -821,7 +822,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteEvents(IEnumerable<IEventSymbol> events, INamedTypeSymbol containingType)
         {
-            WriteTable(events, Resources.EventsTitle, 2, Resources.EventTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, canEmphasizeNonInheritedMember: true, containingType: containingType);
+            WriteTable(events, Resources.EventsTitle, 2, Resources.EventTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, containingType: containingType);
         }
 
         public virtual void WriteExplicitInterfaceImplementations(IEnumerable<ISymbol> explicitInterfaceImplementations)
@@ -1065,7 +1066,6 @@ namespace Roslynator.Documentation
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             bool addLink = true,
             bool canIndicateInterfaceImplementation = true,
-            bool canEmphasizeNonInheritedMember = false,
             INamedTypeSymbol containingType = null)
         {
             using (IEnumerator<ISymbol> en = symbols
@@ -1090,20 +1090,8 @@ namespace Roslynator.Documentation
 
                         Debug.Assert(!symbol.IsKind(SymbolKind.Parameter, SymbolKind.TypeParameter), symbol.Kind.ToString());
 
-                        bool isInherited = containingType != null
-                            && symbol.ContainingType != containingType;
-
-                        bool shouldEmphasize = canEmphasizeNonInheritedMember
-                            && containingType?.IsStatic == false
-                            && (containingType.TypeKind == TypeKind.Class
-                                || (containingType.TypeKind == TypeKind.Interface && containingType.Interfaces.Any()))
-                            && symbol.ContainingType == containingType;
-
                         WriteStartTableRow();
                         WriteStartTableCell();
-
-                        if (shouldEmphasize)
-                            WriteStartBold();
 
                         if (symbol.IsKind(SymbolKind.Parameter, SymbolKind.TypeParameter))
                         {
@@ -1118,13 +1106,13 @@ namespace Roslynator.Documentation
                             WriteString(symbol.ToDisplayString(format, additionalOptions));
                         }
 
-                        if (shouldEmphasize)
-                            WriteEndBold();
-
                         WriteEndTableCell();
                         WriteStartTableCell();
 
                         WriteObsolete(symbol);
+
+                        bool isInherited = containingType != null
+                            && symbol.ContainingType != containingType;
 
                         if (symbol.Kind == SymbolKind.Parameter)
                         {

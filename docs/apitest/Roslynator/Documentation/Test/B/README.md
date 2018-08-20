@@ -30,20 +30,20 @@ public class B
 
 | Field | Summary |
 | ----- | ------- |
-| **[Field](Field/README.md#_top)** | |
-| **[FooConst](FooConst/README.md#_top)** |  \(Value = "abc"\) |
+| [Field](Field/README.md#_top) | |
+| [FooConst](FooConst/README.md#_top) |  \(Value = "abc"\) |
 
 ## Indexers
 
 | Indexer | Summary |
 | ------- | ------- |
-| **[Item\[Int32\]](Item/README.md#_top)** | |
+| [Item\[Int32\]](Item/README.md#_top) | |
 
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
-| **[Property](Property/README.md#_top)** | |
+| [Property](Property/README.md#_top) | |
 
 ## Methods
 
@@ -53,12 +53,12 @@ public class B
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| **[Method()](Method/README.md#_top)** | |
+| [Method()](Method/README.md#_top) | |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 
 ## Events
 
 | Event | Summary |
 | ----- | ------- |
-| **[Event](Event/README.md#_top)** | |
+| [Event](Event/README.md#_top) | |
 

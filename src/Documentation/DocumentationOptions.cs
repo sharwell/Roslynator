@@ -4,7 +4,6 @@ using System;
 
 namespace Roslynator.Documentation
 {
-    //TODO: EmphasizeNonInheritedMember
     public class DocumentationOptions
     {
         public DocumentationOptions(
