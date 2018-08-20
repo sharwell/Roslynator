@@ -44,7 +44,7 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 
 | Indexer | Summary |
 | ------- | ------- |
-| [Item\[Int32\]](Item/README.md#_top) | |
+| **[Item\[Int32\]](Item/README.md#_top)** | |
 
 ## Properties
 

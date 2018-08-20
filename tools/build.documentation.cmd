@@ -1,12 +1,14 @@
 @echo off
 
-"C:\Program Files\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild" "..\src\Roslynator.sln" ^
+set _msbuildPath="C:\Program Files\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild"
+
+%_msbuildPath% "..\src\Roslynator.sln" ^
  /t:Clean ^
  /p:Configuration=Debug ^
  /v:minimal ^
  /m
 
-"C:\Program Files\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild" "..\src\Roslynator.sln" ^
+%_msbuildPath% "..\src\Roslynator.sln" ^
  /t:Clean,Build ^
  /p:Configuration=ReleaseDoc,TreatWarningsAsErrors=true,WarningsNotAsErrors=1591 ^
  /v:normal ^

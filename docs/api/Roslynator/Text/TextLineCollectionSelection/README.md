@@ -40,32 +40,32 @@ public class TextLineCollectionSelection : Roslynator.ISelection<Microsoft.CodeA
 
 | Indexer | Summary |
 | ------- | ------- |
-| [Item\[Int32\]](Item/README.md#_top) | Gets the selected line at the specified index\. \(Implements [IReadOnlyList\<TextLine>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
+| **[Item\[Int32\]](Item/README.md#_top)** | Gets the selected line at the specified index\. \(Implements [IReadOnlyList\<TextLine>.Item](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item)\) |
 
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
-| [Count](Count/README.md#_top) | Gets a number of selected lines\. \(Implements [IReadOnlyCollection\<TextLine>.Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1.count)\) |
-| [FirstIndex](FirstIndex/README.md#_top) | Gets an index of the first selected line\. \(Implements [ISelection\<TextLine>.FirstIndex](../../ISelection-1/FirstIndex/README.md#_top)\) |
-| [LastIndex](LastIndex/README.md#_top) | Gets an index of the last selected line\. \(Implements [ISelection\<TextLine>.LastIndex](../../ISelection-1/LastIndex/README.md#_top)\) |
-| [OriginalSpan](OriginalSpan/README.md#_top) | Gets the original span that was used to determine selected lines\. |
-| [UnderlyingLines](UnderlyingLines/README.md#_top) | Gets an underlying collection that contains selected lines\. |
+| **[Count](Count/README.md#_top)** | Gets a number of selected lines\. \(Implements [IReadOnlyCollection\<TextLine>.Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1.count)\) |
+| **[FirstIndex](FirstIndex/README.md#_top)** | Gets an index of the first selected line\. \(Implements [ISelection\<TextLine>.FirstIndex](../../ISelection-1/FirstIndex/README.md#_top)\) |
+| **[LastIndex](LastIndex/README.md#_top)** | Gets an index of the last selected line\. \(Implements [ISelection\<TextLine>.LastIndex](../../ISelection-1/LastIndex/README.md#_top)\) |
+| **[OriginalSpan](OriginalSpan/README.md#_top)** | Gets the original span that was used to determine selected lines\. |
+| **[UnderlyingLines](UnderlyingLines/README.md#_top)** | Gets an underlying collection that contains selected lines\. |
 
 ## Methods
 
 | Method | Summary |
 | ------ | ------- |
-| [Create(TextLineCollection, TextSpan)](Create/README.md#_top) | Creates a new [TextLineCollectionSelection](#_top) based on the specified list and span\. |
+| **[Create(TextLineCollection, TextSpan)](Create/README.md#_top)** | Creates a new [TextLineCollectionSelection](#_top) based on the specified list and span\. |
 | [Equals(Object)](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [First()](First/README.md#_top) | Gets the first selected line\. \(Implements [ISelection\<TextLine>.First](../../ISelection-1/First/README.md#_top)\) |
-| [GetEnumerator()](GetEnumerator/README.md#_top) | Returns an enumerator that iterates through selected lines\. |
+| **[First()](First/README.md#_top)** | Gets the first selected line\. \(Implements [ISelection\<TextLine>.First](../../ISelection-1/First/README.md#_top)\) |
+| **[GetEnumerator()](GetEnumerator/README.md#_top)** | Returns an enumerator that iterates through selected lines\. |
 | [GetHashCode()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [GetType()](https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [Last()](Last/README.md#_top) | Gets the last selected line\. \(Implements [ISelection\<TextLine>.Last](../../ISelection-1/Last/README.md#_top)\) |
+| **[Last()](Last/README.md#_top)** | Gets the last selected line\. \(Implements [ISelection\<TextLine>.Last](../../ISelection-1/Last/README.md#_top)\) |
 | [MemberwiseClone()](https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
 | [ToString()](https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring) |  \(Inherited from [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)\) |
-| [TryCreate(TextLineCollection, TextSpan, TextLineCollectionSelection)](TryCreate/README.md#_top) | Creates a new [TextLineCollectionSelection](#_top) based on the specified list and span\. |
+| **[TryCreate(TextLineCollection, TextSpan, TextLineCollectionSelection)](TryCreate/README.md#_top)** | Creates a new [TextLineCollectionSelection](#_top) based on the specified list and span\. |
 
 ## Explicit Interface Implementations
 

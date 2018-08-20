@@ -45,14 +45,14 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 | Property | Summary |
 | -------- | ------- |
 | [Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1.count) |  \(Inherited from [IReadOnlyCollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)\) |
-| [FirstIndex](FirstIndex/README.md#_top) | Gets an index of the first selected item\. |
-| [LastIndex](LastIndex/README.md#_top) | Gets an index of the last selected item\. |
+| **[FirstIndex](FirstIndex/README.md#_top)** | Gets an index of the first selected item\. |
+| **[LastIndex](LastIndex/README.md#_top)** | Gets an index of the last selected item\. |
 
 ## Methods
 
 | Method | Summary |
 | ------ | ------- |
-| [First()](First/README.md#_top) | Gets the first selected item\. |
+| **[First()](First/README.md#_top)** | Gets the first selected item\. |
 | [GetEnumerator()](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator) |  \(Inherited from [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\) |
-| [Last()](Last/README.md#_top) | Gets the last selected item\. |
+| **[Last()](Last/README.md#_top)** | Gets the last selected item\. |
 
