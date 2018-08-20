@@ -4,7 +4,7 @@
 
 [Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_top)\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_top)
+**Containing Type**: Roslynator\.[SeparatedSyntaxListSelection\<TNode>](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

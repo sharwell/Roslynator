@@ -4,7 +4,7 @@
 
 [Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_top)\.[SemanticModelExtensions](../README.md#_top)
+**Containing Type**: Roslynator\.[SemanticModelExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

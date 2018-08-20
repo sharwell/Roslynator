@@ -224,7 +224,6 @@ namespace Roslynator.Documentation
 
         public abstract void WriteLine();
 
-        //TODO: rename WriteLinkDestination
         public abstract void WriteLinkDestination(string name);
 
         public virtual void WriteValue(bool value)
@@ -356,7 +355,7 @@ namespace Roslynator.Documentation
 
             if (!symbol.ContainingNamespace.IsGlobalNamespace)
             {
-                WriteLink(symbol.ContainingNamespace, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                WriteNamespaceSymbol(symbol.ContainingNamespace);
                 WriteString(".");
             }
 

@@ -4,7 +4,7 @@
 
 [Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[StatementListSelection](../README.md#_top)
+**Containing Type**: Roslynator\.CSharp\.[StatementListSelection](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

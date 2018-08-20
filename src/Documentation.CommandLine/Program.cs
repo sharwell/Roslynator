@@ -121,6 +121,8 @@ namespace Roslynator.Documentation
                 omitIEnumerable: options.OmitIEnumerable,
                 useDefaultLiteral: options.UseDefaultLiteral);
 
+            Console.WriteLine($"Definition list is being generated to '{options.OutputPath}'.");
+
             string content = DefinitionListGenerator.GenerateAsync(documentationModel, definitionListOptions).Result;
 
             string path = options.OutputPath;

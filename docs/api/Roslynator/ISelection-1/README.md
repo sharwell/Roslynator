@@ -2,7 +2,7 @@
 
 # ISelection\<T> Interface
 
-[Home](../../README.md#_top) &#x2022; [Indexers](#indexers) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
+[Home](../../README.md#_top) &#x2022; [Properties](#properties) &#x2022; [Methods](#methods)
 
 **Namespace**: [Roslynator](../README.md#_top)
 
@@ -34,17 +34,10 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 * System\.Collections\.Generic\.[IReadOnlyCollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)
 * System\.Collections\.Generic\.[IReadOnlyList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)
 
-## Indexers
-
-| Indexer | Summary |
-| ------- | ------- |
-| [Item\[Int32\]](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.item) |  \(Inherited from [IReadOnlyList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1)\) |
-
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
-| [Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1.count) |  \(Inherited from [IReadOnlyCollection\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1)\) |
 | [FirstIndex](FirstIndex/README.md#_top) | Gets an index of the first selected item\. |
 | [LastIndex](LastIndex/README.md#_top) | Gets an index of the last selected item\. |
 
@@ -53,6 +46,5 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 | Method | Summary |
 | ------ | ------- |
 | [First()](First/README.md#_top) | Gets the first selected item\. |
-| [GetEnumerator()](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1.getenumerator) |  \(Inherited from [IEnumerable\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)\) |
 | [Last()](Last/README.md#_top) | Gets the last selected item\. |
 

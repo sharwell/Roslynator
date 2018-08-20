@@ -4,7 +4,7 @@
 
 [Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_top)\.[FileLinePositionSpanExtensions](../README.md#_top)
+**Containing Type**: Roslynator\.[FileLinePositionSpanExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

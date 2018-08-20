@@ -4,7 +4,7 @@
 
 [Home](../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.CSharp](../../README.md#_top)\.[EnumExtensions](../README.md#_top)
+**Containing Type**: Roslynator\.CSharp\.[EnumExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

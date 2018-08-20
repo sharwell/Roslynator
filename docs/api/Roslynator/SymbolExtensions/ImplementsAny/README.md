@@ -4,7 +4,7 @@
 
 [Home](../../../README.md#_top)
 
-**Containing Type**: [Roslynator](../../README.md#_top)\.[SymbolExtensions](../README.md#_top)
+**Containing Type**: Roslynator\.[SymbolExtensions](../README.md#_top)
 
 **Assembly**: Roslynator\.CSharp\.dll
 

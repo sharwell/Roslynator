@@ -4,7 +4,7 @@
 
 [Home](../../../../../README.md#_top)
 
-**Containing Type**: [Roslynator.Documentation.Test](../../README.md#_top)\.[IImmutableFoo\<T>](../README.md#_top)
+**Containing Type**: Roslynator\.Documentation\.Test\.[IImmutableFoo\<T>](../README.md#_top)
 
 **Assembly**: Roslynator\.Documentation\.TestProject\.dll
 

@@ -133,7 +133,7 @@ namespace Roslynator.Documentation
             public const bool IndicateInterfaceImplementation = true;
             public const bool AddConstantValue = true;
             public const bool AttributeArguments = true;
-            public const bool InheritedInterfaceMembers = true; //TODO: InheritedInterfaceMembers default value
+            public const bool InheritedInterfaceMembers = false;
             public const bool OmitIEnumerable = true;
             public const DocumentationDepth Depth =  DocumentationDepth.Member;
         }
