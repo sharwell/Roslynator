@@ -45,7 +45,7 @@ namespace Roslynator.Documentation
             if (!TryGetMemberDocumentationParts(options.MemberParts, out MemberDocumentationParts memberParts))
                 return 1;
 
-            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies);
+            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies, options.AdditionalXmlDocumentations);
 
             if (documentationModel == null)
                 return 1;
@@ -106,7 +106,7 @@ namespace Roslynator.Documentation
 
         private static int GenerateDefinitionList(DefinitionListCommandLineOptions options)
         {
-            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies);
+            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies, options.AdditionalXmlDocumentations);
 
             if (documentationModel == null)
                 return 1;
@@ -139,7 +139,7 @@ namespace Roslynator.Documentation
             return 0;
         }
 
-        private static DocumentationModel CreateDocumentationModel(string assemblyReferencesValue, IEnumerable<string> assemblies)
+        private static DocumentationModel CreateDocumentationModel(string assemblyReferencesValue, IEnumerable<string> assemblies, IEnumerable<string> additionalXmlDocumentationPaths)
         {
             IEnumerable<string> assemblyReferences = GetAssemblyReferences(assemblyReferencesValue);
 
@@ -178,7 +178,8 @@ namespace Roslynator.Documentation
                 {
                     TryGetReference(references, assemblyPath, out PortableExecutableReference reference);
                     return (IAssemblySymbol)compilation.GetAssemblyOrModuleSymbol(reference);
-                }));
+                }),
+                additionalXmlDocumentationPaths: additionalXmlDocumentationPaths);
         }
 
         private static IEnumerable<string> GetAssemblyReferences(string assemblyReferences)

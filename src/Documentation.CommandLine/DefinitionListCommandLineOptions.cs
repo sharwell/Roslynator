@@ -18,6 +18,9 @@ namespace Roslynator.Documentation
         [Option(longName: "output-path", shortName: 'o', Required = true)]
         public string OutputPath { get; set; }
 
+        [Option(longName: "additional-xml-documentation")]
+        public IEnumerable<string> AdditionalXmlDocumentations { get; set; }
+
         [Option(longName: "indent", Default = DefaultValues.Indent)]
         public bool Indent { get; set; }
 

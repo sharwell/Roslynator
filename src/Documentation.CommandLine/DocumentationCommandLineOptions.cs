@@ -24,6 +24,9 @@ namespace Roslynator.Documentation
         [Option(longName: "mode", shortName: 'm', Required = true)]
         public string Mode { get; set; }
 
+        [Option(longName: "additional-xml-documentation")]
+        public IEnumerable<string> AdditionalXmlDocumentations { get; set; }
+
         [Option(longName: "depth", Default = DefaultValues.Depth)]
         public DocumentationDepth Depth { get; set; }
 
