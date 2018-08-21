@@ -30,12 +30,15 @@ namespace Roslynator.Documentation
 
         public string IndentChars { get; }
 
+        //TODO: NewLineBeforeOpenBrace
         public bool OpenBraceOnNewLine { get; }
 
         public bool EmptyLineBetweenMembers { get; }
 
+        //TODO: EachAttributeOnSeparateLine, NewLineBeforeAttribute
         public bool NewLineOnAttributes { get; }
 
+        //TODO: AddAttributeArguments, OmitAttributeArguments, IncludeAttributeArguments
         public bool AttributeArguments { get; }
 
         public bool OmitIEnumerable { get; }

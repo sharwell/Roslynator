@@ -9,6 +9,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: declaration vs. definition
     internal class DefinitionListBuilder
     {
         private static readonly SymbolDisplayFormat _namespaceFormat = SymbolDisplayFormats.NamespaceDefinition;
@@ -115,7 +116,7 @@ namespace Roslynator.Documentation
 
         public void Append(DocumentationModel documentationModel)
         {
-            foreach (INamespaceSymbol namespaceSymbol in documentationModel.NamespaceSymbols.OrderBy(f => f, NamespaceComparer))
+            foreach (INamespaceSymbol namespaceSymbol in documentationModel.Namespaces.OrderBy(f => f, NamespaceComparer))
             {
                 if (!namespaceSymbol.IsGlobalNamespace)
                 {
@@ -126,7 +127,7 @@ namespace Roslynator.Documentation
                 _currentNamespace = namespaceSymbol;
 
                 IEnumerable<INamedTypeSymbol> types = documentationModel
-                    .TypeSymbols
+                    .Types
                     .Where(f => f.ContainingType == null && MetadataNameEqualityComparer<INamespaceSymbol>.Instance.Equals(f.ContainingNamespace, namespaceSymbol));
 
                 AppendTypes(types);
@@ -160,7 +161,7 @@ namespace Roslynator.Documentation
                             SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
                             isVisibleAttribute: IsVisibleAttribute,
                             newLineOnAttributes: Options.NewLineOnAttributes,
-                            attributeArguments: Options.AttributeArguments,
+                            includeAttributeArguments: Options.AttributeArguments,
                             omitIEnumerable: Options.OmitIEnumerable));
 
                         switch (typeKind)
@@ -266,7 +267,7 @@ namespace Roslynator.Documentation
                             en.Current.GetAttributes(),
                             predicate: IsVisibleAttribute,
                             newLineOnAttributes: Options.NewLineOnAttributes,
-                            attributeArguments: Options.AttributeArguments));
+                            includeAttributeArguments: Options.AttributeArguments));
 
                         Append(en.Current.ToDisplayParts(_memberFormat));
 

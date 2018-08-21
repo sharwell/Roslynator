@@ -10,6 +10,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: DocumentationUrlProviders
     public abstract class DocumentationUrlProvider
     {
         private static readonly Regex _notWordCharOrUnderscoreRegex = new Regex(@"[^\w_]");
@@ -29,7 +30,7 @@ namespace Roslynator.Documentation
 
         public abstract DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders, ImmutableArray<string> containingFolders = default, string fragment = null);
 
-        public abstract string GetFragment(string s);
+        public abstract string GetFragment(string value);
 
         public virtual ImmutableArray<string> GetFolders(ISymbol symbol)
         {

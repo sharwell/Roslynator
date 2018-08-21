@@ -4,8 +4,7 @@ namespace Roslynator.Documentation
 {
     public enum DocumentationUrlKind
     {
-        None = 0,
-        Local = 1,
-        External = 2,
+        Local = 0,
+        External = 1,
     }
 }

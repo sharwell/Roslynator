@@ -155,6 +155,7 @@ namespace Roslynator.Documentation
             }
         }
 
+        //TODO: includeConversion
         public IEnumerable<IMethodSymbol> GetOperators(bool includeInherited = false)
         {
             if (!TypeKind.Is(TypeKind.Delegate, TypeKind.Enum))
@@ -255,7 +256,7 @@ namespace Roslynator.Documentation
             if (TypeKind.Is(TypeKind.Class, TypeKind.Interface)
                 && !Symbol.IsStatic)
             {
-                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.TypeSymbols)
+                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.Types)
                 {
                     if (typeSymbol.BaseType?.OriginalDefinition.Equals(Symbol) == true)
                         yield return typeSymbol;
@@ -274,7 +275,7 @@ namespace Roslynator.Documentation
             if (TypeKind.Is(TypeKind.Class, TypeKind.Interface)
                 && !Symbol.IsStatic)
             {
-                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.TypeSymbols)
+                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.Types)
                 {
                     if (typeSymbol.InheritsFrom(Symbol, includeInterfaces: true))
                         yield return typeSymbol;
@@ -306,6 +307,7 @@ namespace Roslynator.Documentation
             }
         }
 
+        //TODO: ?
         public IEnumerable<MemberDocumentationModel> GetMemberModels(TypeDocumentationParts parts = TypeDocumentationParts.All)
         {
             if (TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))

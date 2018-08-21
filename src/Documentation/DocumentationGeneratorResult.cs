@@ -17,6 +17,7 @@ namespace Roslynator.Documentation
 
         public string Content { get; }
 
+        //TODO: Url
         public string Path { get; }
 
         public DocumentationKind Kind { get; }

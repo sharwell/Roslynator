@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Roslynator.Documentation
 {
+    //TODO: ExternalUrlProviders
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public abstract class ExternalUrlProvider
     {

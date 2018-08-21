@@ -5,6 +5,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: OpenBracket
     public abstract class DocumentationResources
     {
         public static DocumentationResources Default { get; } = new DefaultDocumentationResources();

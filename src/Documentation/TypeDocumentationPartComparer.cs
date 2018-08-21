@@ -28,7 +28,7 @@ namespace Roslynator.Documentation
                     return 2;
                 case TypeDocumentationParts.ContainingAssembly:
                     return 3;
-                case TypeDocumentationParts.Obsolete:
+                case TypeDocumentationParts.ObsoleteMessage:
                     return 4;
                 case TypeDocumentationParts.Summary:
                     return 5;

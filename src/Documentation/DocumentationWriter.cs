@@ -13,6 +13,7 @@ using Roslynator.CSharp;
 
 namespace Roslynator.Documentation
 {
+    //TODO: zrevidovat headingLevelBase
     public abstract class DocumentationWriter : IDisposable
     {
         private bool _disposed;
@@ -208,6 +209,8 @@ namespace Roslynator.Documentation
 
         public abstract void WriteEndTableCell();
 
+        public abstract void WriteTableCell(string text);
+
         public abstract void WriteTableHeaderSeparator();
 
         public abstract void WriteCharEntity(char value);
@@ -271,14 +274,7 @@ namespace Roslynator.Documentation
             WriteString(namespaceSymbol.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces));
         }
 
-        public void WriteTableCell(string text)
-        {
-            WriteStartTableCell();
-            WriteString(text);
-            WriteEndTableCell();
-        }
-
-        public void WriteContent(IEnumerable<string> names, bool addLinkToRoot = false, bool beginWithSeparator = false)
+        public virtual void WriteContent(IEnumerable<string> names, bool addLinkToRoot = false, bool beginWithSeparator = false)
         {
             IEnumerator<string> en = names.GetEnumerator();
 
@@ -333,23 +329,14 @@ namespace Roslynator.Documentation
             WriteBold(title);
             WriteString(Resources.Colon);
             WriteSpace();
-
-            if (namespaceSymbol.IsGlobalNamespace)
-            {
-                WriteSymbol(namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
-            }
-            else
-            {
-                WriteLink(namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
-            }
-
+            WriteLink(namespaceSymbol, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
             WriteLine();
             WriteLine();
         }
 
-        public virtual void WriteContainingType(ISymbol symbol)
+        public virtual void WriteContainingType(ISymbol symbol, string title)
         {
-            WriteBold(Resources.ContainingTypeTitle);
+            WriteBold(title);
             WriteString(Resources.Colon);
             WriteSpace();
 
@@ -364,9 +351,9 @@ namespace Roslynator.Documentation
             WriteLine();
         }
 
-        public virtual void WriteAssembly(ISymbol symbol)
+        public virtual void WriteAssembly(ISymbol symbol, string title)
         {
-            WriteBold(Resources.AssemblyTitle);
+            WriteBold(title);
             WriteString(Resources.Colon);
             WriteSpace();
             WriteString(symbol.ContainingAssembly.Name);
@@ -399,7 +386,11 @@ namespace Roslynator.Documentation
 
         public virtual void WriteSummary(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation, int headingLevelBase = 0)
         {
-            WriteSection(heading: Resources.SummaryTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Summary, headingLevelBase: headingLevelBase);
+            WriteSection(
+                heading: Resources.SummaryTitle,
+                xmlDocumentation: xmlDocumentation,
+                elementName: WellKnownTags.Summary,
+                headingLevelBase: headingLevelBase);
         }
 
         public virtual void WriteDefinition(ISymbol symbol)
@@ -411,7 +402,7 @@ namespace Roslynator.Documentation
                 isVisibleAttribute: f => DocumentationUtility.IsVisibleAttribute(f),
                 formatBaseList: Options.FormatDefinitionBaseList,
                 formatConstraints: Options.FormatDefinitionConstraints,
-                attributeArguments: Options.AttributeArguments,
+                includeAttributeArguments: Options.AttributeArguments,
                 omitIEnumerable: Options.OmitIEnumerable,
                 useNameOnlyIfPossible: true);
 
@@ -512,6 +503,64 @@ namespace Roslynator.Documentation
                             xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(this);
                         }
 
+                        break;
+                    }
+                case SymbolKind.Field:
+                    {
+                        var fieldSymbol = (IFieldSymbol)symbol;
+
+                        WriteHeading(3, Resources.FieldValueTitle);
+                        WriteTypeLink(fieldSymbol.Type, containingNamespace: Options.AddContainingNamespace);
+                        break;
+                    }
+                case SymbolKind.Method:
+                    {
+                        var methodSymbol = (IMethodSymbol)symbol;
+
+                        switch (methodSymbol.MethodKind)
+                        {
+                            case MethodKind.UserDefinedOperator:
+                            case MethodKind.Conversion:
+                                {
+                                    WriteHeading(3, Resources.ReturnsTitle);
+                                    WriteTypeLink(methodSymbol.ReturnType, containingNamespace: Options.AddContainingNamespace);
+                                    WriteLine();
+                                    WriteLine();
+
+                                    xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(this);
+                                    break;
+                                }
+                            default:
+                                {
+                                    ITypeSymbol returnType = methodSymbol.ReturnType;
+
+                                    if (returnType.SpecialType == SpecialType.System_Void)
+                                        return;
+
+                                    WriteHeading(3, Resources.ReturnsTitle);
+                                    WriteTypeLink(returnType, containingNamespace: Options.AddContainingNamespace);
+                                    WriteLine();
+                                    WriteLine();
+
+                                    xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(this);
+                                    break;
+                                }
+                        }
+
+                        break;
+                    }
+                case SymbolKind.Property:
+                    {
+                        var propertySymbol = (IPropertySymbol)symbol;
+
+                        WriteHeading(3, Resources.PropertyValueTitle);
+                        WriteTypeLink(propertySymbol.Type, containingNamespace: Options.AddContainingNamespace);
+                        WriteLine();
+                        WriteLine();
+
+                        string elementName = (propertySymbol.IsIndexer) ? WellKnownTags.Returns : WellKnownTags.Value;
+
+                        xmlDocumentation?.Element(elementName)?.WriteContentTo(this);
                         break;
                     }
             }
@@ -630,7 +679,7 @@ namespace Roslynator.Documentation
             WriteLine();
         }
 
-        public virtual void WriteDerivedTypes(INamedTypeSymbol baseType, IEnumerable<INamedTypeSymbol> derivedTypes)
+        public virtual void WriteDerivedTypes(IEnumerable<INamedTypeSymbol> derivedTypes)
         {
             WriteList(
                 derivedTypes,
@@ -643,10 +692,10 @@ namespace Roslynator.Documentation
                 addNamespace: Options.AddContainingNamespace);
         }
 
-        public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> implementedInterfaces)
+        public virtual void WriteImplementedInterfaces(IEnumerable<INamedTypeSymbol> interfaceTypes)
         {
             WriteList(
-                implementedInterfaces,
+                interfaceTypes,
                 heading: Resources.ImplementsTitle,
                 headingLevel: 3,
                 format: SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters,
@@ -705,7 +754,7 @@ namespace Roslynator.Documentation
             WriteSection(heading: Resources.RemarksTitle, xmlDocumentation: xmlDocumentation, elementName: WellKnownTags.Remarks, headingLevelBase: headingLevelBase);
         }
 
-        public virtual void WriteEnumFields(IEnumerable<IFieldSymbol> fields, INamedTypeSymbol enumType)
+        public virtual void WriteEnumFields(IEnumerable<IFieldSymbol> fields, INamedTypeSymbol containingType)
         {
             using (IEnumerator<IFieldSymbol> en = fields.GetEnumerator())
             {
@@ -715,9 +764,9 @@ namespace Roslynator.Documentation
 
                     ImmutableArray<EnumFieldInfo> fieldInfos = default;
 
-                    if (enumType.HasAttribute(MetadataNames.System_FlagsAttribute))
+                    if (containingType.HasAttribute(MetadataNames.System_FlagsAttribute))
                     {
-                        fieldInfos = EnumUtility.GetFields(enumType);
+                        fieldInfos = EnumUtility.GetFields(containingType);
 
                         foreach (IFieldSymbol field in fields)
                         {
@@ -829,10 +878,10 @@ namespace Roslynator.Documentation
             WriteTable(explicitInterfaceImplementations, Resources.ExplicitInterfaceImplementationsTitle, 2, Resources.MemberTitle, Resources.SummaryTitle, SymbolDisplayFormats.SimpleDefinition, SymbolDisplayAdditionalMemberOptions.UseItemPropertyName, canIndicateInterfaceImplementation: false);
         }
 
-        public virtual void WriteExtensionMethods(IEnumerable<IMethodSymbol> methods)
+        public virtual void WriteExtensionMethods(IEnumerable<IMethodSymbol> extensionMethods)
         {
             WriteTable(
-                methods,
+                extensionMethods,
                 Resources.ExtensionMethodsTitle,
                 2,
                 Resources.MethodTitle,
@@ -1576,10 +1625,16 @@ namespace Roslynator.Documentation
                     }
             }
 
-            if (DocumentationModel.IsExternal(symbol)
-                && canCreateExternalUrl)
+            if (DocumentationModel.IsExternal(symbol))
             {
-                return UrlProvider.GetExternalUrl(folders).Url;
+                if (symbol.Kind == SymbolKind.Namespace
+                    && ((INamespaceSymbol)symbol).IsGlobalNamespace)
+                {
+                    return null;
+                }
+
+                if (canCreateExternalUrl)
+                    return UrlProvider.GetExternalUrl(folders).Url;
             }
 
             ImmutableArray<string> containingFolders = (CurrentSymbol != null)

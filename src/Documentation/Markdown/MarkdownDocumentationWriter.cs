@@ -115,6 +115,8 @@ namespace Roslynator.Documentation.Markdown
 
         public override void WriteEndTableCell() => _writer.WriteEndTableCell();
 
+        public override void WriteTableCell(string text) => _writer.WriteTableCell(text);
+
         public override void WriteTableHeaderSeparator() => _writer.WriteTableHeaderSeparator();
 
         public override void WriteCharEntity(char value) => _writer.WriteCharEntity(value);

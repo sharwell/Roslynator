@@ -4,6 +4,9 @@ using System;
 
 namespace Roslynator.Documentation
 {
+    //TODO: IncludeContainingNamespace atd.
+    //TODO: DocumentationDisplayOptions
+    //TODO: With...
     public class DocumentationOptions
     {
         public DocumentationOptions(

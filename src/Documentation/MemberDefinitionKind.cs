@@ -2,6 +2,7 @@
 
 namespace Roslynator.Documentation
 {
+    //TODO: MemberKind
     public enum MemberDefinitionKind
     {
         None = 0,

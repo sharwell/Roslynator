@@ -20,7 +20,7 @@ namespace Roslynator.Documentation
             bool formatBaseList = false,
             bool formatConstraints = false,
             bool newLineOnAttributes = true,
-            bool attributeArguments = false,
+            bool includeAttributeArguments = false,
             bool omitIEnumerable = false,
             bool useNameOnlyIfPossible = false)
         {
@@ -99,7 +99,7 @@ namespace Roslynator.Documentation
 
             ImmutableArray<SymbolDisplayPart>.Builder builder = ImmutableArray.CreateBuilder<SymbolDisplayPart>(parts.Length);
 
-            AddAttributes(builder, attributes, isVisibleAttribute, containingNamespace, newLineOnAttributes: newLineOnAttributes, attributeArguments: attributeArguments);
+            AddAttributes(builder, attributes, isVisibleAttribute, containingNamespace, newLineOnAttributes: newLineOnAttributes, includeAttributeArguments: includeAttributeArguments);
 
             if (baseListCount == 0
                 && constraintCount == 0)
@@ -241,7 +241,7 @@ namespace Roslynator.Documentation
             ImmutableArray<AttributeData> attributes,
             Func<INamedTypeSymbol, bool> predicate,
             bool newLineOnAttributes = true,
-            bool attributeArguments = false)
+            bool includeAttributeArguments = false)
         {
             ImmutableArray<SymbolDisplayPart>.Builder builder = ImmutableArray.CreateBuilder<SymbolDisplayPart>();
 
@@ -250,7 +250,7 @@ namespace Roslynator.Documentation
                 attributes,
                 predicate,
                 newLineOnAttributes: newLineOnAttributes,
-                attributeArguments: attributeArguments);
+                includeAttributeArguments: includeAttributeArguments);
 
             return builder.ToImmutableArray();
         }
@@ -261,7 +261,7 @@ namespace Roslynator.Documentation
             Func<INamedTypeSymbol, bool> predicate = null,
             INamespaceSymbol containingNamespace = null,
             bool newLineOnAttributes = true,
-            bool attributeArguments = false)
+            bool includeAttributeArguments = false)
         {
             using (IEnumerator<AttributeData> en = attributes
                 .Where(f => predicate(f.AttributeClass))
@@ -275,7 +275,7 @@ namespace Roslynator.Documentation
                     {
                         builder.AddDisplayParts(en.Current.AttributeClass, containingNamespace);
 
-                        if (attributeArguments)
+                        if (includeAttributeArguments)
                             AddAttributeArguments(en.Current);
 
                         if (en.MoveNext())

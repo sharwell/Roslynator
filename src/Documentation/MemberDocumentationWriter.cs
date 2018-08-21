@@ -8,7 +8,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    internal abstract class MemberDocumentationWriter
+    internal class MemberDocumentationWriter
     {
         private ImmutableArray<MemberDocumentationParts> _enabledAndSortedMemberParts;
 
@@ -63,12 +63,12 @@ namespace Roslynator.Documentation
                 {
                     case MemberDocumentationParts.ContainingType:
                         {
-                            Writer.WriteContainingType(symbol);
+                            Writer.WriteContainingType(symbol, Resources.ContainingTypeTitle);
                             break;
                         }
                     case MemberDocumentationParts.ContainingAssembly:
                         {
-                            Writer.WriteAssembly(symbol);
+                            Writer.WriteAssembly(symbol, Resources.AssemblyTitle);
                             break;
                         }
                 }
@@ -148,10 +148,6 @@ namespace Roslynator.Documentation
             }
         }
 
-        public virtual void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
-        {
-        }
-
         public void WriteContent(ISymbol symbol, int headingLevelBase = 0)
         {
             SymbolXmlDocumentation xmlDocumentation = DocumentationModel.GetXmlDocumentation(symbol, Options.PreferredCultureName);
@@ -160,7 +156,7 @@ namespace Roslynator.Documentation
             {
                 switch (part)
                 {
-                    case MemberDocumentationParts.Obsolete:
+                    case MemberDocumentationParts.ObsoleteMessage:
                         {
                             if (symbol.HasAttribute(MetadataNames.System_ObsoleteAttribute))
                                 Writer.WriteObsoleteMessage(symbol);
@@ -191,7 +187,7 @@ namespace Roslynator.Documentation
                         }
                     case MemberDocumentationParts.ReturnValue:
                         {
-                            WriteReturnValue(symbol, xmlDocumentation);
+                            Writer.WriteReturnValue(symbol, xmlDocumentation);
                             break;
                         }
                     case MemberDocumentationParts.Implements:
@@ -315,37 +311,12 @@ namespace Roslynator.Documentation
             public FieldDocumentationWriter(DocumentationWriter writer) : base(writer)
             {
             }
-
-            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
-            {
-                var fieldSymbol = (IFieldSymbol)symbol;
-
-                Writer.WriteHeading(3, Resources.FieldValueTitle);
-                Writer.WriteTypeLink(fieldSymbol.Type, containingNamespace: Options.AddContainingNamespace);
-            }
         }
 
         private class MethodDocumentationWriter : MemberDocumentationWriter
         {
             public MethodDocumentationWriter(DocumentationWriter writer) : base(writer)
             {
-            }
-
-            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
-            {
-                var methodSymbol = (IMethodSymbol)symbol;
-
-                ITypeSymbol returnType = methodSymbol.ReturnType;
-
-                if (returnType.SpecialType == SpecialType.System_Void)
-                    return;
-
-                Writer.WriteHeading(3, Resources.ReturnsTitle);
-                Writer.WriteTypeLink(returnType, containingNamespace: Options.AddContainingNamespace);
-                Writer.WriteLine();
-                Writer.WriteLine();
-
-                xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(Writer);
             }
         }
 
@@ -354,38 +325,12 @@ namespace Roslynator.Documentation
             public OperatorDocumentationWriter(DocumentationWriter writer) : base(writer)
             {
             }
-
-            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
-            {
-                var methodSymbol = (IMethodSymbol)symbol;
-
-                Writer.WriteHeading(3, Resources.ReturnsTitle);
-                Writer.WriteTypeLink(methodSymbol.ReturnType, containingNamespace: Options.AddContainingNamespace);
-                Writer.WriteLine();
-                Writer.WriteLine();
-
-                xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(Writer);
-            }
         }
 
         private class PropertyDocumentationWriter : MemberDocumentationWriter
         {
             public PropertyDocumentationWriter(DocumentationWriter writer) : base(writer)
             {
-            }
-
-            public override void WriteReturnValue(ISymbol symbol, SymbolXmlDocumentation xmlDocumentation = null)
-            {
-                var propertySymbol = (IPropertySymbol)symbol;
-
-                Writer.WriteHeading(3, Resources.PropertyValueTitle);
-                Writer.WriteTypeLink(propertySymbol.Type, containingNamespace: Options.AddContainingNamespace);
-                Writer.WriteLine();
-                Writer.WriteLine();
-
-                string elementName = (propertySymbol.IsIndexer) ? WellKnownTags.Returns : WellKnownTags.Value;
-
-                xmlDocumentation?.Element(elementName)?.WriteContentTo(Writer);
             }
         }
     }

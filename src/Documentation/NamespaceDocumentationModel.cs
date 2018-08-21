@@ -7,6 +7,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
+    //TODO: zrušit
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public sealed class NamespaceDocumentationModel
     {
@@ -22,9 +23,10 @@ namespace Roslynator.Documentation
 
         internal DocumentationModel DocumentationModel { get; }
 
+        //TODO: GetTypes
         public IEnumerable<INamedTypeSymbol> GetTypeSymbols()
         {
-            return DocumentationModel.TypeSymbols.Where(f => MetadataNameEqualityComparer<INamespaceSymbol>.Instance.Equals(f.ContainingNamespace, Symbol));
+            return DocumentationModel.Types.Where(f => MetadataNameEqualityComparer<INamespaceSymbol>.Instance.Equals(f.ContainingNamespace, Symbol));
         }
 
         public bool Equals(NamespaceDocumentationModel other)

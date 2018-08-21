@@ -41,17 +41,17 @@ namespace Roslynator.Documentation
 
         public IEnumerable<MetadataReference> References => Compilation.References;
 
-        public IEnumerable<INamespaceSymbol> NamespaceSymbols
+        public IEnumerable<INamespaceSymbol> Namespaces
         {
             get
             {
-                return TypeSymbols
+                return Types
                     .Select(f => f.ContainingNamespace)
                     .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
             }
         }
 
-        public IEnumerable<INamedTypeSymbol> TypeSymbols
+        public IEnumerable<INamedTypeSymbol> Types
         {
             get { return Assemblies.SelectMany(f => f.GetTypes(typeSymbol => IsVisible(typeSymbol))); }
         }
@@ -63,7 +63,7 @@ namespace Roslynator.Documentation
 
         public IEnumerable<IMethodSymbol> GetExtensionMethods()
         {
-            foreach (INamedTypeSymbol typeSymbol in TypeSymbols)
+            foreach (INamedTypeSymbol typeSymbol in Types)
             {
                 if (typeSymbol.MightContainExtensionMethods)
                 {
@@ -85,7 +85,7 @@ namespace Roslynator.Documentation
 
         public IEnumerable<IMethodSymbol> GetExtensionMethods(INamedTypeSymbol typeSymbol)
         {
-            foreach (INamedTypeSymbol symbol in TypeSymbols)
+            foreach (INamedTypeSymbol symbol in Types)
             {
                 if (symbol.MightContainExtensionMethods)
                 {

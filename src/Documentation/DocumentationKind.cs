@@ -2,6 +2,7 @@
 
 namespace Roslynator.Documentation
 {
+    //TODO: DocumentationDocumentKind
     public enum DocumentationKind
     {
         None = 0,
@@ -9,7 +10,6 @@ namespace Roslynator.Documentation
         Namespace = 2,
         Type = 3,
         Member = 4,
-        ObjectModel = 5,
-        Extensions = 6,
+        Extensions = 5,
     }
 }

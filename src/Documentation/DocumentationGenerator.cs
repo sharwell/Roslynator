@@ -143,7 +143,7 @@ namespace Roslynator.Documentation
 
             if (depth <= DocumentationDepth.Namespace)
             {
-                foreach (INamespaceSymbol namespaceSymbol in DocumentationModel.NamespaceSymbols)
+                foreach (INamespaceSymbol namespaceSymbol in DocumentationModel.Namespaces)
                 {
                     NamespaceDocumentationModel namespaceModel = DocumentationModel.GetNamespaceModel(namespaceSymbol);
 
@@ -153,7 +153,7 @@ namespace Roslynator.Documentation
 
             if (depth <= DocumentationDepth.Type)
             {
-                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.TypeSymbols)
+                foreach (INamedTypeSymbol typeSymbol in DocumentationModel.Types)
                 {
                     TypeDocumentationModel typeModel = DocumentationModel.GetTypeModel(typeSymbol);
 
@@ -516,10 +516,10 @@ namespace Roslynator.Documentation
                             }
                         case TypeDocumentationParts.ContainingAssembly:
                             {
-                                writer.WriteAssembly(typeSymbol);
+                                writer.WriteAssembly(typeSymbol, Resources.AssemblyTitle);
                                 break;
                             }
-                        case TypeDocumentationParts.Obsolete:
+                        case TypeDocumentationParts.ObsoleteMessage:
                             {
                                 if (typeSymbol.HasAttribute(MetadataNames.System_ObsoleteAttribute))
                                     writer.WriteObsoleteMessage(typeSymbol);
@@ -568,7 +568,7 @@ namespace Roslynator.Documentation
                         case TypeDocumentationParts.Derived:
                             {
                                 if (derivedTypes.Any())
-                                    writer.WriteDerivedTypes(typeSymbol, derivedTypes);
+                                    writer.WriteDerivedTypes(derivedTypes);
 
                                 break;
                             }
@@ -757,7 +757,7 @@ namespace Roslynator.Documentation
                     case TypeDocumentationParts.Content:
                     case TypeDocumentationParts.ContainingNamespace:
                     case TypeDocumentationParts.ContainingAssembly:
-                    case TypeDocumentationParts.Obsolete:
+                    case TypeDocumentationParts.ObsoleteMessage:
                     case TypeDocumentationParts.Summary:
                     case TypeDocumentationParts.Definition:
                     case TypeDocumentationParts.TypeParameters:
@@ -894,7 +894,7 @@ namespace Roslynator.Documentation
         {
             SymbolDisplayFormat format = SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters;
 
-            IEnumerable<INamedTypeSymbol> typeSymbols = DocumentationModel.TypeSymbols;
+            IEnumerable<INamedTypeSymbol> typeSymbols = DocumentationModel.Types;
 
             foreach (RootDocumentationParts part in EnabledAndSortedRootParts)
             {
@@ -907,7 +907,7 @@ namespace Roslynator.Documentation
                         }
                     case RootDocumentationParts.Namespaces:
                         {
-                            writer.WriteList(DocumentationModel.NamespaceSymbols, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
+                            writer.WriteList(DocumentationModel.Namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
                             break;
                         }
                     case RootDocumentationParts.Classes:
@@ -1101,7 +1101,6 @@ namespace Roslynator.Documentation
                 switch (kind)
                 {
                     case DocumentationKind.Root:
-                    case DocumentationKind.ObjectModel:
                     case DocumentationKind.Extensions:
                         return fileName;
                     case DocumentationKind.Namespace:
