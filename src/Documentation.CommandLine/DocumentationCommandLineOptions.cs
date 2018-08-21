@@ -63,26 +63,26 @@ namespace Roslynator.Documentation
         [Option(longName: "max-derived-types", Default = DefaultValues.MaxDerivedTypes)]
         public int MaxDerivedTypes { get; set; }
 
-        [Option(longName: "indicate-obsolete", Default = DefaultValues.IndicateObsolete)]
-        public bool IndicateObsolete { get; set; }
+        [Option(longName: "mark-obsolete", Default = DefaultValues.MarkObsolete)]
+        public bool MarkObsolete { get; set; }
 
-        [Option(longName: "indicate-inherited-member", Default = DefaultValues.IndicateInheritedMember)]
-        public bool IndicateInheritedMember { get; set; }
+        [Option(longName: "include-member-inherited-from", Default = DefaultValues.IncludeMemberInheritedFrom)]
+        public bool IncludeMemberInheritedFrom { get; set; }
 
-        [Option(longName: "indicate-overridden-member", Default = DefaultValues.IndicateOverriddenMember)]
-        public bool IndicateOverriddenMember { get; set; }
+        [Option(longName: "include-member-overrides", Default = DefaultValues.IncludeMemberOverrides)]
+        public bool IncludeMemberOverrides { get; set; }
 
-        [Option(longName: "indicate-interface-implementation", Default = DefaultValues.IndicateInterfaceImplementation)]
-        public bool IndicateInterfaceImplementation { get; set; }
+        [Option(longName: "include-member-implements", Default = DefaultValues.IncludeMemberImplements)]
+        public bool IncludeMemberImplements { get; set; }
 
-        [Option(longName: "include-constant-value", Default = DefaultValues.IncludeConstantValue)]
-        public bool IncludeConstantValue { get; set; }
-
-        [Option(longName: "include-attribute-arguments", Default = DefaultValues.IncludeAttributeArguments)]
-        public bool IncludeAttributeArguments { get; set; }
+        [Option(longName: "include-member-constant-value", Default = DefaultValues.IncludeMemberConstantValue)]
+        public bool IncludeMemberConstantValue { get; set; }
 
         [Option(longName: "include-inherited-interface-members", Default = DefaultValues.IncludeInheritedInterfaceMembers)]
         public bool IncludeInheritedInterfaceMembers { get; set; }
+
+        [Option(longName: "include-attribute-arguments", Default = DefaultValues.IncludeAttributeArguments)]
+        public bool IncludeAttributeArguments { get; set; }
 
         [Option(longName: "omit-ienumerable", Default = DefaultValues.OmitIEnumerable)]
         public bool OmitIEnumerable { get; set; }

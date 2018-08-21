@@ -15,13 +15,13 @@ namespace Roslynator.Documentation
             bool placeSystemNamespaceFirst = DefaultValues.PlaceSystemNamespaceFirst,
             bool formatDeclarationBaseList = DefaultValues.FormatDeclarationBaseList,
             bool formatDeclarationConstraints = DefaultValues.FormatDeclarationConstraints,
-            bool indicateObsolete = DefaultValues.IndicateObsolete,
-            bool indicateInheritedMember = DefaultValues.IndicateInheritedMember,
-            bool indicateOverriddenMember = DefaultValues.IndicateOverriddenMember,
-            bool indicateInterfaceImplementation = DefaultValues.IndicateInterfaceImplementation,
-            bool includeConstantValue = DefaultValues.IncludeConstantValue,
-            bool includeAttributeArguments = DefaultValues.IncludeAttributeArguments,
+            bool markObsolete = DefaultValues.MarkObsolete,
+            bool includeMemberInheritedFrom = DefaultValues.IncludeMemberInheritedFrom,
+            bool includeMemberOverrides = DefaultValues.IncludeMemberOverrides,
+            bool includeMemberImplements = DefaultValues.IncludeMemberImplements,
+            bool includeMemberConstantValue = DefaultValues.IncludeMemberConstantValue,
             bool includeInheritedInterfaceMembers = DefaultValues.IncludeInheritedInterfaceMembers,
+            bool includeAttributeArguments = DefaultValues.IncludeAttributeArguments,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
             DocumentationDepth depth = DefaultValues.Depth,
             RootDocumentationParts rootParts = RootDocumentationParts.All,
@@ -40,13 +40,13 @@ namespace Roslynator.Documentation
             PlaceSystemNamespaceFirst = placeSystemNamespaceFirst;
             FormatDeclarationBaseList = formatDeclarationBaseList;
             FormatDeclarationConstraints = formatDeclarationConstraints;
-            IndicateObsolete = indicateObsolete;
-            IndicateInheritedMember = indicateInheritedMember;
-            IndicateOverriddenMember = indicateOverriddenMember;
-            IndicateInterfaceImplementation = indicateInterfaceImplementation;
-            IncludeConstantValue = includeConstantValue;
-            IncludeAttributeArguments = includeAttributeArguments;
+            MarkObsolete = markObsolete;
+            IncludeMemberInheritedFrom = includeMemberInheritedFrom;
+            IncludeMemberOverrides = includeMemberOverrides;
+            IncludeMemberImplements = includeMemberImplements;
+            IncludeMemberConstantValue = includeMemberConstantValue;
             IncludeInheritedInterfaceMembers = includeInheritedInterfaceMembers;
+            IncludeAttributeArguments = includeAttributeArguments;
             OmitIEnumerable = omitIEnumerable;
             Depth = depth;
             RootParts = rootParts;
@@ -73,19 +73,19 @@ namespace Roslynator.Documentation
 
         public bool FormatDeclarationConstraints { get; }
 
-        public bool IndicateObsolete { get; }
+        public bool MarkObsolete { get; }
 
-        public bool IndicateInheritedMember { get; }
+        public bool IncludeMemberInheritedFrom { get; }
 
-        public bool IndicateOverriddenMember { get; }
+        public bool IncludeMemberOverrides { get; }
 
-        public bool IndicateInterfaceImplementation { get; }
+        public bool IncludeMemberImplements { get; }
 
-        public bool IncludeConstantValue { get; }
-
-        public bool IncludeAttributeArguments { get; }
+        public bool IncludeMemberConstantValue { get; }
 
         public bool IncludeInheritedInterfaceMembers { get; }
+
+        public bool IncludeAttributeArguments { get; }
 
         public bool OmitIEnumerable { get; }
 
@@ -127,15 +127,15 @@ namespace Roslynator.Documentation
             public const bool PlaceSystemNamespaceFirst = true;
             public const bool FormatDeclarationBaseList = true;
             public const bool FormatDeclarationConstraints = true;
-            public const bool IndicateObsolete = true;
-            public const bool IndicateInheritedMember = true;
-            public const bool IndicateOverriddenMember = true;
-            public const bool IndicateInterfaceImplementation = true;
-            public const bool IncludeConstantValue = true;
-            public const bool IncludeAttributeArguments = true;
+            public const bool MarkObsolete = true;
+            public const bool IncludeMemberInheritedFrom = true;
+            public const bool IncludeMemberOverrides = true;
+            public const bool IncludeMemberImplements = true;
+            public const bool IncludeMemberConstantValue = true;
             public const bool IncludeInheritedInterfaceMembers = false;
+            public const bool IncludeAttributeArguments = true;
             public const bool OmitIEnumerable = true;
-            public const DocumentationDepth Depth =  DocumentationDepth.Member;
+            public const DocumentationDepth Depth = DocumentationDepth.Member;
         }
     }
 }

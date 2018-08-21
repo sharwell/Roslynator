@@ -1179,21 +1179,21 @@ namespace Roslynator.Documentation
 
                         if (isInherited)
                         {
-                            if (Options.IndicateInheritedMember)
+                            if (Options.IncludeMemberInheritedFrom)
                                 WriteInheritedFrom(symbol.ContainingType.OriginalDefinition, SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters, additionalOptions);
                         }
                         else
                         {
-                            if (Options.IndicateOverriddenMember)
+                            if (Options.IncludeMemberOverrides)
                                 WriteOverrides(symbol);
 
                             if (canIndicateInterfaceImplementation
-                                && Options.IndicateInterfaceImplementation)
+                                && Options.IncludeMemberImplements)
                             {
                                 WriteImplements(symbol);
                             }
 
-                            if (Options.IncludeConstantValue
+                            if (Options.IncludeMemberConstantValue
                                 && symbol.Kind == SymbolKind.Field)
                             {
                                 var fieldSymbol = (IFieldSymbol)symbol;
@@ -1575,7 +1575,7 @@ namespace Roslynator.Documentation
 
         private void WriteObsolete(ISymbol symbol, bool before = true)
         {
-            if (Options.IndicateObsolete
+            if (Options.MarkObsolete
                 && symbol.HasAttribute(MetadataNames.System_ObsoleteAttribute))
             {
                 if (!before)
