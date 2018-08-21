@@ -31,6 +31,7 @@ namespace Roslynator.Documentation
                 case "DefaultMemberAttribute":
                     return attributeType.ContainingNamespace.HasMetadataName(MetadataNames.System_Reflection);
                 case "AsyncStateMachineAttribute":
+                case "IsReadOnlyAttribute":
                 case "IteratorStateMachineAttribute":
                 case "MethodImplAttribute":
                 case "TypeForwardedFromAttribute":

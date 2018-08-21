@@ -1408,8 +1408,7 @@ namespace Roslynator.Documentation
             SymbolDisplayFormat format,
             SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.None,
             bool addLinkForTypeParameters = false,
-            bool canCreateExternalUrl = true,
-            bool emphasizeName = false)
+            bool canCreateExternalUrl = true)
         {
             if (addLinkForTypeParameters
                 && symbol is INamedTypeSymbol namedType)
@@ -1423,48 +1422,7 @@ namespace Roslynator.Documentation
             {
                 string url = GetUrl(symbol, canCreateExternalUrl);
 
-                if (url != null
-                    && emphasizeName
-                    && (format.MemberOptions & SymbolDisplayMemberOptions.IncludeParameters) != 0
-                    && symbol.Kind == SymbolKind.Method
-                    && ((IMethodSymbol)symbol).MethodKind.Is(MethodKind.Ordinary, MethodKind.Constructor, MethodKind.UserDefinedOperator, MethodKind.Conversion))
-                {
-                    ImmutableArray<SymbolDisplayPart> parts = symbol.ToDisplayParts(format, additionalOptions);
-
-                    int index = -1;
-
-                    for (int i = 0; i < parts.Length; i++)
-                    {
-                        if (parts[i].Kind == SymbolDisplayPartKind.Punctuation)
-                        {
-                            string s = parts[i].ToString();
-
-                            if (s == "("
-                                || s == "["
-                                || s == "<")
-                            {
-                                index = i;
-                                break;
-                            }
-                        }
-                    }
-
-                    if (index >= 0)
-                    {
-                        WriteStartLink();
-                        WriteBold(ImmutableArray.Create(parts, 0, index).ToDisplayString());
-                        WriteString(ImmutableArray.Create(parts, index, parts.Length - index).ToDisplayString());
-                        WriteEndLink(url);
-                    }
-                    else
-                    {
-                        WriteLink(parts.ToDisplayString(), url);
-                    }
-                }
-                else
-                {
-                    WriteLinkOrText(symbol.ToDisplayString(format, additionalOptions), url);
-                }
+                WriteLinkOrText(symbol.ToDisplayString(format, additionalOptions), url);
             }
         }
 

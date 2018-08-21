@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>1.0.0.0</Version>
+    <Version>0.1.0.0</Version>
     <AssemblyName>Roslynator.Documentation</AssemblyName>
     <RootNamespace>Roslynator.Documentation</RootNamespace>
     <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
@@ -19,12 +19,12 @@
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.3\Roslynator.Documentation.xml</DocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\netstandard1.3\Roslynator.Documentation.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageId>Roslynator.Documentation</PackageId>
-    <PackageVersion>1.0.0-test</PackageVersion>
+    <PackageVersion>0.1.0-beta</PackageVersion>
     <Authors>Josef Pihrt</Authors>
     <Company></Company>
     <Description>This API enables to generate documentation for your .NET library
@@ -45,7 +45,7 @@ Roslynator.Documentation.DocumentationGenerator</Description>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.8.0" />
-    <PackageReference Include="DotMarkdown" Version="0.1.0-test" />
+    <PackageReference Include="DotMarkdown" Version="0.1.0" />
   </ItemGroup>
 
   <ItemGroup>
