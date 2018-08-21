@@ -7,9 +7,9 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    internal class MemberDefinitionEqualityComparer : EqualityComparer<ISymbol>
+    internal class MemberDeclarationEqualityComparer : EqualityComparer<ISymbol>
     {
-        public static MemberDefinitionEqualityComparer Instance { get; } = new MemberDefinitionEqualityComparer();
+        public static MemberDeclarationEqualityComparer Instance { get; } = new MemberDeclarationEqualityComparer();
 
         public override bool Equals(ISymbol x, ISymbol y)
         {

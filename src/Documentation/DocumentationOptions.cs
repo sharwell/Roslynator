@@ -4,27 +4,24 @@ using System;
 
 namespace Roslynator.Documentation
 {
-    //TODO: IncludeContainingNamespace atd.
-    //TODO: DocumentationDisplayOptions
-    //TODO: With...
     public class DocumentationOptions
     {
         public DocumentationOptions(
             string preferredCultureName = null,
             string baseLocalUrl = null,
-            int maxDerivedItems = DefaultValues.MaxDerivedItems,
+            int maxDerivedTypes = DefaultValues.MaxDerivedTypes,
             bool classHierarchy = DefaultValues.ClassHierarchy,
-            bool addContainingNamespace = DefaultValues.AddContainingNamespace,
-            bool systemNamespaceFirst = DefaultValues.SystemNamespaceFirst,
-            bool formatDefinitionBaseList = DefaultValues.FormatDefinitionBaseList,
-            bool formatDefinitionConstraints = DefaultValues.FormatDefinitionConstraints,
+            bool includeContainingNamespace = DefaultValues.IncludeContainingNamespace,
+            bool placeSystemNamespaceFirst = DefaultValues.PlaceSystemNamespaceFirst,
+            bool formatDeclarationBaseList = DefaultValues.FormatDeclarationBaseList,
+            bool formatDeclarationConstraints = DefaultValues.FormatDeclarationConstraints,
             bool indicateObsolete = DefaultValues.IndicateObsolete,
             bool indicateInheritedMember = DefaultValues.IndicateInheritedMember,
             bool indicateOverriddenMember = DefaultValues.IndicateOverriddenMember,
             bool indicateInterfaceImplementation = DefaultValues.IndicateInterfaceImplementation,
-            bool addConstantValue = DefaultValues.AddConstantValue,
-            bool attributeArguments = DefaultValues.AttributeArguments,
-            bool inheritedInterfaceMembers = DefaultValues.InheritedInterfaceMembers,
+            bool includeConstantValue = DefaultValues.IncludeConstantValue,
+            bool includeAttributeArguments = DefaultValues.IncludeAttributeArguments,
+            bool includeInheritedInterfaceMembers = DefaultValues.IncludeInheritedInterfaceMembers,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
             DocumentationDepth depth = DefaultValues.Depth,
             RootDocumentationParts rootParts = RootDocumentationParts.All,
@@ -32,24 +29,24 @@ namespace Roslynator.Documentation
             TypeDocumentationParts typeParts = TypeDocumentationParts.All,
             MemberDocumentationParts memberParts = MemberDocumentationParts.All)
         {
-            if (maxDerivedItems < 0)
-                throw new ArgumentOutOfRangeException(nameof(maxDerivedItems), maxDerivedItems, "Maximum number of derived items must be greater than or equal to 0.");
+            if (maxDerivedTypes < 0)
+                throw new ArgumentOutOfRangeException(nameof(maxDerivedTypes), maxDerivedTypes, "Maximum number of derived items must be greater than or equal to 0.");
 
             PreferredCultureName = preferredCultureName;
             BaseLocalUrl = baseLocalUrl;
-            MaxDerivedItems = maxDerivedItems;
+            MaxDerivedTypes = maxDerivedTypes;
             ClassHierarchy = classHierarchy;
-            AddContainingNamespace = addContainingNamespace;
-            SystemNamespaceFirst = systemNamespaceFirst;
-            FormatDefinitionBaseList = formatDefinitionBaseList;
-            FormatDefinitionConstraints = formatDefinitionConstraints;
+            IncludeContainingNamespace = includeContainingNamespace;
+            PlaceSystemNamespaceFirst = placeSystemNamespaceFirst;
+            FormatDeclarationBaseList = formatDeclarationBaseList;
+            FormatDeclarationConstraints = formatDeclarationConstraints;
             IndicateObsolete = indicateObsolete;
             IndicateInheritedMember = indicateInheritedMember;
             IndicateOverriddenMember = indicateOverriddenMember;
             IndicateInterfaceImplementation = indicateInterfaceImplementation;
-            AddConstantValue = addConstantValue;
-            AttributeArguments = attributeArguments;
-            InheritedInterfaceMembers = inheritedInterfaceMembers;
+            IncludeConstantValue = includeConstantValue;
+            IncludeAttributeArguments = includeAttributeArguments;
+            IncludeInheritedInterfaceMembers = includeInheritedInterfaceMembers;
             OmitIEnumerable = omitIEnumerable;
             Depth = depth;
             RootParts = rootParts;
@@ -64,17 +61,17 @@ namespace Roslynator.Documentation
 
         public string BaseLocalUrl { get; }
 
-        public int MaxDerivedItems { get; }
+        public int MaxDerivedTypes { get; }
 
         public bool ClassHierarchy { get; }
 
-        public bool AddContainingNamespace { get; }
+        public bool IncludeContainingNamespace { get; }
 
-        public bool SystemNamespaceFirst { get; }
+        public bool PlaceSystemNamespaceFirst { get; }
 
-        public bool FormatDefinitionBaseList { get; }
+        public bool FormatDeclarationBaseList { get; }
 
-        public bool FormatDefinitionConstraints { get; }
+        public bool FormatDeclarationConstraints { get; }
 
         public bool IndicateObsolete { get; }
 
@@ -84,11 +81,11 @@ namespace Roslynator.Documentation
 
         public bool IndicateInterfaceImplementation { get; }
 
-        public bool AddConstantValue { get; }
+        public bool IncludeConstantValue { get; }
 
-        public bool AttributeArguments { get; }
+        public bool IncludeAttributeArguments { get; }
 
-        public bool InheritedInterfaceMembers { get; }
+        public bool IncludeInheritedInterfaceMembers { get; }
 
         public bool OmitIEnumerable { get; }
 
@@ -124,19 +121,19 @@ namespace Roslynator.Documentation
 
         internal static class DefaultValues
         {
-            public const int MaxDerivedItems = 5;
+            public const int MaxDerivedTypes = 5;
             public const bool ClassHierarchy = true;
-            public const bool AddContainingNamespace = true;
-            public const bool SystemNamespaceFirst = true;
-            public const bool FormatDefinitionBaseList = true;
-            public const bool FormatDefinitionConstraints = true;
+            public const bool IncludeContainingNamespace = true;
+            public const bool PlaceSystemNamespaceFirst = true;
+            public const bool FormatDeclarationBaseList = true;
+            public const bool FormatDeclarationConstraints = true;
             public const bool IndicateObsolete = true;
             public const bool IndicateInheritedMember = true;
             public const bool IndicateOverriddenMember = true;
             public const bool IndicateInterfaceImplementation = true;
-            public const bool AddConstantValue = true;
-            public const bool AttributeArguments = true;
-            public const bool InheritedInterfaceMembers = false;
+            public const bool IncludeConstantValue = true;
+            public const bool IncludeAttributeArguments = true;
+            public const bool IncludeInheritedInterfaceMembers = false;
             public const bool OmitIEnumerable = true;
             public const DocumentationDepth Depth =  DocumentationDepth.Member;
         }

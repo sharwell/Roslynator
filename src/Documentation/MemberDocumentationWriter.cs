@@ -80,7 +80,7 @@ namespace Roslynator.Documentation
             }
             else
             {
-                SymbolDisplayFormat format = SymbolDisplayFormats.SimpleDefinition;
+                SymbolDisplayFormat format = SymbolDisplayFormats.SimpleDeclaration;
                 const SymbolDisplayAdditionalMemberOptions additionalOptions = SymbolDisplayAdditionalMemberOptions.UseItemPropertyName | SymbolDisplayAdditionalMemberOptions.UseOperatorName;
 
                 Writer.WriteTable(
@@ -108,7 +108,7 @@ namespace Roslynator.Documentation
 
         public virtual void WriteTitle(ISymbol symbol, bool isOverloaded)
         {
-            Writer.WriteLinkDestination("_top");
+            Writer.WriteLinkDestination(WellKnownNames.TopFragmentName);
             Writer.WriteLine();
 
             Writer.WriteStartHeading(1);
@@ -170,9 +170,9 @@ namespace Roslynator.Documentation
 
                             break;
                         }
-                    case MemberDocumentationParts.Definition:
+                    case MemberDocumentationParts.Declaration:
                         {
-                            Writer.WriteDefinition(symbol);
+                            Writer.WriteDeclaration(symbol);
                             break;
                         }
                     case MemberDocumentationParts.TypeParameters:
@@ -284,7 +284,7 @@ namespace Roslynator.Documentation
 
                 if (!isOverloaded)
                 {
-                    Writer.WriteString(symbol.ToDisplayString(SymbolDisplayFormats.SimpleDefinition));
+                    Writer.WriteString(symbol.ToDisplayString(SymbolDisplayFormats.SimpleDeclaration));
                     Writer.WriteSpace();
                     Writer.WriteString(Resources.ConstructorTitle);
                 }

@@ -10,7 +10,6 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    //TODO: DocumentationUrlProviders
     public abstract class DocumentationUrlProvider
     {
         private static readonly Regex _notWordCharOrUnderscoreRegex = new Regex(@"[^\w_]");
@@ -22,11 +21,9 @@ namespace Roslynator.Documentation
                 : ImmutableArray<ExternalUrlProvider>.Empty;
         }
 
-        public static DocumentationUrlProvider GitHub { get; } = new GitHubDocumentationUrlProvider(ImmutableArray.Create(ExternalUrlProvider.MicrosoftDocs));
-
         public ImmutableArray<ExternalUrlProvider> ExternalProviders { get; }
 
-        public abstract string GetFileName(DocumentationKind kind);
+        public abstract string GetFileName(DocumentationFileKind kind);
 
         public abstract DocumentationUrlInfo GetLocalUrl(ImmutableArray<string> folders, ImmutableArray<string> containingFolders = default, string fragment = null);
 
@@ -160,10 +157,10 @@ namespace Roslynator.Documentation
 
         internal string GetUrlToRoot(int depth, char separator)
         {
-            string fileName = GetFileName(DocumentationKind.Root);
+            string fileName = GetFileName(DocumentationFileKind.Root);
 
             if (depth == 0)
-                return fileName + "#_top";
+                return fileName + "#" + WellKnownNames.TopFragmentName;
 
             int capacity = (depth * 3) + fileName.Length;
 
@@ -179,7 +176,8 @@ namespace Roslynator.Documentation
 
             sb.Append(separator);
             sb.Append(fileName);
-            sb.Append("#_top");
+            sb.Append("#");
+            sb.Append(WellKnownNames.TopFragmentName);
 
             return StringBuilderCache.GetStringAndFree(sb);
         }

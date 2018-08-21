@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis.CSharp;
 
 namespace Roslynator.Documentation
 {
-    internal static class SymbolDefinitionBuilder
+    internal static class SymbolDeclarationBuilder
     {
         public static ImmutableArray<SymbolDisplayPart> GetDisplayParts(
             ISymbol symbol,
@@ -19,7 +19,7 @@ namespace Roslynator.Documentation
             Func<INamedTypeSymbol, bool> isVisibleAttribute = null,
             bool formatBaseList = false,
             bool formatConstraints = false,
-            bool newLineOnAttributes = true,
+            bool splitAttributes = true,
             bool includeAttributeArguments = false,
             bool omitIEnumerable = false,
             bool useNameOnlyIfPossible = false)
@@ -99,7 +99,7 @@ namespace Roslynator.Documentation
 
             ImmutableArray<SymbolDisplayPart>.Builder builder = ImmutableArray.CreateBuilder<SymbolDisplayPart>(parts.Length);
 
-            AddAttributes(builder, attributes, isVisibleAttribute, containingNamespace, newLineOnAttributes: newLineOnAttributes, includeAttributeArguments: includeAttributeArguments);
+            AddAttributes(builder, attributes, isVisibleAttribute, containingNamespace, splitAttributes: splitAttributes, includeAttributeArguments: includeAttributeArguments);
 
             if (baseListCount == 0
                 && constraintCount == 0)
@@ -240,7 +240,7 @@ namespace Roslynator.Documentation
         public static ImmutableArray<SymbolDisplayPart> GetAttributesParts(
             ImmutableArray<AttributeData> attributes,
             Func<INamedTypeSymbol, bool> predicate,
-            bool newLineOnAttributes = true,
+            bool splitAttributes = true,
             bool includeAttributeArguments = false)
         {
             ImmutableArray<SymbolDisplayPart>.Builder builder = ImmutableArray.CreateBuilder<SymbolDisplayPart>();
@@ -249,7 +249,7 @@ namespace Roslynator.Documentation
                 builder,
                 attributes,
                 predicate,
-                newLineOnAttributes: newLineOnAttributes,
+                splitAttributes: splitAttributes,
                 includeAttributeArguments: includeAttributeArguments);
 
             return builder.ToImmutableArray();
@@ -260,7 +260,7 @@ namespace Roslynator.Documentation
             ImmutableArray<AttributeData> attributes,
             Func<INamedTypeSymbol, bool> predicate = null,
             INamespaceSymbol containingNamespace = null,
-            bool newLineOnAttributes = true,
+            bool splitAttributes = true,
             bool includeAttributeArguments = false)
         {
             using (IEnumerator<AttributeData> en = attributes
@@ -280,7 +280,7 @@ namespace Roslynator.Documentation
 
                         if (en.MoveNext())
                         {
-                            if (newLineOnAttributes)
+                            if (splitAttributes)
                             {
                                 builder.AddPunctuation("]");
                                 builder.AddLineBreak();

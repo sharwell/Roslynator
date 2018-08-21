@@ -48,20 +48,20 @@ namespace Roslynator.Documentation
         [Option(longName: "class-hierarchy", Default = DefaultValues.ClassHierarchy)]
         public bool ClassHierarchy { get; set; }
 
-        [Option(longName: "add-containing-namespace", Default = DefaultValues.AddContainingNamespace)]
-        public bool AddContainingNamespace { get; set; }
+        [Option(longName: "include-containing-namespace", Default = DefaultValues.IncludeContainingNamespace)]
+        public bool IncludeContainingNamespace { get; set; }
 
-        [Option(longName: "system-namespace-first", Default = DefaultValues.SystemNamespaceFirst)]
-        public bool SystemNamespaceFirst { get; set; }
+        [Option(longName: "place-system-namespace-first", Default = DefaultValues.PlaceSystemNamespaceFirst)]
+        public bool PlaceSystemNamespaceFirst { get; set; }
 
-        [Option(longName: "format-definition-base-list", Default = DefaultValues.FormatDefinitionBaseList)]
-        public bool FormatDefinitionBaseList { get; set; }
+        [Option(longName: "format-declaration-base-list", Default = DefaultValues.FormatDeclarationBaseList)]
+        public bool FormatDeclarationBaseList { get; set; }
 
-        [Option(longName: "format-definition-constraints", Default = DefaultValues.FormatDefinitionConstraints)]
-        public bool FormatDefinitionConstraints { get; set; }
+        [Option(longName: "format-declaration-constraints", Default = DefaultValues.FormatDeclarationConstraints)]
+        public bool FormatDeclarationConstraints { get; set; }
 
-        [Option(longName: "max-derived-items", Default = DefaultValues.MaxDerivedItems)]
-        public int MaxDerivedItems { get; set; }
+        [Option(longName: "max-derived-types", Default = DefaultValues.MaxDerivedTypes)]
+        public int MaxDerivedTypes { get; set; }
 
         [Option(longName: "indicate-obsolete", Default = DefaultValues.IndicateObsolete)]
         public bool IndicateObsolete { get; set; }
@@ -75,14 +75,14 @@ namespace Roslynator.Documentation
         [Option(longName: "indicate-interface-implementation", Default = DefaultValues.IndicateInterfaceImplementation)]
         public bool IndicateInterfaceImplementation { get; set; }
 
-        [Option(longName: "add-constant-value", Default = DefaultValues.AddConstantValue)]
-        public bool AddConstantValue { get; set; }
+        [Option(longName: "include-constant-value", Default = DefaultValues.IncludeConstantValue)]
+        public bool IncludeConstantValue { get; set; }
 
-        [Option(longName: "attribute-arguments", Default = DefaultValues.AttributeArguments)]
-        public bool AttributeArguments { get; set; }
+        [Option(longName: "include-attribute-arguments", Default = DefaultValues.IncludeAttributeArguments)]
+        public bool IncludeAttributeArguments { get; set; }
 
-        [Option(longName: "inherited-interface-members", Default = DefaultValues.InheritedInterfaceMembers)]
-        public bool InheritedInterfaceMembers { get; set; }
+        [Option(longName: "include-inherited-interface-members", Default = DefaultValues.IncludeInheritedInterfaceMembers)]
+        public bool IncludeInheritedInterfaceMembers { get; set; }
 
         [Option(longName: "omit-ienumerable", Default = DefaultValues.OmitIEnumerable)]
         public bool OmitIEnumerable { get; set; }

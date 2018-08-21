@@ -2,8 +2,7 @@
 
 namespace Roslynator.Documentation
 {
-    //TODO: DocumentationDocumentKind
-    public enum DocumentationKind
+    public enum DocumentationFileKind
     {
         None = 0,
         Root = 1,

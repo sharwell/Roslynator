@@ -8,19 +8,18 @@ namespace Roslynator.Documentation
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public readonly struct DocumentationGeneratorResult : IEquatable<DocumentationGeneratorResult>
     {
-        public DocumentationGeneratorResult(string content, string path, DocumentationKind kind)
+        public DocumentationGeneratorResult(string content, string filePath, DocumentationFileKind kind)
         {
             Content = content;
-            Path = path;
+            FilePath = filePath;
             Kind = kind;
         }
 
         public string Content { get; }
 
-        //TODO: Url
-        public string Path { get; }
+        public string FilePath { get; }
 
-        public DocumentationKind Kind { get; }
+        public DocumentationFileKind Kind { get; }
 
         internal bool HasContent
         {
@@ -30,7 +29,7 @@ namespace Roslynator.Documentation
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private string DebuggerDisplay
         {
-            get { return $"{Kind} {Path} {Content}"; }
+            get { return $"{Kind} {FilePath} {Content}"; }
         }
 
         public override bool Equals(object obj)
@@ -41,14 +40,14 @@ namespace Roslynator.Documentation
         public bool Equals(DocumentationGeneratorResult other)
         {
             return Kind == other.Kind
-                && Path == other.Path
+                && FilePath == other.FilePath
                 && Content == other.Content;
         }
 
         public override int GetHashCode()
         {
             return Hash.Combine(StringComparer.Ordinal.GetHashCode(Content),
-                Hash.Combine(StringComparer.OrdinalIgnoreCase.GetHashCode(Path), (int)Kind));
+                Hash.Combine(StringComparer.OrdinalIgnoreCase.GetHashCode(FilePath), (int)Kind));
         }
 
         public static bool operator ==(in DocumentationGeneratorResult file1, in DocumentationGeneratorResult file2)

@@ -2,44 +2,41 @@
 
 namespace Roslynator.Documentation
 {
-    public class DefinitionListOptions
+    public class DeclarationListOptions
     {
-        public DefinitionListOptions(
+        public DeclarationListOptions(
             bool indent = DefaultValues.Indent,
             string indentChars = DefaultValues.IndentChars,
-            bool openBraceOnNewLine = DefaultValues.OpenBraceOnNewLine,
+            bool newLineBeforeOpenBrace = DefaultValues.NewLineBeforeOpenBrace,
             bool emptyLineBetweenMembers = DefaultValues.EmptyLineBetweenMembers,
-            bool newLineOnAttributes = DefaultValues.NewLineOnAttributes,
-            bool attributeArguments = DefaultValues.AttributeArguments,
+            bool splitAttributes = DefaultValues.SplitAttributes,
+            bool includeAttributeArguments = DefaultValues.IncludeAttributeArguments,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
             bool useDefaultLiteral = DefaultValues.UseDefaultLiteral)
         {
             Indent = indent;
             IndentChars = indentChars;
-            OpenBraceOnNewLine = openBraceOnNewLine;
+            NewLineBeforeOpenBrace = newLineBeforeOpenBrace;
             EmptyLineBetweenMembers = emptyLineBetweenMembers;
-            NewLineOnAttributes = newLineOnAttributes;
-            AttributeArguments = attributeArguments;
+            SplitAttributes = splitAttributes;
+            IncludeAttributeArguments = includeAttributeArguments;
             OmitIEnumerable = omitIEnumerable;
             UseDefaultLiteral = useDefaultLiteral;
         }
 
-        public static DefinitionListOptions Default { get; } = new DefinitionListOptions();
+        public static DeclarationListOptions Default { get; } = new DeclarationListOptions();
 
         public bool Indent { get; }
 
         public string IndentChars { get; }
 
-        //TODO: NewLineBeforeOpenBrace
-        public bool OpenBraceOnNewLine { get; }
+        public bool NewLineBeforeOpenBrace { get; }
 
         public bool EmptyLineBetweenMembers { get; }
 
-        //TODO: EachAttributeOnSeparateLine, NewLineBeforeAttribute
-        public bool NewLineOnAttributes { get; }
+        public bool SplitAttributes { get; }
 
-        //TODO: AddAttributeArguments, OmitAttributeArguments, IncludeAttributeArguments
-        public bool AttributeArguments { get; }
+        public bool IncludeAttributeArguments { get; }
 
         public bool OmitIEnumerable { get; }
 
@@ -49,10 +46,10 @@ namespace Roslynator.Documentation
         {
             public const bool Indent = true;
             public const string IndentChars = "    ";
-            public const bool OpenBraceOnNewLine = true;
+            public const bool NewLineBeforeOpenBrace = true;
             public const bool EmptyLineBetweenMembers = false;
-            public const bool NewLineOnAttributes = true;
-            public const bool AttributeArguments = true;
+            public const bool SplitAttributes = true;
+            public const bool IncludeAttributeArguments = true;
             public const bool OmitIEnumerable = true;
             public const bool UseDefaultLiteral = true;
         }

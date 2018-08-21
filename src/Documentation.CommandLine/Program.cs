@@ -16,10 +16,10 @@ namespace Roslynator.Documentation
     {
         private static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<DocumentationCommandLineOptions, DefinitionListCommandLineOptions>(args)
+            Parser.Default.ParseArguments<DocumentationCommandLineOptions, DeclarationListCommandLineOptions>(args)
                 .MapResult(
                   (DocumentationCommandLineOptions options) => GenerateDocumentation(options),
-                  (DefinitionListCommandLineOptions options) => GenerateDefinitionList(options),
+                  (DeclarationListCommandLineOptions options) => GenerateDeclarationList(options),
                   _ => 1);
         }
 
@@ -30,7 +30,7 @@ namespace Roslynator.Documentation
             if (encoding == null)
                 return 1;
 
-            if (options.MaxDerivedItems < 0)
+            if (options.MaxDerivedTypes < 0)
             {
                 Console.WriteLine("Maximum number of derived items must be equal or greater than 0.");
                 return 1;
@@ -57,22 +57,22 @@ namespace Roslynator.Documentation
                 namespaceParts: namespaceParts,
                 typeParts: typeParts,
                 memberParts: memberParts,
-                maxDerivedItems: options.MaxDerivedItems,
+                maxDerivedTypes: options.MaxDerivedTypes,
                 classHierarchy: options.ClassHierarchy,
-                addContainingNamespace: options.AddContainingNamespace,
-                systemNamespaceFirst: options.SystemNamespaceFirst,
-                formatDefinitionBaseList: options.FormatDefinitionBaseList,
-                formatDefinitionConstraints: options.FormatDefinitionConstraints,
+                includeContainingNamespace: options.IncludeContainingNamespace,
+                placeSystemNamespaceFirst: options.PlaceSystemNamespaceFirst,
+                formatDeclarationBaseList: options.FormatDeclarationBaseList,
+                formatDeclarationConstraints: options.FormatDeclarationConstraints,
                 indicateObsolete: options.IndicateObsolete,
                 indicateInheritedMember: options.IndicateInheritedMember,
                 indicateOverriddenMember: options.IndicateOverriddenMember,
                 indicateInterfaceImplementation: options.IndicateInterfaceImplementation,
-                addConstantValue: options.AddConstantValue,
-                attributeArguments: options.AttributeArguments,
-                inheritedInterfaceMembers: options.InheritedInterfaceMembers,
+                includeConstantValue: options.IncludeConstantValue,
+                includeAttributeArguments: options.IncludeAttributeArguments,
+                includeInheritedInterfaceMembers: options.IncludeInheritedInterfaceMembers,
                 omitIEnumerable: options.OmitIEnumerable);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHub, documentationOptions);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownDocumentationUrlProviders.GitHub, documentationOptions);
 
             string directoryPath = options.OutputDirectory;
 
@@ -80,7 +80,7 @@ namespace Roslynator.Documentation
 
             foreach (DocumentationGeneratorResult documentationFile in generator.Generate(heading: options.Heading))
             {
-                string path = Path.Combine(directoryPath, documentationFile.Path);
+                string path = Path.Combine(directoryPath, documentationFile.FilePath);
 
 #if DEBUG
                 Console.WriteLine($"saving '{path}'");
@@ -104,26 +104,26 @@ namespace Roslynator.Documentation
             return 0;
         }
 
-        private static int GenerateDefinitionList(DefinitionListCommandLineOptions options)
+        private static int GenerateDeclarationList(DeclarationListCommandLineOptions options)
         {
             DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies, options.AdditionalXmlDocumentations);
 
             if (documentationModel == null)
                 return 1;
 
-            var definitionListOptions = new DefinitionListOptions(
+            var declarationListOptions = new DeclarationListOptions(
                 indent: options.Indent,
                 indentChars: options.IndentChars,
-                openBraceOnNewLine: options.OpenBraceOnNewLine,
+                newLineBeforeOpenBrace: options.NewLineBeforeOpenBrace,
                 emptyLineBetweenMembers: options.EmptyLineBetweenMembers,
-                newLineOnAttributes: options.NewLineOnAttributes,
-                attributeArguments: options.AttributeArguments,
+                splitAttributes: options.SplitAttributes,
+                includeAttributeArguments: options.IncludeAttributeArguments,
                 omitIEnumerable: options.OmitIEnumerable,
                 useDefaultLiteral: options.UseDefaultLiteral);
 
-            Console.WriteLine($"Definition list is being generated to '{options.OutputPath}'.");
+            Console.WriteLine($"Declaration list is being generated to '{options.OutputPath}'.");
 
-            string content = DefinitionListGenerator.GenerateAsync(documentationModel, definitionListOptions).Result;
+            string content = DeclarationListGenerator.GenerateAsync(documentationModel, declarationListOptions).Result;
 
             string path = options.OutputPath;
 
@@ -134,7 +134,7 @@ namespace Roslynator.Documentation
             File.WriteAllText(path, content, Encoding.UTF8);
 #endif
 
-            Console.WriteLine($"Definition list successfully generated to '{options.OutputPath}'.");
+            Console.WriteLine($"Declaration list successfully generated to '{options.OutputPath}'.");
 
             return 0;
         }

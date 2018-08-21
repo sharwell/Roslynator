@@ -7,9 +7,9 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    internal sealed class TypeDefinitionComparer : IComparer<INamedTypeSymbol>
+    internal sealed class TypeDeclarationComparer : IComparer<INamedTypeSymbol>
     {
-        public static TypeDefinitionComparer Instance { get; } = new TypeDefinitionComparer();
+        public static TypeDeclarationComparer Instance { get; } = new TypeDeclarationComparer();
 
         public int Compare(INamedTypeSymbol x, INamedTypeSymbol y)
         {
@@ -33,8 +33,8 @@ namespace Roslynator.Documentation
                 return result;
 
             return string.Compare(
-                x.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
-                y.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
+                x.ToDisplayString(SymbolDisplayFormats.SortDeclarationList),
+                y.ToDisplayString(SymbolDisplayFormats.SortDeclarationList),
                 StringComparison.Ordinal);
         }
 

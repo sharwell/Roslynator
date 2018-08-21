@@ -155,8 +155,10 @@ namespace Roslynator.Documentation
             }
         }
 
-        //TODO: includeConversion
-        public IEnumerable<IMethodSymbol> GetOperators(bool includeInherited = false)
+        public IEnumerable<IMethodSymbol> GetOperators(
+            bool includeInherited = false,
+            bool includeConversion = true,
+            bool includeUserDefinedOperator = true)
         {
             if (!TypeKind.Is(TypeKind.Delegate, TypeKind.Enum))
             {
@@ -166,11 +168,22 @@ namespace Roslynator.Documentation
                     {
                         var methodSymbol = (IMethodSymbol)member;
 
-                        if (methodSymbol.MethodKind.Is(
-                            MethodKind.UserDefinedOperator,
-                            MethodKind.Conversion))
+                        switch (methodSymbol.MethodKind)
                         {
-                            yield return methodSymbol;
+                            case MethodKind.UserDefinedOperator:
+                                {
+                                    if (includeUserDefinedOperator)
+                                        yield return methodSymbol;
+
+                                    break;
+                                }
+                            case MethodKind.Conversion:
+                                {
+                                    if (includeConversion)
+                                        yield return methodSymbol;
+
+                                    break;
+                                }
                         }
                     }
                 }
@@ -307,8 +320,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        //TODO: ?
-        public IEnumerable<MemberDocumentationModel> GetMemberModels(TypeDocumentationParts parts = TypeDocumentationParts.All)
+        internal IEnumerable<MemberDocumentationModel> CreateMemberModels(TypeDocumentationParts parts = TypeDocumentationParts.All)
         {
             if (TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
                 yield break;

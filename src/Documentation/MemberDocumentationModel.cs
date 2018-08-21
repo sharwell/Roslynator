@@ -31,6 +31,12 @@ namespace Roslynator.Documentation
             get { return Overloads.Length > 1; }
         }
 
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private string DebuggerDisplay
+        {
+            get { return $"{Symbol.Name} Overloads = {Overloads.Length}"; }
+        }
+
         public bool Equals(MemberDocumentationModel other)
         {
             return other.Symbol.Name == Symbol.Name
@@ -46,12 +52,6 @@ namespace Roslynator.Documentation
         public override int GetHashCode()
         {
             return Hash.Combine(Symbol.ContainingType, Hash.Create(Symbol.Name));
-        }
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private string DebuggerDisplay
-        {
-            get { return $"{Symbol.Name} Overloads = {Overloads.Length}"; }
         }
     }
 }

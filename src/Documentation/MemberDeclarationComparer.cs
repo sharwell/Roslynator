@@ -7,9 +7,9 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    internal sealed class MemberDefinitionComparer : IComparer<ISymbol>
+    internal sealed class MemberDeclarationComparer : IComparer<ISymbol>
     {
-        public static MemberDefinitionComparer Instance { get; } = new MemberDefinitionComparer();
+        public static MemberDeclarationComparer Instance { get; } = new MemberDeclarationComparer();
 
         public int Compare(ISymbol x, ISymbol y)
         {
@@ -33,26 +33,26 @@ namespace Roslynator.Documentation
                 return result;
 
             return string.CompareOrdinal(
-                x.ToDisplayString(SymbolDisplayFormats.SortDefinitionList),
-                y.ToDisplayString(SymbolDisplayFormats.SortDefinitionList));
+                x.ToDisplayString(SymbolDisplayFormats.SortDeclarationList),
+                y.ToDisplayString(SymbolDisplayFormats.SortDeclarationList));
         }
 
-        public static MemberDefinitionKind GetKind(ISymbol symbol)
+        public static MemberDeclarationKind GetKind(ISymbol symbol)
         {
             switch (symbol.Kind)
             {
                 case SymbolKind.Event:
                     {
-                        return MemberDefinitionKind.Event;
+                        return MemberDeclarationKind.Event;
                     }
                 case SymbolKind.Field:
                     {
                         var fieldSymbol = (IFieldSymbol)symbol;
 
                         if (fieldSymbol.IsConst)
-                            return MemberDefinitionKind.Const;
+                            return MemberDeclarationKind.Const;
 
-                        return MemberDefinitionKind.Field;
+                        return MemberDeclarationKind.Field;
                     }
                 case SymbolKind.Method:
                     {
@@ -61,13 +61,13 @@ namespace Roslynator.Documentation
                         switch (methodSymbol.MethodKind)
                         {
                             case MethodKind.Constructor:
-                                return MemberDefinitionKind.Constructor;
+                                return MemberDeclarationKind.Constructor;
                             case MethodKind.Conversion:
-                                return MemberDefinitionKind.ConversionOperator;
+                                return MemberDeclarationKind.ConversionOperator;
                             case MethodKind.UserDefinedOperator:
-                                return MemberDefinitionKind.Operator;
+                                return MemberDeclarationKind.Operator;
                             case MethodKind.Ordinary:
-                                return MemberDefinitionKind.Method;
+                                return MemberDeclarationKind.Method;
                         }
 
                         break;
@@ -77,15 +77,15 @@ namespace Roslynator.Documentation
                         var propertySymbol = (IPropertySymbol)symbol;
 
                         if (propertySymbol.IsIndexer)
-                            return MemberDefinitionKind.Indexer;
+                            return MemberDeclarationKind.Indexer;
 
-                        return MemberDefinitionKind.Property;
+                        return MemberDeclarationKind.Property;
                     }
             }
 
             Debug.Fail(symbol.ToDisplayString(Roslynator.SymbolDisplayFormats.Test));
 
-            return MemberDefinitionKind.None;
+            return MemberDeclarationKind.None;
         }
     }
 }

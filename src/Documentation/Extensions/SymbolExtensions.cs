@@ -64,7 +64,7 @@ namespace Roslynator.Documentation
 
             ImmutableArray<ISymbol> GetMembersIncludingInherited()
             {
-                var symbols = new HashSet<ISymbol>(MemberDefinitionEqualityComparer.Instance);
+                var symbols = new HashSet<ISymbol>(MemberDeclarationEqualityComparer.Instance);
 
                 HashSet<ISymbol> overriddenSymbols = null;
 
@@ -114,7 +114,7 @@ namespace Roslynator.Documentation
 
             ImmutableArray<ISymbol> GetInterfaceMembersIncludingInherited()
             {
-                var symbols = new HashSet<ISymbol>(MemberDefinitionEqualityComparer.Instance);
+                var symbols = new HashSet<ISymbol>(MemberDeclarationEqualityComparer.Instance);
 
                 foreach (ISymbol symbol in GetMembers(typeSymbol, predicate: predicate))
                     symbols.Add(symbol);

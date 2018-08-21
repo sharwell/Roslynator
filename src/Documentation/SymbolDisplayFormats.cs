@@ -51,11 +51,11 @@ namespace Roslynator.Documentation
             genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
             memberOptions: SymbolDisplayMemberOptions.IncludeContainingType);
 
-        public static SymbolDisplayFormat NamespaceDefinition { get; } = Default.Update(
+        public static SymbolDisplayFormat NamespaceDeclaration { get; } = Default.Update(
              typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
              kindOptions: SymbolDisplayKindOptions.IncludeNamespaceKeyword);
 
-        public static SymbolDisplayFormat FullDefinition { get; } = Default.Update(
+        public static SymbolDisplayFormat FullDeclaration { get; } = Default.Update(
              typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypes,
              genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters
                 | SymbolDisplayGenericsOptions.IncludeTypeConstraints
@@ -81,7 +81,7 @@ namespace Roslynator.Documentation
                 | SymbolDisplayMiscellaneousOptions.EscapeKeywordIdentifiers
             );
 
-        public static SymbolDisplayFormat SimpleDefinition { get; } = Default.Update(
+        public static SymbolDisplayFormat SimpleDeclaration { get; } = Default.Update(
             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly,
             genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
             memberOptions: SymbolDisplayMemberOptions.IncludeExplicitInterface
@@ -89,7 +89,7 @@ namespace Roslynator.Documentation
             delegateStyle: SymbolDisplayDelegateStyle.NameAndParameters,
             parameterOptions: SymbolDisplayParameterOptions.IncludeType);
 
-        public static SymbolDisplayFormat SortDefinitionList { get; } = Default.Update(
+        public static SymbolDisplayFormat SortDeclarationList { get; } = Default.Update(
              typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypes,
              genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters
                 | SymbolDisplayGenericsOptions.IncludeTypeConstraints

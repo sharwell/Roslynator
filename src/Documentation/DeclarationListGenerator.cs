@@ -14,13 +14,13 @@ using Roslynator.CSharp;
 
 namespace Roslynator.Documentation
 {
-    public static class DefinitionListGenerator
+    public static class DeclarationListGenerator
     {
-        public static async Task<string> GenerateAsync(DocumentationModel documentationModel, DefinitionListOptions options = null)
+        public static async Task<string> GenerateAsync(DocumentationModel documentationModel, DeclarationListOptions options = null)
         {
-            options = options ?? DefinitionListOptions.Default;
+            options = options ?? DeclarationListOptions.Default;
 
-            var builder = new DefinitionListBuilder(options: options);
+            var builder = new DeclarationListBuilder(options: options);
 
             builder.Append(documentationModel);
 
@@ -77,7 +77,7 @@ namespace Roslynator.Documentation
 
             private ITypeSymbol _enumTypeSymbol;
 
-            public Rewriter(DefinitionListOptions options, SemanticModel semanticModel, CancellationToken cancellationToken = default)
+            public Rewriter(DeclarationListOptions options, SemanticModel semanticModel, CancellationToken cancellationToken = default)
             {
                 Options = options;
                 SemanticModel = semanticModel;
@@ -88,7 +88,7 @@ namespace Roslynator.Documentation
 
             public CancellationToken CancellationToken { get; }
 
-            public DefinitionListOptions Options { get; }
+            public DeclarationListOptions Options { get; }
 
             public override SyntaxNode VisitQualifiedName(QualifiedNameSyntax node)
             {

@@ -35,20 +35,20 @@ namespace Roslynator.Documentation
             var options = new DocumentationOptions(
                 depth: DocumentationDepth.Member,
                 typeParts: TypeDocumentationParts.All,
-                formatDefinitionBaseList: true,
-                formatDefinitionConstraints: true,
+                formatDeclarationBaseList: true,
+                formatDeclarationConstraints: true,
                 indicateOverriddenMember: true,
                 indicateInterfaceImplementation: true);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHub, options);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownDocumentationUrlProviders.GitHub, options);
 
-            string defintionList = DefinitionListGenerator.GenerateAsync(documentationModel).Result;
+            string defintionList = DeclarationListGenerator.GenerateAsync(documentationModel).Result;
 
             FileHelper.WriteAllText(directoryPath + "api.cs", defintionList, Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
 
             foreach (DocumentationGeneratorResult result in generator.Generate(heading))
             {
-                string path = directoryPath + result.Path;
+                string path = directoryPath + result.FilePath;
 
                 Directory.CreateDirectory(Path.GetDirectoryName(path));
 
@@ -62,11 +62,11 @@ namespace Roslynator.Documentation
 
             var options = new DocumentationOptions(baseLocalUrl: baseLocalUrl);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, DocumentationUrlProvider.GitHub, options);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownDocumentationUrlProviders.GitHub, options);
 
             DocumentationGeneratorResult result = generator.GenerateRoot(heading);
 
-            string path = Path.Combine(directoryPath, result.Path);
+            string path = Path.Combine(directoryPath, result.FilePath);
 
             Directory.CreateDirectory(Path.GetDirectoryName(path));
 

@@ -9,32 +9,31 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    //TODO: declaration vs. definition
-    internal class DefinitionListBuilder
+    internal class DeclarationListBuilder
     {
-        private static readonly SymbolDisplayFormat _namespaceFormat = SymbolDisplayFormats.NamespaceDefinition;
+        private static readonly SymbolDisplayFormat _namespaceFormat = SymbolDisplayFormats.NamespaceDeclaration;
 
-        private static readonly SymbolDisplayFormat _typeFormat = SymbolDisplayFormats.FullDefinition.Update(
+        private static readonly SymbolDisplayFormat _typeFormat = SymbolDisplayFormats.FullDeclaration.Update(
             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameOnly);
 
-        private static readonly SymbolDisplayFormat _memberFormat = SymbolDisplayFormats.FullDefinition.Update(
+        private static readonly SymbolDisplayFormat _memberFormat = SymbolDisplayFormats.FullDeclaration.Update(
             typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces);
 
-        private static readonly SymbolDisplayFormat _enumFieldFormat = SymbolDisplayFormats.FullDefinition;
+        private static readonly SymbolDisplayFormat _enumFieldFormat = SymbolDisplayFormats.FullDeclaration;
 
         private bool _pendingIndentation;
         private int _indentationLevel;
         private INamespaceSymbol _currentNamespace;
 
-        public DefinitionListBuilder(StringBuilder stringBuilder = null, DefinitionListOptions options = null)
+        public DeclarationListBuilder(StringBuilder stringBuilder = null, DeclarationListOptions options = null)
         {
             StringBuilder = stringBuilder ?? new StringBuilder();
-            Options = options ?? DefinitionListOptions.Default;
+            Options = options ?? DeclarationListOptions.Default;
         }
 
         public StringBuilder StringBuilder { get; }
 
-        public DefinitionListOptions Options { get; }
+        public DeclarationListOptions Options { get; }
 
         public int Length => StringBuilder.Length;
 
@@ -42,9 +41,9 @@ namespace Roslynator.Documentation
 
         public virtual IComparer<INamespaceSymbol> NamespaceComparer => NamespaceSymbolComparer.SystemFirst;
 
-        public virtual IComparer<INamedTypeSymbol> TypeComparer => TypeDefinitionComparer.Instance;
+        public virtual IComparer<INamedTypeSymbol> TypeComparer => TypeDeclarationComparer.Instance;
 
-        public virtual IComparer<ISymbol> MemberComparer => MemberDefinitionComparer.Instance;
+        public virtual IComparer<ISymbol> MemberComparer => MemberDeclarationComparer.Instance;
 
         public virtual bool IsVisibleType(ISymbol symbol)
         {
@@ -155,13 +154,13 @@ namespace Roslynator.Documentation
                     {
                         TypeKind typeKind = en.Current.TypeKind;
 
-                        Append(SymbolDefinitionBuilder.GetDisplayParts(
+                        Append(SymbolDeclarationBuilder.GetDisplayParts(
                             en.Current,
                             _typeFormat,
                             SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
                             isVisibleAttribute: IsVisibleAttribute,
-                            newLineOnAttributes: Options.NewLineOnAttributes,
-                            includeAttributeArguments: Options.AttributeArguments,
+                            splitAttributes: Options.SplitAttributes,
+                            includeAttributeArguments: Options.IncludeAttributeArguments,
                             omitIEnumerable: Options.OmitIEnumerable));
 
                         switch (typeKind)
@@ -227,7 +226,7 @@ namespace Roslynator.Documentation
 
         private void BeginTypeContent()
         {
-            if (Options.OpenBraceOnNewLine)
+            if (Options.NewLineBeforeOpenBrace)
             {
                 AppendLine();
                 AppendLine("{");
@@ -259,15 +258,15 @@ namespace Roslynator.Documentation
             {
                 if (en.MoveNext())
                 {
-                    MemberDefinitionKind kind = MemberDefinitionComparer.GetKind(en.Current);
+                    MemberDeclarationKind kind = MemberDeclarationComparer.GetKind(en.Current);
 
                     while (true)
                     {
-                        Append(SymbolDefinitionBuilder.GetAttributesParts(
+                        Append(SymbolDeclarationBuilder.GetAttributesParts(
                             en.Current.GetAttributes(),
                             predicate: IsVisibleAttribute,
-                            newLineOnAttributes: Options.NewLineOnAttributes,
-                            includeAttributeArguments: Options.AttributeArguments));
+                            splitAttributes: Options.SplitAttributes,
+                            includeAttributeArguments: Options.IncludeAttributeArguments));
 
                         Append(en.Current.ToDisplayParts(_memberFormat));
 
@@ -280,7 +279,7 @@ namespace Roslynator.Documentation
 
                         if (en.MoveNext())
                         {
-                            MemberDefinitionKind kind2 = MemberDefinitionComparer.GetKind(en.Current);
+                            MemberDeclarationKind kind2 = MemberDeclarationComparer.GetKind(en.Current);
 
                             if (kind != kind2)
                             {

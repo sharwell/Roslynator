@@ -185,21 +185,6 @@ namespace Roslynator.Documentation
             return true;
         }
 
-        public NamespaceDocumentationModel GetNamespaceModel(INamespaceSymbol namespaceSymbol)
-        {
-            if (_symbolData.TryGetValue(namespaceSymbol, out SymbolDocumentationData data)
-                && data.Model != null)
-            {
-                return (NamespaceDocumentationModel)data.Model;
-            }
-
-            var namespaceModel = new NamespaceDocumentationModel(namespaceSymbol, this);
-
-            _symbolData[namespaceSymbol] = data.WithModel(namespaceModel);
-
-            return namespaceModel;
-        }
-
         public TypeDocumentationModel GetTypeModel(INamedTypeSymbol typeSymbol)
         {
             if (_symbolData.TryGetValue(typeSymbol, out SymbolDocumentationData data)

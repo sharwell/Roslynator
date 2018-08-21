@@ -2,12 +2,12 @@
 
 using System.Collections.Generic;
 using CommandLine;
-using static Roslynator.Documentation.DefinitionListOptions;
+using static Roslynator.Documentation.DeclarationListOptions;
 
 namespace Roslynator.Documentation
 {
-    [Verb("definition-list")]
-    public class DefinitionListCommandLineOptions
+    [Verb("declaration-list")]
+    public class DeclarationListCommandLineOptions
     {
         [Option(longName: "assembly-references", shortName: 'r', Required = true)]
         public string AssemblyReferences { get; set; }
@@ -27,17 +27,17 @@ namespace Roslynator.Documentation
         [Option(longName: "indent-chars", Default = DefaultValues.IndentChars)]
         public string IndentChars { get; set; }
 
-        [Option(longName: "open-brace-on-new-line", Default = DefaultValues.OpenBraceOnNewLine)]
-        public bool OpenBraceOnNewLine { get; set; }
+        [Option(longName: "new-line-before-open-brace", Default = DefaultValues.NewLineBeforeOpenBrace)]
+        public bool NewLineBeforeOpenBrace { get; set; }
 
         [Option(longName: "empty-line-between-members", Default = DefaultValues.EmptyLineBetweenMembers)]
         public bool EmptyLineBetweenMembers { get; set; }
 
-        [Option(longName: "new-line-on-attributes", Default = DefaultValues.NewLineOnAttributes)]
-        public bool NewLineOnAttributes { get; set; }
+        [Option(longName: "split-attributes", Default = DefaultValues.SplitAttributes)]
+        public bool SplitAttributes { get; set; }
 
-        [Option(longName: "attribute-arguments", Default = DefaultValues.AttributeArguments)]
-        public bool AttributeArguments { get; set; }
+        [Option(longName: "include-attribute-arguments", Default = DefaultValues.IncludeAttributeArguments)]
+        public bool IncludeAttributeArguments { get; set; }
 
         [Option(longName: "omit-ienumerable", Default = DefaultValues.OmitIEnumerable)]
         public bool OmitIEnumerable { get; set; }
