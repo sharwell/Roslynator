@@ -13,7 +13,6 @@ using Roslynator.CSharp;
 
 namespace Roslynator.Documentation
 {
-    //TODO: zrevidovat headingLevelBase
     public abstract class DocumentationWriter : IDisposable
     {
         private bool _disposed;
@@ -496,9 +495,7 @@ namespace Roslynator.Documentation
                             if (returnType.SpecialType == SpecialType.System_Void)
                                 return;
 
-                            WriteHeading(3, Resources.ReturnValueTitle);
-                            WriteTypeLink(returnType, containingNamespace: Options.IncludeContainingNamespace);
-                            WriteLine();
+                            WriteReturnValue(returnType, Resources.ReturnValueTitle);
 
                             xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(this);
                         }
@@ -509,8 +506,7 @@ namespace Roslynator.Documentation
                     {
                         var fieldSymbol = (IFieldSymbol)symbol;
 
-                        WriteHeading(3, Resources.FieldValueTitle);
-                        WriteTypeLink(fieldSymbol.Type, containingNamespace: Options.IncludeContainingNamespace);
+                        WriteReturnValue(fieldSymbol.Type, Resources.FieldValueTitle);
                         break;
                     }
                 case SymbolKind.Method:
@@ -522,10 +518,7 @@ namespace Roslynator.Documentation
                             case MethodKind.UserDefinedOperator:
                             case MethodKind.Conversion:
                                 {
-                                    WriteHeading(3, Resources.ReturnsTitle);
-                                    WriteTypeLink(methodSymbol.ReturnType, containingNamespace: Options.IncludeContainingNamespace);
-                                    WriteLine();
-                                    WriteLine();
+                                    WriteReturnValue(methodSymbol.ReturnType, Resources.ReturnsTitle);
 
                                     xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(this);
                                     break;
@@ -537,10 +530,7 @@ namespace Roslynator.Documentation
                                     if (returnType.SpecialType == SpecialType.System_Void)
                                         return;
 
-                                    WriteHeading(3, Resources.ReturnsTitle);
-                                    WriteTypeLink(returnType, containingNamespace: Options.IncludeContainingNamespace);
-                                    WriteLine();
-                                    WriteLine();
+                                    WriteReturnValue(returnType, Resources.ReturnsTitle);
 
                                     xmlDocumentation?.Element(WellKnownTags.Returns)?.WriteContentTo(this);
                                     break;
@@ -553,16 +543,21 @@ namespace Roslynator.Documentation
                     {
                         var propertySymbol = (IPropertySymbol)symbol;
 
-                        WriteHeading(3, Resources.PropertyValueTitle);
-                        WriteTypeLink(propertySymbol.Type, containingNamespace: Options.IncludeContainingNamespace);
-                        WriteLine();
-                        WriteLine();
+                        WriteReturnValue(propertySymbol.Type, Resources.PropertyValueTitle);
 
                         string elementName = (propertySymbol.IsIndexer) ? WellKnownTags.Returns : WellKnownTags.Value;
 
                         xmlDocumentation?.Element(elementName)?.WriteContentTo(this);
                         break;
                     }
+            }
+
+            void WriteReturnValue(ITypeSymbol typeSymbol, string heading)
+            {
+                WriteHeading(3, heading);
+                WriteTypeLink(typeSymbol, containingNamespace: Options.IncludeContainingNamespace);
+                WriteLine();
+                WriteLine();
             }
         }
 

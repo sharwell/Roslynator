@@ -4,6 +4,7 @@ using System;
 
 namespace Roslynator.Documentation
 {
+    //TODO: IncludeClassHierarchy
     public class DocumentationOptions
     {
         public DocumentationOptions(

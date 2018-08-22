@@ -45,7 +45,7 @@ namespace Roslynator.Documentation
             if (!TryGetMemberDocumentationParts(options.MemberParts, out MemberDocumentationParts memberParts))
                 return 1;
 
-            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies, options.AdditionalXmlDocumentations);
+            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies, options.AdditionalXmlDocumentation);
 
             if (documentationModel == null)
                 return 1;
@@ -106,7 +106,7 @@ namespace Roslynator.Documentation
 
         private static int GenerateDeclarationList(DeclarationListCommandLineOptions options)
         {
-            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies, options.AdditionalXmlDocumentations);
+            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies, options.AdditionalXmlDocumentation);
 
             if (documentationModel == null)
                 return 1;

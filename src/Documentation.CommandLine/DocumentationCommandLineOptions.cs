@@ -9,6 +9,7 @@ namespace Roslynator.Documentation
     [Verb("doc")]
     public class DocumentationCommandLineOptions
     {
+        //TODO: references
         [Option(longName: "assembly-references", shortName: 'r', Required = true)]
         public string AssemblyReferences { get; set; }
 
@@ -24,8 +25,9 @@ namespace Roslynator.Documentation
         [Option(longName: "mode", shortName: 'm', Required = true)]
         public string Mode { get; set; }
 
+        //TODO: shortName: 'x'
         [Option(longName: "additional-xml-documentation")]
-        public IEnumerable<string> AdditionalXmlDocumentations { get; set; }
+        public IEnumerable<string> AdditionalXmlDocumentation { get; set; }
 
         [Option(longName: "depth", Default = DefaultValues.Depth)]
         public DocumentationDepth Depth { get; set; }
@@ -39,7 +41,7 @@ namespace Roslynator.Documentation
         [Option(longName: "member-parts")]
         public IEnumerable<string> MemberParts { get; set; }
 
-        [Option(longName: "preferred-culture", shortName: 'c')]
+        [Option(longName: "preferred-culture")]
         public string PreferredCulture { get; set; }
 
         [Option(longName: "base-local-url")]

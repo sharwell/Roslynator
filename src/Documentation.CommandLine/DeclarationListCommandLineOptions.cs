@@ -6,6 +6,7 @@ using static Roslynator.Documentation.DeclarationListOptions;
 
 namespace Roslynator.Documentation
 {
+    //TODO: declaration-list > source
     [Verb("declaration-list")]
     public class DeclarationListCommandLineOptions
     {
@@ -19,7 +20,7 @@ namespace Roslynator.Documentation
         public string OutputPath { get; set; }
 
         [Option(longName: "additional-xml-documentation")]
-        public IEnumerable<string> AdditionalXmlDocumentations { get; set; }
+        public IEnumerable<string> AdditionalXmlDocumentation { get; set; }
 
         [Option(longName: "indent", Default = DefaultValues.Indent)]
         public bool Indent { get; set; }
