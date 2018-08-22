@@ -6,12 +6,12 @@ using static Roslynator.Documentation.DocumentationOptions;
 
 namespace Roslynator.Documentation
 {
+    //TODO: clean
     [Verb("doc")]
     public class DocumentationCommandLineOptions
     {
-        //TODO: references
-        [Option(longName: "assembly-references", shortName: 'r', Required = true)]
-        public string AssemblyReferences { get; set; }
+        [Option(longName: "references", shortName: 'r', Required = true)]
+        public string References { get; set; }
 
         [Option(longName: "assemblies", shortName: 'a', Separator = ';', Required = true)]
         public IEnumerable<string> Assemblies { get; set; }
@@ -25,7 +25,6 @@ namespace Roslynator.Documentation
         [Option(longName: "mode", shortName: 'm', Required = true)]
         public string Mode { get; set; }
 
-        //TODO: shortName: 'x'
         [Option(longName: "additional-xml-documentation")]
         public IEnumerable<string> AdditionalXmlDocumentation { get; set; }
 
@@ -47,8 +46,8 @@ namespace Roslynator.Documentation
         [Option(longName: "base-local-url")]
         public string BaseLocalUrl { get; set; }
 
-        [Option(longName: "class-hierarchy", Default = DefaultValues.ClassHierarchy)]
-        public bool ClassHierarchy { get; set; }
+        [Option(longName: "include-class-hierarchy", Default = DefaultValues.IncludeClassHierarchy)]
+        public bool IncludeClassHierarchy { get; set; }
 
         [Option(longName: "include-containing-namespace", Default = DefaultValues.IncludeContainingNamespace)]
         public bool IncludeContainingNamespace { get; set; }

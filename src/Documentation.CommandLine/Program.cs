@@ -16,10 +16,10 @@ namespace Roslynator.Documentation
     {
         private static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<DocumentationCommandLineOptions, DeclarationListCommandLineOptions>(args)
+            Parser.Default.ParseArguments<DocumentationCommandLineOptions, DeclarationsCommandLineOptions>(args)
                 .MapResult(
                   (DocumentationCommandLineOptions options) => GenerateDocumentation(options),
-                  (DeclarationListCommandLineOptions options) => GenerateDeclarationList(options),
+                  (DeclarationsCommandLineOptions options) => GenerateDeclarationList(options),
                   _ => 1);
         }
 
@@ -45,7 +45,7 @@ namespace Roslynator.Documentation
             if (!TryGetMemberDocumentationParts(options.MemberParts, out MemberDocumentationParts memberParts))
                 return 1;
 
-            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies, options.AdditionalXmlDocumentation);
+            DocumentationModel documentationModel = CreateDocumentationModel(options.References, options.Assemblies, options.AdditionalXmlDocumentation);
 
             if (documentationModel == null)
                 return 1;
@@ -58,7 +58,7 @@ namespace Roslynator.Documentation
                 typeParts: typeParts,
                 memberParts: memberParts,
                 maxDerivedTypes: options.MaxDerivedTypes,
-                classHierarchy: options.ClassHierarchy,
+                includeClassHierarchy: options.IncludeClassHierarchy,
                 includeContainingNamespace: options.IncludeContainingNamespace,
                 placeSystemNamespaceFirst: options.PlaceSystemNamespaceFirst,
                 formatDeclarationBaseList: options.FormatDeclarationBaseList,
@@ -104,9 +104,9 @@ namespace Roslynator.Documentation
             return 0;
         }
 
-        private static int GenerateDeclarationList(DeclarationListCommandLineOptions options)
+        private static int GenerateDeclarationList(DeclarationsCommandLineOptions options)
         {
-            DocumentationModel documentationModel = CreateDocumentationModel(options.AssemblyReferences, options.Assemblies, options.AdditionalXmlDocumentation);
+            DocumentationModel documentationModel = CreateDocumentationModel(options.References, options.Assemblies, options.AdditionalXmlDocumentation);
 
             if (documentationModel == null)
                 return 1;

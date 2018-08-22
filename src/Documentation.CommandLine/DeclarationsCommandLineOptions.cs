@@ -6,12 +6,11 @@ using static Roslynator.Documentation.DeclarationListOptions;
 
 namespace Roslynator.Documentation
 {
-    //TODO: declaration-list > source
-    [Verb("declaration-list")]
-    public class DeclarationListCommandLineOptions
+    [Verb("declarations")]
+    public class DeclarationsCommandLineOptions
     {
-        [Option(longName: "assembly-references", shortName: 'r', Required = true)]
-        public string AssemblyReferences { get; set; }
+        [Option(longName: "references", shortName: 'r', Required = true)]
+        public string References { get; set; }
 
         [Option(longName: "assemblies", shortName: 'a', Separator = ';', Required = true)]
         public IEnumerable<string> Assemblies { get; set; }

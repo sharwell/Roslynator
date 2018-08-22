@@ -16,7 +16,7 @@
           Condition="'$(RoslynatorDocumentationParameters)' != ''">
       <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
     </Exec>
-    <Exec Command="$(RoslynatorDocumentationCommand) declaration-list -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationDeclarationListParameters)"
+    <Exec Command="$(RoslynatorDocumentationCommand) declarations -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationDeclarationListParameters)"
           LogStandardErrorAsError="true"
           ConsoleToMSBuild="true"
           Condition="'$(RoslynatorDocumentationDeclarationListParameters)' != ''">

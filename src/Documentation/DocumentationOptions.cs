@@ -4,14 +4,13 @@ using System;
 
 namespace Roslynator.Documentation
 {
-    //TODO: IncludeClassHierarchy
     public class DocumentationOptions
     {
         public DocumentationOptions(
             string preferredCultureName = null,
             string baseLocalUrl = null,
             int maxDerivedTypes = DefaultValues.MaxDerivedTypes,
-            bool classHierarchy = DefaultValues.ClassHierarchy,
+            bool includeClassHierarchy = DefaultValues.IncludeClassHierarchy,
             bool includeContainingNamespace = DefaultValues.IncludeContainingNamespace,
             bool placeSystemNamespaceFirst = DefaultValues.PlaceSystemNamespaceFirst,
             bool formatDeclarationBaseList = DefaultValues.FormatDeclarationBaseList,
@@ -36,7 +35,7 @@ namespace Roslynator.Documentation
             PreferredCultureName = preferredCultureName;
             BaseLocalUrl = baseLocalUrl;
             MaxDerivedTypes = maxDerivedTypes;
-            ClassHierarchy = classHierarchy;
+            IncludeClassHierarchy = includeClassHierarchy;
             IncludeContainingNamespace = includeContainingNamespace;
             PlaceSystemNamespaceFirst = placeSystemNamespaceFirst;
             FormatDeclarationBaseList = formatDeclarationBaseList;
@@ -64,7 +63,7 @@ namespace Roslynator.Documentation
 
         public int MaxDerivedTypes { get; }
 
-        public bool ClassHierarchy { get; }
+        public bool IncludeClassHierarchy { get; }
 
         public bool IncludeContainingNamespace { get; }
 
@@ -123,7 +122,7 @@ namespace Roslynator.Documentation
         internal static class DefaultValues
         {
             public const int MaxDerivedTypes = 5;
-            public const bool ClassHierarchy = true;
+            public const bool IncludeClassHierarchy = true;
             public const bool IncludeContainingNamespace = true;
             public const bool PlaceSystemNamespaceFirst = true;
             public const bool FormatDeclarationBaseList = true;

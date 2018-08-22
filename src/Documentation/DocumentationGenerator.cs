@@ -699,7 +699,7 @@ namespace Roslynator.Documentation
                 if (derivedTypes.Any()
                     && derivedTypes.Length > Options.MaxDerivedTypes)
                 {
-                    if (Options.ClassHierarchy)
+                    if (Options.IncludeClassHierarchy)
                     {
                         writer.WriteHeading(2, Resources.DerivedAllTitle);
 
@@ -914,7 +914,7 @@ namespace Roslynator.Documentation
                         }
                     case RootDocumentationParts.Classes:
                         {
-                            if (Options.ClassHierarchy)
+                            if (Options.IncludeClassHierarchy)
                             {
                                 if (typeSymbols.Any(f => !f.IsStatic && f.TypeKind == TypeKind.Class))
                                 {
@@ -939,7 +939,7 @@ namespace Roslynator.Documentation
                         }
                     case RootDocumentationParts.StaticClasses:
                         {
-                            if (Options.ClassHierarchy)
+                            if (Options.IncludeClassHierarchy)
                             {
                                 using (IEnumerator<INamedTypeSymbol> en = typeSymbols
                                     .Where(f => f.IsStatic && f.TypeKind == TypeKind.Class)
@@ -1061,7 +1061,7 @@ namespace Roslynator.Documentation
                         }
                     case RootDocumentationParts.StaticClasses:
                         {
-                            return Options.ClassHierarchy
+                            return Options.IncludeClassHierarchy
                                 && typeSymbols.Any(f => f.IsStatic && f.TypeKind == TypeKind.Class);
                         }
                     case RootDocumentationParts.Structs:
