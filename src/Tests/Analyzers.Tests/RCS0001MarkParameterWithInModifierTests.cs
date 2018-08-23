@@ -7,11 +7,9 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using Roslynator.CSharp.CodeFixes;
 using Xunit;
 
-#pragma warning disable RCS1090
-
 namespace Roslynator.CSharp.Analysis.Tests
 {
-    public class RCSX001MarkParameterWithInModifierTests : AbstractCSharpCodeFixVerifier
+    public class RCS0001MarkParameterWithInModifierTests : AbstractCSharpCodeFixVerifier
     {
         public override DiagnosticDescriptor Descriptor { get; } = DiagnosticDescriptors.MarkParameterWithInModifier;
 
@@ -23,17 +21,29 @@ namespace Roslynator.CSharp.Analysis.Tests
         public async Task Test()
         {
             await VerifyDiagnosticAndFixAsync(@"
+using System.Collections.Generic;
+
 readonly struct C
 {
     void M(C [|c|])
     {
+        IEnumerable<object> LF()
+        {
+            yield return null;
+        }
     }
 }
 ", @"
+using System.Collections.Generic;
+
 readonly struct C
 {
     void M(in C c)
     {
+        IEnumerable<object> LF()
+        {
+            yield return null;
+        }
     }
 }
 ");
@@ -81,6 +91,22 @@ readonly struct C
     void M(C c)
     {
         var items = Enumerable.Empty<C>().Select(f => c);
+    }
+}
+");
+        }
+
+        [Fact]
+        public async Task TestNoDiagnostic_Iterator()
+        {
+            await VerifyNoDiagnosticAsync(@"
+using System.Collections.Generic;
+
+readonly struct C
+{
+    IEnumerable<object> M(C c)
+    {
+        yield return null;
     }
 }
 ");
