@@ -757,6 +757,29 @@ namespace Roslynator.CSharp
         }
 
         /// <summary>
+        /// Returns true if a syntax of the specified kind is a literal expression.
+        /// </summary>
+        /// <param name="kind"></param>
+        /// <returns></returns>
+        public static bool IsLiteralExpression(SyntaxKind kind)
+        {
+            switch (kind)
+            {
+                case SyntaxKind.NumericLiteralExpression:
+                case SyntaxKind.StringLiteralExpression:
+                case SyntaxKind.CharacterLiteralExpression:
+                case SyntaxKind.TrueLiteralExpression:
+                case SyntaxKind.FalseLiteralExpression:
+                case SyntaxKind.NullLiteralExpression:
+                case SyntaxKind.DefaultLiteralExpression:
+                case SyntaxKind.ArgListExpression:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        /// <summary>
         /// Returns true if a syntax of the specified kind is a statement (which includes <see cref="SyntaxKind.Block"/>).
         /// </summary>
         /// <param name="kind"></param>
@@ -800,29 +823,6 @@ namespace Roslynator.CSharp
 
             Debug.Assert(!kind.ToString().EndsWith("Statement", StringComparison.Ordinal), kind.ToString());
             return false;
-        }
-
-        //TODO: make public
-        /// <summary>
-        /// Returns true if a syntax of the specified kind is a literal expression.
-        /// </summary>
-        /// <param name="kind"></param>
-        /// <returns></returns>
-        internal static bool IsLiteralExpression(SyntaxKind kind)
-        {
-            switch (kind)
-            {
-                case SyntaxKind.NumericLiteralExpression:
-                case SyntaxKind.StringLiteralExpression:
-                case SyntaxKind.CharacterLiteralExpression:
-                case SyntaxKind.TrueLiteralExpression:
-                case SyntaxKind.FalseLiteralExpression:
-                case SyntaxKind.NullLiteralExpression:
-                case SyntaxKind.DefaultLiteralExpression:
-                    return true;
-                default:
-                    return false;
-            }
         }
 
         internal static SyntaxKind GetCompoundAssignmentKind(SyntaxKind binaryExpressionKind)
