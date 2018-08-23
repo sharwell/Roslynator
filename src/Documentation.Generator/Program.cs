@@ -40,7 +40,7 @@ namespace Roslynator.Documentation
                 includeMemberOverrides: true,
                 includeMemberImplements: true);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownDocumentationUrlProviders.GitHub, documentationOptions);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownUrlProviders.GitHub, documentationOptions);
 
             var declarationListOptions = new DeclarationListOptions();
 
@@ -64,7 +64,7 @@ namespace Roslynator.Documentation
 
             var options = new DocumentationOptions(baseLocalUrl: baseLocalUrl);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownDocumentationUrlProviders.GitHub, options);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownUrlProviders.GitHub, options);
 
             DocumentationGeneratorResult result = generator.GenerateRoot(heading);
 

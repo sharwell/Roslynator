@@ -9,8 +9,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    //TODO: WellKnownUrlProviders 
-    public static class WellKnownDocumentationUrlProviders
+    public static class WellKnownUrlProviders
     {
         public static DocumentationUrlProvider GitHub { get; } = new GitHubDocumentationUrlProvider(ImmutableArray.Create(WellKnownExternalUrlProviders.MicrosoftDocs));
 
