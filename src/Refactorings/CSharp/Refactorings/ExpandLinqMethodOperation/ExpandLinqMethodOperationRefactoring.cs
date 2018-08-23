@@ -359,7 +359,7 @@ namespace Roslynator.CSharp.Refactorings.ExpandLinqMethodOperation
             }
 
             if (methodSymbol.Name == "All")
-                condition = Negator.LogicallyNegate(condition, semanticModel, cancellationToken);
+                condition = Inverter.LogicallyNegate(condition, semanticModel, cancellationToken);
 
             IfStatementSyntax ifStatement = IfStatement(
                 condition,
