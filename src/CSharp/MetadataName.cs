@@ -177,6 +177,123 @@ namespace Roslynator
                 Hash.Create(Name)));
         }
 
+        public static MetadataName ParseNamespaceName(string name)
+        {
+            if (name == null)
+                throw new ArgumentNullException(nameof(name));
+
+            int length = name.Length;
+
+            if (length == 0)
+                throw new ArgumentException("Name cannot be empty.", nameof(name));
+
+            if (name[0] == '.')
+                throw new ArgumentException("Name is invalid.", nameof(name));
+
+            if (length > 1
+                && name[length - 1] == '.')
+            {
+                throw new ArgumentException("Name is invalid.", nameof(name));
+            }
+
+            ImmutableArray<string>.Builder builder = null;
+
+            int prev = 0;
+
+            for (int i = 1; i < length - 1; i++)
+            {
+                if (name[i] == '.')
+                {
+                    string n = name.Substring(prev, i - prev);
+
+                    (builder ?? (builder = ImmutableArray.CreateBuilder<string>())).Add(n);
+
+                    prev = i + 1;
+                }
+            }
+
+            if (builder == null)
+                return new MetadataName(ImmutableArray<string>.Empty, name);
+
+            return new MetadataName(builder.ToImmutableArray(), name.Substring(prev, length - prev));
+        }
+
+        public static MetadataName ParseTypeName(string name)
+        {
+            if (name == null)
+                throw new ArgumentNullException(nameof(name));
+
+            int length = name.Length;
+
+            if (length == 0)
+                throw new ArgumentException("Name cannot be empty.", nameof(name));
+
+            if (name[0] == '.')
+                throw new ArgumentException("Name is invalid.", nameof(name));
+
+            if (name[0] == '+')
+                throw new ArgumentException("Name is invalid.", nameof(name));
+
+            if (length > 1)
+            {
+                if (name[length - 1] == '.')
+                    throw new ArgumentException("Name is invalid.", nameof(name));
+
+                if (name[length - 1] == '+')
+                    throw new ArgumentException("Name is invalid.", nameof(name));
+            }
+
+            ImmutableArray<string>.Builder containingNamespaces = null;
+            ImmutableArray<string>.Builder containingTypes = null;
+            string containingType = null;
+
+            int prevIndex = 0;
+
+            for (int i = 1; i < length - 1; i++)
+            {
+                if (name[i] == '.')
+                {
+                    if (containingType != null
+                        || containingTypes != null)
+                    {
+                        throw new ArgumentException("Name is invalid.", nameof(name));
+                    }
+
+                    string n = name.Substring(prevIndex, i - prevIndex);
+
+                    (containingNamespaces ?? (containingNamespaces = ImmutableArray.CreateBuilder<string>())).Add(n);
+
+                    prevIndex = i + 1;
+                }
+                else if (name[i] == '+')
+                {
+                    string n = name.Substring(prevIndex, i - prevIndex);
+
+                    if (containingType == null)
+                    {
+                        containingType = n;
+                    }
+                    else
+                    {
+                        (containingTypes ?? (containingTypes = ImmutableArray.CreateBuilder<string>())).Add(containingType);
+
+                        containingType = null;
+
+                        containingTypes.Add(n);
+                    }
+
+                    prevIndex = i + 1;
+                }
+            }
+
+            return new MetadataName(
+                containingNamespaces?.ToImmutableArray() ?? ImmutableArray<string>.Empty,
+                (containingType != null)
+                    ? ImmutableArray.Create(containingType)
+                    : containingTypes?.ToImmutableArray() ?? ImmutableArray<string>.Empty,
+                name.Substring(prevIndex, length - prevIndex));
+        }
+
         public static bool operator ==(in MetadataName info1, in MetadataName info2)
         {
             return info1.Equals(info2);

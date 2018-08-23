@@ -1,12 +1,21 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
+using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
     public class DocumentationOptions
     {
+        private readonly ImmutableArray<MetadataName> _ignoredNamespaces;
+        private readonly ImmutableArray<MetadataName> _ignoredTypes;
+
         public DocumentationOptions(
+            IEnumerable<string> ignoredNamespaces = null,
+            IEnumerable<string> ignoredTypes = null,
             string preferredCultureName = null,
             string baseLocalUrl = null,
             int maxDerivedTypes = DefaultValues.MaxDerivedTypes,
@@ -32,6 +41,11 @@ namespace Roslynator.Documentation
             if (maxDerivedTypes < 0)
                 throw new ArgumentOutOfRangeException(nameof(maxDerivedTypes), maxDerivedTypes, "Maximum number of derived items must be greater than or equal to 0.");
 
+            _ignoredNamespaces = ignoredNamespaces?.Select(name => MetadataName.ParseNamespaceName(name)).ToImmutableArray() ?? default;
+            _ignoredTypes = ignoredTypes?.Select(name => MetadataName.ParseTypeName(name)).ToImmutableArray() ?? default;
+
+            IgnoredNamespaces = ignoredNamespaces?.ToImmutableArray() ?? ImmutableArray<string>.Empty;
+            IgnoredTypes = ignoredTypes?.ToImmutableArray() ?? ImmutableArray<string>.Empty;
             PreferredCultureName = preferredCultureName;
             BaseLocalUrl = baseLocalUrl;
             MaxDerivedTypes = maxDerivedTypes;
@@ -56,6 +70,10 @@ namespace Roslynator.Documentation
         }
 
         public static DocumentationOptions Default { get; } = new DocumentationOptions();
+
+        public ImmutableArray<string> IgnoredNamespaces { get; }
+
+        public ImmutableArray<string> IgnoredTypes { get; }
 
         public string PreferredCultureName { get; }
 
@@ -98,6 +116,37 @@ namespace Roslynator.Documentation
         public TypeDocumentationParts TypeParts { get; }
 
         public MemberDocumentationParts MemberParts { get; }
+
+        internal bool ShouldBeIgnored(INamespaceSymbol namespaceSymbol)
+        {
+            if (!_ignoredNamespaces.IsDefault)
+            {
+                foreach (MetadataName name in _ignoredNamespaces)
+                {
+                    if (namespaceSymbol.HasMetadataName(name))
+                        return true;
+                }
+            }
+
+            return false;
+        }
+
+        internal bool ShouldBeIgnored(INamedTypeSymbol typeSymbol)
+        {
+            if (ShouldBeIgnored(typeSymbol.ContainingNamespace))
+                return true;
+
+            if (!_ignoredTypes.IsDefault)
+            {
+                foreach (MetadataName name in _ignoredTypes)
+                {
+                    if (typeSymbol.HasMetadataName(name))
+                        return true;
+                }
+            }
+
+            return false;
+        }
 
         internal bool IsPartEnabled(RootDocumentationParts parts)
         {

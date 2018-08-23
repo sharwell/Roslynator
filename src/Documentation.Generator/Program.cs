@@ -32,7 +32,7 @@ namespace Roslynator.Documentation
         {
             DocumentationModel documentationModel = CreateFromTrustedPlatformAssemblies(assemblyNames);
 
-            var options = new DocumentationOptions(
+            var documentationOptions = new DocumentationOptions(
                 depth: DocumentationDepth.Member,
                 typeParts: TypeDocumentationParts.All,
                 formatDeclarationBaseList: true,
@@ -40,11 +40,13 @@ namespace Roslynator.Documentation
                 includeMemberOverrides: true,
                 includeMemberImplements: true);
 
-            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownDocumentationUrlProviders.GitHub, options);
+            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownDocumentationUrlProviders.GitHub, documentationOptions);
 
-            string defintionList = DeclarationListGenerator.GenerateAsync(documentationModel).Result;
+            var declarationListOptions = new DeclarationListOptions();
 
-            FileHelper.WriteAllText(directoryPath + "api.cs", defintionList, Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
+            string declarationList = DeclarationListGenerator.GenerateAsync(documentationModel, declarationListOptions).Result;
+
+            FileHelper.WriteAllText(directoryPath + "api.cs", declarationList, Encoding.UTF8, onlyIfChanges: true, fileMustExists: false);
 
             foreach (DocumentationGeneratorResult result in generator.Generate(heading))
             {

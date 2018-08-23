@@ -51,6 +51,8 @@ namespace Roslynator.Documentation
                 return 1;
 
             var documentationOptions = new DocumentationOptions(
+                ignoredNamespaces: options.IgnoredNamespaces,
+                ignoredTypes: options.IgnoredTypes,
                 preferredCultureName: options.PreferredCulture,
                 baseLocalUrl: options.BaseLocalUrl,
                 depth: options.Depth,
@@ -112,6 +114,8 @@ namespace Roslynator.Documentation
                 return 1;
 
             var declarationListOptions = new DeclarationListOptions(
+                ignoredNamespaces: options.IgnoredNamespaces,
+                ignoredTypes: options.IgnoredTypes,
                 indent: options.Indent,
                 indentChars: options.IndentChars,
                 newLineBeforeOpenBrace: options.NewLineBeforeOpenBrace,

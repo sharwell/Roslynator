@@ -41,6 +41,7 @@ namespace Roslynator.Documentation
 
         public IEnumerable<MetadataReference> References => Compilation.References;
 
+        //TODO: del Namespaces
         public IEnumerable<INamespaceSymbol> Namespaces
         {
             get
