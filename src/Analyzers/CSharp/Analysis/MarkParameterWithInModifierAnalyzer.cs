@@ -214,6 +214,18 @@ namespace Roslynator.CSharp.Analysis
                 _isInAssignedExpression = false;
             }
 
+            public override void VisitYieldStatement(YieldStatementSyntax node)
+            {
+                if (_localFunctionNesting == 0)
+                {
+                    Parameters.Clear();
+                }
+                else
+                {
+                    base.VisitYieldStatement(node);
+                }
+            }
+
             public override void VisitAnonymousMethodExpression(AnonymousMethodExpressionSyntax node)
             {
                 _anonymousFunctionNesting++;

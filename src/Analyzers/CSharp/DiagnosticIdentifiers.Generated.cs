@@ -8,6 +8,7 @@ namespace Roslynator.CSharp
 {
     public static partial class DiagnosticIdentifiers
     {
+        public const string MarkParameterWithInModifier = "RCS0001";
         public const string AddBracesWhenExpressionSpansOverMultipleLines = "RCS1001";
         public const string RemoveBraces = "RCS1002";
         public const string AddBracesToIfElseWhenExpressionSpansOverMultipleLines = "RCS1003";
@@ -212,6 +213,5 @@ namespace Roslynator.CSharp
         public const string ValidateArgumentsCorrectly = "RCS1227";
         public const string UnusedElementInDocumentationComment = "RCS1228";
         public const string UseAsyncAwait = "RCS1229";
-        public const string MarkParameterWithInModifier = "RCSX001";
     }
 }
