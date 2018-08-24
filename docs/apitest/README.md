@@ -12,8 +12,8 @@
 
 ## Classes
 
-* System\.Object
-* &emsp; System\.Attribute
+* System\.**Object**
+* &emsp; System\.**Attribute**
 * &emsp; \| &emsp; Roslynator\.Documentation\.Test\.[FooAttribute](Roslynator/Documentation/Test/FooAttribute/README.md#_top)
 * &emsp; System\.[ClassName](System/ClassName/README.md#_top) \[deprecated\]
 * &emsp; Roslynator\.Documentation\.Test\.[B](Roslynator/Documentation/Test/B/README.md#_top)

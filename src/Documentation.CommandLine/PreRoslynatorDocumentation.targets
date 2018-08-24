@@ -7,7 +7,7 @@
     <PropertyGroup>
       <RoslynatorDocumentationAssemblies>$(TargetPath)</RoslynatorDocumentationAssemblies>
       <RoslynatorDocumentationParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;API Reference&quot; -m github</RoslynatorDocumentationParameters>
-      <RoslynatorDocumentationDeclarationListParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDeclarationListParameters>
+      <RoslynatorDocumentationDeclarationsParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDeclarationsParameters>
     </PropertyGroup>
   </Target>
 </Project>

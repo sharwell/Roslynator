@@ -996,7 +996,10 @@ namespace Roslynator.Documentation
 
                     if (DocumentationModel.IsExternal(baseType))
                     {
-                        WriteSymbol(baseType, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespacesAndTypeParameters);
+                        WriteNamespaceSymbol(baseType.ContainingNamespace);
+                        WriteString(".");
+
+                        WriteBold(baseType.ToDisplayString(SymbolDisplayFormats.TypeNameAndContainingTypesAndTypeParameters));
                     }
                     else
                     {
