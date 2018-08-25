@@ -29,11 +29,11 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 ### Parameters
 
-#### tokenList
+**tokenList**
 
-#### kind1
+**kind1**
 
-#### kind2
+**kind2**
 
 ### Returns
 
@@ -51,13 +51,13 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 ### Parameters
 
-#### tokenList
+**tokenList**
 
-#### kind1
+**kind1**
 
-#### kind2
+**kind2**
 
-#### kind3
+**kind3**
 
 ### Returns
 
@@ -75,15 +75,15 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 ### Parameters
 
-#### tokenList
+**tokenList**
 
-#### kind1
+**kind1**
 
-#### kind2
+**kind2**
 
-#### kind3
+**kind3**
 
-#### kind4
+**kind4**
 
 ### Returns
 
@@ -101,17 +101,17 @@ public static bool ContainsAny(this SyntaxTokenList tokenList, SyntaxKind kind1,
 
 ### Parameters
 
-#### tokenList
+**tokenList**
 
-#### kind1
+**kind1**
 
-#### kind2
+**kind2**
 
-#### kind3
+**kind3**
 
-#### kind4
+**kind4**
 
-#### kind5
+**kind5**
 
 ### Returns
 

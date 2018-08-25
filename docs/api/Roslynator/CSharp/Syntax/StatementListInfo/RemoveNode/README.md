@@ -18,9 +18,9 @@ public StatementListInfo RemoveNode(SyntaxNode node, SyntaxRemoveOptions options
 
 ### Parameters
 
-#### node
+**node**
 
-#### options
+**options**
 
 ### Returns
 

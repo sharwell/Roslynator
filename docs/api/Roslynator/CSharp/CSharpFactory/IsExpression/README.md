@@ -23,9 +23,9 @@ public static BinaryExpressionSyntax IsExpression(ExpressionSyntax left, Express
 
 ### Parameters
 
-#### left
+**left**
 
-#### right
+**right**
 
 ### Returns
 
@@ -39,11 +39,11 @@ public static BinaryExpressionSyntax IsExpression(ExpressionSyntax left, SyntaxT
 
 ### Parameters
 
-#### left
+**left**
 
-#### operatorToken
+**operatorToken**
 
-#### right
+**right**
 
 ### Returns
 

@@ -23,15 +23,15 @@ public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modi
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### returnType
+**returnType**
 
-#### operatorToken
+**operatorToken**
 
-#### parameterList
+**parameterList**
 
-#### expressionBody
+**expressionBody**
 
 ### Returns
 
@@ -45,15 +45,15 @@ public static OperatorDeclarationSyntax OperatorDeclaration(SyntaxTokenList modi
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### returnType
+**returnType**
 
-#### operatorToken
+**operatorToken**
 
-#### parameterList
+**parameterList**
 
-#### body
+**body**
 
 ### Returns
 

@@ -27,13 +27,13 @@ public static ExpressionSyntax GetDefaultValueSyntax(this ITypeSymbol typeSymbol
 
 ### Parameters
 
-#### typeSymbol
+**typeSymbol**
 
-#### semanticModel
+**semanticModel**
 
-#### position
+**position**
 
-#### format
+**format**
 
 ### Returns
 
@@ -51,9 +51,9 @@ public static ExpressionSyntax GetDefaultValueSyntax(this ITypeSymbol typeSymbol
 
 ### Parameters
 
-#### typeSymbol
+**typeSymbol**
 
-#### type
+**type**
 
 ### Returns
 

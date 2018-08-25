@@ -29,9 +29,9 @@ public static SyntaxToken Find(this SyntaxTokenList tokenList, SyntaxKind kind)
 
 ### Parameters
 
-#### tokenList
+**tokenList**
 
-#### kind
+**kind**
 
 ### Returns
 
@@ -49,9 +49,9 @@ public static SyntaxTrivia Find(this SyntaxTriviaList triviaList, SyntaxKind kin
 
 ### Parameters
 
-#### triviaList
+**triviaList**
 
-#### kind
+**kind**
 
 ### Returns
 
@@ -69,13 +69,13 @@ public static TNode Find<TNode>(this SeparatedSyntaxList<TNode> list, SyntaxKind
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### kind
+**kind**
 
 ### Returns
 
@@ -93,13 +93,13 @@ public static TNode Find<TNode>(this SyntaxList<TNode> list, SyntaxKind kind) wh
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### kind
+**kind**
 
 ### Returns
 

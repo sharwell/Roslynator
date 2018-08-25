@@ -27,7 +27,7 @@ public int IndexOf(Func<StatementSyntax, bool> predicate)
 
 ### Parameters
 
-#### predicate
+**predicate**
 
 ### Returns
 
@@ -45,7 +45,7 @@ public int IndexOf(StatementSyntax statement)
 
 ### Parameters
 
-#### statement
+**statement**
 
 ### Returns
 

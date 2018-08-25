@@ -23,13 +23,13 @@ public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modi
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### returnType
+**returnType**
 
-#### identifier
+**identifier**
 
-#### parameterList
+**parameterList**
 
 ### Returns
 
@@ -43,13 +43,13 @@ public static DelegateDeclarationSyntax DelegateDeclaration(SyntaxTokenList modi
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### returnType
+**returnType**
 
-#### identifier
+**identifier**
 
-#### parameterList
+**parameterList**
 
 ### Returns
 

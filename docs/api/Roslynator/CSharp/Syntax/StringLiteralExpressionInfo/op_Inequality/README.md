@@ -14,9 +14,9 @@ public static bool operator !=(in StringLiteralExpressionInfo info1, in StringLi
 
 ### Parameters
 
-#### info1
+**info1**
 
-#### info2
+**info2**
 
 ### Returns
 

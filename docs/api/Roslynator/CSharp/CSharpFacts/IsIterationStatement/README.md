@@ -18,7 +18,7 @@ public static bool IsIterationStatement(SyntaxKind kind)
 
 ### Parameters
 
-#### kind
+**kind**
 
 ### Returns
 

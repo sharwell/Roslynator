@@ -19,7 +19,7 @@ public static bool IsSimpleIf(this IfStatementSyntax ifStatement)
 
 ### Parameters
 
-#### ifStatement
+**ifStatement**
 
 ### Returns
 

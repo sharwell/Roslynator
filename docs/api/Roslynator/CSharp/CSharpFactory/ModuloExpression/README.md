@@ -23,9 +23,9 @@ public static BinaryExpressionSyntax ModuloExpression(ExpressionSyntax left, Exp
 
 ### Parameters
 
-#### left
+**left**
 
-#### right
+**right**
 
 ### Returns
 
@@ -39,11 +39,11 @@ public static BinaryExpressionSyntax ModuloExpression(ExpressionSyntax left, Syn
 
 ### Parameters
 
-#### left
+**left**
 
-#### operatorToken
+**operatorToken**
 
-#### right
+**right**
 
 ### Returns
 

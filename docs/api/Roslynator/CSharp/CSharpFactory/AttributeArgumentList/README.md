@@ -23,7 +23,7 @@ public static AttributeArgumentListSyntax AttributeArgumentList(AttributeArgumen
 
 ### Parameters
 
-#### attributeArgument
+**attributeArgument**
 
 ### Returns
 
@@ -37,7 +37,7 @@ public static AttributeArgumentListSyntax AttributeArgumentList(params Attribute
 
 ### Parameters
 
-#### attributeArguments
+**attributeArguments**
 
 ### Returns
 

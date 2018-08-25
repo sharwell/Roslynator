@@ -28,7 +28,7 @@ public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatemen
 
 ### Parameters
 
-#### value
+**value**
 
 ### Returns
 
@@ -46,9 +46,9 @@ public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatemen
 
 ### Parameters
 
-#### localDeclarationStatement
+**localDeclarationStatement**
 
-#### allowMissing
+**allowMissing**
 
 ### Returns
 
@@ -66,9 +66,9 @@ public static SingleLocalDeclarationStatementInfo SingleLocalDeclarationStatemen
 
 ### Parameters
 
-#### variableDeclaration
+**variableDeclaration**
 
-#### allowMissing
+**allowMissing**
 
 ### Returns
 

@@ -29,11 +29,11 @@ public static SyntaxNode FirstAncestor(this SyntaxNode node, Func<SyntaxNode, bo
 
 ### Parameters
 
-#### node
+**node**
 
-#### predicate
+**predicate**
 
-#### ascendOutOfTrivia
+**ascendOutOfTrivia**
 
 ### Returns
 
@@ -51,11 +51,11 @@ public static SyntaxNode FirstAncestor(this SyntaxNode node, SyntaxKind kind, bo
 
 ### Parameters
 
-#### node
+**node**
 
-#### kind
+**kind**
 
-#### ascendOutOfTrivia
+**ascendOutOfTrivia**
 
 ### Returns
 
@@ -73,13 +73,13 @@ public static SyntaxNode FirstAncestor(this SyntaxNode node, SyntaxKind kind1, S
 
 ### Parameters
 
-#### node
+**node**
 
-#### kind1
+**kind1**
 
-#### kind2
+**kind2**
 
-#### ascendOutOfTrivia
+**ascendOutOfTrivia**
 
 ### Returns
 
@@ -97,15 +97,15 @@ public static SyntaxNode FirstAncestor(this SyntaxNode node, SyntaxKind kind1, S
 
 ### Parameters
 
-#### node
+**node**
 
-#### kind1
+**kind1**
 
-#### kind2
+**kind2**
 
-#### kind3
+**kind3**
 
-#### ascendOutOfTrivia
+**ascendOutOfTrivia**
 
 ### Returns
 

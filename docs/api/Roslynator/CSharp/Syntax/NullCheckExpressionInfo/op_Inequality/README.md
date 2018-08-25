@@ -14,9 +14,9 @@ public static bool operator !=(in NullCheckExpressionInfo info1, in NullCheckExp
 
 ### Parameters
 
-#### info1
+**info1**
 
-#### info2
+**info2**
 
 ### Returns
 

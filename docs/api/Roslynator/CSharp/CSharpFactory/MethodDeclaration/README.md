@@ -23,15 +23,15 @@ public static MethodDeclarationSyntax MethodDeclaration(SyntaxTokenList modifier
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### returnType
+**returnType**
 
-#### identifier
+**identifier**
 
-#### parameterList
+**parameterList**
 
-#### expressionBody
+**expressionBody**
 
 ### Returns
 
@@ -45,15 +45,15 @@ public static MethodDeclarationSyntax MethodDeclaration(SyntaxTokenList modifier
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### returnType
+**returnType**
 
-#### identifier
+**identifier**
 
-#### parameterList
+**parameterList**
 
-#### body
+**body**
 
 ### Returns
 

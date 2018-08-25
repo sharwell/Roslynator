@@ -14,7 +14,7 @@ public int this[int index] { get; }
 
 ### Parameters
 
-#### index
+**index**
 
 ### Property Value
 

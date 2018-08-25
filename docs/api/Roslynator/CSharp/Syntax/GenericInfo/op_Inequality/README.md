@@ -14,9 +14,9 @@ public static bool operator !=(in GenericInfo info1, in GenericInfo info2)
 
 ### Parameters
 
-#### info1
+**info1**
 
-#### info2
+**info2**
 
 ### Returns
 

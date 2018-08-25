@@ -23,7 +23,7 @@ public static InvocationExpressionSyntax NameOfExpression(ExpressionSyntax expre
 
 ### Parameters
 
-#### expression
+**expression**
 
 ### Returns
 
@@ -37,7 +37,7 @@ public static InvocationExpressionSyntax NameOfExpression(string identifier)
 
 ### Parameters
 
-#### identifier
+**identifier**
 
 ### Returns
 

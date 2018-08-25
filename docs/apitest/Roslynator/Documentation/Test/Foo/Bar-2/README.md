@@ -37,21 +37,21 @@ public void Bar<T, T2>(string value, string value2)
 
 ### Type Parameters
 
-#### T
+**T**
 
 doc for T1
 
-#### T2
+**T2**
 
 doc for T2
 
 ### Parameters
 
-#### value
+**value**
 
 doc for value
 
-#### value2
+**value2**
 
 doc for value2
 

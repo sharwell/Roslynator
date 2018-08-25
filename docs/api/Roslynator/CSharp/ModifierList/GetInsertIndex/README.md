@@ -27,11 +27,11 @@ public static int GetInsertIndex(SyntaxTokenList tokens, SyntaxKind kind, ICompa
 
 ### Parameters
 
-#### tokens
+**tokens**
 
-#### kind
+**kind**
 
-#### comparer
+**comparer**
 
 ### Returns
 
@@ -49,11 +49,11 @@ public static int GetInsertIndex(SyntaxTokenList tokens, SyntaxToken token, ICom
 
 ### Parameters
 
-#### tokens
+**tokens**
 
-#### token
+**token**
 
-#### comparer
+**comparer**
 
 ### Returns
 

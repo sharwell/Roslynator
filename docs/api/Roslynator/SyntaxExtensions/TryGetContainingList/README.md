@@ -18,15 +18,15 @@ public static bool TryGetContainingList(this SyntaxTrivia trivia, out SyntaxTriv
 
 ### Parameters
 
-#### trivia
+**trivia**
 
-#### triviaList
+**triviaList**
 
-#### allowLeading
+**allowLeading**
 
 If true, trivia can be part of leading trivia\.
 
-#### allowTrailing
+**allowTrailing**
 
 If true, trivia can be part of trailing trivia\.
 

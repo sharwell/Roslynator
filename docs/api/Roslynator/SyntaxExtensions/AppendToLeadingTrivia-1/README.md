@@ -29,9 +29,9 @@ public static SyntaxToken AppendToLeadingTrivia(this SyntaxToken token, IEnumera
 
 ### Parameters
 
-#### token
+**token**
 
-#### trivia
+**trivia**
 
 ### Returns
 
@@ -49,9 +49,9 @@ public static SyntaxToken AppendToLeadingTrivia(this SyntaxToken token, SyntaxTr
 
 ### Parameters
 
-#### token
+**token**
 
-#### trivia
+**trivia**
 
 ### Returns
 
@@ -69,13 +69,13 @@ public static TNode AppendToLeadingTrivia<TNode>(this TNode node, IEnumerable<Sy
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### trivia
+**trivia**
 
 ### Returns
 
@@ -93,13 +93,13 @@ public static TNode AppendToLeadingTrivia<TNode>(this TNode node, SyntaxTrivia t
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### trivia
+**trivia**
 
 ### Returns
 

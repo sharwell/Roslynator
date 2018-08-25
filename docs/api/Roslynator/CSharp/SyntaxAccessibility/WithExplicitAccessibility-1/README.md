@@ -18,15 +18,15 @@ public static TNode WithExplicitAccessibility<TNode>(TNode node, Accessibility n
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### newAccessibility
+**newAccessibility**
 
-#### comparer
+**comparer**
 
 ### Returns
 

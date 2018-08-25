@@ -25,13 +25,13 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### initializer
+**initializer**
 
 ### Returns
 
@@ -45,13 +45,13 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### value
+**value**
 
 ### Returns
 
@@ -65,13 +65,13 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### initializer
+**initializer**
 
 ### Returns
 
@@ -85,13 +85,13 @@ public static FieldDeclarationSyntax FieldDeclaration(SyntaxTokenList modifiers,
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### value
+**value**
 
 ### Returns
 

@@ -23,11 +23,11 @@ public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList mo
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### identifier
+**identifier**
 
-#### members
+**members**
 
 ### Returns
 
@@ -41,11 +41,11 @@ public static InterfaceDeclarationSyntax InterfaceDeclaration(SyntaxTokenList mo
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### identifier
+**identifier**
 
-#### members
+**members**
 
 ### Returns
 

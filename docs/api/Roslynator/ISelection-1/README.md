@@ -20,7 +20,7 @@ public interface ISelection<T> : System.Collections.Generic.IEnumerable<T>,
 
 ### Type Parameters
 
-#### T
+**T**
 
 ### Derived
 

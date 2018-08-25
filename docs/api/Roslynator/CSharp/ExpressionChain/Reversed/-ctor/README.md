@@ -12,5 +12,4 @@ public Reversed(in ExpressionChain chain)
 
 ### Parameters
 
-#### chain
-
+**chain**

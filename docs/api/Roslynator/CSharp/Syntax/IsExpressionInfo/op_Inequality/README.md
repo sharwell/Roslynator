@@ -14,9 +14,9 @@ public static bool operator !=(in IsExpressionInfo info1, in IsExpressionInfo in
 
 ### Parameters
 
-#### info1
+**info1**
 
-#### info2
+**info2**
 
 ### Returns
 

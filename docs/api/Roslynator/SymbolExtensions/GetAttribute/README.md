@@ -18,9 +18,9 @@ public static AttributeData GetAttribute(this ISymbol symbol, INamedTypeSymbol a
 
 ### Parameters
 
-#### symbol
+**symbol**
 
-#### attributeClass
+**attributeClass**
 
 ### Returns
 

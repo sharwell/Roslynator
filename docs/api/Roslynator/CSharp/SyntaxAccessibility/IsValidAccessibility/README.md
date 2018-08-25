@@ -18,11 +18,11 @@ public static bool IsValidAccessibility(SyntaxNode node, Accessibility accessibi
 
 ### Parameters
 
-#### node
+**node**
 
-#### accessibility
+**accessibility**
 
-#### ignoreOverride
+**ignoreOverride**
 
 Ignore "override" modifier\.
 

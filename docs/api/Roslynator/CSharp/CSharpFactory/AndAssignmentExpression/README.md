@@ -23,9 +23,9 @@ public static AssignmentExpressionSyntax AndAssignmentExpression(ExpressionSynta
 
 ### Parameters
 
-#### left
+**left**
 
-#### right
+**right**
 
 ### Returns
 
@@ -39,11 +39,11 @@ public static AssignmentExpressionSyntax AndAssignmentExpression(ExpressionSynta
 
 ### Parameters
 
-#### left
+**left**
 
-#### operatorToken
+**operatorToken**
 
-#### right
+**right**
 
 ### Returns
 

@@ -35,9 +35,9 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 ### Parameters
 
-#### classDeclaration
+**classDeclaration**
 
-#### members
+**members**
 
 ### Returns
 
@@ -55,9 +55,9 @@ public static ClassDeclarationSyntax WithMembers(this ClassDeclarationSyntax cla
 
 ### Parameters
 
-#### classDeclaration
+**classDeclaration**
 
-#### member
+**member**
 
 ### Returns
 
@@ -75,9 +75,9 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 ### Parameters
 
-#### compilationUnit
+**compilationUnit**
 
-#### members
+**members**
 
 ### Returns
 
@@ -95,9 +95,9 @@ public static CompilationUnitSyntax WithMembers(this CompilationUnitSyntax compi
 
 ### Parameters
 
-#### compilationUnit
+**compilationUnit**
 
-#### member
+**member**
 
 ### Returns
 
@@ -115,9 +115,9 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 ### Parameters
 
-#### interfaceDeclaration
+**interfaceDeclaration**
 
-#### members
+**members**
 
 ### Returns
 
@@ -135,9 +135,9 @@ public static InterfaceDeclarationSyntax WithMembers(this InterfaceDeclarationSy
 
 ### Parameters
 
-#### interfaceDeclaration
+**interfaceDeclaration**
 
-#### member
+**member**
 
 ### Returns
 
@@ -155,9 +155,9 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 ### Parameters
 
-#### namespaceDeclaration
+**namespaceDeclaration**
 
-#### members
+**members**
 
 ### Returns
 
@@ -175,9 +175,9 @@ public static NamespaceDeclarationSyntax WithMembers(this NamespaceDeclarationSy
 
 ### Parameters
 
-#### namespaceDeclaration
+**namespaceDeclaration**
 
-#### member
+**member**
 
 ### Returns
 
@@ -195,9 +195,9 @@ public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax s
 
 ### Parameters
 
-#### structDeclaration
+**structDeclaration**
 
-#### members
+**members**
 
 ### Returns
 
@@ -215,9 +215,9 @@ public static StructDeclarationSyntax WithMembers(this StructDeclarationSyntax s
 
 ### Parameters
 
-#### structDeclaration
+**structDeclaration**
 
-#### member
+**member**
 
 ### Returns
 

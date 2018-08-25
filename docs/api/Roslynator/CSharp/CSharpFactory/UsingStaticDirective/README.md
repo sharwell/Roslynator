@@ -23,7 +23,7 @@ public static UsingDirectiveSyntax UsingStaticDirective(NameSyntax name)
 
 ### Parameters
 
-#### name
+**name**
 
 ### Returns
 
@@ -37,13 +37,13 @@ public static UsingDirectiveSyntax UsingStaticDirective(SyntaxToken usingKeyword
 
 ### Parameters
 
-#### usingKeyword
+**usingKeyword**
 
-#### staticKeyword
+**staticKeyword**
 
-#### name
+**name**
 
-#### semicolonToken
+**semicolonToken**
 
 ### Returns
 

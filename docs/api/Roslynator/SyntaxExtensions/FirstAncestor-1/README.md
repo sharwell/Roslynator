@@ -18,15 +18,15 @@ public static TNode FirstAncestor<TNode>(this SyntaxNode node, Func<TNode, bool>
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### predicate
+**predicate**
 
-#### ascendOutOfTrivia
+**ascendOutOfTrivia**
 
 ### Returns
 

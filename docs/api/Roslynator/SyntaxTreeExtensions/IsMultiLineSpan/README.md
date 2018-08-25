@@ -18,11 +18,11 @@ public static bool IsMultiLineSpan(this SyntaxTree syntaxTree, TextSpan span, Ca
 
 ### Parameters
 
-#### syntaxTree
+**syntaxTree**
 
-#### span
+**span**
 
-#### cancellationToken
+**cancellationToken**
 
 ### Returns
 

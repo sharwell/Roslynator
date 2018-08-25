@@ -23,7 +23,7 @@ public IEnumerable<ExpressionSyntax> Expressions(bool leftToRight = false)
 
 ### Parameters
 
-#### leftToRight
+**leftToRight**
 
 If true expressions are enumerated as they are displayed in the source code\.
 

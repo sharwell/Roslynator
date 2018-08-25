@@ -14,9 +14,9 @@ public static bool operator ==(in AssignmentExpressionInfo info1, in AssignmentE
 
 ### Parameters
 
-#### info1
+**info1**
 
-#### info2
+**info2**
 
 ### Returns
 

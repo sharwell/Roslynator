@@ -28,9 +28,9 @@ public static StatementListSelection Create(BlockSyntax block, TextSpan span)
 
 ### Parameters
 
-#### block
+**block**
 
-#### span
+**span**
 
 ### Returns
 
@@ -48,9 +48,9 @@ public static StatementListSelection Create(in StatementListInfo statementsInfo,
 
 ### Parameters
 
-#### statementsInfo
+**statementsInfo**
 
-#### span
+**span**
 
 ### Returns
 
@@ -68,9 +68,9 @@ public static StatementListSelection Create(SwitchSectionSyntax switchSection, T
 
 ### Parameters
 
-#### switchSection
+**switchSection**
 
-#### span
+**span**
 
 ### Returns
 

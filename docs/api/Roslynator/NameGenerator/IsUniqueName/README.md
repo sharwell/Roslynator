@@ -27,11 +27,11 @@ public static bool IsUniqueName(string name, IEnumerable<string> reservedNames, 
 
 ### Parameters
 
-#### name
+**name**
 
-#### reservedNames
+**reservedNames**
 
-#### isCaseSensitive
+**isCaseSensitive**
 
 ### Returns
 
@@ -49,11 +49,11 @@ public static bool IsUniqueName(string name, ImmutableArray<ISymbol> symbols, bo
 
 ### Parameters
 
-#### name
+**name**
 
-#### symbols
+**symbols**
 
-#### isCaseSensitive
+**isCaseSensitive**
 
 ### Returns
 

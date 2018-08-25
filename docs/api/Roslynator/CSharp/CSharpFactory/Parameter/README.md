@@ -24,11 +24,11 @@ public static ParameterSyntax Parameter(TypeSyntax type, string identifier, Expr
 
 ### Parameters
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### default
+**default**
 
 ### Returns
 
@@ -42,11 +42,11 @@ public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier,
 
 ### Parameters
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### default
+**default**
 
 ### Returns
 
@@ -60,11 +60,11 @@ public static ParameterSyntax Parameter(TypeSyntax type, SyntaxToken identifier,
 
 ### Parameters
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### default
+**default**
 
 ### Returns
 

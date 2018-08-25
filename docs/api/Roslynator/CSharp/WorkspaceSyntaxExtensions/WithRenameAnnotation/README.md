@@ -19,7 +19,7 @@ public static SyntaxToken WithRenameAnnotation(this SyntaxToken token)
 
 ### Parameters
 
-#### token
+**token**
 
 ### Returns
 

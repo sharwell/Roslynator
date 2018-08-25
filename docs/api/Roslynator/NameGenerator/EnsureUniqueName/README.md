@@ -27,11 +27,11 @@ public abstract string EnsureUniqueName(string baseName, IEnumerable<string> res
 
 ### Parameters
 
-#### baseName
+**baseName**
 
-#### reservedNames
+**reservedNames**
 
-#### isCaseSensitive
+**isCaseSensitive**
 
 ### Returns
 
@@ -49,11 +49,11 @@ public abstract string EnsureUniqueName(string baseName, ImmutableArray<ISymbol>
 
 ### Parameters
 
-#### baseName
+**baseName**
 
-#### symbols
+**symbols**
 
-#### isCaseSensitive
+**isCaseSensitive**
 
 ### Returns
 

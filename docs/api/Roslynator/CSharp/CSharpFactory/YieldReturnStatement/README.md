@@ -14,7 +14,7 @@ public static YieldStatementSyntax YieldReturnStatement(ExpressionSyntax express
 
 ### Parameters
 
-#### expression
+**expression**
 
 ### Returns
 

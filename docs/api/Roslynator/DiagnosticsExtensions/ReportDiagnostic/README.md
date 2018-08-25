@@ -46,17 +46,17 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### additionalLocations
+**additionalLocations**
 
-#### properties
+**properties**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SymbolAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Location__System_Object___"></a>
 
@@ -70,15 +70,15 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### additionalLocations
+**additionalLocations**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, Location, ImmutableDictionary\<String, String>, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SymbolAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Collections_Immutable_ImmutableDictionary_System_String_System_String__System_Object___"></a>
 
@@ -92,15 +92,15 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### properties
+**properties**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, Location, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SymbolAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Object___"></a>
 
@@ -114,15 +114,15 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
 A [DiagnosticDescriptor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor) describing the diagnostic\.
 
-#### location
+**location**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, SyntaxNode, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SymbolAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxNode_System_Object___"></a>
 
@@ -136,13 +136,13 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### node
+**node**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, SyntaxToken, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SymbolAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxToken_System_Object___"></a>
 
@@ -156,13 +156,13 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### token
+**token**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SymbolAnalysisContext, DiagnosticDescriptor, SyntaxTrivia, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SymbolAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxTrivia_System_Object___"></a>
 
@@ -176,13 +176,13 @@ public static void ReportDiagnostic(this SymbolAnalysisContext context, Diagnost
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### trivia
+**trivia**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, ImmutableDictionary\<String, String>, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxNodeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Location__System_Collections_Immutable_ImmutableDictionary_System_String_System_String__System_Object___"></a>
 
@@ -196,17 +196,17 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### additionalLocations
+**additionalLocations**
 
-#### properties
+**properties**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxNodeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Location__System_Object___"></a>
 
@@ -220,15 +220,15 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### additionalLocations
+**additionalLocations**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, Location, ImmutableDictionary\<String, String>, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxNodeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Collections_Immutable_ImmutableDictionary_System_String_System_String__System_Object___"></a>
 
@@ -242,15 +242,15 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### properties
+**properties**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, Location, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxNodeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Object___"></a>
 
@@ -264,13 +264,13 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, SyntaxNode, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxNodeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxNode_System_Object___"></a>
 
@@ -284,13 +284,13 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### node
+**node**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, SyntaxToken, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxNodeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxToken_System_Object___"></a>
 
@@ -304,13 +304,13 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### token
+**token**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxNodeAnalysisContext, DiagnosticDescriptor, SyntaxTrivia, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxNodeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxTrivia_System_Object___"></a>
 
@@ -324,13 +324,13 @@ public static void ReportDiagnostic(this SyntaxNodeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### trivia
+**trivia**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, ImmutableDictionary\<String, String>, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxTreeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Location__System_Collections_Immutable_ImmutableDictionary_System_String_System_String__System_Object___"></a>
 
@@ -344,17 +344,17 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### additionalLocations
+**additionalLocations**
 
-#### properties
+**properties**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, Location, IEnumerable\<Location>, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxTreeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Collections_Generic_IEnumerable_Microsoft_CodeAnalysis_Location__System_Object___"></a>
 
@@ -368,15 +368,15 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### additionalLocations
+**additionalLocations**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, Location, ImmutableDictionary\<String, String>, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxTreeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Collections_Immutable_ImmutableDictionary_System_String_System_String__System_Object___"></a>
 
@@ -390,15 +390,15 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### properties
+**properties**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, Location, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxTreeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Object___"></a>
 
@@ -412,13 +412,13 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### location
+**location**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, SyntaxNode, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxTreeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxNode_System_Object___"></a>
 
@@ -432,13 +432,13 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### node
+**node**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, SyntaxToken, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxTreeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxToken_System_Object___"></a>
 
@@ -452,13 +452,13 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### token
+**token**
 
-#### messageArgs
+**messageArgs**
 
 ## ReportDiagnostic\(SyntaxTreeAnalysisContext, DiagnosticDescriptor, SyntaxTrivia, Object\[\]\) <a name="Roslynator_DiagnosticsExtensions_ReportDiagnostic_Microsoft_CodeAnalysis_Diagnostics_SyntaxTreeAnalysisContext_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxTrivia_System_Object___"></a>
 
@@ -472,11 +472,10 @@ public static void ReportDiagnostic(this SyntaxTreeAnalysisContext context, Diag
 
 ### Parameters
 
-#### context
+**context**
 
-#### descriptor
+**descriptor**
 
-#### trivia
+**trivia**
 
-#### messageArgs
-
+**messageArgs**

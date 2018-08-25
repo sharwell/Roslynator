@@ -27,13 +27,13 @@ public static TSymbol FindMember<TSymbol>(this ITypeSymbol typeSymbol, Func<TSym
 
 ### Type Parameters
 
-#### TSymbol
+**TSymbol**
 
 ### Parameters
 
-#### typeSymbol
+**typeSymbol**
 
-#### predicate
+**predicate**
 
 ### Returns
 
@@ -51,15 +51,15 @@ public static TSymbol FindMember<TSymbol>(this ITypeSymbol typeSymbol, string na
 
 ### Type Parameters
 
-#### TSymbol
+**TSymbol**
 
 ### Parameters
 
-#### typeSymbol
+**typeSymbol**
 
-#### name
+**name**
 
-#### predicate
+**predicate**
 
 ### Returns
 

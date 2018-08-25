@@ -18,9 +18,9 @@ public static TextLineCollectionSelection Create(TextLineCollection lines, TextS
 
 ### Parameters
 
-#### lines
+**lines**
 
-#### span
+**span**
 
 ### Returns
 

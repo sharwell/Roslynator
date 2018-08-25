@@ -27,7 +27,7 @@ public static SyntaxTrivia GetPreprocessingMessageTrivia(this EndRegionDirective
 
 ### Parameters
 
-#### endRegionDirective
+**endRegionDirective**
 
 ### Returns
 
@@ -45,7 +45,7 @@ public static SyntaxTrivia GetPreprocessingMessageTrivia(this RegionDirectiveTri
 
 ### Parameters
 
-#### regionDirective
+**regionDirective**
 
 ### Returns
 

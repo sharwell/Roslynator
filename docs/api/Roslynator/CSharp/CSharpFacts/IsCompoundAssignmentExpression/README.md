@@ -18,7 +18,7 @@ public static bool IsCompoundAssignmentExpression(SyntaxKind kind)
 
 ### Parameters
 
-#### kind
+**kind**
 
 ### Returns
 

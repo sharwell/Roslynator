@@ -28,15 +28,15 @@ public static IParameterSymbol DetermineParameter(this SemanticModel semanticMod
 
 ### Parameters
 
-#### semanticModel
+**semanticModel**
 
-#### argument
+**argument**
 
-#### allowParams
+**allowParams**
 
-#### allowCandidate
+**allowCandidate**
 
-#### cancellationToken
+**cancellationToken**
 
 ### Returns
 
@@ -55,15 +55,15 @@ public static IParameterSymbol DetermineParameter(this SemanticModel semanticMod
 
 ### Parameters
 
-#### semanticModel
+**semanticModel**
 
-#### attributeArgument
+**attributeArgument**
 
-#### allowParams
+**allowParams**
 
-#### allowCandidate
+**allowCandidate**
 
-#### cancellationToken
+**cancellationToken**
 
 ### Returns
 

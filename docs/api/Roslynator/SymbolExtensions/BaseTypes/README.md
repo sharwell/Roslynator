@@ -18,7 +18,7 @@ public static IEnumerable<INamedTypeSymbol> BaseTypes(this ITypeSymbol type)
 
 ### Parameters
 
-#### type
+**type**
 
 ### Returns
 

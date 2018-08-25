@@ -23,9 +23,9 @@ public static AssignmentExpressionSyntax MultiplyAssignmentExpression(Expression
 
 ### Parameters
 
-#### left
+**left**
 
-#### right
+**right**
 
 ### Returns
 
@@ -39,11 +39,11 @@ public static AssignmentExpressionSyntax MultiplyAssignmentExpression(Expression
 
 ### Parameters
 
-#### left
+**left**
 
-#### operatorToken
+**operatorToken**
 
-#### right
+**right**
 
 ### Returns
 

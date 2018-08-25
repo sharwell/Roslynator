@@ -45,7 +45,7 @@ public static Accessibility GetDefaultAccessibility(AccessorDeclarationSyntax ac
 
 ### Parameters
 
-#### accessorDeclaration
+**accessorDeclaration**
 
 ### Returns
 
@@ -63,7 +63,7 @@ public static Accessibility GetDefaultAccessibility(BaseTypeDeclarationSyntax ba
 
 ### Parameters
 
-#### baseTypeDeclaration
+**baseTypeDeclaration**
 
 ### Returns
 
@@ -81,7 +81,7 @@ public static Accessibility GetDefaultAccessibility(ClassDeclarationSyntax class
 
 ### Parameters
 
-#### classDeclaration
+**classDeclaration**
 
 ### Returns
 
@@ -99,7 +99,7 @@ public static Accessibility GetDefaultAccessibility(ConstructorDeclarationSyntax
 
 ### Parameters
 
-#### constructorDeclaration
+**constructorDeclaration**
 
 ### Returns
 
@@ -117,7 +117,7 @@ public static Accessibility GetDefaultAccessibility(ConversionOperatorDeclaratio
 
 ### Parameters
 
-#### conversionOperatorDeclaration
+**conversionOperatorDeclaration**
 
 ### Returns
 
@@ -135,7 +135,7 @@ public static Accessibility GetDefaultAccessibility(DelegateDeclarationSyntax de
 
 ### Parameters
 
-#### delegateDeclaration
+**delegateDeclaration**
 
 ### Returns
 
@@ -153,7 +153,7 @@ public static Accessibility GetDefaultAccessibility(DestructorDeclarationSyntax 
 
 ### Parameters
 
-#### destructorDeclaration
+**destructorDeclaration**
 
 ### Returns
 
@@ -171,7 +171,7 @@ public static Accessibility GetDefaultAccessibility(EnumDeclarationSyntax enumDe
 
 ### Parameters
 
-#### enumDeclaration
+**enumDeclaration**
 
 ### Returns
 
@@ -189,7 +189,7 @@ public static Accessibility GetDefaultAccessibility(EnumMemberDeclarationSyntax 
 
 ### Parameters
 
-#### enumMemberDeclaration
+**enumMemberDeclaration**
 
 ### Returns
 
@@ -207,7 +207,7 @@ public static Accessibility GetDefaultAccessibility(EventDeclarationSyntax event
 
 ### Parameters
 
-#### eventDeclaration
+**eventDeclaration**
 
 ### Returns
 
@@ -225,7 +225,7 @@ public static Accessibility GetDefaultAccessibility(EventFieldDeclarationSyntax 
 
 ### Parameters
 
-#### eventFieldDeclaration
+**eventFieldDeclaration**
 
 ### Returns
 
@@ -243,7 +243,7 @@ public static Accessibility GetDefaultAccessibility(FieldDeclarationSyntax field
 
 ### Parameters
 
-#### fieldDeclaration
+**fieldDeclaration**
 
 ### Returns
 
@@ -261,7 +261,7 @@ public static Accessibility GetDefaultAccessibility(IndexerDeclarationSyntax ind
 
 ### Parameters
 
-#### indexerDeclaration
+**indexerDeclaration**
 
 ### Returns
 
@@ -279,7 +279,7 @@ public static Accessibility GetDefaultAccessibility(InterfaceDeclarationSyntax i
 
 ### Parameters
 
-#### interfaceDeclaration
+**interfaceDeclaration**
 
 ### Returns
 
@@ -297,7 +297,7 @@ public static Accessibility GetDefaultAccessibility(MemberDeclarationSyntax decl
 
 ### Parameters
 
-#### declaration
+**declaration**
 
 ### Returns
 
@@ -315,7 +315,7 @@ public static Accessibility GetDefaultAccessibility(MethodDeclarationSyntax meth
 
 ### Parameters
 
-#### methodDeclaration
+**methodDeclaration**
 
 ### Returns
 
@@ -333,7 +333,7 @@ public static Accessibility GetDefaultAccessibility(NamespaceDeclarationSyntax n
 
 ### Parameters
 
-#### namespaceDeclaration
+**namespaceDeclaration**
 
 ### Returns
 
@@ -351,7 +351,7 @@ public static Accessibility GetDefaultAccessibility(OperatorDeclarationSyntax op
 
 ### Parameters
 
-#### operatorDeclaration
+**operatorDeclaration**
 
 ### Returns
 
@@ -369,7 +369,7 @@ public static Accessibility GetDefaultAccessibility(PropertyDeclarationSyntax pr
 
 ### Parameters
 
-#### propertyDeclaration
+**propertyDeclaration**
 
 ### Returns
 
@@ -387,7 +387,7 @@ public static Accessibility GetDefaultAccessibility(StructDeclarationSyntax stru
 
 ### Parameters
 
-#### structDeclaration
+**structDeclaration**
 
 ### Returns
 

@@ -27,7 +27,7 @@ public static bool ContainsYield(this LocalFunctionStatementSyntax localFunction
 
 ### Parameters
 
-#### localFunctionStatement
+**localFunctionStatement**
 
 ### Returns
 
@@ -45,7 +45,7 @@ public static bool ContainsYield(this MethodDeclarationSyntax methodDeclaration)
 
 ### Parameters
 
-#### methodDeclaration
+**methodDeclaration**
 
 ### Returns
 

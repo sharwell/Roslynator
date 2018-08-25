@@ -27,15 +27,15 @@ public static IEnumerable<SyntaxTrivia> DescendantTrivia<TNode>(this SyntaxList<
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### descendIntoChildren
+**descendIntoChildren**
 
-#### descendIntoTrivia
+**descendIntoTrivia**
 
 ### Returns
 
@@ -53,17 +53,17 @@ public static IEnumerable<SyntaxTrivia> DescendantTrivia<TNode>(this SyntaxList<
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### span
+**span**
 
-#### descendIntoChildren
+**descendIntoChildren**
 
-#### descendIntoTrivia
+**descendIntoTrivia**
 
 ### Returns
 

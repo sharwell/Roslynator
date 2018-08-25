@@ -23,7 +23,7 @@ public static PrefixUnaryExpressionSyntax PointerIndirectionExpression(Expressio
 
 ### Parameters
 
-#### operand
+**operand**
 
 ### Returns
 
@@ -37,9 +37,9 @@ public static PrefixUnaryExpressionSyntax PointerIndirectionExpression(Expressio
 
 ### Parameters
 
-#### operand
+**operand**
 
-#### operatorToken
+**operatorToken**
 
 ### Returns
 

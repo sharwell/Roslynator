@@ -27,11 +27,11 @@ public static bool TryCreate(NamespaceDeclarationSyntax namespaceDeclaration, Te
 
 ### Parameters
 
-#### namespaceDeclaration
+**namespaceDeclaration**
 
-#### span
+**span**
 
-#### selectedMembers
+**selectedMembers**
 
 ### Returns
 
@@ -51,11 +51,11 @@ public static bool TryCreate(TypeDeclarationSyntax typeDeclaration, TextSpan spa
 
 ### Parameters
 
-#### typeDeclaration
+**typeDeclaration**
 
-#### span
+**span**
 
-#### selectedMembers
+**selectedMembers**
 
 ### Returns
 

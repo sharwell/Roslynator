@@ -14,7 +14,7 @@ public static LiteralExpressionSyntax StringLiteralExpression(string value)
 
 ### Parameters
 
-#### value
+**value**
 
 ### Returns
 

@@ -23,7 +23,7 @@ public static InitializerExpressionSyntax CollectionInitializerExpression(Separa
 
 ### Parameters
 
-#### expressions
+**expressions**
 
 ### Returns
 
@@ -37,11 +37,11 @@ public static InitializerExpressionSyntax CollectionInitializerExpression(Syntax
 
 ### Parameters
 
-#### openBraceToken
+**openBraceToken**
 
-#### expressions
+**expressions**
 
-#### closeBraceToken
+**closeBraceToken**
 
 ### Returns
 

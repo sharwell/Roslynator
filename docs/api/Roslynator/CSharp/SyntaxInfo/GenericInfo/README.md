@@ -34,7 +34,7 @@ public static GenericInfo GenericInfo(DelegateDeclarationSyntax delegateDeclarat
 
 ### Parameters
 
-#### delegateDeclaration
+**delegateDeclaration**
 
 ### Returns
 
@@ -52,7 +52,7 @@ public static GenericInfo GenericInfo(LocalFunctionStatementSyntax localFunction
 
 ### Parameters
 
-#### localFunctionStatement
+**localFunctionStatement**
 
 ### Returns
 
@@ -70,7 +70,7 @@ public static GenericInfo GenericInfo(MethodDeclarationSyntax methodDeclaration)
 
 ### Parameters
 
-#### methodDeclaration
+**methodDeclaration**
 
 ### Returns
 
@@ -88,7 +88,7 @@ public static GenericInfo GenericInfo(SyntaxNode node)
 
 ### Parameters
 
-#### node
+**node**
 
 ### Returns
 
@@ -106,7 +106,7 @@ public static GenericInfo GenericInfo(TypeDeclarationSyntax typeDeclaration)
 
 ### Parameters
 
-#### typeDeclaration
+**typeDeclaration**
 
 ### Returns
 
@@ -124,7 +124,7 @@ public static GenericInfo GenericInfo(TypeParameterConstraintClauseSyntax constr
 
 ### Parameters
 
-#### constraintClause
+**constraintClause**
 
 ### Returns
 
@@ -142,7 +142,7 @@ public static GenericInfo GenericInfo(TypeParameterConstraintSyntax typeParamete
 
 ### Parameters
 
-#### typeParameterConstraint
+**typeParameterConstraint**
 
 ### Returns
 
@@ -160,7 +160,7 @@ public static GenericInfo GenericInfo(TypeParameterListSyntax typeParameterList)
 
 ### Parameters
 
-#### typeParameterList
+**typeParameterList**
 
 ### Returns
 
@@ -178,7 +178,7 @@ public static GenericInfo GenericInfo(TypeParameterSyntax typeParameter)
 
 ### Parameters
 
-#### typeParameter
+**typeParameter**
 
 ### Returns
 

@@ -29,7 +29,7 @@ public static SyntaxToken TrimLeadingTrivia(this SyntaxToken token)
 
 ### Parameters
 
-#### token
+**token**
 
 ### Returns
 
@@ -49,11 +49,11 @@ public static TNode TrimLeadingTrivia<TNode>(this TNode node) where TNode : Micr
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
 ### Returns
 

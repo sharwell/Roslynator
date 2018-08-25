@@ -23,7 +23,7 @@ public static PrefixUnaryExpressionSyntax AddressOfExpression(ExpressionSyntax o
 
 ### Parameters
 
-#### operand
+**operand**
 
 ### Returns
 
@@ -37,9 +37,9 @@ public static PrefixUnaryExpressionSyntax AddressOfExpression(ExpressionSyntax o
 
 ### Parameters
 
-#### operand
+**operand**
 
-#### operatorToken
+**operatorToken**
 
 ### Returns
 

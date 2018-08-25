@@ -25,11 +25,11 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 ### Parameters
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### initializer
+**initializer**
 
 ### Returns
 
@@ -43,11 +43,11 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 ### Parameters
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### value
+**value**
 
 ### Returns
 
@@ -61,11 +61,11 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 ### Parameters
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### initializer
+**initializer**
 
 ### Returns
 
@@ -79,11 +79,11 @@ public static LocalDeclarationStatementSyntax LocalDeclarationStatement(TypeSynt
 
 ### Parameters
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
-#### value
+**value**
 
 ### Returns
 

@@ -29,9 +29,9 @@ public static SyntaxToken PrependToTrailingTrivia(this SyntaxToken token, IEnume
 
 ### Parameters
 
-#### token
+**token**
 
-#### trivia
+**trivia**
 
 ### Returns
 
@@ -49,9 +49,9 @@ public static SyntaxToken PrependToTrailingTrivia(this SyntaxToken token, Syntax
 
 ### Parameters
 
-#### token
+**token**
 
-#### trivia
+**trivia**
 
 ### Returns
 
@@ -69,13 +69,13 @@ public static TNode PrependToTrailingTrivia<TNode>(this TNode node, IEnumerable<
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### trivia
+**trivia**
 
 ### Returns
 
@@ -93,13 +93,13 @@ public static TNode PrependToTrailingTrivia<TNode>(this TNode node, SyntaxTrivia
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### trivia
+**trivia**
 
 ### Returns
 

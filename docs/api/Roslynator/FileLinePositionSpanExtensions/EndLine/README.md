@@ -18,7 +18,7 @@ public static int EndLine(this FileLinePositionSpan fileLinePositionSpan)
 
 ### Parameters
 
-#### fileLinePositionSpan
+**fileLinePositionSpan**
 
 ### Returns
 

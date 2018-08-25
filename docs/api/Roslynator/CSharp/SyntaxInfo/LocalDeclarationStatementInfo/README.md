@@ -27,9 +27,9 @@ public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(Expres
 
 ### Parameters
 
-#### value
+**value**
 
-#### allowMissing
+**allowMissing**
 
 ### Returns
 
@@ -47,9 +47,9 @@ public static LocalDeclarationStatementInfo LocalDeclarationStatementInfo(LocalD
 
 ### Parameters
 
-#### localDeclarationStatement
+**localDeclarationStatement**
 
-#### allowMissing
+**allowMissing**
 
 ### Returns
 

@@ -27,9 +27,9 @@ public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressio
 
 ### Parameters
 
-#### lambdaExpression
+**lambdaExpression**
 
-#### allowMissing
+**allowMissing**
 
 ### Returns
 
@@ -47,11 +47,11 @@ public static SingleParameterLambdaExpressionInfo SingleParameterLambdaExpressio
 
 ### Parameters
 
-#### node
+**node**
 
-#### walkDownParentheses
+**walkDownParentheses**
 
-#### allowMissing
+**allowMissing**
 
 ### Returns
 

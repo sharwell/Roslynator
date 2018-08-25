@@ -29,9 +29,9 @@ public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, ITypeSymb
 
 ### Parameters
 
-#### namedTypeSymbol
+**namedTypeSymbol**
 
-#### typeArgument
+**typeArgument**
 
 ### Returns
 
@@ -49,9 +49,9 @@ public static bool IsNullableOf(this INamedTypeSymbol namedTypeSymbol, SpecialTy
 
 ### Parameters
 
-#### namedTypeSymbol
+**namedTypeSymbol**
 
-#### specialType
+**specialType**
 
 ### Returns
 
@@ -69,9 +69,9 @@ public static bool IsNullableOf(this ITypeSymbol typeSymbol, ITypeSymbol typeArg
 
 ### Parameters
 
-#### typeSymbol
+**typeSymbol**
 
-#### typeArgument
+**typeArgument**
 
 ### Returns
 
@@ -89,9 +89,9 @@ public static bool IsNullableOf(this ITypeSymbol typeSymbol, SpecialType special
 
 ### Parameters
 
-#### typeSymbol
+**typeSymbol**
 
-#### specialType
+**specialType**
 
 ### Returns
 

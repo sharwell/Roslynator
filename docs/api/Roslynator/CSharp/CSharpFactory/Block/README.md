@@ -23,7 +23,7 @@ public static BlockSyntax Block(StatementSyntax statement)
 
 ### Parameters
 
-#### statement
+**statement**
 
 ### Returns
 
@@ -37,11 +37,11 @@ public static BlockSyntax Block(SyntaxToken openBrace, StatementSyntax statement
 
 ### Parameters
 
-#### openBrace
+**openBrace**
 
-#### statement
+**statement**
 
-#### closeBrace
+**closeBrace**
 
 ### Returns
 

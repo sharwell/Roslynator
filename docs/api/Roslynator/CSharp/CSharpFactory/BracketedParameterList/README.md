@@ -23,7 +23,7 @@ public static BracketedParameterListSyntax BracketedParameterList(ParameterSynta
 
 ### Parameters
 
-#### parameter
+**parameter**
 
 ### Returns
 
@@ -37,7 +37,7 @@ public static BracketedParameterListSyntax BracketedParameterList(params Paramet
 
 ### Parameters
 
-#### parameters
+**parameters**
 
 ### Returns
 

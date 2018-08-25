@@ -23,7 +23,7 @@ public static TypeParameterListSyntax TypeParameterList(TypeParameterSyntax para
 
 ### Parameters
 
-#### parameter
+**parameter**
 
 ### Returns
 
@@ -37,7 +37,7 @@ public static TypeParameterListSyntax TypeParameterList(params TypeParameterSynt
 
 ### Parameters
 
-#### parameters
+**parameters**
 
 ### Returns
 

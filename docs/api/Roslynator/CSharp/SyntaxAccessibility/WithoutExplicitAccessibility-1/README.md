@@ -18,11 +18,11 @@ public static TNode WithoutExplicitAccessibility<TNode>(TNode node) where TNode 
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
 ### Returns
 

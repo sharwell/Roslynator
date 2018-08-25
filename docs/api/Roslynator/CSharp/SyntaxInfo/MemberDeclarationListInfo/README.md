@@ -31,7 +31,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(ClassDeclarati
 
 ### Parameters
 
-#### declaration
+**declaration**
 
 ### Returns
 
@@ -49,7 +49,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(CompilationUni
 
 ### Parameters
 
-#### compilationUnit
+**compilationUnit**
 
 ### Returns
 
@@ -67,7 +67,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(InterfaceDecla
 
 ### Parameters
 
-#### declaration
+**declaration**
 
 ### Returns
 
@@ -85,7 +85,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(NamespaceDecla
 
 ### Parameters
 
-#### declaration
+**declaration**
 
 ### Returns
 
@@ -103,7 +103,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(StructDeclarat
 
 ### Parameters
 
-#### declaration
+**declaration**
 
 ### Returns
 
@@ -121,7 +121,7 @@ public static MemberDeclarationListInfo MemberDeclarationListInfo(SyntaxNode nod
 
 ### Parameters
 
-#### node
+**node**
 
 ### Returns
 

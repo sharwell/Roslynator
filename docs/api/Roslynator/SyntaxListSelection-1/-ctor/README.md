@@ -16,11 +16,10 @@ protected SyntaxListSelection(SyntaxList<TNode> list, TextSpan span, int firstIn
 
 ### Parameters
 
-#### list
+**list**
 
-#### span
+**span**
 
-#### firstIndex
+**firstIndex**
 
-#### lastIndex
-
+**lastIndex**

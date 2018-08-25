@@ -18,9 +18,9 @@ public static IEnumerable<XmlElementSyntax> Elements(this DocumentationCommentTr
 
 ### Parameters
 
-#### documentationComment
+**documentationComment**
 
-#### localName
+**localName**
 
 ### Returns
 

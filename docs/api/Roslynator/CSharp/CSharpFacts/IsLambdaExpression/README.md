@@ -18,7 +18,7 @@ public static bool IsLambdaExpression(SyntaxKind kind)
 
 ### Parameters
 
-#### kind
+**kind**
 
 ### Returns
 

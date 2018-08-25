@@ -18,9 +18,9 @@ public UsingDirectiveListInfo InsertRange(int index, IEnumerable<UsingDirectiveS
 
 ### Parameters
 
-#### index
+**index**
 
-#### usings
+**usings**
 
 ### Returns
 

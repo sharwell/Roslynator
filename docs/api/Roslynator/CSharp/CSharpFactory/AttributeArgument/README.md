@@ -23,9 +23,9 @@ public static AttributeArgumentSyntax AttributeArgument(NameColonSyntax nameColo
 
 ### Parameters
 
-#### nameColon
+**nameColon**
 
-#### expression
+**expression**
 
 ### Returns
 
@@ -39,9 +39,9 @@ public static AttributeArgumentSyntax AttributeArgument(NameEqualsSyntax nameEqu
 
 ### Parameters
 
-#### nameEquals
+**nameEquals**
 
-#### expression
+**expression**
 
 ### Returns
 

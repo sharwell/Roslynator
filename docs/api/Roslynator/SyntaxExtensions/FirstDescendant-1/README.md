@@ -27,15 +27,15 @@ public static TNode FirstDescendant<TNode>(this SyntaxNode node, Func<SyntaxNode
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### descendIntoChildren
+**descendIntoChildren**
 
-#### descendIntoTrivia
+**descendIntoTrivia**
 
 ### Returns
 
@@ -53,17 +53,17 @@ public static TNode FirstDescendant<TNode>(this SyntaxNode node, TextSpan span, 
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### span
+**span**
 
-#### descendIntoChildren
+**descendIntoChildren**
 
-#### descendIntoTrivia
+**descendIntoTrivia**
 
 ### Returns
 

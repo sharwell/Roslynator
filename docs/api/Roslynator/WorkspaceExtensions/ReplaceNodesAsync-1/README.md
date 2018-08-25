@@ -27,17 +27,17 @@ public static Task<Document> ReplaceNodesAsync<TNode>(this Document document, IE
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### document
+**document**
 
-#### nodes
+**nodes**
 
-#### computeReplacementNode
+**computeReplacementNode**
 
-#### cancellationToken
+**cancellationToken**
 
 ### Returns
 
@@ -55,17 +55,17 @@ public static Task<Solution> ReplaceNodesAsync<TNode>(this Solution solution, IE
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### solution
+**solution**
 
-#### nodes
+**nodes**
 
-#### computeReplacementNodes
+**computeReplacementNodes**
 
-#### cancellationToken
+**cancellationToken**
 
 ### Returns
 

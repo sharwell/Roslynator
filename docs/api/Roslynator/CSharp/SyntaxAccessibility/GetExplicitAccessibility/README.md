@@ -43,7 +43,7 @@ public static Accessibility GetExplicitAccessibility(AccessorDeclarationSyntax a
 
 ### Parameters
 
-#### accessorDeclaration
+**accessorDeclaration**
 
 ### Returns
 
@@ -61,7 +61,7 @@ public static Accessibility GetExplicitAccessibility(ClassDeclarationSyntax clas
 
 ### Parameters
 
-#### classDeclaration
+**classDeclaration**
 
 ### Returns
 
@@ -79,7 +79,7 @@ public static Accessibility GetExplicitAccessibility(ConstructorDeclarationSynta
 
 ### Parameters
 
-#### constructorDeclaration
+**constructorDeclaration**
 
 ### Returns
 
@@ -97,7 +97,7 @@ public static Accessibility GetExplicitAccessibility(ConversionOperatorDeclarati
 
 ### Parameters
 
-#### conversionOperatorDeclaration
+**conversionOperatorDeclaration**
 
 ### Returns
 
@@ -115,7 +115,7 @@ public static Accessibility GetExplicitAccessibility(DelegateDeclarationSyntax d
 
 ### Parameters
 
-#### delegateDeclaration
+**delegateDeclaration**
 
 ### Returns
 
@@ -133,7 +133,7 @@ public static Accessibility GetExplicitAccessibility(DestructorDeclarationSyntax
 
 ### Parameters
 
-#### destructorDeclaration
+**destructorDeclaration**
 
 ### Returns
 
@@ -151,7 +151,7 @@ public static Accessibility GetExplicitAccessibility(EnumDeclarationSyntax enumD
 
 ### Parameters
 
-#### enumDeclaration
+**enumDeclaration**
 
 ### Returns
 
@@ -169,7 +169,7 @@ public static Accessibility GetExplicitAccessibility(EventDeclarationSyntax even
 
 ### Parameters
 
-#### eventDeclaration
+**eventDeclaration**
 
 ### Returns
 
@@ -187,7 +187,7 @@ public static Accessibility GetExplicitAccessibility(EventFieldDeclarationSyntax
 
 ### Parameters
 
-#### eventFieldDeclaration
+**eventFieldDeclaration**
 
 ### Returns
 
@@ -205,7 +205,7 @@ public static Accessibility GetExplicitAccessibility(FieldDeclarationSyntax fiel
 
 ### Parameters
 
-#### fieldDeclaration
+**fieldDeclaration**
 
 ### Returns
 
@@ -223,7 +223,7 @@ public static Accessibility GetExplicitAccessibility(IncompleteMemberSyntax inco
 
 ### Parameters
 
-#### incompleteMember
+**incompleteMember**
 
 ### Returns
 
@@ -241,7 +241,7 @@ public static Accessibility GetExplicitAccessibility(IndexerDeclarationSyntax in
 
 ### Parameters
 
-#### indexerDeclaration
+**indexerDeclaration**
 
 ### Returns
 
@@ -259,7 +259,7 @@ public static Accessibility GetExplicitAccessibility(InterfaceDeclarationSyntax 
 
 ### Parameters
 
-#### interfaceDeclaration
+**interfaceDeclaration**
 
 ### Returns
 
@@ -277,7 +277,7 @@ public static Accessibility GetExplicitAccessibility(MethodDeclarationSyntax met
 
 ### Parameters
 
-#### methodDeclaration
+**methodDeclaration**
 
 ### Returns
 
@@ -295,7 +295,7 @@ public static Accessibility GetExplicitAccessibility(OperatorDeclarationSyntax o
 
 ### Parameters
 
-#### operatorDeclaration
+**operatorDeclaration**
 
 ### Returns
 
@@ -313,7 +313,7 @@ public static Accessibility GetExplicitAccessibility(PropertyDeclarationSyntax p
 
 ### Parameters
 
-#### propertyDeclaration
+**propertyDeclaration**
 
 ### Returns
 
@@ -331,7 +331,7 @@ public static Accessibility GetExplicitAccessibility(StructDeclarationSyntax str
 
 ### Parameters
 
-#### structDeclaration
+**structDeclaration**
 
 ### Returns
 
@@ -349,7 +349,7 @@ public static Accessibility GetExplicitAccessibility(SyntaxNode declaration)
 
 ### Parameters
 
-#### declaration
+**declaration**
 
 ### Returns
 

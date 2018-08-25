@@ -23,11 +23,11 @@ public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList 
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
 ### Returns
 
@@ -41,11 +41,11 @@ public static EventFieldDeclarationSyntax EventFieldDeclaration(SyntaxTokenList 
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### type
+**type**
 
-#### identifier
+**identifier**
 
 ### Returns
 

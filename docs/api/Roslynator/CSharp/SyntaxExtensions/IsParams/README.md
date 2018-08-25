@@ -18,7 +18,7 @@ public static bool IsParams(this ParameterSyntax parameter)
 
 ### Parameters
 
-#### parameter
+**parameter**
 
 ### Returns
 

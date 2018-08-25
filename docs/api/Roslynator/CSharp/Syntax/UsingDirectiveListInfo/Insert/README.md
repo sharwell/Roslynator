@@ -18,9 +18,9 @@ public UsingDirectiveListInfo Insert(int index, UsingDirectiveSyntax usingDirect
 
 ### Parameters
 
-#### index
+**index**
 
-#### usingDirective
+**usingDirective**
 
 ### Returns
 

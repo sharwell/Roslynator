@@ -18,9 +18,9 @@ public UsingDirectiveListInfo ReplaceAt(int index, UsingDirectiveSyntax newUsing
 
 ### Parameters
 
-#### index
+**index**
 
-#### newUsingDirective
+**newUsingDirective**
 
 ### Returns
 

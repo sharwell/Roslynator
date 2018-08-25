@@ -25,7 +25,7 @@ public static AccessorDeclarationSyntax RemoveAccessorDeclaration(ArrowExpressio
 
 ### Parameters
 
-#### expressionBody
+**expressionBody**
 
 ### Returns
 
@@ -39,7 +39,7 @@ public static AccessorDeclarationSyntax RemoveAccessorDeclaration(BlockSyntax bo
 
 ### Parameters
 
-#### body
+**body**
 
 ### Returns
 
@@ -53,9 +53,9 @@ public static AccessorDeclarationSyntax RemoveAccessorDeclaration(SyntaxTokenLis
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### expressionBody
+**expressionBody**
 
 ### Returns
 
@@ -69,9 +69,9 @@ public static AccessorDeclarationSyntax RemoveAccessorDeclaration(SyntaxTokenLis
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### body
+**body**
 
 ### Returns
 

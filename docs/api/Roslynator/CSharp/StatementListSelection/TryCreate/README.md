@@ -27,11 +27,11 @@ public static bool TryCreate(BlockSyntax block, TextSpan span, out StatementList
 
 ### Parameters
 
-#### block
+**block**
 
-#### span
+**span**
 
-#### selectedStatements
+**selectedStatements**
 
 ### Returns
 
@@ -51,11 +51,11 @@ public static bool TryCreate(SwitchSectionSyntax switchSection, TextSpan span, o
 
 ### Parameters
 
-#### switchSection
+**switchSection**
 
-#### span
+**span**
 
-#### selectedStatements
+**selectedStatements**
 
 ### Returns
 

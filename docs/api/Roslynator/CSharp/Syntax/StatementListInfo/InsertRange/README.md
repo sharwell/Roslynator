@@ -18,9 +18,9 @@ public StatementListInfo InsertRange(int index, IEnumerable<StatementSyntax> sta
 
 ### Parameters
 
-#### index
+**index**
 
-#### statements
+**statements**
 
 ### Returns
 

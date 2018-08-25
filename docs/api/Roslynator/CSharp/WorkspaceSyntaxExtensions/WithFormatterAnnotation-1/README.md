@@ -27,7 +27,7 @@ public static SyntaxToken WithFormatterAnnotation(this SyntaxToken token)
 
 ### Parameters
 
-#### token
+**token**
 
 ### Returns
 
@@ -45,11 +45,11 @@ public static TNode WithFormatterAnnotation<TNode>(this TNode node) where TNode 
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
 ### Returns
 

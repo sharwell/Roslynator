@@ -18,7 +18,7 @@ public static DocumentationCommentTriviaSyntax GetSingleLineDocumentationComment
 
 ### Parameters
 
-#### member
+**member**
 
 ### Returns
 

@@ -418,12 +418,30 @@ namespace Roslynator.Documentation
             {
                 WriteHeading(3, Resources.TypeParametersTitle);
 
-                do
+                while (true)
                 {
-                    WriteHeading(4, en.Current.Name);
-                    GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", en.Current.Name)?.WriteContentTo(this);
+                    WriteBold(en.Current.Name);
+
+                    XElement element = GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.TypeParam, "name", en.Current.Name);
+
+                    if (element?.Nodes().Any() == true)
+                    {
+                        WriteLine();
+                        WriteLine();
+
+                        element.WriteContentTo(this);
+                    }
+
+                    if (en.MoveNext())
+                    {
+                        WriteLine();
+                        WriteLine();
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
-                while (en.MoveNext());
             }
         }
 
@@ -468,12 +486,30 @@ namespace Roslynator.Documentation
                 {
                     WriteHeading(3, Resources.ParametersTitle);
 
-                    do
+                    while (true)
                     {
-                        WriteHeading(4, en.Current.Name);
-                        GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", en.Current.Name)?.WriteContentTo(this);
+                        WriteBold(en.Current.Name);
+
+                        XElement element = GetXmlDocumentation(en.Current.ContainingSymbol)?.Element(WellKnownTags.Param, "name", en.Current.Name);
+
+                        if (element?.Nodes().Any() == true)
+                        {
+                            WriteLine();
+                            WriteLine();
+
+                            element.WriteContentTo(this);
+                        }
+
+                        if (en.MoveNext())
+                        {
+                            WriteLine();
+                            WriteLine();
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
-                    while (en.MoveNext());
                 }
             }
         }

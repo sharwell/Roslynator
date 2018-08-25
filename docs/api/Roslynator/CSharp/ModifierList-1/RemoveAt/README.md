@@ -18,9 +18,9 @@ public TNode RemoveAt(TNode node, int index)
 
 ### Parameters
 
-#### node
+**node**
 
-#### index
+**index**
 
 ### Returns
 

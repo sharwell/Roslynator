@@ -28,9 +28,9 @@ public static MemberDeclarationListSelection Create(CompilationUnitSyntax compil
 
 ### Parameters
 
-#### compilationUnit
+**compilationUnit**
 
-#### span
+**span**
 
 ### Returns
 
@@ -48,9 +48,9 @@ public static MemberDeclarationListSelection Create(NamespaceDeclarationSyntax n
 
 ### Parameters
 
-#### namespaceDeclaration
+**namespaceDeclaration**
 
-#### span
+**span**
 
 ### Returns
 
@@ -68,9 +68,9 @@ public static MemberDeclarationListSelection Create(TypeDeclarationSyntax typeDe
 
 ### Parameters
 
-#### typeDeclaration
+**typeDeclaration**
 
-#### span
+**span**
 
 ### Returns
 

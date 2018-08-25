@@ -19,7 +19,7 @@ public class ClassName<Methods>
 
 ### Type Parameters
 
-#### Methods
+**Methods**
 
 ### Inheritance
 

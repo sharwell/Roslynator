@@ -24,9 +24,9 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 ### Parameters
 
-#### expression
+**expression**
 
-#### name
+**name**
 
 ### Returns
 
@@ -40,11 +40,11 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 ### Parameters
 
-#### expression
+**expression**
 
-#### name
+**name**
 
-#### argumentList
+**argumentList**
 
 ### Returns
 
@@ -58,11 +58,11 @@ public static InvocationExpressionSyntax SimpleMemberInvocationExpression(Expres
 
 ### Parameters
 
-#### expression
+**expression**
 
-#### name
+**name**
 
-#### argument
+**argument**
 
 ### Returns
 

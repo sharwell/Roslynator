@@ -18,7 +18,7 @@ public static bool IsEndOfLineTrivia(this SyntaxTrivia trivia)
 
 ### Parameters
 
-#### trivia
+**trivia**
 
 ### Returns
 

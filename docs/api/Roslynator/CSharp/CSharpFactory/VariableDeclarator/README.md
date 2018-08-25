@@ -23,9 +23,9 @@ public static VariableDeclaratorSyntax VariableDeclarator(string identifier, Equ
 
 ### Parameters
 
-#### identifier
+**identifier**
 
-#### initializer
+**initializer**
 
 ### Returns
 
@@ -39,9 +39,9 @@ public static VariableDeclaratorSyntax VariableDeclarator(SyntaxToken identifier
 
 ### Parameters
 
-#### identifier
+**identifier**
 
-#### initializer
+**initializer**
 
 ### Returns
 

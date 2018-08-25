@@ -18,9 +18,9 @@ public UsingDirectiveListInfo ReplaceNode(SyntaxNode oldNode, SyntaxNode newNode
 
 ### Parameters
 
-#### oldNode
+**oldNode**
 
-#### newNode
+**newNode**
 
 ### Returns
 

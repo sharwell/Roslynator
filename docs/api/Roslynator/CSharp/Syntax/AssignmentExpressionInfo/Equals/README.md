@@ -27,7 +27,7 @@ public bool Equals(AssignmentExpressionInfo other)
 
 ### Parameters
 
-#### other
+**other**
 
 An object to compare with this object\.
 
@@ -53,7 +53,7 @@ public override bool Equals(object obj)
 
 ### Parameters
 
-#### obj
+**obj**
 
 The object to compare with the current instance\. 
 

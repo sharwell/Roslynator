@@ -25,7 +25,7 @@ public static AccessorDeclarationSyntax AddAccessorDeclaration(ArrowExpressionCl
 
 ### Parameters
 
-#### expressionBody
+**expressionBody**
 
 ### Returns
 
@@ -39,7 +39,7 @@ public static AccessorDeclarationSyntax AddAccessorDeclaration(BlockSyntax body)
 
 ### Parameters
 
-#### body
+**body**
 
 ### Returns
 
@@ -53,9 +53,9 @@ public static AccessorDeclarationSyntax AddAccessorDeclaration(SyntaxTokenList m
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### expressionBody
+**expressionBody**
 
 ### Returns
 
@@ -69,9 +69,9 @@ public static AccessorDeclarationSyntax AddAccessorDeclaration(SyntaxTokenList m
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### body
+**body**
 
 ### Returns
 

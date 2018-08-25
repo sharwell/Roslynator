@@ -25,9 +25,9 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Equ
 
 ### Parameters
 
-#### name
+**name**
 
-#### value
+**value**
 
 ### Returns
 
@@ -41,9 +41,9 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(string name, Exp
 
 ### Parameters
 
-#### name
+**name**
 
-#### value
+**value**
 
 ### Returns
 
@@ -57,9 +57,9 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 ### Parameters
 
-#### identifier
+**identifier**
 
-#### value
+**value**
 
 ### Returns
 
@@ -73,9 +73,9 @@ public static EnumMemberDeclarationSyntax EnumMemberDeclaration(SyntaxToken iden
 
 ### Parameters
 
-#### identifier
+**identifier**
 
-#### value
+**value**
 
 ### Returns
 

@@ -29,13 +29,13 @@ public static SyntaxTokenList RemoveRange(this SyntaxTokenList list, int index, 
 
 ### Parameters
 
-#### list
+**list**
 
-#### index
+**index**
 
 An index of the first element to remove\.
 
-#### count
+**count**
 
 A number of elements to remove\.
 
@@ -55,13 +55,13 @@ public static SyntaxTriviaList RemoveRange(this SyntaxTriviaList list, int index
 
 ### Parameters
 
-#### list
+**list**
 
-#### index
+**index**
 
 An index of the first element to remove\.
 
-#### count
+**count**
 
 A number of elements to remove\.
 
@@ -81,17 +81,17 @@ public static SeparatedSyntaxList<TNode> RemoveRange<TNode>(this SeparatedSyntax
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### index
+**index**
 
 An index of the first element to remove\.
 
-#### count
+**count**
 
 A number of elements to remove\.
 
@@ -111,17 +111,17 @@ public static SyntaxList<TNode> RemoveRange<TNode>(this SyntaxList<TNode> list, 
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### index
+**index**
 
 An index of the first element to remove\.
 
-#### count
+**count**
 
 A number of elements to remove\.
 

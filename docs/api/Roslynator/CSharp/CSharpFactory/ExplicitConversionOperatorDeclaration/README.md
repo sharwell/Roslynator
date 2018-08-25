@@ -23,13 +23,13 @@ public static ConversionOperatorDeclarationSyntax ExplicitConversionOperatorDecl
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### type
+**type**
 
-#### parameterList
+**parameterList**
 
-#### expressionBody
+**expressionBody**
 
 ### Returns
 
@@ -43,13 +43,13 @@ public static ConversionOperatorDeclarationSyntax ExplicitConversionOperatorDecl
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### type
+**type**
 
-#### parameterList
+**parameterList**
 
-#### body
+**body**
 
 ### Returns
 

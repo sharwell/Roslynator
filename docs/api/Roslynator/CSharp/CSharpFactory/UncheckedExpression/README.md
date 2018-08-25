@@ -23,7 +23,7 @@ public static CheckedExpressionSyntax UncheckedExpression(ExpressionSyntax expre
 
 ### Parameters
 
-#### expression
+**expression**
 
 ### Returns
 
@@ -37,11 +37,11 @@ public static CheckedExpressionSyntax UncheckedExpression(SyntaxToken openParenT
 
 ### Parameters
 
-#### openParenToken
+**openParenToken**
 
-#### expression
+**expression**
 
-#### closeParenToken
+**closeParenToken**
 
 ### Returns
 

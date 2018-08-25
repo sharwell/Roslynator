@@ -27,11 +27,11 @@ public static IsExpressionInfo IsExpressionInfo(BinaryExpressionSyntax binaryExp
 
 ### Parameters
 
-#### binaryExpression
+**binaryExpression**
 
-#### walkDownParentheses
+**walkDownParentheses**
 
-#### allowMissing
+**allowMissing**
 
 ### Returns
 
@@ -49,11 +49,11 @@ public static IsExpressionInfo IsExpressionInfo(SyntaxNode node, bool walkDownPa
 
 ### Parameters
 
-#### node
+**node**
 
-#### walkDownParentheses
+**walkDownParentheses**
 
-#### allowMissing
+**allowMissing**
 
 ### Returns
 

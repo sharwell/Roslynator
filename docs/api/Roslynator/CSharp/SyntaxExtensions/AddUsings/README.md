@@ -18,11 +18,11 @@ public static CompilationUnitSyntax AddUsings(this CompilationUnitSyntax compila
 
 ### Parameters
 
-#### compilationUnit
+**compilationUnit**
 
-#### keepSingleLineCommentsOnTop
+**keepSingleLineCommentsOnTop**
 
-#### usings
+**usings**
 
 ### Returns
 

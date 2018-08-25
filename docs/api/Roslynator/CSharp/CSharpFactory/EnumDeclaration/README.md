@@ -14,11 +14,11 @@ public static EnumDeclarationSyntax EnumDeclaration(SyntaxTokenList modifiers, S
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### identifier
+**identifier**
 
-#### members
+**members**
 
 ### Returns
 

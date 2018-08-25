@@ -18,13 +18,13 @@ public static TNode RemoveAt<TNode>(TNode node, int index) where TNode : Microso
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### index
+**index**
 
 ### Returns
 

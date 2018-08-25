@@ -28,7 +28,7 @@ public static bool ReturnsVoid(this DelegateDeclarationSyntax delegateDeclaratio
 
 ### Parameters
 
-#### delegateDeclaration
+**delegateDeclaration**
 
 ### Returns
 
@@ -46,7 +46,7 @@ public static bool ReturnsVoid(this LocalFunctionStatementSyntax localFunctionSt
 
 ### Parameters
 
-#### localFunctionStatement
+**localFunctionStatement**
 
 ### Returns
 
@@ -64,7 +64,7 @@ public static bool ReturnsVoid(this MethodDeclarationSyntax methodDeclaration)
 
 ### Parameters
 
-#### methodDeclaration
+**methodDeclaration**
 
 ### Returns
 

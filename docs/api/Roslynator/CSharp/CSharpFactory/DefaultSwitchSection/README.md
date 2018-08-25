@@ -23,7 +23,7 @@ public static SwitchSectionSyntax DefaultSwitchSection(StatementSyntax statement
 
 ### Parameters
 
-#### statement
+**statement**
 
 ### Returns
 
@@ -37,7 +37,7 @@ public static SwitchSectionSyntax DefaultSwitchSection(SyntaxList<StatementSynta
 
 ### Parameters
 
-#### statements
+**statements**
 
 ### Returns
 

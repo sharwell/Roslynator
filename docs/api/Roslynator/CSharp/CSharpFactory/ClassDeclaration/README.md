@@ -23,11 +23,11 @@ public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers,
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### identifier
+**identifier**
 
-#### members
+**members**
 
 ### Returns
 
@@ -41,11 +41,11 @@ public static ClassDeclarationSyntax ClassDeclaration(SyntaxTokenList modifiers,
 
 ### Parameters
 
-#### modifiers
+**modifiers**
 
-#### identifier
+**identifier**
 
-#### members
+**members**
 
 ### Returns
 

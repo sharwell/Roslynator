@@ -18,11 +18,11 @@ public static bool IsLast(this SyntaxList<StatementSyntax> statements, Statement
 
 ### Parameters
 
-#### statements
+**statements**
 
-#### statement
+**statement**
 
-#### ignoreLocalFunctions
+**ignoreLocalFunctions**
 
 Ignore local function statements at the end of the list\.
 

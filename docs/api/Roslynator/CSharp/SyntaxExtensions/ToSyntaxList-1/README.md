@@ -18,11 +18,11 @@ public static SyntaxList<TNode> ToSyntaxList<TNode>(this IEnumerable<TNode> node
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### nodes
+**nodes**
 
 ### Returns
 

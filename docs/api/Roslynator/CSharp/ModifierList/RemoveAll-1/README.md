@@ -27,11 +27,11 @@ public static TNode RemoveAll<TNode>(TNode node) where TNode : Microsoft.CodeAna
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
 ### Returns
 
@@ -49,13 +49,13 @@ public static TNode RemoveAll<TNode>(TNode node, Func<SyntaxToken, bool> predica
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### predicate
+**predicate**
 
 ### Returns
 

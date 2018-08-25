@@ -24,7 +24,7 @@ public interface IImmutableFoo<T> : System.IEquatable<IImmutableFoo<T>>,
 
 ### Type Parameters
 
-#### T
+**T**
 
 ### Implements
 

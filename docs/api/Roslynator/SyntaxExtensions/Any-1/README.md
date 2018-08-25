@@ -29,9 +29,9 @@ public static bool Any(this SyntaxTokenList list, Func<SyntaxToken, bool> predic
 
 ### Parameters
 
-#### list
+**list**
 
-#### predicate
+**predicate**
 
 ### Returns
 
@@ -49,9 +49,9 @@ public static bool Any(this SyntaxTriviaList list, Func<SyntaxTrivia, bool> pred
 
 ### Parameters
 
-#### list
+**list**
 
-#### predicate
+**predicate**
 
 ### Returns
 
@@ -69,13 +69,13 @@ public static bool Any<TNode>(this SeparatedSyntaxList<TNode> list, Func<TNode, 
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### predicate
+**predicate**
 
 ### Returns
 
@@ -93,13 +93,13 @@ public static bool Any<TNode>(this SyntaxList<TNode> list, Func<TNode, bool> pre
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### predicate
+**predicate**
 
 ### Returns
 

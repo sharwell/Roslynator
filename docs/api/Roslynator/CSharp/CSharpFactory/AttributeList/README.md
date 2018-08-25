@@ -23,7 +23,7 @@ public static AttributeListSyntax AttributeList(AttributeSyntax attribute)
 
 ### Parameters
 
-#### attribute
+**attribute**
 
 ### Returns
 
@@ -37,7 +37,7 @@ public static AttributeListSyntax AttributeList(params AttributeSyntax[] attribu
 
 ### Parameters
 
-#### attributes
+**attributes**
 
 ### Returns
 

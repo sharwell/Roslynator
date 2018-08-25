@@ -14,9 +14,9 @@ public static ExpressionChain AsChain(this BinaryExpressionSyntax binaryExpressi
 
 ### Parameters
 
-#### binaryExpression
+**binaryExpression**
 
-#### span
+**span**
 
 ### Returns
 

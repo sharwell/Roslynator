@@ -14,7 +14,6 @@ public void WriteString(char* pSrcStart, char* pSrcEnd)
 
 ### Parameters
 
-#### pSrcStart
+**pSrcStart**
 
-#### pSrcEnd
-
+**pSrcEnd**

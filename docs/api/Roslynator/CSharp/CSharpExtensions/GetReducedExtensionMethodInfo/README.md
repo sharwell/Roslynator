@@ -18,11 +18,11 @@ public static ExtensionMethodSymbolInfo GetReducedExtensionMethodInfo(this Seman
 
 ### Parameters
 
-#### semanticModel
+**semanticModel**
 
-#### expression
+**expression**
 
-#### cancellationToken
+**cancellationToken**
 
 ### Returns
 

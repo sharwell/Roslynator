@@ -23,9 +23,9 @@ public static BinaryExpressionSyntax AddExpression(ExpressionSyntax left, Expres
 
 ### Parameters
 
-#### left
+**left**
 
-#### right
+**right**
 
 ### Returns
 
@@ -39,11 +39,11 @@ public static BinaryExpressionSyntax AddExpression(ExpressionSyntax left, Syntax
 
 ### Parameters
 
-#### left
+**left**
 
-#### operatorToken
+**operatorToken**
 
-#### right
+**right**
 
 ### Returns
 

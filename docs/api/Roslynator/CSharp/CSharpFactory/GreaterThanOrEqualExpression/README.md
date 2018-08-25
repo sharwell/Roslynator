@@ -23,9 +23,9 @@ public static BinaryExpressionSyntax GreaterThanOrEqualExpression(ExpressionSynt
 
 ### Parameters
 
-#### left
+**left**
 
-#### right
+**right**
 
 ### Returns
 
@@ -39,11 +39,11 @@ public static BinaryExpressionSyntax GreaterThanOrEqualExpression(ExpressionSynt
 
 ### Parameters
 
-#### left
+**left**
 
-#### operatorToken
+**operatorToken**
 
-#### right
+**right**
 
 ### Returns
 

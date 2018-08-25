@@ -23,7 +23,7 @@ public static ParameterListSyntax ParameterList(ParameterSyntax parameter)
 
 ### Parameters
 
-#### parameter
+**parameter**
 
 ### Returns
 
@@ -37,7 +37,7 @@ public static ParameterListSyntax ParameterList(params ParameterSyntax[] paramet
 
 ### Parameters
 
-#### parameters
+**parameters**
 
 ### Returns
 

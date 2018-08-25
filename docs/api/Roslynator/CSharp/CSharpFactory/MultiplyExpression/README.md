@@ -23,9 +23,9 @@ public static BinaryExpressionSyntax MultiplyExpression(ExpressionSyntax left, E
 
 ### Parameters
 
-#### left
+**left**
 
-#### right
+**right**
 
 ### Returns
 
@@ -39,11 +39,11 @@ public static BinaryExpressionSyntax MultiplyExpression(ExpressionSyntax left, S
 
 ### Parameters
 
-#### left
+**left**
 
-#### operatorToken
+**operatorToken**
 
-#### right
+**right**
 
 ### Returns
 

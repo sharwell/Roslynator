@@ -28,9 +28,9 @@ public static int LastIndexOf(this SyntaxTriviaList triviaList, SyntaxKind kind)
 
 ### Parameters
 
-#### triviaList
+**triviaList**
 
-#### kind
+**kind**
 
 ### Returns
 
@@ -48,13 +48,13 @@ public static int LastIndexOf<TNode>(this SeparatedSyntaxList<TNode> list, Synta
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### kind
+**kind**
 
 ### Returns
 
@@ -72,13 +72,13 @@ public static int LastIndexOf<TNode>(this SyntaxList<TNode> list, SyntaxKind kin
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### list
+**list**
 
-#### kind
+**kind**
 
 ### Returns
 

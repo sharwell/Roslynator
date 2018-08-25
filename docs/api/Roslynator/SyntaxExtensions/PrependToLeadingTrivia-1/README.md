@@ -29,9 +29,9 @@ public static SyntaxToken PrependToLeadingTrivia(this SyntaxToken token, IEnumer
 
 ### Parameters
 
-#### token
+**token**
 
-#### trivia
+**trivia**
 
 ### Returns
 
@@ -49,9 +49,9 @@ public static SyntaxToken PrependToLeadingTrivia(this SyntaxToken token, SyntaxT
 
 ### Parameters
 
-#### token
+**token**
 
-#### trivia
+**trivia**
 
 ### Returns
 
@@ -69,13 +69,13 @@ public static TNode PrependToLeadingTrivia<TNode>(this TNode node, IEnumerable<S
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### trivia
+**trivia**
 
 ### Returns
 
@@ -93,13 +93,13 @@ public static TNode PrependToLeadingTrivia<TNode>(this TNode node, SyntaxTrivia 
 
 ### Type Parameters
 
-#### TNode
+**TNode**
 
 ### Parameters
 
-#### node
+**node**
 
-#### trivia
+**trivia**
 
 ### Returns
 

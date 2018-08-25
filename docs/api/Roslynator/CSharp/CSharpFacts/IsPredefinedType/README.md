@@ -18,7 +18,7 @@ public static bool IsPredefinedType(SpecialType specialType)
 
 ### Parameters
 
-#### specialType
+**specialType**
 
 ### Returns
 

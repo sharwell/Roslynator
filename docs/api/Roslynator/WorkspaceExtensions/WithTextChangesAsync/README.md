@@ -27,11 +27,11 @@ public static Task<Document> WithTextChangesAsync(this Document document, IEnume
 
 ### Parameters
 
-#### document
+**document**
 
-#### textChanges
+**textChanges**
 
-#### cancellationToken
+**cancellationToken**
 
 ### Returns
 
@@ -49,11 +49,11 @@ public static Task<Document> WithTextChangesAsync(this Document document, TextCh
 
 ### Parameters
 
-#### document
+**document**
 
-#### textChanges
+**textChanges**
 
-#### cancellationToken
+**cancellationToken**
 
 ### Returns
 

@@ -18,7 +18,7 @@ public static bool CanHaveEmbeddedStatement(SyntaxKind kind)
 
 ### Parameters
 
-#### kind
+**kind**
 
 ### Returns
 

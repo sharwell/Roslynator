@@ -39,9 +39,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, bool value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -59,9 +59,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, byte value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -79,9 +79,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, decimal value
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -99,9 +99,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, double value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -119,9 +119,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, char value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -139,9 +139,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, short value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -159,9 +159,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, int value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -179,9 +179,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, long value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -199,9 +199,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, sbyte value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -219,9 +219,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, float value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -239,9 +239,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, string value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -259,9 +259,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, ushort value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -279,9 +279,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, uint value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 
@@ -299,9 +299,9 @@ public static bool HasConstantValue(this IFieldSymbol fieldSymbol, ulong value)
 
 ### Parameters
 
-#### fieldSymbol
+**fieldSymbol**
 
-#### value
+**value**
 
 ### Returns
 

@@ -23,9 +23,9 @@ public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(
 
 ### Parameters
 
-#### identifierName
+**identifierName**
 
-#### typeParameterConstraint
+**typeParameterConstraint**
 
 ### Returns
 
@@ -39,9 +39,9 @@ public static TypeParameterConstraintClauseSyntax TypeParameterConstraintClause(
 
 ### Parameters
 
-#### name
+**name**
 
-#### typeParameterConstraint
+**typeParameterConstraint**
 
 ### Returns
 

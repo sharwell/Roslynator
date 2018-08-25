@@ -25,7 +25,7 @@ public Foo(string s)
 
 ### Parameters
 
-#### s
+**s**
 
 qqq
 
@@ -53,9 +53,9 @@ public Foo(string s, string examples)
 
 ### Parameters
 
-#### s
+**s**
 
-#### examples
+**examples**
 
 ### Examples
 

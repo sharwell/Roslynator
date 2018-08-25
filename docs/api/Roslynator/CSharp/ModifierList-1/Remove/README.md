@@ -27,9 +27,9 @@ public TNode Remove(TNode node, SyntaxKind kind)
 
 ### Parameters
 
-#### node
+**node**
 
-#### kind
+**kind**
 
 ### Returns
 
@@ -47,9 +47,9 @@ public TNode Remove(TNode node, SyntaxToken modifier)
 
 ### Parameters
 
-#### node
+**node**
 
-#### modifier
+**modifier**
 
 ### Returns
 
