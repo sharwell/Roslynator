@@ -46,12 +46,12 @@ b
 ## Foo\(String, String\) <a name="Roslynator_Documentation_Test_Foo__ctor_System_String_System_String_"></a>
 
 ```csharp
-public Foo(string s, string s2)
+public Foo(string s, string methods)
 ```
 
 ### Parameters
 
 #### s
 
-#### s2
+#### methods
 

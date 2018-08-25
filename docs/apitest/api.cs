@@ -56,7 +56,7 @@ namespace Roslynator.Documentation.Test
         public readonly string Field;
 
         public Foo(string s);
-        public Foo(string s, string s2);
+        public Foo(string s, string methods);
 
         public Foo this[int index, int index2] { get; set; }
         public Foo this[int index] { get; set; }

@@ -79,7 +79,7 @@ namespace Roslynator.Documentation.Test
         {
         }
 
-        public Foo(string s, string s2)
+        public Foo(string s, string methods)
         {
         }
 
