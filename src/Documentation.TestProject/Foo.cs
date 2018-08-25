@@ -79,7 +79,13 @@ namespace Roslynator.Documentation.Test
         {
         }
 
-        public Foo(string s, string methods)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="methods"></param>
+        /// <example>example...</example>
+        public Foo(string s, string examples)
         {
         }
 

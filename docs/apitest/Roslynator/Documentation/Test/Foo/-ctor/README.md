@@ -45,13 +45,18 @@ b
 
 ## Foo\(String, String\) <a name="Roslynator_Documentation_Test_Foo__ctor_System_String_System_String_"></a>
 
+### Summary
+
 ```csharp
-public Foo(string s, string methods)
+public Foo(string s, string examples)
 ```
 
 ### Parameters
 
 #### s
 
-#### methods
+#### examples
 
+### Examples
+
+example\.\.\.
