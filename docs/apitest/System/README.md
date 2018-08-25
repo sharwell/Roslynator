@@ -8,5 +8,5 @@
 
 | Class | Summary |
 | ----- | ------- |
-| [ClassName](ClassName/README.md#_top) | \[deprecated\]  |
+| [ClassName\<Methods>](ClassName-1/README.md#_top) | \[deprecated\]  |
 

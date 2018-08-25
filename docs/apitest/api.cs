@@ -7,9 +7,11 @@ namespace System
 {
     [CLSCompliant(true)]
     [Obsolete]
-    public class ClassName
+    public class ClassName<Methods>
     {
         public ClassName();
+
+        public void MethodName();
     }
 }
 

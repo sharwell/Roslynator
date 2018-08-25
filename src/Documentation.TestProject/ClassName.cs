@@ -4,7 +4,10 @@ namespace System
 {
     [Obsolete]
     [CLSCompliant(true)]
-    public class ClassName
+    public class ClassName<Methods>
     {
+        public void MethodName()
+        {
+        }
     }
 }
