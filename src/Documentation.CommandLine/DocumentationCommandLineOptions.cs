@@ -6,7 +6,6 @@ using static Roslynator.Documentation.DocumentationOptions;
 
 namespace Roslynator.Documentation
 {
-    //TODO: clean
     [Verb("doc")]
     public class DocumentationCommandLineOptions
     {

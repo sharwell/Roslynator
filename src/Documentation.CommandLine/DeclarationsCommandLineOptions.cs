@@ -6,6 +6,7 @@ using static Roslynator.Documentation.DeclarationListOptions;
 
 namespace Roslynator.Documentation
 {
+    //TODO: format-declaration-base-list, format-declaration-constraints
     [Verb("declarations")]
     public class DeclarationsCommandLineOptions
     {
