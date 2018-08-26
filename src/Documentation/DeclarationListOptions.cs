@@ -9,12 +9,10 @@ namespace Roslynator.Documentation
 {
     public class DeclarationListOptions
     {
-        private readonly ImmutableArray<MetadataName> _ignoredNamespaces;
-        private readonly ImmutableArray<MetadataName> _ignoredTypes;
+        private readonly ImmutableArray<MetadataName> _ignoredMetadataNames;
 
         public DeclarationListOptions(
-            IEnumerable<string> ignoredNamespaces = null,
-            IEnumerable<string> ignoredTypes = null,
+            IEnumerable<string> ignoredNames = null,
             bool indent = DefaultValues.Indent,
             string indentChars = DefaultValues.IndentChars,
             bool newLineBeforeOpenBrace = DefaultValues.NewLineBeforeOpenBrace,
@@ -24,11 +22,9 @@ namespace Roslynator.Documentation
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
             bool useDefaultLiteral = DefaultValues.UseDefaultLiteral)
         {
-            _ignoredNamespaces = ignoredNamespaces?.Select(name => MetadataName.ParseNamespaceName(name)).ToImmutableArray() ?? default;
-            _ignoredTypes = ignoredTypes?.Select(name => MetadataName.ParseTypeName(name)).ToImmutableArray() ?? default;
+            _ignoredMetadataNames = ignoredNames?.Select(name => MetadataName.Parse(name)).ToImmutableArray() ?? default;
 
-            IgnoredNamespaces = ignoredNamespaces?.ToImmutableArray() ?? ImmutableArray<string>.Empty;
-            IgnoredTypes = ignoredTypes?.ToImmutableArray() ?? ImmutableArray<string>.Empty;
+            IgnoredNames = ignoredNames?.ToImmutableArray() ?? ImmutableArray<string>.Empty;
             Indent = indent;
             IndentChars = indentChars;
             NewLineBeforeOpenBrace = newLineBeforeOpenBrace;
@@ -41,9 +37,7 @@ namespace Roslynator.Documentation
 
         public static DeclarationListOptions Default { get; } = new DeclarationListOptions();
 
-        public ImmutableArray<string> IgnoredNamespaces { get; }
-
-        public ImmutableArray<string> IgnoredTypes { get; }
+        public ImmutableArray<string> IgnoredNames { get; }
 
         public bool Indent { get; }
 
@@ -61,30 +55,13 @@ namespace Roslynator.Documentation
 
         public bool UseDefaultLiteral { get; }
 
-        internal bool ShouldBeIgnored(INamespaceSymbol namespaceSymbol)
+        internal bool ShouldBeIgnored(ISymbol symbol)
         {
-            if (!_ignoredNamespaces.IsDefault)
+            if (!_ignoredMetadataNames.IsDefault)
             {
-                foreach (MetadataName name in _ignoredNamespaces)
+                foreach (MetadataName name in _ignoredMetadataNames)
                 {
-                    if (namespaceSymbol.HasMetadataName(name))
-                        return true;
-                }
-            }
-
-            return false;
-        }
-
-        internal bool ShouldBeIgnored(INamedTypeSymbol typeSymbol)
-        {
-            if (ShouldBeIgnored(typeSymbol.ContainingNamespace))
-                return true;
-
-            if (!_ignoredTypes.IsDefault)
-            {
-                foreach (MetadataName name in _ignoredTypes)
-                {
-                    if (typeSymbol.HasMetadataName(name))
+                    if (symbol.HasMetadataName(name))
                         return true;
                 }
             }

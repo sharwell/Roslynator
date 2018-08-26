@@ -706,9 +706,14 @@ namespace Roslynator.Documentation
 
             ImmutableArray<INamedTypeSymbol> nestedTypes = default;
 
-            ImmutableArray<INamedTypeSymbol> derivedTypes = (EnabledAndSortedTypeParts.Contains(TypeDocumentationParts.Derived))
-                ? typeModel.GetDerivedTypes().ToImmutableArray()
-                : ImmutableArray<INamedTypeSymbol>.Empty;
+            ImmutableArray<INamedTypeSymbol> derivedTypes = ImmutableArray<INamedTypeSymbol>.Empty;
+
+            if (EnabledAndSortedTypeParts.Contains(TypeDocumentationParts.Derived))
+            {
+                derivedTypes = (Options.IncludeAllDerivedTypes)
+                    ? typeModel.GetAllDerivedTypes().ToImmutableArray()
+                    : typeModel.GetDerivedTypes().ToImmutableArray();
+            }
 
             bool includeInherited = typeSymbol.TypeKind != TypeKind.Interface || Options.IncludeInheritedInterfaceMembers;
 

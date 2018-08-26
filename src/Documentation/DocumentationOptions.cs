@@ -10,12 +10,10 @@ namespace Roslynator.Documentation
 {
     public class DocumentationOptions
     {
-        private readonly ImmutableArray<MetadataName> _ignoredNamespaces;
-        private readonly ImmutableArray<MetadataName> _ignoredTypes;
+        private readonly ImmutableArray<MetadataName> _ignoredMetadataNames;
 
         public DocumentationOptions(
-            IEnumerable<string> ignoredNamespaces = null,
-            IEnumerable<string> ignoredTypes = null,
+            IEnumerable<string> ignoredNames = null,
             string preferredCultureName = null,
             string baseLocalUrl = null,
             int maxDerivedTypes = DefaultValues.MaxDerivedTypes,
@@ -30,6 +28,7 @@ namespace Roslynator.Documentation
             bool includeMemberImplements = DefaultValues.IncludeMemberImplements,
             bool includeMemberConstantValue = DefaultValues.IncludeMemberConstantValue,
             bool includeInheritedInterfaceMembers = DefaultValues.IncludeInheritedInterfaceMembers,
+            bool includeAllDerivedTypes = DefaultValues.IncludeInheritedInterfaceMembers,
             bool includeAttributeArguments = DefaultValues.IncludeAttributeArguments,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
             DocumentationDepth depth = DefaultValues.Depth,
@@ -41,11 +40,9 @@ namespace Roslynator.Documentation
             if (maxDerivedTypes < 0)
                 throw new ArgumentOutOfRangeException(nameof(maxDerivedTypes), maxDerivedTypes, "Maximum number of derived items must be greater than or equal to 0.");
 
-            _ignoredNamespaces = ignoredNamespaces?.Select(name => MetadataName.ParseNamespaceName(name)).ToImmutableArray() ?? default;
-            _ignoredTypes = ignoredTypes?.Select(name => MetadataName.ParseTypeName(name)).ToImmutableArray() ?? default;
+            _ignoredMetadataNames = ignoredNames?.Select(name => MetadataName.Parse(name)).ToImmutableArray() ?? default;
 
-            IgnoredNamespaces = ignoredNamespaces?.ToImmutableArray() ?? ImmutableArray<string>.Empty;
-            IgnoredTypes = ignoredTypes?.ToImmutableArray() ?? ImmutableArray<string>.Empty;
+            IgnoredNames = ignoredNames?.ToImmutableArray() ?? ImmutableArray<string>.Empty;
             PreferredCultureName = preferredCultureName;
             BaseLocalUrl = baseLocalUrl;
             MaxDerivedTypes = maxDerivedTypes;
@@ -60,6 +57,7 @@ namespace Roslynator.Documentation
             IncludeMemberImplements = includeMemberImplements;
             IncludeMemberConstantValue = includeMemberConstantValue;
             IncludeInheritedInterfaceMembers = includeInheritedInterfaceMembers;
+            IncludeAllDerivedTypes = includeAllDerivedTypes;
             IncludeAttributeArguments = includeAttributeArguments;
             OmitIEnumerable = omitIEnumerable;
             Depth = depth;
@@ -71,9 +69,7 @@ namespace Roslynator.Documentation
 
         public static DocumentationOptions Default { get; } = new DocumentationOptions();
 
-        public ImmutableArray<string> IgnoredNamespaces { get; }
-
-        public ImmutableArray<string> IgnoredTypes { get; }
+        public ImmutableArray<string> IgnoredNames { get; }
 
         public string PreferredCultureName { get; }
 
@@ -103,6 +99,8 @@ namespace Roslynator.Documentation
 
         public bool IncludeInheritedInterfaceMembers { get; }
 
+        public bool IncludeAllDerivedTypes { get; }
+
         public bool IncludeAttributeArguments { get; }
 
         public bool OmitIEnumerable { get; }
@@ -117,30 +115,13 @@ namespace Roslynator.Documentation
 
         public MemberDocumentationParts MemberParts { get; }
 
-        internal bool ShouldBeIgnored(INamespaceSymbol namespaceSymbol)
+        internal bool ShouldBeIgnored(ISymbol symbol)
         {
-            if (!_ignoredNamespaces.IsDefault)
+            if (!_ignoredMetadataNames.IsDefault)
             {
-                foreach (MetadataName name in _ignoredNamespaces)
+                foreach (MetadataName name in _ignoredMetadataNames)
                 {
-                    if (namespaceSymbol.HasMetadataName(name))
-                        return true;
-                }
-            }
-
-            return false;
-        }
-
-        internal bool ShouldBeIgnored(INamedTypeSymbol typeSymbol)
-        {
-            if (ShouldBeIgnored(typeSymbol.ContainingNamespace))
-                return true;
-
-            if (!_ignoredTypes.IsDefault)
-            {
-                foreach (MetadataName name in _ignoredTypes)
-                {
-                    if (typeSymbol.HasMetadataName(name))
+                    if (symbol.HasMetadataName(name))
                         return true;
                 }
             }
@@ -182,6 +163,7 @@ namespace Roslynator.Documentation
             public const bool IncludeMemberImplements = true;
             public const bool IncludeMemberConstantValue = true;
             public const bool IncludeInheritedInterfaceMembers = false;
+            public const bool IncludeAllDerivedTypes = false;
             public const bool IncludeAttributeArguments = true;
             public const bool OmitIEnumerable = true;
             public const DocumentationDepth Depth = DocumentationDepth.Member;

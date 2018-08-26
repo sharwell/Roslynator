@@ -18,11 +18,8 @@ namespace Roslynator.Documentation
         [Option(longName: "output-path", shortName: 'o', Required = true)]
         public string OutputPath { get; set; }
 
-        [Option(longName: "ignored-namespaces")]
-        public IEnumerable<string> IgnoredNamespaces { get; set; }
-
-        [Option(longName: "ignored-types")]
-        public IEnumerable<string> IgnoredTypes { get; set; }
+        [Option(longName: "ignored-names")]
+        public IEnumerable<string> IgnoredNames { get; set; }
 
         [Option(longName: "additional-xml-documentation")]
         public IEnumerable<string> AdditionalXmlDocumentation { get; set; }

@@ -15,11 +15,25 @@ namespace Roslynator
         public MetadataName(IEnumerable<string> containingNamespaces, string name)
             : this(containingNamespaces, Array.Empty<string>(), name)
         {
+            if (containingNamespaces == null)
+                throw new ArgumentNullException(nameof(containingNamespaces));
+
+            Name = name ?? throw new ArgumentNullException(nameof(name));
+            ContainingTypes = ImmutableArray<string>.Empty;
+            ContainingNamespaces = containingNamespaces.ToImmutableArray();
         }
 
         public MetadataName(IEnumerable<string> containingNamespaces, IEnumerable<string> containingTypes, string name)
-            : this(containingNamespaces.ToImmutableArray(), containingTypes.ToImmutableArray(), name)
         {
+            if (containingNamespaces == null)
+                throw new ArgumentNullException(nameof(containingNamespaces));
+
+            if (containingTypes == null)
+                throw new ArgumentNullException(nameof(containingTypes));
+
+            Name = name ?? throw new ArgumentNullException(nameof(name));
+            ContainingTypes = containingTypes.ToImmutableArray();
+            ContainingNamespaces = containingNamespaces.ToImmutableArray();
         }
 
         public MetadataName(ImmutableArray<string> containingNamespaces, string name)
@@ -29,6 +43,12 @@ namespace Roslynator
 
         public MetadataName(ImmutableArray<string> containingNamespaces, ImmutableArray<string> containingTypes, string name)
         {
+            if (containingNamespaces.IsDefault)
+                throw new ArgumentException("Containing namespaces are not initialized.", nameof(containingNamespaces));
+
+            if (containingTypes.IsDefault)
+                throw new ArgumentException("Containing types are not initialized.", nameof(containingTypes));
+
             Name = name ?? throw new ArgumentNullException(nameof(name));
             ContainingTypes = containingTypes;
             ContainingNamespaces = containingNamespaces;
@@ -177,7 +197,7 @@ namespace Roslynator
                 Hash.Create(Name)));
         }
 
-        public static MetadataName ParseNamespaceName(string name)
+        public static MetadataName Parse(string name)
         {
             if (name == null)
                 throw new ArgumentNullException(nameof(name));
@@ -187,81 +207,60 @@ namespace Roslynator
             if (length == 0)
                 throw new ArgumentException("Name cannot be empty.", nameof(name));
 
-            if (name[0] == '.')
-                throw new ArgumentException("Name is invalid.", nameof(name));
-
-            if (length > 1
-                && name[length - 1] == '.')
-            {
-                throw new ArgumentException("Name is invalid.", nameof(name));
-            }
-
-            ImmutableArray<string>.Builder builder = null;
-
-            int prev = 0;
-
-            for (int i = 1; i < length - 1; i++)
-            {
-                if (name[i] == '.')
-                {
-                    string n = name.Substring(prev, i - prev);
-
-                    (builder ?? (builder = ImmutableArray.CreateBuilder<string>())).Add(n);
-
-                    prev = i + 1;
-                }
-            }
-
-            if (builder == null)
-                return new MetadataName(ImmutableArray<string>.Empty, name);
-
-            return new MetadataName(builder.ToImmutableArray(), name.Substring(prev, length - prev));
-        }
-
-        public static MetadataName ParseTypeName(string name)
-        {
-            if (name == null)
-                throw new ArgumentNullException(nameof(name));
-
-            int length = name.Length;
-
-            if (length == 0)
-                throw new ArgumentException("Name cannot be empty.", nameof(name));
-
-            if (name[0] == '.')
-                throw new ArgumentException("Name is invalid.", nameof(name));
-
-            if (name[0] == '+')
-                throw new ArgumentException("Name is invalid.", nameof(name));
-
-            if (length > 1)
-            {
-                if (name[length - 1] == '.')
-                    throw new ArgumentException("Name is invalid.", nameof(name));
-
-                if (name[length - 1] == '+')
-                    throw new ArgumentException("Name is invalid.", nameof(name));
-            }
-
-            ImmutableArray<string>.Builder containingNamespaces = null;
-            ImmutableArray<string>.Builder containingTypes = null;
             string containingType = null;
 
             int prevIndex = 0;
 
-            for (int i = 1; i < length - 1; i++)
+            int containingNamespaceCount = 0;
+            int containingTypeCount = 0;
+
+            for (int i = 0; i < length; i++)
             {
                 if (name[i] == '.')
                 {
-                    if (containingType != null
-                        || containingTypes != null)
+                    if (containingTypeCount > 0
+                        || i == prevIndex
+                        || i == length - 1)
                     {
                         throw new ArgumentException("Name is invalid.", nameof(name));
                     }
 
+                    containingNamespaceCount++;
+
+                    prevIndex = i + 1;
+                }
+
+                if (name[i] == '+')
+                {
+                    if (i == prevIndex
+                        || i == length - 1)
+                    {
+                        throw new ArgumentException("Name is invalid.", nameof(name));
+                    }
+
+                    containingTypeCount++;
+
+                    prevIndex = i + 1;
+                }
+            }
+
+            ImmutableArray<string>.Builder containingNamespaces = (containingNamespaceCount > 0)
+                ? ImmutableArray.CreateBuilder<string>(containingNamespaceCount)
+                : null;
+
+            ImmutableArray<string>.Builder containingTypes = (containingTypeCount > 1)
+                ? ImmutableArray.CreateBuilder<string>(containingTypeCount)
+                : null;
+
+            prevIndex = 0;
+
+            for (int i = 0; i < length; i++)
+            {
+                if (name[i] == '.')
+                {
                     string n = name.Substring(prevIndex, i - prevIndex);
 
-                    (containingNamespaces ?? (containingNamespaces = ImmutableArray.CreateBuilder<string>())).Add(n);
+                    containingNamespaces.Add(n);
 
                     prevIndex = i + 1;
                 }
@@ -269,17 +268,13 @@ namespace Roslynator
                 {
                     string n = name.Substring(prevIndex, i - prevIndex);
 
-                    if (containingType == null)
+                    if (containingTypes != null)
                     {
-                        containingType = n;
+                        containingTypes.Add(n);
                     }
                     else
                     {
-                        (containingTypes ?? (containingTypes = ImmutableArray.CreateBuilder<string>())).Add(containingType);
-
-                        containingType = null;
-
-                        containingTypes.Add(n);
+                        containingType = n;
                     }
 
                     prevIndex = i + 1;
@@ -287,10 +282,10 @@ namespace Roslynator
             }
 
             return new MetadataName(
-                containingNamespaces?.ToImmutableArray() ?? ImmutableArray<string>.Empty,
+                containingNamespaces?.MoveToImmutable() ?? ImmutableArray<string>.Empty,
                 (containingType != null)
                     ? ImmutableArray.Create(containingType)
-                    : containingTypes?.ToImmutableArray() ?? ImmutableArray<string>.Empty,
+                    : containingTypes?.MoveToImmutable() ?? ImmutableArray<string>.Empty,
                 name.Substring(prevIndex, length - prevIndex));
         }
 

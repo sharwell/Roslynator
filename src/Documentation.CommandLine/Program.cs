@@ -51,8 +51,7 @@ namespace Roslynator.Documentation
                 return 1;
 
             var documentationOptions = new DocumentationOptions(
-                ignoredNamespaces: options.IgnoredNamespaces,
-                ignoredTypes: options.IgnoredTypes,
+                ignoredNames: options.IgnoredNames,
                 preferredCultureName: options.PreferredCulture,
                 baseLocalUrl: options.BaseLocalUrl,
                 depth: options.Depth,
@@ -70,8 +69,9 @@ namespace Roslynator.Documentation
                 includeMemberOverrides: options.IncludeMemberOverrides,
                 includeMemberImplements: options.IncludeMemberImplements,
                 includeMemberConstantValue: options.IncludeMemberConstantValue,
-                includeAttributeArguments: options.IncludeAttributeArguments,
                 includeInheritedInterfaceMembers: options.IncludeInheritedInterfaceMembers,
+                includeAllDerivedTypes: options.IncludeAllDerivedTypes,
+                includeAttributeArguments: options.IncludeAttributeArguments,
                 omitIEnumerable: options.OmitIEnumerable);
 
             var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownUrlProviders.GitHub, documentationOptions);
@@ -114,8 +114,7 @@ namespace Roslynator.Documentation
                 return 1;
 
             var declarationListOptions = new DeclarationListOptions(
-                ignoredNamespaces: options.IgnoredNamespaces,
-                ignoredTypes: options.IgnoredTypes,
+                ignoredNames: options.IgnoredNames,
                 indent: options.Indent,
                 indentChars: options.IndentChars,
                 newLineBeforeOpenBrace: options.NewLineBeforeOpenBrace,

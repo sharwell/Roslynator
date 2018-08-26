@@ -25,11 +25,8 @@ namespace Roslynator.Documentation
         [Option(longName: "mode", shortName: 'm', Required = true)]
         public string Mode { get; set; }
 
-        [Option(longName: "ignored-namespaces")]
-        public IEnumerable<string> IgnoredNamespaces { get; set; }
-
-        [Option(longName: "ignored-types")]
-        public IEnumerable<string> IgnoredTypes { get; set; }
+        [Option(longName: "ignored-names")]
+        public IEnumerable<string> IgnoredNames { get; set; }
 
         [Option(longName: "additional-xml-documentation")]
         public IEnumerable<string> AdditionalXmlDocumentation { get; set; }
@@ -87,6 +84,9 @@ namespace Roslynator.Documentation
 
         [Option(longName: "include-inherited-interface-members", Default = DefaultValues.IncludeInheritedInterfaceMembers)]
         public bool IncludeInheritedInterfaceMembers { get; set; }
+
+        [Option(longName: "include-all-derived-types", Default = DefaultValues.IncludeAllDerivedTypes)]
+        public bool IncludeAllDerivedTypes { get; set; }
 
         [Option(longName: "include-attribute-arguments", Default = DefaultValues.IncludeAttributeArguments)]
         public bool IncludeAttributeArguments { get; set; }
