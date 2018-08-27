@@ -12,42 +12,43 @@ Generates documentation files for specified assemblies.
 
 ```
 doc
--a|--assemblies
--h|--heading
--o|--output
--r|--references
-[--additional-xml-documentation]
-[--base-local-url]
-[--depth]
-[--format-declaration-base-list]
-[--format-declaration-constraints]
-[--ignored-member-parts]
-[--ignored-names]
-[--ignored-namespace-parts]
-[--ignored-root-parts]
-[--ignored-type-parts]
-[--include-all-derived-types]
-[--include-attribute-arguments]
-[--include-class-hierarchy]
-[--include-containing-namespace]
-[--include-inherited-interface-members]
-[--include-member-constant-value]
-[--include-member-inherited-from]
-[--include-member-implements]
-[--include-member-overrides]
-[--mark-obsolete]
-[--max-derived-types]
-[--mode]
-[--place-system-namespace-first]
-[--preferred-culture]
-[--omit-ienumerable]
+```
+
+* [-a|--assemblies](#doc-assemblies)
+* [-h|--heading](#heading)
+* [-o|--output](#output)
+* [-r|--references](#reference)
+* [\[--additional-xml-documentation\]](#additional-xml-documentation)
+* [\[--base-local-url\]](#base-local-url)
+* [\[--depth\]](#depth)
+* [\[--format-declaration-base-list\]](#format-declaration-base-list)
+* [\[--format-declaration-constraints\]](#format-declaration-constraints)
+* [\[--ignored-member-parts\]](#ignored-member-parts)
+* [\[--ignored-names\]](#ignored-names)
+* [\[--ignored-namespace-parts\]](#ignored-namespace-parts)
+* [\[--ignored-root-parts\]](#ignored-root-parts)
+* [\[--ignored-type-parts\]](#ignored-type-parts)
+* [\[--include-all-derived-types\]](#include-all-derived-types)
+* [\[--include-attribute-arguments\]](#include-attribute-arguments)
+* [\[--include-class-hierarchy\]](#include-class-hierarchy)
+* [\[--include-containing-namespace\]](#include-containing-namespace)
+* [\[--include-inherited-interface-members\]](#include-inherited-interface-members)
+* [\[--include-member-constant-value\]](#include-member-constant-value)
+* [\[--include-member-inherited-from\]](#include-member-inherited-from)
+* [\[--include-member-implements\]](#include-member-implements)
+* [\[--include-member-overrides\]](#include-member-overrides)
+* [\[--mark-obsolete\]](#mark-obsolete)
+* [\[--max-derived-types\]](#max-derived-types)
+* [\[--mode\]](#mode)
+* [\[--place-system-namespace-first\]](#place-system-namespace-first)
+* [\[--preferred-culture\]](#preferred-culture)
+* [\[--omit-ienumerable\]](#omit-ienumerable)
 ```
 
 ### Options
 
-```
--a|--assemblies <ASSEMBLIES-TO-DOCUMENT>
-```
+### -a|--assemblies <ASSEMBLIES-TO-DOCUMENT> <a name="doc-assemblies" />
+
 Defines one or more assemblies that should be used as a source for the documentation.
 
 
