@@ -8,7 +8,7 @@
 * [doc](#doc-command)
 * [declarations](#declarations-command)
 
-## doc Command
+## `doc` Command
 
 Generates documentation files for specified assemblies.
 
@@ -131,7 +131,7 @@ Defines culture that should be used when searching for xml documentation files.
 Indicates whether interface `System.Collections.IEnumerable` should be omitted from documentation if a type also implements interface `System.Collections.Generic.IEnumerable<T>`. Default value is `true`.
 
 
-## declarations Command
+## `declarations` Command
 Generates a single file that contains all declarations for specified assemblies.
 
 ```
