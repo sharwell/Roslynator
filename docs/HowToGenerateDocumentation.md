@@ -1,7 +1,7 @@
 
-# How to Generate Documentation for a .NET Project
+# How to Generate Documentation for .NET Project
 
-1) Install package [Roslynator.Documentation.CommandLine](http://www.nuget.org/packages/Roslynator.Documentation.CommandLine/)
+1) Install package [Roslynator.Documentation.CommandLine](http://www.nuget.org/packages/Roslynator.Documentation.CommandLine/)&ensp;[![NuGet](https://img.shields.io/nuget/v/Roslynator.Documentation.CommandLine.svg)](https://nuget.org/packages/Roslynator.Documentation.CommandLine)
 
 2) Add MSBuild Target to your csproj (vbproj) file
 
@@ -24,7 +24,7 @@
     <RoslynatorDocumentationAssemblies>$(TargetPath)</RoslynatorDocumentationAssemblies>
 
     <!-- Specify parameters for a command that will generate files to output directory -->
-    <RoslynatorDocumentationParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;API Reference&quot; -m github</RoslynatorDocumentationParameters>
+    <RoslynatorDocumentationParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;API Reference&quot;</RoslynatorDocumentationParameters>
 
     <!-- Specify parameters for a command that will generate one file containing all declarations -->
     <RoslynatorDocumentationDeclarationsParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDeclarationsParameters>
@@ -35,6 +35,8 @@
 ```
 
 See [documentation](../src/Documentation.CommandLine/README.md) to all command options.
+
+Note: It is not necessary to define option `-r|--references`. It is already defined as a part of target **RoslynatorDocumentation**.
 
 3) Build project in **Release** configuration
 

@@ -73,6 +73,7 @@ namespace Roslynator.Documentation
 
         public string PreferredCultureName { get; }
 
+        //TODO: del BaseLocalUrl
         public string BaseLocalUrl { get; }
 
         public int MaxDerivedTypes { get; }

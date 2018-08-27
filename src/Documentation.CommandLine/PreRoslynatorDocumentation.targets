@@ -5,9 +5,9 @@
     </PropertyGroup>
     <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
     <PropertyGroup>
-      <RoslynatorDocumentationAssemblies>$(TargetPath)</RoslynatorDocumentationAssemblies>
-      <RoslynatorDocumentationParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;API Reference&quot;</RoslynatorDocumentationParameters>
-      <RoslynatorDocumentationDeclarationsParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDeclarationsParameters>
+      <RoslynatorDocumentationAssemblies>&quot;$(TargetPath)&quot;</RoslynatorDocumentationAssemblies>
+      <RoslynatorDocumentationParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;API Reference&quot;</RoslynatorDocumentationParameters>
+      <RoslynatorDocumentationDeclarationsParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDeclarationsParameters>
     </PropertyGroup>
   </Target>
 </Project>

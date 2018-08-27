@@ -25,10 +25,17 @@ namespace Roslynator.Documentation
 
         private static int GenerateDocumentation(DocumentationCommandLineOptions options)
         {
-            Encoding encoding = GetEncoding();
+            Encoding encoding = null;
 
-            if (encoding == null)
+            if (string.Equals(options.Mode, "github", StringComparison.OrdinalIgnoreCase))
+            {
+                encoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
+            }
+            else
+            {
+                Console.WriteLine($"Unknown mode '{options.Mode}'.");
                 return 1;
+            }
 
             if (options.MaxDerivedTypes < 0)
             {
@@ -98,15 +105,6 @@ namespace Roslynator.Documentation
 
             Console.WriteLine($"Documentation successfully generated to '{options.OutputDirectory}'.");
 
-            Encoding GetEncoding()
-            {
-                if (string.Equals(options.Mode, "github", StringComparison.OrdinalIgnoreCase))
-                    return new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
-
-                Console.WriteLine($"Unknown mode '{options.Mode}'.");
-                return null;
-            }
-
             return 0;
         }
 
@@ -168,7 +166,8 @@ namespace Roslynator.Documentation
                     }
                     else
                     {
-                        Console.WriteLine($"Assembly '{assemblyPath}' not found.");
+                        Console.WriteLine($"Assembly not found: '{assemblyPath}'.");
+                        return null;
                     }
                 }
             }
@@ -201,7 +200,7 @@ namespace Roslynator.Documentation
 
                 if (!File.Exists(path))
                 {
-                    Console.WriteLine($"File not found '{path}'.");
+                    Console.WriteLine($"File not found: '{path}'.");
                     return null;
                 }
 

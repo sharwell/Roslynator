@@ -76,7 +76,7 @@ namespace Roslynator.Documentation
         [Option(longName: "member-parts")]
         public IEnumerable<string> MemberParts { get; set; }
 
-        [Option(longName: "mode", shortName: 'm')]
+        [Option(longName: "mode", Default = "github")]
         public string Mode { get; set; }
 
         [Option(longName: "namespace-parts")]

@@ -23,15 +23,28 @@
     <Copyright>Copyright (c) 2017-2018 Josef Pihrt</Copyright>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.0\Roslynator.Documentation.TestProject.xml</DocumentationFile>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\$(Configuration)\netstandard2.0\Roslynator.Documentation.TestProject.xml</DocumentationFile>
   </PropertyGroup>
+
+  <Target Name="PreRoslynatorDocumention" BeforeTargets="RoslynatorDocumentation" Condition=" '$(Configuration)' == 'Release'">
+    <PropertyGroup>
+      <RoslynatorDocumentationDirectory>$(SolutionDir)..\docs\apitest</RoslynatorDocumentationDirectory>
+    </PropertyGroup>
+    <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
+    <PropertyGroup>
+      <RoslynatorDocumentationAssemblies>&quot;$(TargetPath)&quot;</RoslynatorDocumentationAssemblies>
+      <RoslynatorDocumentationParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;Foo API Reference&quot; --additional-xml-documentation &quot;$(ProjectDir)test.xml&quot;</RoslynatorDocumentationParameters>
+      <RoslynatorDocumentationDeclarationsParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDeclarationsParameters>
+    </PropertyGroup>
+  </Target>
 
   <ItemGroup>
     <None Remove="Documentation.TestProject.snk" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Roslynator.Documentation.CommandLine" Version="0.1.0-beta" />
     <PackageReference Include="System.Collections.Immutable" Version="1.4.0" />
   </ItemGroup>
 
