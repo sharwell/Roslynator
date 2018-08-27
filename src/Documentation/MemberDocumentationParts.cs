@@ -24,5 +24,6 @@ namespace Roslynator.Documentation
         Examples = 4096,
         Remarks = 8192,
         SeeAlso = 16384,
-        All = Overloads | ContainingType | ContainingAssembly | ObsoleteMessage | Summary | Declaration | TypeParameters | Parameters | ReturnValue | Implements | Attributes | Exceptions | Examples | Remarks | SeeAlso    }
+        All = Overloads | ContainingType | ContainingAssembly | ObsoleteMessage | Summary | Declaration | TypeParameters | Parameters | ReturnValue | Implements | Attributes | Exceptions | Examples | Remarks | SeeAlso
+    }
 }

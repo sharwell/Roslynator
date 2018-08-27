@@ -32,13 +32,7 @@ namespace Roslynator.Documentation
         {
             DocumentationModel documentationModel = CreateFromTrustedPlatformAssemblies(assemblyNames);
 
-            var documentationOptions = new DocumentationOptions(
-                depth: DocumentationDepth.Member,
-                typeParts: TypeDocumentationParts.All,
-                formatDeclarationBaseList: true,
-                formatDeclarationConstraints: true,
-                includeMemberOverrides: true,
-                includeMemberImplements: true);
+            var documentationOptions = new DocumentationOptions();
 
             var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownUrlProviders.GitHub, documentationOptions);
 

@@ -40,5 +40,6 @@ namespace Roslynator.Documentation
         NestedTypes = Classes | Structs | Interfaces | Enums | Delegates,
         SeeAlso = 536870912,
         AllExceptNestedTypes = All & ~NestedTypes,
-        All = Content | ContainingNamespace | ContainingAssembly | ObsoleteMessage | Summary | Declaration | TypeParameters | Parameters | ReturnValue | Inheritance | Attributes | Derived | Implements | Examples | Remarks | Constructors | Fields | Indexers | Properties | Methods | Operators | Events | ExplicitInterfaceImplementations | ExtensionMethods | Classes | Structs | Interfaces | Enums | Delegates | SeeAlso    }
+        All = Content | ContainingNamespace | ContainingAssembly | ObsoleteMessage | Summary | Declaration | TypeParameters | Parameters | ReturnValue | Inheritance | Attributes | Derived | Implements | Examples | Remarks | Constructors | Fields | Indexers | Properties | Methods | Operators | Events | ExplicitInterfaceImplementations | ExtensionMethods | Classes | Structs | Interfaces | Enums | Delegates | SeeAlso
+    }
 }

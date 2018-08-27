@@ -67,7 +67,7 @@ namespace Roslynator.Documentation
                         .Where(f => f != RootDocumentationParts.None
                             && f != RootDocumentationParts.All
                             && f != RootDocumentationParts.Types
-                            && Options.IsPartEnabled(f))
+                            && (Options.IgnoredRootParts & f) == 0)
                         .OrderBy(f => f, RootPartComparer)
                         .ToImmutableArray();
                 }
@@ -86,7 +86,7 @@ namespace Roslynator.Documentation
                         .Cast<NamespaceDocumentationParts>()
                         .Where(f => f != NamespaceDocumentationParts.None
                             && f != NamespaceDocumentationParts.All
-                            && Options.IsPartEnabled(f))
+                            && (Options.IgnoredNamespaceParts & f) == 0)
                         .OrderBy(f => f, NamespacePartComparer)
                         .ToImmutableArray();
                 }
@@ -107,7 +107,7 @@ namespace Roslynator.Documentation
                             && f != TypeDocumentationParts.All
                             && f != TypeDocumentationParts.NestedTypes
                             && f != TypeDocumentationParts.AllExceptNestedTypes
-                            && Options.IsPartEnabled(f))
+                            && (Options.IgnoredTypeParts & f) == 0)
                         .OrderBy(f => f, TypePartComparer)
                         .ToImmutableArray();
                 }
@@ -622,17 +622,16 @@ namespace Roslynator.Documentation
                 writer.WriteLink(Resources.NamespacesTitle, UrlProvider.GetFragment(Resources.NamespacesTitle));
 
                 writer.WriteContent(extendedExternalTypes
-                    .Select(f => f.TypeKind)
-                    .Where(f => IsNamespacePartEnabled(f))
+                    .Select(f => f.TypeKind.ToNamespaceDocumentationPart())
+                    .Where(f => (Options.IgnoredNamespaceParts & f) == 0)
                     .Distinct()
-                    .Select(f => f.ToNamespaceDocumentationPart())
                     .OrderBy(f => f, NamespacePartComparer)
                     .Select(f => Resources.GetHeading(f)), beginWithSeparator: true);
 
                 writer.WriteList(namespaces, Resources.NamespacesTitle, 2, SymbolDisplayFormats.TypeNameAndContainingTypesAndNamespaces);
 
                 foreach (IGrouping<TypeKind, INamedTypeSymbol> typesByKind in extendedExternalTypes
-                    .Where(f => IsNamespacePartEnabled(f.TypeKind))
+                    .Where(f => (Options.IgnoredNamespaceParts & f.TypeKind.ToNamespaceDocumentationPart()) == 0)
                     .GroupBy(f => f.TypeKind)
                     .OrderBy(f => f.Key.ToNamespaceDocumentationPart(), NamespacePartComparer))
                 {
@@ -648,25 +647,6 @@ namespace Roslynator.Documentation
                 writer.WriteEndDocument();
 
                 return CreateResult(writer, DocumentationFileKind.Extensions);
-            }
-
-            bool IsNamespacePartEnabled(TypeKind typeKind)
-            {
-                switch (typeKind)
-                {
-                    case TypeKind.Class:
-                        return Options.IsPartEnabled(NamespaceDocumentationParts.Classes);
-                    case TypeKind.Delegate:
-                        return Options.IsPartEnabled(NamespaceDocumentationParts.Delegates);
-                    case TypeKind.Enum:
-                        return Options.IsPartEnabled(NamespaceDocumentationParts.Enums);
-                    case TypeKind.Interface:
-                        return Options.IsPartEnabled(NamespaceDocumentationParts.Interfaces);
-                    case TypeKind.Struct:
-                        return Options.IsPartEnabled(NamespaceDocumentationParts.Structs);
-                    default:
-                        return false;
-                }
             }
         }
 
@@ -1101,7 +1081,7 @@ namespace Roslynator.Documentation
         {
             if (!typeModel.TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
             {
-                foreach (MemberDocumentationModel model in typeModel.CreateMemberModels(Options.TypeParts))
+                foreach (MemberDocumentationModel model in typeModel.CreateMemberModels(Options.IgnoredTypeParts))
                 {
                     using (DocumentationWriter writer = CreateWriter(model.Symbol))
                     {

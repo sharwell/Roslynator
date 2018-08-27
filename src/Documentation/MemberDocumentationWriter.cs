@@ -40,7 +40,7 @@ namespace Roslynator.Documentation
                         .Cast<MemberDocumentationParts>()
                         .Where(f => f != MemberDocumentationParts.None
                             && f != MemberDocumentationParts.All
-                            && Options.IsPartEnabled(f))
+                            && (Options.IgnoredMemberParts & f) == 0)
                         .OrderBy(f => f, Comparer)
                         .ToImmutableArray();
                 }

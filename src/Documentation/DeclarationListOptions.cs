@@ -17,6 +17,8 @@ namespace Roslynator.Documentation
             string indentChars = DefaultValues.IndentChars,
             bool newLineBeforeOpenBrace = DefaultValues.NewLineBeforeOpenBrace,
             bool emptyLineBetweenMembers = DefaultValues.EmptyLineBetweenMembers,
+            bool formatBaseList = DefaultValues.FormatBaseList,
+            bool formatConstraints = DefaultValues.FormatConstraints,
             bool splitAttributes = DefaultValues.SplitAttributes,
             bool includeAttributeArguments = DefaultValues.IncludeAttributeArguments,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
@@ -29,6 +31,8 @@ namespace Roslynator.Documentation
             IndentChars = indentChars;
             NewLineBeforeOpenBrace = newLineBeforeOpenBrace;
             EmptyLineBetweenMembers = emptyLineBetweenMembers;
+            FormatBaseList = formatBaseList;
+            FormatConstraints = formatConstraints;
             SplitAttributes = splitAttributes;
             IncludeAttributeArguments = includeAttributeArguments;
             OmitIEnumerable = omitIEnumerable;
@@ -46,6 +50,10 @@ namespace Roslynator.Documentation
         public bool NewLineBeforeOpenBrace { get; }
 
         public bool EmptyLineBetweenMembers { get; }
+
+        public bool FormatBaseList { get; }
+
+        public bool FormatConstraints { get; }
 
         public bool SplitAttributes { get; }
 
@@ -75,6 +83,8 @@ namespace Roslynator.Documentation
             public const string IndentChars = "    ";
             public const bool NewLineBeforeOpenBrace = true;
             public const bool EmptyLineBetweenMembers = false;
+            public const bool FormatBaseList = false;
+            public const bool FormatConstraints = false;
             public const bool SplitAttributes = true;
             public const bool IncludeAttributeArguments = true;
             public const bool OmitIEnumerable = true;

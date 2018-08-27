@@ -32,10 +32,10 @@ namespace Roslynator.Documentation
             bool includeAttributeArguments = DefaultValues.IncludeAttributeArguments,
             bool omitIEnumerable = DefaultValues.OmitIEnumerable,
             DocumentationDepth depth = DefaultValues.Depth,
-            RootDocumentationParts rootParts = RootDocumentationParts.All,
-            NamespaceDocumentationParts namespaceParts = NamespaceDocumentationParts.All,
-            TypeDocumentationParts typeParts = TypeDocumentationParts.All,
-            MemberDocumentationParts memberParts = MemberDocumentationParts.All)
+            RootDocumentationParts ignoredRootParts = RootDocumentationParts.None,
+            NamespaceDocumentationParts ignoredNamespaceParts = NamespaceDocumentationParts.None,
+            TypeDocumentationParts ignoredTypeParts = TypeDocumentationParts.None,
+            MemberDocumentationParts ignoredMemberParts = MemberDocumentationParts.None)
         {
             if (maxDerivedTypes < 0)
                 throw new ArgumentOutOfRangeException(nameof(maxDerivedTypes), maxDerivedTypes, "Maximum number of derived items must be greater than or equal to 0.");
@@ -61,10 +61,10 @@ namespace Roslynator.Documentation
             IncludeAttributeArguments = includeAttributeArguments;
             OmitIEnumerable = omitIEnumerable;
             Depth = depth;
-            RootParts = rootParts;
-            NamespaceParts = namespaceParts;
-            TypeParts = typeParts;
-            MemberParts = memberParts;
+            IgnoredRootParts = ignoredRootParts;
+            IgnoredNamespaceParts = ignoredNamespaceParts;
+            IgnoredTypeParts = ignoredTypeParts;
+            IgnoredMemberParts = ignoredMemberParts;
         }
 
         public static DocumentationOptions Default { get; } = new DocumentationOptions();
@@ -107,13 +107,13 @@ namespace Roslynator.Documentation
 
         public DocumentationDepth Depth { get; }
 
-        public RootDocumentationParts RootParts { get; }
+        public RootDocumentationParts IgnoredRootParts { get; }
 
-        public NamespaceDocumentationParts NamespaceParts { get; }
+        public NamespaceDocumentationParts IgnoredNamespaceParts { get; }
 
-        public TypeDocumentationParts TypeParts { get; }
+        public TypeDocumentationParts IgnoredTypeParts { get; }
 
-        public MemberDocumentationParts MemberParts { get; }
+        public MemberDocumentationParts IgnoredMemberParts { get; }
 
         internal bool ShouldBeIgnored(ISymbol symbol)
         {
@@ -127,26 +127,6 @@ namespace Roslynator.Documentation
             }
 
             return false;
-        }
-
-        internal bool IsPartEnabled(RootDocumentationParts parts)
-        {
-            return (RootParts & parts) != 0;
-        }
-
-        internal bool IsPartEnabled(NamespaceDocumentationParts parts)
-        {
-            return (NamespaceParts & parts) != 0;
-        }
-
-        internal bool IsPartEnabled(TypeDocumentationParts parts)
-        {
-            return (TypeParts & parts) != 0;
-        }
-
-        internal bool IsPartEnabled(MemberDocumentationParts parts)
-        {
-            return (MemberParts & parts) != 0;
         }
 
         internal static class DefaultValues

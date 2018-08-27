@@ -160,6 +160,8 @@ namespace Roslynator.Documentation
                             _typeFormat,
                             SymbolDisplayTypeDeclarationOptions.IncludeAccessibility | SymbolDisplayTypeDeclarationOptions.IncludeModifiers,
                             isVisibleAttribute: IsVisibleAttribute,
+                            formatBaseList: Options.FormatBaseList,
+                            formatConstraints: Options.FormatConstraints,
                             splitAttributes: Options.SplitAttributes,
                             includeAttributeArguments: Options.IncludeAttributeArguments,
                             omitIEnumerable: Options.OmitIEnumerable));

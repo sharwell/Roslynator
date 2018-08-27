@@ -320,7 +320,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        internal IEnumerable<MemberDocumentationModel> CreateMemberModels(TypeDocumentationParts parts = TypeDocumentationParts.All)
+        internal IEnumerable<MemberDocumentationModel> CreateMemberModels(TypeDocumentationParts ignoredParts = TypeDocumentationParts.None)
         {
             if (TypeKind.Is(TypeKind.Enum, TypeKind.Delegate))
                 yield break;
@@ -375,7 +375,7 @@ namespace Roslynator.Documentation
 
             bool IsEnabled(TypeDocumentationParts part)
             {
-                return (parts & part) != 0;
+                return (ignoredParts & part) == 0;
             }
 
             IEnumerable<MemberDocumentationModel> GetMembers(IEnumerable<ISymbol> symbols)

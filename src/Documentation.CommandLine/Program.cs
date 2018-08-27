@@ -36,13 +36,16 @@ namespace Roslynator.Documentation
                 return 1;
             }
 
-            if (!TryGetNamespaceDocumentationParts(options.NamespaceParts, out NamespaceDocumentationParts namespaceParts))
+            if (!TryGetIgnoredRootParts(options.RootParts, out RootDocumentationParts ignoredRootParts))
                 return 1;
 
-            if (!TryGetTypeDocumentationParts(options.TypeParts, out TypeDocumentationParts typeParts))
+            if (!TryGetIgnoredNamespaceParts(options.NamespaceParts, out NamespaceDocumentationParts ignoredNamespaceParts))
                 return 1;
 
-            if (!TryGetMemberDocumentationParts(options.MemberParts, out MemberDocumentationParts memberParts))
+            if (!TryGetIgnoredTypeParts(options.TypeParts, out TypeDocumentationParts ignoredTypeParts))
+                return 1;
+
+            if (!TryGetIgnoredMemberParts(options.MemberParts, out MemberDocumentationParts ignoredMemberParts))
                 return 1;
 
             DocumentationModel documentationModel = CreateDocumentationModel(options.References, options.Assemblies, options.AdditionalXmlDocumentation);
@@ -54,10 +57,6 @@ namespace Roslynator.Documentation
                 ignoredNames: options.IgnoredNames,
                 preferredCultureName: options.PreferredCulture,
                 baseLocalUrl: options.BaseLocalUrl,
-                depth: options.Depth,
-                namespaceParts: namespaceParts,
-                typeParts: typeParts,
-                memberParts: memberParts,
                 maxDerivedTypes: options.MaxDerivedTypes,
                 includeClassHierarchy: options.IncludeClassHierarchy,
                 includeContainingNamespace: options.IncludeContainingNamespace,
@@ -72,7 +71,12 @@ namespace Roslynator.Documentation
                 includeInheritedInterfaceMembers: options.IncludeInheritedInterfaceMembers,
                 includeAllDerivedTypes: options.IncludeAllDerivedTypes,
                 includeAttributeArguments: options.IncludeAttributeArguments,
-                omitIEnumerable: options.OmitIEnumerable);
+                omitIEnumerable: options.OmitIEnumerable,
+                depth: options.Depth,
+                ignoredRootParts: ignoredRootParts,
+                ignoredNamespaceParts: ignoredNamespaceParts,
+                ignoredTypeParts: ignoredTypeParts,
+                ignoredMemberParts: ignoredMemberParts);
 
             var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownUrlProviders.GitHub, documentationOptions);
 
@@ -214,11 +218,37 @@ namespace Roslynator.Documentation
             }
         }
 
-        private static bool TryGetNamespaceDocumentationParts(IEnumerable<string> values, out NamespaceDocumentationParts parts)
+        private static bool TryGetIgnoredRootParts(IEnumerable<string> values, out RootDocumentationParts parts)
         {
             if (!values.Any())
             {
-                parts = DocumentationOptions.Default.NamespaceParts;
+                parts = DocumentationOptions.Default.IgnoredRootParts;
+                return true;
+            }
+
+            parts = RootDocumentationParts.None;
+
+            foreach (string value in values)
+            {
+                if (Enum.TryParse(value, ignoreCase: true, out RootDocumentationParts result))
+                {
+                    parts |= result;
+                }
+                else
+                {
+                    Console.WriteLine($"Unknown root documentation part '{value}'.");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private static bool TryGetIgnoredNamespaceParts(IEnumerable<string> values, out NamespaceDocumentationParts parts)
+        {
+            if (!values.Any())
+            {
+                parts = DocumentationOptions.Default.IgnoredNamespaceParts;
                 return true;
             }
 
@@ -240,11 +270,11 @@ namespace Roslynator.Documentation
             return true;
         }
 
-        private static bool TryGetTypeDocumentationParts(IEnumerable<string> values, out TypeDocumentationParts parts)
+        private static bool TryGetIgnoredTypeParts(IEnumerable<string> values, out TypeDocumentationParts parts)
         {
             if (!values.Any())
             {
-                parts = DocumentationOptions.Default.TypeParts;
+                parts = DocumentationOptions.Default.IgnoredTypeParts;
                 return true;
             }
 
@@ -266,11 +296,11 @@ namespace Roslynator.Documentation
             return true;
         }
 
-        private static bool TryGetMemberDocumentationParts(IEnumerable<string> values, out MemberDocumentationParts parts)
+        private static bool TryGetIgnoredMemberParts(IEnumerable<string> values, out MemberDocumentationParts parts)
         {
             if (!values.Any())
             {
-                parts = DocumentationOptions.Default.MemberParts;
+                parts = DocumentationOptions.Default.IgnoredMemberParts;
                 return true;
             }
 
