@@ -9,6 +9,7 @@ namespace Roslynator.Documentation
     [Verb("doc")]
     public class DocumentationCommandLineOptions
     {
+        //TODO: source místo assemblies
         [Option(longName: "assemblies", shortName: 'a', Required = true)]
         public IEnumerable<string> Assemblies { get; set; }
 

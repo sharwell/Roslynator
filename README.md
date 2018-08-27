@@ -4,6 +4,7 @@
 * [List of analyzers](src/Analyzers/README.md)
 * [List of refactorings](src/Refactorings/README.md)
 * [List of code fixes for CS diagnostics](src/CodeFixes/README.md)
+* **NEW FEATURE: [GENERATE DOCUMENTATION FOR A .NET PROJECT AND PUBLISH IT TO GITHUB](docs/HowToGenerateDocumentation.md)**
 * [Release notes](ChangeLog.md)
 
 ### Donation

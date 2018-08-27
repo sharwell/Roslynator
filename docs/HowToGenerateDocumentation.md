@@ -1,11 +1,9 @@
 
 # How to Generate Documentation for a .NET Project
 
-Roslynator makes very easy to generate documentation for your .NET project and publish it to GitHub.
+1) Install package **Roslynator.Documentation.CommandLine**
 
-## Install package Roslynator.Documentation.CommandLine
-
-## Add MSBuild Target to your csproj (vbproj) file
+2) Add MSBuild Target to your csproj (vbproj) file
 
 ```xml
 <Target Name="PreRoslynatorDocumention" BeforeTargets="RoslynatorDocumentation" Condition=" '$(Configuration)' == 'Release'">
@@ -17,8 +15,8 @@ Roslynator makes very easy to generate documentation for your .NET project and p
 
   </PropertyGroup>
 
-    <!-- Clean output directory -->
-   <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
+  <!-- Remove output directory -->
+  <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
 
   <PropertyGroup>
 
@@ -35,3 +33,7 @@ Roslynator makes very easy to generate documentation for your .NET project and p
 
 </Target>
 ```
+
+4) Build project in **Release** configuration
+
+3) Publish documentation to GitHub
