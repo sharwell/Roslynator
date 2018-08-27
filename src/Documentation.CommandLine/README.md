@@ -43,14 +43,12 @@ doc
 * [\[--place-system-namespace-first\]](#place-system-namespace-first)
 * [\[--preferred-culture\]](#preferred-culture)
 * [\[--omit-ienumerable\]](#omit-ienumerable)
-```
 
 ### Options
 
-### -a|--assemblies <ASSEMBLIES-TO-DOCUMENT> <a name="doc-assemblies" />
+### -a|--assemblies <ASSEMBLIES-TO-DOCUMENT> <a name="doc-assemblies"></a>
 
 Defines one or more assemblies that should be used as a source for the documentation.
-
 
 ```
 -h|--heading <ROOT-FILE-HEADING>
