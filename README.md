@@ -4,7 +4,7 @@
 * [List of analyzers](src/Analyzers/README.md)
 * [List of refactorings](src/Refactorings/README.md)
 * [List of code fixes for CS diagnostics](src/CodeFixes/README.md)
-* **NEW FEATURE: [GENERATE DOCUMENTATION FOR A .NET PROJECT AND PUBLISH IT TO GITHUB](docs/HowToGenerateDocumentation.md)**
+* **NEW FEATURE: [Generate documentation for .NET project and publish it to GitHub](docs/HowToGenerateDocumentation.md)**
 * [Release notes](ChangeLog.md)
 
 ### Donation
@@ -38,13 +38,13 @@ Although Roslynator products are free of charge, any [donation](https://www.payp
 
 * Package [Roslynator.CSharp](http://www.nuget.org/packages/Roslynator.CSharp/) is a must-have for Roslyn-based development.
 * It is built on top of Roslyn API (namely [Microsoft.CodeAnalysis.CSharp](http://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp/)).
-* For more information, please see API [overview](src/CSharp/README.md).
+* See API [API Reference](docs/api/README.md#_top).
 
 ### Roslynator.CSharp.Workspaces
 
 * Package [Roslynator.CSharp.Workspaces](http://www.nuget.org/packages/Roslynator.CSharp.Workspaces/) is a must-have for Roslyn-based development.
 * It is built on top of Roslyn API (namely [Microsoft.CodeAnalysis.CSharp.Workspaces](http://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp.Workspaces/)).
-* For more information, please see API [overview](src/CSharp.Workspaces/README.md).
+* See API [API Reference](docs/api/README.md#_top).
 
 ## Roslynator for VS Code
 
@@ -58,6 +58,7 @@ Please read the [tutorial](docs/RoslynatorForVisualStudioCode.md) how to install
 * [How to Configure Analyzers](docs/HowToConfigureAnalyzers.md)
 * [How to Configure Refactorings](docs/HowToConfigureRefactorings.md)
 * [How to Customize Rules for a Project](docs/HowToCustomizeRulesForProject.md)
+* [How to Generate Documentation](docs/HowToGenerateDocumentation.md)
 
 ## Other Projects
 

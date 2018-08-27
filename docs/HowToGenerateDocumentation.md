@@ -1,7 +1,7 @@
 
 # How to Generate Documentation for a .NET Project
 
-1) Install package **Roslynator.Documentation.CommandLine**
+1) Install package [Roslynator.Documentation.CommandLine](http://www.nuget.org/packages/Roslynator.Documentation.CommandLine/)
 
 2) Add MSBuild Target to your csproj (vbproj) file
 
@@ -34,6 +34,8 @@
 </Target>
 ```
 
-4) Build project in **Release** configuration
+See [documentation](../src/Documentation.CommandLine/README.md) to all command options.
 
-3) Publish documentation to GitHub
+3) Build project in **Release** configuration
+
+4) Publish documentation to GitHub
