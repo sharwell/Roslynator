@@ -19,7 +19,6 @@ doc
 -o|--output
 -r|--references
 [--additional-xml-documentation]
-[--base-local-url]
 [--depth]
 [--format-declaration-base-list]
 [--format-declaration-constraints]
@@ -61,9 +60,6 @@ Defines a path to a file that contains a list of all assemblies necessary to com
 
 #### `[--additional-xml-documentation] <XML-DOCUMENTATION-FILES>`
 Defines one or more xml documentation files that should be included. These files can contain a documentation for namespaces, for instance.
-
-#### `[--base-local-url] <BASE-LOCAL-URL>`
-Defines an url that should be added to all local links.
 
 #### `[--depth] {member|type|namespace}`
 Defines a depth of a documentation. Default value is `member`.

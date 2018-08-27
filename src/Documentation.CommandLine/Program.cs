@@ -63,7 +63,6 @@ namespace Roslynator.Documentation
             var documentationOptions = new DocumentationOptions(
                 ignoredNames: options.IgnoredNames,
                 preferredCultureName: options.PreferredCulture,
-                baseLocalUrl: options.BaseLocalUrl,
                 maxDerivedTypes: options.MaxDerivedTypes,
                 includeClassHierarchy: options.IncludeClassHierarchy,
                 includeContainingNamespace: options.IncludeContainingNamespace,

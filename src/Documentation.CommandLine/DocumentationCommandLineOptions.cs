@@ -25,9 +25,6 @@ namespace Roslynator.Documentation
         [Option(longName: "additional-xml-documentation")]
         public IEnumerable<string> AdditionalXmlDocumentation { get; set; }
 
-        [Option(longName: "base-local-url")]
-        public string BaseLocalUrl { get; set; }
-
         [Option(longName: "depth", Default = DefaultValues.Depth)]
         public DocumentationDepth Depth { get; set; }
 

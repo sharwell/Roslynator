@@ -15,7 +15,6 @@ namespace Roslynator.Documentation
         public DocumentationOptions(
             IEnumerable<string> ignoredNames = null,
             string preferredCultureName = null,
-            string baseLocalUrl = null,
             int maxDerivedTypes = DefaultValues.MaxDerivedTypes,
             bool includeClassHierarchy = DefaultValues.IncludeClassHierarchy,
             bool includeContainingNamespace = DefaultValues.IncludeContainingNamespace,
@@ -44,7 +43,6 @@ namespace Roslynator.Documentation
 
             IgnoredNames = ignoredNames?.ToImmutableArray() ?? ImmutableArray<string>.Empty;
             PreferredCultureName = preferredCultureName;
-            BaseLocalUrl = baseLocalUrl;
             MaxDerivedTypes = maxDerivedTypes;
             IncludeClassHierarchy = includeClassHierarchy;
             IncludeContainingNamespace = includeContainingNamespace;
@@ -72,9 +70,6 @@ namespace Roslynator.Documentation
         public ImmutableArray<string> IgnoredNames { get; }
 
         public string PreferredCultureName { get; }
-
-        //TODO: del BaseLocalUrl
-        public string BaseLocalUrl { get; }
 
         public int MaxDerivedTypes { get; }
 
