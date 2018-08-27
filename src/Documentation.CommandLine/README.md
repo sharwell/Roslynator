@@ -1,12 +1,14 @@
 
-# Roslynator.Documentation command-line interface
+# Roslynator.Documentation Command-Line Interface
 
 ## Commands
 
 * [doc](#doc-command)
-* [declarations](declarations-command)
+* [declarations](#declarations-command)
 
 ## doc Command
+
+Generates documentation files for specified assemblies.
 
 ```
 doc
@@ -216,6 +218,8 @@ Indicates whether interface `System.Collections.IEnumerable` should be omitted f
 
 ## declarations Command
 
+Generates a single file that contains all declarations for specified assemblies.
+
 ```
 declarations
 -a|--assemblies
@@ -301,6 +305,7 @@ Defines characters that should be used for indentation. Default value are four s
 Indicates whether opening braced should be placed on a new line. Default value is `true`.
 
 
+```
 [--omit-ienumerable]
 ```
 Indicates whether interface `System.Collections.IEnumerable` should be omitted from documentation if a type also implements interface `System.Collections.Generic.IEnumerable<T>`. Default value is `true`.
