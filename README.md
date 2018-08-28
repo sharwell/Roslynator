@@ -23,23 +23,23 @@ Although Roslynator products are free of charge, any [donation](https://www.payp
 
 ## NuGet Packages
 
-### Roslynator.Analyzers
+### Roslynator.Analyzers &ensp;[![NuGet](https://img.shields.io/nuget/v/Roslynator.Analyzers.svg)](https://nuget.org/packages/Roslynator.Analyzers)
 
 * Package [Roslynator.Analyzers](http://www.nuget.org/packages/Roslynator.Analyzers/) contains only analyzers.
 * Use this package if you want integrate analyzers into you build process.
 
-### Roslynator.CodeFixes
+### Roslynator.CodeFixes &ensp;[![NuGet](https://img.shields.io/nuget/v/Roslynator.CodeFixes.svg)](https://nuget.org/packages/Roslynator.CodeFixes)
 
 * Package [Roslynator.CodeFixes](http://www.nuget.org/packages/Roslynator.CodeFixes/) contains only code fixes for CS diagnostics.
 * Use this package if you want to distribute these code fixes to your team members.
 
-### Roslynator.CSharp
+### Roslynator.CSharp &ensp;[![NuGet](https://img.shields.io/nuget/v/Roslynator.CSharp.svg)](https://nuget.org/packages/Roslynator.CSharp)
 
 * Package [Roslynator.CSharp](http://www.nuget.org/packages/Roslynator.CSharp/) is a must-have for Roslyn-based development.
 * It is built on top of Roslyn API (namely [Microsoft.CodeAnalysis.CSharp](http://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp/)).
 * For more information, please see API [overview](src/CSharp/README.md).
 
-### Roslynator.CSharp.Workspaces
+### Roslynator.CSharp.Workspaces &ensp;[![NuGet](https://img.shields.io/nuget/v/Roslynator.CSharp.Workspaces.svg)](https://nuget.org/packages/Roslynator.CSharp.Workspaces)
 
 * Package [Roslynator.CSharp.Workspaces](http://www.nuget.org/packages/Roslynator.CSharp.Workspaces/) is a must-have for Roslyn-based development.
 * It is built on top of Roslyn API (namely [Microsoft.CodeAnalysis.CSharp.Workspaces](http://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp.Workspaces/)).
