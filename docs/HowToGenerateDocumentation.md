@@ -15,7 +15,7 @@
 
   </PropertyGroup>
 
-  <!-- Remove output directory -->
+  <!-- Delete output directory -->
   <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
 
   <PropertyGroup>
