@@ -21,6 +21,8 @@ Although Roslynator products are free of charge, any [donation](https://www.payp
 * [Roslynator Refactorings 2017](http://marketplace.visualstudio.com/items?itemName=josefpihrt.RoslynatorRefactorings2017) contains all features except analyzers, it is a subset of Roslynator 2017.
 * Use this extension in combination with package [Roslynator.Analyzers](http://www.nuget.org/packages/Roslynator.Analyzers/) or if you are not interested in analyzers at all.
 
+*Note: Roslynator for Visual Studio 2015 is no longer in development.*
+
 ## NuGet Packages
 
 ### Roslynator.Analyzers &ensp;[![NuGet](https://img.shields.io/nuget/v/Roslynator.Analyzers.svg)](https://nuget.org/packages/Roslynator.Analyzers)
