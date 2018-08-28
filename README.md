@@ -5,8 +5,11 @@
 * [List of refactorings](src/Refactorings/README.md)
 * [List of code fixes for CS diagnostics](src/CodeFixes/README.md)
 * [Release notes](ChangeLog.md)
+* Follow on [Twitter](https://twitter.com/roslynator)
 
 ### Donation
+
+> "It's so good, that I made my first ever donation." Mateusz Piasecki, Roslynator user.
 
 Although Roslynator products are free of charge, any [donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BX85UA346VTN6) is welcome and supports further development.
 
