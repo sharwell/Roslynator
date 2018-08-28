@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -20,8 +21,8 @@
     <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
     <PropertyGroup>
       <RoslynatorDocumentationAssemblies>Roslynator.CSharp.dll Roslynator.CSharp.Workspaces.dll</RoslynatorDocumentationAssemblies>
-      <RoslynatorDocumentationParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;Roslynator API Reference&quot;</RoslynatorDocumentationParameters>
-      <RoslynatorDocumentationDeclarationsParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDeclarationsParameters>
+      <RoslynatorDocumentationDocParameters> -a $(RoslynatorDocumentationAssemblies) -o "$(RoslynatorDocumentationDirectory)" -h "Roslynator API Reference"</RoslynatorDocumentationDocParameters>
+      <RoslynatorDocumentationDeclarationsParameters> -a $(RoslynatorDocumentationAssemblies) -o "$(RoslynatorDocumentationDirectory)\api.cs"</RoslynatorDocumentationDeclarationsParameters>
     </PropertyGroup>
   </Target>
 
@@ -37,7 +38,9 @@
   <ItemGroup>
     <ProjectReference Include="..\CSharp\CSharp.csproj" />
     <ProjectReference Include="..\CSharp.Workspaces\CSharp.Workspaces.csproj" />
+    <ProjectReference Include="..\Documentation.TestProject\Documentation.TestProject.csproj" />
     <ProjectReference Include="..\Documentation\Documentation.csproj" />
+    <ProjectReference Include="..\Tools\Utilities\Utilities.csproj" />
   </ItemGroup>
 
 </Project>

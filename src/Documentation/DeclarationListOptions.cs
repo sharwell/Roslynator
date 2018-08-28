@@ -63,14 +63,24 @@ namespace Roslynator.Documentation
 
         public bool UseDefaultLiteral { get; }
 
-        internal bool ShouldBeIgnored(ISymbol symbol)
+        internal bool ShouldBeIgnored(INamedTypeSymbol typeSymbol)
         {
-            if (!_ignoredMetadataNames.IsDefault)
+            foreach (MetadataName metadataName in _ignoredMetadataNames)
             {
-                foreach (MetadataName name in _ignoredMetadataNames)
+                if (typeSymbol.HasMetadataName(metadataName))
+                    return true;
+
+                if (!metadataName.ContainingTypes.Any())
                 {
-                    if (symbol.HasMetadataName(name))
-                        return true;
+                    INamespaceSymbol n = typeSymbol.ContainingNamespace;
+
+                    while (n != null)
+                    {
+                        if (n.HasMetadataName(metadataName))
+                            return true;
+
+                        n = n.ContainingNamespace;
+                    }
                 }
             }
 

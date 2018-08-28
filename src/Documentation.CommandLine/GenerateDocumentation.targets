@@ -1,6 +1,6 @@
 ﻿<Project>
   <Target Name="RoslynatorDocumentation" AfterTargets="Build">
-    <PropertyGroup Condition=" '$(RoslynatorDocumentationParameters)' != '' OR '$(RoslynatorDocumentationDeclarationsParameters)' != ''">
+    <PropertyGroup Condition=" '$(RoslynatorDocumentationDocParameters)' != '' OR '$(RoslynatorDocumentationDeclarationsParameters)' != ''">
       <RoslynatorDocumentationCommand Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">"$(MSBuildThisFileDirectory)net46\Roslynator.Documentation.CommandLine.exe"</RoslynatorDocumentationCommand>
       <RoslynatorDocumentationCommand Condition="'$(TargetFrameworkIdentifier)' == '.NETCoreApp' Or '$(TargetFrameworkIdentifier)' == '.NETStandard'">dotnet "$(MSBuildThisFileDirectory)netcoreapp1.0\Roslynator.Documentation.CommandLine.dll"</RoslynatorDocumentationCommand>
       <RoslynatorDocumentationAssemblyReferencesPath>$(TargetDir)Roslynator.Documentation.CommandLine.assemblyreferences</RoslynatorDocumentationAssemblyReferencesPath>
@@ -9,11 +9,11 @@
                       Lines="@(_ResolveAssemblyReferenceResolvedFiles)"
                       Overwrite="true"
                       Encoding="Unicode"
-                      Condition=" '$(RoslynatorDocumentationParameters)' != '' OR '$(RoslynatorDocumentationDeclarationsParameters)' != ''" />
-    <Exec Command="$(RoslynatorDocumentationCommand) doc -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationParameters)"
+                      Condition=" '$(RoslynatorDocumentationDocParameters)' != '' OR '$(RoslynatorDocumentationDeclarationsParameters)' != ''" />
+    <Exec Command="$(RoslynatorDocumentationCommand) doc -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationDocParameters)"
           LogStandardErrorAsError="true"
           ConsoleToMSBuild="true"
-          Condition="'$(RoslynatorDocumentationParameters)' != ''">
+          Condition="'$(RoslynatorDocumentationDocParameters)' != ''">
       <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
     </Exec>
     <Exec Command="$(RoslynatorDocumentationCommand) declarations -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; $(RoslynatorDocumentationDeclarationsParameters)"
@@ -23,6 +23,6 @@
       <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
     </Exec>
     <Delete Files="$(RoslynatorDocumentationAssemblyReferencesPath)"
-            Condition=" '$(RoslynatorDocumentationParameters)' != '' OR '$(RoslynatorDocumentationDeclarationsParameters)' != ''" />
+            Condition=" '$(RoslynatorDocumentationDocParameters)' != '' OR '$(RoslynatorDocumentationDeclarationsParameters)' != ''" />
   </Target>
 </Project>

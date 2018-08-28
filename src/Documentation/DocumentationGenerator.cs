@@ -145,16 +145,11 @@ namespace Roslynator.Documentation
             {
                 IEnumerable<INamedTypeSymbol> typeSymbols = DocumentationModel.Types.Where(f => !Options.ShouldBeIgnored(f));
 
-                IEnumerable<INamespaceSymbol> namespaceSymbols = typeSymbols
+                foreach (INamespaceSymbol namespaceSymbol in typeSymbols
                     .Select(f => f.ContainingNamespace)
-                    .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance);
-
-                foreach (INamespaceSymbol namespaceSymbol in namespaceSymbols)
+                    .Distinct(MetadataNameEqualityComparer<INamespaceSymbol>.Instance))
                 {
-                    if (!Options.ShouldBeIgnored(namespaceSymbol))
-                    {
-                        yield return GenerateNamespace(namespaceSymbol);
-                    }
+                    yield return GenerateNamespace(namespaceSymbol);
                 }
 
                 if (depth <= DocumentationDepth.Type)

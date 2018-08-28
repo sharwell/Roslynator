@@ -34,8 +34,8 @@
     <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
     <PropertyGroup>
       <RoslynatorDocumentationAssemblies>&quot;$(TargetPath)&quot;</RoslynatorDocumentationAssemblies>
-      <RoslynatorDocumentationParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;Foo API Reference&quot; --additional-xml-documentation &quot;$(ProjectDir)test.xml&quot;</RoslynatorDocumentationParameters>
-      <RoslynatorDocumentationDeclarationsParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDeclarationsParameters>
+      <RoslynatorDocumentationDocParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;Foo API Reference&quot; --additional-xml-documentation &quot;$(ProjectDir)test.xml&quot; --ignored-names &quot;Roslynator.Documentation.Test2&quot;</RoslynatorDocumentationDocParameters>
+      <RoslynatorDocumentationDeclarationsParameters> -a $(RoslynatorDocumentationAssemblies) -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot; --ignored-names &quot;Roslynator.Documentation.Test2&quot;</RoslynatorDocumentationDeclarationsParameters>
     </PropertyGroup>
   </Target>
 

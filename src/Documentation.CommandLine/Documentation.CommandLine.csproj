@@ -13,10 +13,22 @@
     <LangVersion>latest</LangVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Documentation.CommandLine.snk</AssemblyOriginatorKeyFile>
-    <NuspecFile>Documentation.CommandLine.nuspec</NuspecFile> 
-    <NuspecProperties>configuration=$(Configuration)</NuspecProperties>
     <Copyright>Copyright (c) 2017-2018 Josef Pihrt</Copyright>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <NuspecFile>Documentation.CommandLine.nuspec</NuspecFile> 
+    <IntermediatePackDir>$(MSBuildProjectDirectory)/bin/$(Configuration)/publish/</IntermediatePackDir>
+    <PublishDir>$(IntermediatePackDir)$(TargetFramework)/</PublishDir>
+    <NuspecProperties>publishDir=$([MSBuild]::NormalizeDirectory($(IntermediatePackDir)))</NuspecProperties>
+  </PropertyGroup>
+
+  <Target Name="PublishAll" BeforeTargets="GenerateNuspec">
+    <ItemGroup>
+      <_TargetFramework Include="$(TargetFrameworks)" />
+    </ItemGroup>
+    <MSBuild Projects="$(MSBuildProjectFullPath)" Targets="Publish" Properties="TargetFramework=%(_TargetFramework.Identity)" />
+  </Target>
 
   <ItemGroup>
     <None Remove="Documentation.CommandLine.snk" />
