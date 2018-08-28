@@ -10,7 +10,7 @@
 
 ## `doc` Command
 
-Generates documentation files for specified assemblies.
+Generates documentation files from specified assemblies.
 
 ```
 doc
@@ -132,7 +132,7 @@ Indicates whether interface `System.Collections.IEnumerable` should be omitted f
 
 
 ## `declarations` Command
-Generates a single file that contains all declarations for specified assemblies.
+Generates a single file that contains all declarations from specified assemblies.
 
 ```
 declarations

@@ -20,13 +20,13 @@
 
   <PropertyGroup>
 
-    <!-- One or more assembly paths you want generator documentation for, for example: "A.dll B.dll" -->
+    <!-- One or more assembly paths you want generator documentation for, for example: A.dll B.dll -->
     <RoslynatorDocumentationAssemblies>$(TargetPath)</RoslynatorDocumentationAssemblies>
 
-    <!-- Specify parameters for 'doc' command. This command will generate documentation files to output directory -->
+    <!-- Specify parameters for 'doc' command. This command will generate documentation files from specified assemblies -->
     <RoslynatorDocumentationParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)&quot; -h &quot;API Reference&quot;</RoslynatorDocumentationParameters>
 
-    <!-- Specify parameters for 'declarations' command. This command will that generate one file containing all declarations -->
+    <!-- Specify parameters for 'declarations' command. This command will generate a single file that contains all declarations from specified assemblies -->
     <RoslynatorDocumentationDeclarationsParameters> -a &quot;$(RoslynatorDocumentationAssemblies)&quot; -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot;</RoslynatorDocumentationDeclarationsParameters>
 
   </PropertyGroup>
@@ -34,8 +34,8 @@
 </Target>
 ```
 
-* [**doc** command reference](../src/Documentation.CommandLine/README.md#doc-command)
-* [**declarations** command reference](../src/Documentation.CommandLine/README.md#declarations-command)
+* [`doc` command reference](../src/Documentation.CommandLine/README.md#doc-command)
+* [`declarations` command reference](../src/Documentation.CommandLine/README.md#declarations-command)
 
 *Note: Do not define option `-r|--references`. It is already defined as a part of target RoslynatorDocumentation.*
 
