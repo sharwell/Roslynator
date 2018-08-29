@@ -1,7 +1,7 @@
 
 # Roslynator.Documentation Command-Line Interface
 
-[![NuGet](https://img.shields.io/nuget/v/Roslynator.Documentation.CommandLine.svg)](https://nuget.org/packages/Roslynator.Documentation.CommandLine)
+[![NuGet](https://img.shields.io/nuget/v/Roslynator.Documentation.Build.svg)](https://nuget.org/packages/Roslynator.Documentation.Build)
 
 ## Commands
 

@@ -1,7 +1,7 @@
 
 # How to Generate Documentation for .NET Project
 
-1) Install package [Roslynator.Documentation.CommandLine](http://www.nuget.org/packages/Roslynator.Documentation.CommandLine/)&ensp;[![NuGet](https://img.shields.io/nuget/v/Roslynator.Documentation.CommandLine.svg)](https://nuget.org/packages/Roslynator.Documentation.CommandLine)
+1) Install package [Roslynator.Documentation.Build](http://www.nuget.org/packages/Roslynator.Documentation.Build/)&ensp;[![NuGet](https://img.shields.io/nuget/v/Roslynator.Documentation.Build.svg)](https://nuget.org/packages/Roslynator.Documentation.Build)
 
 2) Add MSBuild Target to your csproj (vbproj) file
 
@@ -34,8 +34,8 @@
 </Target>
 ```
 
-* [`doc` command reference](../src/Documentation.CommandLine/README.md#doc-command)
-* [`declarations` command reference](../src/Documentation.CommandLine/README.md#declarations-command)
+* [`doc` command reference](../src/Documentation.Build/README.md#doc-command)
+* [`declarations` command reference](../src/Documentation.Build/README.md#declarations-command)
 
 *Note: Do not define option `-r|--references`. It is already defined as a part of target RoslynatorDocumentation.*
 
