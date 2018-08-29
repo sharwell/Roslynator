@@ -7,9 +7,8 @@ using static Roslynator.Documentation.DocumentationOptions;
 namespace Roslynator.Documentation
 {
     [Verb("doc")]
-    public class DocumentationCommandLineOptions
+    public class DocCommandLineOptions
     {
-        //TODO: source místo assemblies
         [Option(longName: "assemblies", shortName: 'a', Required = true)]
         public IEnumerable<string> Assemblies { get; set; }
 
@@ -90,6 +89,10 @@ namespace Roslynator.Documentation
 
         [Option(longName: "root-parts")]
         public IEnumerable<string> RootParts { get; set; }
+
+        //TODO: update doc
+        [Option(longName: "root-assemblies")]
+        public IEnumerable<string> RootAssemblies { get; set; }
 
         [Option(longName: "type-parts")]
         public IEnumerable<string> TypeParts { get; set; }

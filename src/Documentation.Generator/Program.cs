@@ -21,7 +21,7 @@ namespace Roslynator.Documentation
         [SuppressMessage("Redundancy", "RCS1163")]
         private static void Main(string[] args)
         {
-            GenerateDocumentation(@"..\..\..\..\..\docs\api\", "Roslynator API Reference", "Roslynator.CSharp.dll", "Roslynator.CSharp.Workspaces.dll");
+            GenerateDocumentation(@"..\..\..\..\..\docs\api\", "Roslynator API Reference", "Roslynator.Documentation.dll", "Roslynator.CSharp.dll", "Roslynator.CSharp.Workspaces.dll");
             GenerateDocumentation(@"..\..\..\..\..\docs\apitest\", "Foo API Reference", "Roslynator.Documentation.TestProject.dll");
         }
 

@@ -20,9 +20,17 @@
     </PropertyGroup>
     <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
     <PropertyGroup>
-      <RoslynatorDocumentationAssemblies>Roslynator.CSharp.dll Roslynator.CSharp.Workspaces.dll</RoslynatorDocumentationAssemblies>
-      <RoslynatorDocumentationDocParameters> -a $(RoslynatorDocumentationAssemblies) -o "$(RoslynatorDocumentationDirectory)" -h "Roslynator API Reference"</RoslynatorDocumentationDocParameters>
-      <RoslynatorDocumentationDeclarationsParameters> -a $(RoslynatorDocumentationAssemblies) -o "$(RoslynatorDocumentationDirectory)\api.cs"</RoslynatorDocumentationDeclarationsParameters>
+      <RoslynatorDocumentationAssemblies>Roslynator.CSharp.dll Roslynator.CSharp.Workspaces.dll Roslynator.Documentation.dll</RoslynatorDocumentationAssemblies>
+      <RoslynatorDocumentationDocParameters> ^
+-a $(RoslynatorDocumentationAssemblies) ^
+-o "$(RoslynatorDocumentationDirectory)" ^
+-h "Roslynator API Reference" ^
+--root-assemblies &quot;Roslynator.Documentation.dll&quot; ^
+      </RoslynatorDocumentationDocParameters>
+      <RoslynatorDocumentationDeclarationsParameters> ^
+-a $(RoslynatorDocumentationAssemblies) ^
+-o "$(RoslynatorDocumentationDirectory)\api.cs" ^
+      </RoslynatorDocumentationDeclarationsParameters>
     </PropertyGroup>
   </Target>
 
@@ -31,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Roslynator.Documentation.CommandLine" Version="0.1.0-beta" />
+    <PackageReference Include="Roslynator.Documentation.Build" Version="0.1.0-beta" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.8.0" />
   </ItemGroup>
 

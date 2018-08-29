@@ -16,14 +16,14 @@ namespace Roslynator.Documentation
     {
         private static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<DocumentationCommandLineOptions, DeclarationsCommandLineOptions>(args)
+            Parser.Default.ParseArguments<DocCommandLineOptions, DeclarationsCommandLineOptions>(args)
                 .MapResult(
-                  (DocumentationCommandLineOptions options) => GenerateDocumentation(options),
-                  (DeclarationsCommandLineOptions options) => GenerateDeclarationList(options),
+                  (DocCommandLineOptions options) => ExecuteDoc(options),
+                  (DeclarationsCommandLineOptions options) => ExecuteDeclarations(options),
                   _ => 1);
         }
 
-        private static int GenerateDocumentation(DocumentationCommandLineOptions options)
+        private static int ExecuteDoc(DocCommandLineOptions options)
         {
             Encoding encoding = null;
 
@@ -104,10 +104,36 @@ namespace Roslynator.Documentation
 
             Console.WriteLine($"Documentation successfully generated to '{options.OutputDirectory}'.");
 
+            foreach (string rootAssembly in options.RootAssemblies)
+            {
+                documentationModel = CreateDocumentationModel(options.References, new string[] { rootAssembly });
+
+                if (documentationModel == null)
+                    return 1;
+
+                generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownUrlProviders.GitHub, documentationOptions);
+
+                string fileName = Path.GetFileName(rootAssembly);
+
+                string fileNameWithoutExtension = (fileName.EndsWith(".dll", StringComparison.Ordinal))
+                    ? Path.GetFileNameWithoutExtension(fileName)
+                    : fileName;
+
+                string path = Path.Combine(directoryPath, fileNameWithoutExtension + ".md");
+
+                Console.WriteLine($"Documentation root is being generated to '{path}'.");
+
+                DocumentationGeneratorResult result = generator.GenerateRoot(fileNameWithoutExtension);
+
+                File.WriteAllText(path, result.Content, encoding);
+
+                Console.WriteLine($"Documentation root successfully generated to '{path}'.");
+            }
+
             return 0;
         }
 
-        private static int GenerateDeclarationList(DeclarationsCommandLineOptions options)
+        private static int ExecuteDeclarations(DeclarationsCommandLineOptions options)
         {
             DocumentationModel documentationModel = CreateDocumentationModel(options.References, options.Assemblies, options.AdditionalXmlDocumentation);
 
@@ -143,7 +169,7 @@ namespace Roslynator.Documentation
             return 0;
         }
 
-        private static DocumentationModel CreateDocumentationModel(string assemblyReferencesValue, IEnumerable<string> assemblies, IEnumerable<string> additionalXmlDocumentationPaths)
+        private static DocumentationModel CreateDocumentationModel(string assemblyReferencesValue, IEnumerable<string> assemblies, IEnumerable<string> additionalXmlDocumentationPaths = null)
         {
             IEnumerable<string> assemblyReferences = GetAssemblyReferences(assemblyReferencesValue);
 
@@ -187,6 +213,7 @@ namespace Roslynator.Documentation
                 additionalXmlDocumentationPaths: additionalXmlDocumentationPaths);
         }
 
+        //TODO: update documentation
         private static IEnumerable<string> GetAssemblyReferences(string assemblyReferences)
         {
             if (assemblyReferences.Contains(";"))
