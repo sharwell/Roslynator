@@ -33,11 +33,11 @@ namespace Roslynator.Documentation
         [Option(longName: "no-class-hierarchy", Default = !DefaultValues.IncludeClassHierarchy)]
         public bool NoClassHierarchy { get; set; }
 
-        [Option(longName: "no-obsolete-mark", Default = !DefaultValues.MarkObsolete)]
-        public bool NoObsoleteMark { get; set; }
+        [Option(longName: "no-mark-obsolete", Default = !DefaultValues.MarkObsolete)]
+        public bool NoMarkObsolete { get; set; }
 
-        [Option(longName: "no-precedence-for-system-namespace", Default = !DefaultValues.PlaceSystemNamespaceFirst)]
-        public bool NoPrecedenceForSystemNamespace { get; set; }
+        [Option(longName: "no-precedence-for-system", Default = !DefaultValues.PlaceSystemNamespaceFirst)]
+        public bool NoPrecedenceForSystem { get; set; }
 
         [Option(longName: "omit-containing-namespace", Default = !DefaultValues.IncludeContainingNamespace)]
         public bool OmitContainingNamespace { get; set; }

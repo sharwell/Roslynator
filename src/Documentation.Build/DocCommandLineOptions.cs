@@ -51,23 +51,23 @@ namespace Roslynator.Documentation
         [Option(longName: "namespace-parts")]
         public IEnumerable<string> NamespaceParts { get; set; }
 
-        [Option(longName: "no-base-list-format", Default = !DefaultValues.FormatDeclarationBaseList)]
-        public bool NoBaseListFormat { get; set; }
+        [Option(longName: "no-format-base-list", Default = !DefaultValues.FormatDeclarationBaseList)]
+        public bool NoFormatBaseList { get; set; }
 
         [Option(longName: "no-class-hierarchy", Default = !DefaultValues.IncludeClassHierarchy)]
         public bool NoClassHierarchy { get; set; }
 
-        [Option(longName: "no-constraints-format", Default = !DefaultValues.FormatDeclarationConstraints)]
-        public bool NoConstraintsFormat { get; set; }
+        [Option(longName: "no-format-constraints", Default = !DefaultValues.FormatDeclarationConstraints)]
+        public bool NoFormatConstraints { get; set; }
 
         [Option(longName: "no-delete", Default = false)]
         public bool NoDelete { get; set; }
 
-        [Option(longName: "no-obsolete-mark", Default = !DefaultValues.MarkObsolete)]
-        public bool NoObsoleteMark { get; set; }
+        [Option(longName: "no-mark-obsolete", Default = !DefaultValues.MarkObsolete)]
+        public bool NoMarkObsolete { get; set; }
 
-        [Option(longName: "no-preference-for-system-namespace", Default = !DefaultValues.PlaceSystemNamespaceFirst)]
-        public bool NoPrecedenceForSystemNamespace { get; set; }
+        [Option(longName: "no-precedence-for-system", Default = !DefaultValues.PlaceSystemNamespaceFirst)]
+        public bool NoPrecedenceForSystem { get; set; }
 
         [Option(longName: "omit-attribute-arguments", Default = !DefaultValues.IncludeAttributeArguments)]
         public bool OmitAttributeArguments { get; set; }

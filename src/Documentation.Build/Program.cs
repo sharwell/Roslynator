@@ -67,10 +67,10 @@ namespace Roslynator.Documentation
                 maxDerivedTypes: options.MaxDerivedTypes,
                 includeClassHierarchy: !options.NoClassHierarchy,
                 includeContainingNamespace: !options.OmitContainingNamespace,
-                placeSystemNamespaceFirst: !options.NoPrecedenceForSystemNamespace,
-                formatDeclarationBaseList: !options.NoBaseListFormat,
-                formatDeclarationConstraints: !options.NoConstraintsFormat,
-                markObsolete: !options.NoObsoleteMark,
+                placeSystemNamespaceFirst: !options.NoPrecedenceForSystem,
+                formatDeclarationBaseList: !options.NoFormatBaseList,
+                formatDeclarationConstraints: !options.NoFormatConstraints,
+                markObsolete: !options.NoMarkObsolete,
                 includeMemberInheritedFrom: !options.OmitMemberInheritedFrom,
                 includeMemberOverrides: !options.OmitMemberOverrides,
                 includeMemberImplements: !options.OmitMemberImplements,
@@ -130,7 +130,7 @@ namespace Roslynator.Documentation
                 splitAttributes: !options.MergeAttributes,
                 includeAttributeArguments: !options.OmitAttributeArguments,
                 omitIEnumerable: !options.IncludeIEnumerable,
-                useDefaultLiteral: !options.UseDefaultExpression);
+                useDefaultLiteral: !options.NoDefaultLiteral);
 
             Console.WriteLine($"Declaration list is being generated to '{options.OutputPath}'.");
 
@@ -177,8 +177,8 @@ namespace Roslynator.Documentation
                 baseLocalUrl: options.RootUrl,
                 includeClassHierarchy: !options.NoClassHierarchy,
                 includeContainingNamespace: !options.OmitContainingNamespace,
-                placeSystemNamespaceFirst: !options.NoPrecedenceForSystemNamespace,
-                markObsolete: !options.NoObsoleteMark,
+                placeSystemNamespaceFirst: !options.NoPrecedenceForSystem,
+                markObsolete: !options.NoMarkObsolete,
                 depth: options.Depth,
                 ignoredRootParts: ignoredParts);
 

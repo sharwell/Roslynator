@@ -1,7 +1,7 @@
 
 # Roslynator.Documentation Command-Line Interface
 
-[![NuGet](https://img.shields.io/nuget/v/Roslynator.Documentation.Build.svg)](https://nuget.org/packages/Roslynator.Documentation.Build)
+<!-- [![NuGet](https://img.shields.io/nuget/v/Roslynator.Documentation.Build.svg)](https://nuget.org/packages/Roslynator.Documentation.Build) -->
 
 ## Commands
 
@@ -37,12 +37,12 @@ doc
 [--omit-member-overrides]
 [--max-derived-types]
 [--mode]
-[--no-base-list-format]
+[--no-format-base-list]
 [--no-class-hierarchy]
-[--no-constraints-format]
+[--no-format-constraints]
 [--no-delete]
-[--no-obsolete-mark]
-[--no-precedence-for-system-namespace]
+[--no-mark-obsolete]
+[--no-precedence-for-system]
 [--preferred-culture]
 ```
 
@@ -118,22 +118,22 @@ Defines maximum number derived types that should be displayed. Default value is 
 #### `[--mode] {github}`
 Defines documentation generation mode. Currently only supported mode is `github`.
 
-#### `[--no-base-list-format]`
+#### `[--no-format-base-list]`
 Indicates whether a base list should not be formatted on a multiple lines.
 
 #### `[--no-class-hierarchy]`
 Indicates whether classes should be displayed as a list instead of hierarchy tree.
 
-#### `[--no-constraints-format]`
+#### `[--no-format-constraints]`
 Indicates whether constraints should not be formatted on a multiple lines.
 
 #### `[--no-delete]`
 Indicates whether output directory should not be deleted at the beginning of the process.
 
-#### `[--no-obsolete-mark]`
+#### `[--no-mark-obsolete]`
 Indicates whether obsolete types and members should not be marked as `[deprecated]`.
 
-#### `[--no-precedence-for-system-namespace]`
+#### `[--no-precedence-for-system]`
 Indicates whether symbols contained in `System` namespace should be ordered as any other symbols and not before other symbols.
 
 #### `[--preferred-culture]`
@@ -157,7 +157,7 @@ declarations
 [--no-indent]
 [--no-new-line-before-open-brace]
 [--omit-attribute-arguments]
-[--use-default-expression]
+[--no-default-literal]
 ```
 
 ### Options
@@ -201,7 +201,7 @@ Indicates whether opening braced should not be placed on a new line.
 #### `[--omit-attribute-arguments]`
 Indicates whether attribute arguments should be omitted when displaying an attribute.
 
-#### `[--use-default-expression]`
+#### `[--no-default-literal]`
 Indicates whether default expression (`default(T)`) should be used instead of default literal (`default`).
 
 
@@ -220,9 +220,9 @@ doc
 [--ignored-parts]
 [--mode]
 [--no-class-hierarchy]
-[--no-obsolete-mark]
+[--no-mark-obsolete]
+[--no-precedence-for-system]
 [--omit-containing-namespace]
-[--place-system-namespace-first]
 [--root-url]
 ```
 
@@ -259,10 +259,10 @@ Defines documentation generation mode. Currently only supported mode is `github`
 #### `[--no-class-hierarchy]`
 Indicates whether classes should be displayed as a list instead of hierarchy tree.
 
-#### `[--no-obsolete-mark]`
+#### `[--no-mark-obsolete]`
 Indicates whether obsolete types and members should not be marked as `[deprecated]`.
 
-#### `[--no-precedence-for-system-namespace]`
+#### `[--no-precedence-for-system]`
 Indicates whether symbols contained in `System` namespace should be ordered as any other symbols and not before other symbols.
 
 #### `[--omit-containing-namespace]`

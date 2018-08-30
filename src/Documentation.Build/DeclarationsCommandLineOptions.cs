@@ -6,6 +6,7 @@ using static Roslynator.Documentation.DeclarationListOptions;
 
 namespace Roslynator.Documentation
 {
+    //TODO: no-precedence-for-system
     [Verb("declarations")]
     public class DeclarationsCommandLineOptions
     {
@@ -51,7 +52,7 @@ namespace Roslynator.Documentation
         [Option(longName: "omit-attribute-arguments", Default = !DefaultValues.IncludeAttributeArguments)]
         public bool OmitAttributeArguments { get; set; }
 
-        [Option(longName: "use-default-expression", Default = !DefaultValues.UseDefaultLiteral)]
-        public bool UseDefaultExpression { get; set; }
+        [Option(longName: "no-default-literal", Default = !DefaultValues.UseDefaultLiteral)]
+        public bool NoDefaultLiteral { get; set; }
     }
 }
