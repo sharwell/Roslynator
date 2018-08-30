@@ -6,6 +6,7 @@ using static Roslynator.Documentation.DocumentationOptions;
 
 namespace Roslynator.Documentation
 {
+    //TODO: content
     [Verb("root")]
     public class RootCommandLineOptions
     {

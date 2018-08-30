@@ -6,47 +6,44 @@
 2) Add MSBuild Target to your csproj (vbproj) file
 
 ```xml
-<Target Name="PreRoslynatorDocumention" BeforeTargets="RoslynatorDocumentation" Condition=" '$(Configuration)' == 'Release'">
-
-  <PropertyGroup>
-
-    <!-- Define output directory -->
-    <RoslynatorDocumentationDirectory>$(SolutionDir)docs\api</RoslynatorDocumentationDirectory>
-
-  </PropertyGroup>
-
-  <!-- Delete output directory -->
-  <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
+<Target Name="RoslynatorDocumentation" AfterTargets="RoslynatorDocumentationInitialize" Condition=" '$(Configuration)' == 'Release'">
 
   <PropertyGroup>
 
     <!-- One or more assembly paths you want generator documentation for, for example: A.dll B.dll -->
-    <RoslynatorDocumentationAssemblies>$(TargetPath)</RoslynatorDocumentationAssemblies>
-
-    <!-- Specify parameters for 'doc' command.
-         This command will generate documentation files from specified assemblies -->
-    <RoslynatorDocumentationDocParameters> ^
-      -a &quot;$(RoslynatorDocumentationAssemblies)&quot; ^
-      -o &quot;$(RoslynatorDocumentationDirectory)&quot; ^
-      -h &quot;API Reference&quot;
-    </RoslynatorDocumentationDocParameters>
-
-    <!-- Specify parameters for 'declarations' command.
-         This command will generate a single file that contains all declarations from specified assemblies -->
-    <RoslynatorDocumentationDeclarationsParameters> ^
-      -a &quot;$(RoslynatorDocumentationAssemblies)&quot; ^
-      -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot; ^
-    </RoslynatorDocumentationDeclarationsParameters>
+    <RoslynatorDocumentationAssemblies>&quot;$(TargetPath)&quot;</RoslynatorDocumentationAssemblies>
 
   </PropertyGroup>
+
+    <!-- Execute 'doc' command.
+         This command will generate documentation files from specified assemblies -->
+  <Exec Command="$(RoslynatorDocumentationExe) doc ^
+    -a $(RoslynatorDocumentationAssemblies) ^
+    -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
+    -o &quot;$(SolutionDir)docs&quot; ^
+    -h &quot;API Reference&quot;"
+        LogStandardErrorAsError="true"
+        ConsoleToMSBuild="true">
+    <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+  </Exec>
+
+    <!-- Execute 'declarations' command.
+         This command will generate a single file that contains all declarations from specified assemblies -->
+  <Exec Command="$(RoslynatorDocumentationExe) declarations ^
+    -a $(RoslynatorDocumentationAssemblies) ^
+    -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
+    -o &quot;$(SolutionDir)docs\api.cs&quot;"
+        LogStandardErrorAsError="true"
+        ConsoleToMSBuild="true">
+    <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+  </Exec>
 
 </Target>
 ```
 
 * [`doc` command reference](../src/Documentation.Build/README.md#doc-command)
 * [`declarations` command reference](../src/Documentation.Build/README.md#declarations-command)
-
-*Note: Do not define option `-r|--references`. It is already defined as a part of target RoslynatorDocumentation.*
+* [`root` command reference](../src/Documentation.Build/README.md#root-command)
 
 3) Build project in **Release** configuration
 

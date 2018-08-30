@@ -70,19 +70,19 @@ Defines one or more xml documentation files that should be included. These files
 #### `[--depth] {member|type|namespace}`
 Defines a depth of a documentation. Default value is `member`.
 
-#### `[--ignored-member-parts] {Overloads ContainingType ContainingAssembly ObsoleteMessage Summary Declaration TypeParameters Parameters ReturnValue Implements Attributes Exceptions Examples Remarks SeeAlso}`
+#### `[--ignored-member-parts] {overloads containing-type containing-assembly obsolete-message summary declaration type-parameters parameters return-value implements attributes exceptions examples remarks see-also}`
 Defines parts of a member documentation that should be excluded. No part is excluded by default.
 
 #### `[--ignored-names] <FULLY-QUALIFIED-METADATA-NAMES-TO-IGNORE>`
 Defines a list of metadata names that should be excluded from a documentation. Namespace of type names can be specified.
 
-#### `[--ignored-namespace-parts] {Content ContainingNamespace Summary Examples Remarks Classes Structs Interfaces Enums Delegates SeeAlso}`
+#### `[--ignored-namespace-parts] {content containing-namespace summary examples remarks classes structs interfaces enums delegates see-also}`
 Defines parts of a namespace documentation that should be excluded. No part is excluded by default.
 
-#### `[--ignored-root-parts] {Content | Namespaces | Classes | StaticClasses | Structs | Interfaces | Enums | Delegates | Other}`
+#### `[--ignored-root-parts] {content | namespaces | classes | static-classes | structs | interfaces | enums | delegates | other}`
 Defines parts of a root documentation that should be excluded. No part is excluded by default.
 
-#### `[--ignored-type-parts] {Content ContainingNamespace ContainingAssembly ObsoleteMessage Summary Declaration TypeParameters Parameters ReturnValue Inheritance Attributes Derived Implements Examples Remarks Constructors Fields Indexers Properties Methods Operators Events ExplicitInterfaceImplementations ExtensionMethods Classes Structs Interfaces Enums Delegates SeeAlso}`
+#### `[--ignored-type-parts] {content containing-namespace containing-assembly obsolete-message summary declaration type-parameters parameters return-value inheritance attributes derived implements examples remarks constructors fields indexers properties methods operators events explicit-interface-implementations extension-methods classes structs interfaces enums delegates see-also}`
 Defines parts of a type documentation that should be excluded. No part is excluded by default.
 
 #### `[--include-all-derived-types]`
@@ -205,7 +205,7 @@ Indicates whether attribute arguments should be omitted when displaying an attri
 Indicates whether default expression (`default(T)`) should be used instead of default literal (`default`).
 
 
-## `doc` Command
+## `root` Command
 
 Generates root documentation file from specified assemblies.
 
@@ -250,7 +250,7 @@ Defines a depth of a documentation. Default value is `member`.
 #### `[--ignored-names] <FULLY-QUALIFIED-METADATA-NAMES-TO-IGNORE>`
 Defines a list of metadata names that should be excluded from a documentation. Namespace of type names can be specified.
 
-#### `[--ignored-parts] {Content | Namespaces | Classes | StaticClasses | Structs | Interfaces | Enums | Delegates | Other}`
+#### `[--ignored-parts] {content | namespaces | classes | static-classes | structs | interfaces | enums | delegates | other}`
 Defines parts of a root documentation that should be excluded. No part is excluded by default.
 
 #### `[--mode] {github}`

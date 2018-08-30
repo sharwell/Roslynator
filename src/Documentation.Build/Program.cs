@@ -293,7 +293,7 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse(value, ignoreCase: true, out RootDocumentationParts result))
+                if (Enum.TryParse(value.Replace("-", ""), ignoreCase: true, out RootDocumentationParts result))
                 {
                     parts |= result;
                 }
@@ -319,7 +319,7 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse(value, ignoreCase: true, out NamespaceDocumentationParts result))
+                if (Enum.TryParse(value.Replace("-", ""), ignoreCase: true, out NamespaceDocumentationParts result))
                 {
                     parts |= result;
                 }
@@ -345,7 +345,7 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse(value, ignoreCase: true, out TypeDocumentationParts result))
+                if (Enum.TryParse(value.Replace("-", ""), ignoreCase: true, out TypeDocumentationParts result))
                 {
                     parts |= result;
                 }
@@ -371,7 +371,7 @@ namespace Roslynator.Documentation
 
             foreach (string value in values)
             {
-                if (Enum.TryParse(value, ignoreCase: true, out MemberDocumentationParts result))
+                if (Enum.TryParse(value.Replace("-", ""), ignoreCase: true, out MemberDocumentationParts result))
                 {
                     parts |= result;
                 }
