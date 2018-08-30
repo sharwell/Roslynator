@@ -6,11 +6,11 @@
 
 ## Namespaces
 
-* [Roslynator](../../docs\apiRoslynator/README.md#_top)
-* [Roslynator.CSharp](../../docs\apiRoslynator/CSharp/README.md#_top)
+* [Roslynator](../../docs/apiRoslynator/README.md#_top)
+* [Roslynator.CSharp](../../docs/apiRoslynator/CSharp/README.md#_top)
 
 ## Static Classes
 
-* Roslynator\.[WorkspaceExtensions](../../docs\apiRoslynator/WorkspaceExtensions/README.md#_top)
-* Roslynator\.CSharp\.[WorkspaceExtensions](../../docs\apiRoslynator/CSharp/WorkspaceExtensions/README.md#_top)
-* Roslynator\.CSharp\.[WorkspaceSyntaxExtensions](../../docs\apiRoslynator/CSharp/WorkspaceSyntaxExtensions/README.md#_top)
+* Roslynator\.[WorkspaceExtensions](../../docs/apiRoslynator/WorkspaceExtensions/README.md#_top)
+* Roslynator\.CSharp\.[WorkspaceExtensions](../../docs/apiRoslynator/CSharp/WorkspaceExtensions/README.md#_top)
+* Roslynator\.CSharp\.[WorkspaceSyntaxExtensions](../../docs/apiRoslynator/CSharp/WorkspaceSyntaxExtensions/README.md#_top)
