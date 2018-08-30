@@ -8,7 +8,6 @@ using Microsoft.CodeAnalysis;
 
 namespace Roslynator.Documentation
 {
-    //TODO: UseRegexForIgnoredNames
     public class DocumentationOptions
     {
         private readonly ImmutableArray<MetadataName> _ignoredMetadataNames;
@@ -70,7 +69,6 @@ namespace Roslynator.Documentation
 
         public static DocumentationOptions Default { get; } = new DocumentationOptions();
 
-        //TODO: IgnoredSymbols
         public ImmutableArray<string> IgnoredNames { get; }
 
         public string PreferredCultureName { get; }

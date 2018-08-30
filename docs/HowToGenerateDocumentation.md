@@ -39,7 +39,7 @@
 </Target>
 ```
 
-### Commands
+#### Commands
 
 * [`doc`](../src/Documentation.Build/README.md#doc-command)
 * [`declarations`](../src/Documentation.Build/README.md#declarations-command)
@@ -48,3 +48,9 @@
 3) Build project in **Release** configuration
 
 4) Publish documentation to GitHub
+
+## See Also
+
+* [MSBuild reserved and well-known properties](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2017)
+* [Common MSBuild project properties](https://docs.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-properties?view=vs-2017)
+* [Common macros for build commands and properties](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties?view=vs-2017)
