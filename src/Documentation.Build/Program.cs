@@ -20,6 +20,7 @@ namespace Roslynator.Documentation
                 .MapResult(
                   (DocCommandLineOptions options) => ExecuteDoc(options),
                   (DeclarationsCommandLineOptions options) => ExecuteDeclarations(options),
+                  (RootCommandLineOptions options) => ExecuteRoot(options),
                   _ => 1);
         }
 
@@ -87,6 +88,9 @@ namespace Roslynator.Documentation
             var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownUrlProviders.GitHub, documentationOptions);
 
             string directoryPath = options.OutputDirectory;
+
+            if (options.Clean)
+                Directory.Delete(directoryPath, recursive: true);
 
             Console.WriteLine($"Documentation is being generated to '{options.OutputDirectory}'.");
 
@@ -169,6 +173,64 @@ namespace Roslynator.Documentation
             return 0;
         }
 
+        private static int ExecuteRoot(RootCommandLineOptions options)
+        {
+            Encoding encoding = null;
+
+            if (string.Equals(options.Mode, "github", StringComparison.OrdinalIgnoreCase))
+            {
+                encoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
+            }
+            else
+            {
+                Console.WriteLine($"Unknown mode '{options.Mode}'.");
+                return 1;
+            }
+
+            DocumentationModel documentationModel = CreateDocumentationModel(options.References, options.Assemblies);
+
+            if (documentationModel == null)
+                return 1;
+
+            if (!TryGetIgnoredRootParts(options.Parts, out RootDocumentationParts ignoredParts))
+                return 1;
+
+            var documentationOptions = new DocumentationOptions(
+                ignoredNames: options.IgnoredNames,
+                baseLocalUrl: options.RootUrl,
+                includeClassHierarchy: options.IncludeClassHierarchy,
+                includeContainingNamespace: options.IncludeContainingNamespace,
+                placeSystemNamespaceFirst: options.PlaceSystemNamespaceFirst,
+                markObsolete: options.MarkObsolete,
+                depth: options.Depth,
+                ignoredRootParts: ignoredParts);
+
+            var generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownUrlProviders.GitHub, documentationOptions);
+
+            string path = options.OutputPath;
+
+            Console.WriteLine($"Documentation root is being generated to '{path}'.");
+
+            string heading = options.Heading;
+
+            if (string.IsNullOrEmpty(heading))
+            {
+                string fileName = Path.GetFileName(options.OutputPath);
+
+                heading = (fileName.EndsWith(".dll", StringComparison.Ordinal))
+                    ? Path.GetFileNameWithoutExtension(fileName)
+                    : fileName;
+            }
+
+            DocumentationGeneratorResult result = generator.GenerateRoot(heading);
+
+            File.WriteAllText(path, result.Content, encoding);
+
+            Console.WriteLine($"Documentation root successfully generated to '{path}'.");
+
+            return 0;
+        }
+
         private static DocumentationModel CreateDocumentationModel(string assemblyReferencesValue, IEnumerable<string> assemblies, IEnumerable<string> additionalXmlDocumentationPaths = null)
         {
             IEnumerable<string> assemblyReferences = GetAssemblyReferences(assemblyReferencesValue);
@@ -213,7 +275,6 @@ namespace Roslynator.Documentation
                 additionalXmlDocumentationPaths: additionalXmlDocumentationPaths);
         }
 
-        //TODO: update documentation
         private static IEnumerable<string> GetAssemblyReferences(string assemblyReferences)
         {
             if (assemblyReferences.Contains(";"))

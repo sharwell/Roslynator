@@ -7,6 +7,7 @@
 
 * [doc](#doc-command)
 * [declarations](#declarations-command)
+* [root](#root-command)
 
 ## `doc` Command
 
@@ -19,6 +20,7 @@ doc
 -o|--output
 -r|--references
 [--additional-xml-documentation]
+[--clean]
 [--depth]
 [--format-declaration-base-list]
 [--format-declaration-constraints]
@@ -56,10 +58,17 @@ Defines a heading of the root documentation file.
 Defines a path for the output directory.
 
 #### `-r|--references <PATH-TO-FILE-WITH-ASSEMBLY-REFERENCES>`
-Defines a path to a file that contains a list of all assemblies necessary to compile a project. Each assembly must be on separate line.
+
+Defines one of two following options:
+
+* Path to a file that contains a list of all assemblies necessary to compile a project. Each assembly must be on separate line.
+* Semicolon separated list of assemblies necessary to compile a project.
 
 #### `[--additional-xml-documentation] <XML-DOCUMENTATION-FILES>`
 Defines one or more xml documentation files that should be included. These files can contain a documentation for namespaces, for instance.
+
+#### `[--clean]`
+Indicated whether to delete output directory before documentation generation. Default value is `true`.
 
 #### `[--depth] {member|type|namespace}`
 Defines a depth of a documentation. Default value is `member`.
@@ -195,3 +204,70 @@ Indicates whether each attribute should be on separate line. Default value is `t
 
 #### `[--use-default-literal]`
 Indicated whether default literal (`default`) should be used instead of default expression (`default(T)`). Default value is `true`.
+
+
+## `doc` Command
+
+Generates root documentation file from specified assemblies.
+
+```
+doc
+-a|--assemblies
+-h|--heading
+-o|--output
+-r|--references
+[--depth]
+[--ignored-names]
+[--ignored-parts]
+[--include-class-hierarchy]
+[--include-containing-namespace]
+[--mark-obsolete]
+[--mode]
+[--place-system-namespace-first]
+[--root-url]
+```
+
+### Options
+
+#### `-a|--assemblies <ASSEMBLIES-TO-DOCUMENT>`
+Defines one or more assemblies that should be used as a source for the documentation.
+
+#### `-h|--heading <ROOT-FILE-HEADING>`
+Defines a heading of the root documentation file.
+
+#### `-o|--output <OUTPUT-DIRECTORY>`
+Defines a path for the output directory.
+
+#### `-r|--references <PATH-TO-FILE-WITH-ASSEMBLY-REFERENCES>`
+
+Defines one of two following options:
+
+* Path to a file that contains a list of all assemblies necessary to compile a project. Each assembly must be on separate line.
+* Semicolon separated list of assemblies necessary to compile a project.
+
+#### `[--depth] {member|type|namespace}`
+Defines a depth of a documentation. Default value is `member`.
+
+#### `[--ignored-names] <FULLY-QUALIFIED-METADATA-NAMES-TO-IGNORE>`
+Defines a list of metadata names that should be excluded from a documentation. Namespace of type names can be specified.
+
+#### `[--ignored-parts] {Content | Namespaces | Classes | StaticClasses | Structs | Interfaces | Enums | Delegates | Other}`
+Defines parts of a root documentation that should be excluded. No part is excluded by default.
+
+#### `[--include-class-hierarchy]`
+Indicates whether classes should be displayed in a form of hierarchy tree. Default value is `true`.
+
+#### `[--include-containing-namespace]`
+Indicates whether a containing namespace should be included when displaying type name. Default value is `true`.
+
+#### `[--mark-obsolete]`
+Indicates whether obsolete types and members should be marked as `[deprecated]`. Default value is `true`.
+
+#### `[--mode] {github}`
+Defines documentation generation mode. Currently only supported mode is `github`.
+
+#### `[--place-system-namespace-first]`
+Indicated whether namespaces and types contained in `System` namespace should be ordered before other namespaces and types. Default value is `true`.
+
+#### `[--root-url]`
+Defines a relative url to the documentation root directory.

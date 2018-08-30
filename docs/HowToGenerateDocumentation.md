@@ -26,16 +26,16 @@
     <!-- Specify parameters for 'doc' command.
          This command will generate documentation files from specified assemblies -->
     <RoslynatorDocumentationDocParameters> ^
--a &quot;$(RoslynatorDocumentationAssemblies)&quot; ^
--o &quot;$(RoslynatorDocumentationDirectory)&quot; ^
--h &quot;API Reference&quot;
+      -a &quot;$(RoslynatorDocumentationAssemblies)&quot; ^
+      -o &quot;$(RoslynatorDocumentationDirectory)&quot; ^
+      -h &quot;API Reference&quot;
     </RoslynatorDocumentationDocParameters>
 
     <!-- Specify parameters for 'declarations' command.
          This command will generate a single file that contains all declarations from specified assemblies -->
     <RoslynatorDocumentationDeclarationsParameters> ^
--a &quot;$(RoslynatorDocumentationAssemblies)&quot; ^
--o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot; ^
+      -a &quot;$(RoslynatorDocumentationAssemblies)&quot; ^
+      -o &quot;$(RoslynatorDocumentationDirectory)\api.cs&quot; ^
     </RoslynatorDocumentationDeclarationsParameters>
 
   </PropertyGroup>

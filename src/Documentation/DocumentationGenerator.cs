@@ -189,7 +189,7 @@ namespace Roslynator.Documentation
             }
         }
 
-        internal DocumentationGeneratorResult GenerateRoot(
+        public DocumentationGeneratorResult GenerateRoot(
             string heading,
             bool addExtensionsLink = false)
         {
@@ -254,7 +254,7 @@ namespace Roslynator.Documentation
 
                                     writer.WriteHeading2(Resources.GetPluralName(TypeKind.Class));
 
-                                    writer.WriteClassHierarchy(objectType, instanceClasses, format);
+                                    writer.WriteClassHierarchy(objectType, instanceClasses, format, containingNamespace: Options.IncludeContainingNamespace);
 
                                     writer.WriteLine();
                                 }

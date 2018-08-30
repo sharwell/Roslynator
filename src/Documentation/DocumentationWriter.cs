@@ -1674,7 +1674,9 @@ namespace Roslynator.Documentation
 
             string fragment = "#" + GetFragment();
 
-            return UrlProvider.GetLocalUrl(folders, containingFolders, fragment).Url;
+            string url = UrlProvider.GetLocalUrl(folders, containingFolders, fragment).Url;
+
+            return Options.BaseLocalUrl + url;
 
             string GetFragment()
             {

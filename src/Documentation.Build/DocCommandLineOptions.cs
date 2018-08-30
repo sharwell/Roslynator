@@ -24,6 +24,9 @@ namespace Roslynator.Documentation
         [Option(longName: "additional-xml-documentation")]
         public IEnumerable<string> AdditionalXmlDocumentation { get; set; }
 
+        [Option(longName: "clean", Default = true)]
+        public bool Clean { get; set; }
+
         [Option(longName: "depth", Default = DefaultValues.Depth)]
         public DocumentationDepth Depth { get; set; }
 
