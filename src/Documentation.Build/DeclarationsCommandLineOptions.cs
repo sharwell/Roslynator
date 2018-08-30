@@ -33,25 +33,25 @@ namespace Roslynator.Documentation
         [Option(longName: "ignored-names")]
         public IEnumerable<string> IgnoredNames { get; set; }
 
-        [Option(longName: "include-attribute-arguments", Default = DefaultValues.IncludeAttributeArguments)]
-        public bool IncludeAttributeArguments { get; set; }
-
-        [Option(longName: "indent", Default = DefaultValues.Indent)]
-        public bool Indent { get; set; }
+        [Option(longName: "include-ienumerable", Default = !DefaultValues.OmitIEnumerable)]
+        public bool IncludeIEnumerable { get; set; }
 
         [Option(longName: "indent-chars", Default = DefaultValues.IndentChars)]
         public string IndentChars { get; set; }
 
-        [Option(longName: "new-line-before-open-brace", Default = DefaultValues.NewLineBeforeOpenBrace)]
-        public bool NewLineBeforeOpenBrace { get; set; }
+        [Option(longName: "merge-attributes", Default = !DefaultValues.SplitAttributes)]
+        public bool MergeAttributes { get; set; }
 
-        [Option(longName: "omit-ienumerable", Default = DefaultValues.OmitIEnumerable)]
-        public bool OmitIEnumerable { get; set; }
+        [Option(longName: "no-indent", Default = !DefaultValues.Indent)]
+        public bool NoIndent { get; set; }
 
-        [Option(longName: "split-attributes", Default = DefaultValues.SplitAttributes)]
-        public bool SplitAttributes { get; set; }
+        [Option(longName: "no-new-line-before-open-brace", Default = !DefaultValues.NewLineBeforeOpenBrace)]
+        public bool NoNewLineBeforeOpenBrace { get; set; }
 
-        [Option(longName: "use-default-literal", Default = DefaultValues.UseDefaultLiteral)]
-        public bool UseDefaultLiteral { get; set; }
+        [Option(longName: "omit-attribute-arguments", Default = !DefaultValues.IncludeAttributeArguments)]
+        public bool OmitAttributeArguments { get; set; }
+
+        [Option(longName: "use-default-expression", Default = !DefaultValues.UseDefaultLiteral)]
+        public bool UseDefaultExpression { get; set; }
     }
 }

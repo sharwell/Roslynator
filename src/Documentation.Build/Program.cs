@@ -16,7 +16,7 @@ namespace Roslynator.Documentation
     {
         private static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<DocCommandLineOptions, DeclarationsCommandLineOptions>(args)
+            Parser.Default.ParseArguments<DocCommandLineOptions, DeclarationsCommandLineOptions, RootCommandLineOptions>(args)
                 .MapResult(
                   (DocCommandLineOptions options) => ExecuteDoc(options),
                   (DeclarationsCommandLineOptions options) => ExecuteDeclarations(options),
@@ -65,20 +65,20 @@ namespace Roslynator.Documentation
                 ignoredNames: options.IgnoredNames,
                 preferredCultureName: options.PreferredCulture,
                 maxDerivedTypes: options.MaxDerivedTypes,
-                includeClassHierarchy: options.IncludeClassHierarchy,
-                includeContainingNamespace: options.IncludeContainingNamespace,
-                placeSystemNamespaceFirst: options.PlaceSystemNamespaceFirst,
-                formatDeclarationBaseList: options.FormatDeclarationBaseList,
-                formatDeclarationConstraints: options.FormatDeclarationConstraints,
-                markObsolete: options.MarkObsolete,
-                includeMemberInheritedFrom: options.IncludeMemberInheritedFrom,
-                includeMemberOverrides: options.IncludeMemberOverrides,
-                includeMemberImplements: options.IncludeMemberImplements,
-                includeMemberConstantValue: options.IncludeMemberConstantValue,
+                includeClassHierarchy: !options.NoClassHierarchy,
+                includeContainingNamespace: !options.OmitContainingNamespace,
+                placeSystemNamespaceFirst: !options.NoPrecedenceForSystemNamespace,
+                formatDeclarationBaseList: !options.NoBaseListFormat,
+                formatDeclarationConstraints: !options.NoConstraintsFormat,
+                markObsolete: !options.NoObsoleteMark,
+                includeMemberInheritedFrom: !options.OmitMemberInheritedFrom,
+                includeMemberOverrides: !options.OmitMemberOverrides,
+                includeMemberImplements: !options.OmitMemberImplements,
+                includeMemberConstantValue: !options.OmitMemberConstantValue,
                 includeInheritedInterfaceMembers: options.IncludeInheritedInterfaceMembers,
                 includeAllDerivedTypes: options.IncludeAllDerivedTypes,
-                includeAttributeArguments: options.IncludeAttributeArguments,
-                omitIEnumerable: options.OmitIEnumerable,
+                includeAttributeArguments: !options.OmitAttributeArguments,
+                omitIEnumerable: !options.IncludeIEnumerable,
                 depth: options.Depth,
                 ignoredRootParts: ignoredRootParts,
                 ignoredNamespaceParts: ignoredNamespaceParts,
@@ -89,8 +89,11 @@ namespace Roslynator.Documentation
 
             string directoryPath = options.OutputDirectory;
 
-            if (options.Clean)
+            if (!options.NoDelete
+                && Directory.Exists(directoryPath))
+            {
                 Directory.Delete(directoryPath, recursive: true);
+            }
 
             Console.WriteLine($"Documentation is being generated to '{options.OutputDirectory}'.");
 
@@ -108,32 +111,6 @@ namespace Roslynator.Documentation
 
             Console.WriteLine($"Documentation successfully generated to '{options.OutputDirectory}'.");
 
-            foreach (string rootAssembly in options.RootAssemblies)
-            {
-                documentationModel = CreateDocumentationModel(options.References, new string[] { rootAssembly });
-
-                if (documentationModel == null)
-                    return 1;
-
-                generator = new MarkdownDocumentationGenerator(documentationModel, WellKnownUrlProviders.GitHub, documentationOptions);
-
-                string fileName = Path.GetFileName(rootAssembly);
-
-                string fileNameWithoutExtension = (fileName.EndsWith(".dll", StringComparison.Ordinal))
-                    ? Path.GetFileNameWithoutExtension(fileName)
-                    : fileName;
-
-                string path = Path.Combine(directoryPath, fileNameWithoutExtension + ".md");
-
-                Console.WriteLine($"Documentation root is being generated to '{path}'.");
-
-                DocumentationGeneratorResult result = generator.GenerateRoot(fileNameWithoutExtension);
-
-                File.WriteAllText(path, result.Content, encoding);
-
-                Console.WriteLine($"Documentation root successfully generated to '{path}'.");
-            }
-
             return 0;
         }
 
@@ -146,14 +123,14 @@ namespace Roslynator.Documentation
 
             var declarationListOptions = new DeclarationListOptions(
                 ignoredNames: options.IgnoredNames,
-                indent: options.Indent,
+                indent: !options.NoIndent,
                 indentChars: options.IndentChars,
-                newLineBeforeOpenBrace: options.NewLineBeforeOpenBrace,
+                newLineBeforeOpenBrace: !options.NoNewLineBeforeOpenBrace,
                 emptyLineBetweenMembers: options.EmptyLineBetweenMembers,
-                splitAttributes: options.SplitAttributes,
-                includeAttributeArguments: options.IncludeAttributeArguments,
-                omitIEnumerable: options.OmitIEnumerable,
-                useDefaultLiteral: options.UseDefaultLiteral);
+                splitAttributes: !options.MergeAttributes,
+                includeAttributeArguments: !options.OmitAttributeArguments,
+                omitIEnumerable: !options.IncludeIEnumerable,
+                useDefaultLiteral: !options.UseDefaultExpression);
 
             Console.WriteLine($"Declaration list is being generated to '{options.OutputPath}'.");
 
@@ -198,10 +175,10 @@ namespace Roslynator.Documentation
             var documentationOptions = new DocumentationOptions(
                 ignoredNames: options.IgnoredNames,
                 baseLocalUrl: options.RootUrl,
-                includeClassHierarchy: options.IncludeClassHierarchy,
-                includeContainingNamespace: options.IncludeContainingNamespace,
-                placeSystemNamespaceFirst: options.PlaceSystemNamespaceFirst,
-                markObsolete: options.MarkObsolete,
+                includeClassHierarchy: !options.NoClassHierarchy,
+                includeContainingNamespace: !options.OmitContainingNamespace,
+                placeSystemNamespaceFirst: !options.NoPrecedenceForSystemNamespace,
+                markObsolete: !options.NoObsoleteMark,
                 depth: options.Depth,
                 ignoredRootParts: ignoredParts);
 

@@ -2086,6 +2086,7 @@ namespace Roslynator.Documentation
 
         protected abstract DocumentationWriter CreateWriterCore();
         public IEnumerable<DocumentationGeneratorResult> Generate(string heading = null);
+        public DocumentationGeneratorResult GenerateRoot(string heading, bool addExtensionsLink = false);
     }
 
     public class DocumentationModel
@@ -2109,8 +2110,9 @@ namespace Roslynator.Documentation
 
     public class DocumentationOptions
     {
-        public DocumentationOptions(IEnumerable<string> ignoredNames = null, string preferredCultureName = null, int maxDerivedTypes = 5, bool includeClassHierarchy = true, bool includeContainingNamespace = true, bool placeSystemNamespaceFirst = true, bool formatDeclarationBaseList = true, bool formatDeclarationConstraints = true, bool markObsolete = true, bool includeMemberInheritedFrom = true, bool includeMemberOverrides = true, bool includeMemberImplements = true, bool includeMemberConstantValue = true, bool includeInheritedInterfaceMembers = false, bool includeAllDerivedTypes = false, bool includeAttributeArguments = true, bool omitIEnumerable = true, DocumentationDepth depth = DocumentationDepth.Member, RootDocumentationParts ignoredRootParts = RootDocumentationParts.None, NamespaceDocumentationParts ignoredNamespaceParts = NamespaceDocumentationParts.None, TypeDocumentationParts ignoredTypeParts = TypeDocumentationParts.None, MemberDocumentationParts ignoredMemberParts = MemberDocumentationParts.None);
+        public DocumentationOptions(IEnumerable<string> ignoredNames = null, string preferredCultureName = null, string baseLocalUrl = null, int maxDerivedTypes = 5, bool includeClassHierarchy = true, bool includeContainingNamespace = true, bool placeSystemNamespaceFirst = true, bool formatDeclarationBaseList = true, bool formatDeclarationConstraints = true, bool markObsolete = true, bool includeMemberInheritedFrom = true, bool includeMemberOverrides = true, bool includeMemberImplements = true, bool includeMemberConstantValue = true, bool includeInheritedInterfaceMembers = false, bool includeAllDerivedTypes = false, bool includeAttributeArguments = true, bool omitIEnumerable = true, DocumentationDepth depth = DocumentationDepth.Member, RootDocumentationParts ignoredRootParts = RootDocumentationParts.None, NamespaceDocumentationParts ignoredNamespaceParts = NamespaceDocumentationParts.None, TypeDocumentationParts ignoredTypeParts = TypeDocumentationParts.None, MemberDocumentationParts ignoredMemberParts = MemberDocumentationParts.None);
 
+        public string BaseLocalUrl { get; }
         public static DocumentationOptions Default { get; }
         public DocumentationDepth Depth { get; }
         public bool FormatDeclarationBaseList { get; }

@@ -20,12 +20,13 @@ public class DocumentationOptions
 
 | Constructor | Summary |
 | ----------- | ------- |
-| [DocumentationOptions(IEnumerable\<String>, String, Int32, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, DocumentationDepth, RootDocumentationParts, NamespaceDocumentationParts, TypeDocumentationParts, MemberDocumentationParts)](-ctor/README.md#_top) | |
+| [DocumentationOptions(IEnumerable\<String>, String, String, Int32, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, DocumentationDepth, RootDocumentationParts, NamespaceDocumentationParts, TypeDocumentationParts, MemberDocumentationParts)](-ctor/README.md#_top) | |
 
 ## Properties
 
 | Property | Summary |
 | -------- | ------- |
+| [BaseLocalUrl](BaseLocalUrl/README.md#_top) | |
 | [Default](Default/README.md#_top) | |
 | [Depth](Depth/README.md#_top) | |
 | [FormatDeclarationBaseList](FormatDeclarationBaseList/README.md#_top) | |

@@ -1,4 +1,5 @@
 ﻿<Project>
+
   <Target Name="RoslynatorDocumentation" AfterTargets="Build">
     <PropertyGroup Condition=" '$(RoslynatorDocumentationDocParameters)' != '' OR '$(RoslynatorDocumentationDeclarationsParameters)' != ''">
       <RoslynatorDocumentationCommand Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">"$(MSBuildThisFileDirectory)net46\Roslynator.Documentation.Build.exe"</RoslynatorDocumentationCommand>

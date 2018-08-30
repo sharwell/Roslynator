@@ -14,24 +14,64 @@
     <AssemblyOriginatorKeyFile>Documentation.Generator.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
-  <Target Name="PreRoslynatorDocumention" BeforeTargets="RoslynatorDocumentation" Condition=" '$(Configuration)' == 'Release'">
-    <PropertyGroup>
-      <RoslynatorDocumentationDirectory>$(SolutionDir)..\docs\api</RoslynatorDocumentationDirectory>
-    </PropertyGroup>
-    <RemoveDir Directories="$(RoslynatorDocumentationDirectory)" />
+  <Target Name="RoslynatorDocumentation" AfterTargets="RoslynatorDocumentationInitialize" Condition=" '$(Configuration)' == 'Release'">
+
     <PropertyGroup>
       <RoslynatorDocumentationAssemblies>Roslynator.CSharp.dll Roslynator.CSharp.Workspaces.dll Roslynator.Documentation.dll</RoslynatorDocumentationAssemblies>
-      <RoslynatorDocumentationDocParameters> ^
--a $(RoslynatorDocumentationAssemblies) ^
--o "$(RoslynatorDocumentationDirectory)" ^
--h "Roslynator API Reference" ^
---root-assemblies &quot;Roslynator.Documentation.dll&quot; ^
-      </RoslynatorDocumentationDocParameters>
-      <RoslynatorDocumentationDeclarationsParameters> ^
--a $(RoslynatorDocumentationAssemblies) ^
--o "$(RoslynatorDocumentationDirectory)\api.cs" ^
-      </RoslynatorDocumentationDeclarationsParameters>
     </PropertyGroup>
+
+    <Exec Command="$(RoslynatorDocumentationExe) doc ^
+-a $(RoslynatorDocumentationAssemblies) ^
+-r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
+-o &quot;$(SolutionDir)..\docs\api&quot; ^
+-h &quot;Roslynator API Reference&quot;"
+          LogStandardErrorAsError="true"
+          ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+
+    <Exec Command="$(RoslynatorDocumentationExe) declarations ^
+-a $(RoslynatorDocumentationAssemblies) ^
+-r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
+-o &quot;$(SolutionDir)..\docs\api.cs&quot;"
+          LogStandardErrorAsError="true"
+          ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+
+    <Exec Command="$(RoslynatorDocumentationExe) root ^
+-a Roslynator.Documentation.dll ^
+-r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
+-o &quot;$(SolutionDir)Documentation\README.md&quot; ^
+-h &quot;Roslynator.Documentation&quot; ^
+--root-url &quot;..\..\docs\api&quot;"
+          LogStandardErrorAsError="true"
+          ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+
+    <Exec Command="$(RoslynatorDocumentationExe) root ^
+-a Roslynator.CSharp.dll ^
+-r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
+-o &quot;$(SolutionDir)CSharp\README.md&quot; ^
+-h &quot;Roslynator.CSharp&quot; ^
+--root-url &quot;..\..\docs\api&quot;"
+          LogStandardErrorAsError="true"
+          ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+
+    <Exec Command="$(RoslynatorDocumentationExe) root ^
+-a Roslynator.CSharp.Workspaces.dll ^
+-r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
+-o &quot;$(SolutionDir)CSharp.Workspaces\README.md&quot; ^
+-h &quot;Roslynator.CSharp.Workspaces&quot; ^
+--root-url &quot;..\..\docs\api&quot;"
+          LogStandardErrorAsError="true"
+          ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+
   </Target>
 
   <ItemGroup>

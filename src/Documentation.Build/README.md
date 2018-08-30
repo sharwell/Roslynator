@@ -20,30 +20,30 @@ doc
 -o|--output
 -r|--references
 [--additional-xml-documentation]
-[--clean]
 [--depth]
-[--format-declaration-base-list]
-[--format-declaration-constraints]
 [--ignored-member-parts]
 [--ignored-names]
 [--ignored-namespace-parts]
 [--ignored-root-parts]
 [--ignored-type-parts]
 [--include-all-derived-types]
-[--include-attribute-arguments]
-[--include-class-hierarchy]
-[--include-containing-namespace]
+[--include-ienumerable]
 [--include-inherited-interface-members]
-[--include-member-constant-value]
-[--include-member-inherited-from]
-[--include-member-implements]
-[--include-member-overrides]
-[--mark-obsolete]
+[--omit-attribute-arguments]
+[--omit-containing-namespace]
+[--omit-member-constant-value]
+[--omit-member-inherited-from]
+[--omit-member-implements]
+[--omit-member-overrides]
 [--max-derived-types]
 [--mode]
-[--place-system-namespace-first]
+[--no-base-list-format]
+[--no-class-hierarchy]
+[--no-constraints-format]
+[--no-delete]
+[--no-obsolete-mark]
+[--no-precedence-for-system-namespace]
 [--preferred-culture]
-[--omit-ienumerable]
 ```
 
 ### Options
@@ -67,17 +67,8 @@ Defines one of two following options:
 #### `[--additional-xml-documentation] <XML-DOCUMENTATION-FILES>`
 Defines one or more xml documentation files that should be included. These files can contain a documentation for namespaces, for instance.
 
-#### `[--clean]`
-Indicated whether to delete output directory before documentation generation. Default value is `true`.
-
 #### `[--depth] {member|type|namespace}`
 Defines a depth of a documentation. Default value is `member`.
-
-#### `[--format-declaration-base-list]`
-Indicates whether a base list should be formatted on a multiple lines. Default value is `true`.
-
-#### `[--format-declaration-constraints]`
-Indicates whether constraints should be formatted on a multiple lines. Default value is `true`.
 
 #### `[--ignored-member-parts] {Overloads ContainingType ContainingAssembly ObsoleteMessage Summary Declaration TypeParameters Parameters ReturnValue Implements Attributes Exceptions Examples Remarks SeeAlso}`
 Defines parts of a member documentation that should be excluded. No part is excluded by default.
@@ -97,32 +88,29 @@ Defines parts of a type documentation that should be excluded. No part is exclud
 #### `[--include-all-derived-types]`
 Indicates whether all derived types should be included in the list of derived types. By default only types that directly inherits from a specified type are displayed. Default value is `false`.
 
-#### `[--include-attribute-arguments]`
-Indicates whether attribute arguments should be included when displaying an attribute. Default value is `true`.
-
-#### `[--include-class-hierarchy]`
-Indicates whether classes should be displayed in a form of hierarchy tree. Default value is `true`.
-
-#### `[--include-containing-namespace]`
-Indicates whether a containing namespace should be included when displaying type name. Default value is `true`.
+#### `[--include-ienumerable]`
+Indicates whether interface `System.Collections.IEnumerable` should be included in a documentation if a type also implements interface `System.Collections.Generic.IEnumerable<T>`.
 
 #### `[--include-inherited-interface-members]`
 Indicates whether inherited interface members should be displayed in a list of members. Default values is `false`.
 
-#### `[--include-member-constant-value]`
-Indicates whether a constant value of a member should be displayed. Default value is `true`.
+#### `[--omit-attribute-arguments]`
+Indicates whether attribute arguments should be omitted when displaying an attribute.
 
-#### `[--include-member-inherited-from]`
-Indicated whether a containing member of an inherited member should be displayed. Default value is `true`.
+#### `[--omit-containing-namespace]`
+Indicates whether a containing namespace should be omitted when displaying type name.
 
-#### `[--include-member-implements]`
-Indicates whether an interface member that is being implemented should be displayed. Default value is `true`.
+#### `[--omit-member-constant-value]`
+Indicates whether a constant value of a member should be omitted.
 
-#### `[--include-member-overrides]`
-Indicates whether an overridden member should be displayed. Default value is `true`.
+#### `[--omit-member-inherited-from]`
+Indicates whether a containing member of an inherited member should be omitted.
 
-#### `[--mark-obsolete]`
-Indicates whether obsolete types and members should be marked as `[deprecated]`. Default value is `true`.
+#### `[--omit-member-implements]`
+Indicates whether an interface member that is being implemented should be omitted.
+
+#### `[--omit-member-overrides]`
+Indicates whether an overridden member should be omitted.
 
 #### `[--max-derived-types]`
 Defines maximum number derived types that should be displayed. Default value is `5`.
@@ -130,15 +118,26 @@ Defines maximum number derived types that should be displayed. Default value is 
 #### `[--mode] {github}`
 Defines documentation generation mode. Currently only supported mode is `github`.
 
-#### `[--place-system-namespace-first]`
-Indicated whether namespaces and types contained in `System` namespace should be ordered before other namespaces and types. Default value is `true`.
+#### `[--no-base-list-format]`
+Indicates whether a base list should not be formatted on a multiple lines.
+
+#### `[--no-class-hierarchy]`
+Indicates whether classes should be displayed as a list instead of hierarchy tree.
+
+#### `[--no-constraints-format]`
+Indicates whether constraints should not be formatted on a multiple lines.
+
+#### `[--no-delete]`
+Indicates whether output directory should not be deleted at the beginning of the process.
+
+#### `[--no-obsolete-mark]`
+Indicates whether obsolete types and members should not be marked as `[deprecated]`.
+
+#### `[--no-precedence-for-system-namespace]`
+Indicates whether symbols contained in `System` namespace should be ordered as any other symbols and not before other symbols.
 
 #### `[--preferred-culture]`
 Defines culture that should be used when searching for xml documentation files.
-
-#### `[--omit-ienumerable]`
-Indicates whether interface `System.Collections.IEnumerable` should be omitted from documentation if a type also implements interface `System.Collections.Generic.IEnumerable<T>`. Default value is `true`.
-
 
 ## `declarations` Command
 Generates a single file that contains all declarations from specified assemblies.
@@ -152,13 +151,13 @@ declarations
 [--format-base-list]
 [--format-constraints]
 [--ignored-names]
-[--include-attribute-arguments]
-[--indent]
+[--include-ienumerable]
 [--indent-chars]
-[--new-line-before-open-brace]
-[--omit-ienumerable]
-[--split-attributes]
-[--use-default-literal]
+[--merge-attributes]
+[--no-indent]
+[--no-new-line-before-open-brace]
+[--omit-attribute-arguments]
+[--use-default-expression]
 ```
 
 ### Options
@@ -184,26 +183,26 @@ Indicates whether constraints should be formatted on a multiple lines. Default v
 #### `[--ignored-names] <FULLY-QUALIFIED-METADATA-NAMES-TO-IGNORE>`
 Defines a list of metadata names that should be excluded from a documentation. Namespace of type names can be specified.
 
-#### `[--include-attribute-arguments]`
-Indicates whether attribute arguments should be included when displaying an attribute. Default value is `true`.
-
-#### `[--indent]`
-Indicates whether declarations should be indented. Default value is true.
+#### `[--include-ienumerable]`
+Indicates whether interface `System.Collections.IEnumerable` should be included in a documentation if a type also implements interface `System.Collections.Generic.IEnumerable<T>`.
 
 #### `[--indent-chars] <INDENT-CHARS>`
 Defines characters that should be used for indentation. Default value are four spaces.
 
-#### `[--new-line-before-open-brace]`
-Indicates whether opening braced should be placed on a new line. Default value is `true`.
+#### `[--merge-attributes]`
+Indicates whether attributes should be displayed in a single attribute list.
 
-#### `[--omit-ienumerable]`
-Indicates whether interface `System.Collections.IEnumerable` should be omitted from documentation if a type also implements interface `System.Collections.Generic.IEnumerable<T>`. Default value is `true`.
+#### `[--no-indent]`
+Indicates whether declarations should not be indented.
 
-#### `[--split-attributes]`
-Indicates whether each attribute should be on separate line. Default value is `true`.
+#### `[--no-new-line-before-open-brace]`
+Indicates whether opening braced should not be placed on a new line.
 
-#### `[--use-default-literal]`
-Indicated whether default literal (`default`) should be used instead of default expression (`default(T)`). Default value is `true`.
+#### `[--omit-attribute-arguments]`
+Indicates whether attribute arguments should be omitted when displaying an attribute.
+
+#### `[--use-default-expression]`
+Indicates whether default expression (`default(T)`) should be used instead of default literal (`default`).
 
 
 ## `doc` Command
@@ -219,10 +218,10 @@ doc
 [--depth]
 [--ignored-names]
 [--ignored-parts]
-[--include-class-hierarchy]
-[--include-containing-namespace]
-[--mark-obsolete]
 [--mode]
+[--no-class-hierarchy]
+[--no-obsolete-mark]
+[--omit-containing-namespace]
 [--place-system-namespace-first]
 [--root-url]
 ```
@@ -254,20 +253,20 @@ Defines a list of metadata names that should be excluded from a documentation. N
 #### `[--ignored-parts] {Content | Namespaces | Classes | StaticClasses | Structs | Interfaces | Enums | Delegates | Other}`
 Defines parts of a root documentation that should be excluded. No part is excluded by default.
 
-#### `[--include-class-hierarchy]`
-Indicates whether classes should be displayed in a form of hierarchy tree. Default value is `true`.
-
-#### `[--include-containing-namespace]`
-Indicates whether a containing namespace should be included when displaying type name. Default value is `true`.
-
-#### `[--mark-obsolete]`
-Indicates whether obsolete types and members should be marked as `[deprecated]`. Default value is `true`.
-
 #### `[--mode] {github}`
 Defines documentation generation mode. Currently only supported mode is `github`.
 
-#### `[--place-system-namespace-first]`
-Indicated whether namespaces and types contained in `System` namespace should be ordered before other namespaces and types. Default value is `true`.
+#### `[--no-class-hierarchy]`
+Indicates whether classes should be displayed as a list instead of hierarchy tree.
+
+#### `[--no-obsolete-mark]`
+Indicates whether obsolete types and members should not be marked as `[deprecated]`.
+
+#### `[--no-precedence-for-system-namespace]`
+Indicates whether symbols contained in `System` namespace should be ordered as any other symbols and not before other symbols.
+
+#### `[--omit-containing-namespace]`
+Indicates whether a containing namespace should be omitted when displaying type name.
 
 #### `[--root-url]`
 Defines a relative url to the documentation root directory.
