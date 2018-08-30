@@ -15,8 +15,7 @@
 
   </PropertyGroup>
 
-    <!-- Execute 'doc' command.
-         This command will generate documentation files from specified assemblies -->
+    <!-- Execute 'doc' command. This command will generate documentation files from specified assemblies -->
   <Exec Command="$(RoslynatorDocumentationExe) doc ^
     -a $(RoslynatorDocumentationAssemblies) ^
     -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
@@ -27,8 +26,7 @@
     <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
   </Exec>
 
-    <!-- Execute 'declarations' command.
-         This command will generate a single file that contains all declarations from specified assemblies -->
+    <!-- Execute 'declarations' command. This command will generate a single file that contains all declarations from specified assemblies -->
   <Exec Command="$(RoslynatorDocumentationExe) declarations ^
     -a $(RoslynatorDocumentationAssemblies) ^
     -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
@@ -41,9 +39,11 @@
 </Target>
 ```
 
-* [`doc` command reference](../src/Documentation.Build/README.md#doc-command)
-* [`declarations` command reference](../src/Documentation.Build/README.md#declarations-command)
-* [`root` command reference](../src/Documentation.Build/README.md#root-command)
+### Commands
+
+* [`doc`](../src/Documentation.Build/README.md#doc-command)
+* [`declarations`](../src/Documentation.Build/README.md#declarations-command)
+* [`root`](../src/Documentation.Build/README.md#root-command)
 
 3) Build project in **Release** configuration
 
