@@ -44,7 +44,7 @@
 -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
 -o &quot;$(SolutionDir)Documentation\README.md&quot; ^
 -h &quot;Roslynator.Documentation&quot; ^
---root-url &quot;../../docs/api&quot;"
+--root-url &quot;../../docs/api/&quot;"
           LogStandardErrorAsError="true"
           ConsoleToMSBuild="true">
       <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
@@ -55,7 +55,7 @@
 -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
 -o &quot;$(SolutionDir)CSharp\README.md&quot; ^
 -h &quot;Roslynator.CSharp&quot; ^
---root-url &quot;../../docs/api&quot;"
+--root-url &quot;../../docs/api/&quot;"
           LogStandardErrorAsError="true"
           ConsoleToMSBuild="true">
       <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
@@ -66,7 +66,7 @@
 -r &quot;$(RoslynatorDocumentationAssemblyReferencesPath)&quot; ^
 -o &quot;$(SolutionDir)CSharp.Workspaces\README.md&quot; ^
 -h &quot;Roslynator.CSharp.Workspaces&quot; ^
---root-url &quot;../../docs/api&quot;"
+--root-url &quot;../../docs/api/&quot;"
           LogStandardErrorAsError="true"
           ConsoleToMSBuild="true">
       <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
